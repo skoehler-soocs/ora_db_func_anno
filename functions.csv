@@ -1,0 +1,1071 @@
+adbdrv|alter database driver
+aop|audit options
+ain|alter index
+apa|SQL Access Path Analysis
+apacb|connect by
+apadrv|drive access path selection for a sql command
+apakkoqb|drive access path analysis for every query block
+apaqbd|drive access path analysis for every query block
+atb|alter table
+aud|audit
+auddel|delete
+auddft|default function
+audfro|top level objects
+aus|statement
+ausdrv|driver
+bam|PLSQL_KG_Interface
+csy|create synonym
+ctc|create table or cluster
+ctc|SQL DDL
+cvw|create view
+dbkd|RDBMS Events
+dbke|RDBMS Diagnostic Data Extractor
+dbked|RDBMS diagnostic Data Extractor Dumper
+dbkgc|RDBMS Diagnostic Generic Configuration
+dbkr|RDBMS ADR
+del|DML Drivers
+delexe|delete execute
+di|PLSQL_Apps
+dr|Text
+dsy|drop synonym
+dtb|drop table
+eva|evaluating operands
+evaopn2|evaluate operand
+evapls|evaluate plsql function
+hep|PLSQL_KG_Interface
+hsh|PLSQL_KG_Interface
+ins|DML Drivers
+insexe|insert execute
+jox|java compiler/runtime
+k2|Two-phase commit
+k2i|indoubt table interface
+k2g|global transction id
+k2gt|kernel 2phase commit global transaction
+k2c|kernel to kernel 
+k2d|global unique database id
+k2l|log records and log interface
+k2r|multiple RPC
+k2s|server
+k2v|recovery
+ka|kernel access
+kad|OBJECTS Anydata/Images
+kaf|fetch
+kau|update
+kauupd|table and modify indexes
+kb|kernel backup
+kbc|Backup Appliance Containers
+kbrs|Backup Appliance
+kc|kernel cache
+kcb|buffers
+kcbdnb|dump n buffers
+kcbgcur|get current read
+kcbgtcr|get consistent read
+kcbl|load management
+kcblrl|load release buffer
+kcbr_apply_pending|apply changed pending read completion
+kcbr_media_apply|apply change vector for media recovery
+kcbtse|tablespace encryption
+kcbtse_encdec_tbsblk|block encrypt
+kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
+kcbz|subroutines for kcb
+kcbz_table_scan_read|buffered multiblock read main loop
+kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
+kcbzib|input buffer
+kcbzibmlt|multiblock read
+kcbzgb|get (space for) buffer
+kcbztek_trace_blk|tablespace encryption check(?)
+kcbzvb|verify buffer
+kcbz_encdec_tbsblk|tablespace block encrypt
+kcc|controlfile
+kcf|file management
+kcfis|Exadata Predicate Push
+kcfopd|open/close database code
+kcht|hash table
+kck|compatibility
+kcl|lock manager
+kcm|miscellaneous
+kcmclscn|check lamport scn
+kco|operation
+kcoap|apply
+kcoubk|undo callback
+kcr|redo
+kcra|redo application/access
+kcramr|apply media recovery
+kcrf|file read
+kcrf_commit_force|commit changes
+kcrf_commit_force_int|commit changes
+kcrfw|Broadcast SCN/Kernel Cache Redo File Write
+kcrfw_copy_cv|copy change vectors to public redo buffer
+kcrm|media recovery
+kcrp|recovery parallel
+kcrpap|recovery parallel
+kcrr|redo archival
+kcrv|recovery
+kcrvfh|file headers
+kcs|service
+kcsadj3|adjust SCN
+kcsgbsn|get batched SCN
+kcscur3|check SCN for update read
+kcsnew3|obtain new SCN
+kcsm|shared routines
+kct|threads
+kcv|recovery
+kcvcrv|thread recovery
+kcvdmr|do media recovery
+kd|kernel data
+kda|analyze/statistics
+kdasts|Kernel Data Analyze Statistics Scan driver
+kdb|block structures and manipulation
+kdbl|direct path load 
+kdblai|kernel database block loader array insertion
+kdblailb|load block
+kdc|cluster
+kdd|cluster
+kdeu|export unload
+kdg|gathering
+kdgprd|Kernel Data Gathering Process Row Data
+kdgstp|Kernel Data Gathering STatistics Perform
+kdgsts|Kernel Data Gathering STatistics Scan
+kdi|index
+kdib|bitmap index generation definitions
+kdibc|bitmap index compression stream
+kdibco|stream output
+kdibh|hash table
+kdibi|inversion item-table
+kdibl|maintenance for dml and direct load
+kdibq|queue class
+kdibr|row source utility
+kdic|create
+kdics|Cluster Table Scan
+kdil|Index Load
+kdis|index split
+kdiss|skip scan
+kdizoltp|OLTP HIGH Index
+kdk|search key
+kdl|lob
+kdla|SecureFile Archive
+kdlgsp_init|space management batching
+kdli|Inode
+kdlrci|rci
+kdlw|kdlw
+kdl_write|write into an ilob instance
+kdlx|xfm
+kdlxdup|dedup
+kdm|IM data layer
+kdml|IM populating
+kdmo|IM Optimizer
+kdmr|IM background
+kdn|kernel data sequence number
+kdns|kernel data sequence number sequence enqueue
+kdo|operations
+kdoapl|apply
+kdp|Archive Compression: Pcode
+kdq|query
+kds|seek/scan
+kdscgr|Cluster Table Scan
+kdsgnp|Fetch By Rowid
+kdsgrp|Fetch By Rowid get row piece
+kdso|service object
+kdstf|table full ultra fast scan
+kdstgr|table get row
+kdsttgr|Full Table Scan
+kdt|table insert
+kdu|update
+kdugetpart|get partition information for a deleted or opdated row
+kdusru|single row update
+kdx|index
+kdxokcmp|Auto Prefix Compressed Index
+kdxt|temporary block
+kdz|Archive Compression
+kdza|Archive Compression: Compression
+kdzc|Archive Compression: Compression
+kdzd|Archive Compression: Decompression
+kdzh|Archive Compression: Compression
+kdzk|Archive Compression: HPK
+kdzs|Archive Compression: Decompression
+ke|kernel event (managability)
+keb|MMON/MMNL Infrastructure
+kec|Real Application Testing
+kecprm|Real Application Testing: Masking
+kel|Server Generated Alert Infrastructure
+keomg|DBOP generic service
+keomg|DBOP monitoring Deamon
+keomm|DBOP composite type
+keomn|DBOP monitoring
+ke|kernel event
+ker|orarep
+kes|SQL Manageability
+kesai|Infrastructure
+kesatm|Infrastructure
+kesds|SQL Repair Advisor
+kesm|Real Application Testing: Masking
+kesp|SQL Performance Analyzer
+kesqs|Infrastructure
+kessi|Infrastructure
+kesstp|SQL trace parser
+kest|SQL Tuning Advisor
+kestsa|(fix regression/parallel exeution)
+kestse|SQL Test-Execute Service
+kestsi|(index-tune)
+kestsp|(plan node analysis)
+kesutl|Infrastructure
+keswat|Infrastructure
+keswpi|SQL Performance Analyzer
+kesws|SQL Monitor
+keswsq|Infrastructure
+keswts|Infrastructure
+ket|Automated Maintenance Tasks
+kew|kernel event wait 
+kewa|ASH
+kewm|AWR metrics
+kewr|AWR Repository
+kewrf|AWR Snapshot Flush
+kewrps|AWR Snapshot Purge
+kews|statistics
+kewu|AWR Utilities
+kex|EM Express
+kf|Automatic Storage Management
+kfa|ASM Alias Operations
+kfc|ASM cache
+kfd|ASM Disk
+kfdp|ASM PST
+kfds|ASM staleness registry and resync
+kfdva|ASM Virtual ATB
+kfdx|ASM Exadata Interface
+kfe|ASM attributes
+kff|KFF
+kffb|ASM metadata block
+kffd|ASM metadata directory
+kffscrub|ASM Scrubbing
+kfg|ASM diskgroups
+kfia|ASM Remote
+kfiac|ASM IOServer client
+kfias|ASM IOServer
+kfio|ASM translation I/O layer
+kfioer|ASM translation I/O layer
+kfis|ASM intelligent storage interfaces
+kfk|KFK
+kfkio|IO
+kfksubs|subs
+kfm|ASM node monitor interface implementation
+kfmd|ASM node monitor layer for diskgroup registration
+kfms|ASM node monitor layers support function interface
+kfn|ASM networking subsystem
+kfnb|ASM umbillicus
+kfnc|ASM client networking
+kfnm|ASM umbillicus
+kfnor|KFN Orion
+kfns|ASM server networking
+kfns|ASM umbillicus
+kfr|ASM reciovery
+kftha|ASM Transparent High Availability
+kfv|ASM Volume subsystem
+kfvsd|ASM Volume Background
+kfvsu|ASM Volume Umbillicus
+kfz|ASM Zecurity subsystem
+kfzp|ASM Password File Layer
+kg|kernel generic
+kgbt|btree operations
+kgce|encryption engine
+kgds|VOS Generic Stack Trace
+kge|error
+kgeadse|add string internal error to the error
+kgerinv|kernel generic record internal named error
+kgesev|signal error code
+kgesinv|kernel generic signal internal named error
+kgf|ASM Automatic Storage Management
+kgfd|io subsystem driver
+kgfdvf|Voting file Interface
+kgff|direct file io adapter
+kgfpm|PATCH repository
+kgg|generic lists
+kgh|heap manager
+kghalf|non-recoverably allocate a freeable chunk of memory
+kghalo|main allocation
+kghalp|allocate permanent memory
+kgherror|internal error routine
+kghini|heap initialize
+kghfnd|find a chunk of memory 
+kghfre|free a chunk of memory
+kghfrh|free heap
+kghfrmrg|free a chunk, merge with neighbors if free returns merged chunk
+kghfrunp|free unpinned space
+kghfrx|free extent
+kghgex|get a new extent
+kghnospc|no space available
+kghphini|parent heap initialize
+kghpmalo|find and return permanent chunk
+kghsrch|search freelists for a memory chunk
+kghx|fixed sized memory
+kghxal|allocate memory
+kgi|kernel generic instantiation manager
+kgicli|close all cursors for an instantiation 
+kgidel|delete an instantiation object
+kgidlt|delete an instantiation object
+kgiscl|state close cursors
+kgk|token
+kgkp|generic services scheduling policies
+kgl|lock management
+kglfrx|free extent (heap unpin)
+kglfrunp|ask a client to free unpinned space
+kglfnd|find a chunk of at least the minimum size
+kglh|heap management
+kglhup|heap update
+kglhpd|heap deallocate
+kgllkal|lock allocate
+kgllkdl|lock delete
+kgllkds|lock delete state object
+kglllal|lock load allocate
+kglobal|object allocate
+kglobcl|object clear all tables
+kglobfr|object free all heaps (except data block 0) of an object
+kglobf0|object free heap/data block 0 of an object
+kglobld|object load
+kglobpn|object pin heaps and load data pieces
+kglpim|pin and load more heaps
+kglpin|pin heaps and load data pieces of an object
+kglpnal|pin allocate
+kglpnc|pin heaps and load data pieces of a cursor object
+kglpndl|pin delete
+kglr|remote
+kglrfcl|reference clear
+kgmexec|kernel generic ... execute
+kgskthrexit|thread exit
+kgss|service state object manager
+kgxp|inter process communication
+kjb|Global Cache Service
+kjci|Cross Instance Call
+kjfz|DLM-Client freeze/unfreeze
+kjk|RAC Kernel Accelerator
+kjm|RAC Multiple LMS
+kjoe|DLM Omni Enqueue service
+kjxg|Cluster Group Services
+kjxgr|Instance Membership Recovery
+kjz|DIAG
+kjzc|DIAG Communication Layer
+kjzd|DIAG Main Layer
+kjzf|DIAG Flow Control Layer
+kjzg|DIAG Group Services Layer
+kjzh|DIAG API Layer
+kjzm|DIAG Membership Layer
+kk|kernel compile
+kkb|table
+kkbl|table with lob
+kkbo|table with object
+kkcn|Streams Advanaced Queuing 
+kkcne|Streams Advanaced Queuing Notitication
+kkdl|dictionary lookup
+kkdcacr|kkdc get all check and referential constrains
+kkdo|OBJECTS Dictionary
+kke|cost engine
+kkfd|fast dataflow (PQ DFO)
+kkfi|optimizer Virtual Column/indexes
+kkfr|fast rowid (PQ)
+kkhf|hash join file and memory management
+kkhr|hash join row management
+kkj|job queue
+kkjp|package
+kkm|SQL Semantic Analysis
+kkn|analyze command
+kkndgd|Kernel Kompilation aNalyze Data Gathering Driver
+kkndrv|Kernel Kompilation aNalyze DRiVer
+kknls|Kernel Kompilation aNalyze Locks/Security
+kko|optimizer
+kkoads|SQL Compile ADS
+kkoat|Auto Tuning Optimizer
+kkocri|create index
+kkogfp|get first permutation
+kkooqb|optimize query block
+kkopm|Plan Management
+kkopq|Parallel Optimization
+kkoqbc|query block optimization start point
+kkp|compilation 
+kkpa|Partitioning
+kkpo|partitioned objects
+kkpod|Partitioning Dictionary
+kkq|SQL Transformation
+kkqjpdctr|join predicate push down - traverse and transform
+kkqctdrvIT|Cost-based query Transformation - DRiVer Initiate cost-based Transformation
+kkqctdrvTD|Cost-based query Transformation - DRiVer for Transformation Directives
+kkqdtdrvJPPD|Cost-based query Transformation - DRiVer for Join Pred push down
+kkqj|join analysis
+kkqdrv|query transformation driver
+kkqvm|View Merging
+kkrba|bitmap index and row source
+kkrbc|bitmap index compaction row source
+kkrbi|bitmap index creation row source
+kkrbo|bitmap index or row source
+kkrbt|rowsource: bob dylan convertor
+kkrbu|unlimited or rowsource
+kkrbx|index access rowsource
+kkrp|parallelizer (DFO)
+kkri|parallel index create
+kkrh|row hash
+kkrt|rowsource table create as select
+kks|shared objects (cursor)
+kksald|auxiliary load function
+kksalx|allocate bytes from the execution time heap
+kksarm|authorize for remote
+kksauc|authorize to use this child
+kkscls|close cursor
+kksdopt|smart disk no option
+kksfbc|find bound cursor
+kkslod|cursor load callback
+kksParseCursor|parse cursor
+kkspfda|multiple context area management
+kkspsc0|parse shared cursor
+kkssbt|set bind types
+kksscl|scan child list
+kkt|triggers
+kktalt|alter trigger
+kkx|Programmatic Interfaces to/from PL/SQL
+kkxa|external/asynch RPC
+kkxb|external tables
+kkxcls|close cursor
+kkxexe|execute plsql
+kkxppp|private pipe
+kkxrd|DBMS_ROWID
+kkxwtp|compiler
+kky|system
+kkyasy|alter system driver
+kl|kernel loader
+klc|column array builder
+klcs|character set
+klclil1r|c level interface load 1 row
+kll|kernel loader library
+klllr|logical record
+klm|memory
+km|kernel multi threaded
+kmc|circuit
+kmcmbf|mark buffer
+kmcrowrt|private functions
+kmm|monitor
+kmd|dispatcher
+kmms|server
+kmn|network
+kmp|Connection Broker
+kn|kernel replication
+kncd|dequeue generic functions
+ko|kernel objects
+koc|cache manager
+kocedd|end duration
+kod|data manager
+koh|heap manager
+kohdee|duration entry end
+kohedu|end an user duration
+kohrsc|resize memory chunk
+koi|interface
+kok|kernel side
+koka|access
+kokd|driver
+koke|OBJECTS Images
+koki|id generator
+kokl|lob access
+kokl3|temporary lob access
+kokla|LOB Default
+kokla|OBJECTS Anydata
+koklcopy|LOB copy
+koklcpb2c|copy binary data into LOB
+koklm|LOB Default
+koklv|LOB Default
+koks|OBJECTS Semantic Analysis
+kokt|OBJECTS DDL
+kola|LOB
+kole|LOB Default
+kolfgdir|file get directory object path and filenames
+koll|LOB
+kolo|OBJECTS Anydata
+kolo|OBJECTS Images
+kolr|LOB Refcount
+kos|stream interfaces for images/objects
+kot|type manager
+kotg|accessor (get)
+koxs|LOB Default
+koxs|OBJECTS Streams
+kp|kernel programmatic interface
+kpbf|Progint Miscellaneous
+kpce|Streams Advanaced Queuing 
+kpcm|Streams Advanaced Queuing 
+kpfs|NPI
+kpin|Progint Miscellaneous
+kpk|OCI
+kpm|transparent Session Migration
+kpn|OCI
+kpo|oracle
+kpoal8|V8 bundled execution
+kpoaq|Streams Advanaced Queuing 
+kpoaut|authenticate
+kpoclsa|close all cursors
+kpodny|describe any arguments used
+kpodp|Direct Path Load
+kpogsk|initializes the session and returns the encrypted session key
+kpolob|lob operations
+kpon|Streams Advanaced Queuing 
+kpond|Streams Advanaced Queuing Notitication
+kppl|Connection Pool
+kpr|kernel programmatic interface
+kprc|copy routines
+kprball|execute all bundled kpr/rpi operations
+kps|transparent Session Migration
+kpu|user(?)
+kpuhh|handle heap
+kpuaq|Streams Advanaced Queuing 
+kpudcn2c|convert Number to Character string
+kpudp|DPAPI Load
+kpuexec|execute
+kpuexecv8|execute V8
+kpuhhalo|allocate memory freeable
+kpun|Streams Advanaced Queuing 
+kpur|remote call with service context, callbacks
+kpurcsc|call with service context
+kpuzxs|XS Midtier
+kq|kernel query
+kqd|dictionary management
+kqdgtc|return an open and parsed cursor for a statement
+kqf|fixed tables
+kqfrs|row source
+kqfp|packaes
+kqfd|Direct access to fixed tables
+kql|library cache
+kqlb|bootstrapping support
+kqld|dictionary callbacks
+kqldprr|parent referential constraint read
+kqlfgl|KQLF Get row for Lock, fixed table support
+kqlftl|cache fixed Table for Locks callback
+kqllod|database object load
+kqlnfy|notify
+kqlm|multi-instance manager
+kqlr|remote
+kqls|subordinate set manager
+kqlsadd|add a new element to a subordinate set
+kqr|row cache
+kra|Kernel Recovery Area Function
+krb|Kernel Backup Restore
+krbabr|Auto Block Media Recovery
+krbb|creation of a backuppiece
+krbc|controlfile
+krbd|device control
+krbi|ICD
+krbm|miscellaneous functions
+krbr|restore and recovery
+krby|image copy
+krc|Recovery Block Change Tracking
+krd_end_rcv|end media recovery
+krd_implicit_rcv|IMPLICIT ReCoVery for standby open/activation
+krp_check_slave_exit|wait for ksv slaves to exit
+krp_slave_apply|main redo apply loop
+krp_slave_main|main pmr slave callback
+ks|kernel service
+ksb|Background Processes
+ksbabs|action based server
+ksbd|detached process
+ksbrdp|run a detached background process
+ksbt|Background Processes
+kscnfy|kernel system notifications to be passed components
+ksd|debug internal errors
+ksddoa|debug support do an action
+ksdhng|Hang Analysis
+ksdp|parser
+ksdpcg|post and check event in the specified error group
+ksdpec|post event and check trigger condition
+kse|Kernel Service Error Manager
+ksedmp|dump process state
+ksedst|dump call stack
+ksf|functions
+ksfglt|get latch
+ksfflt|free latch
+ksfd_clear_pgaobjsc|clear pga objects
+ksfh|io helper
+ksfm|io mapping
+ksfpec|io post and event
+ksfq|io sequential io interface
+ksfv|io server
+ksi|kernel Service Instance locking
+ksk|license key
+kskthbwt|thread begin wait
+kskthexit|thread exit
+kskthewt|thread end wait
+kskthrsod|thread state object delete
+ksl|lock management
+kslccll|clean up after a given latch
+ksle|event wait
+kslfre|free latch
+kslgetl|get latch
+ksl_get_shared_latch|get latch in shared mode
+kslilcr|invoke latch cleanup routine
+ksliwat|awaken a wait event
+ksll|latches
+kslwaitctx|wait context
+kslwtbctx|begin wait
+kslwtectx|end wait
+ksm|memory
+ksmapg|callback for allocating a pga extent
+ksmasg|callback for allocating an sga extent
+ksmf|fixed sga
+ksmh|any heap
+ksmp|pga heap
+ksms|sga heap
+ksmshu|instance shutdown final check on sga
+ksmu|uga heap
+ksmugf|release session global memory
+ksmupg|check for references in the session global area to process
+ksn|Two Task
+ksp|parameter
+ksp|System Parameters
+kspt|System Parameters
+ksq|enqueue
+ksqgel|get an enqueue
+ksqgtl|get an enqueue
+kssdch|delete children of SO
+kssxld|delete SO ignoring errors, clean latches
+kst|trace
+ksu|user
+ksuc|cost function
+ksucln|cleanup detached process
+ksucresg|create session with a process group specified
+ksucrp|create and initialise process
+ksuded|user disconnect
+ksudel|delete user session
+ksudlc|delete call
+ksudlp|delete process. called when user deteches or cleanup by pmon
+ksul|license/language
+ksup|process info
+ksupop|operation
+ksupr|process object
+ksur|resource usage
+ksus|statistics
+ksuse|sessions
+ksut|timer
+ksux|instance
+ksuxda|attempt to delete all processes that are marked dead
+ksuxds|acquires the ksupol, the so latch protects access to the sniper bit
+ksuxfl|find dead processes and cleanup their latches
+ksv|Kernel Services Slave Management
+ksx|execution management
+ksxa|Parallel Affinity
+kt|kernel transaction
+kta|table access
+ktb|block
+ktbt|table
+ktbapundo|apply undo
+ktc|control component
+ktcifc|idl flush contexts
+ktcddt|delete distributed transaction
+ktcrab|real abort
+ktcrcm|real commit
+ktcsod|state object procedure vector definition
+kte|extent management
+ktec|extent concurrent
+ktef|extent flush extent map
+ktehw|high water mark operations
+ktein|information operations
+ktelck|set segment header extent map lock 
+kteop|operations
+ktm|transaction monitor
+ktmb|IM Txn Block
+ktmc|IM Txn Concurrency
+ktmjs|IM Txn Journal Scan
+ktmmon|tx monitor background timeout action
+ktmpj|IM Txn Private Journal
+ktmr|IM Txn Read
+ktmsj|IM Txn Shared Journal
+ktl|list blocks changed
+ktp|parallel
+ktpcmt|commit
+ktr|read
+kts|segment management
+ktsmg_seg|merge segments
+ktsmg_icmt|insert direct load commit
+ktsa|space analysis
+ktsb|bitmap management
+ktsfx|datafile extention
+ktss|segment procedures
+ktst|sort management
+ktt|tablespace
+ktu|undo
+ktuabt|abort
+ktuapundo|apply undo
+ktubgn|begin transaction
+ktubko|rollback transaction
+ktubnd|undo bind
+ktuc|called from cache
+ktucmt|undo commit transaction
+ktz|testing
+kgur|recovery
+ktursn|rollback segments shrink numbered
+ktursr|rollback segments shrink requested
+ku|kernel utility
+kueuld|export unloader
+kv|kernel performance
+kvi|information tables
+kwq|Streams Advanaced Queuing 
+kwqdl|Streams Advanaced Queuing Dequeue
+kwqic|Streams Advanaced Queuing pre-12c Notitication
+kwqid|Streams Advanaced Queuing Dequeue
+kwqit|Streams Advanaced Queuing Time Manager
+kwqmn|Streams Advanaced Queuing Time Manager
+kws|Streams Advanaced Queuing 
+kwsbg|Streams Advanaced Queuing Background
+kwsbit|Streams Advanaced Queuing Time Manager for Sharded Queue
+kwsbjc|Streams Advanaced Queuing Time Manager for Sharded Queue
+kwsbsm|Streams Advanaced Queuing Background
+kwsbtm|Streams Advanaced Queuing Time Manager for Sharded Queue
+kwscb|Streams Advanaced Queuing Message Cache
+kwschnk|Streams Advanaced Queuing Message Cache
+kwscp|Streams Advanaced Queuing Cross Process
+kwsdqwm|Streams Advanaced Queuing Message Cache
+kwsipc|Streams Advanaced Queuing Cross Process
+kwslb|Streams Advanaced Queuing Load Balancer
+kwslbbg|Streams Advanaced Queuing Load Balancer
+kwsmb|Streams Advanaced Queuing Message Cache
+kwsmc|Streams Advanaced Queuing Message Cache
+kwsmsg|Streams Advanaced Queuing Message Cache
+kwsnsm|Streams Advanced Queuing Subscription
+kwsnsme|Streams Advanced Queuing Subscription
+kwspt|Streams Advanaced Queuing Partitioning
+kwssa|Streams Advanced Queuing Subscription
+kwssb|Streams Advanaced Queuing Message Cache
+kwssbsh|Streams Advanaced Queuing Message Cache
+kwssh|Streams Advanaced Queuing Message Cache
+kwssi|Streams Advanced Queuing Subscription
+kx|kernel execution
+kxc|constraints
+kxcs|sql statements
+kxcc|catch all
+kxcb|backup
+kxd|Exadata specific Kernel Modules
+kxdam|Exadata Disk Autom Manage
+kxdbc|Exadata Backup Compression for Backup Appliance
+kxdbio|Exadata Block level Intelligent Operations
+kxdcm|Exadata Metrics Fixed Table Callbacks
+kxdmisc|Exadata Misc
+kxdofl|Exadata Offload
+kxdrs|Exadata Resilvering Layer
+kxf|parallel query
+kxfc|coordinator
+kxfp|process and queue manager
+kxfpb|Buffers
+kxfpbbgpc|get permanent chunks
+kxfpbgtc|buffer allocation get chunk
+kxfpnfy|notify
+kxfpqdqr|Queue DeQueue queue Reference
+kxfpqidqr|Queue Internal DeQueue queue Reference
+kxfq|Parallel Execution 
+kxfr|Parallel Execution 
+kxfs|slave
+kxft|Parallel Execution PTL
+kxfx|execution
+kxfxcw|kxfxrytab yields the (greatest) reply type expected from a
+kxfxgs|get start
+kxfxq|table queue and message queues
+kxfxse|execute
+kxrd|row delete
+kxpar|partition row sources
+kxru|row update
+kxs|shared cursor
+kxstcls|trace cursor closing
+kxt|trigger
+kz|kernel security
+kza|Database Audit Next Generation
+kzc|Code-Based Access Control
+kzd|dictionary component
+kzft|Database Audit Next Generation
+kziaia|Main Identification and Authentication function
+kzl|label
+kzr|resource routines
+kzradm|Real-time Application-controlled Data Masking
+kzs|state
+kzs|XDB Wallet
+kzsp|privileges
+kzsr|roles/remote password file
+kzsu|XS Principal
+kzv|Database Vault
+kzx|XS Fusion Security
+kzxa|XS ACL
+kzxc|XS Security Class
+kzxd|XS Data Security
+kzxi|XS Administrative operation
+kzxm|XS Administrative operation
+kzxnt|XS Namespace template
+kzxs|XS Session
+kzxsp|XS Security Class
+lis|PLSQL_KG_Interface
+md|Spatial
+mdgr|Spatial GeoRaster
+mdr|Spatial Indexing
+nau_ctl|Network nAtive aUthentication ConTroL
+nazslon|Network nAtive Zecurity Log ON
+nco|network connection
+ncodef|DEF interfaces
+ncrorou|receive OUT arguments for specified procedure
+ncrsrend|end record
+ncrsrwrt|Record WRiTe output buffer
+npi|network program interface
+npidsc|Network Program Interface DiSConnect
+npitcc|Test/Clear connections
+nsdo|execute network session operation 
+nsmtio|Trace Non Smart I/O
+nso|SQL Transformation
+nsoqbc|NeSt Optimization on Query BloCk
+nsotruns|TRaverse and UNnest Subquery - NeSt Optimization on Query Block
+nsprecv|receive packet from network transport layer
+nsrdr|ns packet reader
+nttrd|basic tcpip read
+oci|oracle C interface
+ociextp|PLSQL_External_Proc
+opi|oracle program interface
+opiamr|archival and media recovery
+opicca|clear context area
+opiclo|close cursor
+opidr|route current request
+opidrv|driver, entry side into two task interface
+opidsa|array describe locals
+opiexe|execute
+opifch2|fetch main routine
+opiino|initialize opi
+opilof|log off
+opilon|log on
+opiomc|map cursor
+opiope|open cursor
+opiosq0|prepare to parse a cursor
+opiprs|parse
+opiSem|semantic analysis driver
+opistp|stop oracle
+opitca|sets up context area
+opitsk|two task function dispatcher
+opiul|direct loader
+ort|OBJECTS Types
+osn|Two Task
+p2c|PLSQL_PSD_Standalones
+par|PLSQL_KG_Interface
+pb|PLSQL_Code_Execution
+pbbicd|PLSQL_KNLDE
+pbp3g|PLSQL_KNLDE
+pbs|PLSQL_KNLDE
+pbt3g|PLSQL_KNLDE
+pci|PLSQL_Infrastructure
+pckl|Programmatic Interfaces to/from PL/SQL
+pcm|PLSQL_Infrastructure
+pd|PLSQL_Code_Execution
+pdn|PLSQL_COG_Native
+pdt|PLSQL_IDL
+pdw|PLSQL_COG_IDL_Gen
+pdx|PLSQL_COG_Optimizer
+pdy|PLSQL_COG_MCode_Gen
+pdz|PLSQL_COG_Infrastructure
+pe|PLSQL_Code_Execution
+pef|PLSQL_External_Proc
+peibp|PLSQL_KNLDE
+peicnt|PL/SQL Controlled execution
+pes|Shared Object Manager
+pesld|Native Code Loader
+pextproc|pefm call external procedure
+pf|PLSQL_Code_Execution
+pfrrun|PL/SQL Interpreter Main Instruction Loop
+pfrrun_no_tool|fast interpretation loop
+pgm|PLSQL_ILMS
+ph|PLSQL_Infrastructure
+ph1|PLSQL_Syntax
+ph2|PLSQL_Semantics
+pha|PLSQL_Semantics
+phdr|PLSQL_KG_Interface
+phn|PLSQL_Semantics
+pi|PLSQL_Apps
+pk|PLSQL_KG_Interface
+pl|PLSQL_Infrastructure
+plitblm|PLSQL_Apps
+pls|PLSQL_PSD_Standalones
+plst|PLSQL_Code_Execution
+plswa|Programmatic Interfaces to/from PL/SQL
+pncutil|PLSQL_Infrastructure
+pp|PLSQL_Infrastructure
+pri|PLSQL_Code_Execution
+prs|parse
+prsase|initialisation parameter names
+prsdrv|delete
+prsxpl|explain statement
+prsrss|recursive alter system or session
+ps|PLSQL_Infrastructure
+psd|Programmatic Interfaces to/from PL/SQL
+psdddl|execute DDL
+pso|PLSQL_PSD_Generic
+psu|PLSQL_PSD_Generic
+psx|PLSQL_PSD_Standalones
+pt|PLSQL_IDL
+pu|PLSQL_Infrastructure
+qcdo|OBJECTS Dictionary
+qcs|query cursor parse
+qcp|query cursor parse
+qcpiere|expression relop expression
+qcpibfa|boolean term
+qcpibte|boolean factor
+qcpibex|boolean expressions
+qcpilcl|logical clause
+qcpilcl0|local
+qcso|OBJECTS Semantic Analysis
+qcto|OBJECTS Semantic Analysis
+qeaeCn1Serial|count function
+qee|SQL Execution
+qer|query execute rowsource
+qerae|and equal
+qerba|bitmap index and
+qerbc|bitmap index compaction
+qerbi|bitmap index creation
+qerbl|Bloom Filter
+qerbm|minus
+qerbo|bitmap index or
+qerbu|bitmap index unlimited or
+qerbx|bitmap index access
+qercb|connect by
+qercbi|support functions
+qerco|count
+qercoFetch|count rowsource fetch
+qerdl|delete
+qerep|explosion
+qerff|fifo buffer
+qerfi|first row
+qerfl|filter definition
+qerfu|update
+qerfx|fixed table
+qergh|hash group by
+qergi|granule iterator (partitioning)
+qergr|group by rollup
+qergs|group by sort
+qergv|Vector Aggregate
+qerhc|hash clusters
+qerhj|hash join
+qeril|in list
+qerim|index maintenance
+qerix|index
+qerjoFetch|fetch from join rowsource
+qerjo|nested loop outer
+qerle|linear execution implementation
+qerli|parallel create index
+qerlt|load table
+qerltFetch|fetch
+qerns|group by nosort
+qeroc|object collection iterator
+qerocStart|create a collection iterator row-source to iterate
+qeroi|extensibel indexing query component
+qerpa|partition
+qerpf|query execution prefetch
+qerpsel|Parallel Execution PX Selector
+qerpx|Parallel Execution 
+qerpxFetch|fetch
+qerrc|Vector Translate
+qerrm|remote
+qerse|set implementation
+qerso|sort
+qersq|sequence number
+qerst|query execution statistics
+qertb|table access
+qertq|table queue (px)
+qerua|union all
+qeruaFetch|fetch
+qerup|update
+qerupFetch|fetch
+qerus|upsert
+qervw|view
+qerwn|window
+qerxl|Vector PX
+qerxl|Vector Translate
+qerxp|XDB Query
+qerxt|external table
+qes|SQL Execution
+qesaAggNonDist|create/compute non-distinct aggregates
+qesbl|Bloom Filter
+qesgv|Vector Aggregate
+qesma|Partitioning
+qespc|Partitioning
+qesxl|Vector Translate
+qesxlp|Vector PX
+qesxlp|Vector Translate
+qka|query kernel allocation
+qkadrv|allocate query structures
+qkajoi|join processing
+qkatab|base table row sources
+qkatrv|traverse set expression tree
+qkaset|set expression
+qkauna|union or union all
+qke|SQL expression Analysis
+qkexl|Vector Translate
+qkn|SQL code generator
+qksan|SQL Analyze
+qksctx|SQL Compile MPGE
+qksds|SQL Dynamic Sampling Services
+qksvc|Virtual Column
+qkswcDriver|WITH Clause execution: Recursively traverse through all query blocks
+qksqbApplyToQbc|Query compilation for query blocks - apply to QB
+qksqbApplyToQbcLoc|local
+qkx|SQL code generator
+qmcx|XDB CSX
+qmcxd|XDB CSX DECODING
+qmcxe|XDB CSX ENCODING
+qmcxe|XDB CSX SELFCON
+qmcxm|XDB CSX ENCODING
+qmf|XDB Protocols
+qmh|XDB Protocols
+qmixq|XDB Schema
+qmixq|XDB XMLIndex
+qmn|XDB Protocols
+qmx|XDB XOB
+qmxq|XML
+qmxt|XML
+qmxtra|XDB Query
+qmxtri|XDB Schema
+qmxtri|XDB XMLIndex
+qosd|SQL Plan Directive
+qximeop|evaluate operand
+rae|rowsource and-equal 
+rtb|rowsource table
+rcoima|rowsource count implementation a
+rbfima|rowsource buffer implementation a
+rfuima|rowsource for update implementation a
+rixima|rowsource index implementation a
+rpi|recursive program interface
+rpicls|close
+rpidru|setup memory for recursive session
+rpidrus|recursive program handling
+rpidrv|driver
+rpiswu2|switch user in recursive sql
+rwsfcd|rowsource fetch
+rwsdef|rouwsource definitions
+scg|system dependent concurrency global locks
+scm|PLSQL_Apps
+selexe|select execute
+insexe|insert execute
+updexe|update execute
+delexe|delete execute
+seq|sequence numbers
+sgkmstack|call specified function with extra stack space
+sl|system specific call
+slcpu|get cpu usage
+slcpums|get cpu usage
+sltrgatime64|arbitrary time lookup (times)
+sltrgftime64|time lookup main
+sltrgftime64_cgt|clock_gettime
+ssexhd|dump routine
+std|PLSQL_Apps
+stsima|sort support implementation
+sp|system dependent process functions
+sqn|sequence reference parsing
+sxorchk|system xor check
+textio|PLSQL_Apps
+tre|PLSQL_Infrastructure
+ttcpip|two task common pipe read/write
+ttp|Database Audit Next Generation
+ul|SQLLDR Load
+upd|update
+updau1|Attempt Update of all rows or Lock all rows
+updauw|get the values of the update columns
+upderh|evaluate right hand side expressions in order to get values
+updexe|update execute
+updrow|Row Procedure used by KXRD to update or lock a row
+vop|SQL Transformation
+wlm|Work Load Management
+wpiutil|PLSQL_Apps
+xpl|SQL Explain Plan
+xtyinpr|insert numeric precision operator
+xct|transaction management
+zll|Oracle Label Security
+zt|encryption
