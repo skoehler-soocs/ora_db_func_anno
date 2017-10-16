@@ -1,0 +1,19 @@
+ora_functions
+
+A small file with oracle database function annotations. This is the result of a private database that consists of function annotations found in blogs and during research.
+
+Use the 'sf.sh' script to query the functions. The script uses sqlite3, use the sqlite rpm package to add this.
+
+This is how to use sf.sh (search function):
+$ ./sf.sh kglGetMutex
+kglGetMutex -- kernel generic lock management
+---
+
+This shows the sf.sh script could find the first 3 letters (underlined), which probably mean kernel generic lock management. It couldn't find 'GetMutex' however that is so self-explanatory that it doesn't need annotation.
+
+This is how a full function annotation looks like:
+$ ./sf.sh qercoFetch
+qercoFetch -- query execute rowsource count fetch
+----------
+
+Here the full function is underlined, which means the entire function is found.

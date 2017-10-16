@@ -919,7 +919,7 @@ qerbx|bitmap index access
 qercb|connect by
 qercbi|support functions
 qerco|count
-qercoFetch|count rowsource fetch
+qercoFetch|fetch
 qerdl|delete
 qerep|explosion
 qerff|fifo buffer
@@ -971,7 +971,7 @@ qerxl|Vector PX
 qerxl|Vector Translate
 qerxp|XDB Query
 qerxt|external table
-qes|SQL Execution
+qes|query execute services
 qesaAggNonDist|create/compute non-distinct aggregates
 qesbl|Bloom Filter
 qesgv|Vector Aggregate
