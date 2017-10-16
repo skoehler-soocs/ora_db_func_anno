@@ -21,3 +21,5 @@ qercoFetch -- query execute rowsource count fetch
 ```
 
 Here the full function is underlined, which means the entire function is found.
+
+If you found explanations for Oracle database code locations, or found an error in the annotation (I made assumptions here and there), please send them to frits.hoogland@gmail.com, so I can add or update it.
