@@ -16,7 +16,6 @@ ausdrv|driver
 bam|PLSQL_KG_Interface
 csy|create synonym
 ctc|create table or cluster
-ctc|SQL DDL
 cvw|create view
 dbkd|RDBMS Events
 dbke|RDBMS Diagnostic Data Extractor
@@ -24,7 +23,6 @@ dbked|RDBMS diagnostic Data Extractor Dumper
 dbkgc|RDBMS Diagnostic Generic Configuration
 dbkr|RDBMS ADR
 del|DML Drivers
-delexe|delete execute
 delexe|delete execute
 di|PLSQL_Apps
 dr|Text
@@ -36,7 +34,6 @@ evapls|evaluate plsql function
 hep|PLSQL_KG_Interface
 hsh|PLSQL_KG_Interface
 ins|DML Drivers
-insexe|insert execute
 insexe|insert execute
 jox|java compiler/runtime
 k2|Two-phase commit
