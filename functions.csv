@@ -183,7 +183,6 @@ kdzh|Archive Compression: Compression
 kdzk|Archive Compression: HPK
 kdzs|Archive Compression: Decompression
 ke|kernel event
-ke|kernel event (managability)
 keb|MMON/MMNL Infrastructure
 kec|Real Application Testing
 kecprm|Real Application Testing: Masking
@@ -214,13 +213,15 @@ kesws|SQL Monitor
 keswsq|Infrastructure
 keswts|Infrastructure
 ket|Automated Maintenance Tasks
-kew|kernel event wait 
+kew|wait 
 kewa|ASH
 kewm|AWR metrics
 kewr|AWR Repository
 kewrf|AWR Snapshot Flush
 kewrps|AWR Snapshot Purge
 kews|statistics
+kews_cln_timestate|clean timestate
+kews_update_wait_time|update wait time
 kewu|AWR Utilities
 kex|EM Express
 kf|Automatic Storage Management
@@ -328,7 +329,24 @@ kglpnc|pin heaps and load data pieces of a cursor object
 kglpndl|pin delete
 kglr|remote
 kglrfcl|reference clear
+kglsim|simulator (cache advise)
 kgmexec|kernel generic ... execute
+kgsk|system locking (resource manager?)
+kgskbwt|begin wait
+kgskckcpuswch|check cpu switches
+kgskdecr|decrease(?)
+kgskewt|end wait
+kgskewtint|internal
+kgskentsch|enter scheduler
+kgskexitsch|exit scheduler
+kgskmodruncnt|modify run count
+kgsklheld|lock held
+kgskupdbalance|update balance
+kgskuselowthreshold|use low threshold
+kgskusedynshares|use dynamic shares
+kgskrunnextint|run next int(?)
+kgskthbwt|thread end wait
+kgskthewt|thread end wait
 kgskthrexit|thread exit
 kgss|service state object manager
 kgur|recovery
@@ -423,6 +441,7 @@ kkxa|external/asynch RPC
 kkxb|external tables
 kkxcls|close cursor
 kkxexe|execute plsql
+kxxffir|function fire called when the appropriate heap is going away
 kkxppp|private pipe
 kkxrd|DBMS_ROWID
 kkxwtp|compiler
@@ -603,6 +622,7 @@ ksfq|io sequential io interface
 ksfv|io server
 ksi|kernel Service Instance locking
 ksk|license key
+ksklheld|lock held
 kskthbwt|thread begin wait
 kskthewt|thread end wait
 kskthexit|thread exit
@@ -617,8 +637,11 @@ kslilcr|invoke latch cleanup routine
 ksliwat|awaken a wait event
 ksll|latches
 kslwaitctx|wait context
-kslwtbctx|begin wait
-kslwtectx|end wait
+kslwt|wait interface
+kslwt_end_snapshot|end snapshot
+kslwt_update_stats_int|update statistics
+kslwtbctx|begin context/wait
+kslwtectx|end context/wait
 ksm|memory
 ksmapg|callback for allocating a pga extent
 ksmasg|callback for allocating an sga extent
@@ -632,15 +655,16 @@ ksmugf|release session global memory
 ksmupg|check for references in the session global area to process
 ksn|Two Task
 ksp|parameter
-ksp|System Parameters
-kspt|System Parameters
 ksq|enqueue
 ksqgel|get an enqueue
 ksqgtl|get an enqueue
 kssdch|delete children of SO
 kssxld|delete SO ignoring errors, clean latches
 kst|trace
+kstm|time manager
+kstmgethighresustick|get high resolution time
 ksu|user
+ksu_detactive_tac|deactivete time accounting
 ksuc|cost function
 ksucln|cleanup detached process
 ksucresg|create session with a process group specified
@@ -668,6 +692,9 @@ ksxp|rac operations(?)
 ksxr|rac operations(?)
 kt|kernel transaction
 kta|table access
+ktaiam|internal allocate dml lock 
+ktaadm|get all dml locks
+ktagetp|get partition lock
 ktb|block
 ktbapundo|apply undo
 ktbt|table
@@ -881,6 +908,7 @@ opidrv|driver, entry side into two task interface
 opidsa|array describe locals
 opiexe|execute
 opifch2|fetch main routine
+opifcs|free cursors by session close
 opiino|initialize opi
 opilof|log off
 opilon|log on
@@ -960,7 +988,6 @@ prm|parameter handling with sql layer
 prs|parse
 prsa|alter cluster command
 prsase|initialisation parameter names
-prsc|create database command
 prsdrv|delete
 prsrss|recursive alter system or session
 prssz|parse context to be saved
@@ -1047,6 +1074,9 @@ qerns|group by nosort
 qeroc|object collection iterator
 qerocStart|create a collection iterator row-source to iterate
 qeroi|extensibel indexing query component
+qeroifcc|fast call close
+qeroifcsu|fast call switch user
+qeroiirc|invoke rowsource close
 qerpa|partition
 qerpf|query execution prefetch
 qerpsel|Parallel Execution PX Selector
