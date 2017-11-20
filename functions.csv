@@ -266,6 +266,13 @@ kfz|ASM Zecurity subsystem
 kfzp|ASM Password File Layer
 kg|kernel generic
 kgbt|btree operations
+kgcc|compression
+kgccbuf|buffer
+kgccbz2do|bzip2 do apply bzip2 compression
+kgccbz2pseudodo|bzip2 pseudo do
+kgccdo|do main compression function
+kgccgmtf|generate move to front
+kgccm|memory (?)
 kgce|encryption engine
 kgds|VOS Generic Stack Trace
 kge|error
@@ -577,6 +584,7 @@ kra|Kernel Recovery Area Function
 krb|Kernel Backup Restore
 krbabr|Auto Block Media Recovery
 krbb|creation of a backuppiece
+krbbcdo|compression do
 krbc|controlfile
 krbd|device control
 krbi|dbms_backup_restore package
