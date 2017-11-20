@@ -8,6 +8,7 @@ apakkoqb|drive access path analysis for every query block
 apaqbd|drive access path analysis for every query block
 atb|alter table
 aud|audit
+audend|end (commit) transaction
 auddel|delete
 auddft|default function
 audfro|top level objects
@@ -16,6 +17,7 @@ ausdrv|driver
 bam|PLSQL_KG_Interface
 csy|create synonym
 ctc|create table or cluster
+ctcdrv|driver
 cvw|create view
 dbkd|RDBMS Events
 dbke|RDBMS Diagnostic Data Extractor
@@ -29,8 +31,11 @@ dr|Text
 dsy|drop synonym
 dtb|drop table
 eva|evaluating operands
+evadid|date: internal date to date format
 evaopn2|evaluate operand
 evapls|evaluate plsql function
+expeal|evaluate argument and list
+expepr|evaluate argument predicate
 hep|PLSQL_KG_Interface
 hsh|PLSQL_KG_Interface
 ins|DML Drivers
@@ -60,6 +65,7 @@ kcbdnb|dump n buffers
 kcbgcur|get current read
 kcbgtcr|get consistent read
 kcbl|load management
+kcblin|operations for redo-less write interface
 kcblrl|load release buffer
 kcbr_apply_pending|apply changed pending read completion
 kcbr_media_apply|apply change vector for media recovery
@@ -90,14 +96,17 @@ kcoubk|undo callback
 kcr|redo
 kcra|redo application/access
 kcramr|apply media recovery
+kcrcrl|corrupt redo log
 kcrf|file read
 kcrf_commit_force|commit changes
 kcrf_commit_force_int|commit changes
 kcrfw|Broadcast SCN/Kernel Cache Redo File Write
 kcrfw_copy_cv|copy change vectors to public redo buffer
 kcrm|media recovery
+kcropn|open online logfile for kcroio and kcrfoc
 kcrp|recovery parallel
 kcrpap|recovery parallel
+kcrpdv|recovery parallel (driver?)
 kcrr|redo archival
 kcrv|recovery
 kcrvfh|file headers
@@ -135,6 +144,8 @@ kdibl|maintenance for dml and direct load
 kdibq|queue class
 kdibr|row source utility
 kdic|create
+kdicdrv|driver routine
+kdicrws|using row source
 kdics|Cluster Table Scan
 kdil|Index Load
 kdis|index split
@@ -169,6 +180,8 @@ kdstf|table full ultra fast scan
 kdstgr|table get row
 kdsttgr|Full Table Scan
 kdt|table insert
+kdtgsp|table/cluster insert get space
+kdtgrs|get space
 kdu|update
 kdugetpart|get partition information for a deleted or opdated row
 kdusru|single row update
@@ -293,6 +306,7 @@ kghalp|allocate permanent memory
 kgherror|internal error routine
 kghfnd|find a chunk of memory 
 kghfre|free a chunk of memory
+kghfrf|non-recoverably free a freeable chunk of space
 kghfrh|free heap
 kghfrmrg|free a chunk, merge with neighbors if free returns merged chunk
 kghfrunp|free unpinned space
@@ -338,6 +352,9 @@ kglr|remote
 kglrfcl|reference clear
 kglsim|simulator (cache advise)
 kgmexec|kernel generic ... execute
+kgmgaicn|generic arguments input conversions
+kgmtconv|conversion
+kgmtimob|image to object (named types)
 kgsk|system locking (resource manager?)
 kgskbwt|begin wait
 kgskckcpuswch|check cpu switches
@@ -375,14 +392,19 @@ kjzh|DIAG API Layer
 kjzm|DIAG Membership Layer
 kk|kernel compile
 kkb|table
-kkbl|table with lob
-kkbo|table with object
+kkbl|lob
+kkbo|object
 kkcn|Streams Advanaced Queuing 
 kkcne|Streams Advanaced Queuing Notitication
-kkdcacr|kkdc get all check and referential constrains
+kkdc|data check
+kkdcacr|get all check and referential constrains
+kkdcico|insert constraint definition
 kkdl|dictionary lookup
 kkdo|OBJECTS Dictionary
 kke|cost engine
+kkeapr|analyze predicates for optimization returns stat ptr
+kkecpst|create copy of column statistics in compile time memory
+kkevcs|set view column stats for underlying column
 kkfd|fast dataflow (PQ DFO)
 kkfi|optimizer Virtual Column/indexes
 kkfr|fast rowid (PQ)
@@ -402,15 +424,23 @@ kkocri|create index
 kkogfp|get first permutation
 kkooqb|optimize query block
 kkopm|Plan Management
+kkopmCheckSmbUpdate|Check if updates to the Sql Management Base are pending
 kkopq|Parallel Optimization
 kkoqbc|query block optimization start point
 kkp|compilation 
 kkpa|Partitioning
 kkpo|partitioned objects
 kkpod|Partitioning Dictionary
-kkq|SQL Transformation
-kkqctdrvIT|Cost-based query Transformation - DRiVer Initiate cost-based Transformation
-kkqctdrvTD|Cost-based query Transformation - DRiVer for Transformation Directives
+kkq|query 
+kkqgbp|(?)
+kkqgbpColHasHighNDV|Column has high NDV
+kkqgbpCheckPred|Check validity of predicate
+kkqgbpCheckValidity|Check basic validity
+kkqgbptravChkTran|Traverse, check and transfor
+kkqctdrv|cost based transformation driver
+kkqctdrvTD|transformation directives
+kkqctdrvIT|Initiate cost-based Transformation
+kkqctdrvTD|Transformation Directives
 kkqdrv|query transformation driver
 kkqdtdrvJPPD|Cost-based query Transformation - DRiVer for Join Pred push down
 kkqj|join analysis
@@ -461,6 +491,7 @@ klcs|character set
 kll|kernel loader library
 klllr|logical record
 klm|memory
+klmalf|allocate freeable memory
 km|kernel multi threaded
 kmc|circuit
 kmcmbf|mark buffer
@@ -476,6 +507,7 @@ ko|kernel objects
 koc|cache manager
 kocedd|end duration
 kod|data manager
+kodpunp|unpickle an image into an object
 koh|heap manager
 kohdee|duration entry end
 kohedu|end an user duration
@@ -507,6 +539,7 @@ kos|stream interfaces for images/objects
 kot|type manager
 kotg|accessor (get)
 koxs|LOB Default
+koxsihread|image handle write from buffer
 koxs|OBJECTS Streams
 kp|kernel programmatic interface
 kpbf|Progint Miscellaneous
@@ -608,6 +641,8 @@ ksb|Background Processes
 ksbabs|action based server
 ksbd|detached process
 ksbrdp|run a detached background process
+ksbxiaf|ksbxic message and interrupt action
+ksbxiafdomsg|ksbxic and async xic static functions
 ksbt|Background Processes
 kscnfy|kernel system notifications to be passed components
 ksd|debug internal errors
@@ -644,6 +679,7 @@ ksl_get_shared_latch|get latch in shared mode
 kslilcr|invoke latch cleanup routine
 ksliwat|awaken a wait event
 ksll|latches
+kslwait|wait for n centi-seconds or until posted
 kslwaitctx|wait context
 kslwt|wait interface
 kslwt_end_snapshot|end snapshot
@@ -664,6 +700,7 @@ ksmupg|check for references in the session global area to process
 ksn|Two Task
 ksp|parameter
 ksq|enqueue
+ksqdel|release and enqueue
 ksqgel|get an enqueue
 ksqgtl|get an enqueue
 kssdch|delete children of SO
@@ -743,6 +780,10 @@ ktsb|bitmap management
 ktsfx|datafile extention
 ktsmg_icmt|insert direct load commit
 ktsmg_seg|merge segments
+ktspfpblk|pin useful block
+ktspfsrch|first level bitmap block search
+ktspgsp_main|get space for inserts
+ktspscan_bmb|scan the level 1 bitmap blocks
 ktss|segment procedures
 ktst|sort management
 ktt|tablespace
@@ -833,14 +874,19 @@ kxft|Parallel Execution PTL
 kxfx|execution
 kxfxcw|kxfxrytab yields the (greatest) reply type expected from a
 kxfxgs|get start
+kxfxmai|slave process main entry point
 kxfxq|table queue and message queues
 kxfxse|execute
+kxfxsp|open, parse, bind entire DFO
+kxh|hash join
 kxhf|support for hash join and memory management
+kxhrUnpack|unpack a row
 kxib|index buffering operations
 kxpar|partition row sources
 kxrd|row delete
 kxru|row update
 kxs|shared cursor
+kxsGetRuntimeLock|get runtime lock
 kxstcls|trace cursor closing
 kxti|trigger
 kxto|trigger
@@ -911,6 +957,7 @@ opi|oracle program interface
 opiamr|archival and media recovery
 opicca|clear context area
 opiclo|close cursor
+opidcl|cleanup after the sqlnet connection is terminated
 opidr|route current request
 opidrv|driver, entry side into two task interface
 opidsa|array describe locals
@@ -1060,20 +1107,25 @@ qerep|explosion
 qerff|fifo buffer
 qerfi|first row
 qerfl|filter definition
+qerflFetchOutside|fetch row from a sort row source table
 qerfu|update
 qerfx|fixed table
 qergh|hash group by
 qergi|granule iterator (partitioning)
 qergr|group by rollup
 qergs|group by sort
+qergsFetch|fetch
 qergv|Vector Aggregate
 qerhc|hash clusters
 qerhj|hash join
+qerhjWalkHashBucket|walk a list of pointers in a hash bucket and check for a match
 qeril|in list
 qerim|index maintenance
 qerix|index
 qerjo|nested loop outer
 qerjoFetch|fetch from join rowsource
+qerjot|join tunneling
+qerjotFetch|fetch
 qerle|linear execution implementation
 qerli|parallel create index
 qerlt|load table
@@ -1094,9 +1146,12 @@ qerrc|Vector Translate
 qerrm|remote
 qerse|set implementation
 qerso|sort
+qersoFetch|fetch from from a sort row source table
+qersoProcessULS|process underlying row source
 qersq|sequence number
 qerst|query execution statistics
 qertb|table access
+qertbFetch|fetch
 qertq|table queue (px)
 qerua|union all
 qeruaFetch|fetch
@@ -1104,6 +1159,7 @@ qerup|update
 qerupFetch|fetch
 qerus|upsert
 qervw|view
+qervwFetch|fetch
 qerwn|window
 qerxl|Vector PX
 qerxl|Vector Translate
@@ -1171,6 +1227,8 @@ qsme|query summary management expression processing
 qsmka|query summary determine if summary would be useful
 qsmkz|query summary create/alter summary semantic analysis
 qsmp|query summary partition processing
+qsmo|query summary o(?)
+qsmoAlterPlans|alter plans driver
 qsmq|query summary dictionary access
 qsmqcsm|query summary create/drop/alter summary
 qsmqutl|query summary support
