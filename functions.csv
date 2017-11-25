@@ -369,7 +369,7 @@ kgskupdbalance|update balance
 kgskuselowthreshold|use low threshold
 kgskusedynshares|use dynamic shares
 kgskrunnextint|run next int(?)
-kgskthbwt|thread end wait
+kgskthbwt|thread begin wait
 kgskthewt|thread end wait
 kgskthrexit|thread exit
 kgss|service state object manager
