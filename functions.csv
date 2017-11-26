@@ -355,7 +355,7 @@ kgmexec|kernel generic ... execute
 kgmgaicn|generic arguments input conversions
 kgmtconv|conversion
 kgmtimob|image to object (named types)
-kgsk|system locking (resource manager?)
+kgsk|system locking/resource manager
 kgskbwt|begin wait
 kgskckcpuswch|check cpu switches
 kgskdecr|decrease(?)
@@ -651,6 +651,8 @@ ksdhng|Hang Analysis
 ksdp|parser
 ksdpcg|post and check event in the specified error group
 ksdpec|post event and check trigger condition
+ksdxcb|ksdx callback for sosd layer signal handler
+ksdxfdmp|ksdx function: invoke named dump
 kse|Kernel Service Error Manager
 ksedmp|dump process state
 ksedst|dump call stack
@@ -664,8 +666,9 @@ ksfpec|io post and event
 ksfq|io sequential io interface
 ksfv|io server
 ksi|kernel Service Instance locking
-ksk|license key
+ksk|license key/resource manager
 ksklheld|lock held
+kskpthr|post thread
 kskthbwt|thread begin wait
 kskthewt|thread end wait
 kskthexit|thread exit
@@ -679,6 +682,7 @@ ksl_get_shared_latch|get latch in shared mode
 kslilcr|invoke latch cleanup routine
 ksliwat|awaken a wait event
 ksll|latches
+kslpspr|post the process with that latch
 kslwait|wait for n centi-seconds or until posted
 kslwaitctx|wait context
 kslwt|wait interface
@@ -867,6 +871,10 @@ kxfpbgtc|buffer allocation get chunk
 kxfpnfy|notify
 kxfpqdqr|Queue DeQueue queue Reference
 kxfpqidqr|Queue Internal DeQueue queue Reference
+kxfpqput|put qb buffer back (create partial)
+kxfpqrfdb|Queue ref free dequeued buffer
+kxfprienq|Queue ref internal enqueue message
+kxfprifdb|Queue ref internal free dequeued buffer
 kxfq|Parallel Execution 
 kxfr|Parallel Execution 
 kxfs|slave
@@ -1271,8 +1279,12 @@ scm|PLSQL_Apps
 sdbima|sort operation
 selexe|select execute
 seq|sequence numbers
-skgm|system kernel generic memory (os dependent)
+sk|system kernel
+skg|generic
+skgm|memory (os dependent)
 skgmstack|call specified function with extra stack space
+skgxp|IPC communication
+skgxppost|post the owner of a contact out of a blocking call
 smbima|sort operation
 sor|sort operation
 sl|system specific call
@@ -1287,6 +1299,7 @@ srdima|sort operation
 srsima|sort operation
 stsima|sort operation
 ssexhd|dump routine
+sspuser|handle SIGUSR2 for Oracle
 std|PLSQL_Apps
 stsima|sort support implementation
 sxorchk|system xor check
