@@ -76,6 +76,7 @@ kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
 kcbzgb|get (space for) buffer
+kcbzgm|get (space for) multiblock buffer
 kcbzib|input buffer
 kcbzibmlt|multiblock read
 kcbz_table_scan_read|buffered multiblock read main loop
@@ -357,6 +358,7 @@ kgmtconv|conversion
 kgmtimob|image to object (named types)
 kgsk|system locking/resource manager
 kgskbwt|begin wait
+kgskchk|check resource state for RM
 kgskckcpuswch|check cpu switches
 kgskdecr|decrease(?)
 kgskewt|end wait
@@ -639,6 +641,7 @@ krvt|log miner viewer support
 ks|kernel service
 ksb|Background Processes
 ksbabs|action based server
+ksbcti|call timeout/interrupts
 ksbd|detached process
 ksbrdp|run a detached background process
 ksbxiaf|ksbxic message and interrupt action
@@ -666,13 +669,15 @@ ksfpec|io post and event
 ksfq|io sequential io interface
 ksfv|io server
 ksi|kernel Service Instance locking
-ksk|license key/resource manager
+ksk|accounting
+kskchk|check resource state for RM
 ksklheld|lock held
 kskpthr|post thread
 kskthbwt|thread begin wait
 kskthewt|thread end wait
 kskthexit|thread exit
 kskthrsod|thread state object delete
+kskwait_timed_cpu|resource manager wait routine
 ksl|lock management
 kslccll|clean up after a given latch
 ksle|event wait
@@ -699,6 +704,7 @@ ksmp|pga heap
 ksms|sga heap
 ksmshu|instance shutdown final check on sga
 ksmu|uga heap
+ksmuga|allocate user session global data
 ksmugf|release session global memory
 ksmupg|check for references in the session global area to process
 ksn|Two Task
@@ -1289,9 +1295,9 @@ smbima|sort operation
 sor|sort operation
 sl|system specific call
 slcpu|get cpu usage
-slcpums|get cpu usage
-sltrgatime64|arbitrary time lookup (times)
-sltrgftime64|time lookup main
+slcpums|get cpu usage (for getrusage)
+sltrgatime64|arbitrary time lookup 
+sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
 sp|system dependent process functions
 sqn|sequence reference parsing
