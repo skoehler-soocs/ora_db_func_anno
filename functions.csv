@@ -979,6 +979,7 @@ opiexe|execute
 opifch2|fetch main routine
 opifcs|free cursors by session close
 opiino|initialize opi
+opikndf|OPIINO: Kernel route which sits on top of the SQL*Net
 opilof|log off
 opilon|log on
 opiomc|map cursor
