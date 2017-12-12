@@ -91,6 +91,8 @@ kck|compatibility
 kcl|lock manager
 kcm|miscellaneous
 kcmclscn|check lamport scn
+kcmgtsf|get timestamp full
+kcmtdif|time difference
 kco|operation
 kcoap|apply
 kcoubk|undo callback
@@ -356,11 +358,12 @@ kgmexec|kernel generic ... execute
 kgmgaicn|generic arguments input conversions
 kgmtconv|conversion
 kgmtimob|image to object (named types)
-kgsk|system locking/resource manager
+kgsk|resource manager
 kgskbwt|begin wait
 kgskchk|check resource state for RM
 kgskckcpuswch|check cpu switches
-kgskdecr|decrease(?)
+kgskdecr|decrease
+kgskdecrstat1|statistics
 kgskewt|end wait
 kgskewtint|internal
 kgskentsch|enter scheduler
@@ -496,9 +499,13 @@ klm|memory
 klmalf|allocate freeable memory
 km|kernel multi threaded
 kmc|circuit
+kmcadq|add circuit to a queue
 kmcmbf|mark buffer
 kmcrowrt|private functions
 kmd|dispatcher
+kmdmai|main loop
+kmdrdp|run a dispatcher process
+kmdu2s|route messages from user to server
 kmm|monitor
 kmms|server
 kmn|network
@@ -660,7 +667,18 @@ kse|Kernel Service Error Manager
 ksedmp|dump process state
 ksedst|dump call stack
 ksf|functions
+ksfd|disk IO
+ksfd_addtoissueq|add requests to issue queue
+ksfd_chkio|IO checker/io stats
 ksfd_clear_pgaobjsc|clear pga objects
+ksfd_do_io_verification|do IO verification
+ksfd_gosdrq|get os dependent requests
+ksfd_osdrqfil|operating system dependent request 
+ksfd_sbio|submit block IO
+ksfd_skgfqio|to system kernel generic file quick IO
+ksfd_update_iostatstime|update IO stats
+ksfdgo|execute IO
+ksfdwtio|wait for IO
 ksfflt|free latch
 ksfglt|get latch
 ksfh|io helper
@@ -768,6 +786,7 @@ ktelck|set segment header extent map lock
 kteop|operations
 kteu|redo support for segment header/extent map changes
 ktf|flashback support
+ktfwtsm|write timestamp
 ktfb|bitmapped space manipulation of files/tablespaces
 ktfd|dictionary based extent management
 ktft|temporary file manipulation
@@ -783,6 +802,8 @@ ktmsj|IM Txn Shared Journal
 ktp|parallel
 ktpcmt|commit
 ktr|read consistency
+ktrgcm|common cr read code
+ktrget|get a read consistent block
 ktri|dbms_resumable support
 kts|segment management
 ktsa|space analysis
@@ -805,6 +826,10 @@ ktubko|rollback transaction
 ktubnd|undo bind
 ktuc|called from cache
 ktucmt|undo commit transaction
+ktudecrustat|decrement undo usage statistics in the resource maanger
+ktugct|get commit times
+kturbk|roll back
+kturbt|roll back to time scn
 ktursn|rollback segments shrink numbered
 ktursr|rollback segments shrink requested
 ktz|testing
@@ -1288,8 +1313,20 @@ selexe|select execute
 seq|sequence numbers
 sk|system kernel
 skg|generic
+skgf|file
+skgfqui|quick IO
+skgfgiod|get IO done (?)
+skgfnxtio|next IO
+skgfr|requests
+skgfr_error64|check for errors
+skgfr_lio_listio64|perform listio (AIO) 64 bits
+skgfrciohdlr|concurrent IO handler
+skgfrliopo|listio (AIO) poll
+skgfrvldtrq|validate requests
+skgfrwat|wait for IO to complete
 skgm|memory (os dependent)
 skgmstack|call specified function with extra stack space
+skgstmGetEpochTs|statement(?) get epoch timestamp (gettimeofday)
 skgxp|IPC communication
 skgxppost|post the owner of a contact out of a blocking call
 smbima|sort operation
