@@ -646,6 +646,7 @@ krp_slave_main|main pmr slave callback
 krvg|generation of redo with DDL
 krvt|log miner viewer support
 ks|kernel service
+ksarcv|async receive message
 ksb|Background Processes
 ksbabs|action based server
 ksbcti|call timeout/interrupts
@@ -678,6 +679,7 @@ ksfd_sbio|submit block IO
 ksfd_skgfqio|to system kernel generic file quick IO
 ksfd_update_iostatstime|update IO stats
 ksfdgo|execute IO
+ksfdgrsz|get request size
 ksfdwtio|wait for IO
 ksfflt|free latch
 ksfglt|get latch
@@ -1321,11 +1323,14 @@ skgfr|requests
 skgfr_error64|check for errors
 skgfr_lio_listio64|perform listio (AIO) 64 bits
 skgfrciohdlr|concurrent IO handler
+skgfrgsz|get size
 skgfrliopo|listio (AIO) poll
 skgfrvldtrq|validate requests
 skgfrwat|wait for IO to complete
 skgm|memory (os dependent)
 skgmstack|call specified function with extra stack space
+skgpwpost|post/wait post
+skgpwwait|post/wait wait
 skgstmGetEpochTs|statement(?) get epoch timestamp (gettimeofday)
 skgxp|IPC communication
 skgxppost|post the owner of a contact out of a blocking call
@@ -1342,7 +1347,12 @@ sqn|sequence reference parsing
 srdima|sort operation
 srsima|sort operation
 stsima|sort operation
+ss|system specific system
 ssexhd|dump routine
+ssk|kernel
+sskg|generic
+sskgpwwait|post/wait wait
+sskpwpost|post/wait post
 sspuser|handle SIGUSR2 for Oracle
 std|PLSQL_Apps
 stsima|sort support implementation
