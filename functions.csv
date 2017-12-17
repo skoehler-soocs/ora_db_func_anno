@@ -48,6 +48,7 @@ k2g|global transction id
 k2gt|kernel 2phase commit global transaction
 k2i|indoubt table interface
 k2l|log records and log interface
+k2labo|abort session: first abort aborts tx
 k2r|multiple RPC
 k2s|server
 k2v|recovery
@@ -62,6 +63,8 @@ kbrs|Backup Appliance
 kc|kernel cache
 kcb|buffers
 kcbdnb|dump n buffers
+kcbchg|change a block
+kcbchg1|change a block
 kcbgcur|get current read
 kcbgtcr|get consistent read
 kcbl|load management
@@ -95,6 +98,7 @@ kcmgtsf|get timestamp full
 kcmtdif|time difference
 kco|operation
 kcoap|apply
+kcopcv|prepare change vector(?)
 kcoubk|undo callback
 kcr|redo
 kcra|redo application/access
@@ -115,6 +119,7 @@ kcrv|recovery
 kcrvfh|file headers
 kcs|service
 kcsadj3|adjust SCN
+kcsadj1|adjust SCN
 kcscur3|check SCN for update read
 kcsgbsn|get batched SCN
 kcsm|shared routines
@@ -293,7 +298,9 @@ kgce|encryption engine
 kgds|VOS Generic Stack Trace
 kge|error
 kgeadse|add string internal error to the error
-kgerinv|kernel generic record internal named error
+kgeasi|raise an error on an assertion failure
+kgerinv|record internal named error
+kgeriv|record internal error code with va_list
 kgesev|signal error code
 kgesinv|kernel generic signal internal named error
 kgf|ASM Automatic Storage Management
@@ -304,10 +311,10 @@ kgfpm|PATCH repository
 kgg|generic lists
 kgh|heap manager
 kghalf|non-recoverably allocate a freeable chunk of memory
-kghalo|main allocation
+kghalo|main allocation entry point
 kghalp|allocate permanent memory
 kgherror|internal error routine
-kghfnd|find a chunk of memory 
+kghfnd|find a chunk of memory of at least the minimum size
 kghfre|free a chunk of memory
 kghfrf|non-recoverably free a freeable chunk of space
 kghfrh|free heap
@@ -318,10 +325,10 @@ kghgex|get a new extent
 kghini|heap initialize
 kghnospc|no space available
 kghphini|parent heap initialize
-kghpmalo|find and return permanent chunk
+kghpmalo|find and return permanent chunk of space
 kghsrch|search freelists for a memory chunk
 kghx|fixed sized memory
-kghxal|allocate memory
+kghxal|allocate shared memory
 kgi|kernel generic instantiation manager
 kgicli|close all cursors for an instantiation 
 kgidel|delete an instantiation object
@@ -353,7 +360,7 @@ kglpnc|pin heaps and load data pieces of a cursor object
 kglpndl|pin delete
 kglr|remote
 kglrfcl|reference clear
-kglsim|simulator (cache advise)
+kglsim|simulator 
 kgmexec|kernel generic ... execute
 kgmgaicn|generic arguments input conversions
 kgmtconv|conversion
@@ -418,6 +425,7 @@ kkhr|hash join row management
 kkj|job queue
 kkjp|package
 kkm|SQL Semantic Analysis
+kkmpost|post processing
 kkn|analyze command
 kkndgd|Kernel Kompilation aNalyze Data Gathering Driver
 kkndrv|Kernel Kompilation aNalyze DRiVer
@@ -620,6 +628,7 @@ kqlp|sharing of sql statements
 kqlr|remote
 kqls|subordinate set manager
 kqlsadd|add a new element to a subordinate set
+kqlslod|load all subordinate set elements for a given heap
 kqr|row cache
 kr|kernel recovery
 kra|Kernel Recovery Area Function
@@ -700,6 +709,8 @@ kskthrsod|thread state object delete
 kskwait_timed_cpu|resource manager wait routine
 ksl|lock management
 kslccll|clean up after a given latch
+kslcll|clean up after a given latch
+kslcllt|clean up after a given latch
 ksle|event wait
 kslfre|free latch
 kslgetl|get latch
@@ -707,6 +718,7 @@ ksl_get_shared_latch|get latch in shared mode
 kslilcr|invoke latch cleanup routine
 ksliwat|awaken a wait event
 ksll|latches
+kslpslf|post list of foregrounds
 kslpspr|post the process with that latch
 kslwait|wait for n centi-seconds or until posted
 kslwaitctx|wait context
@@ -759,8 +771,9 @@ ksut|timer
 ksux|instance
 ksuxda|attempt to delete all processes that are marked dead
 ksuxds|acquires the ksupol, the so latch protects access to the sniper bit
-ksuxfl|find dead processes and cleanup their latches
-ksv|Kernel Services Slave Management
+ksuxdl|delete state object for PMON
+ksuxfl|find dead processes and cleanup their latches. called by PMON
+ksv|slave management
 ksx|execution management
 ksxa|Parallel Affinity
 ksxp|rac operations(?)
@@ -830,6 +843,7 @@ ktuc|called from cache
 ktucmt|undo commit transaction
 ktudecrustat|decrement undo usage statistics in the resource maanger
 ktugct|get commit times
+ktundo|undo
 kturbk|roll back
 kturbt|roll back to time scn
 ktursn|rollback segments shrink numbered
@@ -899,7 +913,7 @@ kxf|parallel query
 kxfc|coordinator
 kxfp|process and queue manager
 kxfpb|Buffers
-kxfpbbgpc|get permanent chunks
+kxfpbgpc|get permanent chunks
 kxfpbgtc|buffer allocation get chunk
 kxfpnfy|notify
 kxfpqdqr|Queue DeQueue queue Reference
@@ -1352,7 +1366,7 @@ ssexhd|dump routine
 ssk|kernel
 sskg|generic
 sskgpwwait|post/wait wait
-sskpwpost|post/wait post
+sskgpwpost|post/wait post
 sspuser|handle SIGUSR2 for Oracle
 std|PLSQL_Apps
 stsima|sort support implementation
@@ -1376,6 +1390,7 @@ vop|view optimisation
 wlm|Work Load Management
 wpiutil|PLSQL_Apps
 xct|transaction management
+xctrol|rollback: rollback current transaction of the current session
 xpl|SQL Explain Plan
 xty|type checking
 xtyinpr|insert numeric precision operator
