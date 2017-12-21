@@ -67,6 +67,7 @@ kcbchg|change a block
 kcbchg1|change a block
 kcbgcur|get current read
 kcbgtcr|get consistent read
+kcbklbc|link buffer into ckpt queue
 kcbl|load management
 kcblin|operations for redo-less write interface
 kcblrl|load release buffer
@@ -81,7 +82,7 @@ kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
 kcbzgb|get (space for) buffer
 kcbzgm|get (space for) multiblock buffer
 kcbzib|input buffer
-kcbzibmlt|multiblock read
+kcbzibmlt|input buffer for multiblock read
 kcbz_table_scan_read|buffered multiblock read main loop
 kcbztek_trace_blk|tablespace encryption check(?)
 kcbzvb|verify buffer
@@ -169,6 +170,7 @@ kdlw|kdlw
 kdl_write|write into an ilob instance
 kdlx|xfm
 kdlxdup|dedup
+kdlxgs_init|reclaim space from transaction freelist in index
 kdm|IM data layer
 kdml|IM populating
 kdmo|IM Optimizer
@@ -190,8 +192,10 @@ kdsttgr|Full Table Scan
 kdt|table insert
 kdtgsp|table/cluster insert get space
 kdtgrs|get space
+kdtInsRow|insert a row immediately
 kdu|update
 kdugetpart|get partition information for a deleted or opdated row
+kdumrp|update multiple row pieces
 kdusru|single row update
 kdx|index
 kdxokcmp|Auto Prefix Compressed Index
@@ -1333,6 +1337,7 @@ skgf|file
 skgfqui|quick IO
 skgfgiod|get IO done (?)
 skgfnxtio|next IO
+skgfospo|operating system poll (?)
 skgfr|requests
 skgfr_error64|check for errors
 skgfr_lio_listio64|perform listio (AIO) 64 bits
