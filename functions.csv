@@ -87,6 +87,8 @@ kcbz_table_scan_read|buffered multiblock read main loop
 kcbztek_trace_blk|tablespace encryption check(?)
 kcbzvb|verify buffer
 kcc|controlfile
+kccchm|cache header block 
+kccocx|open control transaction
 kcf|file management
 kcfis|Exadata Predicate Push
 kcfopd|open/close database code
@@ -110,6 +112,7 @@ kcrf_commit_force|commit changes
 kcrf_commit_force_int|commit changes
 kcrfw|Broadcast SCN/Kernel Cache Redo File Write
 kcrfw_copy_cv|copy change vectors to public redo buffer
+kcrfwl|write sWitch logs
 kcrm|media recovery
 kcropn|open online logfile for kcroio and kcrfoc
 kcrp|recovery parallel
