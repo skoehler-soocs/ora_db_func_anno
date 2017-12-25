@@ -1173,6 +1173,9 @@ qerfl|filter definition
 qerflFetchOutside|fetch row from a sort row source table
 qerfu|update
 qerfx|fixed table
+qerfxGConId|get container id
+qerfxGCol|get column
+qerfxFetch|fetch
 qergh|hash group by
 qergi|granule iterator (partitioning)
 qergr|group by rollup
