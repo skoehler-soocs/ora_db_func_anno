@@ -104,7 +104,7 @@ kcmclscn|check lamport scn
 kcmgtsf|get timestamp full
 kcmtdif|time difference
 kco|operation
-kcoapl|apply (changes to buffer; calls kcbapl)
+kcoapl|apply (changes to buffer)
 kcopcv|prepare change vector(?)/redo entry generation and retrieval
 kcoubk|undo callback
 kcr|redo
