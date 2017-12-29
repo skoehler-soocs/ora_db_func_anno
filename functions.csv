@@ -38,8 +38,10 @@ expeal|evaluate argument and list
 expepr|evaluate argument predicate
 hep|PLSQL_KG_Interface
 hsh|PLSQL_KG_Interface
-ins|DML Drivers
-insexe|insert execute
+ins|insert
+insexe|execute
+insidx|Insert indexed keys into the indexes after each row is inserted into the table
+insrow|Fetch a row for insertion. This is called back by multirow insert
 jox|java compiler/runtime
 k2|Two-phase commit
 k2c|kernel to kernel 
@@ -57,6 +59,7 @@ kad|OBJECTS Anydata/Images
 kaf|fetch
 kau|update
 kauupd|table and modify indexes
+kauxsin|Insert a key into x index segment(s) only 
 kb|kernel backup
 kbc|Backup Appliance Containers
 kbrs|Backup Appliance
@@ -101,7 +104,7 @@ kcmgtsf|get timestamp full
 kcmtdif|time difference
 kco|operation
 kcoap|apply
-kcopcv|prepare change vector(?)
+kcopcv|prepare change vector(?)/redo entry generation and retrieval
 kcoubk|undo callback
 kcr|redo
 kcra|redo application/access
@@ -126,6 +129,9 @@ kcsadj3|adjust SCN
 kcsadj1|adjust SCN
 kcscur3|check SCN for update read
 kcsgbsn|get batched SCN
+kcsgcsn|get current SCN
+kcsgrsn|get recent SCN
+kcsgssn|get snapshot SCN
 kcsm|shared routines
 kcsnew3|obtain new SCN
 kct|threads
@@ -159,6 +165,7 @@ kdic|create
 kdicdrv|driver routine
 kdicrws|using row source
 kdics|Cluster Table Scan
+kdiins0|inserts the argument key and associated keydata
 kdil|Index Load
 kdis|index split
 kdiss|skip scan
@@ -696,6 +703,7 @@ ksfd_skgfqio|to system kernel generic file quick IO
 ksfd_update_iostatstime|update IO stats
 ksfdgo|execute IO
 ksfdgrsz|get request size
+ksfdmp|call the relevant dump routine
 ksfdwtio|wait for IO
 ksfflt|free latch
 ksfglt|get latch
@@ -847,6 +855,7 @@ ktubgn|begin transaction
 ktubko|rollback transaction
 ktubnd|undo bind
 ktuc|called from cache
+ktuchg|write logs and perform changes
 ktucmt|undo commit transaction
 ktudecrustat|decrement undo usage statistics in the resource maanger
 ktugct|get commit times
@@ -1173,6 +1182,7 @@ qerfl|filter definition
 qerflFetchOutside|fetch row from a sort row source table
 qerfu|update
 qerfx|fixed table
+qerfxArrayMaxSize|array max size
 qerfxGConId|get container id
 qerfxGCol|get column
 qerfxFetch|fetch
