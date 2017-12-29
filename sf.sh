@@ -1,3 +1,15 @@
+if [ $1 = "-l" ]; then
+	LEVEL=$2
+	shift 2
+else
+	LEVEL=0
+fi
+if [ $1 = "-w" ]; then
+	WILDCARD=yes
+	shift
+else
+	WILDCARD=no
+fi
 FUNCTION=$1
 sqlite3 memory_ranges.db "drop table if exists functions;"
 sqlite3 memory_ranges.db "create table functions (function_name varchar(30), function_sum varchar(60));"
@@ -10,7 +22,7 @@ function_description() {
         [ ${#LOCAL_FUNCTION_NAME} -lt $MAX_LENGTH ] && LOCAL_LENGTH=${#LOCAL_FUNCTION_NAME} || LOCAL_LENGTH=$MAX_LENGTH
         if [ $USE = "n" ]; then
         	RETURN=$(for LEN in $(seq $MIN_LENGTH $LOCAL_LENGTH); do sqlite3 memory_ranges.db "select function_sum from functions where function_name like substr('$LOCAL_FUNCTION_NAME',1,$LEN) escape '\';"; done)
-        else
+        elif [ $USE = "r" ]; then
                 RETURN=0
 		PREV_RESULT=""
         	for LEN in $(seq $MIN_LENGTH $LOCAL_LENGTH); do
@@ -20,8 +32,24 @@ function_description() {
 				PREV_RESULT=$RESULT
 			fi
 		done
+	elif [ $USE = "l" ]; then
+		printf "$(sqlite3 memory_ranges.db "select function_name||'\t'||function_sum from functions where function_name like '${LOCAL_FUNCTION_NAME}%' and length(function_name) <= $LEVEL;")" | while read OUT; do
+			echo "$OUT"
+		done
+		RETURN=0
+	elif [ $USE = "w" ]; then
+		printf "$(sqlite3 memory_ranges.db "select function_name||'\t'||function_sum from functions where function_name like '${LOCAL_FUNCTION_NAME}%';")" | while read OUT; do
+			echo "$OUT"
+		done
+		RETURN=0
 	fi
         [ -z "$RETURN" ] && printf "?" || echo $RETURN
 }
-echo "$FUNCTION -- $(function_description "$FUNCTION" n)"
-for P in $(seq 1 $(function_description "$FUNCTION" r)); do printf "-"; done; printf "\n"
+if [ $WILDCARD = "yes" ]; then
+	echo "$(function_description "$FUNCTION" w)" | sed '$ d'
+elif [ $LEVEL -gt 0 ]; then
+	echo "$(function_description "$FUNCTION" l)" | sed '$ d'
+else
+	echo "$FUNCTION -- $(function_description "$FUNCTION" n)"
+	for P in $(seq 1 $(function_description "$FUNCTION" r)); do printf "-"; done; printf "\n"
+fi

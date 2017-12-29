@@ -65,6 +65,7 @@ kbc|Backup Appliance Containers
 kbrs|Backup Appliance
 kc|kernel cache
 kcb|buffers
+kcbapl|apply (changes to buffer)
 kcbdnb|dump n buffers
 kcbchg|change a block
 kcbchg1|change a block
@@ -103,7 +104,7 @@ kcmclscn|check lamport scn
 kcmgtsf|get timestamp full
 kcmtdif|time difference
 kco|operation
-kcoap|apply
+kcoapl|apply (changes to buffer; calls kcbapl)
 kcopcv|prepare change vector(?)/redo entry generation and retrieval
 kcoubk|undo callback
 kcr|redo
@@ -490,6 +491,7 @@ kksalx|allocate bytes from the execution time heap
 kksarm|authorize for remote
 kksauc|authorize to use this child
 kkscls|close cursor
+kkscs|child cursor
 kksdopt|smart disk no option
 kksfbc|find bound cursor
 kkslod|cursor load callback
