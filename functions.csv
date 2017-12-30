@@ -70,21 +70,29 @@ kcbdnb|dump n buffers
 kcbchg|change a block
 kcbchg1|change a block
 kcbgcur|get current read
+kcbget|get buffer (for index branch and leaf blocks)
 kcbgtcr|get consistent read
+kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
+kcbipnns|si (buffer) pinned (no statistics)
 kcbklbc|link buffer into ckpt queue
 kcbl|load management
 kcblin|operations for redo-less write interface
+kcblnb|load new buffer
+kcblnb_dscn|load new buffer
 kcblrl|load release buffer
 kcbr_apply_pending|apply changed pending read completion
 kcbr_media_apply|apply change vector for media recovery
+kcbrls|release pin 
 kcbtse|tablespace encryption
 kcbtse_encdec_tbsblk|block encrypt
 kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
 kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
+kcbzfs|free buffer handle 
 kcbzgb|get (space for) buffer
 kcbzgm|get (space for) multiblock buffer
+kcbzgs|get buffer via buffer handle
 kcbzib|input buffer
 kcbzibmlt|input buffer for multiblock read
 kcbz_table_scan_read|buffered multiblock read main loop
@@ -201,8 +209,10 @@ kdstf|table full ultra fast scan
 kdstgr|table get row
 kdsttgr|Full Table Scan
 kdt|table insert
+kdtchg|generate change
 kdtgsp|table/cluster insert get space
 kdtgrs|get space
+kdtwrp|write row piece
 kdtInsRow|insert a row immediately
 kdu|update
 kdugetpart|get partition information for a deleted or opdated row
@@ -802,6 +812,7 @@ ktaadm|get all dml locks
 ktagetp|get partition lock
 ktb|block
 ktbapundo|apply undo
+ktbchg2|(header) change
 ktbt|table
 ktc|control component
 ktcddt|delete distributed transaction
@@ -834,6 +845,7 @@ ktmsj|IM Txn Shared Journal
 ktp|parallel
 ktpcmt|commit
 ktr|read consistency
+ktrexc|examine block (consistent gets - examination)
 ktrgcm|common cr read code
 ktrget|get a read consistent block
 ktri|dbms_resumable support
@@ -1301,26 +1313,29 @@ qmxtri|XDB Schema
 qmxtri|XDB XMLIndex
 qosd|SQL Plan Directive
 qximeop|evaluate operand
-qsme|query summary management expression processing
-qsmka|query summary determine if summary would be useful
-qsmkz|query summary create/alter summary semantic analysis
-qsmp|query summary partition processing
-qsmo|query summary o(?)
+qs|query summary
+qsme|management expression processing
+qsmka|determine if summary would be useful
+qsmkz|create/alter summary semantic analysis
+qsmp|partition processing
+qsmo|summary o(?)
 qsmoAlterPlans|alter plans driver
-qsmq|query summary dictionary access
-qsmqcsm|query summary create/drop/alter summary
-qsmqutl|query summary support
-qsms|query summary management advisor
-qxdid|query index domain index ddl operations
-qxidm|query index extensible index dml operations
-qxidp|query index domain index ddl partition operations
-qxim|query index support for objects
-qxitex|query index support for create/drop indextype
-qxopc|query execution time operator callbacks
-qxope|query support for operator ddl
-qxopq|query support for user-defined operators
-qxuag|query support for user-defined aggragate processing
-qxxm|query support external tables
+qsmq|dictionary access
+qsmqcsm|create/drop/alter summary
+qsmqutl|support
+qsms|management advisor
+qx|query index
+qxdid|domain index ddl operations
+qxidm|extensible index dml operations
+qxidp|domain index ddl partition operations
+qxim|support for objects
+qxitex|support for create/drop indextype
+qx|query execution
+qxopc|time operator callbacks
+qxope|support for operator ddl
+qxopq|support for user-defined operators
+qxuag|support for user-defined aggragate processing
+qxxm|support external tables
 rae|rowsource and-equal 
 rbfima|rowsource buffer implementation a
 rcoima|rowsource count implementation a

@@ -1,3 +1,27 @@
+if [ -z "$1" ]; then
+	echo "Usage: $0 [-l n | -w ] <oracle c function name>"
+	echo "-l = level; find annotations at a certain mnemonic level; for example:"
+	echo "            $0 -l 3 kc"
+	echo "            kc  kernel cache"
+	echo "            kcb  buffers"
+	echo "            kcc  controlfile"
+	echo "            kcf  file management"
+	echo "            kck  compatibility"
+	echo "            kcl  lock manager"
+	echo "            kcm  miscellaneous"
+	echo "            kco  operation"
+	echo "            kcr  redo"
+	echo "            kcs  service"
+	echo "            kct  threads"
+	echo "-w = wildcard; find anything starting with function name, for example:"
+	echo "            $0 -w rpi"
+	echo "            rpi  recursive program interface"
+	echo "            rpicls  close"
+	echo "            rpidru  setup memory for recursive session"
+	echo "            rpidrus  recursive program handling"
+	echo "            rpidrv  driver"
+	exit 1
+fi
 if [ $1 = "-l" ]; then
 	LEVEL=$2
 	shift 2
