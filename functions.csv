@@ -72,6 +72,7 @@ kcbchg1|change a block
 kcbgcur|get current read
 kcbget|get buffer (for index branch and leaf blocks)
 kcbgtcr|get consistent read
+kcbhfix_tail|update tail (low-order two bytes of the scn+block type+block sequence number)
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
 kcbipnns|si (buffer) pinned (no statistics)
 kcbklbc|link buffer into ckpt queue
@@ -112,6 +113,8 @@ kcmclscn|check lamport scn
 kcmgtsf|get timestamp full
 kcmtdif|time difference
 kco|operation
+kco_blkchk|block check
+kcoadv_hdr|advance SCN in buffer header
 kcoapl|apply (changes to buffer)
 kcopcv|prepare change vector(?)/redo entry generation and retrieval
 kcoubk|undo callback
@@ -174,6 +177,8 @@ kdic|create
 kdicdrv|driver routine
 kdicrws|using row source
 kdics|Cluster Table Scan
+kdifxs|fetch row from index block
+kdifxs1|fetch row from index block inner function
 kdiins0|inserts the argument key and associated keydata
 kdil|Index Load
 kdis|index split
@@ -855,6 +860,7 @@ ktsb|bitmap management
 ktsfx|datafile extention
 ktsmg_icmt|insert direct load commit
 ktsmg_seg|merge segments
+ktsp|space management
 ktspfpblk|pin useful block
 ktspfsrch|first level bitmap block search
 ktspgsp_main|get space for inserts
@@ -873,6 +879,8 @@ ktuchg|write logs and perform changes
 ktucmt|undo commit transaction
 ktudecrustat|decrement undo usage statistics in the resource maanger
 ktugct|get commit times
+ktugur|generate undo and redo
+ktugus|get undo segment header
 ktundo|undo
 kturbk|roll back
 kturbt|roll back to time scn
@@ -1212,6 +1220,7 @@ qerhjWalkHashBucket|walk a list of pointers in a hash bucket and check for a mat
 qeril|in list
 qerim|index maintenance
 qerix|index
+qerixtFetch|fetch from index
 qerjo|nested loop outer
 qerjoFetch|fetch from join rowsource
 qerjot|join tunneling
