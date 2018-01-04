@@ -57,12 +57,12 @@ function_description() {
 			fi
 		done
 	elif [ $USE = "l" ]; then
-		printf "$(sqlite3 memory_ranges.db "select function_name||'\t'||function_sum from functions where function_name like '${LOCAL_FUNCTION_NAME}%' and length(function_name) <= $LEVEL;")" | while read OUT; do
+		printf "$(sqlite3 memory_ranges.db "select function_name||'\t'||function_sum||'\n' from functions where function_name like '${LOCAL_FUNCTION_NAME}%' and length(function_name) <= $LEVEL;")" | while read OUT; do
 			echo "$OUT"
 		done
 		RETURN=0
 	elif [ $USE = "w" ]; then
-		printf "$(sqlite3 memory_ranges.db "select function_name||'\t'||function_sum from functions where function_name like '${LOCAL_FUNCTION_NAME}%';")" | while read OUT; do
+		printf "$(sqlite3 memory_ranges.db "select function_name||'\t'||function_sum||'\n' from functions where function_name like '${LOCAL_FUNCTION_NAME}%';")" | while read OUT; do
 			echo "$OUT"
 		done
 		RETURN=0
@@ -70,9 +70,9 @@ function_description() {
         [ -z "$RETURN" ] && printf "?" || echo $RETURN
 }
 if [ $WILDCARD = "yes" ]; then
-	echo "$(function_description "$FUNCTION" w)" | sed '$ d'
+	echo "$(function_description "$FUNCTION" w)" | grep -v '^0$' | grep -v '^$'
 elif [ $LEVEL -gt 0 ]; then
-	echo "$(function_description "$FUNCTION" l)" | sed '$ d'
+	echo "$(function_description "$FUNCTION" l)" | grep -v '^0$' | grep -v '^$'
 else
 	echo "$FUNCTION -- $(function_description "$FUNCTION" n)"
 	for P in $(seq 1 $(function_description "$FUNCTION" r)); do printf "-"; done; printf "\n"

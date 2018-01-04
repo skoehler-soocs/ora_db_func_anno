@@ -125,6 +125,7 @@ kcrcrl|corrupt redo log
 kcrf|file read
 kcrf_commit_force|commit changes
 kcrf_commit_force_int|commit changes
+kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
 kcrfw|Broadcast SCN/Kernel Cache Redo File Write
 kcrfw_copy_cv|copy change vectors to public redo buffer
 kcrfwl|write sWitch logs
