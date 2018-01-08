@@ -46,6 +46,7 @@ dbke|RDBMS Diagnostic Data Extractor
 dbked|RDBMS diagnostic Data Extractor Dumper
 dbkgc|RDBMS Diagnostic Generic Configuration
 dbkr|RDBMS ADR
+dbkt|RDBMS Unified Tracing Service (UTS)
 del|DML Drivers
 delexe|delete execute
 di|PLSQL_Apps
@@ -125,6 +126,9 @@ kcc|controlfile
 kccchm|cache header block 
 kccocx|open control transaction
 kcf|file management
+kcfbsy|background synchronisation of SGA and controlfile
+kcfcsy|cross instance sync
+kcfida|identify file action
 kcfis|Exadata Predicate Push
 kcfopd|open/close database code
 kcht|hash table
@@ -707,6 +711,7 @@ krpi|dbms_pitr support
 krp_check_slave_exit|wait for ksv slaves to exit
 krp_slave_apply|main redo apply loop
 krp_slave_main|main pmr slave callback
+krtchk|check consistency (with control file)
 krvg|generation of redo with DDL
 krvt|log miner viewer support
 ks|kernel service
@@ -715,6 +720,7 @@ ksb|Background Processes
 ksbabs|action based server
 ksbcti|call timeout/interrupts
 ksbd|detached process
+ksbmsg|call cpu count changed callbacks
 ksbrdp|run a detached background process
 ksbxiaf|ksbxic message and interrupt action
 ksbxiafdomsg|ksbxic and async xic static functions
@@ -808,6 +814,7 @@ kstm|time manager
 kstmgethighresustick|get high resolution time
 ksu|user
 ksu_detactive_tac|deactivete time accounting
+ksu_dispatch_tac|dispatch timed-out action
 ksuc|cost function
 ksucln|cleanup detached process
 ksucresg|create session with a process group specified
@@ -830,6 +837,7 @@ ksuxds|acquires the ksupol, the so latch protects access to the sniper bit
 ksuxdl|delete state object for PMON
 ksuxfl|find dead processes and cleanup their latches. called by PMON
 ksv|slave management
+ksvrdp|run generic detached slave process
 ksx|execution management
 ksxa|Parallel Affinity
 ksxp|rac operations(?)
