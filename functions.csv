@@ -234,7 +234,7 @@ kdp|Archive Compression: Pcode
 kdq|query
 kds|seek/scan
 kdscgr|Cluster Table Scan
-kdsgnp|Fetch By Rowid
+kdsgnp|Fetch By Rowid get continued row piece (chained row)
 kdsgrp|Fetch By Rowid get row piece
 kdso|service object
 kdstf|table full ultra fast scan
@@ -818,6 +818,7 @@ ksu_dispatch_tac|dispatch timed-out action
 ksuc|cost function
 ksucln|cleanup detached process
 ksucresg|create session with a process group specified
+ksucre|create user session in process
 ksucrp|create and initialise process
 ksuded|user disconnect
 ksudel|delete user session
@@ -1099,6 +1100,7 @@ opiosq0|prepare to parse a cursor
 opiprs|parse
 opiSem|semantic analysis driver
 opistp|stop oracle
+opistr|start oracle
 opitca|sets up context area
 opitsk|two task function dispatcher
 opiul|direct loader
