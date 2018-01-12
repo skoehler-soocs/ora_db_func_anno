@@ -715,7 +715,9 @@ krtchk|check consistency (with control file)
 krvg|generation of redo with DDL
 krvt|log miner viewer support
 ks|kernel service
-ksarcv|async receive message
+ksa|async
+ksaamb|allocate message block
+ksarcv|receive message
 ksb|Background Processes
 ksbabs|action based server
 ksbcti|call timeout/interrupts
