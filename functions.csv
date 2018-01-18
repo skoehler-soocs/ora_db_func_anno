@@ -97,7 +97,7 @@ kcbget|get buffer (for index branch and leaf blocks)
 kcbgtcr|get consistent read
 kcbhfix_tail|update tail (low-order two bytes of the scn+block type+block sequence number)
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
-kcbipnns|si (buffer) pinned (no statistics)
+kcbipnns|is (buffer) pinned (no statistics)
 kcbklbc|link buffer into ckpt queue
 kcbl|load management
 kcblin|operations for redo-less write interface
@@ -1449,8 +1449,11 @@ ss|system specific system
 ssexhd|dump routine
 ssk|kernel
 sskg|generic
-sskgpwwait|post/wait wait
-sskgpwpost|post/wait post
+sskgpw|post/wait
+sskgpwidcmp|compare semid of semaphores to be posted
+sskgpwvectorpost|post multiple semaphores
+sskgpwwait|wait
+sskgpwpost|post
 sspuser|handle SIGUSR2 for Oracle
 std|PLSQL_Apps
 stsima|sort support implementation
