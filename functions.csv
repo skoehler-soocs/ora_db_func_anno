@@ -149,11 +149,14 @@ kcra|redo application/access
 kcramr|apply media recovery
 kcrcrl|corrupt redo log
 kcrf|file read
-kcrf_commit_force|commit changes
-kcrf_commit_force_int|commit changes
+kcrf_commit_force|commit changes (11g) post lgwr or wait for lgwr
+kcrf_commit_force_int|commit changes (12g) post lgwr or wait for lgwr
+kcrf_pvt_strand_bind|try to bind private strand
 kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
 kcrfw|Broadcast SCN/Kernel Cache Redo File Write
 kcrfw_copy_cv|copy change vectors to public redo buffer
+kcrfw_redo_gen|main redo generation function (pre 12c)
+kcrfw_redo_gen_ext|main redo generation function (12c)
 kcrfwl|write sWitch logs
 kcrm|media recovery
 kcropn|open online logfile for kcroio and kcrfoc
@@ -718,8 +721,10 @@ ks|kernel service
 ksa|async
 ksaamb|allocate message block
 ksarcv|receive message
+ksasnd|send asynchronous message
 ksb|Background Processes
 ksbabs|action based server
+ksbasnd|asynchronous send
 ksbcti|call timeout/interrupts
 ksbd|detached process
 ksbmsg|call cpu count changed callbacks
@@ -772,18 +777,24 @@ kskthexit|thread exit
 kskthrsod|thread state object delete
 kskwait_timed_cpu|resource manager wait routine
 ksl|lock management
+ksl_get_shared_latch|get latch in shared mode
+ksl_get_shared_latch_int|get latch in shared mode (12.2)
+ksl_post_proc|post a single process
+ksl_postm_init|post multi initialise
+ksl_postm_do_posts|post multi do posts
+ksl_update_post_stats|update processing posting stats ao. in x$kslpr
 kslccll|clean up after a given latch
 kslcll|clean up after a given latch
 kslcllt|clean up after a given latch
 ksle|event wait
 kslfre|free latch
 kslgetl|get latch
-ksl_get_shared_latch|get latch in shared mode
 kslilcr|invoke latch cleanup routine
 ksliwat|awaken a wait event
 ksll|latches
 kslpslf|post list of foregrounds
 kslpspr|post the process with that latch
+kslpwrp_int|post/wait read post type (to choose single or multi process posting; guess)
 kslwait|wait for n centi-seconds or until posted
 kslwaitctx|wait context
 kslwt|wait interface
@@ -1451,6 +1462,7 @@ ssk|kernel
 sskg|generic
 sskgpw|post/wait
 sskgpwidcmp|compare semid of semaphores to be posted
+sskgpwpost|post a single semaphore
 sskgpwvectorpost|post multiple semaphores
 sskgpwwait|wait
 sskgpwpost|post
