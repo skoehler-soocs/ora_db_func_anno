@@ -22,4 +22,30 @@ qercoFetch -- query execute rowsource count fetch
 
 Here the full function is underlined, which means the entire function is found.
 
+You can also use -w for 'wildcard', of which the SQL equivalent would be to add a % at the end of the search argument:
+```
+$ ./sf.sh -w ktb
+ktb  block
+ktbapundo  apply undo
+ktbchg2  (header) change
+ktbt  table
+```
+
+Because the letters in the function names are hierarchical, I also added -l for level, in order to investigate if there are function groups at a certain mnemonic level:
+```
+$ ./sf.sh -l 3 kc
+kc  kernel cache
+kcb  buffers
+kcc  controlfile
+kcf  file management
+kck  compatibility
+kcl  lock manager
+kcm  miscellaneous
+kco  operation
+kcr  redo
+kcs  service
+kct  threads
+kcv  recovery
+```
+
 If you found explanations for Oracle database code locations, or found an error in the annotation (I made assumptions here and there), please send them to frits.hoogland@gmail.com, so I can add or update it.

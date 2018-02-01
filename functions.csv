@@ -155,8 +155,10 @@ kcrf_pvt_strand_bind|try to bind private strand
 kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
 kcrfw|Broadcast SCN/Kernel Cache Redo File Write
 kcrfw_copy_cv|copy change vectors to public redo buffer
+kcrfw_gather_lwn|gather LWN
 kcrfw_redo_gen|main redo generation function (pre 12c)
 kcrfw_redo_gen_ext|main redo generation function (12c)
+kcrfw_redo_write_driver|main redo write function
 kcrfwl|write sWitch logs
 kcrm|media recovery
 kcropn|open online logfile for kcroio and kcrfoc
@@ -169,11 +171,14 @@ kcrvfh|file headers
 kcs|service
 kcsadj3|adjust SCN
 kcsadj1|adjust SCN
-kcscur3|check SCN for update read
+kcscur3|read current SCN 
+kcscu8|read current SCN
 kcsgbsn|get batched SCN
 kcsgcsn|get current SCN
 kcsgrsn|get recent SCN
 kcsgssn|get snapshot SCN
+kcsnew3|get new SCN
+kcsnew8|get new SCN
 kcsm|shared routines
 kcsnew3|obtain new SCN
 kct|threads
