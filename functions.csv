@@ -92,6 +92,7 @@ kcbapl|apply (changes to buffer)
 kcbdnb|dump n buffers
 kcbchg|change a block
 kcbchg1|change a block
+kcbchk_ctx|check context, execute check functions
 kcbgcur|get current read
 kcbget|get buffer (for index branch and leaf blocks)
 kcbgtcr|get consistent read
@@ -139,7 +140,7 @@ kcmclscn|check lamport scn
 kcmgtsf|get timestamp full
 kcmtdif|time difference
 kco|operation
-kco_blkchk|block check
+kco_blkchk|main block check function
 kcoadv_hdr|advance SCN in buffer header
 kcoapl|apply (changes to buffer)
 kcopcv|prepare change vector(?)/redo entry generation and retrieval
@@ -148,18 +149,25 @@ kcr|redo
 kcra|redo application/access
 kcramr|apply media recovery
 kcrcrl|corrupt redo log
-kcrf|file read
+kcrf|file
 kcrf_commit_force|commit changes (11g) post lgwr or wait for lgwr
 kcrf_commit_force_int|commit changes (12g) post lgwr or wait for lgwr
 kcrf_pvt_strand_bind|try to bind private strand
 kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
-kcrfw|Broadcast SCN/Kernel Cache Redo File Write
+kcrfw|write/Broadcast SCN
 kcrfw_copy_cv|copy change vectors to public redo buffer
-kcrfw_gather_lwn|gather LWN
+kcrfw_do_null_write|execute write cycle without write only increase LWN and on disk SCN
+kcrfw_do_write|execute write cycle with write and increase LWN, on disk and real redo SCN
+kcrfw_gather_lwn|gather strand info for LWN batch
+kcrfw_gather_strand|gather strand write info
+kcrfw_partial_checksum|write a checksum into the redo strand
+kcrfw_post|post processing after (null)write
 kcrfw_redo_gen|main redo generation function (pre 12c)
 kcrfw_redo_gen_ext|main redo generation function (12c)
 kcrfw_redo_write_driver|main redo write function
-kcrfwl|write sWitch logs
+kcrfw_update_and_bcast_real_redo_scn|update real redo SCN and real write time in kcrfsg_
+kcrfw_wait_for_fg_copy|read redo copy latches accompanying shared pool structure to validate writes to redo are done
+kcrfwl|sWitch logs
 kcrm|media recovery
 kcropn|open online logfile for kcroio and kcrfoc
 kcrp|recovery parallel
@@ -169,18 +177,21 @@ kcrr|redo archival
 kcrv|recovery
 kcrvfh|file headers
 kcs|service
-kcsadj3|adjust SCN
 kcsadj1|adjust SCN
-kcscur3|read current SCN 
+kcsadj3|adjust SCN
+kcsaj8|adjust SCN
 kcscu8|read current SCN
+kcscur_rba|read redo byte address from kcrfsg_
+kcscur3|read current SCN 
+kcsdnfy|distributed notify
 kcsgbsn|get batched SCN
+kcsgbsn8|get batched SCN (12.2)
 kcsgcsn|get current SCN
 kcsgrsn|get recent SCN
 kcsgssn|get snapshot SCN
 kcsnew3|get new SCN
 kcsnew8|get new SCN
 kcsm|shared routines
-kcsnew3|obtain new SCN
 kct|threads
 kcv|recovery
 kcvcrv|thread recovery
@@ -729,6 +740,7 @@ ksarcv|receive message
 ksasnd|send asynchronous message
 ksb|Background Processes
 ksbabs|action based server
+ksbasend|asynchronous send message main loop
 ksbasnd|asynchronous send
 ksbcti|call timeout/interrupts
 ksbd|detached process
@@ -796,7 +808,7 @@ kslfre|free latch
 kslgetl|get latch
 kslilcr|invoke latch cleanup routine
 ksliwat|awaken a wait event
-ksll|latches
+kslpsemf|post semaphores
 kslpslf|post list of foregrounds
 kslpspr|post the process with that latch
 kslpwrp_int|post/wait read post type (to choose single or multi process posting; guess)
@@ -871,6 +883,8 @@ ktbapundo|apply undo
 ktbchg2|(header) change
 ktbt|table
 ktc|control component
+ktcCommitTxn|main commit function, calls ktcCommitTxn_new
+ktcCommitTxn_new|main commit function
 ktcddt|delete distributed transaction
 ktcifc|idl flush contexts
 ktcrab|real abort
@@ -906,6 +920,8 @@ ktrgcm|common cr read code
 ktrget|get a read consistent block
 ktri|dbms_resumable support
 kts|segment management
+kts4smck|semantic check of the block
+kts4emchk|extended semantic check of the block
 ktsa|space analysis
 ktsb|bitmap management
 ktsfx|datafile extention
@@ -920,11 +936,12 @@ ktss|segment procedures
 ktst|sort management
 ktt|tablespace
 ktu|undo
+ktu4smck|semantic check of the block
 ktuabt|abort
 ktuapundo|apply undo
 ktubgn|begin transaction
 ktubko|rollback transaction
-ktubnd|undo bind
+ktubnd|undo bind undo segment
 ktuc|called from cache
 ktuchg|write logs and perform changes
 ktucmt|undo commit transaction
@@ -1322,6 +1339,7 @@ qesbl|Bloom Filter
 qesgv|Vector Aggregate
 qesma|Partitioning
 qespc|Partitioning
+qesrc|result cache
 qesxl|Vector Translate
 qesxlp|Vector PX
 qesxlp|Vector Translate
