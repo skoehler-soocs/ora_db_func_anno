@@ -735,13 +735,13 @@ krvg|generation of redo with DDL
 krvt|log miner viewer support
 ks|kernel service
 ksa|async
-ksaamb|allocate message block
+ksaamb|allocate message buffer
 ksarcv|receive message
 ksasnd|send asynchronous message
+ksasndint|send asynchronous message
 ksb|Background Processes
 ksbabs|action based server
 ksbasend|asynchronous send message main loop
-ksbasnd|asynchronous send
 ksbcti|call timeout/interrupts
 ksbd|detached process
 ksbmsg|call cpu count changed callbacks
@@ -800,6 +800,7 @@ ksl_post_proc|post a single process
 ksl_postm_init|post multi initialise
 ksl_postm_do_posts|post multi do posts
 ksl_update_post_stats|update processing posting stats ao. in x$kslpr
+kslawe|add post-wait entry
 kslccll|clean up after a given latch
 kslcll|clean up after a given latch
 kslcllt|clean up after a given latch
@@ -807,13 +808,13 @@ ksle|event wait
 kslfre|free latch
 kslgetl|get latch
 kslilcr|invoke latch cleanup routine
-ksliwat|awaken a wait event
+ksliwat|inner wait function; setup a wait that times out
 kslpsemf|post semaphores
 kslpslf|post list of foregrounds
 kslpspr|post the process with that latch
 kslpwrp_int|post/wait read post type (to choose single or multi process posting; guess)
 kslwait|wait for n centi-seconds or until posted
-kslwaitctx|wait context
+kslwaitctx|wait context; wait until timeout
 kslwt|wait interface
 kslwt_end_snapshot|end snapshot
 kslwt_update_stats_int|update statistics
