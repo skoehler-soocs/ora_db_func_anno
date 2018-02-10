@@ -132,6 +132,7 @@ kcfcsy|cross instance sync
 kcfida|identify file action
 kcfis|Exadata Predicate Push
 kcfopd|open/close database code
+kcfrbd|Read Buffers from Database:
 kcht|hash table
 kck|compatibility
 kcl|lock manager
@@ -198,7 +199,8 @@ kcvcrv|thread recovery
 kcvdmr|do media recovery
 kd|kernel data
 kda|analyze/statistics
-kdasts|Kernel Data Analyze Statistics Scan driver
+kdasts|Statistics Scan driver
+kdavls|validate structure driver
 kdb|block structures and manipulation
 kdbl|direct path load 
 kdblai|kernel database block loader array insertion
@@ -210,6 +212,9 @@ kdg|gathering
 kdgprd|Kernel Data Gathering Process Row Data
 kdgstp|Kernel Data Gathering STatistics Perform
 kdgsts|Kernel Data Gathering STatistics Scan
+kdgpnb|pin block
+kdgvsp|validate structure perform
+kdgvss|validate structure scan
 kdi|index
 kdib|bitmap index generation definitions
 kdibc|bitmap index compression stream
@@ -504,9 +509,12 @@ kkjp|package
 kkm|SQL Semantic Analysis
 kkmpost|post processing
 kkn|analyze command
-kkndgd|Kernel Kompilation aNalyze Data Gathering Driver
-kkndrv|Kernel Kompilation aNalyze DRiVer
-kknls|Kernel Kompilation aNalyze Locks/Security
+kkndgd|aNalyze Data Gathering Driver
+kkndrv|aNalyze DRiVer
+kknls|aNalyze Locks/Security
+kknpat|partition analyze table
+kknpob|partition object
+kknls|locks/security
 kko|optimizer
 kkoads|SQL Compile ADS
 kkoat|Auto Tuning Optimizer
