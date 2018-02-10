@@ -619,6 +619,7 @@ kokla|LOB Default
 kokla|OBJECTS Anydata
 koklcopy|LOB copy
 koklcpb2c|copy binary data into LOB
+koklcwrite|LOB write
 koklm|LOB Default
 koklv|LOB Default
 koks|OBJECTS Semantic Analysis
@@ -925,12 +926,23 @@ kts4smck|semantic check of the block
 kts4emchk|extended semantic check of the block
 ktsa|space analysis
 ktsb|bitmap management
+ktsf|file
+ktsf_gsp|get space
+ktsfbfmt|format block and link
+ktsfsmhwm|segment move high water mark
+ktsfsnblk|new block
 ktsfx|datafile extention
 ktsmg_icmt|insert direct load commit
 ktsmg_seg|merge segments
-ktsp|space management
+ktsp|segment pagetable
+ktspffc|Fill First Level bmb dbas
+ktspfmdb|format a range of data blocks
+ktspfmtrng|format one range or less of data blocks
 ktspfpblk|pin useful block
 ktspfsrch|first level bitmap block search
+ktspfsteal|Search cache for Pointer to data area of LII bitmap block
+ktspgetf|Get next set of L1s
+ktspgsp_cbk|Get Space for inserts
 ktspgsp_main|get space for inserts
 ktspscan_bmb|scan the level 1 bitmap blocks
 ktss|segment procedures
@@ -1215,6 +1227,7 @@ ps|PLSQL_Infrastructure
 psd|Programmatic Interfaces to/from PL/SQL
 psdbnd|manage bind variables
 psdddl|execute DDL
+psddr0|Null pointer definitions for ttcdrv callback and context.
 psdevn|plsql debugger
 psdicd|plsql call c
 psdmsc|system dependent misc functions
@@ -1432,7 +1445,7 @@ rpi|recursive program interface
 rpicls|close
 rpidru|setup memory for recursive session
 rpidrus|recursive program handling
-rpidrv|driver
+rpidrv|recursive program interface driver
 rpiswu2|switch user in recursive sql
 rtb|rowsource table
 rwoima|row operand operations
