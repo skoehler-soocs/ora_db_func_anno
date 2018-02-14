@@ -53,8 +53,10 @@ di|PLSQL_Apps
 dr|Text
 dsy|drop synonym
 dtb|drop table
+dteerr|date error handler
 eva|evaluating operands
 evadid|date: internal date to date format
+evadis|date: internal date to string
 evaopn2|evaluate operand
 evapls|evaluate plsql function
 expeal|evaluate argument and list
@@ -228,7 +230,8 @@ kdic|create
 kdicdrv|driver routine
 kdicrws|using row source
 kdics|Cluster Table Scan
-kdifxs|fetch row from index block
+kdifbk|fetches the single index row matching the argumentkey
+kdifxs|fetch next or previous row from index block
 kdifxs1|fetch row from index block inner function
 kdiins0|inserts the argument key and associated keydata
 kdil|Index Load
@@ -378,8 +381,9 @@ kgccm|memory (?)
 kgce|encryption engine
 kgds|VOS Generic Stack Trace
 kge|error
-kgeadse|add string internal error to the error
+kgeadse|add error onto the error stack
 kgeasi|raise an error on an assertion failure
+kgerem|record error code (with already-formatted message)
 kgerinv|record internal named error
 kgeriv|record internal error code with va_list
 kgesev|signal error code
@@ -442,6 +446,7 @@ kglpndl|pin delete
 kglr|remote
 kglrfcl|reference clear
 kglsim|simulator 
+kglunp|unpin heaps of an object
 kgmexec|kernel generic ... execute
 kgmgaicn|generic arguments input conversions
 kgmtconv|conversion
@@ -570,6 +575,7 @@ kkspfda|multiple context area management
 kkspsc0|parse shared cursor
 kkssbt|set bind types
 kksscl|scan child list
+kksumc|unmap shared cursor
 kkt|triggers
 kktalt|alter trigger
 kkx|Programmatic Interfaces to/from PL/SQL
@@ -580,6 +586,7 @@ kkxexe|execute plsql
 kxxffir|function fire called when the appropriate heap is going away
 kkxppp|private pipe
 kkxrd|DBMS_ROWID
+kkxtexe|trigger execute
 kkxwtp|compiler
 kky|system
 kkyasy|alter system driver
@@ -769,6 +776,7 @@ ksdxcb|ksdx callback for sosd layer signal handler
 ksdxfdmp|ksdx function: invoke named dump
 kse|Kernel Service Error Manager
 ksedmp|dump process state
+ksesec1|recovery operatings
 ksedst|dump call stack
 ksf|functions
 ksfd|disk IO
@@ -1042,6 +1050,7 @@ kxfp|process and queue manager
 kxfpb|Buffers
 kxfpbgpc|get permanent chunks
 kxfpbgtc|buffer allocation get chunk
+kxfpgcg|get server group (coordinator)
 kxfpnfy|notify
 kxfpqdqr|Queue DeQueue queue Reference
 kxfpqidqr|Queue Internal DeQueue queue Reference
@@ -1051,9 +1060,12 @@ kxfprienq|Queue ref internal enqueue message
 kxfprifdb|Queue ref internal free dequeued buffer
 kxfq|Parallel Execution 
 kxfr|Parallel Execution 
+kxfrAllocSlaves|allocate slaves
+kxfralo|allocate rowid ranges and slave processes
 kxfs|slave
 kxft|Parallel Execution PTL
 kxfx|execution
+kxfxcp|client side (qc) interface
 kxfxcw|kxfxrytab yields the (greatest) reply type expected from a
 kxfxgs|get start
 kxfxmai|slave process main entry point
@@ -1070,6 +1082,7 @@ kxru|row update
 kxs|shared cursor
 kxsGetRuntimeLock|get runtime lock
 kxstcls|trace cursor closing
+kxtex1|execute trigger
 kxti|trigger
 kxto|trigger
 kxtr|trigger
@@ -1143,8 +1156,10 @@ opidcl|cleanup after the sqlnet connection is terminated
 opidr|route current request
 opidrv|driver, entry side into two task interface
 opidsa|array describe locals
+opiefn|execute function (?)
 opiexe|execute
 opifch2|fetch main routine
+opifcr|fetch callback
 opifcs|free cursors by session close
 opiino|initialize opi
 opikndf2|OPIINO: Kernel route which sits on top of the SQL*Net
@@ -1301,6 +1316,7 @@ qerfxGCol|get column
 qerfxFetch|fetch
 qergh|hash group by
 qergi|granule iterator (partitioning)
+qergiFetch|Fetch procedure of PX granule Iterator Row source Rowid
 qergr|group by rollup
 qergs|group by sort
 qergsFetch|fetch
@@ -1311,7 +1327,7 @@ qerhjWalkHashBucket|walk a list of pointers in a hash bucket and check for a mat
 qeril|in list
 qerim|index maintenance
 qerix|index
-qerixtFetch|fetch from index
+qerixtFetch|fetch operation for index range scan
 qerjo|nested loop outer
 qerjoFetch|fetch from join rowsource
 qerjot|join tunneling
@@ -1336,7 +1352,7 @@ qerrc|Vector Translate
 qerrm|remote
 qerse|set implementation
 qerso|sort
-qersoFetch|fetch from from a sort row source table
+qersoFetch|fetch from from a sort row source 
 qersoProcessULS|process underlying row source
 qersq|sequence number
 qerst|query execution statistics
@@ -1349,7 +1365,7 @@ qerup|update
 qerupFetch|fetch
 qerus|upsert
 qervw|view
-qervwFetch|fetch
+qervwFetch|fetch 
 qerwn|window
 qerxl|Vector PX
 qerxl|Vector Translate
@@ -1464,7 +1480,7 @@ scg|system dependent concurrency global locks
 scm|PLSQL_Apps
 sdbima|sort operation
 sdbgrf|Diagnostic directory and file services
-selexe|select execute
+selexe|select execute: prepare area for fetch
 seq|sequence numbers
 sk|system kernel
 skg|generic
