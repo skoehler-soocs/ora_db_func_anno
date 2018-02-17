@@ -157,7 +157,10 @@ kcrf_commit_force|commit changes (11g) post lgwr or wait for lgwr
 kcrf_commit_force_int|commit changes (12g) post lgwr or wait for lgwr
 kcrf_pvt_strand_bind|try to bind private strand
 kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
+kcrf_sync_adaptive_set|set adaptive log file sync mode
 kcrfw|write/Broadcast SCN
+kcrfw_alfs|adaptive log file sync
+kcrfw_alfs_save_redowrite_time|save redo write time (lgwr)
 kcrfw_copy_cv|copy change vectors to public redo buffer
 kcrfw_do_null_write|execute write cycle without write only increase LWN and on disk SCN
 kcrfw_do_write|execute write cycle with write and increase LWN, on disk and real redo SCN
@@ -826,6 +829,7 @@ kslfre|free latch
 kslgetl|get latch
 kslilcr|invoke latch cleanup routine
 ksliwat|inner wait function; setup a wait that times out
+ksliwat_cleanup|cleanup post/wait entry
 kslpsemf|post semaphores
 kslpslf|post list of foregrounds
 kslpspr|post the process with that latch
