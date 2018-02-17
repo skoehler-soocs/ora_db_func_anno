@@ -1516,6 +1516,7 @@ slcpums|get cpu usage (for getrusage)
 sltrgatime64|arbitrary time lookup 
 sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
+sltrusleep|sleep (for nanosleep)
 sp|system dependent process functions
 sqn|sequence reference parsing
 srdima|sort operation
