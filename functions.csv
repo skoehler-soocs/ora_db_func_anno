@@ -64,6 +64,7 @@ expepr|evaluate argument predicate
 hep|PLSQL_KG_Interface
 hsh|PLSQL_KG_Interface
 ins|insert
+insdlexe|direct load execute
 insexe|execute
 insidx|Insert indexed keys into the indexes after each row is inserted into the table
 insrow|Fetch a row for insertion. This is called back by multirow insert
@@ -1294,6 +1295,9 @@ qecdrv|driver
 qee|SQL Execution
 qer|query execute rowsource
 qerae|and equal
+qerandv|approximate NDV
+qerandvFetch|fetch
+qerandvRop|row procedure callback
 qerba|bitmap index and
 qerbc|bitmap index compaction
 qerbi|bitmap index creation
@@ -1339,6 +1343,8 @@ qerjotFetch|fetch
 qerle|linear execution implementation
 qerli|parallel create index
 qerlt|load table
+qerlt_olev|out-of-line columns, evaluate and stash away
+qerlt_snv|stash away and new values
 qerltFetch|fetch
 qerns|group by nosort
 qeroc|object collection iterator
@@ -1362,6 +1368,7 @@ qersq|sequence number
 qerst|query execution statistics
 qertb|table access
 qertbFetch|fetch
+qertbFetchByRowId|using inderlying row source by rowid or cluster key
 qertq|table queue (px)
 qerua|union all
 qeruaFetch|fetch
