@@ -637,13 +637,17 @@ kokl3|temporary lob access
 kokla|LOB Default
 kokla|OBJECTS Anydata
 koklcopy|LOB copy
+kolkcre|lob create
 koklcpb2c|copy binary data into LOB
 koklcwrite|LOB write
+kolkeva|lob evaluate
+kokliclo|lob internal create with another locator
 koklm|LOB Default
 koklv|LOB Default
 koks|OBJECTS Semantic Analysis
 kokt|OBJECTS DDL
 kola|LOB
+kolaErrorHandler|error handler
 kole|LOB Default
 kolfgdir|file get directory object path and filenames
 koll|LOB
