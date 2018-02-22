@@ -773,7 +773,7 @@ ksbrdp|run a detached background process
 ksbxiaf|ksbxic message and interrupt action
 ksbxiafdomsg|ksbxic and async xic static functions
 ksbt|Background Processes
-kscnfy|kernel system notifications to be passed components
+kscnfy|kernel system notifications to be passed to components
 ksd|debug internal errors
 ksddoa|debug support do an action
 ksdhng|Hang Analysis
@@ -864,6 +864,7 @@ ksq|enqueue
 ksqdel|release and enqueue
 ksqgel|get an enqueue
 ksqgtl|get an enqueue
+kss|state object
 kssdch|delete children of SO
 kssxld|delete SO ignoring errors, clean latches
 kst|trace
@@ -871,7 +872,7 @@ kstm|time manager
 kstmgethighresustick|get high resolution time
 ksu|user
 ksu_detactive_tac|deactivete time accounting
-ksu_dispatch_tac|dispatch timed-out action
+ksu_dispatch_tac|dispatch timed-out action (updates wait interface)
 ksuc|cost function
 ksucln|cleanup detached process
 ksucresg|create session with a process group specified
