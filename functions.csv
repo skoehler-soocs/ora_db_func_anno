@@ -733,8 +733,8 @@ kqlsadd|add a new element to a subordinate set
 kqlslod|load all subordinate set elements for a given heap
 kqr|row cache
 kr|kernel recovery
-kra|Kernel Recovery Area Function
-krb|Kernel Backup Restore
+kra|Recovery Area Function
+krb|Backup Restore
 krbabr|Auto Block Media Recovery
 krbb|creation of a backuppiece
 krbbcdo|compression do
