@@ -244,12 +244,15 @@ kdiss|skip scan
 kdizoltp|OLTP HIGH Index
 kdk|search key
 kdl|lob
+kdl_write|write into an ilob instance
 kdla|SecureFile Archive
 kdlgsp_init|space management batching
 kdli|Inode
 kdlrci|rci
+kdlrdb|read a block at a time
+kdlprl|read a contiguous range of blocks starting at a fatblock
+kdlsfb|pull in upto size bytes of data from stream and start
 kdlw|kdlw
-kdl_write|write into an ilob instance
 kdlx|xfm
 kdlxdup|dedup
 kdlxgs_init|reclaim space from transaction freelist in index
@@ -640,9 +643,10 @@ koklcopy|LOB copy
 kolkcre|lob create
 koklcpb2c|copy binary data into LOB
 koklcwrite|LOB write
-kolkeva|lob evaluate
+kokleva|lob evaluate
 kokliclo|lob internal create with another locator
 koklm|LOB Default
+koklread|read
 koklv|LOB Default
 koks|OBJECTS Semantic Analysis
 kokt|OBJECTS DDL
@@ -1552,6 +1556,8 @@ tbsdrv|create/alter/drop tablespace function support
 textio|PLSQL_Apps
 tre|PLSQL_Infrastructure
 ttc|two task common
+ttcc2u|convert type x to type y
+ttcclr|send/receive without conversion
 ttcpip|pipe read/write
 ttp|Database Audit Next Generation
 ul|SQLLDR Load
