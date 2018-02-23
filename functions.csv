@@ -1560,10 +1560,12 @@ ttcc2u|convert type x to type y
 ttcclr|send/receive without conversion
 ttcpip|pipe read/write
 ttp|Database Audit Next Generation
+subsr1|evaluate subquery; single row subquery method 1
+subsr3|evaluate subquery; single row subquery method 3
 ul|SQLLDR Load
 uixexe|index maintenance operations
 upd|update
-updau1|Attempt Update of all rows or Lock all rows
+updaul|Attempt Update of all rows or Lock all rows
 updauw|get the values of the update columns
 upderh|evaluate right hand side expressions in order to get values
 updexe|update execute
