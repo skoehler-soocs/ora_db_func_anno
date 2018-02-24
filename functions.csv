@@ -203,6 +203,7 @@ kct|threads
 kcv|recovery
 kcvcrv|thread recovery
 kcvdmr|do media recovery
+kcvvra|verify reset allowed
 kd|kernel data
 kda|analyze/statistics
 kdasts|Statistics Scan driver
@@ -388,6 +389,7 @@ kgccm|memory (?)
 kgce|encryption engine
 kgds|VOS Generic Stack Trace
 kge|error
+kgeade|add error onto the error stack
 kgeadse|add error onto the error stack
 kgeasi|raise an error on an assertion failure
 kgerem|record error code (with already-formatted message)
@@ -788,8 +790,9 @@ ksdxcb|ksdx callback for sosd layer signal handler
 ksdxfdmp|ksdx function: invoke named dump
 kse|Kernel Service Error Manager
 ksedmp|dump process state
-ksesec1|recovery operatings
 ksedst|dump call stack
+kserec1|record an error code
+ksesec1|recovery operations
 ksf|functions
 ksfd|disk IO
 ksfd_addtoissueq|add requests to issue queue
@@ -871,7 +874,7 @@ ksqgtl|get an enqueue
 kss|state object
 kssdch|delete children of SO
 kssxld|delete SO ignoring errors, clean latches
-kst|trace
+kst|trace (x$trace)
 kstm|time manager
 kstmgethighresustick|get high resolution time
 ksu|user
@@ -924,10 +927,13 @@ ktcrcm|real commit
 ktcsod|state object procedure vector definition
 kte|extent management
 ktec|extent concurrent
+ktecgetsh|get segment header
 ktef|extent flush extent map
 ktehw|high water mark operations
 ktein|information operations
+ktel|loader
 ktelck|set segment header extent map lock 
+ktelrwi|redoless write initialize
 kteop|operations
 kteu|redo support for segment header/extent map changes
 ktf|flashback support
@@ -1046,6 +1052,7 @@ kwssh|Streams Advanaced Queuing Message Cache
 kwssi|Streams Advanced Queuing Subscription
 kx|kernel execution
 kxc|constraints
+kxcsnn|signal a not null constraint violation
 kxdr|DML driver entrypoint
 kxcb|backup
 kxcc|catch all
@@ -1160,7 +1167,7 @@ nsprecv|receive packet from network transport layer
 nsrdr|ns packet reader
 nttrd|basic tcpip read
 oba|operator buffer allocation
-oci|oracle C interface
+oci|oracle call interface
 ociextp|PLSQL_External_Proc
 opi|oracle program interface
 opiamr|archival and media recovery
@@ -1487,6 +1494,7 @@ rixima|rowsource index implementation a
 rnm|rename statement operation
 rpi|recursive program interface
 rpicls|close
+rpidrr|error handler for setup memory for the recursive session (dru)
 rpidru|setup memory for recursive session
 rpidrus|recursive program handling
 rpidrv|recursive program interface driver
@@ -1570,6 +1578,7 @@ updauw|get the values of the update columns
 upderh|evaluate right hand side expressions in order to get values
 updexe|update execute
 updrow|Row Procedure used by KXRD to update or lock a row
+upi|user program interface
 upsexe|upsert execute
 vop|view optimisation
 wlm|Work Load Management
