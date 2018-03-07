@@ -77,6 +77,7 @@ k2gt|kernel 2phase commit global transaction
 k2i|indoubt table interface
 k2l|log records and log interface
 k2labo|abort session: first abort aborts tx
+k2lcom|commit session, first commit commits tx
 k2r|multiple RPC
 k2s|server
 k2v|recovery
@@ -216,10 +217,10 @@ kdc|cluster
 kdd|cluster
 kdeu|export unload
 kdg|gathering
-kdgprd|Kernel Data Gathering Process Row Data
-kdgstp|Kernel Data Gathering STatistics Perform
-kdgsts|Kernel Data Gathering STatistics Scan
+kdgprd|Process Row Data
 kdgpnb|pin block
+kdgstp|STatistics Perform
+kdgsts|Gathering STatistics Scan
 kdgvsp|validate structure perform
 kdgvss|validate structure scan
 kdi|index
@@ -269,6 +270,7 @@ kdp|Archive Compression: Pcode
 kdq|query
 kds|seek/scan
 kdscgr|Cluster Table Scan
+kdsfbr|fetch by rowid. returns a pointer to the row header
 kdsgnp|Fetch By Rowid get continued row piece (chained row)
 kdsgrp|Fetch By Rowid get row piece
 kdso|service object
@@ -430,7 +432,7 @@ kgidlt|delete an instantiation object
 kgiscl|state close cursors
 kgk|token
 kgkp|generic services scheduling policies
-kgl|lock management
+kgl|library cache management
 kglfnd|find a chunk of at least the minimum size
 kglfrunp|ask a client to free unpinned space
 kglfrx|free extent (heap unpin)
@@ -534,11 +536,13 @@ kkoads|SQL Compile ADS
 kkoat|Auto Tuning Optimizer
 kkocri|create index
 kkogfp|get first permutation
+kkoicb|initialise query block
 kkooqb|optimize query block
 kkopm|Plan Management
 kkopmCheckSmbUpdate|Check if updates to the Sql Management Base are pending
 kkopq|Parallel Optimization
 kkoqbc|query block optimization start point
+kkoOrExpand|or expansion
 kkp|compilation 
 kkpa|Partitioning
 kkpo|partitioned objects
@@ -868,9 +872,11 @@ ksmupg|check for references in the session global area to process
 ksn|Two Task
 ksp|parameter
 ksq|enqueue
+ksqcmi|change lock mode internally
 ksqdel|release and enqueue
 ksqgel|get an enqueue
 ksqgtl|get an enqueue
+ksqrcl|release an enqueue
 kss|state object
 kssdch|delete children of SO
 kssxld|delete SO ignoring errors, clean latches
@@ -920,6 +926,7 @@ ktbt|table
 ktc|control component
 ktcCommitTxn|main commit function, calls ktcCommitTxn_new
 ktcCommitTxn_new|main commit function
+ktcccdel|commit callback delete
 ktcddt|delete distributed transaction
 ktcifc|idl flush contexts
 ktcrab|real abort
@@ -1381,7 +1388,8 @@ qerso|sort
 qersoFetch|fetch from from a sort row source 
 qersoProcessULS|process underlying row source
 qersq|sequence number
-qerst|query execution statistics
+qerst|statistics
+qerstFetch|row source fetch
 qertb|table access
 qertbFetch|fetch
 qertbFetchByRowId|using inderlying row source by rowid or cluster key
@@ -1498,6 +1506,7 @@ rpidrr|error handler for setup memory for the recursive session (dru)
 rpidru|setup memory for recursive session
 rpidrus|recursive program handling
 rpidrv|recursive program interface driver
+rpiexe|execute
 rpiswu2|switch user in recursive sql
 rtb|rowsource table
 rwoima|row operand operations
@@ -1513,10 +1522,10 @@ seq|sequence numbers
 sk|system kernel
 skg|generic
 skgf|file
-skgfqui|quick IO
+skgfqio|queue I/O request(s)
 skgfgiod|get IO done (?)
 skgfnxtio|next IO
-skgfospo|operating system poll (?)
+skgfospo|operating system poll for IO completion
 skgfr|requests
 skgfr_error64|check for errors
 skgfr_lio_listio64|perform listio (AIO) 64 bits
@@ -1584,6 +1593,7 @@ vop|view optimisation
 wlm|Work Load Management
 wpiutil|PLSQL_Apps
 xct|transaction management
+xctctl|commit top level transaction in a transaction tree 
 xctrol|rollback: rollback current transaction of the current session
 xpl|SQL Explain Plan
 xty|type checking
