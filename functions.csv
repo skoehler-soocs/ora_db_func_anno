@@ -1206,6 +1206,9 @@ opiul|direct loader
 orp|oracle external pickler/opaque type interface
 ort|OBJECTS Types
 osn|Two Task
+oss|oracle storage server
+ossconf|configuration
+osssec|security
 p2c|PLSQL_PSD_Standalones
 par|PLSQL_KG_Interface
 pb|PLSQL_Code_Execution
