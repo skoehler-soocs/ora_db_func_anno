@@ -81,6 +81,7 @@ k2lcom|commit session, first commit commits tx
 k2r|multiple RPC
 k2s|server
 k2v|recovery
+k2udio|message unmarshalling
 ka|kernel access
 kad|OBJECTS Anydata/Images
 kaf|fetch
@@ -574,10 +575,12 @@ kkri|parallel index create
 kkrp|parallelizer (DFO)
 kkrt|rowsource table create as select
 kks|shared objects (cursor)
+kksalc|allocate compile time memory
 kksald|auxiliary load function
 kksalx|allocate bytes from the execution time heap
 kksarm|authorize for remote
 kksauc|authorize to use this child
+kksaxs|semantic analysis, authorize and audit
 kkscls|close cursor
 kkscs|child cursor
 kksdopt|smart disk no option
@@ -714,7 +717,7 @@ kpuexecv8|execute V8
 kpuhh|handle heap
 kpuhhalo|allocate memory freeable
 kpun|Streams Advanaced Queuing 
-kpur|remote call with service context, callbacks
+kpur|remote
 kpurcsc|call with service context
 kpuzxs|XS Midtier
 kq|kernel query
@@ -792,7 +795,7 @@ ksdpcg|post and check event in the specified error group
 ksdpec|post event and check trigger condition
 ksdxcb|ksdx callback for sosd layer signal handler
 ksdxfdmp|ksdx function: invoke named dump
-kse|Kernel Service Error Manager
+kse|error
 ksedmp|dump process state
 ksedst|dump call stack
 kserec1|record an error code
@@ -1128,6 +1131,7 @@ kzia|identification and authentication
 kziaia|Main Identification and Authentication function
 kzl|label
 kzp|privileges
+kzpchkc|check privileges on a object cyclic
 kzr|resource routines
 kzra|privileges
 kzrt|privileges
@@ -1160,12 +1164,14 @@ ncodef|DEF interfaces
 ncrorou|receive OUT arguments for specified procedure
 ncrsrend|end record
 ncrsrwrt|Record WRiTe output buffer
+nioqwa|operating system dependent networking: wait function
 npi|network program interface
+npidri0|driver common
 npidsc|Network Program Interface DiSConnect
 npil|local
 npitcc|Test/Clear connections
 npixfr|transfer
-nsdo|execute network session operation 
+nsdo|execute network session operation. NS protocol engine
 nsmtio|Trace Non Smart I/O
 nso|SQL Transformation
 nsoqbc|NeSt Optimization on Query BloCk
