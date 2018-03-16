@@ -128,6 +128,7 @@ kcbzibmlt|input buffer for multiblock read
 kcbz_table_scan_read|buffered multiblock read main loop
 kcbztek_trace_blk|tablespace encryption check(?)
 kcbzvb|verify buffer
+kcbzwb|wait buffer (buffer busy wait)
 kcc|controlfile
 kccchm|cache header block 
 kccocx|open control transaction
@@ -270,6 +271,7 @@ kdoapl|apply
 kdp|Archive Compression: Pcode
 kdq|query
 kds|seek/scan
+kdselini|extent list initialize
 kdscgr|Cluster Table Scan
 kdsfbr|fetch by rowid. returns a pointer to the row header
 kdsgnp|Fetch By Rowid get continued row piece (chained row)
@@ -745,6 +747,7 @@ kqls|subordinate set manager
 kqlsadd|add a new element to a subordinate set
 kqlslod|load all subordinate set elements for a given heap
 kqr|row cache
+kqrpre|read a parent cache object
 kr|kernel recovery
 kra|Recovery Area Function
 krb|Backup Restore
@@ -925,6 +928,8 @@ ktagetp|get partition lock
 ktb|block
 ktbapundo|apply undo
 ktbchg2|(header) change
+ktbgcl1|general clean 1, performs itl cleanout for RC and CU blocks
+ktbi|itl
 ktbt|table
 ktc|control component
 ktcCommitTxn|main commit function, calls ktcCommitTxn_new
@@ -936,8 +941,9 @@ ktcrab|real abort
 ktcrcm|real commit
 ktcsod|state object procedure vector definition
 kte|extent management
-ktec|extent concurrent
+ktec|concurrency
 ktecgetsh|get segment header
+ktecgsc|get segment header and auto-convert
 ktef|extent flush extent map
 ktehw|high water mark operations
 ktein|information operations
@@ -966,6 +972,7 @@ ktr|read consistency
 ktrexc|examine block (consistent gets - examination)
 ktrgcm|common cr read code
 ktrget|get a read consistent block
+ktrgtc|get a read consistent block and call back client
 ktri|dbms_resumable support
 kts|segment management
 kts4smck|semantic check of the block
@@ -1004,12 +1011,14 @@ ktubnd|undo bind undo segment
 ktuc|called from cache
 ktuchg|write logs and perform changes
 ktucmt|undo commit transaction
+ktudba|convert from usn to dba
 ktudecrustat|decrement undo usage statistics in the resource maanger
-ktugct|get commit times
+ktudnx|decrease active transaction count
+ktugct|get commit times for transction ids in the data block's itl
 ktugur|generate undo and redo
 ktugus|get undo segment header
 ktundo|undo
-kturbk|roll back
+kturbk|roll back for CR only, reads undo record pointed by uba and call ktundo to back out the change
 kturbt|roll back to time scn
 ktursn|rollback segments shrink numbered
 ktursr|rollback segments shrink requested
