@@ -69,11 +69,11 @@ insexe|execute
 insidx|Insert indexed keys into the indexes after each row is inserted into the table
 insrow|Fetch a row for insertion. This is called back by multirow insert
 jox|java compiler/runtime
-k2|Two-phase commit
+k2|kernel two-phase commit
 k2c|kernel to kernel 
 k2d|global unique database id
 k2g|global transction id
-k2gt|kernel 2phase commit global transaction
+k2gt|commit global transaction
 k2i|indoubt table interface
 k2l|log records and log interface
 k2labo|abort session: first abort aborts tx
@@ -941,6 +941,7 @@ ktbchg2|(header) change
 ktbconv|block convert
 ktbgcl1|general clean 1, performs itl cleanout for RC and CU blocks
 ktbi|itl
+ktbisc|scan
 ktbrcl|itl cleanout routine
 ktbt|table
 ktbtunlk|unlock all based on block type
