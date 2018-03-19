@@ -120,10 +120,10 @@ kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
 kcbzfs|free buffer handle 
-kcbzgb|get (space for) buffer
+kcbzgb|get cr/read/rec (space for) buffer with dba/class
 kcbzgm|get (space for) multiblock buffer
 kcbzgs|get buffer via buffer handle
-kcbzib|input buffer
+kcbzib|input buffer (reads a block from disk into a buffer)
 kcbzibmlt|input buffer for multiblock read
 kcbz_table_scan_read|buffered multiblock read main loop
 kcbztek_trace_blk|tablespace encryption check(?)
@@ -245,6 +245,7 @@ kdiins0|inserts the argument key and associated keydata
 kdil|Index Load
 kdis|index split
 kdiss|skip scan
+kdiulk|undo leaf operation
 kdizoltp|OLTP HIGH Index
 kdk|search key
 kdl|lob
@@ -397,11 +398,12 @@ kge|error
 kgeade|add error onto the error stack
 kgeadse|add error onto the error stack
 kgeasi|raise an error on an assertion failure
+kgepop|pop to the current top error frame
 kgerem|record error code (with already-formatted message)
 kgerinv|record internal named error
 kgeriv|record internal error code with va_list
 kgesev|signal error code
-kgesinv|kernel generic signal internal named error
+kgesinv|kernel generic signal internal named error with va_list
 kgf|ASM Automatic Storage Management
 kgfd|io subsystem driver
 kgfdvf|Voting file Interface
@@ -801,6 +803,7 @@ ksdxfdmp|ksdx function: invoke named dump
 kse|error
 ksedmp|dump process state
 ksedst|dump call stack
+ksepop|perform cleanup when an error frame is being popped
 kserec1|record an error code
 ksesec1|recovery operations
 ksf|functions
@@ -866,6 +869,7 @@ kslwtectx|end context/wait
 ksm|memory
 ksmapg|callback for allocating a pga extent
 ksmasg|callback for allocating an sga extent
+ksmerr|cleanup any stack memory allocated within the given error frame
 ksmf|fixed sga
 ksmh|any heap
 ksmp|pga heap
@@ -934,8 +938,10 @@ ktbt|table
 ktc|control component
 ktcCommitTxn|main commit function, calls ktcCommitTxn_new
 ktcCommitTxn_new|main commit function
+ktcbod|delete the given branch state object and put it on the freelist
 ktcccdel|commit callback delete
 ktcddt|delete distributed transaction
+ktcgtx|get action global area
 ktcifc|idl flush contexts
 ktcrab|real abort
 ktcrcm|real commit
@@ -970,6 +976,7 @@ ktp|parallel
 ktpcmt|commit
 ktr|read consistency
 ktrexc|examine block (consistent gets - examination)
+ktrexf|examine block (f? seems to be a per row CR check)
 ktrgcm|common cr read code
 ktrget|get a read consistent block
 ktrgtc|get a read consistent block and call back client
@@ -1006,7 +1013,7 @@ ktu4smck|semantic check of the block
 ktuabt|abort
 ktuapundo|apply undo
 ktubgn|begin transaction
-ktubko|rollback transaction
+ktubko|get undo record to rollback transaction, non-cr only
 ktubnd|undo bind undo segment
 ktuc|called from cache
 ktuchg|write logs and perform changes
@@ -1018,9 +1025,11 @@ ktugct|get commit times for transction ids in the data block's itl
 ktugur|generate undo and redo
 ktugus|get undo segment header
 ktundo|undo
-kturbk|roll back for CR only, reads undo record pointed by uba and call ktundo to back out the change
-kturbt|roll back to time scn
+kturbk|rollback for CR only, reads undo record pointed by uba and call ktundo to back out the change
+kturbt|rollback to time scn
+kturef|rollback examine candidate undo block
 ktursn|rollback segments shrink numbered
+ktursp|rollback to savepoint
 ktursr|rollback segments shrink requested
 ktz|testing
 ku|kernel utility
@@ -1420,7 +1429,6 @@ qerus|upsert
 qervw|view
 qervwFetch|fetch 
 qerwn|window
-qerxl|Vector PX
 qerxl|Vector Translate
 qerxp|XDB Query
 qerxt|external table
