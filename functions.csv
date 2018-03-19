@@ -119,6 +119,7 @@ kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
 kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
+kcbzcbf|create buffer
 kcbzfs|free buffer handle 
 kcbzgb|get cr/read/rec (space for) buffer with dba/class
 kcbzgm|get (space for) multiblock buffer
@@ -215,8 +216,10 @@ kdb|block structures and manipulation
 kdbl|direct path load 
 kdblai|kernel database block loader array insertion
 kdblailb|load block
+kdbmrd|multi row slot delete
 kdc|cluster
 kdd|cluster
+kddchg|perform delete/update change
 kdeu|export unload
 kdg|gathering
 kdgprd|Process Row Data
@@ -269,6 +272,7 @@ kdn|kernel data sequence number
 kdns|kernel data sequence number sequence enqueue
 kdo|operations
 kdoapl|apply
+kdodrp|delete row piece
 kdp|Archive Compression: Pcode
 kdq|query
 kds|seek/scan
@@ -290,6 +294,7 @@ kdtInsRow|insert a row immediately
 kdu|update
 kdugetpart|get partition information for a deleted or opdated row
 kdumrp|update multiple row pieces
+kduurp|singe row update, main entry
 kdusru|single row update
 kdx|index
 kdxokcmp|Auto Prefix Compressed Index
@@ -701,6 +706,7 @@ kpor|Stream protocol used by replication
 kposc|scrollable cursors
 kpotc|setting up trusted external procedure callbacks
 kpotx|local transaction coordination
+kpotxen|2-phase end transaction driver
 kpov|distributed transaction coordination
 kpp2|parse routine for dimensions
 kpp3|parse routine for create/alter/drop summary statements
@@ -932,9 +938,12 @@ ktagetp|get partition lock
 ktb|block
 ktbapundo|apply undo
 ktbchg2|(header) change
+ktbconv|block convert
 ktbgcl1|general clean 1, performs itl cleanout for RC and CU blocks
 ktbi|itl
+ktbrcl|itl cleanout routine
 ktbt|table
+ktbtunlk|unlock all based on block type
 ktc|control component
 ktcCommitTxn|main commit function, calls ktcCommitTxn_new
 ktcCommitTxn_new|main commit function
@@ -1010,21 +1019,24 @@ ktst|sort management
 ktt|tablespace
 ktu|undo
 ktu4smck|semantic check of the block
+ktu4ubck|undo block check
 ktuabt|abort
 ktuapundo|apply undo
 ktubgn|begin transaction
 ktubko|get undo record to rollback transaction, non-cr only
-ktubnd|undo bind undo segment
+ktubnd|bind undo segment
 ktuc|called from cache
 ktuchg|write logs and perform changes
-ktucmt|undo commit transaction
+ktucmt|commit transaction
 ktudba|convert from usn to dba
 ktudecrustat|decrement undo usage statistics in the resource maanger
 ktudnx|decrease active transaction count
 ktugct|get commit times for transction ids in the data block's itl
 ktugur|generate undo and redo
 ktugus|get undo segment header
+ktugusc|get undo segment
 ktundo|undo
+kturGetUndoRec|get an undo record
 kturbk|rollback for CR only, reads undo record pointed by uba and call ktundo to back out the change
 kturbt|rollback to time scn
 kturef|rollback examine candidate undo block
@@ -1342,6 +1354,7 @@ qcto|operators
 qeaeCn1Serial|count function
 qec|query execute checks
 qecdrv|driver
+qecrlssub|release resources subroutine
 qee|SQL Execution
 qer|query execute rowsource
 qerae|and equal
