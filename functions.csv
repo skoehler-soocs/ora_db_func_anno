@@ -157,6 +157,7 @@ kcoapl|apply (changes to buffer)
 kcoapl_validate|validate applied changes
 kcopcv|prepare change vector(?)/redo entry generation and retrieval
 kcoubk|undo callback
+kcosze|calculate undo record size
 kcr|redo
 kcra|redo application/access
 kcramr|apply media recovery
@@ -277,6 +278,7 @@ kdns|kernel data sequence number sequence enqueue
 kdo|operations
 kdoapl|apply
 kdodrp|delete row piece
+kdoirp|insert row piece
 kdp|Archive Compression: Pcode
 kdq|query
 kds|seek/scan
@@ -1583,6 +1585,7 @@ skgfrvldtrq|validate requests
 skgfrwat|wait for IO to complete
 skgm|memory (os dependent)
 skgmstack|call specified function with extra stack space
+skgpnumcpu|return number of cpus in system
 skgpwpost|post/wait post
 skgpwwait|post/wait wait
 skgstmGetEpochTs|statement(?) get epoch timestamp (gettimeofday)
