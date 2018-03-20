@@ -93,7 +93,7 @@ kbc|Backup Appliance Containers
 kbrs|Backup Appliance
 kc|kernel cache
 kcb|buffers
-kcbapl|apply (changes to buffer)
+kcbapl|apply (changes to buffer; kcoapl executes changes)
 kcbdnb|dump n buffers
 kcbchg|change a block
 kcbchg1|change a block
@@ -101,7 +101,10 @@ kcbchk_ctx|check context, execute check functions
 kcbgcur|get current read
 kcbget|get buffer (for index branch and leaf blocks)
 kcbgtcr|get consistent read
+kcbh|header
 kcbhfix_tail|update tail (low-order two bytes of the scn+block type+block sequence number)
+kcbhlchk|logical check 
+kcbhsbs_ub8|write SCN base and wrap in buffer header
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
 kcbipnns|is (buffer) pinned (no statistics)
 kcbklbc|link buffer into ckpt queue
@@ -151,6 +154,7 @@ kco|operation
 kco_blkchk|main block check function
 kcoadv_hdr|advance SCN in buffer header
 kcoapl|apply (changes to buffer)
+kcoapl_validate|validate applied changes
 kcopcv|prepare change vector(?)/redo entry generation and retrieval
 kcoubk|undo callback
 kcr|redo
@@ -797,6 +801,7 @@ ksbrdp|run a detached background process
 ksbxiaf|ksbxic message and interrupt action
 ksbxiafdomsg|ksbxic and async xic static functions
 ksbt|Background Processes
+kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|kernel system notifications to be passed to components
 ksd|debug internal errors
 ksddoa|debug support do an action
@@ -1040,6 +1045,8 @@ ktundo|undo
 kturGetUndoRec|get an undo record
 kturbk|rollback for CR only, reads undo record pointed by uba and call ktundo to back out the change
 kturbt|rollback to time scn
+kturdb|write undo data to undo block
+kturdh|write undo header data to undo block
 kturef|rollback examine candidate undo block
 ktursn|rollback segments shrink numbered
 ktursp|rollback to savepoint
