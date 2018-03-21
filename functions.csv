@@ -86,7 +86,7 @@ ka|kernel access
 kad|OBJECTS Anydata/Images
 kaf|fetch
 kau|update
-kauupd|table and modify indexes
+kauupd|update table and modify indexes
 kauxsin|Insert a key into x index segment(s) only 
 kb|kernel backup
 kbc|Backup Appliance Containers
@@ -223,8 +223,9 @@ kdblai|kernel database block loader array insertion
 kdblailb|load block
 kdbmrd|multi row slot delete
 kdc|cluster
-kdd|cluster
+kdd|delete
 kddchg|perform delete/update change
+kdddgb|delete get block
 kdeu|export unload
 kdg|gathering
 kdgprd|Process Row Data
@@ -449,6 +450,7 @@ kgiscl|state close cursors
 kgk|token
 kgkp|generic services scheduling policies
 kgl|library cache management
+kgldmp|dump an object
 kglfnd|find a chunk of at least the minimum size
 kglfrunp|ask a client to free unpinned space
 kglfrx|free extent (heap unpin)
@@ -503,10 +505,14 @@ kgur|recovery
 kgxp|inter process communication
 kjb|Global Cache Service
 kjci|Cross Instance Call
+kjcvcvd|deadlock detection routines
 kjfz|DLM-Client freeze/unfreeze
 kjk|RAC Kernel Accelerator
 kjm|RAC Multiple LMS
 kjoe|DLM Omni Enqueue service
+kjskcvl|main cache convert routine
+kjucvl|convert a lock
+kjuscv|synchronous convert
 kjxg|Cluster Group Services
 kjxgr|Instance Membership Recovery
 kjz|DIAG
@@ -811,6 +817,7 @@ ksdhng|Hang Analysis
 ksdp|parser
 ksdpcg|post and check event in the specified error group
 ksdpec|post event and check trigger condition
+ksdxen|2-task entry point
 ksdxcb|ksdx callback for sosd layer signal handler
 ksdxfdmp|ksdx function: invoke named dump
 kse|error
@@ -895,6 +902,7 @@ ksmupg|check for references in the session global area to process
 ksn|Two Task
 ksp|parameter
 ksq|enqueue
+ksqcnv|convert an enqueue's mode
 ksqcmi|change lock mode internally
 ksqdel|release and enqueue
 ksqgel|get an enqueue
@@ -902,6 +910,7 @@ ksqgtl|get an enqueue
 ksqrcl|release an enqueue
 kss|state object
 kssdch|delete children of SO
+kssdmp|dump children of a SO
 kssxld|delete SO ignoring errors, clean latches
 kst|trace (x$trace)
 kstm|time manager
@@ -909,7 +918,6 @@ kstmgethighresustick|get high resolution time
 ksu|user
 ksu_detactive_tac|deactivete time accounting
 ksu_dispatch_tac|dispatch timed-out action (updates wait interface)
-ksuc|cost function
 ksucln|cleanup detached process
 ksucresg|create session with a process group specified
 ksucre|create user session in process
@@ -918,6 +926,8 @@ ksuded|user disconnect
 ksudel|delete user session
 ksudlc|delete call
 ksudlp|delete process. called when user deteches or cleanup by pmon
+ksudmp|dump process state object
+ksudss|dump system
 ksul|license/language
 ksup|process info
 ksupop|operation
@@ -939,9 +949,10 @@ ksxp|rac operations(?)
 ksxr|rac operations(?)
 kt|kernel transaction
 kta|table access
-ktaiam|internal allocate dml lock 
 ktaadm|get all dml locks
 ktagetp|get partition lock
+ktaiam|internal allocate dml lock 
+ktaifm|internal find dml lock
 ktb|block
 ktbapundo|apply undo
 ktbchg2|(header) change
