@@ -119,6 +119,7 @@ kcbrls|release pin
 kcbtse|tablespace encryption
 kcbtse_encdec_tbsblk|block encrypt
 kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
+kcbtsn|tablespace number
 kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
@@ -958,6 +959,7 @@ ktbapundo|apply undo
 ktbchg2|(header) change
 ktbconv|block convert
 ktbgcl1|general clean 1, performs itl cleanout for RC and CU blocks
+ktbgwl|generate write list (?)
 ktbi|itl
 ktbisc|scan
 ktbrcl|itl cleanout routine
@@ -966,6 +968,7 @@ ktbtunlk|unlock all based on block type
 ktc|control component
 ktcCommitTxn|main commit function, calls ktcCommitTxn_new
 ktcCommitTxn_new|main commit function
+ktcbgn|begin transaction
 ktcbod|delete the given branch state object and put it on the freelist
 ktcccdel|commit callback delete
 ktcddt|delete distributed transaction
@@ -974,6 +977,8 @@ ktcifc|idl flush contexts
 ktcrab|real abort
 ktcrcm|real commit
 ktcsod|state object procedure vector definition
+ktd|distributed transaction
+ktdbgn|begin
 kte|extent management
 ktec|concurrency
 ktecgetsh|get segment header
@@ -1031,6 +1036,7 @@ ktspfsrch|first level bitmap block search
 ktspfsteal|Search cache for Pointer to data area of LII bitmap block
 ktspgetf|Get next set of L1s
 ktspgsp_cbk|Get Space for inserts
+ktspgsp_cbk1|Get Space for inserts bitmap segment only
 ktspgsp_main|get space for inserts
 ktspscan_bmb|scan the level 1 bitmap blocks
 ktss|segment procedures
@@ -1430,6 +1436,7 @@ qerlt|load table
 qerlt_olev|out-of-line columns, evaluate and stash away
 qerlt_snv|stash away and new values
 qerltFetch|fetch
+qerltc|conventional
 qerns|group by nosort
 qeroc|object collection iterator
 qerocStart|create a collection iterator row-source to iterate
