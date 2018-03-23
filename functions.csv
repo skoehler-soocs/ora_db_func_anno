@@ -95,12 +95,13 @@ kbrs|Backup Appliance
 kc|kernel cache
 kcb|buffers
 kcbapl|apply (changes to buffer; kcoapl executes changes)
+kcbb|databasewriter
 kcbdnb|dump n buffers
 kcbchg|change a block
 kcbchg1|change a block
 kcbchk_ctx|check context, execute check functions
 kcbgcur|get current read
-kcbget|get buffer (for index branch and leaf blocks)
+kcbget|get buffer (retry scan performed earlier by kcbgtcr)
 kcbgtcr|get consistent read
 kcbh|header
 kcbhfix_tail|update tail (low-order two bytes of the scn+block type+block sequence number)
@@ -108,19 +109,24 @@ kcbhlchk|logical check
 kcbhsbs_ub8|write SCN base and wrap in buffer header
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
 kcbipnns|is (buffer) pinned (no statistics)
+kcbk|checkpoint queue manipulation
 kcbklbc|link buffer into ckpt queue
-kcbl|load management
+kcbl|direct io routines
 kcblin|operations for redo-less write interface
 kcblnb|load new buffer
 kcblnb_dscn|load new buffer
 kcblrl|load release buffer
+kcbnlc|cleanout on commit
 kcbr_apply_pending|apply changed pending read completion
 kcbr_media_apply|apply change vector for media recovery
+kcbrbuf|get a recovery buffer
 kcbrls|release pin 
 kcbtse|tablespace encryption
 kcbtse_encdec_tbsblk|block encrypt
 kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
 kcbtsn|tablespace number
+kcbw|working set management
+kcbz|buffer handling
 kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
@@ -163,6 +169,8 @@ kcosze|calculate undo record size
 kcr|redo
 kcra|redo application/access
 kcramr|apply media recovery
+kcratr|thread redo application
+kcratr_claim|claim recovery buffers
 kcrcrl|corrupt redo log
 kcrf|file
 kcrf_commit_force|commit changes (11g) post lgwr or wait for lgwr
@@ -185,7 +193,10 @@ kcrfw_redo_gen_ext|main redo generation function (12c)
 kcrfw_redo_write_driver|main redo write function
 kcrfw_update_and_bcast_real_redo_scn|update real redo SCN and real write time in kcrfsg_
 kcrfw_wait_for_fg_copy|read redo copy latches accompanying shared pool structure to validate writes to redo are done
+kcrfwi|write redo into the logfile
 kcrfwl|sWitch logs
+kcrfwr|write redo into the logbuffer
+kcrfws|wait for space (logswitch)
 kcrm|media recovery
 kcropn|open online logfile for kcroio and kcrfoc
 kcrp|recovery parallel
@@ -194,7 +205,7 @@ kcrpdv|recovery parallel (driver?)
 kcrr|redo archival
 kcrv|recovery
 kcrvfh|file headers
-kcs|service
+kcs|scn management
 kcsadj1|adjust SCN
 kcsadj3|adjust SCN
 kcsaj8|adjust SCN
@@ -506,16 +517,29 @@ kgss|service state object manager
 kgur|recovery
 kgxp|inter process communication
 kj|kernel lock management
-kjb|Global Cache Service
+kjb|global cache service
+kjbr|resource table
+kjbl|lock table
+kjc|communication
 kjci|Cross Instance Call
 kjcvcvd|deadlock detection routines
 kjfz|DLM-Client freeze/unfreeze
 kjk|RAC Kernel Accelerator
+kjlt|lock table
 kjm|RAC Multiple LMS
 kjoe|DLM Omni Enqueue service
+kjpt|processes
+kjpsod|disconnect from dlm
+kjr|resource table
 kjskcvl|main cache convert routine
+kju|global enqueue service
+kjual|allocate, connection to dlm
+kjucv|asynchronous convert a lock
 kjucvl|convert a lock
-kjuscv|synchronous convert
+kjuscl|synchronous close a lock
+kjuscv|synchronous convert a lock
+kjusuc|synchronous open and convert a lock
+kjuuc|asynchronous open and convert a lock
 kjxg|Cluster Group Services
 kjxgr|Instance Membership Recovery
 kjz|DIAG
@@ -854,7 +878,10 @@ ksfm|io mapping
 ksfpec|io post and event
 ksfq|io sequential io interface
 ksfv|io server
-ksi|kernel Service Instance locking
+ksi|kernel service instance locking
+ksipget|get a group lock
+ksipcon|convert a group lock
+ksiprls|release a group lock
 ksk|accounting
 kskchk|check resource state for RM
 ksklheld|lock held
@@ -875,9 +902,16 @@ kslawe|add post-wait entry
 kslccll|clean up after a given latch
 kslcll|clean up after a given latch
 kslcllt|clean up after a given latch
+kslclt|child latch
 ksle|event wait
+kslf2c|free two child latches
 kslfre|free latch
+kslfred|free latch, debugging version
+kslges|get latch spinning in a loop
 kslgetl|get latch
+kslgetsl|get a shared latch
+kslgpl|get parent and child latches
+kslg2c|get two child latches
 kslilcr|invoke latch cleanup routine
 ksliwat|inner wait function; setup a wait that times out
 ksliwat_cleanup|cleanup post/wait entry
@@ -909,7 +943,8 @@ ksn|Two Task
 ksp|parameter
 ksq|enqueue
 ksqcnv|convert an enqueue's mode
-ksqcmi|change lock mode internally
+ksqcmi|change lock mode internal
+ksqded|deadlock check
 ksqdel|release and enqueue
 ksqgel|get an enqueue
 ksqgtl|get an enqueue
@@ -949,14 +984,15 @@ ksuxdl|delete state object for PMON
 ksuxfl|find dead processes and cleanup their latches. called by PMON
 ksv|slave management
 ksvrdp|run generic detached slave process
-ksx|execution management
+ksx|cross instance
 ksxa|Parallel Affinity
-ksxp|rac operations(?)
+ksxp|ipc
 ksxr|rac operations(?)
 kt|kernel transaction
 kta|table access
 ktaadm|get all dml locks
 ktagetp|get partition lock
+ktagetg0|get generic dml lock
 ktaiam|internal allocate dml lock 
 ktaifm|internal find dml lock
 ktb|block
@@ -1003,11 +1039,13 @@ ktfb|bitmapped space manipulation of files/tablespaces
 ktfd|dictionary based extent management
 ktft|temporary file manipulation
 ktl|list blocks changed
+ktldbl|delete list of block SO's
 ktm|transaction monitor
+ktmSmonMain|main smon routine
 ktmb|IM Txn Block
 ktmc|IM Txn Concurrency
 ktmjs|IM Txn Journal Scan
-ktmmon|tx monitor background timeout action
+ktmmon|tx monitor background timeout action (smon)
 ktmpj|IM Txn Private Journal
 ktmr|IM Txn Read
 ktmsj|IM Txn Shared Journal
@@ -1015,8 +1053,8 @@ ktp|parallel
 ktpcmt|commit
 ktr|read consistency
 ktrexc|examine block (consistent gets - examination)
-ktrexf|examine block (f? seems to be a per row CR check)
-ktrgcm|common cr read code
+ktrexf|examine block (returns best candidate)
+ktrgcm|common cr read code; build a cr buffer by applying undo
 ktrget|get a read consistent block
 ktrgtc|get a read consistent block and call back client
 ktri|dbms_resumable support
@@ -1025,6 +1063,7 @@ kts4smck|semantic check of the block
 kts4emchk|extended semantic check of the block
 ktsa|space analysis
 ktsb|bitmap management
+ktsclsb|coalesce free space
 ktsf|file
 ktsf_gsp|get space
 ktsfbfmt|format block and link
@@ -1046,6 +1085,7 @@ ktspgsp_cbk1|Get Space for inserts bitmap segment only
 ktspgsp_main|get space for inserts
 ktspscan_bmb|scan the level 1 bitmap blocks
 ktss|segment procedures
+ktssdt_segs|drops stray temporary segments
 ktst|sort management
 ktt|tablespace
 ktu|undo
@@ -1646,6 +1686,9 @@ sskgpwpost|post a single semaphore
 sskgpwvectorpost|post multiple semaphores
 sskgpwwait|wait
 sskgpwpost|post
+sskgxp|ipc communication
+sskgxpu|udp
+sskgxph|hmp implementation (hpux)
 sspuser|handle SIGUSR2 for Oracle
 std|PLSQL_Apps
 stsima|sort support implementation
