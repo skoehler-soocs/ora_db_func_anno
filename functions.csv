@@ -67,9 +67,10 @@ ins|insert
 insdlexe|direct load execute
 insexe|execute
 insidx|Insert indexed keys into the indexes after each row is inserted into the table
+insini|initialisation
 insrow|Fetch a row for insertion. This is called back by multirow insert
 jox|java compiler/runtime
-k2|kernel two-phase commit
+k2|kernel distributed execution
 k2c|kernel to kernel 
 k2d|global unique database id
 k2g|global transction id
@@ -504,6 +505,7 @@ kgskthrexit|thread exit
 kgss|service state object manager
 kgur|recovery
 kgxp|inter process communication
+kj|kernel lock management
 kjb|Global Cache Service
 kjci|Cross Instance Call
 kjcvcvd|deadlock detection routines
@@ -621,7 +623,6 @@ kkxa|external/asynch RPC
 kkxb|external tables
 kkxcls|close cursor
 kkxexe|execute plsql
-kxxffir|function fire called when the appropriate heap is going away
 kkxppp|private pipe
 kkxrd|DBMS_ROWID
 kkxtexe|trigger execute
@@ -791,7 +792,11 @@ krpi|dbms_pitr support
 krp_check_slave_exit|wait for ksv slaves to exit
 krp_slave_apply|main redo apply loop
 krp_slave_main|main pmr slave callback
+krt|tablespaces
+krta2bz|obtain blocksize of tablespace
+krta2rfn|obtain file number (mos says absolute file number)
 krtchk|check consistency (with control file)
+krtcktt|check temporary tablespace configuration
 krvg|generation of redo with DDL
 krvt|log miner viewer support
 ks|kernel service
@@ -956,6 +961,7 @@ ktaiam|internal allocate dml lock
 ktaifm|internal find dml lock
 ktb|block
 ktbapundo|apply undo
+ktbdbc|fast block cleanout function
 ktbchg2|(header) change
 ktbconv|block convert
 ktbgcl1|general clean 1, performs itl cleanout for RC and CU blocks
@@ -1169,6 +1175,7 @@ kxrd|row delete
 kxru|row update
 kxs|shared cursor
 kxsGetRuntimeLock|get runtime lock
+kxsffir|function fire called when the appropriate heap is going away
 kxstcls|trace cursor closing
 kxtex1|execute trigger
 kxti|trigger
@@ -1437,6 +1444,11 @@ qerlt_olev|out-of-line columns, evaluate and stash away
 qerlt_snv|stash away and new values
 qerltFetch|fetch
 qerltc|conventional
+qerltcFetch|main processing function
+qerltcFreeMemory|free memory
+qerltcPostInsertProcessing|post single row load processing
+qerltcStart|initialising function
+qerltcSingleRowLoad|main single row insertion function
 qerns|group by nosort
 qeroc|object collection iterator
 qerocStart|create a collection iterator row-source to iterate
@@ -1580,13 +1592,14 @@ rwoima|row operand operations
 rwsima|row source retrieval according to defining query
 rwsdef|rouwsource definitions
 rwsfcd|rowsource fetch
-scg|system dependent concurrency global locks
+s|operating system dependencies
+scg|concurrency global locks
 scm|PLSQL_Apps
 sdbima|sort operation
 sdbgrf|Diagnostic directory and file services
 selexe|select execute: prepare area for fetch
 seq|sequence numbers
-sk|system kernel
+sk|kernel
 skg|generic
 skgf|file
 skgfqio|queue I/O request(s)
@@ -1668,4 +1681,4 @@ xty|type checking
 xtyinpr|insert numeric precision operator
 zlke|security label error handling
 zll|Oracle Label Security
-zt|encryption
+it|encryption
