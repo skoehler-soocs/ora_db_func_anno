@@ -263,12 +263,14 @@ kdic|create
 kdicdrv|driver routine
 kdicrws|using row source
 kdics|cluster table scan
+kdif|scan
 kdifbk|fetches the single index row matching the argumentkey
 kdifxs|fetch next or previous row from index block
 kdifxs1|fetch row from index block inner function
 kdiins0|inserts the argument key and associated keydata
-kdil|index load
-kdis|index split
+kdil|load
+kdim|coalesce
+kdis|split
 kdiss|skip scan
 kdiulk|undo leaf operation
 kdizoltp|OLTP HIGH Index
@@ -498,7 +500,10 @@ kgmimio|implementation fro mmethod instantion object
 kgmgaicn|generic arguments input conversions
 kgmtconv|conversion
 kgmtimob|image to object (named types)
+kgnfs|network file system
+kgodm|oracle disk manager
 kgs|service
+kgsc|cache, session cache for cursors
 kgsd|debugging
 kgsk|resource manager
 kgskbwt|begin wait
@@ -1435,7 +1440,7 @@ qcpiere|expression relop expression
 qcpilcl|logical clause
 qcpilcl0|local
 qcs|semantic analysis
-qcso|OBJECTS Semantic Analysis
+qcso|OBJECTS
 qct|type check operations
 qcto|operators
 qe|execute
@@ -1672,6 +1677,7 @@ skgfrvldtrq|validate requests
 skgfrwat|wait for IO to complete
 skgm|memory (os dependent)
 skgmstack|call specified function with extra stack space
+skgnfs|network file system
 skgpnumcpu|return number of cpus in system
 skgpwpost|post/wait post
 skgpwwait|post/wait wait
