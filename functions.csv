@@ -15,10 +15,11 @@ audfro|top level objects
 aus|statement
 ausdrv|driver
 bam|PLSQL_KG_Interface
-csy|create synonym
-ctc|create table or cluster
+c|create
+csy|synonym
+ctc|table or cluster
 ctcdrv|driver
-cvw|create view
+cvw|view
 dbga|Unified Tracing Service
 dbgc|diagnostic framework
 dbgd|diagnostic events
@@ -47,20 +48,22 @@ dbked|RDBMS diagnostic Data Extractor Dumper
 dbkgc|RDBMS Diagnostic Generic Configuration
 dbkr|RDBMS ADR
 dbkt|RDBMS Unified Tracing Service (UTS)
-del|DML Drivers
-delexe|delete execute
+del|delete
+delexe|execute
 di|PLSQL_Apps
 dr|Text
 dsy|drop synonym
 dtb|drop table
 dteerr|date error handler
-eva|evaluating operands
+eva|evaluate
 evadid|date: internal date to date format
 evadis|date: internal date to string
-evaopn2|evaluate operand
-evapls|evaluate plsql function
-expeal|evaluate argument and list
-expepr|evaluate argument predicate
+evaopn2|operand
+evapls|plsql function
+evareo|relational operator
+expcop|evaluate callback operator list
+expeal|evaluate its argument AND list
+expepr|evaluate the argument predicate
 hep|PLSQL_KG_Interface
 hsh|PLSQL_KG_Interface
 ins|insert
@@ -70,7 +73,8 @@ insidx|Insert indexed keys into the indexes after each row is inserted into the 
 insini|initialisation
 insrow|Fetch a row for insertion. This is called back by multirow insert
 jox|java compiler/runtime
-k2|kernel distributed execution
+k|kernel
+k2|distributed execution
 k2c|kernel to kernel 
 k2d|global unique database id
 k2g|global transction id
@@ -83,16 +87,16 @@ k2r|multiple RPC
 k2s|server
 k2v|recovery
 k2udio|message unmarshalling
-ka|kernel access
-kad|OBJECTS Anydata/Images
+ka|access
+kad|objects anydata/images
 kaf|fetch
 kau|update
 kauupd|update table and modify indexes
-kauxsin|Insert a key into x index segment(s) only 
-kb|kernel backup
-kbc|Backup Appliance Containers
-kbrs|Backup Appliance
-kc|kernel cache
+kauxsin|insert a key into x index segment(s) only 
+kb|backup
+kbc|backup appliance containers
+kbrs|backup appliance
+kc|cache
 kcb|buffers
 kcbapl|apply (changes to buffer; kcoapl executes changes)
 kcbb|databasewriter
@@ -124,9 +128,8 @@ kcbrls|release pin
 kcbtse|tablespace encryption
 kcbtse_encdec_tbsblk|block encrypt
 kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
-kcbtsn|tablespace number
+kcbtsn|get tablespace number
 kcbw|working set management
-kcbz|buffer handling
 kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
@@ -150,7 +153,7 @@ kcfcsy|cross instance sync
 kcfida|identify file action
 kcfis|Exadata Predicate Push
 kcfopd|open/close database code
-kcfrbd|Read Buffers from Database:
+kcfrbd|read buffers from database
 kcht|hash table
 kck|compatibility
 kcl|lock manager
@@ -163,7 +166,7 @@ kco_blkchk|main block check function
 kcoadv_hdr|advance SCN in buffer header
 kcoapl|apply (changes to buffer)
 kcoapl_validate|validate applied changes
-kcopcv|prepare change vector(?)/redo entry generation and retrieval
+kcopcv|prepare change vector/redo entry generation and retrieval
 kcoubk|undo callback
 kcosze|calculate undo record size
 kcr|redo
@@ -178,7 +181,7 @@ kcrf_commit_force_int|commit changes (12g) post lgwr or wait for lgwr
 kcrf_pvt_strand_bind|try to bind private strand
 kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
 kcrf_sync_adaptive_set|set adaptive log file sync mode
-kcrfw|write/Broadcast SCN
+kcrfw|write/broadcast SCN
 kcrfw_alfs|adaptive log file sync
 kcrfw_alfs_save_redowrite_time|save redo write time (lgwr)
 kcrfw_copy_cv|copy change vectors to public redo buffer
@@ -226,7 +229,7 @@ kcv|recovery
 kcvcrv|thread recovery
 kcvdmr|do media recovery
 kcvvra|verify reset allowed
-kd|kernel data
+kd|data
 kda|analyze/statistics
 kdasts|Statistics Scan driver
 kdavls|validate structure driver
@@ -259,12 +262,12 @@ kdibr|row source utility
 kdic|create
 kdicdrv|driver routine
 kdicrws|using row source
-kdics|Cluster Table Scan
+kdics|cluster table scan
 kdifbk|fetches the single index row matching the argumentkey
 kdifxs|fetch next or previous row from index block
 kdifxs1|fetch row from index block inner function
 kdiins0|inserts the argument key and associated keydata
-kdil|Index Load
+kdil|index load
 kdis|index split
 kdiss|skip scan
 kdiulk|undo leaf operation
@@ -293,18 +296,18 @@ kdo|operations
 kdoapl|apply
 kdodrp|delete row piece
 kdoirp|insert row piece
-kdp|Archive Compression: Pcode
+kdp|archive compression: pcode
 kdq|query
 kds|seek/scan
 kdselini|extent list initialize
 kdscgr|Cluster Table Scan
 kdsfbr|fetch by rowid. returns a pointer to the row header
-kdsgnp|Fetch By Rowid get continued row piece (chained row)
-kdsgrp|Fetch By Rowid get row piece
+kdsgnp|fetch by rowid get continued row piece (chained row)
+kdsgrp|fetch by rowid get row piece
 kdso|service object
 kdstf|table full ultra fast scan
 kdstgr|table get row
-kdsttgr|Full Table Scan
+kdsttgr|full table scan
 kdt|table insert
 kdtchg|generate change
 kdtgsp|table/cluster insert get space
@@ -319,70 +322,70 @@ kdusru|single row update
 kdx|index
 kdxokcmp|Auto Prefix Compressed Index
 kdxt|temporary block
-kdz|Archive Compression
-kdza|Archive Compression: Compression
-kdzc|Archive Compression: Compression
-kdzd|Archive Compression: Decompression
-kdzh|Archive Compression: Compression
-kdzk|Archive Compression: HPK
-kdzs|Archive Compression: Decompression
-ke|kernel event
-keb|MMON/MMNL Infrastructure
-kec|Real Application Testing
+kdz|archive compression
+kdza|archive compression: compression
+kdzc|archive compression: compression
+kdzd|archive compression: decompression
+kdzh|archive compression: compression
+kdzk|archive compression: HPK
+kdzs|archive compression: decompression
+ke|event
+keb|MMON/MMNL infrastructure
+kec|real application testing
 kecprm|Real Application Testing: Masking
-kel|Server Generated Alert Infrastructure
+kel|server generated alert infrastructure
 keomg|DBOP generic service
 keomg|DBOP monitoring Deamon
 keomm|DBOP composite type
 keomn|DBOP monitoring
 ker|orarep
-kes|SQL Manageability
-kesai|Infrastructure
-kesatm|Infrastructure
-kesds|SQL Repair Advisor
-kesm|Real Application Testing: Masking
-kesp|SQL Performance Analyzer
-kesqs|Infrastructure
-kessi|Infrastructure
+kes|SQL manageability
+kesai|infrastructure
+kesatm|infrastructure
+kesds|SQL repair advisor
+kesm|real application testing: masking
+kesp|SQL performance analyzer
+kesqs|infrastructure
+kessi|infrastructure
 kesstp|SQL trace parser
-kest|SQL Tuning Advisor
-kestsa|(fix regression/parallel exeution)
-kestse|SQL Test-Execute Service
+kest|SQL tuning advisor
+kestsa|(fix regression/parallel execution)
+kestse|SQL test-execute service
 kestsi|(index-tune)
 kestsp|(plan node analysis)
-kesutl|Infrastructure
-keswat|Infrastructure
-keswpi|SQL Performance Analyzer
-kesws|SQL Monitor
-keswsq|Infrastructure
-keswts|Infrastructure
-ket|Automated Maintenance Tasks
+kesutl|infrastructure
+keswat|infrastructure
+keswpi|SQL performance analyzer
+kesws|SQL monitor
+keswsq|infrastructure
+keswts|infrastructure
+ket|automated maintenance tasks
 kew|wait 
 kewa|ASH
 kewm|AWR metrics
-kewr|AWR Repository
-kewrf|AWR Snapshot Flush
-kewrps|AWR Snapshot Purge
+kewr|AWR repository
+kewrf|AWR snapshot flush
+kewrps|AWR snapshot purge
 kews|statistics
 kews_cln_timestate|clean timestate
 kews_update_wait_time|update wait time
-kewu|AWR Utilities
-kex|EM Express
-kf|Automatic Storage Management
-kfa|ASM Alias Operations
+kewu|AWR utilities
+kex|EM express
+kf|automatic storage management
+kfa|ASM alias operations
 kfc|ASM cache
-kfd|ASM Disk
+kfd|ASM disk
 kfdp|ASM PST
 kfds|ASM staleness registry and resync
-kfdva|ASM Virtual ATB
-kfdx|ASM Exadata Interface
+kfdva|ASM virtual ATB
+kfdx|ASM exadata interface
 kfe|ASM attributes
 kff|KFF
 kffb|ASM metadata block
 kffd|ASM metadata directory
-kffscrub|ASM Scrubbing
+kffscrub|ASM scrubbing
 kfg|ASM diskgroups
-kfia|ASM Remote
+kfia|ASM remote
 kfiac|ASM IOServer client
 kfias|ASM IOServer
 kfio|ASM translation I/O layer
@@ -395,20 +398,20 @@ kfm|ASM node monitor interface implementation
 kfmd|ASM node monitor layer for diskgroup registration
 kfms|ASM node monitor layers support function interface
 kfn|ASM networking subsystem
-kfnb|ASM umbillicus
+kfnb|ASM umbilicus
 kfnc|ASM client networking
-kfnm|ASM umbillicus
-kfnor|KFN Orion
+kfnm|ASM umbilicus
+kfnor|KFN orion
 kfns|ASM server networking
-kfns|ASM umbillicus
+kfns|ASM umbilicus
 kfr|ASM reciovery
-kftha|ASM Transparent High Availability
-kfv|ASM Volume subsystem
-kfvsd|ASM Volume Background
-kfvsu|ASM Volume Umbillicus
-kfz|ASM Zecurity subsystem
-kfzp|ASM Password File Layer
-kg|kernel generic
+kftha|ASM transparent high availability
+kfv|ASM volume subsystem
+kfvsd|ASM volume background
+kfvsu|ASM volume umbilicus
+kfz|ASM zecurity subsystem
+kfzp|ASM password file layer
+kg|generic
 kgbt|btree operations
 kgcc|compression
 kgccbuf|buffer
@@ -418,7 +421,7 @@ kgccdo|do main compression function
 kgccgmtf|generate move to front
 kgccm|memory (?)
 kgce|encryption engine
-kgds|VOS Generic Stack Trace
+kgds|VOS generic stack trace
 kge|error
 kgeade|add error onto the error stack
 kgeadse|add error onto the error stack
@@ -429,7 +432,7 @@ kgerinv|record internal named error
 kgeriv|record internal error code with va_list
 kgesev|signal error code
 kgesinv|kernel generic signal internal named error with va_list
-kgf|ASM Automatic Storage Management
+kgf|ASM
 kgfd|io subsystem driver
 kgfdvf|Voting file Interface
 kgff|direct file io adapter
@@ -489,11 +492,14 @@ kglr|remote
 kglrfcl|reference clear
 kglsim|simulator 
 kglunp|unpin heaps of an object
-kgmexec|kernel generic ... execute
+kgm|inter-language method services
+kgmexec|execute
+kgmimio|implementation fro mmethod instantion object
 kgmgaicn|generic arguments input conversions
 kgmtconv|conversion
 kgmtimob|image to object (named types)
-kgsd|service debugging
+kgs|service
+kgsd|debugging
 kgsk|resource manager
 kgskbwt|begin wait
 kgskchk|check resource state for RM
@@ -513,23 +519,23 @@ kgskrunnextint|run next int(?)
 kgskthbwt|thread begin wait
 kgskthewt|thread end wait
 kgskthrexit|thread exit
-kgss|service state object manager
+kgss|state object manager
 kgur|recovery
 kgxp|inter process communication
-kj|kernel lock management
+kj|lock management
 kjb|global cache service
 kjbr|resource table
 kjbl|lock table
 kjc|communication
-kjci|Cross Instance Call
+kjci|cross instance call
 kjcvcvd|deadlock detection routines
-kjfz|DLM-Client freeze/unfreeze
-kjk|RAC Kernel Accelerator
+kjfz|DLM-client freeze/unfreeze
+kjk|RAC kernel accelerator
 kjlt|lock table
-kjm|RAC Multiple LMS
-kjoe|DLM Omni Enqueue service
+kjm|RAC multiple LMS
+kjoe|DLM omni enqueue service
 kjpt|processes
-kjpsod|disconnect from dlm
+kjpsod|disconnect from DLM
 kjr|resource table
 kjskcvl|main cache convert routine
 kju|global enqueue service
@@ -540,38 +546,38 @@ kjuscl|synchronous close a lock
 kjuscv|synchronous convert a lock
 kjusuc|synchronous open and convert a lock
 kjuuc|asynchronous open and convert a lock
-kjxg|Cluster Group Services
-kjxgr|Instance Membership Recovery
+kjxg|cluster group services
+kjxgr|instance membership recovery
 kjz|DIAG
-kjzc|DIAG Communication Layer
-kjzd|DIAG Main Layer
-kjzf|DIAG Flow Control Layer
-kjzg|DIAG Group Services Layer
-kjzh|DIAG API Layer
-kjzm|DIAG Membership Layer
-kk|kernel compile
+kjzc|DIAG communication layer
+kjzd|DIAG main layer
+kjzf|DIAG flow control layer
+kjzg|DIAG group services layer
+kjzh|DIAG API layer
+kjzm|DIAG membership layer
+kk|compile
 kkb|table
 kkbl|lob
 kkbo|object
-kkcn|Streams Advanaced Queuing 
-kkcne|Streams Advanaced Queuing Notitication
+kkcn|streams advanaced queuing 
+kkcne|streams advanaced queuing notitication
 kkdc|data check
 kkdcacr|get all check and referential constrains
 kkdcico|insert constraint definition
 kkdl|dictionary lookup
-kkdo|OBJECTS Dictionary
+kkdo|OBJECTS dictionary
 kke|cost engine
 kkeapr|analyze predicates for optimization returns stat ptr
 kkecpst|create copy of column statistics in compile time memory
 kkevcs|set view column stats for underlying column
 kkfd|fast dataflow (PQ DFO)
-kkfi|optimizer Virtual Column/indexes
+kkfi|optimizer virtual column/indexes
 kkfr|fast rowid (PQ)
 kkhf|hash join file and memory management
 kkhr|hash join row management
 kkj|job queue
 kkjp|package
-kkm|SQL Semantic Analysis
+kkm|SQL semantic analysis
 kkmpost|post processing
 kkn|analyze command
 kkndgd|aNalyze Data Gathering Driver
@@ -581,44 +587,48 @@ kknpat|partition analyze table
 kknpob|partition object
 kknls|locks/security
 kko|optimizer
-kkoads|SQL Compile ADS
-kkoat|Auto Tuning Optimizer
+kkoOrExpand|or expansion
+kkoads|SQL compile ADS
+kkoasj|add semi-join function
+kkoat|Auto tuning optimizer
+kkocpqb|copy query block
 kkocri|create index
 kkogfp|get first permutation
 kkoicb|initialise query block
 kkooqb|optimize query block
-kkopm|Plan Management
 kkopmCheckSmbUpdate|Check if updates to the Sql Management Base are pending
+kkopm|plan management
 kkopq|Parallel Optimization
 kkoqbc|query block optimization start point
-kkoOrExpand|or expansion
+kkostran|star transformation
 kkp|compilation 
-kkpa|Partitioning
+kkpa|partitioning
 kkpo|partitioned objects
-kkpod|Partitioning Dictionary
+kkpod|partitioning dictionary
 kkq|query 
-kkqgbp|(?)
+kkqgbp|group by placement
 kkqgbpColHasHighNDV|Column has high NDV
-kkqgbpCheckPred|Check validity of predicate
-kkqgbpCheckValidity|Check basic validity
-kkqgbptravChkTran|Traverse, check and transfor
+kkqgbpCheckPred|check validity of predicate
+kkqgbpCheckValidity|check basic validity
+kkqgbptravChkTran|traverse, check and transfor
 kkqctdrv|cost based transformation driver
 kkqctdrvTD|transformation directives
-kkqctdrvIT|Initiate cost-based Transformation
-kkqctdrvTD|Transformation Directives
+kkqctdrvIT|initiate cost-based transformation
+kkqctdrvTD|transformation directives
 kkqdrv|query transformation driver
-kkqdtdrvJPPD|Cost-based query Transformation - DRiVer for Join Pred push down
+kkqdtdrvJPPD|cost-based query transformation - DRiVer for Join Pred push down
 kkqj|join analysis
 kkqjpdctr|join predicate push down - traverse and transform
 kkqvm|View Merging
-kkrba|bitmap index and row source
-kkrbc|bitmap index compaction row source
-kkrbi|bitmap index creation row source
-kkrbo|bitmap index or row source
-kkrbt|rowsource: bob dylan convertor
-kkrbu|unlimited or rowsource
-kkrbx|index access rowsource
-kkrh|row hash
+kkr|rowsource
+kkrba|bitmap index and 
+kkrbc|bitmap index compaction
+kkrbi|bitmap index creation
+kkrbo|bitmap index or
+kkrbt|bob dylan convertor
+kkrbu|unlimited or
+kkrbx|index access
+kkrh|hash
 kkri|parallel index create
 kkrp|parallelizer (DFO)
 kkrt|rowsource table create as select
@@ -653,7 +663,7 @@ kkxtexe|trigger execute
 kkxwtp|compiler
 kky|system
 kkyasy|alter system driver
-kl|kernel loader
+kl|loader
 klc|column array builder
 klclil1r|c level interface load 1 row
 klcs|character set
@@ -673,10 +683,10 @@ kmdu2s|route messages from user to server
 kmm|monitor
 kmms|server
 kmn|network
-kmp|Connection Broker
-kn|kernel replication
+kmp|connection broker
+kn|replication
 kncd|dequeue generic functions
-ko|kernel objects
+ko|objects
 koc|cache manager
 kocedd|end duration
 kod|data manager
@@ -689,58 +699,57 @@ koi|interface
 kok|kernel side
 koka|access
 kokd|driver
-koke|OBJECTS Images
+koke|OBJECTS images
 koki|id generator
 kokl|lob access
 kokl3|temporary lob access
-kokla|LOB Default
-kokla|OBJECTS Anydata
-koklcopy|LOB copy
+kokla|LOB default
+kokla|OBJECTS anydata
+koklcopy|lob copy
 kolkcre|lob create
-koklcpb2c|copy binary data into LOB
-koklcwrite|LOB write
+koklcpb2c|copy binary data into lob
+koklcwrite|lob write
 kokleva|lob evaluate
 kokliclo|lob internal create with another locator
-koklm|LOB Default
+koklm|lob Default
 koklread|read
-koklv|LOB Default
-koks|OBJECTS Semantic Analysis
+koklv|lob default
+koks|OBJECTS semantic analysis
 kokt|OBJECTS DDL
-kola|LOB
+kola|lob
 kolaErrorHandler|error handler
-kole|LOB Default
+kole|lob default
 kolfgdir|file get directory object path and filenames
-koll|LOB
-kolo|OBJECTS Anydata
-kolo|OBJECTS Images
-kolr|LOB Refcount
+koll|lob
+kolo|OBJECTS images
+kolr|lob refcount
 kos|stream interfaces for images/objects
 kot|type manager
 kotg|accessor (get)
-koxs|LOB Default
+koxs|lob Default
 koxsihread|image handle write from buffer
-koxs|OBJECTS Streams
-kp|kernel programmatic interface
-kpbf|Progint Miscellaneous
-kpce|Streams Advanaced Queuing 
-kpcm|Streams Advanaced Queuing 
+koxs|OBJECTS streams
+kp|programmatic interface
+kpbf|progint miscellaneous
+kpce|streams advanaced queuing 
+kpcm|streams advanaced queuing 
 kpfs|NPI
-kpin|Progint Miscellaneous
+kpin|progint miscellaneous
 kpk|OCI
-kpm|transparent Session Migration
+kpm|transparent session migration
 kpn|OCI
 kpo|oracle
 kpoal8|V8 bundled execution
-kpoaq|Streams Advanaced Queuing 
+kpoaq|streams advanaced queuing 
 kpoaut|authenticate
 kpoclsa|close all cursors
 kpodny|describe any arguments used
-kpodp|Direct Path Load
+kpodp|direct path load
 kpogsk|initializes the session and returns the encrypted session key
 kpolob|lob operations
-kpon|Streams Advanaced Queuing 
-kpond|Streams Advanaced Queuing Notitication
-kpor|Stream protocol used by replication
+kpon|streams advanaced queuing 
+kpond|streams advanaced queuing notitication
+kpor|stream protocol used by replication
 kposc|scrollable cursors
 kpotc|setting up trusted external procedure callbacks
 kpotx|local transaction coordination
@@ -748,14 +757,14 @@ kpotxen|2-phase end transaction driver
 kpov|distributed transaction coordination
 kpp2|parse routine for dimensions
 kpp3|parse routine for create/alter/drop summary statements
-kppl|Connection Pool
+kppl|connection pool
 kpr|kernel programmatic interface
 kprball|execute all bundled kpr/rpi operations
 kprc|copy routines
 kps|transparent Session Migration
 kptsc|callback functions for streaming operations for replication
-kpu|user(?)
-kpuaq|Streams Advanaced Queuing 
+kpu|user
+kpuaq|streams advanaced queuing 
 kpuc|cursor management functions
 kpucp|client side connection pooling support
 kpudcn2c|convert Number to Character string
@@ -764,25 +773,25 @@ kpuexec|execute
 kpuexecv8|execute V8
 kpuhh|handle heap
 kpuhhalo|allocate memory freeable
-kpun|Streams Advanaced Queuing 
+kpun|streams advanaced queuing 
 kpur|remote
 kpurcsc|call with service context
-kpuzxs|XS Midtier
-kq|kernel query
+kpuzxs|XS midtier
+kq|query
 kqan|server side debug operations
 kqap|server side debug operations
 kqas|server side debug operations
 kqd|dictionary management
 kqdgtc|return an open and parsed cursor for a statement
 kqf|fixed tables
-kqfd|Direct access to fixed tables
-kqfp|packaes
+kqfd|direct access to fixed tables
+kqfp|packages
 kqfrs|row source
 kql|library cache
 kqlb|bootstrapping support
 kqld|dictionary callbacks
 kqldprr|parent referential constraint read
-kqlfgl|KQLF Get row for Lock, fixed table support
+kqlfgl|get row for Lock, fixed table support
 kqlftl|cache fixed Table for Locks callback
 kqllod|database object load
 kqlm|multi-instance manager
@@ -794,10 +803,10 @@ kqlsadd|add a new element to a subordinate set
 kqlslod|load all subordinate set elements for a given heap
 kqr|row cache
 kqrpre|read a parent cache object
-kr|kernel recovery
-kra|Recovery Area Function
-krb|Backup Restore
-krbabr|Auto Block Media Recovery
+kr|recovery
+kra|recovery area function
+krb|backup restore
+krbabr|auto block media recovery
 krbb|creation of a backuppiece
 krbbcdo|compression do
 krbc|controlfile
@@ -807,15 +816,14 @@ krbm|miscellaneous functions
 krbr|restore and recovery
 krbx|proxy copy controller
 krby|image copy
-krc|Recovery Block Change Tracking
-krcr|controlfile redo
+krc|block change tracking(?)
 krd|datafiles (media&standby)
 krd_end_rcv|end media recovery
 krd_implicit_rcv|IMPLICIT ReCoVery for standby open/activation
-krpi|dbms_pitr support
 krp_check_slave_exit|wait for ksv slaves to exit
 krp_slave_apply|main redo apply loop
 krp_slave_main|main pmr slave callback
+krpi|dbms_pitr support
 krt|tablespaces
 krta2bz|obtain blocksize of tablespace
 krta2rfn|obtain file number (mos says absolute file number)
@@ -823,13 +831,13 @@ krtchk|check consistency (with control file)
 krtcktt|check temporary tablespace configuration
 krvg|generation of redo with DDL
 krvt|log miner viewer support
-ks|kernel service
+ks|service
 ksa|async
 ksaamb|allocate message buffer
 ksarcv|receive message
 ksasnd|send asynchronous message
 ksasndint|send asynchronous message
-ksb|Background Processes
+ksb|background processes
 ksbabs|action based server
 ksbasend|asynchronous send message main loop
 ksbcti|call timeout/interrupts
@@ -838,12 +846,12 @@ ksbmsg|call cpu count changed callbacks
 ksbrdp|run a detached background process
 ksbxiaf|ksbxic message and interrupt action
 ksbxiafdomsg|ksbxic and async xic static functions
-ksbt|Background Processes
+ksbt|background processes
 kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|kernel system notifications to be passed to components
 ksd|debug internal errors
 ksddoa|debug support do an action
-ksdhng|Hang Analysis
+ksdhng|hang analysis
 ksdp|parser
 ksdpcg|post and check event in the specified error group
 ksdpec|post event and check trigger condition
@@ -939,7 +947,7 @@ ksmu|uga heap
 ksmuga|allocate user session global data
 ksmugf|release session global memory
 ksmupg|check for references in the session global area to process
-ksn|Two Task
+ksn|two task
 ksp|parameter
 ksq|enqueue
 ksqcnv|convert an enqueue's mode
@@ -985,10 +993,10 @@ ksuxfl|find dead processes and cleanup their latches. called by PMON
 ksv|slave management
 ksvrdp|run generic detached slave process
 ksx|cross instance
-ksxa|Parallel Affinity
+ksxa|parallel affinity
 ksxp|ipc
 ksxr|rac operations(?)
-kt|kernel transaction
+kt|transaction
 kta|table access
 ktaadm|get all dml locks
 ktagetp|get partition lock
@@ -1042,18 +1050,18 @@ ktl|list blocks changed
 ktldbl|delete list of block SO's
 ktm|transaction monitor
 ktmSmonMain|main smon routine
-ktmb|IM Txn Block
-ktmc|IM Txn Concurrency
-ktmjs|IM Txn Journal Scan
+ktmb|IM txn block
+ktmc|IM txn concurrency
+ktmjs|IM txn journal scan
 ktmmon|tx monitor background timeout action (smon)
-ktmpj|IM Txn Private Journal
-ktmr|IM Txn Read
-ktmsj|IM Txn Shared Journal
+ktmpj|IM txn private journal
+ktmr|IM txn read
+ktmsj|IM txn shared journal
 ktp|parallel
 ktpcmt|commit
 ktr|read consistency
-ktrexc|examine block (consistent gets - examination)
-ktrexf|examine block (returns best candidate)
+ktrexc|examine blocks (consistent gets - examination)
+ktrexf|examine blocks (returns best candidate)
 ktrgcm|common cr read code; build a cr buffer by applying undo
 ktrget|get a read consistent block
 ktrgtc|get a read consistent block and call back client
@@ -1117,37 +1125,37 @@ ktursn|rollback segments shrink numbered
 ktursp|rollback to savepoint
 ktursr|rollback segments shrink requested
 ktz|testing
-ku|kernel utility
+ku|utility
 kueuld|export unloader
-kv|kernel performance
+kv|performance
 kvi|information tables
-kwq|Advanaced Queuing 
+kwq|advanced queuing 
 kwqa|administration
-kwqdl|Dequeue
+kwqdl|dequeue
 kwqi|plsql trusted callouts
-kwqic|pre-12c Notitication
-kwqid|Dequeue
-kwqit|Time Manager
+kwqic|pre-12c notitication
+kwqid|dequeue
+kwqit|time manager
 kwqj|job queue scheduler for propagation
 kwqm|multiconsumer queue IOT support
-kwqmn|Time Manager
+kwqmn|time manager
 kwqn|queue notifier
-kwqo|instType checking options
+kwqo|insttype checking options
 kwqp|queueing propagation
 kwqs|statistics handling
 kwqu|lob data
 kwqx|transformations
 kwrc|rules engine evaluation(?)
 kwre|rules engine evaluation(?)
-kws|Streams Advanaced Queuing 
-kwsbg|Streams Advanaced Queuing Background
-kwsbit|Streams Advanaced Queuing Time Manager for Sharded Queue
-kwsbjc|Streams Advanaced Queuing Time Manager for Sharded Queue
-kwsbsm|Streams Advanaced Queuing Background
-kwsbtm|Streams Advanaced Queuing Time Manager for Sharded Queue
-kwscb|Streams Advanaced Queuing Message Cache
-kwschnk|Streams Advanaced Queuing Message Cache
-kwscp|Streams Advanaced Queuing Cross Process
+kws|streams advanaced queuing 
+kwsbg|streams advanaced queuing background
+kwsbit|streams advanaced queuing time manager for sharded queue
+kwsbjc|streams advanaced queuing time manager for sharded queue
+kwsbsm|streams advanaced queuing background
+kwsbtm|streams Advanaced queuing time manager for sharded queue
+kwscb|streams advanaced queuing message cache
+kwschnk|streams advanaced queuing message cache
+kwscp|streams advanaced queuing cross process
 kwsdqwm|Streams Advanaced Queuing Message Cache
 kwsipc|Streams Advanaced Queuing Cross Process
 kwslb|Streams Advanaced Queuing Load Balancer
@@ -1163,7 +1171,7 @@ kwssb|Streams Advanaced Queuing Message Cache
 kwssbsh|Streams Advanaced Queuing Message Cache
 kwssh|Streams Advanaced Queuing Message Cache
 kwssi|Streams Advanced Queuing Subscription
-kx|kernel execution
+kx|execution
 kxc|constraints
 kxcsnn|signal a not null constraint violation
 kxdr|DML driver entrypoint
@@ -1223,7 +1231,7 @@ kxto|trigger
 kxtr|trigger
 kxtt|temporary table operations
 kxwph|table/tabpart/cluster segment attribute management
-kz|kernel security
+kz|security
 kza|audit 
 kzar|application
 kzc|Code-Based Access Control
@@ -1256,32 +1264,35 @@ kzxnt|XS Namespace template
 kzxs|XS Session
 kzxsp|XS Security Class
 lis|PLSQL_KG_Interface
+main|general c starting function
 md|Spatial
 mdgr|Spatial GeoRaster
 mdr|Spatial Indexing
 msqima|generating sql statements
 msqimb|generating sql statements
-nau_ctl|Network nAtive aUthentication ConTroL
-nazslon|Network nAtive Zecurity Log ON
+n|network
+na|native
+nau_ctl|aUthentication ConTroL
+nazslon|Zecurity Log ON
 nco|network connection
-ncodef|DEF interfaces
+ncodfa|definition allocation, allocate a new ncodef
 ncrorou|receive OUT arguments for specified procedure
 ncrsrend|end record
 ncrsrwrt|Record WRiTe output buffer
+ni|interface
 nioqwa|operating system dependent networking: wait function
 npi|network program interface
 npidri0|driver common
-npidsc|Network Program Interface DiSConnect
+npidsc|DiSConnect
 npil|local
 npitcc|Test/Clear connections
 npixfr|transfer
+ns|session
 nsdo|execute network session operation. NS protocol engine
-nsmtio|Trace Non Smart I/O
 nso|SQL Transformation
-nsoqbc|NeSt Optimization on Query BloCk
-nsotruns|TRaverse and UNnest Subquery - NeSt Optimization on Query Block
 nsprecv|receive packet from network transport layer
 nsrdr|ns packet reader
+nt|transport
 nttrd|basic tcpip read
 oba|operator buffer allocation
 oci|oracle call interface
@@ -1303,6 +1314,7 @@ opiino|initialize opi
 opikndf2|OPIINO: Kernel route which sits on top of the SQL*Net
 opilof|log off
 opilon|log on
+opiodr|oracle code request driver, route the current request
 opiomc|map cursor
 opiope|open cursor
 opiosq0|prepare to parse a cursor
@@ -1402,10 +1414,11 @@ psu|PLSQL_PSD_Generic
 psx|PLSQL_PSD_Standalones
 pt|PLSQL_IDL
 pu|PLSQL_Infrastructure
-qba|query buffer allocation
+q|query
+qba|buffer allocation
 qbadrv|create control structures
 qbaopn|create control structures
-qc|query compile
+qc|compile
 qcdo|semantic analysis
 qcdo|dictionary support for objects
 qcp|parse
@@ -1425,12 +1438,13 @@ qcs|semantic analysis
 qcso|OBJECTS Semantic Analysis
 qct|type check operations
 qcto|operators
+qe|execute
 qeaeCn1Serial|count function
-qec|query execute checks
+qec|checks
 qecdrv|driver
 qecrlssub|release resources subroutine
 qee|SQL Execution
-qer|query execute rowsource
+qer|rowsource
 qerae|and equal
 qerandv|approximate NDV
 qerandvFetch|fetch
@@ -1525,7 +1539,7 @@ qerwn|window
 qerxl|Vector Translate
 qerxp|XDB Query
 qerxt|external table
-qes|query execute services
+qes|services
 qesaAggNonDist|create/compute non-distinct aggregates
 qesbl|Bloom Filter
 qesgv|Vector Aggregate
@@ -1535,28 +1549,30 @@ qesrc|result cache
 qesxl|Vector Translate
 qesxlp|Vector PX
 qesxlp|Vector Translate
-qka|query kernel allocation
+qk|kernel
+qka|allocation
 qkadrv|allocate query structures
 qkajoi|join processing
 qkaset|set expression
 qkatab|base table row sources
 qkatrv|traverse set expression tree
 qkauna|union or union all
-qke|query kernel expressions
+qke|expressions
 qkexl|Vector Translate
-qkk|query kernel allocate
-qkn|query kernel allocate
+qkk|allocate
+qkn|allocate
+qks|sql
 qks3t|temp table transformation
-qksan|SQL Analyze
-qksctx|SQL Compile MPGE
-qksds|SQL Dynamic Sampling Services
-qksmm|query kernel sql compiler memory management
+qksan|Analyze
+qksctx|MPGE
+qksds|Dynamic Sampling Services
+qksmm|compiler memory management
 qksmms|simulation
-qksop|query kernel sql compilter operand processing
+qksop|compilter operand processing
 qksqbApplyToQbc|Query compilation for query blocks - apply to QB
 qksqbApplyToQbcLoc|local
 qksvc|Virtual Column
-qkswc|query kernel support with clause
+qkswc|with clause
 qkswcDriver|WITH Clause execution: Recursively traverse through all query blocks
 qkx|SQL code generator
 qmcx|XDB CSX
@@ -1566,7 +1582,6 @@ qmcxe|XDB CSX SELFCON
 qmcxm|XDB CSX ENCODING
 qmf|XDB ftp server
 qmh|XDB Protocols
-qmixq|XDB Schema
 qmixq|XDB XMLIndex
 qmn|XDB Protocols
 qmr|XDB hierarchical resolver
@@ -1583,7 +1598,6 @@ qmxtra|XDB Query
 qmxtri|XDB Schema
 qmxtri|XDB XMLIndex
 qosd|SQL Plan Directive
-qximeop|evaluate operand
 qs|query summary
 qsme|management expression processing
 qsmka|determine if summary would be useful
@@ -1595,13 +1609,13 @@ qsmq|dictionary access
 qsmqcsm|create/drop/alter summary
 qsmqutl|support
 qsms|management advisor
-qx|query index
+qx|query execution
 qxdid|domain index ddl operations
 qxidm|extensible index dml operations
 qxidp|domain index ddl partition operations
 qxim|support for objects
+qximeop|evaluate operand
 qxitex|support for create/drop indextype
-qx|query execution
 qxopc|time operator callbacks
 qxope|support for operator ddl
 qxopq|support for user-defined operators
@@ -1628,18 +1642,20 @@ rpidrv|recursive program interface driver
 rpiexe|execute
 rpiswu2|switch user in recursive sql
 rtb|rowsource table
-rwoima|row operand operations
-rwsima|row source retrieval according to defining query
-rwsdef|rouwsource definitions
-rwsfcd|rowsource fetch
-s|operating system dependencies
+rw|row
+rwoima|operand operations
+rws|source
+rwsima|retrieval according to defining query
+rwsdef|definitions
+rwsfcd|fetch
 scg|concurrency global locks
 scm|PLSQL_Apps
 sdbima|sort operation
 sdbgrf|Diagnostic directory and file services
-selexe|select execute: prepare area for fetch
+sel|select
+selexe|execute: prepare area for fetch
 seq|sequence numbers
-sk|kernel
+sk|operating system dependent kernel
 skg|generic
 skgf|file
 skgfqio|queue I/O request(s)
@@ -1664,19 +1680,20 @@ skgxp|IPC communication
 skgxppost|post the owner of a contact out of a blocking call
 smbima|sort operation
 sor|sort operation
-sl|system specific call
+sou2o|main oracle executable entry point
+sl|operating system dependent call
 slcpu|get cpu usage
 slcpums|get cpu usage (for getrusage)
 sltrgatime64|arbitrary time lookup 
 sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
 sltrusleep|sleep (for nanosleep)
-sp|system dependent process functions
+sp|operating system dependent process functions
 sqn|sequence reference parsing
 srdima|sort operation
 srsima|sort operation
 stsima|sort operation
-ss|system specific system
+ss|operating system dependent system
 ssexhd|dump routine
 ssk|kernel
 sskg|generic
@@ -1690,6 +1707,7 @@ sskgxp|ipc communication
 sskgxpu|udp
 sskgxph|hmp implementation (hpux)
 sspuser|handle SIGUSR2 for Oracle
+ssthrdmain|main for every thread in a threaded oracle
 std|PLSQL_Apps
 stsima|sort support implementation
 sxorchk|system xor check
@@ -1712,16 +1730,18 @@ upderh|evaluate right hand side expressions in order to get values
 updexe|update execute
 updrow|Row Procedure used by KXRD to update or lock a row
 upi|user program interface
-upsexe|upsert execute
+ups|upsert
+upsexe|execute
 vop|view optimisation
 wlm|Work Load Management
-wpiutil|PLSQL_Apps
+wpiutil|plsql apps
 xct|transaction management
 xctctl|commit top level transaction in a transaction tree 
 xctrol|rollback: rollback current transaction of the current session
 xpl|SQL Explain Plan
 xty|type checking
 xtyinpr|insert numeric precision operator
-zlke|security label error handling
-zll|Oracle Label Security
-it|encryption
+z|security
+zlke|label error handling
+zll|label security
+zt|encryption
