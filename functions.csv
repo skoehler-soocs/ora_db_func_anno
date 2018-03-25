@@ -189,8 +189,8 @@ kcratr|thread redo application
 kcratr_claim|claim recovery buffers
 kcrcrl|corrupt redo log
 kcrf|file
-kcrf_commit_force|commit changes (11g) post lgwr or wait for lgwr
-kcrf_commit_force_int|commit changes (12g) post lgwr or wait for lgwr
+kcrf_commit_force|commit changes and post lgwr or wait for lgwr
+kcrf_commit_force_int|(12c)
 kcrf_pvt_strand_bind|try to bind private strand
 kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
 kcrf_sync_adaptive_set|set adaptive log file sync mode
@@ -204,8 +204,8 @@ kcrfw_gather_lwn|gather strand info for LWN batch
 kcrfw_gather_strand|gather strand write info
 kcrfw_partial_checksum|write a checksum into the redo strand
 kcrfw_post|post processing after (null)write
-kcrfw_redo_gen|main redo generation function (pre 12c)
-kcrfw_redo_gen_ext|main redo generation function (12c)
+kcrfw_redo_gen|main redo generation function 
+kcrfw_redo_gen_ext|(12c)
 kcrfw_redo_write_driver|main redo write function
 kcrfw_update_and_bcast_real_redo_scn|update real redo SCN and real write time in kcrfsg_
 kcrfw_wait_for_fg_copy|read redo copy latches accompanying shared pool structure to validate writes to redo are done
@@ -381,7 +381,7 @@ keswpi|SQL performance analyzer
 kesws|SQL monitor
 keswsq|infrastructure
 keswts|infrastructure
-keswxSQL monitor
+keswx|SQL monitor
 ket|automated maintenance tasks
 kew|AWR
 kewa|ASH
@@ -943,7 +943,7 @@ kskthrsod|thread state object delete
 kskwait_timed_cpu|resource manager wait routine
 ksl|lock management
 ksl_get_shared_latch|get latch in shared mode
-ksl_get_shared_latch_int|get latch in shared mode (12.2)
+ksl_get_shared_latch_int|(12.2)
 ksl_post_proc|post a single process
 ksl_postm_init|post multi initialise
 ksl_postm_do_posts|post multi do posts
