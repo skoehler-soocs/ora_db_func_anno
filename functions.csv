@@ -1,3 +1,5 @@
+Lpx|xdk
+LpxFSM|FSM parser
 adbdrv|alter database driver
 ain|alter index
 aop|audit options
@@ -50,7 +52,7 @@ dbkr|RDBMS ADR
 dbkt|RDBMS Unified Tracing Service (UTS)
 del|delete
 delexe|execute
-di|PLSQL_Apps
+di|PLSQL apps
 dr|text
 dre|index
 drex|query
@@ -70,6 +72,7 @@ evadis|date: internal date to string
 evaopn2|operand
 evapls|plsql function
 evareo|relational operator
+evaxl|vector translate
 expcop|evaluate callback operator list
 expeal|evaluate its argument AND list
 expepr|evaluate the argument predicate
@@ -342,12 +345,12 @@ kdx|index
 kdxokcmp|Auto Prefix Compressed Index
 kdxt|temporary block
 kdz|archive compression
-kdza|archive compression: compression
-kdzc|archive compression: compression
-kdzd|archive compression: decompression
-kdzh|archive compression: compression
-kdzk|archive compression: HPK
-kdzs|archive compression: decompression
+kdza|compression
+kdzc|compression
+kdzd|decompression
+kdzh|compression
+kdzk|HPK
+kdzs|decompression
 ke|event
 keb|MMON/MMNL infrastructure
 kec|real application testing
@@ -1321,7 +1324,7 @@ mdr|spatial indexing
 msqima|generating sql statements
 msqimb|generating sql statements
 n|network
-na|native
+na|authentication
 nau_ctl|aUthentication ConTroL
 nazslon|Zecurity Log ON
 nco|network connection
@@ -1331,6 +1334,7 @@ ncrsrend|end record
 ncrsrwrt|Record WRiTe output buffer
 ni|interface
 nioqwa|operating system dependent networking: wait function
+nl|library
 npi|network program interface
 npidri0|driver common
 npidsc|DiSConnect
@@ -1343,10 +1347,18 @@ nso|SQL Transformation
 nsprecv|receive packet from network transport layer
 nsrdr|ns packet reader
 nt|transport
-nttrd|basic tcpip read
+ntm|mailbox
+nn|names
+ntp|ipc
+ntt|tcp/ip
+nttrd|basic read
+ntus|unix domain sockets
+ntz|SSL
+nu|trace route utility
+nz|security
 oba|operator buffer allocation
 oci|oracle call interface
-ociextp|PLSQL_External_Proc
+ociextp|PLSQL External proc
 opi|oracle program interface
 opiamr|archival and media recovery
 opicca|clear context area
@@ -1381,26 +1393,26 @@ osn|Two Task
 oss|oracle storage server
 ossconf|configuration
 osssec|security
-p2c|PLSQL_PSD_Standalones
-par|PLSQL_KG_Interface
-pb|PLSQL_Code_Execution
-pbbicd|PLSQL_KNLDE
-pbp3g|PLSQL_KNLDE
-pbs|PLSQL_KNLDE
-pbt3g|PLSQL_KNLDE
-pci|PLSQL_Infrastructure
+p2c|PLSQL PSD standalones
+par|PLSQL KG interface
+pb|PLSQL code execution
+pbbicd|PLSQL KNLDE
+pbp3g|PLSQL KNLDE
+pbs|PLSQL KNLDE
+pbt3g|PLSQL KNLDE
+pci|PLSQL infrastructure
 pckl|Programmatic Interfaces to/from PL/SQL
-pcm|PLSQL_Infrastructure
-pd|PLSQL_Code_Execution
-pdn|PLSQL_COG_Native
-pdt|PLSQL_IDL
-pdw|PLSQL_COG_IDL_Gen
-pdx|PLSQL_COG_Optimizer
-pdy|PLSQL_COG_MCode_Gen
-pdz|PLSQL_COG_Infrastructure
-pe|PLSQL_Code_Execution
-pef|PLSQL_External_Proc
-peibp|PLSQL_KNLDE
+pcm|PLSQL infrastructure
+pd|PLSQL code execution
+pdn|PLSQL COG native
+pdt|PLSQL IDL
+pdw|PLSQL COG IDL gen
+pdx|PLSQL COG optimizer
+pdy|PLSQL COG MCode gen
+pdz|PLSQL COG infrastructure
+pe|PLSQL code execution
+pef|PLSQL external proc
+peibp|PLSQL KNLDE
 peicnt|PL/SQL Controlled execution
 pes|Shared Object Manager
 pesblt|built in interpreter
@@ -1411,34 +1423,35 @@ pfri|plsql runtime
 pfrrun|PL/SQL Interpreter Main Instruction Loop
 pfrrun_no_tool|fast interpretation loop
 pfrsqc|callbacks for array sql and dml with returning
-pgm|PLSQL_ILMS
-ph|PLSQL_Infrastructure
-ph1|PLSQL_Syntax
-ph2|PLSQL_Semantics
-pha|PLSQL_Semantics
-phdr|PLSQL_KG_Interface
-phn|PLSQL_Semantics
-pi|PLSQL_Apps
+pgm|PLSQL ILMS
+ph|PLSQL infrastructure
+ph1|PLSQL syntax
+ph2|PLSQL semantics
+pha|PLSQL semantics
+phdr|PLSQL KG interface
+phn|PLSQL semantics
+pi|PLSQL apps
+pifi|utl_file support
 piht|utl_http support
 pirg|utl_raw support
 pism|utl_smtp support
 pitcb|utl_tcp support
 piur|utl_url support
-pk|PLSQL_KG_Interface
-pl|PLSQL_Infrastructure
+pk|PLSQL KG interface
+pl|PLSQL infrastructure
 plio|object instantiation
-plitblm|PLSQL_Apps
-pls|PLSQL_PSD_Standalones
+plitblm|PLSQL apps
+pls|PLSQL PSD standalones
 plslm|ncomp processing
 plsm|plsql handling collections
-plst|PLSQL_Code_Execution
+plst|PLSQL code execution
 plswa|Programmatic Interfaces to/from PL/SQL
 pmuc|plsql handling collections
 pmuo|plsql handling collections
 pmux|plsql handling collections
-pncutil|PLSQL_Infrastructure
-pp|PLSQL_Infrastructure
-pri|PLSQL_Code_Execution
+pncutil|PLSQL infrastructure
+pp|PLSQL infrastructure
+pri|PLSQL code execution
 prifold|rpc forwarding to older releases
 priold|rpc forwarding to older releases
 prm|parameter handling with sql layer
@@ -1449,8 +1462,8 @@ prsdrv|delete
 prsrss|recursive alter system or session
 prssz|parse context to be saved
 prsxpl|explain statement
-ps|PLSQL_Infrastructure
-psd|Programmatic Interfaces to/from PL/SQL
+ps|PLSQL infrastructure
+psd|programmatic interfaces to/from PL/SQL
 psdbnd|manage bind variables
 psdddl|execute DDL
 psddr0|Null pointer definitions for ttcdrv callback and context.
@@ -1459,11 +1472,11 @@ psdicd|plsql call c
 psdmsc|system dependent misc functions
 psdpgi|open and close cursor support
 psf|instantiating plsql in library cache
-pso|PLSQL_PSD_Generic
-psu|PLSQL_PSD_Generic
-psx|PLSQL_PSD_Standalones
-pt|PLSQL_IDL
-pu|PLSQL_Infrastructure
+pso|PLSQL PSD generic
+psu|PLSQL PSD generic
+psx|PLSQL PSD standalones
+pt|PLSQL IDL
+pu|PLSQL infrastructure
 q|query
 qba|buffer allocation
 qbadrv|create control structures
@@ -1529,7 +1542,7 @@ qergiFetch|Fetch procedure of PX granule Iterator Row source Rowid
 qergr|group by rollup
 qergs|group by sort
 qergsFetch|fetch
-qergv|Vector Aggregate
+qergv|vector aggregate
 qerhc|hash clusters
 qerhj|hash join
 qerhjWalkHashBucket|walk a list of pointers in a hash bucket and check for a match
@@ -1594,13 +1607,12 @@ qes|services
 qesaAggNonDist|create/compute non-distinct aggregates
 qesbl|Bloom Filter
 qesdp|AQP
-qesgv|Vector Aggregate
+qesgv|vector aggregate
 qesma|Partitioning
 qespc|Partitioning
 qesrc|result cache
-qesxl|Vector Translate
-qesxlp|Vector PX
-qesxlp|Vector Translate
+qesxl|vector translate
+qesxlp|PX
 qk|kernel
 qka|allocation
 qkadrv|allocate query structures
@@ -1706,7 +1718,7 @@ rwsima|retrieval according to defining query
 rwsdef|definitions
 rwsfcd|fetch
 scg|concurrency global locks
-scm|PLSQL_Apps
+scm|PLSQL apps
 sdbima|sort operation
 sdbgrf|Diagnostic directory and file services
 sel|select
@@ -1766,12 +1778,11 @@ sskgxpu|udp
 sskgxph|hmp implementation (hpux)
 sspuser|handle SIGUSR2 for Oracle
 ssthrdmain|main for every thread in a threaded oracle
-std|PLSQL_Apps
+std|PLSQL apps
 stsima|sort support implementation
 sxorchk|system xor check
 tbsdrv|create/alter/drop tablespace function support
-textio|PLSQL_Apps
-tre|PLSQL_Infrastructure
+tre|PLSQL infrastructure
 ttc|two task common
 ttcc2u|convert type x to type y
 ttcclr|send/receive without conversion
@@ -1791,7 +1802,7 @@ upi|user program interface
 ups|upsert
 upsexe|execute
 vop|view optimisation
-wpiutil|plsql apps
+wpiu|PLSQL apps
 xct|transaction management
 xctctl|commit top level transaction in a transaction tree 
 xctrol|rollback: rollback current transaction of the current session
