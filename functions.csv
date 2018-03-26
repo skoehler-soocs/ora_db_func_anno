@@ -1333,9 +1333,13 @@ ncrorou|receive OUT arguments for specified procedure
 ncrsrend|end record
 ncrsrwrt|Record WRiTe output buffer
 ni|interface
-nioqwa|operating system dependent networking: wait function
+nio|operating system dependent networking
+nioqrc|receive
+nioqwa|wait
 nl|library
+nn|names
 npi|network program interface
+npiall|use bundled execution
 npidri0|driver common
 npidsc|DiSConnect
 npil|local
@@ -1345,12 +1349,12 @@ ns|session
 nsdo|execute network session operation. NS protocol engine
 nso|SQL Transformation
 nsprecv|receive packet from network transport layer
-nsrdr|ns packet reader
+nsrdr|packet reader
 nt|transport
 ntm|mailbox
-nn|names
 ntp|ipc
 ntt|tcp/ip
+ntt2err|error procedure
 nttrd|basic read
 ntus|unix domain sockets
 ntz|SSL
@@ -1758,6 +1762,12 @@ sltrgatime64|arbitrary time lookup
 sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
 sltrusleep|sleep (for nanosleep)
+sn|operating system dependent network
+snt|transport
+sntp|ipc
+sntpread|issue read
+sntt|tcp/ip
+snttread|issue read
 sp|operating system dependent process functions
 sqn|sequence reference parsing
 srdima|sort operation
