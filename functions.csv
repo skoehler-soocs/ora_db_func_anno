@@ -27,7 +27,7 @@ dbgc|diagnostic framework
 dbgd|diagnostic events
 dbge|diagnostic data extractor
 dbgf|diagnostic inter library compile-time service
-dbgr|Automatic Diagnostic Repository
+dbgr|automatic diagnostic repository
 dbgrl|diagnostic arb alert log
 dbgrlr|diagnostic arb alert log
 dbgre|export/import services
@@ -44,10 +44,10 @@ dbgvl|parser
 dbgvm|for ams metadata
 dbgvp|parser
 dbgxtk|xml toolkit
-dbkd|RDBMS Events
-dbke|RDBMS Diagnostic Data Extractor
-dbked|RDBMS diagnostic Data Extractor Dumper
-dbkgc|RDBMS Diagnostic Generic Configuration
+dbkd|RDBMS events
+dbke|RDBMS diagnostic data extractor
+dbked|Dumper
+dbkgc|generic configuration
 dbkr|RDBMS ADR
 dbkt|RDBMS Unified Tracing Service (UTS)
 del|delete
@@ -858,6 +858,10 @@ krbr|restore and recovery
 krbx|proxy copy controller
 krby|image copy
 krc|block change tracking
+krccacp|advance the checkpoint
+krccckp|checkpoint
+krcpabs|I am ctwr
+krcptmo|ctwr timeout action, this is the main loop
 krd|datafiles (media&standby)
 krd_end_rcv|end media recovery
 krd_implicit_rcv|IMPLICIT ReCoVery for standby open/activation
@@ -1161,6 +1165,7 @@ ktugus|get undo segment header
 ktugusc|get undo segment
 ktundo|undo
 kturGetUndoRec|get an undo record
+kturcm|redo commit
 kturbk|rollback for CR only, reads undo record pointed by uba and call ktundo to back out the change
 kturbt|rollback to time scn
 kturdb|write undo data to undo block
