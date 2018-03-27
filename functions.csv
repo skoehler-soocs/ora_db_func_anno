@@ -1006,6 +1006,7 @@ ksqgtl|get an enqueue
 ksqrcl|release an enqueue
 kss|state object
 kssdch|delete children of SO
+kssdct|delete children of specified type
 kssdmp|dump children of a SO
 kssxld|delete SO ignoring errors, clean latches
 kst|trace (x$trace)
@@ -1049,6 +1050,7 @@ ktaadm|get all dml locks
 ktagetp|get partition lock
 ktagetg0|get generic dml lock
 ktaiam|internal allocate dml lock 
+ktaidm|internal deallocate dml lock
 ktaifm|internal find dml lock
 ktb|block
 ktbapundo|apply undo
@@ -1154,6 +1156,7 @@ ktuapundo|apply undo
 ktubgn|begin transaction
 ktubko|get undo record to rollback transaction, non-cr only
 ktubnd|bind undo segment
+ktubsy|check if an extent can be reclaimed using extent commit time
 ktuc|called from cache
 ktuchg|write logs and perform changes
 ktucmt|commit transaction
@@ -1346,8 +1349,10 @@ nl|library
 nn|names
 npi|network program interface
 npiall|use bundled execution
+npicom|old style commit
 npidri0|driver common
 npidsc|DiSConnect
+npierr|check for errors requiring ksesec, also reacquire DX lock
 npil|local
 npitcc|Test/Clear connections
 npixfr|transfer
@@ -1611,16 +1616,16 @@ qerus|upsert
 qervw|view
 qervwFetch|fetch 
 qerwn|window
-qerxl|Vector Translate
+qerxl|vector translate
 qerxp|XDB Query
 qerxt|external table
 qes|services
 qesaAggNonDist|create/compute non-distinct aggregates
-qesbl|Bloom Filter
+qesbl|bloom filter
 qesdp|AQP
 qesgv|vector aggregate
-qesma|Partitioning
-qespc|Partitioning
+qesma|partitioning
+qespc|partitioning
 qesrc|result cache
 qesxl|vector translate
 qesxlp|PX
@@ -1629,11 +1634,11 @@ qka|allocation
 qkadrv|allocate query structures
 qkajoi|join processing
 qkaset|set expression
-qkatab|base table row sources
+qkatab|runtime allocation for base table row sources
 qkatrv|traverse set expression tree
 qkauna|union or union all
 qke|expressions
-qkexl|Vector Translate
+qkexl|vector translate
 qkk|allocate
 qkn|allocate
 qknr|rowsets setup
@@ -1821,6 +1826,7 @@ upsexe|execute
 vop|view optimisation
 wpiu|PLSQL apps
 xct|transaction management
+xctend|end
 xctctl|commit top level transaction in a transaction tree 
 xctrol|rollback: rollback current transaction of the current session
 xpl|SQL explain plan
