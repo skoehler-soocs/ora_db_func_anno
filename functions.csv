@@ -1076,6 +1076,7 @@ ktcrcm|real commit
 ktcsod|state object procedure vector definition
 ktd|distributed transaction
 ktdbgn|begin
+ktdcmt|commit
 kte|extent management
 ktec|concurrency
 ktecgetsh|get segment header
@@ -1235,14 +1236,14 @@ kxdrs|resilvering layer
 kxcb|backup
 kxcc|catch all
 kxcs|sql statements
-kxd|Exadata specific Kernel Modules
-kxdam|Exadata Disk Autom Manage
-kxdbc|Exadata Backup Compression for Backup Appliance
-kxdbio|Exadata Block level Intelligent Operations
-kxdcm|Exadata Metrics Fixed Table Callbacks
-kxdmisc|Exadata Misc
-kxdofl|Exadata Offload
-kxdrs|Exadata Resilvering Layer
+kxd|exadata specific kernel modules
+kxdam|disk auto manage
+kxdbc|backup compression for backup appliance
+kxdbio|block level intelligent operations
+kxdcm|metrics fixed Table callbacks
+kxdmisc|misc
+kxdofl|offload
+kxdrs|resilvering layer
 kxf|parallel query
 kxfc|coordinator
 kxfp|process and queue manager
@@ -1369,6 +1370,7 @@ oba|operator buffer allocation
 oci|oracle call interface
 ociextp|PLSQL External proc
 opi|oracle program interface
+opiSem|semantic analysis driver
 opiamr|archival and media recovery
 opicca|clear context area
 opiclo|close cursor
@@ -1390,7 +1392,7 @@ opiomc|map cursor
 opiope|open cursor
 opiosq0|prepare to parse a cursor
 opiprs|parse
-opiSem|semantic analysis driver
+opirip|run independent process
 opistp|stop oracle
 opistr|start oracle
 opitca|sets up context area
@@ -1725,7 +1727,7 @@ rwoima|operand operations
 rws|source
 rwsima|retrieval according to defining query
 rwsdef|definitions
-rwsfcd|fetch
+rwsfcd|fetch from rowsource
 scg|concurrency global locks
 scm|PLSQL apps
 sdbima|sort operation
