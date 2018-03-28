@@ -17,11 +17,10 @@ audfro|top level objects
 aus|statement
 ausdrv|driver
 bam|PLSQL_KG_Interface
-c|create
-csy|synonym
-ctc|table or cluster
+csy|create synonym
+ctc|create table or cluster
 ctcdrv|driver
-cvw|view
+cvw|create view
 dbga|Unified Tracing Service
 dbgc|diagnostic framework
 dbgd|diagnostic events
@@ -338,6 +337,7 @@ kdtInsRow|insert a row immediately
 kdu|update
 kdugetpart|get partition information for a deleted or opdated row
 kdumrp|update multiple row pieces
+kduovw|updates already existing rows
 kduurp|singe row update, main entry
 kdusru|single row update
 kdwf|worker framework
@@ -1082,6 +1082,7 @@ ktcsod|state object procedure vector definition
 ktd|distributed 
 ktdbgn|begin
 ktdcmt|commit
+ktdrev|recovery
 kte|extent management
 ktec|concurrency
 ktecgetsh|get segment header
@@ -1150,10 +1151,15 @@ ktspscan_bmb|scan the level 1 bitmap blocks
 ktss|segment procedures
 ktssdt_segs|drops stray temporary segments
 ktst|sort management
+ktsx|extent management
+ktsxr_add|redoless add extent to a segment
+ktsxs_add|add extent to a segment
+ktsxterr|find extent error
 ktt|tablespace
 ktu|undo
 ktu4smck|semantic check of the block
 ktu4ubck|undo block check
+ktuIM|in memory
 ktuabt|abort
 ktuapundo|apply undo
 ktubgn|begin transaction
@@ -1660,29 +1666,29 @@ qksvc|Virtual Column
 qkswc|with clause
 qkswcDriver|WITH Clause execution: Recursively traverse through all query blocks
 qkx|SQL code generator
-qm|XML
-qmcx|XDB CSX
-qmcxd|XDB CSX DECODING
-qmcxe|XDB CSX ENCODING
-qmcxe|XDB CSX SELFCON
-qmcxm|XDB CSX ENCODING
-qmf|XDB ftp server
-qmh|XDB Protocols
-qmixq|XDB XMLIndex
-qmn|XDB Protocols
-qmr|XDB hierarchical resolver
-qms|XDB XOB storage and retrieval
-qmurs|XDB handling URIs
-qmx|XDB xml support
-qmxsax|XDB sax processing
-qmxtc|XDB ddl and other operator support sql XML support
-qmxtgx|XDB ADT to XML transformation
-qmxtsk|XDB xmltype support functions
+qm|XDB
+qmcx|CSX
+qmcxd|DECODING
+qmcxe|ENCODING
+qmcxe|SELFCON
+qmcxm|ENCODING
+qmf|ftp server
+qmh|Protocols
+qmixq|XMLIndex
+qmn|Protocols
+qmr|hierarchical resolver
+qms|XOB storage and retrieval
+qmurs|handling URIs
+qmx|xml support
+qmxsax|sax processing
+qmxtc|ddl and other operator support sql XML support
+qmxtgx|ADT to XML transformation
+qmxtsk|xmltype support functions
 qmxq|XML
 qmxt|XML
-qmxtra|XDB Query
-qmxtri|XDB Schema
-qmxtri|XDB XMLIndex
+qmxtra|Query
+qmxtri|Schema
+qmxtri|XMLIndex
 qo|optimizer
 qos|statistics
 qosadv|advisor
