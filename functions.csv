@@ -983,6 +983,8 @@ kslwtectx|end context/wait
 ksm|memory
 ksmapg|callback for allocating a pga extent
 ksmasg|callback for allocating an sga extent
+ksmd|state object memory (?)
+ksmdfr|free memory
 ksmerr|cleanup any stack memory allocated within the given error frame
 ksmf|fixed sga
 ksmh|any heap
@@ -1007,6 +1009,7 @@ ksqrcl|release an enqueue
 kss|state object
 kssdch|delete children of SO
 kssdct|delete children of specified type
+kssdel|delete SO
 kssdmp|dump children of a SO
 kssxld|delete SO ignoring errors, clean latches
 kst|trace (x$trace)
@@ -1076,7 +1079,7 @@ ktcifc|idl flush contexts
 ktcrab|real abort
 ktcrcm|real commit
 ktcsod|state object procedure vector definition
-ktd|distributed transaction
+ktd|distributed 
 ktdbgn|begin
 ktdcmt|commit
 kte|extent management
@@ -1498,10 +1501,11 @@ qba|buffer allocation
 qbadrv|create control structures
 qbaopn|create control structures
 qc|compile
-qcdo|semantic analysis
+qcd|semantic analysis
 qcdo|dictionary support for objects
 qcp|parse
 qci|language parser and semantic analyser
+qclgte|logically group SQL text (?)
 qcop|parse
 qcpi|parse
 qcpi3|parse
