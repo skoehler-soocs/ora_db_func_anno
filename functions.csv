@@ -639,7 +639,9 @@ kkpa|partitioning
 kkpo|partitioned objects
 kkpod|partitioning dictionary
 kkq|query 
-kkqgbp|group by placement
+kkqcby|connect by
+kkqgb|group by
+kkqgbp|placement
 kkqgbpColHasHighNDV|Column has high NDV
 kkqgbpCheckPred|check validity of predicate
 kkqgbpCheckValidity|check basic validity
