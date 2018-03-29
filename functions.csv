@@ -131,7 +131,7 @@ kcblin|operations for redo-less write interface
 kcblnb|load new buffer
 kcblnb_dscn|load new buffer
 kcblrl|load release buffer
-kcbnlc|cleanout on commit
+kcbnlc|analyze cleanout
 kcbr_apply_pending|apply changed pending read completion
 kcbr_media_apply|apply change vector for media recovery
 kcbrbuf|get a recovery buffer
@@ -315,6 +315,7 @@ kdo|operations
 kdoapl|apply
 kdodrp|delete row piece
 kdoirp|insert row piece
+kdoiur|insert undo record
 kdp|archive compression: pcode
 kdq|query
 kds|seek/scan
@@ -751,7 +752,9 @@ kolkcre|lob create
 koklcpb2c|copy binary data into lob
 koklcwrite|lob write
 kokleva|lob evaluate
-kokliclo|lob internal create with another locator
+kokli|internal
+kokliclo|create with another locator
+kokligrd|initialize kdllfn with row data
 koklm|lob Default
 koklread|read
 koklv|lob default
@@ -1074,11 +1077,13 @@ ktcbgn|begin transaction
 ktcbod|delete the given branch state object and put it on the freelist
 ktcccdel|commit callback delete
 ktcddt|delete distributed transaction
+ktcdso|delete state object
 ktcgtx|get action global area
 ktcifc|idl flush contexts
 ktcrab|real abort
 ktcrcm|real commit
 ktcsod|state object procedure vector definition
+ktcxcb|fixed table callback for x$ktcxb
 ktd|distributed 
 ktdbgn|begin
 ktdcmt|commit
@@ -1087,6 +1092,7 @@ kte|extent management
 ktec|concurrency
 ktecgetsh|get segment header
 ktecgsc|get segment header and auto-convert
+kteclck|set extent map lock
 ktef|extent flush extent map
 ktehw|high water mark operations
 ktein|information operations
@@ -1187,6 +1193,8 @@ kturef|rollback examine candidate undo block
 ktursn|rollback segments shrink numbered
 ktursp|rollback to savepoint
 ktursr|rollback segments shrink requested
+ktusrs|shrink rollback segments
+ktuulc|unlock (?)
 ktz|testing
 ku|utility
 kueuld|export unloader
@@ -1211,29 +1219,25 @@ kwqx|transformations
 kwrc|rules engine evaluation(?)
 kwre|rules engine evaluation(?)
 kws|streams advanaced queuing 
-kwsbg|streams advanaced queuing background
-kwsbit|streams advanaced queuing time manager for sharded queue
-kwsbjc|streams advanaced queuing time manager for sharded queue
-kwsbsm|streams advanaced queuing background
-kwsbtm|streams Advanaced queuing time manager for sharded queue
-kwscb|streams advanaced queuing message cache
-kwschnk|streams advanaced queuing message cache
-kwscp|streams advanaced queuing cross process
-kwsdqwm|Streams Advanaced Queuing Message Cache
-kwsipc|Streams Advanaced Queuing Cross Process
-kwslb|Streams Advanaced Queuing Load Balancer
-kwslbbg|Streams Advanaced Queuing Load Balancer
-kwsmb|Streams Advanaced Queuing Message Cache
-kwsmc|Streams Advanaced Queuing Message Cache
-kwsmsg|Streams Advanaced Queuing Message Cache
-kwsnsm|Streams Advanced Queuing Subscription
-kwsnsme|Streams Advanced Queuing Subscription
-kwspt|Streams Advanaced Queuing Partitioning
-kwssa|Streams Advanced Queuing Subscription
-kwssb|Streams Advanaced Queuing Message Cache
-kwssbsh|Streams Advanaced Queuing Message Cache
-kwssh|Streams Advanaced Queuing Message Cache
-kwssi|Streams Advanced Queuing Subscription
+kwsbg|background
+kwsbit|time manager for sharded queue
+kwsbjc|time manager for sharded queue
+kwsbsm|background
+kwsbtm|time manager for sharded queue
+kwscb|message cache
+kwscp|cross process
+kwsdqwm|message cache
+kwsipc|cross process
+kwslb|load balancer
+kwsmb|message cache
+kwsmc|message cache
+kwsmsg|message cache
+kwsnsm|subscription
+kwspt|partitioning
+kwssa|subscription
+kwssb|message cache
+kwssh|message cache
+kwssi|subscription
 kx|execution
 kxc|constraints
 kxcsnn|signal a not null constraint violation
