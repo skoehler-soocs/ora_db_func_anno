@@ -122,6 +122,7 @@ kcbh|header
 kcbhfix_tail|update tail (low-order two bytes of the scn+block type+block sequence number)
 kcbhlchk|logical check 
 kcbhsbs_ub8|write SCN base and wrap in buffer header
+kcbibr|invalidate range of blocks
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
 kcbipnns|is (buffer) pinned (no statistics)
 kcbk|checkpoint queue manipulation
@@ -140,15 +141,17 @@ kcbtse|tablespace encryption
 kcbtse_encdec_tbsblk|block encrypt
 kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
 kcbtsn|get tablespace number
+kcbs|simulator
+kcbsacc|access 
 kcbw|working set management
 kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
 kcbzcbf|create buffer
-kcbzfs|free buffer handle 
+kcbzfs|free state object (buffer handle/kcbbf)
 kcbzgb|get cr/read/rec (space for) buffer with dba/class
 kcbzgm|get (space for) multiblock buffer
-kcbzgs|get buffer via buffer handle
+kcbzgs|get state object (buffer handle/kcbbf)
 kcbzib|input buffer (reads a block from disk into a buffer)
 kcbzibmlt|input buffer for multiblock read
 kcbz_table_scan_read|buffered multiblock read main loop
@@ -257,6 +260,8 @@ kdddgb|delete get block
 kdeu|export unload
 kdfs|dbfs c api
 kdg|gathering
+kdglfp|locator function perform
+kdglfs|locator function scan block
 kdgprd|Process Row Data
 kdgpnb|pin block
 kdgstp|STatistics Perform
@@ -478,7 +483,7 @@ kghfrunp|free unpinned space
 kghfrx|free extent
 kghgex|get a new extent
 kghini|heap initialize
-kghnospc|no space available
+kghnospc|no space available in the heap
 kghphini|parent heap initialize
 kghpmalo|find and return permanent chunk of space
 kghsrch|search freelists for a memory chunk
@@ -686,6 +691,7 @@ kkspsc0|parse shared cursor
 kkssbt|set bind types
 kksscl|scan child list
 kksumc|unmap shared cursor
+kksvld|validate cursor
 kkt|triggers
 kktalt|alter trigger
 kkx|Programmatic Interfaces to/from PL/SQL
@@ -904,7 +910,7 @@ ksd|debug internal errors
 ksddoa|debug support do an action
 ksdhng|hang analysis
 ksdp|parser
-ksdpcg|post and check event in the specified error group
+ksdpcg|post and check event in the specified event group
 ksdpec|post event and check trigger condition
 ksdxen|2-task entry point
 ksdxcb|ksdx callback for sosd layer signal handler
@@ -1012,10 +1018,12 @@ ksqgel|get an enqueue
 ksqgtl|get an enqueue
 ksqrcl|release an enqueue
 kss|state object
+kssadf|add SO from free list
 kssdch|delete children of SO
 kssdct|delete children of specified type
 kssdel|delete SO
 kssdmp|dump children of a SO
+kssrmf|delete SO 
 kssxld|delete SO ignoring errors, clean latches
 kst|trace (x$trace)
 kstm|time manager
@@ -1066,9 +1074,9 @@ ktbdbc|fast block cleanout function
 ktbchg2|(header) change
 ktbconv|block convert
 ktbgcl1|general clean 1, performs itl cleanout for RC and CU blocks
+ktbgfi|get free ITL
 ktbgwl|generate write list (?)
-ktbi|itl
-ktbisc|scan
+ktbisc|itl scan
 ktbrcl|itl cleanout routine
 ktbt|table
 ktbtunlk|unlock all based on block type
@@ -1184,6 +1192,7 @@ ktugct|get commit times for transction ids in the data block's itl
 ktugur|generate undo and redo
 ktugus|get undo segment header
 ktugusc|get undo segment
+ktuisonline1|return undo segment info if undo segment is online
 ktundo|undo
 kturGetUndoRec|get an undo record
 kturcm|redo commit
