@@ -147,7 +147,8 @@ kcbw|working set management
 kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
-kcbzcbf|create buffer
+kcbzcb|create/maybe clone buffer
+kcbzfb|format block
 kcbzfs|free state object (buffer handle/kcbbf)
 kcbzgb|get cr/read/rec (space for) buffer with dba/class
 kcbzgm|get (space for) multiblock buffer
@@ -1086,13 +1087,16 @@ ktbapundo|apply undo
 ktbdbc|fast block cleanout function
 ktbchg2|(header) change
 ktbconv|block convert
-ktbgcl1|general clean 1, performs itl cleanout for RC and CU blocks
+ktbgcl|performs ITL cleanout for RC and CU blocks
+ktbgcl1|general clean 1
 ktbgds|get dependent SCN
+ktbgfc|flush cleanout to disk
 ktbgfi|get free ITL
 ktbgwl|generate write list (?)
-ktbisc|itl scan
-ktbrcl|itl cleanout routine
+ktbisc|ITL scan
+ktbrcl|ITL cleanout routine
 ktbt|table
+ktbtul|unlock ITLs
 ktbtunlk|unlock all based on block type
 ktc|control component
 ktcCommitTxn|main commit function, calls ktcCommitTxn_new
@@ -1151,6 +1155,7 @@ ktrgcm|common cr read code; build a cr buffer by applying undo
 ktrget|get a read consistent block
 ktrgtc|get a read consistent block and call back client
 ktri|dbms_resumable support
+ktrvac|validate active transactions(?)
 kts|segment management
 kts4smck|semantic check of the block
 kts4emchk|extended semantic check of the block
@@ -1202,7 +1207,7 @@ ktucmt|commit transaction
 ktudba|convert from usn to dba
 ktudecrustat|decrement undo usage statistics in the resource maanger
 ktudnx|decrease active transaction count
-ktugct|get commit times for transction ids in the data block's itl
+ktugct|get commit times for transction ids in the data block's ITL
 ktugur|generate undo and redo
 ktugus|get undo segment header
 ktugusc|get undo segment
