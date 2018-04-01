@@ -555,7 +555,18 @@ kgskthewt|thread end wait
 kgskthrexit|thread exit
 kgss|state object manager
 kgur|recovery
-kgxp|inter process communication
+kgx|mutex
+kgxDecrement|decrement S mode counter
+kgxDecrementExamine|decrement RefCnt and set E mode
+kgxEndExamine|clear examine mode
+kgxExamine|set examine mode
+kgxExclusive|get in X mode
+kgxExclusive2Shared|downgrade X to S mode
+kgxIncrement|increment S mode counter
+kgxIncrementExamine|increment RefCnt and set E mode
+kgxShared|get in S mode
+kgxSharedExamine|examine
+kgxRelease|release
 kj|lock management
 kjb|global cache service
 kjbr|resource table
@@ -968,6 +979,7 @@ kslccll|clean up after a given latch
 kslcll|clean up after a given latch
 kslcllt|clean up after a given latch
 kslclt|child latch
+kslconx|convert latch from shared to exclusive
 ksle|event wait
 kslf2c|free two child latches
 kslfre|free latch
@@ -986,6 +998,7 @@ kslpspr|post the process with that latch
 kslpwrp_int|post/wait read post type (to choose single or multi process posting; guess)
 kslwait|wait for n centi-seconds or until posted
 kslwaitctx|wait context; wait until timeout
+kslwlmod|wait list modification
 kslwt|wait interface
 kslwt_end_snapshot|end snapshot
 kslwt_update_stats_int|update statistics
@@ -1074,6 +1087,7 @@ ktbdbc|fast block cleanout function
 ktbchg2|(header) change
 ktbconv|block convert
 ktbgcl1|general clean 1, performs itl cleanout for RC and CU blocks
+ktbgds|get dependent SCN
 ktbgfi|get free ITL
 ktbgwl|generate write list (?)
 ktbisc|itl scan
