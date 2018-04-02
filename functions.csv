@@ -1,4 +1,4 @@
-Lpx|xdk
+Lpx|xml parser
 LpxFSM|FSM parser
 adbdrv|alter database driver
 ain|alter index
@@ -14,7 +14,7 @@ audend|end (commit) transaction
 auddel|delete
 auddft|default function
 audfro|top level objects
-aus|statement
+aus|audit statement
 ausdrv|driver
 bam|PLSQL_KG_Interface
 csy|create synonym
@@ -65,12 +65,15 @@ dry|query
 dsy|drop synonym
 dtb|drop table
 dteerr|date error handler
+err|error recovery
+erroer|oracle error position
 eva|evaluate
 evadid|date: internal date to date format
 evadis|date: internal date to string
 evaopn2|operand
 evapls|plsql function
 evareo|relational operator
+evaval|val
 evaxl|vector translate
 expcop|evaluate callback operator list
 expeal|evaluate its argument AND list
@@ -146,6 +149,8 @@ kcbsacc|access
 kcbw|working set management
 kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
+kcbz_fp_cr|fast pin consistent read
+kcbz_fp_shr|fast pin shared mode
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
 kcbzcb|create/maybe clone buffer
 kcbzfb|format block
@@ -153,8 +158,10 @@ kcbzfs|free state object (buffer handle/kcbbf)
 kcbzgb|get cr/read/rec (space for) buffer with dba/class
 kcbzgm|get (space for) multiblock buffer
 kcbzgs|get state object (buffer handle/kcbbf)
+kcbzgsf|fast
+kcbzgws|get write list
 kcbzib|input buffer (reads a block from disk into a buffer)
-kcbzibmlt|input buffer for multiblock read
+kcbzibmlt|for multiblock read
 kcbz_table_scan_read|buffered multiblock read main loop
 kcbztek_trace_blk|tablespace encryption check(?)
 kcbzvb|verify buffer
@@ -835,6 +842,7 @@ kpudcn2c|convert Number to Character string
 kpudp|DPAPI Load
 kpuexec|execute
 kpuexecv8|execute V8
+kpufch|fetch one or more rows
 kpuhh|handle heap
 kpuhhalo|allocate memory freeable
 kpun|streams advanaced queuing 
@@ -961,6 +969,7 @@ ksipcon|convert a group lock
 ksiprls|release a group lock
 ksk|accounting
 kskchk|check resource state for RM
+kskgetpgalimit|get pga limit
 ksklheld|lock held
 kskpthr|post thread
 kskthbwt|thread begin wait
@@ -1000,6 +1009,7 @@ kslpwrp_int|post/wait read post type (to choose single or multi process posting;
 kslwait|wait for n centi-seconds or until posted
 kslwaitctx|wait context; wait until timeout
 kslwlmod|wait list modification
+kslwlscan|scan write list
 kslwt|wait interface
 kslwt_end_snapshot|end snapshot
 kslwt_update_stats_int|update statistics
@@ -1134,6 +1144,7 @@ ktfwtsm|write timestamp
 ktfb|bitmapped space manipulation of files/tablespaces
 ktfd|dictionary based extent management
 ktft|temporary file manipulation
+kti|in memory undo(?)
 ktl|list blocks changed
 ktldbl|delete list of block SO's
 ktm|transaction monitor
@@ -1213,6 +1224,7 @@ ktugus|get undo segment header
 ktugusc|get undo segment
 ktuisonline1|return undo segment info if undo segment is online
 ktundo|undo
+kturCRBackoutOneChg|consistent read; backout changes
 kturGetUndoRec|get an undo record
 kturcm|redo commit
 kturbk|rollback for CR only, reads undo record pointed by uba and call ktundo to back out the change
@@ -1369,6 +1381,9 @@ kzxnt|XS Namespace template
 kzxs|XS Session
 kzxsp|XS Security Class
 lis|PLSQL_KG_Interface
+lnxn2copt|converts an oracle number to a character string with option for padding
+lnxn2coptg|with nls global
+lnxqchk|private number check function
 main|general c starting function
 md|spatial
 mdgr|spatial georaster
