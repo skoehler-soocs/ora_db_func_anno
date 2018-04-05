@@ -126,6 +126,7 @@ kcbhfix_tail|update tail (low-order two bytes of the scn+block type+block sequen
 kcbhlchk|logical check 
 kcbhsbs_ub8|write SCN base and wrap in buffer header
 kcbibr|invalidate range of blocks
+kcbism|is medium (selection of read strategy)
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
 kcbipnns|is (buffer) pinned (no statistics)
 kcbk|checkpoint queue manipulation
@@ -151,7 +152,9 @@ kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_fp_cr|fast pin consistent read
 kcbz_fp_shr|fast pin shared mode
+kcbz_fr_buf|free buffer
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
+kcbzar|release buffer
 kcbzcb|create/maybe clone buffer
 kcbzfb|format block
 kcbzfs|free state object (buffer handle/kcbbf)
@@ -174,6 +177,7 @@ kcfbsy|background synchronisation of SGA and controlfile
 kcfcsy|cross instance sync
 kcfida|identify file action
 kcfis|Exadata Predicate Push
+kcfis_tablespace_is_on_sage|test if tablespace is on exadata
 kcfopd|open/close database code
 kcfrbd|read buffers from database
 kcht|hash table
@@ -290,10 +294,12 @@ kdicdrv|driver routine
 kdicrws|using row source
 kdics|cluster table scan
 kdif|scan
-kdifbk|fetches the single index row matching the argumentkey
+kdifbk|fetches the single index row matching the argument key
+kdifind|find the appropriate index block to store the key
 kdifxs|fetch next or previous row from index block
 kdifxs1|fetch row from index block inner function
 kdiins0|inserts the argument key and associated keydata
+kdiixs|index range scan
 kdil|load
 kdim|coalesce
 kdis|split
@@ -332,15 +338,19 @@ kdoiur|insert undo record
 kdp|archive compression: pcode
 kdq|query
 kds|seek/scan
-kdselini|extent list initialize
-kdscgr|cluster table scan
+kdse|extent
+kdselini|list initialize
+kdsc|cluster
+kdscgr|table scan
 kdsfbr|fetch by rowid. returns a pointer to the row header
 kdsgnp|fetch by rowid get continued row piece (chained row)
 kdsgrp|fetch by rowid get row piece
 kdsics|cluster table scan
 kdso|service object
-kdstf|table full ultra fast scan
-kdstgr|table get row
+kdst|table
+kdst_compile|compile scan type
+kdstf|full ultra fast scan
+kdstgr|get row
 kdsttgr|full table scan
 kdt|table insert
 kdtchg|generate change
@@ -1679,6 +1689,7 @@ qerxl|vector translate
 qerxp|XDB Query
 qerxt|external table
 qes|services
+qesSageEnabled|test if exadata storage servers are used
 qesaAggNonDist|create/compute non-distinct aggregates
 qesbl|bloom filter
 qesdp|AQP
