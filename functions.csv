@@ -10,6 +10,7 @@ apakkoqb|drive access path analysis for every query block
 apaqbd|drive access path analysis for every query block
 atb|alter table
 aud|audit
+audbeg|begin
 audend|end (commit) transaction
 auddel|delete
 auddft|default function
@@ -86,6 +87,7 @@ insexe|execute
 insidx|Insert indexed keys into the indexes after each row is inserted into the table
 insini|initialisation
 insrow|Fetch a row for insertion. This is called back by multirow insert
+ipp|internal probe processor capabilities(?)
 jox|java compiler/runtime
 k|kernel
 k2|distributed execution
@@ -112,6 +114,7 @@ kbc|backup appliance containers
 kbrs|backup appliance
 kc|cache
 kcb|buffers
+kcb_sync_last_change|call kcrf_commit_force to sync redo
 kcbapl|apply (changes to buffer; kcoapl executes changes)
 kcbb|databasewriter
 kcbdnb|dump n buffers
@@ -221,6 +224,7 @@ kcrfw_post|post processing after (null)write
 kcrfw_redo_gen|main redo generation function 
 kcrfw_redo_gen_ext|(12c)
 kcrfw_redo_write_driver|main redo write function
+kcrfw_slave_group_main|main logwriter worker function
 kcrfw_update_and_bcast_real_redo_scn|update real redo SCN and real write time in kcrfsg_
 kcrfw_wait_for_fg_copy|read redo copy latches accompanying shared pool structure to validate writes to redo are done
 kcrfwi|write redo into the logfile
@@ -495,7 +499,7 @@ kgherror|internal error routine
 kghfnd|find a chunk of memory of at least the minimum size
 kghfre|free a chunk of memory
 kghfrf|non-recoverably free a freeable chunk of space
-kghfrh|free heap
+kghfrh|free heap. free all the extents allocated in the heap using kghalfrx
 kghfrmrg|free a chunk, merge with neighbors if free returns merged chunk
 kghfrunp|free unpinned space
 kghfrx|free extent
@@ -1076,8 +1080,7 @@ ksudlp|delete process. called when user deteches or cleanup by pmon
 ksudmp|dump process state object
 ksudss|dump system
 ksul|license/language
-ksup|process info
-ksupop|operation
+ksupop|pop (restore) user or recursive call
 ksupr|process object
 ksur|resource usage
 ksus|statistics
@@ -1360,6 +1363,8 @@ kxtt|temporary table operations
 kxwph|table/tabpart/cluster segment attribute management
 kz|security
 kza|audit 
+kzang|next generation
+kzangins|insert record
 kzar|application
 kzc|Code-Based Access Control
 kzck|encryption support
@@ -1832,6 +1837,10 @@ skgpnumcpu|return number of cpus in system
 skgpwpost|post/wait post
 skgpwwait|post/wait wait
 skgstmGetEpochTs|statement(?) get epoch timestamp (gettimeofday)
+skgvm|virtual machine
+skgvm_cpuid|detect cpuid
+skgvm_detect_xen|detect xen
+skgvm_detect_vmware|detect vmware
 skgxp|IPC communication
 skgxppost|post the owner of a contact out of a blocking call
 smbima|sort operation
