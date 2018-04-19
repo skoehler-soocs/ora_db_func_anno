@@ -237,6 +237,7 @@ kcrfw_update_and_bcast_real_redo_scn|update real redo SCN and real write time in
 kcrfw_wait_for_fg_copy|read redo copy latches accompanying shared pool structure to validate writes to redo are done
 kcrfwi|write redo into the logfile
 kcrfwl|sWitch logs
+kcrfwnf|new file (?)
 kcrfwr|write redo into the logbuffer
 kcrfws|wait for space (logswitch)
 kcrm|media recovery
