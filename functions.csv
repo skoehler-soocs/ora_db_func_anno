@@ -26,6 +26,12 @@ dbga|Unified Tracing Service
 dbgc|diagnostic framework
 dbgd|diagnostic events
 dbge|diagnostic data extractor
+dbgeEndDDEInvocation|Explicitly end a DDE invocation
+dbgeEndDDEInvocationImpl|(internal)
+dbgePostErrorKGE|Post the error for DDE invocation from KGE
+dbgexExplicitEndInc|explicitly end a split error processing
+dbgexPhaseII|phase 2
+dbgexProcessError|process error
 dbgf|diagnostic inter library compile-time service
 dbgr|automatic diagnostic repository
 dbgrl|diagnostic arb alert log
@@ -46,7 +52,9 @@ dbgvp|parser
 dbgxtk|xml toolkit
 dbkd|RDBMS events
 dbke|RDBMS diagnostic data extractor
+dbkePostKGE_kgsf|Post KGE error for KGSF
 dbked|Dumper
+dbkedDefDump|do DDE default dump
 dbkgc|generic configuration
 dbkr|RDBMS ADR
 dbkt|RDBMS Unified Tracing Service (UTS)
@@ -179,7 +187,7 @@ kcf|file management
 kcfbsy|background synchronisation of SGA and controlfile
 kcfcsy|cross instance sync
 kcfida|identify file action
-kcfis|Exadata Predicate Push
+kcfis|intelligent storage
 kcfis_tablespace_is_on_sage|test if tablespace is on exadata
 kcfopd|open/close database code
 kcfrbd|read buffers from database
@@ -477,14 +485,16 @@ kgce|encryption engine
 kgds|vos generic stack trace
 kge|error
 kgeade|add error onto the error stack
-kgeadse|add error onto the error stack
+kgeadse|KGE ADd String Internal Error onto the error stack
 kgeasi|raise an error on an assertion failure
 kgepop|pop to the current top error frame
 kgerem|record error code (with already-formatted message)
-kgerinv|record internal named error
+kgerinv|record internal named error with va_list
+kgerinv_internal|or soft internal named error
 kgeriv|record internal error code with va_list
 kgesev|signal error code
-kgesinv|kernel generic signal internal named error with va_list
+kgesin|signal a named internal error
+kgesinv|signal internal named error with va_list
 kgf|ASM
 kgfd|io subsystem driver
 kgfdvf|Voting file Interface
@@ -952,6 +962,7 @@ ksdxfdmp|ksdx function: invoke named dump
 kse|error
 ksedmp|dump process state
 ksedst|dump call stack
+ksedst1|helper
 ksepop|perform cleanup when an error frame is being popped
 kserec1|record an error code
 ksesec1|recovery operations
@@ -969,6 +980,7 @@ ksfd_update_iostatstime|update IO stats
 ksfdgo|execute IO
 ksfdgrsz|get request size
 ksfdmp|call the relevant dump routine
+ksfdnfy|PDB open notifier
 ksfdwtio|wait for IO
 ksfflt|free latch
 ksfglt|get latch
@@ -1330,6 +1342,8 @@ kxfpqrfdb|Queue ref free dequeued buffer
 kxfprienq|Queue ref internal enqueue message
 kxfprifdb|Queue ref internal free dequeued buffer
 kxfq|table queues
+kxfqira|initialize a TQ range
+kxfqupp|unpack message and put in sort buffer
 kxfr|granules
 kxfrAllocSlaves|allocate slaves
 kxfralo|allocate rowid ranges and slave processes
@@ -1485,22 +1499,22 @@ osssec|security
 p2c|PLSQL PSD standalones
 par|PLSQL KG interface
 pb|PLSQL code execution
-pbbicd|PLSQL KNLDE
-pbp3g|PLSQL KNLDE
-pbs|PLSQL KNLDE
-pbt3g|PLSQL KNLDE
+pbbicd|KNLDE
+pbp3g|KNLDE
+pbs|KNLDE
+pbt3g|KNLDE
 pci|PLSQL infrastructure
 pckl|Programmatic Interfaces to/from PL/SQL
 pcm|PLSQL infrastructure
 pd|PLSQL code execution
-pdn|PLSQL COG native
-pdt|PLSQL IDL
-pdw|PLSQL COG IDL gen
-pdx|PLSQL COG optimizer
-pdy|PLSQL COG MCode gen
-pdz|PLSQL COG infrastructure
+pdn|COG native
+pdt|IDL
+pdw|COG IDL gen
+pdx|COG optimizer
+pdy|COG MCode gen
+pdz|COG infrastructure
 pe|PLSQL code execution
-pef|PLSQL external proc
+pef|external proc
 peibp|PLSQL KNLDE
 peicnt|PL/SQL Controlled execution
 pes|Shared Object Manager
@@ -1803,7 +1817,9 @@ rpiexe|execute
 rpiswu2|switch user in recursive sql
 rtb|rowsource table
 rw|row
-rwoima|operand operations
+rwo|operand
+rwoima|vector implementation a
+rwoupo|unpack row from buffer queue (px)
 rws|source
 rwsima|retrieval according to defining query
 rwsdef|definitions
@@ -1816,6 +1832,7 @@ sel|select
 selexe|execute: prepare area for fetch
 seq|sequence numbers
 sk|operating system dependent kernel
+skdstdst|dump a stack trace
 skg|generic
 skgf|file
 skgfqio|queue I/O request(s)
@@ -1843,8 +1860,13 @@ skgvm_detect_xen|detect xen
 skgvm_detect_vmware|detect vmware
 skgxp|IPC communication
 skgxppost|post the owner of a contact out of a blocking call
-smbima|sort operation
+smb|sort memory buffer
+smbalo|allocate an smkdef from specified storage bin
+smbeod|signal end of data for memory buffer
+smbput|put a record into the memory buffer
 sor|sort operation
+soreod|end of data: close data input for sort
+sorputqb|insert record into sort
 sou2o|main oracle executable entry point
 sl|operating system dependent call
 slcpu|get cpu usage
@@ -1861,9 +1883,8 @@ sntt|tcp/ip
 snttread|issue read
 sp|operating system dependent process functions
 sqn|sequence reference parsing
-srdima|sort operation
-srsima|sort operation
-stsima|sort operation
+sr|sort operation
+st|sort operation
 ss|operating system dependent system
 ssexhd|dump routine
 ssk|kernel
