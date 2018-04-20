@@ -125,6 +125,7 @@ kcb|buffers
 kcb_sync_last_change|call kcrf_commit_force to sync redo
 kcbapl|apply (changes to buffer; kcoapl executes changes)
 kcbb|databasewriter
+kcbblwr|create redo records for list of blocks written (media recovery marker)
 kcbdnb|dump n buffers
 kcbchg|change a block
 kcbchg1|change a block
@@ -195,6 +196,7 @@ kcht|hash table
 kci|oracle text
 kck|compatibility
 kcl|lock manager
+kclcvb|convert lock background: send message(s) to bkgnd to convert lock
 kcm|miscellaneous
 kcmclscn|check lamport scn
 kcmgtsf|get timestamp full
@@ -295,6 +297,7 @@ kdgvsp|validate structure perform
 kdgvss|validate structure scan
 kdi|index
 kdib|bitmap index generation definitions
+kdiblsorget|extract key/rewoid from sorter
 kdibc|bitmap index compression stream
 kdibco|stream output
 kdibh|hash table
@@ -1362,6 +1365,8 @@ kxh|hash join
 kxhf|support for hash join and memory management
 kxhrUnpack|unpack a row
 kxib|index buffering operations
+kxibDoFinish|do finish processing for a specified index
+kxibFinish|finish index maintenance processing
 kxpar|partition row sources
 kxrd|row delete
 kxru|row update
@@ -1861,7 +1866,8 @@ skgvm_detect_xen|detect xen
 skgvm_detect_vmware|detect vmware
 skgxp|IPC communication
 skgxppost|post the owner of a contact out of a blocking call
-smb|sort memory buffer
+sm|operating system dependent memory
+smb|buffer
 smbalo|allocate an smkdef from specified storage bin
 smbeod|signal end of data for memory buffer
 smbput|put a record into the memory buffer
