@@ -125,7 +125,10 @@ kcb|buffers
 kcb_sync_last_change|call kcrf_commit_force to sync redo
 kcbapl|apply (changes to buffer; kcoapl executes changes)
 kcbb|databasewriter
+kcbbdrv|central write driver
 kcbblwr|create redo records for list of blocks written (media recovery marker)
+kcbbwlru|write buffers from one of the LRU write lists
+kcbbxsv|take single buffer and check if we have to return to LRU
 kcbdnb|dump n buffers
 kcbchg|change a block
 kcbchg1|change a block
@@ -166,6 +169,7 @@ kcbz_fp_cr|fast pin consistent read
 kcbz_fp_shr|fast pin shared mode
 kcbz_fr_buf|free buffer
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
+kcbz_table_scan_read|buffered multiblock read main loop
 kcbzar|release buffer
 kcbzcb|create/maybe clone buffer
 kcbzfb|format block
@@ -177,7 +181,7 @@ kcbzgsf|fast
 kcbzgws|get write list
 kcbzib|input buffer (reads a block from disk into a buffer)
 kcbzibmlt|for multiblock read
-kcbz_table_scan_read|buffered multiblock read main loop
+kcbzpb|prepare block for write. calls kcbhpwb to prepare block for write
 kcbztek_trace_blk|tablespace encryption check(?)
 kcbzvb|verify buffer
 kcbzwb|wait buffer (buffer busy wait)
@@ -196,7 +200,7 @@ kcht|hash table
 kci|oracle text
 kck|compatibility
 kcl|lock manager
-kclcvb|convert lock background: send message(s) to bkgnd to convert lock
+kclcvb|convert lock background: send message(s) to background to convert lock
 kcm|miscellaneous
 kcmclscn|check lamport scn
 kcmgtsf|get timestamp full
