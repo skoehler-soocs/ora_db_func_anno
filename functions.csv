@@ -125,10 +125,12 @@ kcb|buffers
 kcb_sync_last_change|call kcrf_commit_force to sync redo
 kcbapl|apply (changes to buffer; kcoapl executes changes)
 kcbb|databasewriter
+kcbbacq|active checkpoint queue
 kcbbdrv|central write driver
 kcbblwr|create redo records for list of blocks written (media recovery marker)
 kcbbwlru|write buffers from one of the LRU write lists
 kcbbxsv|take single buffer and check if we have to return to LRU
+kcbdbh|dump one buffer
 kcbdnb|dump n buffers
 kcbchg|change a block
 kcbchg1|change a block
@@ -152,6 +154,7 @@ kcblnb|load new buffer
 kcblnb_dscn|load new buffer
 kcblrl|load release buffer
 kcbnlc|analyze cleanout
+kcbo|object queue
 kcbr_apply_pending|apply changed pending read completion
 kcbr_media_apply|apply change vector for media recovery
 kcbrbuf|get a recovery buffer
@@ -172,6 +175,7 @@ kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
 kcbz_table_scan_read|buffered multiblock read main loop
 kcbzar|release buffer
 kcbzcb|create/maybe clone buffer
+kcbzdh|dump buffer routine
 kcbzfb|format block
 kcbzfs|free state object (buffer handle/kcbbf)
 kcbzgb|get cr/read/rec (space for) buffer with dba/class
@@ -185,9 +189,12 @@ kcbzpb|prepare block for write. calls kcbhpwb to prepare block for write
 kcbztek_trace_blk|tablespace encryption check(?)
 kcbzvb|verify buffer
 kcbzwb|wait buffer (buffer busy wait)
+kcbzwc|wait (write) complete
+kcbzwcw|wait
 kcc|controlfile
 kccchm|cache header block 
 kccocx|open control transaction
+kccwbp|write block physically
 kcf|file management
 kcfbsy|background synchronisation of SGA and controlfile
 kcfcsy|cross instance sync
@@ -196,6 +203,7 @@ kcfis|intelligent storage
 kcfis_tablespace_is_on_sage|test if tablespace is on exadata
 kcfopd|open/close database code
 kcfrbd|read buffers from database
+kcfwatwr|wait for write IOs to finish (dbwr)
 kcht|hash table
 kci|oracle text
 kck|compatibility
@@ -271,7 +279,9 @@ kcsnew3|get new SCN
 kcsnew8|get new SCN
 kcsm|shared routines
 kct|threads
+kctrcp|record checkpoint progress
 kcv|recovery
+kcvcca|checkpoint check action
 kcvcrv|thread recovery
 kcvdmr|do media recovery
 kcvvra|verify reset allowed
@@ -982,6 +992,7 @@ ksfd_clear_pgaobjsc|clear pga objects
 ksfd_do_io_verification|do IO verification
 ksfd_gosdrq|get os dependent requests
 ksfd_osdrqfil|operating system dependent request 
+ksfd_sage_poosible|exadata offloading possible check
 ksfd_sbio|submit block IO
 ksfd_skgfqio|to system kernel generic file quick IO
 ksfd_update_iostatstime|update IO stats
@@ -989,6 +1000,7 @@ ksfdgo|execute IO
 ksfdgrsz|get request size
 ksfdmp|call the relevant dump routine
 ksfdnfy|PDB open notifier
+ksfdwat|wait IOs to finish
 ksfdwtio|wait for IO
 ksfflt|free latch
 ksfglt|get latch
@@ -1347,6 +1359,7 @@ kxfpqdqr|Queue DeQueue queue Reference
 kxfpqidqr|Queue Internal DeQueue queue Reference
 kxfpqput|put qb buffer back (create partial)
 kxfpqrfdb|Queue ref free dequeued buffer
+kxfprdp|run detached process
 kxfprienq|Queue ref internal enqueue message
 kxfprifdb|Queue ref internal free dequeued buffer
 kxfq|table queues
