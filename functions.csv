@@ -148,6 +148,7 @@ kcbism|is medium (selection of read strategy)
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
 kcbipnns|is (buffer) pinned (no statistics)
 kcbk|checkpoint queue manipulation
+kcbk_prefetch_track|db_block_prefetch administration
 kcbklbc|link buffer into ckpt queue
 kcbl|direct io routines
 kcblin|operations for redo-less write interface
@@ -238,6 +239,7 @@ kcrf_sync_adaptive_set|set adaptive log file sync mode
 kcrfw|write/broadcast SCN
 kcrfw_alfs|adaptive log file sync
 kcrfw_alfs_save_redowrite_time|save redo write time (lgwr)
+kcrfw_alfs_cron_job|calculate alfs stats (ckpt)
 kcrfw_copy_cv|copy change vectors to public redo buffer
 kcrfw_do_null_write|execute write cycle without write only increase LWN and on disk SCN
 kcrfw_do_write|execute write cycle with write and increase LWN, on disk and real redo SCN
@@ -248,6 +250,7 @@ kcrfw_post|post processing after (null)write
 kcrfw_redo_gen|main redo generation function 
 kcrfw_redo_gen_ext|(12c)
 kcrfw_redo_write_driver|main redo write function
+kcrfw_slave_adaptive_cronjob|calculate lgwr slave stats (ckpt)
 kcrfw_slave_group_main|main logwriter worker function
 kcrfw_update_and_bcast_real_redo_scn|update real redo SCN and real write time in kcrfsg_
 kcrfw_wait_for_fg_copy|read redo copy latches accompanying shared pool structure to validate writes to redo are done
@@ -286,6 +289,7 @@ kcv|recovery
 kcvcca|checkpoint check action
 kcvcrv|thread recovery
 kcvdmr|do media recovery
+kcvrcrba|read current redo byte address
 kcvvra|verify reset allowed
 kd|data
 kda|analyze/statistics
