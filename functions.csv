@@ -130,6 +130,7 @@ kcbbdrv|central write driver
 kcbblwr|create redo records for list of blocks written (media recovery marker)
 kcbbwlru|write buffers from one of the LRU write lists
 kcbbxsv|take single buffer and check if we have to return to LRU
+kcbcbo|call begin object checkpoint (?)
 kcbdbh|dump one buffer
 kcbdnb|dump n buffers
 kcbchg|change a block
@@ -155,6 +156,7 @@ kcblnb_dscn|load new buffer
 kcblrl|load release buffer
 kcbnlc|analyze cleanout
 kcbo|object queue
+kcbo_ckpt_obj|fast object checkpoint
 kcbr_apply_pending|apply changed pending read completion
 kcbr_media_apply|apply change vector for media recovery
 kcbrbuf|get a recovery buffer
@@ -451,6 +453,7 @@ kex|EM express
 kf|automatic storage management
 kfa|alias operations
 kfc|cache
+kfcl|lock
 kfd|disk
 kfdp|PST
 kfds|staleness registry and resync
@@ -938,6 +941,7 @@ krcptmo|ctwr timeout action, this is the main loop
 krd|datafiles (media&standby)
 krd_end_rcv|end media recovery
 krd_implicit_rcv|IMPLICIT ReCoVery for standby open/activation
+krf|flashback
 krp|recovery
 krp_check_slave_exit|wait for ksv slaves to exit
 krp_slave_apply|main redo apply loop
@@ -1087,6 +1091,7 @@ ksqdel|release and enqueue
 ksqgel|get an enqueue
 ksqgtl|get an enqueue
 ksqrcl|release an enqueue
+ksr|reliable messages
 kss|state object
 kssadf|add SO from free list
 kssdch|delete children of SO
