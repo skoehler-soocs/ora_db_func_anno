@@ -143,6 +143,7 @@ kcbh|header
 kcbhfix_tail|update tail (low-order two bytes of the scn+block type+block sequence number)
 kcbhlchk|logical check 
 kcbhsbs_ub8|write SCN base and wrap in buffer header
+kcbhxor|xor buffer contents
 kcbibr|invalidate range of blocks
 kcbism|is medium (selection of read strategy)
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
@@ -150,11 +151,13 @@ kcbipnns|is (buffer) pinned (no statistics)
 kcbk|checkpoint queue manipulation
 kcbk_prefetch_track|db_block_prefetch administration
 kcbklbc|link buffer into ckpt queue
+kcbkllrba|find lowest low RBA on checkpoint queues
 kcbl|direct io routines
 kcblin|operations for redo-less write interface
 kcblnb|load new buffer
 kcblnb_dscn|load new buffer
 kcblrl|load release buffer
+kcblsy|load sync IO
 kcbnlc|analyze cleanout
 kcbo|object queue
 kcbo_ckpt_obj|fast object checkpoint
@@ -195,11 +198,21 @@ kcbzwb|wait buffer (buffer busy wait)
 kcbzwc|wait (write) complete
 kcbzwcw|wait
 kcc|controlfile
+kccbcx|begin control transaction
+kccccf|close control files
 kccchm|cache header block 
+kcccmt|commit changes
+kccecx|end controlfile transaction
+kccexpd|expand controlfile section for rectype
+kccgft|get for fixed table
+kcckfr|deallocate controlfile cache using kernel memory free routine
 kccocx|open control transaction
+kccrhd|read header
 kccwbp|write block physically
+kccxfe|fixed table callback: database file entries
 kcf|file management
 kcfbsy|background synchronisation of SGA and controlfile
+kcfcaf|close all files
 kcfcsy|cross instance sync
 kcfida|identify file action
 kcfis|intelligent storage
@@ -236,6 +249,8 @@ kcrf_commit_force_int|(12c)
 kcrf_pvt_strand_bind|try to bind private strand
 kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
 kcrf_sync_adaptive_set|set adaptive log file sync mode
+kcrfds|do switch of current log
+kcrfnl|next log
 kcrfw|write/broadcast SCN
 kcrfw_alfs|adaptive log file sync
 kcrfw_alfs_save_redowrite_time|save redo write time (lgwr)
@@ -265,6 +280,7 @@ kcrp|recovery parallel
 kcrpap|recovery parallel
 kcrpdv|recovery parallel (driver?)
 kcrr|redo archival
+kcrrlh|log history
 kcrv|recovery
 kcrvfh|file headers
 kcs|scn management
@@ -284,12 +300,15 @@ kcsnew3|get new SCN
 kcsnew8|get new SCN
 kcsm|shared routines
 kct|threads
+kctmttr|mean time to recover (?)
+kctmttrest|estimation
 kctrcp|record checkpoint progress
 kcv|recovery
 kcvcca|checkpoint check action
 kcvcrv|thread recovery
 kcvdmr|do media recovery
 kcvrcrba|read current redo byte address
+kcvsurs|set unrecoverable SCN
 kcvvra|verify reset allowed
 kd|data
 kda|analyze/statistics
@@ -512,6 +531,8 @@ kge|error
 kgeade|add error onto the error stack
 kgeadse|KGE ADd String Internal Error onto the error stack
 kgeasi|raise an error on an assertion failure
+kgecrs|check and record O/S error code
+kgecxd|context of error driver
 kgepop|pop to the current top error frame
 kgerem|record error code (with already-formatted message)
 kgerinv|record internal named error with va_list
@@ -781,7 +802,9 @@ kll|kernel loader library
 klllr|logical record
 klm|memory
 klmalf|allocate freeable memory
-km|kernel multi threaded
+km|multi threaded/mman
+kmgs|manage (sga) space (?)
+kmgsdrv|driver
 kmc|circuit
 kmcadq|add circuit to a queue
 kmcmbf|mark buffer
@@ -927,11 +950,14 @@ kqrpre|read a parent cache object
 kr|recovery
 kra|recovery area function
 krb|backup restore
+krb1g|read (and optionally validate) first block of file
 krbabr|auto block media recovery
 krbb|creation of a backuppiece
 krbbcdo|compression do
 krbc|controlfile
 krbd|device control
+krbfgh|read first block with kGfd. the block must have a kcbh header
+krbfghv|Datafile/control header block Validation. callback from krb1g.
 krbi|dbms_backup_restore package
 krbm|miscellaneous functions
 krbr|restore and recovery
@@ -977,6 +1003,7 @@ ksbt|background processes
 kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|kernel system notifications to be passed to components
 ksd|debug internal errors
+ksdwrf|write to (trace) file
 ksddoa|debug support do an action
 ksdhng|hang analysis
 ksdp|parser
@@ -1008,6 +1035,7 @@ ksfdgo|execute IO
 ksfdgrsz|get request size
 ksfdmp|call the relevant dump routine
 ksfdnfy|PDB open notifier
+ksfdopn|open random access file fname
 ksfdwat|wait IOs to finish
 ksfdwtio|wait for IO
 ksfflt|free latch
@@ -1904,6 +1932,7 @@ sou2o|main oracle executable entry point
 sl|operating system dependent call
 slcpu|get cpu usage
 slcpums|get cpu usage (for getrusage)
+slgei|call function with the oracle error code and arguments
 sltrgatime64|arbitrary time lookup 
 sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
