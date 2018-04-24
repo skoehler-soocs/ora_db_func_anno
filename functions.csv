@@ -677,6 +677,7 @@ kjxgr|instance membership recovery
 kjz|DIAG
 kjzc|communication layer
 kjzd|main layer
+kjzdattdlm|attach to distributed lock manager
 kjzf|flow control layer
 kjzg|group services layer
 kjzh|API layer
@@ -978,6 +979,7 @@ krp_check_slave_exit|wait for ksv slaves to exit
 krp_slave_apply|main redo apply loop
 krp_slave_main|main pmr slave callback
 krpi|dbms_pitr support
+krs|standby/dataguard (?)
 krt|tablespaces
 krta2bz|obtain blocksize of tablespace
 krta2rfn|obtain file number (mos says absolute file number)
@@ -1004,6 +1006,7 @@ ksbt|background processes
 kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|kernel system notifications to be passed to components
 ksd|debug internal errors
+ksdwra|write to alert
 ksdwrf|write to (trace) file
 ksddoa|debug support do an action
 ksdhng|hang analysis
@@ -1050,10 +1053,12 @@ ksi|kernel service instance locking
 ksipget|get a group lock
 ksipcon|convert a group lock
 ksiprls|release a group lock
-ksk|accounting
+ksk|resource manager
+kskadjcpuutil|adjust cpu utilization (adjusted for instance caging)
 kskchk|check resource state for RM
 kskgetpgalimit|get pga limit
 ksklheld|lock held
+kskosstatact|operating system statistics act (get os statistics)
 kskpthr|post thread
 kskthbwt|thread begin wait
 kskthewt|thread end wait
@@ -1101,6 +1106,7 @@ kslwtectx|end context/wait
 ksm|memory
 ksmapg|callback for allocating a pga extent
 ksmasg|callback for allocating an sga extent
+ksmcpg|create (variable) pga
 ksmd|state object memory (?)
 ksmdfr|free memory
 ksmerr|cleanup any stack memory allocated within the given error frame
@@ -1164,6 +1170,7 @@ ksuxdl|delete state object for PMON
 ksuxfl|find dead processes and cleanup their latches. called by PMON
 ksv|slave management
 ksvrdp|run generic detached slave process
+kswsgetosstat|get host cpu utilization
 ksx|cross instance
 ksxa|parallel affinity
 ksxp|ipc
@@ -1776,6 +1783,7 @@ qesbl|bloom filter
 qesdp|AQP
 qesgv|vector aggregate
 qesma|partitioning
+qesmm|memory manager (pga)
 qespc|partitioning
 qesrc|result cache
 qesxl|vector translate
