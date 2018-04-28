@@ -1926,8 +1926,10 @@ skgmstack|call specified function with extra stack space
 skgnfs|network file system
 skgpnumcpu|return number of cpus in system
 skgptalive|thread alive (check if process or thread is alive)
-skgpwpost|post/wait post
-skgpwwait|post/wait wait
+skgpw|post/wait
+skgpwinit|initialization
+skgpwpost|post
+skgpwwait|wait
 skgs|service
 skgstm|time
 skgstmGetEpochTs|get epoch timestamp (gettimeofday)
