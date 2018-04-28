@@ -1121,6 +1121,8 @@ ksmugf|release session global memory
 ksmupg|check for references in the session global area to process
 ksn|two task
 ksolt|lightweight threads
+kso|operations
+ksopid_alive|pid alive check
 ksp|parameter
 ksq|enqueue
 ksqcnv|convert an enqueue's mode
@@ -1157,6 +1159,8 @@ ksudlp|delete process. called when user deteches or cleanup by pmon
 ksudmp|dump process state object
 ksudss|dump system
 ksul|license/language
+ksup|processes
+ksupalv|process alive check
 ksupop|pop (restore) user or recursive call
 ksupr|process object
 ksur|resource usage
@@ -1921,6 +1925,7 @@ skgm|memory (os dependent)
 skgmstack|call specified function with extra stack space
 skgnfs|network file system
 skgpnumcpu|return number of cpus in system
+skgptalive|thread alive (check if process or thread is alive)
 skgpwpost|post/wait post
 skgpwwait|post/wait wait
 skgs|service
