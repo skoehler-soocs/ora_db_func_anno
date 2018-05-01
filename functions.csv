@@ -148,6 +148,7 @@ kcbhfix_tail|update tail (low-order two bytes of the scn+block type+block sequen
 kcbhlchk|logical check 
 kcbhsbs_ub8|write SCN base and wrap in buffer header
 kcbhxor|xor buffer contents
+kcbhxoro|operation
 kcbibr|invalidate range of blocks
 kcbism|is medium (selection of read strategy)
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
@@ -223,6 +224,7 @@ kcfis|intelligent storage
 kcfis_tablespace_is_on_sage|test if tablespace is on exadata
 kcfopd|open/close database code
 kcfrbd|read buffers from database
+kcfris|release instance state queue
 kcfwatwr|wait for write IOs to finish (dbwr)
 kcht|hash table
 kci|oracle text
@@ -248,13 +250,20 @@ kcratr|thread redo application
 kcratr_claim|claim recovery buffers
 kcrcrl|corrupt redo log
 kcrf|file
+kcrf_cnv_fh_before_write|convert file header before write
+kcrf_cnv_fh_after_read|convert file header after read
+kcrf_cnv_fh_layout|convert file header layout
 kcrf_commit_force|commit changes and post lgwr or wait for lgwr
 kcrf_commit_force_int|(12c)
+kcrf_get_logical_block_size|get redo block size
 kcrf_pvt_strand_bind|try to bind private strand
+kcrf_read_header|read header
 kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
 kcrf_sync_adaptive_set|set adaptive log file sync mode
 kcrfds|do switch of current log
 kcrfnl|next log
+kcrfsl|switch log
+kcrfvh|verify header
 kcrfw|write/broadcast SCN
 kcrfw_alfs|adaptive log file sync
 kcrfw_alfs_save_redowrite_time|save redo write time (lgwr)
@@ -275,11 +284,13 @@ kcrfw_slave_group_postall|lgwr function to post lgwr workers
 kcrfw_slave_queue_insert|main lgwr function to provide writes to lgwr workers
 kcrfw_update_and_bcast_real_redo_scn|update real redo SCN and real write time in kcrfsg_
 kcrfw_wait_for_fg_copy|read redo copy latches accompanying shared pool structure to validate writes to redo are done
+kcrfwh|write header
 kcrfwi|write redo into the logfile
 kcrfwl|sWitch logs
 kcrfwnf|new file (?)
 kcrfwr|write redo into the logbuffer
 kcrfws|wait for space (logswitch)
+kcrhvbo|header verify
 kcrm|media recovery
 kcropn|open online logfile for kcroio and kcrfoc
 kcrp|recovery parallel
@@ -982,9 +993,9 @@ krd_end_rcv|end media recovery
 krd_implicit_rcv|IMPLICIT ReCoVery for standby open/activation
 krdrsb|read from standby (?)
 krf|flashback
-kcrfgdelfb1|calculate deleted space (?)
-kcrfgfbtofree|calculate free space
-kcrfxfblog|fixed table callback routine for x$kcrfblog
+krfgdelfb1|calculate deleted space (?)
+krfgfbtofree|calculate free space
+krfxfblog|fixed table callback routine for x$kcrfblog
 krp|recovery
 krp_check_slave_exit|wait for ksv slaves to exit
 krp_slave_apply|main redo apply loop
