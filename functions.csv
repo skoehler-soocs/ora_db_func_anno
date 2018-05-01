@@ -1,3 +1,4 @@
+Ldi|date/time conversion
 Lpx|xml parser
 LpxFSM|FSM parser
 adbdrv|alter database driver
@@ -15,6 +16,8 @@ audend|end (commit) transaction
 auddel|delete
 auddft|default function
 audfro|top level objects
+audins|insert audit record
+audtar|audit create/alter/drop tablespace,rollback segment and alter system
 aus|audit statement
 ausdrv|driver
 bam|PLSQL_KG_Interface
@@ -41,6 +44,7 @@ dbgrf|directory and file services
 dbgri|incident metadata services
 dbgrm|meta-data repository
 dbgt|diagnostic component test parent
+dbgtf|directory and file services
 dbgtn|UTS viewer toolkit
 dbgtp|UTS viewer toolkit
 dbgv|diagnostic viewer toolkit
@@ -57,7 +61,7 @@ dbked|Dumper
 dbkedDefDump|do DDE default dump
 dbkgc|generic configuration
 dbkr|RDBMS ADR
-dbkt|RDBMS Unified Tracing Service (UTS)
+dbkt|RDBMS UTS tracefile
 del|delete
 delexe|execute
 di|PLSQL apps
@@ -260,13 +264,15 @@ kcrfw_do_null_write|execute write cycle without write only increase LWN and on d
 kcrfw_do_write|execute write cycle with write and increase LWN, on disk and real redo SCN
 kcrfw_gather_lwn|gather strand info for LWN batch
 kcrfw_gather_strand|gather strand write info
-kcrfw_partial_checksum|write a checksum into the redo strand
+kcrfw_partial_checksum|write checksum into the redo strand
 kcrfw_post|post processing after (null)write
 kcrfw_redo_gen|main redo generation function 
 kcrfw_redo_gen_ext|(12c)
 kcrfw_redo_write_driver|main redo write function
 kcrfw_slave_adaptive_cronjob|calculate lgwr slave stats (ckpt)
 kcrfw_slave_group_main|main logwriter worker function
+kcrfw_slave_group_postall|lgwr function to post lgwr workers
+kcrfw_slave_queue_insert|main lgwr function to provide writes to lgwr workers
 kcrfw_update_and_bcast_real_redo_scn|update real redo SCN and real write time in kcrfsg_
 kcrfw_wait_for_fg_copy|read redo copy latches accompanying shared pool structure to validate writes to redo are done
 kcrfwi|write redo into the logfile
@@ -316,7 +322,7 @@ kdasts|Statistics Scan driver
 kdavls|validate structure driver
 kdb|block structures and manipulation
 kdbl|direct path load 
-kdblai|kernel database block loader array insertion
+kdblai|database block loader array insertion
 kdblailb|load block
 kdbmrd|multi row slot delete
 kdc|cluster
@@ -383,8 +389,8 @@ kdmime|IME
 kdml|populating
 kdmo|optimizer
 kdmr|background
-kdn|kernel data sequence number
-kdns|kernel data sequence number sequence enqueue
+kdn|sequence number
+kdns|sequence enqueue
 kdo|operations
 kdoapl|apply
 kdodrp|delete row piece
@@ -470,6 +476,7 @@ kewrf|flush
 kewrps|purge
 kews|statistics
 kews_cln_timestate|clean timestate
+kews_sqlst_flush|flush cursor statistics
 kews_update_wait_time|update wait time
 kewu|utilities
 kex|EM express
@@ -567,7 +574,7 @@ kghpmalo|find and return permanent chunk of space
 kghsrch|search freelists for a memory chunk
 kghx|fixed sized memory
 kghxal|allocate shared memory
-kgi|kernel generic instantiation manager
+kgi|instantiation manager
 kgicli|close all cursors for an instantiation 
 kgidel|delete an instantiation object
 kgidlt|delete an instantiation object
@@ -800,7 +807,7 @@ kl|loader
 klc|column array builder
 klclil1r|c level interface load 1 row
 klcs|character set
-kll|kernel loader library
+kll|library
 klllr|logical record
 klm|memory
 klmalf|allocate freeable memory
@@ -973,7 +980,11 @@ krcptmo|ctwr timeout action, this is the main loop
 krd|datafiles (media&standby)
 krd_end_rcv|end media recovery
 krd_implicit_rcv|IMPLICIT ReCoVery for standby open/activation
+krdrsb|read from standby (?)
 krf|flashback
+kcrfgdelfb1|calculate deleted space (?)
+kcrfgfbtofree|calculate free space
+kcrfxfblog|fixed table callback routine for x$kcrfblog
 krp|recovery
 krp_check_slave_exit|wait for ksv slaves to exit
 krp_slave_apply|main redo apply loop
@@ -996,15 +1007,16 @@ ksasndint|send asynchronous message
 ksb|background processes
 ksbabs|action based server
 ksbasend|asynchronous send message main loop
+ksbckbast|check blocking asynchronous trap
 ksbcti|call timeout/interrupts
 ksbd|detached process
 ksbmsg|call cpu count changed callbacks
 ksbrdp|run a detached background process
-ksbxiaf|ksbxic message and interrupt action
+ksbxiaf|ksbxic (cross instance calls) message and interrupt action
 ksbxiafdomsg|ksbxic and async xic static functions
 ksbt|background processes
 kscn_to_ub8_impl|convert SCN to ub8
-kscnfy|kernel system notifications to be passed to components
+kscnfy|system notifications to be passed to components
 ksd|debug internal errors
 ksdwra|write to alert
 ksdwrf|write to (trace) file
@@ -1049,7 +1061,7 @@ ksfm|file mapping
 ksfpec|io post and event
 ksfq|io sequential io interface
 ksfv|io server
-ksi|kernel service instance locking
+ksi|instance locking
 ksipget|get a group lock
 ksipcon|convert a group lock
 ksiprls|release a group lock
@@ -1057,6 +1069,7 @@ ksk|resource manager
 kskadjcpuutil|adjust cpu utilization (adjusted for instance caging)
 kskchk|check resource state for RM
 kskgetpgalimit|get pga limit
+kskiorm|I/O resource manager
 ksklheld|lock held
 kskosstatact|operating system statistics act (get os statistics)
 kskpthr|post thread
@@ -1071,7 +1084,7 @@ ksl_get_shared_latch_int|(12.2)
 ksl_post_proc|post a single process
 ksl_postm_init|post multi initialise
 ksl_postm_do_posts|post multi do posts
-ksl_update_post_stats|update processing posting stats ao. in x$kslpr
+ksl_update_post_stats|update processing of posting stats ao. in x$kslpr
 kslawe|add post-wait entry
 kslccll|clean up after a given latch
 kslcll|clean up after a given latch
@@ -1452,6 +1465,7 @@ kz|security
 kza|audit 
 kzang|next generation
 kzangins|insert record
+kzap|policy
 kzar|application
 kzc|Code-Based Access Control
 kzck|encryption support
@@ -1552,6 +1566,7 @@ opiino|initialize opi
 opikndf2|OPIINO: Kernel route which sits on top of the SQL*Net
 opilof|log off
 opilon|log on
+opimai|main
 opiodr|oracle code request driver, route the current request
 opiomc|map cursor
 opiope|open cursor
@@ -1953,6 +1968,7 @@ slcpu|get cpu usage
 slcpums|get cpu usage (for getrusage)
 slgei|call function with the oracle error code and arguments
 slgts|get time stamp (for gettimeofday)
+slrac|verify (memory) read access
 sltrgatime64|arbitrary time lookup 
 sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
