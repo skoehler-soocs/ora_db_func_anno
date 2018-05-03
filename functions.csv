@@ -910,6 +910,7 @@ kpodny|describe any arguments used
 kpodp|direct path load
 kpogsk|initializes the session and returns the encrypted session key
 kpolob|lob operations
+kpolal|lob allocator
 kpon|streams advanaced queuing 
 kpond|streams advanaced queuing notitication
 kpor|stream protocol used by replication
@@ -2021,6 +2022,7 @@ ttcpip|pipe read/write
 ttp|Database Audit Next Generation
 subsr1|evaluate subquery; single row subquery method 1
 subsr3|evaluate subquery; single row subquery method 3
+ub8_to_kscn_impl|convert ub8 to kernel SCN
 ul|SQLLDR Load
 uixexe|index maintenance operations
 upd|update
