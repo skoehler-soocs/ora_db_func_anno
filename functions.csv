@@ -269,8 +269,8 @@ kcrfw_alfs|adaptive log file sync
 kcrfw_alfs_save_redowrite_time|save redo write time (lgwr)
 kcrfw_alfs_cron_job|calculate alfs stats (ckpt)
 kcrfw_copy_cv|copy change vectors to public redo buffer
-kcrfw_do_null_write|execute write cycle without write only increase LWN and on disk SCN
-kcrfw_do_write|execute write cycle with write and increase LWN, on disk and real redo SCN
+kcrfw_do_null_write|execute write cycle without write only increase on disk SCN
+kcrfw_do_write|execute write cycle with write and increase on disk and real redo SCN
 kcrfw_gather_lwn|gather strand info for LWN batch
 kcrfw_gather_strand|gather strand write info
 kcrfw_partial_checksum|write checksum into the redo strand
@@ -278,6 +278,7 @@ kcrfw_post|post processing after (null)write
 kcrfw_redo_gen|main redo generation function 
 kcrfw_redo_gen_ext|(12c)
 kcrfw_redo_write_driver|main redo write function
+kcrfw_redo_write_initpic|initialise pending IO context buffer
 kcrfw_slave_adaptive_cronjob|calculate lgwr slave stats (ckpt)
 kcrfw_slave_group_main|main logwriter worker function
 kcrfw_slave_group_postall|lgwr function to post lgwr workers
@@ -313,7 +314,7 @@ kcsgbsn8|get batched SCN (12.2)
 kcsgcsn|get current SCN
 kcsgrsn|get recent SCN
 kcsgssn|get snapshot SCN
-kcsnew3|get new SCN
+kcsnew3|get new SCN 
 kcsnew8|get new SCN
 kcsm|shared routines
 kct|threads
@@ -549,6 +550,7 @@ kge|error
 kgeade|add error onto the error stack
 kgeadse|KGE ADd String Internal Error onto the error stack
 kgeasi|raise an error on an assertion failure
+kgeasnmierr|assert named internal error
 kgecrs|check and record O/S error code
 kgecxd|context of error driver
 kgepop|pop to the current top error frame
@@ -808,6 +810,7 @@ kkxa|external/asynch RPC
 kkxb|external tables
 kkxcls|close cursor
 kkxexe|execute plsql
+kkxpfr|PGA free
 kkxppp|private pipe
 kkxrd|DBMS_ROWID
 kkxtexe|trigger execute
@@ -1134,6 +1137,7 @@ ksmasg|callback for allocating an sga extent
 ksmcpg|create (variable) pga
 ksmd|state object memory (?)
 ksmdfr|free memory
+ksmdpg|compare the size of the PGA at ksurspr
 ksmerr|cleanup any stack memory allocated within the given error frame
 ksmf|fixed sga
 ksmh|any heap
@@ -1149,6 +1153,7 @@ ksolt|lightweight threads
 kso|operations
 ksopid_alive|pid alive check
 ksp|parameter
+kspGetInstType|validate instance_type
 ksq|enqueue
 ksqcnv|convert an enqueue's mode
 ksqcmi|change lock mode internal
@@ -2035,6 +2040,7 @@ upi|user program interface
 ups|upsert
 upsexe|execute
 vop|view optimisation
+vsn|version (?)
 wpiu|PLSQL apps
 xct|transaction management
 xctend|end
