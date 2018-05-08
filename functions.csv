@@ -231,6 +231,7 @@ kci|oracle text
 kck|compatibility
 kcl|lock manager
 kclcvb|convert lock background: send message(s) to background to convert lock
+kclpto|background timeout action
 kcm|miscellaneous
 kcmclscn|check lamport scn
 kcmgtsf|get timestamp full
@@ -261,6 +262,7 @@ kcrf_read_header|read header
 kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
 kcrf_sync_adaptive_set|set adaptive log file sync mode
 kcrfds|do switch of current log
+kcrfisd|redo is on disk
 kcrfnl|next log
 kcrfsl|switch log
 kcrfvh|verify header
@@ -678,6 +680,7 @@ kjfz|DLM-client freeze/unfreeze
 kjk|RAC kernel accelerator
 kjlt|lock table
 kjm|RAC multiple LMS
+kjmsm|main action callback
 kjoe|DLM omni enqueue service
 kjpt|processes
 kjpsod|disconnect from DLM
@@ -1016,6 +1019,7 @@ krvt|log miner viewer support
 ks|service
 ksa|async
 ksaamb|allocate message buffer
+ksadmb|deallocate message buffer
 ksarcv|receive message
 ksasnd|send asynchronous message
 ksasndint|send asynchronous message
@@ -1904,6 +1908,7 @@ qxxm|support external tables
 rae|rowsource and-equal 
 rbfima|rowsource buffer implementation a
 rcoima|rowsource count implementation a
+rfa|data guard (?)
 rfuima|rowsource for update implementation a
 rfmon|data guard broker monitor
 rfra|data guard broker monitor
