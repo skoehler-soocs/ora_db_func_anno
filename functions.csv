@@ -1151,6 +1151,7 @@ ksmshu|instance shutdown final check on sga
 ksmu|uga heap
 ksmuga|allocate user session global data
 ksmugf|release session global memory
+ksmuhe|allocate the uga heap using the parent heap specified if state = KSMUGCRE
 ksmupg|check for references in the session global area to process
 ksn|two task
 ksolt|lightweight threads
@@ -1162,7 +1163,7 @@ ksq|enqueue
 ksqcnv|convert an enqueue's mode
 ksqcmi|change lock mode internal
 ksqded|deadlock check
-ksqdel|release and enqueue
+ksqdel|release an enqueue
 ksqgel|get an enqueue
 ksqgtl|get an enqueue
 ksqrcl|release an enqueue
@@ -1174,7 +1175,7 @@ kssdct|delete children of specified type
 kssdel|delete SO
 kssdmp|dump children of a SO
 kssrmf|delete SO 
-kssxld|delete SO ignoring errors, clean latches
+kssxdl|delete SO ignoring errors, clean latches
 kst|trace (x$trace)
 kstm|time manager
 kstmchkdrift|check drift
@@ -1193,14 +1194,17 @@ ksudlp|delete process. called when user deteches or cleanup by pmon
 ksudmp|dump process state object
 ksudss|dump system
 ksul|license/language
+ksumcl|multi(?) check for process to be alive (checks pmon)
 ksup|processes
 ksupalv|process alive check
 ksupop|pop (restore) user or recursive call
 ksupr|process object
+ksupucg|push user call general
 ksur|resource usage
 ksus|statistics
 ksuse|sessions
 ksut|timer
+ksuwaitsysevent|seems to deal with channels (x$ksrchdl, x$ksrcctx)
 ksux|instance
 ksuxda|attempt to delete all processes that are marked dead
 ksuxds|acquires the ksupol, the so latch protects access to the sniper bit
@@ -1987,7 +1991,7 @@ sorputqb|insert record into sort
 sou2o|main oracle executable entry point
 sl|operating system dependent call
 slcpu|get cpu usage
-slcpums|get cpu usage (for getrusage)
+slcpums|measurement (for getrusage)
 slgei|call function with the oracle error code and arguments
 slgts|get time stamp (for gettimeofday)
 slrac|verify (memory) read access
