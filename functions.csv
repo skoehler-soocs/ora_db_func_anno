@@ -99,6 +99,8 @@ insexe|execute
 insidx|Insert indexed keys into the indexes after each row is inserted into the table
 insini|initialisation
 insrow|Fetch a row for insertion. This is called back by multirow insert
+ipc|inter process calls
+ipclw|leightweight (exafusion)
 ipp|internal probe processor capabilities(?)
 jox|java compiler/runtime
 k|kernel
@@ -236,6 +238,7 @@ kcm|miscellaneous
 kcmclscn|check lamport scn
 kcmgtsf|get timestamp full
 kcmtdif|time difference
+kcn|nologging(?)
 kco|operation
 kco_blkchk|main block check function
 kcoadv_hdr|advance SCN in buffer header
@@ -279,7 +282,8 @@ kcrfw_partial_checksum|write checksum into the redo strand
 kcrfw_post|post processing after (null)write
 kcrfw_redo_gen|main redo generation function 
 kcrfw_redo_gen_ext|(12c)
-kcrfw_redo_write_driver|main redo write function
+kcrfw_redo_write|redo
+kcrfw_redo_write_driver|main redo handling function
 kcrfw_redo_write_initpic|initialise pending IO context buffer
 kcrfw_slave_adaptive_cronjob|calculate lgwr slave stats (ckpt)
 kcrfw_slave_group_main|main logwriter worker function
