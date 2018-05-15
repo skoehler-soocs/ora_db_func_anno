@@ -214,6 +214,7 @@ kccexpd|expand controlfile section for rectype
 kccgft|get for fixed table
 kcckfr|deallocate controlfile cache using kernel memory free routine
 kccocx|open control transaction
+kccpcp|prepare(?) checkpoint progress records
 kccrhd|read header
 kccwbp|write block physically
 kccxfe|fixed table callback: database file entries
@@ -273,6 +274,7 @@ kcrfw|write/broadcast SCN
 kcrfw_alfs|adaptive log file sync
 kcrfw_alfs_save_redowrite_time|save redo write time (lgwr)
 kcrfw_alfs_cron_job|calculate alfs stats (ckpt)
+kcrfw_cal_target_rba|calculate target redo byte address
 kcrfw_copy_cv|copy change vectors to public redo buffer
 kcrfw_do_null_write|execute write cycle without write only increase on disk SCN
 kcrfw_do_write|execute write cycle with write and increase on disk and real redo SCN
@@ -593,6 +595,8 @@ kghnospc|no space available in the heap
 kghphini|parent heap initialize
 kghpmalo|find and return permanent chunk of space
 kghsrch|search freelists for a memory chunk
+kghstack_alloc|allocate pga memory
+kghstack_free|free pga memory
 kghx|fixed sized memory
 kghxal|allocate shared memory
 kgi|instantiation manager
@@ -924,7 +928,9 @@ kpogsk|initializes the session and returns the encrypted session key
 kpolob|lob operations
 kpolal|lob allocator
 kpon|streams advanaced queuing 
+kponPurgeUnreachLoc|remove registrations for unreachable locations
 kpond|streams advanaced queuing notitication
+kpoopq|set keyword value pair
 kpor|stream protocol used by replication
 kposc|scrollable cursors
 kpotc|setting up trusted external procedure callbacks
@@ -952,7 +958,8 @@ kpuhh|handle heap
 kpuhhalo|allocate memory freeable
 kpun|streams advanaced queuing 
 kpur|remote
-kpurcsc|call with service context
+kpurcs|call with service context
+kpureq|request (a statement to be executed)
 kpuzxs|XS midtier
 kq|query
 kqan|server side debug operations
@@ -1072,11 +1079,13 @@ ksfd_sage_poosible|exadata offloading possible check
 ksfd_sbio|submit block IO
 ksfd_skgfqio|to system kernel generic file quick IO
 ksfd_update_iostatstime|update IO stats
+ksfdbio|block IO
 ksfdgo|execute IO
 ksfdgrsz|get request size
 ksfdmp|call the relevant dump routine
 ksfdnfy|PDB open notifier
 ksfdopn|open random access file fname
+ksfdss|snapshot (clonedb)
 ksfdwat|wait IOs to finish
 ksfdwtio|wait for IO
 ksfflt|free latch
@@ -1087,6 +1096,10 @@ ksfpec|io post and event
 ksfq|io sequential io interface
 ksfv|io server
 ksi|instance locking
+ksim|messaging
+ksimPrintGroupMemPGA|print out pga group memory (oradebug)
+ksimPrintGroupMemCache|print out group memory cache (oradebug)
+ksimgchg|group state change
 ksipget|get a group lock
 ksipcon|convert a group lock
 ksiprls|release a group lock
@@ -1391,6 +1404,7 @@ kwqit|time manager
 kwqj|job queue scheduler for propagation
 kwqm|multiconsumer queue IOT support
 kwqmn|time manager
+kwqmnslv|slave callback called by ksvrdp
 kwqn|queue notifier
 kwqo|insttype checking options
 kwqp|queueing propagation
