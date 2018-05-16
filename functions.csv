@@ -160,6 +160,8 @@ kcbk_prefetch_track|db_block_prefetch administration
 kcbklbc|link buffer into ckpt queue
 kcbkllrba|find lowest low RBA on checkpoint queues
 kcbl|direct io routines
+kcblci|check input
+kcblgt|get buffer
 kcblin|operations for redo-less write interface
 kcblnb|load new buffer
 kcblnb_dscn|load new buffer
@@ -207,6 +209,7 @@ kcbzwcw|wait
 kcc|controlfile
 kccbcx|begin control transaction
 kccccf|close control files
+kccchb|cache header block 
 kccchm|cache header block 
 kcccmt|commit changes
 kccecx|end controlfile transaction
@@ -225,6 +228,8 @@ kcfcsy|cross instance sync
 kcfida|identify file action
 kcfis|intelligent storage
 kcfis_tablespace_is_on_sage|test if tablespace is on exadata
+kcfl|loader
+kcflci|check status of IO
 kcfopd|open/close database code
 kcfrbd|read buffers from database
 kcfris|release instance state queue
@@ -929,7 +934,7 @@ kpolob|lob operations
 kpolal|lob allocator
 kpon|streams advanaced queuing 
 kponPurgeUnreachLoc|remove registrations for unreachable locations
-kpond|streams advanaced queuing notitication
+kpond|streams advanced queuing notitication
 kpoopq|set keyword value pair
 kpor|stream protocol used by replication
 kposc|scrollable cursors
@@ -1077,15 +1082,20 @@ ksfd_gosdrq|get os dependent requests
 ksfd_osdrqfil|operating system dependent request 
 ksfd_sage_poosible|exadata offloading possible check
 ksfd_sbio|submit block IO
-ksfd_skgfqio|to system kernel generic file quick IO
-ksfd_update_iostatstime|update IO stats
+ksfd_skgfqio|to system kernel generic file queue IO
+ksfd_update_iostatstime|update statistics for X$KSFDSTFILE (V$IOSTAT_FILE)
 ksfdbio|block IO
+ksfdbio_updatestats|update statistics for X$KSFDSTCMP (V$IOSTAT_FUNCTION)
+ksfdckerr|check for errrors
 ksfdgo|execute IO
 ksfdgrsz|get request size
 ksfdmp|call the relevant dump routine
 ksfdnfy|PDB open notifier
 ksfdopn|open random access file fname
+ksfdpcl|process IO completion
+ksfdread|read random access file in sync mode
 ksfdss|snapshot (clonedb)
+ksfdss_fob_is_snap|are files in file open block (fob) snapshot files?
 ksfdwat|wait IOs to finish
 ksfdwtio|wait for IO
 ksfflt|free latch
