@@ -1017,6 +1017,7 @@ krd|datafiles (media&standby)
 krd_end_rcv|end media recovery
 krd_implicit_rcv|IMPLICIT ReCoVery for standby open/activation
 krdrsb|read from standby (?)
+krdsmr|serial? slave? media recovery
 krf|flashback
 krfgdelfb1|calculate deleted space (?)
 krfgfbtofree|calculate free space
@@ -1627,7 +1628,7 @@ opiomc|map cursor
 opiope|open cursor
 opiosq0|prepare to parse a cursor
 opiprs|parse
-opirip|run independent process
+opirip|run independent process. initializes fixed-PGA in RAM and SQL layers.
 opistp|stop oracle
 opistr|start oracle
 opitca|sets up context area
