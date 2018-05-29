@@ -536,6 +536,7 @@ kfks|sage (exadata)
 kfm|node monitor interface implementation
 kfmd|layer for diskgroup registration
 kfms|layers support function interface
+kfmsInit|initialise group services (>kgxgncin>cssd)
 kfn|networking subsystem
 kfnb|umbilicus
 kfnc|client networking
@@ -671,7 +672,7 @@ kgskthrexit|thread exit
 kgss|state object manager
 kgstm|time
 kgur|recovery
-kgx|mutex
+kgx|mutex/communication
 kgxDecrement|decrement S mode counter
 kgxDecrementExamine|decrement RefCnt and set E mode
 kgxEndExamine|clear examine mode
@@ -683,6 +684,7 @@ kgxIncrementExamine|increment RefCnt and set E mode
 kgxShared|get in S mode
 kgxSharedExamine|examine
 kgxRelease|release
+kgxgncin|group membership cssd initiate
 kj|lock management
 kjb|global cache service
 kjbr|resource table
@@ -1097,7 +1099,7 @@ ksfdpcl|process IO completion
 ksfdread|read random access file in sync mode
 ksfdss|snapshot (clonedb)
 ksfdss_fob_is_snap|are files in file open block (fob) snapshot files?
-ksfdwat|wait IOs to finish
+ksfdwat|wait for IOs to finish
 ksfdwtio|wait for IO
 ksfflt|free latch
 ksfglt|get latch
@@ -1184,8 +1186,9 @@ ksmugf|release session global memory
 ksmuhe|allocate the uga heap using the parent heap specified if state = KSMUGCRE
 ksmupg|check for references in the session global area to process
 ksn|two task
-ksolt|lightweight threads
 kso|operations
+ksols|object level statistics(?)
+ksolt|lightweight threads
 ksopid_alive|pid alive check
 ksp|parameter
 kspGetInstType|validate instance_type
@@ -1974,6 +1977,7 @@ scg|concurrency global locks
 scm|PLSQL apps
 sdbima|sort operation
 sdbgrf|Diagnostic directory and file services
+sdbgrfwf_write_file|write to tracefile
 sel|select
 selexe|execute: prepare area for fetch
 seq|sequence numbers
