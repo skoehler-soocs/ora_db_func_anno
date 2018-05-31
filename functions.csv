@@ -1087,6 +1087,7 @@ ksfd_sage_poosible|exadata offloading possible check
 ksfd_sbio|submit block IO
 ksfd_skgfqio|to system kernel generic file queue IO
 ksfd_update_iostatstime|update statistics for X$KSFDSTFILE (V$IOSTAT_FILE)
+ksfdaf|asm files
 ksfdbio|block IO
 ksfdbio_updatestats|update statistics for X$KSFDSTCMP (V$IOSTAT_FUNCTION)
 ksfdckerr|check for errrors
@@ -1449,6 +1450,9 @@ kwssh|message cache
 kwssi|subscription
 kx|execution
 kxc|constraints
+kxcb|backup
+kxcc|catch all
+kxcs|sql statements
 kxcsnn|signal a not null constraint violation
 kxd|exadata modules
 kxdam|disk auto manage
@@ -1457,17 +1461,6 @@ kxdbio|block level intelligent operations
 kxdcm|metrics fixed table callbacks
 kxdofl|offload
 kxdr|DML driver entrypoint
-kxdrs|resilvering layer
-kxcb|backup
-kxcc|catch all
-kxcs|sql statements
-kxd|exadata specific kernel modules
-kxdam|disk auto manage
-kxdbc|backup compression for backup appliance
-kxdbio|block level intelligent operations
-kxdcm|metrics fixed Table callbacks
-kxdmisc|misc
-kxdofl|offload
 kxdrs|resilvering layer
 kxf|parallel query
 kxfc|coordinator
