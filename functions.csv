@@ -165,7 +165,9 @@ kcblgt|get buffer
 kcblin|operations for redo-less write interface
 kcblnb|load new buffer
 kcblnb_dscn|load new buffer
+kcblrd|read
 kcblrl|load release buffer
+kcblrs|read submit
 kcblsy|load sync IO
 kcbnlc|analyze cleanout
 kcbo|object queue
@@ -222,6 +224,7 @@ kccrhd|read header
 kccwbp|write block physically
 kccxfe|fixed table callback: database file entries
 kcf|file management
+kcfaioe|aio error. checks if aio is possible.
 kcfbsy|background synchronisation of SGA and controlfile
 kcfcaf|close all files
 kcfcsy|cross instance sync
@@ -230,6 +233,7 @@ kcfis|intelligent storage
 kcfis_tablespace_is_on_sage|test if tablespace is on exadata
 kcfl|loader
 kcflci|check status of IO
+kcflwi|wait for IO
 kcfopd|open/close database code
 kcfrbd|read buffers from database
 kcfris|release instance state queue
@@ -437,6 +441,8 @@ kdsics|cluster table scan
 kdso|service object
 kdst|table
 kdst_compile|compile scan type
+kdst_fetch|fetch blocks
+kdst_mode|determine scan mode
 kdstf|full ultra fast scan
 kdstgr|get row
 kdsttgr|full table scan
@@ -1088,15 +1094,20 @@ ksfd_sbio|submit block IO
 ksfd_skgfqio|to system kernel generic file queue IO
 ksfd_update_iostatstime|update statistics for X$KSFDSTFILE (V$IOSTAT_FILE)
 ksfdaf|asm files
+ksfdaio|asynchronous IO
 ksfdbio|block IO
 ksfdbio_updatestats|update statistics for X$KSFDSTCMP (V$IOSTAT_FUNCTION)
 ksfdckerr|check for errrors
+ksfdfchkaio|check if aio can be done
+ksfdgaiolmt|get aio limit
+ksfdgfno|get file number
 ksfdgo|execute IO
 ksfdgrsz|get request size
 ksfdmp|call the relevant dump routine
 ksfdnfy|PDB open notifier
 ksfdopn|open random access file fname
 ksfdpcl|process IO completion
+ksfdpoll|poll for IO completion
 ksfdread|read random access file in sync mode
 ksfdss|snapshot (clonedb)
 ksfdss_fob_is_snap|are files in file open block (fob) snapshot files?
@@ -1172,6 +1183,7 @@ ksm|memory
 ksmapg|callback for allocating a pga extent
 ksmasg|callback for allocating an sga extent
 ksmcpg|create (variable) pga
+ksmcsg|create sga
 ksmd|state object memory (?)
 ksmdfr|free memory
 ksmdpg|compare the size of the PGA at ksurspr
@@ -1301,6 +1313,8 @@ kteclck|set extent map lock
 ktef|extent flush extent map
 ktehw|high water mark operations
 ktein|information operations
+kteinmap|return extent map
+kteinxtt|extents
 ktel|loader
 ktelck|set segment header extent map lock 
 ktelrwi|redoless write initialize
@@ -1359,6 +1373,7 @@ ktspgetf|Get next set of L1s
 ktspgsp_cbk|Get Space for inserts
 ktspgsp_cbk1|Get Space for inserts bitmap segment only
 ktspgsp_main|get space for inserts
+ktspmlhwm|Move the Low High Water Mark. Called when a range of blocks is formatted
 ktspsc|search cache
 ktspscan_bmb|scan the level 1 bitmap blocks
 ktss|segment procedures
@@ -1391,6 +1406,7 @@ ktugus|get undo segment header
 ktugusc|get undo segment
 ktuisonline1|return undo segment info if undo segment is online
 ktundo|undo
+ktunfy|notification procedure
 kturCRBackoutOneChg|consistent read; backout changes
 kturGetUndoRec|get an undo record
 kturcm|redo commit
@@ -1699,9 +1715,11 @@ prifold|rpc forwarding to older releases
 priold|rpc forwarding to older releases
 prm|parameter handling with sql layer
 prs|parse
-prsa|alter cluster command
 prsase|initialisation parameter names
+prscmd|command
+prsctc|create table/cluster
 prsdrv|delete
+prspo_proc_opts|(or only validate) PHysical Attribute specification
 prsrss|recursive alter system or session
 prssz|parse context to be saved
 prsxpl|explain statement
@@ -1981,11 +1999,14 @@ skgf|file
 skgfqio|queue I/O request(s)
 skgfgiod|get IO done (?)
 skgfnxtio|next IO
+skgfofi|open file
 skgfospo|operating system poll for IO completion
 skgfr|requests
 skgfr_error64|check for errors
 skgfr_lio_listio64|perform listio (AIO) 64 bits
+skgfr_open64|open file 64 bits
 skgfrciohdlr|concurrent IO handler
+skgfrdup|duplicate file handle
 skgfrgsz|get size
 skgfrliopo|listio (AIO) poll
 skgfrvldtrq|validate requests
@@ -2038,6 +2059,9 @@ sqn|sequence reference parsing
 sr|sort operation
 st|sort operation
 ss|operating system dependent system
+ssOsw|operating system (specific call) wrapper (?)
+ssOswClose|close
+ssOswOpen|open 
 ssexhd|dump routine
 ssk|kernel
 sskg|generic
