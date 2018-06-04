@@ -172,6 +172,12 @@ kcblsy|load sync IO
 kcbnlc|analyze cleanout
 kcbo|object queue
 kcbo_ckpt_obj|fast object checkpoint
+kcbpioq|physical IO queueing (batched in planline)
+kcbpioqAddIO|add IO to batched IO
+kcbpioqInit|initialize memory area in shared pool
+kcbpioqRegisterClient|create memory area in shared pool main function
+kcbpioqWillWaitForIO|save IO for batching
+kcbpioqcInit|initialize memory area in pga
 kcbr_apply_pending|apply changed pending read completion
 kcbr_media_apply|apply change vector for media recovery
 kcbrbuf|get a recovery buffer
@@ -605,7 +611,7 @@ kghgex|get a new extent
 kghini|heap initialize
 kghnospc|no space available in the heap
 kghphini|parent heap initialize
-kghpmalo|find and return permanent chunk of space
+kghprmalo|find and return permanent chunk of space
 kghsrch|search freelists for a memory chunk
 kghstack_alloc|allocate pga memory
 kghstack_free|free pga memory
@@ -1591,6 +1597,7 @@ nl|library
 nn|names
 npi|network program interface
 npiall|use bundled execution
+npiane|add new nco entry
 npicom|old style commit
 npidri0|driver common
 npidsc|DiSConnect
@@ -1853,6 +1860,7 @@ qerstFetch|row source fetch
 qertb|table access
 qertbFetch|fetch
 qertbFetchByRowId|using inderlying row source by rowid or cluster key
+qertbSaveMethod|save IO request for batching(?)
 qertq|table queue (px)
 qerua|union all
 qeruaFetch|fetch
