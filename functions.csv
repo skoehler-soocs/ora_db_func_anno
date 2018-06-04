@@ -1148,6 +1148,8 @@ kskthexit|thread exit
 kskthrsod|thread state object delete
 kskwait_timed_cpu|resource manager wait routine
 ksl|lock management
+ksl_get_child_latch_range|get all child latches for a range
+ksl_get_child_latches|get all child latches
 ksl_get_shared_latch|get latch in shared mode
 ksl_get_shared_latch_int|(12.2)
 ksl_post_proc|post a single process
@@ -2067,9 +2069,11 @@ sqn|sequence reference parsing
 sr|sort operation
 st|sort operation
 ss|operating system dependent system
-ssOsw|operating system (specific call) wrapper (?)
+ssOsw|operating system (call) wrapper (?)
 ssOswClose|close
 ssOswOpen|open 
+ssOswPthread_mutex_lock|pthread_mutex_lock
+ssOswPthread_mutex_unlock|pthread_mutex_unlock
 ssexhd|dump routine
 ssk|kernel
 sskg|generic
