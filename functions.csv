@@ -758,6 +758,7 @@ kkj|job queue
 kkjp|package
 kkm|SQL semantic analysis
 kkmpost|post processing
+kkmupd|extra semantic processing for update
 kkn|analyze command
 kkndgd|aNalyze Data Gathering Driver
 kkndrv|aNalyze DRiVer
