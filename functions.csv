@@ -108,6 +108,9 @@ k2|distributed execution
 k2c|kernel to kernel 
 k2d|global unique database id
 k2g|global transction id
+k2gcrt|create a distributed transaction
+k2gihash|calculate a hash value from a global transaction id
+k2glpr|print local tran id
 k2gt|commit global transaction
 k2i|indoubt table interface
 k2l|log records and log interface
