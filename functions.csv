@@ -118,8 +118,8 @@ k2labo|abort session: first abort aborts tx
 k2lcom|commit session, first commit commits tx
 k2r|multiple RPC
 k2s|server
-k2v|recovery
 k2udio|message unmarshalling
+k2v|recovery
 ka|access
 kad|objects anydata/images
 kaf|fetch
@@ -629,9 +629,12 @@ kgk|token
 kgkp|generic services scheduling policies
 kgl|library cache management
 kgldmp|dump an object
+kgldon|depend on an object
+kgldpo|depend on an object
 kglfnd|find a chunk of at least the minimum size
 kglfrunp|ask a client to free unpinned space
 kglfrx|free extent (heap unpin)
+kglgob|get an objected locked and pinned
 kglh|heap management
 kglhpd|heap deallocate
 kglhup|heap update
@@ -739,6 +742,9 @@ kjzh|API layer
 kjzm|membership layer
 kk|compile
 kkb|table
+kkbn|nested table
+kkbndrp|drop storage tables for nested table columns
+kkbnftn|format table for nested table
 kkbl|lob
 kkbo|object
 kkcn|streams advanaced queuing 
@@ -788,6 +794,7 @@ kkoshd|shard sql
 kkostran|star transformation
 kkp|compilation 
 kkpa|partitioning
+kkpcrt|create
 kkpo|partitioned objects
 kkpod|partitioning dictionary
 kkq|query 
@@ -845,11 +852,14 @@ kkx|Programmatic Interfaces to/from PL/SQL
 kkxa|external/asynch RPC
 kkxb|external tables
 kkxcls|close cursor
+kkxcmp|compile (all compilation phases)
 kkxexe|execute plsql
 kkxpfr|PGA free
 kkxppp|private pipe
 kkxrd|DBMS_ROWID
+kkxsem|semantic phase
 kkxtexe|trigger execute
+kkxuexe|stub execute
 kkxwtp|compiler
 kky|system
 kkyasy|alter system driver
@@ -892,7 +902,9 @@ kocedd|end duration
 kod|data manager
 kodpunp|unpickle an image into an object
 koh|heap manager
+kohalc|allocate memory chunk
 kohdee|duration entry end
+kohdtg|duration table get a duration entry
 kohedu|end an user duration
 kohrsc|resize memory chunk
 koi|interface
@@ -953,6 +965,7 @@ kpolal|lob allocator
 kpon|streams advanaced queuing 
 kponPurgeUnreachLoc|remove registrations for unreachable locations
 kpond|streams advanced queuing notitication
+kpoodr|replaces ttcdrv to handle pisdef in fastpath mode
 kpoopq|set keyword value pair
 kpor|stream protocol used by replication
 kposc|scrollable cursors
@@ -982,6 +995,7 @@ kpuhhalo|allocate memory freeable
 kpun|streams advanaced queuing 
 kpur|remote
 kpurcs|call with service context
+kpurcsc|remote call with service context, callbacks
 kpureq|request (a statement to be executed)
 kpuzxs|XS midtier
 kq|query
@@ -1008,6 +1022,8 @@ kqlr|remote
 kqls|subordinate set manager
 kqlsadd|add a new element to a subordinate set
 kqlslod|load all subordinate set elements for a given heap
+kqludp|update with dependencies
+kqlvld|validate an object
 kqr|row cache
 kqrpre|read a parent cache object
 kr|recovery
@@ -1022,8 +1038,12 @@ krbd|device control
 krbfgh|read first block with kGfd. the block must have a kcbh header
 krbfghv|Datafile/control header block Validation. callback from krb1g.
 krbi|dbms_backup_restore package
+krbirbp|restoration from backup piece
 krbm|miscellaneous functions
 krbr|restore and recovery
+krbrpr|piece read
+krbrr|reread corrupt block
+krbrrp|from back piece
 krbx|proxy copy controller
 krby|image copy
 krc|block change tracking
@@ -1216,6 +1236,7 @@ ksols|object level statistics(?)
 ksolt|lightweight threads
 ksopid_alive|pid alive check
 ksp|parameter
+kspgir|get range
 kspGetInstType|validate instance_type
 ksq|enqueue
 ksqcnv|convert an enqueue's mode
@@ -1640,7 +1661,8 @@ opidrv|driver, entry side into two task interface
 opidsa|array describe locals
 opiefn|execute function (?)
 opiexe|execute
-opifch2|fetch main routine
+opifch2|main routine
+opifch|oracle side of the fetch interface
 opifcr|fetch callback
 opifcs|free cursors by session close
 opiino|initialize opi
@@ -1684,21 +1706,35 @@ pdy|COG MCode gen
 pdz|COG infrastructure
 pe|PLSQL code execution
 pef|external proc
+peftrusted|execute a trusted callout
 peibp|PLSQL KNLDE
 peicnt|PL/SQL Controlled execution
 pes|Shared Object Manager
 pesblt|built in interpreter
 pesld|Native Code Loader
 pextproc|pefm call external procedure
-pf|PLSQL_Code_Execution
+pf|PLSQL Code Execution
 pfri|plsql runtime
-pfrrun|PL/SQL Interpreter Main Instruction Loop
+pfrrun|Interpreter Main Instruction Loop
 pfrrun_no_tool|fast interpretation loop
 pfrsqc|callbacks for array sql and dml with returning
 pgm|PLSQL ILMS
 ph|PLSQL infrastructure
-ph1|PLSQL syntax
-ph2|PLSQL semantics
+ph1|syntax
+ph2|semantics phase 2
+ph2blo|idl node D_BLOCK, D_DECL
+ph2gbi|initialize bind variable type information
+ph2its|process items
+ph2obl|outermost block, outermost D_BLOCK in a body
+ph2qlb|perform a schema.table lookup
+ph2qlk|lookup the set of tables in a from clause in a database
+ph2qqx|IDL node Q_EXP
+ph2qs2|sql routines
+ph2qst|main routine for sql statements, IDL node Q_SQL_ST
+ph2qtx|IDL class TAB_EXP
+ph2sbo|IDL node D_S_BODY
+ph2sms|process statements
+ph2uni|IDL class UNIT_BODY
 pha|PLSQL semantics
 phdr|PLSQL KG interface
 phn|PLSQL semantics
@@ -1716,14 +1752,18 @@ plitblm|PLSQL apps
 pls|PLSQL PSD standalones
 plslm|ncomp processing
 plsm|plsql handling collections
-plst|PLSQL code execution
+plsql_run|single entry point for top level pfrrun and penrun
+plst|code execution
 plswa|Programmatic Interfaces to/from PL/SQL
 pmuc|plsql handling collections
 pmuo|plsql handling collections
 pmux|plsql handling collections
 pncutil|PLSQL infrastructure
 pp|PLSQL infrastructure
-pri|PLSQL code execution
+pri|remote interface
+pricbr|callback, remote
+prient|run given (rpc) entrypoint
+prient2|could be rpc or non-rpc
 prifold|rpc forwarding to older releases
 priold|rpc forwarding to older releases
 prm|parameter handling with sql layer
@@ -1737,10 +1777,11 @@ prsrss|recursive alter system or session
 prssz|parse context to be saved
 prsxpl|explain statement
 ps|PLSQL infrastructure
-psd|programmatic interfaces to/from PL/SQL
+psd|programmatic interfaces to/from 
 psdbnd|manage bind variables
 psdddl|execute DDL
 psddr0|Null pointer definitions for ttcdrv callback and context.
+psdgbt|get bind info
 psdevn|plsql debugger
 psdicd|plsql call c
 psdmsc|system dependent misc functions
@@ -1895,6 +1936,7 @@ qk|kernel
 qka|allocation
 qkadrv|allocate query structures
 qkajoi|join processing
+qkanindex|analyzes the usage of the argument non-clustered index
 qkaset|set expression
 qkatab|runtime allocation for base table row sources
 qkatrv|traverse set expression tree
@@ -2069,6 +2111,8 @@ sntpread|issue read
 sntt|tcp/ip
 snttread|issue read
 sp|operating system dependent process functions
+spefcmpa|marshall procedure arguments
+spefmccallstd|c calling standard
 sqn|sequence reference parsing
 sr|sort operation
 st|sort operation
