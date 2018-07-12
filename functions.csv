@@ -236,6 +236,7 @@ kcf|file management
 kcfaioe|aio error. checks if aio is possible.
 kcfbsy|background synchronisation of SGA and controlfile
 kcfcaf|close all files
+kcfcld|close database
 kcfcsy|cross instance sync
 kcfida|identify file action
 kcfis|intelligent storage
@@ -349,6 +350,7 @@ kct|threads
 kctmttr|mean time to recover (?)
 kctmttrest|estimation
 kctrcp|record checkpoint progress
+kcttsc|thread state change
 kcv|recovery
 kcvcca|checkpoint check action
 kcvcrv|thread recovery
@@ -658,9 +660,13 @@ kglrfcl|reference clear
 kglsim|simulator 
 kglunp|unpin heaps of an object
 kgm|inter-language method services
+kgmexcb|execution callback
 kgmexec|execute
+kgmexsc|execute call with SCD (used only by PLSQL)
+kgmexch|execute by compilation handle
 kgmimio|implementation fro mmethod instantion object
 kgmgaicn|generic arguments input conversions
+kgmgchd|get compilation handle
 kgmtconv|conversion
 kgmtimob|image to object (named types)
 kgnfs|network file system
@@ -839,6 +845,7 @@ kksdopt|smart disk no option
 kksfbc|find bound cursor
 kksh|cursor hash table
 kkslod|cursor load callback
+kkslof|log off (?)
 kksParseCursor|parse cursor
 kkspfda|multiple context area management
 kkspsc0|parse shared cursor
@@ -857,6 +864,7 @@ kkxexe|execute plsql
 kkxpfr|PGA free
 kkxppp|private pipe
 kkxrd|DBMS_ROWID
+kkxrpc|rpc
 kkxsem|semantic phase
 kkxtexe|trigger execute
 kkxuexe|stub execute
@@ -968,6 +976,7 @@ kpond|streams advanced queuing notitication
 kpoodr|replaces ttcdrv to handle pisdef in fastpath mode
 kpoopq|set keyword value pair
 kpor|stream protocol used by replication
+kporpc|the oracle side function to start rpc
 kposc|scrollable cursors
 kpotc|setting up trusted external procedure callbacks
 kpotx|local transaction coordination
@@ -1032,12 +1041,16 @@ krb|backup restore
 krb1g|read (and optionally validate) first block of file
 krbabr|auto block media recovery
 krbb|creation of a backuppiece
+krbb3fwb|finish write buffer for creation of compressed backup pieces
+krbb2ec|write backuplog records to controlfile at end of backup set
 krbbcdo|compression do
+krbbpc|piece create
 krbc|controlfile
 krbd|device control
 krbfgh|read first block with kGfd. the block must have a kcbh header
 krbfghv|Datafile/control header block Validation. callback from krb1g.
 krbi|dbms_backup_restore package
+krbidvac|package ICDs
 krbirbp|restoration from backup piece
 krbm|miscellaneous functions
 krbr|restore and recovery
@@ -1149,6 +1162,7 @@ ksfh|io helper
 ksfm|file mapping
 ksfpec|io post and event
 ksfq|io sequential io interface
+ksfq_alo|allocate device
 ksfv|io server
 ksi|instance locking
 ksim|messaging
@@ -2052,6 +2066,7 @@ sk|operating system dependent kernel
 skdstdst|dump a stack trace
 skg|generic
 skgf|file
+skgfalo|allocate sequential device
 skgfqio|queue I/O request(s)
 skgfgiod|get IO done (?)
 skgfnxtio|next IO
@@ -2156,6 +2171,7 @@ updaul|Attempt Update of all rows or Lock all rows
 updauw|get the values of the update columns
 upderh|evaluate right hand side expressions in order to get values
 updexe|update execute
+updpcr|perform constraint operations for each row updated
 updrow|Row Procedure used by KXRD to update or lock a row
 upi|user program interface
 ups|upsert
@@ -2172,7 +2188,9 @@ xs|olap analytic workspace
 xsdb|paging manager
 xspg|paging manager
 xty|type checking
+xtydrv|driver
 xtyinpr|insert numeric precision operator
+xtypls|plsql functions
 z|security
 zlke|label error handling
 zll|label security
