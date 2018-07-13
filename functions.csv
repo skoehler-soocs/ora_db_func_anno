@@ -1688,6 +1688,7 @@ opiodr|oracle code request driver, route the current request
 opiomc|map cursor
 opiope|open cursor
 opiosq0|prepare to parse a cursor
+opipls|contains opi bundled call executor and support routines
 opiprs|parse
 opirip|run independent process. initializes fixed-PGA in RAM and SQL layers.
 opistp|stop oracle
@@ -1712,8 +1713,13 @@ pci|PLSQL infrastructure
 pckl|Programmatic Interfaces to/from PL/SQL
 pcm|PLSQL infrastructure
 pd|PLSQL code execution
+pdlifu|internal entrypoint for the PL/SQL code generator
 pdn|COG native
 pdt|IDL
+pdtidc|PL/SQL Diana IDL to PL/SQL intermediate code IDL translator
+pdtimb|PL/SQL intermediate code IDL translator block module
+pdtist|PL/SQL intermediate code IDL translator statement support
+pdtitf|type generator
 pdw|COG IDL gen
 pdx|COG optimizer
 pdy|COG MCode gen
@@ -1815,6 +1821,7 @@ qcd|semantic analysis
 qcdo|dictionary support for objects
 qcp|parse
 qci|language parser and semantic analyser
+qciSetPlSqlCtx|set plsql context during a compile
 qclgte|logically group SQL text (?)
 qcop|parse
 qcpi|parse
@@ -1830,7 +1837,9 @@ qcpilcl0|local
 qcs|semantic analysis
 qcso|OBJECTS
 qct|type check operations
+qctcopn|typechecks the query block and its descendant
 qcto|operators
+qctopls|typecheck OPTPLS operator
 qe|execute
 qeaeCn1Serial|count function
 qec|checks
@@ -1928,12 +1937,14 @@ qeruaFetch|fetch
 qerup|update
 qerupFetch|fetch
 qerus|upsert
+qerusAllocateX|allocate row source
 qervw|view
 qervwFetch|fetch 
 qerwn|window
 qerxl|vector translate
 qerxp|XDB Query
 qerxt|external table
+qerxtAllocate|row source allocate
 qes|services
 qesSageEnabled|test if exadata storage servers are used
 qesaAggNonDist|create/compute non-distinct aggregates
@@ -2017,6 +2028,7 @@ qxdid|domain index ddl operations
 qxidm|extensible index dml operations
 qxidp|domain index ddl partition operations
 qxim|support for objects
+qximcom|create operator for type method
 qximeop|evaluate operand
 qxitex|support for create/drop indextype
 qxopc|time operator callbacks
@@ -2051,6 +2063,7 @@ rwo|operand
 rwoima|vector implementation a
 rwoupo|unpack row from buffer queue (px)
 rws|source
+rwsaidX|allocate new identity source
 rwsima|retrieval according to defining query
 rwsdef|definitions
 rwsfcd|fetch from rowsource
@@ -2067,6 +2080,7 @@ skdstdst|dump a stack trace
 skg|generic
 skgf|file
 skgfalo|allocate sequential device
+skgfcls|close device
 skgfqio|queue I/O request(s)
 skgfgiod|get IO done (?)
 skgfnxtio|next IO
