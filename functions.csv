@@ -570,13 +570,16 @@ kfz|zecurity subsystem
 kfzp|password file layer
 kg|generic
 kgbt|btree operations
-kgcc|compression
+kgc|compression
+kgcc|compress
 kgccbuf|buffer
 kgccbz2do|bzip2 do apply bzip2 compression
 kgccbz2pseudodo|bzip2 pseudo do
-kgccdo|do main compression function
+kgccdo|do, main compression function
 kgccgmtf|generate move to front
 kgccm|memory (?)
+kgcd|decompress
+kgcddo|do, main decompression function
 kgce|encryption engine
 kgds|vos generic stack trace
 kge|error
@@ -1013,6 +1016,7 @@ kqap|server side debug operations
 kqas|server side debug operations
 kqd|dictionary management
 kqdgtc|return an open and parsed cursor for a statement
+kqdobu|verify object uniqueness (?)
 kqf|fixed tables
 kqfd|direct access to fixed tables
 kqfp|packages
@@ -1841,6 +1845,7 @@ qctcopn|typechecks the query block and its descendant
 qcto|operators
 qctopls|typecheck OPTPLS operator
 qe|execute
+qeae|aggregate (order by) elimination (?)
 qeaeCn1Serial|count function
 qec|checks
 qecdrv|driver
