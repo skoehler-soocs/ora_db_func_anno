@@ -636,6 +636,8 @@ kgiscl|state close cursors
 kgk|token
 kgkp|generic services scheduling policies
 kgl|library cache management
+kgldd|object handle deallocate
+kgldda|a
 kgldmp|dump an object
 kgldon|depend on an object
 kgldpo|depend on an object
@@ -897,8 +899,10 @@ kmdmai|main loop
 kmdrdp|run a dispatcher process
 kmdu2s|route messages from user to server
 kmm|monitor
+kmmrdp|run dispatcher process
 kmms|server
 kmn|network
+kmnsbm|buffer memory allocation callback
 kmp|connection broker
 kn|replication
 kna|streams apply
@@ -1656,7 +1660,11 @@ npil|local
 npitcc|Test/Clear connections
 npixfr|transfer
 ns|session
+nscon|connect
 nsdo|execute network session operation. NS protocol engine
+nsevdansw|event deferred: complete deferred nsanswer operation
+nsevrec|record: record event occurence
+nsevwait|wait: wait for event notification on all registered connections
 nso|SQL Transformation
 nsprecv|receive packet from network transport layer
 nsrdr|packet reader
