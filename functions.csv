@@ -770,7 +770,10 @@ kkdl|dictionary lookup
 kkdo|OBJECTS dictionary
 kke|cost engine
 kkeapr|analyze predicates for optimization returns stat ptr
+kkecdn|determine cardinality of a table given single table predicates
 kkecpst|create copy of column statistics in compile time memory
+kkegvl|get a value from an opndef and normalize it for cost
+kkepsl|selectivity of a single predicate
 kkevcs|set view column stats for underlying column
 kkfd|fast dataflow (PQ DFO)
 kkfi|optimizer virtual column/indexes
@@ -798,7 +801,7 @@ kkocpqb|copy query block
 kkocri|create index
 kkodp|AQP
 kkogfp|get first permutation
-kkoicb|initialise query block
+kkoiqb|initialise query block
 kkooqb|optimize query block
 kkopm|plan management
 kkopmCheckSmbUpdate|Check if updates to the Sql Management Base are pending
@@ -806,6 +809,7 @@ kkopq|parallel optimization
 kkoqbc|query block optimization start point
 kkoshd|shard sql
 kkostran|star transformation
+kkotap|table path
 kkp|compilation 
 kkpa|partitioning
 kkpcrt|create
@@ -1732,11 +1736,11 @@ pcm|PLSQL infrastructure
 pd|PLSQL code execution
 pdlifu|internal entrypoint for the PL/SQL code generator
 pdn|COG native
-pdt|IDL
+pdt|IDL; type generator
 pdtidc|PL/SQL Diana IDL to PL/SQL intermediate code IDL translator
 pdtimb|PL/SQL intermediate code IDL translator block module
 pdtist|PL/SQL intermediate code IDL translator statement support
-pdtitf|type generator
+pdtitf|interested in finding the base
 pdw|COG IDL gen
 pdx|COG optimizer
 pdy|COG MCode gen
@@ -1902,6 +1906,7 @@ qergsFetch|fetch
 qergv|vector aggregate
 qerhc|hash clusters
 qerhj|hash join
+qerhjAllocateX|allocate
 qerhjWalkHashBucket|walk a list of pointers in a hash bucket and check for a match
 qeril|in list
 qerim|index maintenance
@@ -2223,6 +2228,7 @@ xspg|paging manager
 xty|type checking
 xtydrv|driver
 xtyinpr|insert numeric precision operator
+xtyopn|expression typecheck operand
 xtypls|plsql functions
 z|security
 zlke|label error handling
