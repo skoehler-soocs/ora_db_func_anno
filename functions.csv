@@ -100,7 +100,7 @@ insidx|Insert indexed keys into the indexes after each row is inserted into the 
 insini|initialisation
 insrow|Fetch a row for insertion. This is called back by multirow insert
 ipc|inter process calls
-ipclw|leightweight (exafusion)
+ipclw|lightweight (exafusion)
 ipp|internal probe processor capabilities(?)
 jox|java compiler/runtime
 k|kernel
