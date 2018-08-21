@@ -774,6 +774,7 @@ kkecdn|determine cardinality of a table given single table predicates
 kkecpst|create copy of column statistics in compile time memory
 kkegvl|get a value from an opndef and normalize it for cost
 kkepsl|selectivity of a single predicate
+kkest|statistics
 kkevcs|set view column stats for underlying column
 kkfd|fast dataflow (PQ DFO)
 kkfi|optimizer virtual column/indexes
@@ -977,7 +978,7 @@ kpn|OCI
 kpo|oracle
 kpoal8|V8 bundled execution
 kpoaq|streams advanaced queuing 
-kpoaut|authenticate
+kpoauth|authenticate
 kpoclsa|close all cursors
 kpodny|describe any arguments used
 kpodp|direct path load
@@ -1843,7 +1844,6 @@ qcdo|dictionary support for objects
 qcp|parse
 qci|language parser and semantic analyser
 qciSetPlSqlCtx|set plsql context during a compile
-qclgte|logically group SQL text (?)
 qcop|parse
 qcpi|parse
 qcpi3|parse
@@ -1855,6 +1855,7 @@ qcpibte|boolean factor
 qcpiere|expression relop expression
 qcpilcl|logical clause
 qcpilcl0|local
+qcplgte|logically group SQL text (?)
 qcs|semantic analysis
 qcso|OBJECTS
 qct|type check operations
@@ -1955,6 +1956,7 @@ qertbFetch|fetch
 qertbFetchByRowId|using inderlying row source by rowid or cluster key
 qertbSaveMethod|save IO request for batching(?)
 qertq|table queue (px)
+qertqoInitRowDesc|use tqo row vector to determine the partitioning columns
 qerua|union all
 qeruaFetch|fetch
 qerup|update
@@ -2152,6 +2154,7 @@ slcpu|get cpu usage
 slcpums|measurement (for getrusage)
 slgei|call function with the oracle error code and arguments
 slgts|get time stamp (for gettimeofday)
+slmsrd|message file read, reads .msb file
 slrac|verify (memory) read access
 sltrgatime64|arbitrary time lookup 
 sltrgftime64|time lookup main (for clock_gettime)
