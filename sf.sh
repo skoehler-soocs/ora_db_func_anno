@@ -41,8 +41,12 @@ sqlite3 functions.db ".import functions.csv functions"
 MIN_LENGTH=$(sqlite3 functions.db "select min(length(function_name)) from functions;")
 MAX_LENGTH=$(sqlite3 functions.db "select max(length(function_name)) from functions;")
 function_description() {
-        LOCAL_FUNCTION_NAME=$(echo $1 | sed 's/_/\\_/g')
+        LOCAL_FUNCTION_NAME=$1
         USE=$2
+	if [[ $LOCAL_FUNCTION_NAME =~ ^__PGOSF[0-9]*_ ]]; then
+		LOCAL_FUNCTION_NAME=$(echo $LOCAL_FUNCTION_NAME | sed 's/^__PGOSF[0-9]*_\(.*\)/\1/')
+	fi
+        LOCAL_FUNCTION_NAME=$(echo $LOCAL_FUNCTION_NAME | sed 's/_/\\_/g')
         [ ${#LOCAL_FUNCTION_NAME} -lt $MAX_LENGTH ] && LOCAL_LENGTH=${#LOCAL_FUNCTION_NAME} || LOCAL_LENGTH=$MAX_LENGTH
         if [ $USE = "n" ]; then
         	RETURN=$(for LEN in $(seq $MIN_LENGTH $LOCAL_LENGTH); do sqlite3 functions.db "select function_sum from functions where function_name like substr('$LOCAL_FUNCTION_NAME',1,$LEN) escape '\';"; done)
@@ -74,6 +78,7 @@ if [ $WILDCARD = "yes" ]; then
 elif [ $LEVEL -gt 0 ]; then
 	echo "$(function_description "$FUNCTION" l)" | grep -v '^0$' | grep -v '^$'
 else
-	echo "$FUNCTION -- $(function_description "$FUNCTION" n)"
+	echo -n "$FUNCTION -- $(function_description "$FUNCTION" n)"
+        echo "$PGO_INDICATION"
 	for P in $(seq 1 $(function_description "$FUNCTION" r)); do printf "-"; done; printf "\n"
 fi
