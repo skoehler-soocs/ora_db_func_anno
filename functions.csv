@@ -874,6 +874,8 @@ kkxb|external tables
 kkxcls|close cursor
 kkxcmp|compile (all compilation phases)
 kkxexe|execute plsql
+kkxl|lob
+kkxlnu|dbms_lobutil
 kkxpfr|PGA free
 kkxppp|private pipe
 kkxrd|DBMS_ROWID
