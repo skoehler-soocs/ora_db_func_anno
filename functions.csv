@@ -205,7 +205,7 @@ kcbzcb|create/maybe clone buffer
 kcbzdh|dump buffer routine
 kcbzfb|format block
 kcbzfs|free state object (buffer handle/kcbbf)
-kcbzgb|get cr/read/rec (space for) buffer with dba/class
+kcbzgb|get cr/read/rec (space for) buffer with dba/class; set buffer state to reading
 kcbzgm|get (space for) multiblock buffer
 kcbzgs|get state object (buffer handle/kcbbf)
 kcbzgsf|fast
@@ -252,9 +252,13 @@ kcfwatwr|wait for write IOs to finish (dbwr)
 kcht|hash table
 kci|oracle text
 kck|compatibility
-kcl|lock manager
+kcl|lock manager/buffer cache
+kclcls|check lock status
 kclcvb|convert lock background: send message(s) to background to convert lock
+kclgclk|global cache lock
 kclpto|background timeout action
+kclscrs|setup consistent reads
+kclwcrs|wait for consistent reads
 kcm|miscellaneous
 kcmadj|adjust scn
 kcmclscn|check lamport scn
@@ -358,6 +362,7 @@ kcv|recovery
 kcvcca|checkpoint check action
 kcvcrv|thread recovery
 kcvdmr|do media recovery
+kcvirv|instance recovery
 kcvrcrba|read current redo byte address
 kcvsurs|set unrecoverable SCN
 kcvvra|verify reset allowed
@@ -718,9 +723,12 @@ kgxSharedExamine|examine
 kgxRelease|release
 kgxgncin|group membership cssd initiate
 kj|lock management
+kjbcr|consistent read
+kjbcropen|open LE lock
+kjbcrconvert|convert LE lock
 kjb|global cache service
-kjbr|resource table
 kjbl|lock table
+kjbr|resource table
 kjc|communication
 kjci|cross instance call
 kjcvcvd|deadlock detection routines
@@ -941,7 +949,6 @@ koki|id generator
 kokl|lob access
 kokl3|temporary lob access
 kokla|LOB default
-kokla|OBJECTS anydata
 koklcopy|lob copy
 kolkcre|lob create
 koklcpb2c|copy binary data into lob
@@ -1051,7 +1058,7 @@ kqlsadd|add a new element to a subordinate set
 kqlslod|load all subordinate set elements for a given heap
 kqludp|update with dependencies
 kqlvld|validate an object
-kqr|row cache
+kqr|dictionary/row cache
 kqrpre|read a parent cache object
 kr|recovery
 kra|recovery area function
@@ -1399,6 +1406,7 @@ ktmSmonMain|main smon routine
 ktmb|IM block
 ktmc|IM concurrency
 ktmjs|IM journal scan
+ktmirc|instance recovery
 ktmmon|tx monitor background timeout action (smon)
 ktmpj|IM private journal
 ktmr|IM read
@@ -1701,7 +1709,7 @@ opiefn|execute function (?)
 opiexe|execute
 opifch2|main routine
 opifch|oracle side of the fetch interface
-opifcr|fetch callback
+opifcr|fetch callback - fetch a row?
 opifcs|free cursors by session close
 opiino|initialize opi
 opikndf2|OPIINO: Kernel route which sits on top of the SQL*Net
@@ -1792,6 +1800,7 @@ piur|utl_url support
 pk|PLSQL KG interface
 pl|PLSQL infrastructure
 plio|object instantiation
+pliodl|delete function
 plitblm|PLSQL apps
 pls|PLSQL PSD standalones
 plslm|ncomp processing
@@ -1807,7 +1816,7 @@ pp|PLSQL infrastructure
 pri|remote interface
 pricbr|callback, remote
 prient|run given (rpc) entrypoint
-prient2|could be rpc or non-rpc
+prient2|common code to run given entrypoint, could be rpc or non-rpc
 prifold|rpc forwarding to older releases
 priold|rpc forwarding to older releases
 prm|parameter handling with sql layer
