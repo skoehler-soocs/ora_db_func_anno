@@ -1222,6 +1222,7 @@ kskthbwt|thread begin wait
 kskthewt|thread end wait
 kskthexit|thread exit
 kskthrsod|thread state object delete
+kskvmstatact|measure swap-in and swap-out (and generate error if amount is more than 2% of real memory)
 kskwait_timed_cpu|resource manager wait routine
 ksl|lock management
 ksl_get_child_latch_range|get all child latches for a range
