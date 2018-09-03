@@ -186,6 +186,7 @@ kcbr_apply_pending|apply changed pending read completion
 kcbr_media_apply|apply change vector for media recovery
 kcbrbuf|get a recovery buffer
 kcbrls|release pin 
+kcbtema|thread recovery examine and maybe apply
 kcbtse|tablespace encryption
 kcbtse_encdec_tbsblk|block encrypt
 kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
@@ -253,10 +254,14 @@ kcht|hash table
 kci|oracle text
 kck|compatibility
 kcl|lock manager/buffer cache
+kclcfusion|claim fusion lock
+kclcsfusion|start fusion recovery request
+kclclaim|claim a recovery lock
 kclcls|check lock status
 kclcvb|convert lock background: send message(s) to background to convert lock
 kclgclk|global cache lock
 kclpto|background timeout action
+kclrdone|recovery is done so cleanup buffer
 kclscrs|setup consistent reads
 kclwcrs|wait for consistent reads
 kcm|miscellaneous
@@ -279,6 +284,8 @@ kcra|redo application/access
 kcramr|apply media recovery
 kcratr|thread redo application
 kcratr_claim|claim recovery buffers
+kcratr1|pass one: construct recovery set
+kcratr2|pass two: apply change vectors
 kcrcrl|corrupt redo log
 kcrf|file
 kcrf_cnv_fh_before_write|convert file header before write
@@ -294,6 +301,8 @@ kcrf_sync_adaptive_set|set adaptive log file sync mode
 kcrfds|do switch of current log
 kcrfisd|redo is on disk
 kcrfnl|next log
+kcrpap|apply change vector
+kcrfrgv|get change vector header/data
 kcrfsl|switch log
 kcrfvh|verify header
 kcrfw|write/broadcast SCN
@@ -331,6 +340,8 @@ kcrhvbo|header verify
 kcrm|media recovery
 kcropn|open online logfile for kcroio and kcrfoc
 kcrp|recovery parallel
+kcrpclaim|claim recovery buffers
+kcrpsend_claim|send recovery buffer claim message
 kcrpap|recovery parallel
 kcrpdv|recovery parallel (driver?)
 kcrr|redo archival
@@ -356,6 +367,7 @@ kcsm|shared routines
 kct|threads
 kctmttr|mean time to recover (?)
 kctmttrest|estimation
+kctrec|recovery threads, recover and close threads
 kctrcp|record checkpoint progress
 kcttsc|thread state change
 kcv|recovery
@@ -721,6 +733,7 @@ kgxIncrementExamine|increment RefCnt and set E mode
 kgxShared|get in S mode
 kgxSharedExamine|examine
 kgxRelease|release
+kgxg|node monitor/cluster group services layer
 kgxgncin|group membership cssd initiate
 kj|lock management
 kjbcr|consistent read
@@ -1194,7 +1207,7 @@ ksim|messaging
 ksimPrintGroupMemPGA|print out pga group memory (oradebug)
 ksimPrintGroupMemCache|print out group memory cache (oradebug)
 ksimgchg|group state change
-ksipget|get a group lock
+ksipget|get a group lock (synchronous interface to DLM for lock get)
 ksipcon|convert a group lock
 ksiprls|release a group lock
 ksk|resource manager
@@ -1278,11 +1291,13 @@ ksp|parameter
 kspgir|get range
 kspGetInstType|validate instance_type
 ksq|enqueue
+ksqcnl|convert an enqueue's mode
 ksqcnv|convert an enqueue's mode
 ksqcmi|change lock mode internal
 ksqded|deadlock check
 ksqdel|release an enqueue
 ksqgel|get an enqueue
+ksqget|get an enqueue
 ksqgtl|get an enqueue
 ksqrcl|release an enqueue
 ksr|reliable messages
@@ -1333,15 +1348,16 @@ ksvrdp|run generic detached slave process
 kswsgetosstat|get host cpu utilization
 ksx|cross instance
 ksxa|parallel affinity
-ksxp|ipc
+ksxp|main ipc
 ksxr|rac operations(?)
+ksz|oracle storage server (OSS) server layer
 kt|transaction
 kta|table access
 ktaadm|get all dml locks
 ktagetp|get partition lock
 ktagetg0|get generic dml lock
 ktaiam|internal allocate dml lock 
-ktaidm|internal deallocate dml lock
+ktaidm|internal delete dml lock
 ktaifm|internal find dml lock
 ktb|block
 ktbapundo|apply undo
@@ -2149,7 +2165,13 @@ skgvm|virtual machine
 skgvm_cpuid|detect cpuid
 skgvm_detect_xen|detect xen
 skgvm_detect_vmware|detect vmware
-skgxp|IPC communication
+skgx|communication
+skgxn|node monitor
+skgxncin|defines an OSD context and returns a handle
+skgxnpstat|polls/waits for process group status
+skgxnreg|registers with process group as primary member (LMON)
+skgxnsrg|registers with process group as slave member 
+skgxp|IPC
 skgxppost|post the owner of a contact out of a blocking call
 sm|operating system dependent memory
 smb|buffer
