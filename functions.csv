@@ -83,6 +83,7 @@ erroer|oracle error position
 eva|evaluate
 evadid|date: internal date to date format
 evadis|date: internal date to string
+evadsd|date string to date
 evaopn2|operand
 evapls|plsql function
 evareo|relational operator
@@ -558,6 +559,7 @@ kff|KFF
 kffb|metadata block
 kffd|metadata directory
 kffg|file group
+kffm|map header
 kffscrub|scrubbing
 kfg|diskgroups
 kfgb|background
@@ -639,7 +641,7 @@ kghgex|get a new extent
 kghini|heap initialize
 kghnospc|no space available in the heap
 kghphini|parent heap initialize
-kghprmalo|find and return permanent chunk of space
+kghpmalo|find and return permanent chunk of space
 kghsrch|search freelists for a memory chunk
 kghstack_alloc|allocate pga memory
 kghstack_free|free pga memory
@@ -822,6 +824,7 @@ kkoat|auto tuning optimizer
 kkocpqb|copy query block
 kkocri|create index
 kkodp|AQP
+kkoecp|evaluate constant predicate
 kkogfp|get first permutation
 kkoiqb|initialise query block
 kkooqb|optimize query block
@@ -1005,6 +1008,7 @@ kpoclsa|close all cursors
 kpodny|describe any arguments used
 kpodp|direct path load
 kpogsk|initializes the session and returns the encrypted session key
+kpohal|This is the memory allocator that uses kpcch (the common heap module)
 kpolob|lob operations
 kpolal|lob allocator
 kpon|streams advanaced queuing 
@@ -2232,6 +2236,7 @@ sxorchk|system xor check
 tbsdrv|create/alter/drop tablespace function support
 tre|PLSQL infrastructure
 ttc|two task common
+ttcbur|burst record
 ttcc2u|convert type x to type y
 ttcclr|send/receive without conversion
 ttcpip|pipe read/write
