@@ -60,10 +60,32 @@ dbkePostKGE_kgsf|Post KGE error for KGSF
 dbked|Dumper
 dbkedDefDump|do DDE default dump
 dbkgc|generic configuration
+dbkpls_get_location|DBMS_ADR_INTERNAL.GET_LOCATION
+dbkpls_home_reserve_incids|DBMS_ADR_INTERNAL.RESERVE_INCIDS
+dbkpls_incident_add_metadata|DBMS_ADR_INTERNAL.INCIDENT_ADD_METADATA
+dbkpls_incident_create|DBMS_ADR_INTERNAL.INCIDENT_CREATE
+dbkpls_run_purge|DBMS_ADR_INTERNAL.RUN_PURGE
+dbkpls_set_tracefile_id|DBMS_ADR_INTERNAL.SET_TRACEFILE_IDENTIFIER
+dbkpls_setup_client_home|DBMS_ADR_INTERNAL.CREATE_ADR_HOME
+dbkpls_write_log|DBMS_ADR_INTERNAL.WRITE_LOG
+dbkpls_write_trace|DBMS_ADR_INTERNAL.WRITE_TRACE
 dbkr|RDBMS ADR
+dbkripcs_cleanout_schema|DBMS_ADR.CLEANOUT_SCHEMA
+dbkripds_downgrade_schema|DBMS_ADR.DOWNGRADE_SCHEMA
+dbkripms_migrate_schema|DBMS_ADR.MIGRATE_SCHEMA
+dbkriprs_recover_schema|DBMS_ADR.RECOVER_SCHEMA
 dbkt|RDBMS UTS tracefile
 del|delete
 delexe|execute
+dglr_build_main|DBMS_ROLLING.BUILD_PLAN
+dglr_destroy_main|DBMS_ROLLING.DESTROY_PLAN
+dglr_finish_main|DBMS_ROLLING.FINISH_PLAN
+dglr_init_main|DMBS_ROLLING.INIT_PLAN
+dglr_rollback_main|DBMS_ROLLING.ROLLBACK_PLAN
+dglr_set_main|DBMS_ROLLING.SET_PARAMETER
+dglr_set_main_ns|(additional definition?)
+dglr_start_main|DBMS_ROLLING.START_PLAN
+dglr_switch_main|DBMS_ROLLING.SWITCHOVER
 di|PLSQL apps
 dr|text
 dre|index
@@ -266,6 +288,11 @@ kclrdone|recovery is done so cleanup buffer
 kclscrs|setup consistent reads
 kclwcrs|wait for consistent reads
 kcm|miscellaneous
+kcm_DisableAutoRollover|DBMS_SCN.DISABLEAUTOROLLOVER
+kcm_EnableAutoRollover|DBMS_SCN.ENABLEAUTOROLLOVER
+kcm_GetCurrentSCNParams|DBMS_SCN.GETCURRENTSCNPARAMS
+kcm_GetSCNAutoRolloverParams|DBMS_SCN.GETSCNAUTOROLLOVERPARAMS
+kcm_GetSCNParamsByCompat|DBMS_SCN.GETSCNPARAMSBYCOMPAT
 kcmadj|adjust scn
 kcmclscn|check lamport scn
 kcmdsc|dfs: set/get/inc lock value scn and mess with backup scn if needed
@@ -738,6 +765,9 @@ kgxRelease|release
 kgxg|node monitor/cluster group services layer
 kgxgncin|group membership cssd initiate
 kj|lock management
+kjac|application continuity 
+kjac_11203_monitor_txn_pls|DBMS_APP_CONT_PRVT.MONITOR_TXN
+kjac_force_outcome_pls|DBMS_APP_CONT.INT_FORCE_OUTCOME
 kjbcr|consistent read
 kjbcropen|open LE lock
 kjbcrconvert|convert LE lock
@@ -785,6 +815,7 @@ kkbnftn|format table for nested table
 kkbl|lob
 kkbo|object
 kkcn|streams advanaced queuing 
+kkcnRegApply|DBMS_AQ.REGOP_APPLY
 kkcne|streams advanaced queuing notitication
 kkdc|data check
 kkdcacr|get all check and referential constrains
@@ -939,12 +970,31 @@ kn|replication
 kna|streams apply
 knac|coordinator
 knalf|reader
+knalExtractFromUserProps|DBMS_APPLY_ERROR.PROCESS_USER_PROPERTIES
+knaliAlter|DBMS_APPLY_ADM_INTERNAL.ALTER_APPLY_INTERNAL
+knaliCreate|DBMS_APPLY_ADM_INTERNAL.CREATE_APPLY_INTERNAL
+knaliGetApplyNum|DBMS_APPLY_PROCESS.GET_APPLY#
+knaliSetInstScn|DBMS_APPLY_ADM.SET_INSTANTIATION_SCN
+knalperr|DBMS_APPLY_ERROR.PROCESS_ERRORS
+knalsDropAPR|DBMS_APPLY_ADM_INTERNAL.DROP_APPLY_PROGRESS_REDO
 knanr|propogation receiver
 knas|server
 kncd|dequeue generic functions
 knl|streams replication
+knlGetAPRType|DBMS_APPLY_ADM_INTERNAL.UNPICKLE_PROGRESS_REDO_META
+knlUnPickleAPR|DBMS_APPLY_ADM_INTERNAL.UNPICKLE_APPLY_PROGRESS_REDO
+knlUnPickleLsbyPR|DBMS_APPLY_ADM_INTERNAL.UNPICKLE_LSBY_PROGRESS_REDO
 knlc|capture
 knlcsv|propogation sender
+knlsaoerr|DBMS_APPLY_ADM_INTERNAL.ALTER_OBJECT_ERROR_NOTIFIER
+knlsaooper|DBMS_APPLY_ADM.SET_DML_HANDLER_INTERNAL
+knlsiCmpOldVal|DBMS_APPLY_ADM_INTERNAL.COMPARE_OLD_VALUES_INTERNAL
+knlsiRegRemObj|DBMS_APPLY_ADM_INTERNAL.REGISTER_REMOTE_OBJECT
+knlsiValRemCol|DBMS_APPLY_ADM_INTERNAL.VALIDATE_REMOTE_COLUMN
+knlsiitb|DBMS_APPLY_ADM_INTERNAL.INVALIDATE_TABLE_OBJECT
+knlsiscc|DBMS_APPLY_ADM_INTERNAL.SET_CONSTRAINT_COLUMNS
+knlsisoc|DBMS_APPLY_ADM_INTERNAL.SET_OBJECT_CONSTRAINT
+knlsskeycol|DBMS_APPLY_ADM.SET_KEY_COLUMNS_INTERNAL
 ko|objects
 koc|cache manager
 kocedd|end duration
@@ -1023,6 +1073,9 @@ kpotc|setting up trusted external procedure callbacks
 kpotx|local transaction coordination
 kpotxen|2-phase end transaction driver
 kpov|distributed transaction coordination
+kpoxcAppContBeginReplay|DBMS_APP_CONT_PRVT.BEGIN_REPLAY
+kpoxcAppContEndReplay|DBMS_APP_CONT_PRVT.END_REPLAY
+kpoxcAppContPrepareReplay|DBMS_APP_CONT_PRVT.PREPARE_REPLAY_INT
 kpp2|parse routine for dimensions
 kpp3|parse routine for create/alter/drop summary statements
 kppl|connection pool
@@ -1325,6 +1378,7 @@ ksucln|cleanup detached process
 ksucresg|create session with a process group specified
 ksucre|create user session in process
 ksucrp|create and initialise process
+ksugtcpums|get cpu measurement (?)
 ksuded|user disconnect
 ksudel|delete user session
 ksudlc|delete call
@@ -1364,6 +1418,11 @@ ktagetg0|get generic dml lock
 ktaiam|internal allocate dml lock 
 ktaidm|internal delete dml lock
 ktaifm|internal find dml lock
+ktamp_GetContentCO|DBMS_APBACKEND.GETCONTENTCO
+ktamp_WriteContentCO|DBMS_APBACKEND.WRITECONTENTCO
+ktamp_remove_backupfile|DBMS_APBACKEND.REMOVEBACKUPFILE
+ktamp_send_command|DBMS_APBACKEND.SENDCOMMANDINTERNAL
+ktamp_write_tarball|DBMS_APBACKEND.WRITETARBALL
 ktb|block
 ktbapundo|apply undo
 ktbdbc|fast block cleanout function
@@ -1414,10 +1473,10 @@ ktelrwi|redoless write initialize
 kteop|operations
 kteu|redo support for segment header/extent map changes
 ktf|flashback support
-ktfwtsm|write timestamp
 ktfb|bitmapped space manipulation of files/tablespaces
 ktfd|dictionary based extent management
 ktft|temporary file manipulation
+ktfwtsm|write timestamp
 kti|in memory undo(?)
 ktl|list blocks changed
 ktldbl|delete list of block SO's
@@ -1522,16 +1581,78 @@ kv|performance
 kvi|information tables
 kwq|advanced queuing 
 kwqa|administration
-kwqdl|dequeue
+kwqaAnalyzeMC|DBMS_AQADM_SYSCALLS.KWQA_3GL_ANALYZE_MSG_CACHE
+kwqaCalculateMC|DBMS_AQADM_SYSCALLS.KWQA_3GL_CALCULATE_MSG_CACHE
+kwqaGetMaxStreamspool|DBMS_AQADM_SYSCALLS.GET_MAX_STREAMS_POOL
+kwqaGetMinStreamspool|DBMS_AQADM_SYSCALLS.GET_MIN_STREAMS_POOL
+kwqaIsOggDest|DBMS_AQADM_SYSCALLS.IS_OGG_DEST
+kwqaIsOggSrc|DBMS_AQADM_SYSCALLS.IS_OGG_SRC
+kwqaIsLsby|DBMS_AQADM_SYSCALLS.IS_LOGICAL_STBY
+kwqaIsPri|DBMS_AQADM_SYSCALLS.IS_PRIMARY
+kwqaSetMaxStreamspool|DBMS_AQADM_SYSCALLS.SET_MAX_STREAMS_POOL
+kwqaSetMinStreamspool|DBMS_AQADM_SYSCALLS.SET_MIN_STREAMS_POOL
+kwqaStopMsgForwarding|DBMS_AQADM_SYSCALLS.KWQA_3GL_STOP_MSG_FORWARDING
+kwqd|dequeue
 kwqi|plsql trusted callouts
+kwqiautoplsreg|DBMS_AQ.CREATE_DEQUEUE_JOB
+kwqiautoplsstart|DBMS_AQ.ENABLE_DEQUEUE_JOB
+kwqiautoplsstop|DMBS_AQ.DISABLE_DEQUEUE_JOB
+kwqiautoplsunreg|DBMS_AQ.DROP_DEQUEUE_JOB
+kwqiadtdeq|DBMS_AQ.DEQUEUE
+kwqiadtenq|DBMS_AQ.ENQUEUE
 kwqic|pre-12c notitication
+kwqicRepBgOper|DBMS_AQ.AQ$_BACKGROUND_OPER_INT
+kwqichkopt|DBMS_AQADM_SYS.CHECKOPTION
 kwqid|dequeue
+kwqideqarr|DBMS_AQ.DEQUEUE_ARRAY
+kwqideqarr0|0
+kwqidx81deq|DBMS_AQIN.AQ$_DEQUEUE_IN
+kwqidxdeq101|DBMS_AQ.AQ$_DEQUEUE version 10.1
+kwqidxdeq102|DBMS_AQ.AQ$_DEQUEUE version 10.2
+kwqidxdeq92|DBMS_AQ.AQ$_DEQUEUE version 9.2
+kwqidxdeqin|DBMS_AQIN.AQ$_DEQUEUE_IN
+kwqidxdeqin102|version 10.2
+kwqie|enqueue
+kwqienqarr|DBMS_AQ.ENQUEUE_ARRAY
+kwqienqarr0|(in library DBMS_AQ_LIB)
+kwqiexenqueue|DBMS_AQ.AQ$_ENQUEUE
+kwqigetdeqsort|DBMS_AQIN.GET_DEQ_SORT_IN
+kwqigretry|DBMS_AQIN.GET_MULTI_RETRY_IN
+kwqigtusrforagnt|DBMS_AQJMS_INTERNAL.GET_DB_USERNAME_FOR_AGENT
+kwqijaddsub|DBMS_AQJMS.AQ$_ADD_SUBSCRIBER_INT
+kwqijaltsub|DMBS_AQJMS.AQ$_ALTER_SUBSCRIBER
+kwqijexenq|DBMS_AQIN.AQ$_ENQUEUE_RAW
+kwqijlisten|DBMS_AQIN.AQ$_LISTEN
+kwqijopdxdeq|DBMS_AQIN.AQ$_DEQUEUE_IN
+kwqijopdxdeq102|version 10.2
+kwqijopenq|DBMS_AQIN.AQ$_ENQUEUE_OBJ
+kwqijops|DBMS_AQJMS.AQ$_REGOPS
+kwqijremsub|DBMS_AQJMS.AQ$_REMOVE_SUBSCRIBER_INT
+kwqilisten|DBMS_AQ.LISTEN
+kwqinrexenq|DBMS_AQIN.AQ$_ENQUEUE_OBJ_NO_RECPL
+kwqinrjopenq|DBMS_AQIN.AQ$_ENQUEUE_OBJ_NO_RECPL
+kwqiopqdeq|DBMS_AQ.DEQUEUE
+kwqiopqenq|DBMS_AQ.ENQUEUE
+kwqiplsreg|DBMS_AQ.REGISTER
+kwqiplsunreg|DBMS_AQ.UNREGISTER
+kwqiplspost|DBMS_AQ.POST
+kwqisetdeqsort|DBMS_AQIN.SET_DEQ_SORT_IN
+kwqisretry|DBMS_AQIN.SET_MULTI_RETRY_IN
 kwqit|time manager
 kwqj|job queue scheduler for propagation
 kwqm|multiconsumer queue IOT support
 kwqmn|time manager
 kwqmnslv|slave callback called by ksvrdp
 kwqn|queue notifier
+kwqngetfrommail|DBMS_AQELM.GET_SENDFROM
+kwqngethostmail|DBMS_AQELM.GET_MAILHOST
+kwqngetportmail|DBMS_AQELM.GET_MAILPORT
+kwqngettxtimeout|DBMS_AQELM.GET_TXTIMEOUT
+kwqngetproxy|DBMS_AQELM.GET_PROXY
+kwqnsetfrommail|DBMS_AQELM.SET_SENDFROM
+kwqnsethostmail|DBMS_AQELM.SET_MAILHOST
+kwqnsetportmail|DBMS_AQELM.SET_MAILPORT
+kwqnsetproxy|DBMS_AQELM.SET_PROXY
 kwqo|insttype checking options
 kwqp|queueing propagation
 kwqs|statistics handling
@@ -1539,7 +1660,7 @@ kwqu|lob data
 kwqx|transformations
 kwrc|rules engine evaluation(?)
 kwre|rules engine evaluation(?)
-kws|streams advanaced queuing 
+kws|streams advanced queuing 
 kwsbg|background
 kwsbit|time manager for sharded queue
 kwsbjc|time manager for sharded queue
@@ -1548,6 +1669,7 @@ kwsbtm|time manager for sharded queue
 kwscb|message cache
 kwscp|cross process
 kwsdqwm|message cache
+kwsiRawDqCalout|DBMS_AQ.DEQUEUE
 kwsipc|cross process
 kwslb|load balancer
 kwsmb|message cache
