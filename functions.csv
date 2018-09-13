@@ -277,6 +277,11 @@ kcht|hash table
 kci|oracle text
 kck|compatibility
 kcl|lock manager/buffer cache
+kcl_dissolve_affinity|DBMS_CACHEUTIL.KCL_DISSOLVE_AFFINITY
+kcl_dissolve_readmostly|DBMS_CACHEUTIL.KCL_DISSOLVE_READMOSTLY
+kcl_grab_affinity|DBMS_CACHEUTIL.KCL_GRAB_AFFINITY
+kcl_grab_readmostly|DBMS_CACHEUTIL.KCL_GRAB_READMOSTLY
+kcl_obj_downconvert|DBMS_CACHEUTIL.KCL_OBJ_DOWNCONVERT
 kclcfusion|claim fusion lock
 kclcsfusion|start fusion recovery request
 kclclaim|claim a recovery lock
@@ -523,7 +528,10 @@ kdxokcmp|Auto Prefix Compressed Index
 kdxt|temporary block
 kdz|archive compression
 kdza|compression
+kdza_delete|DBMS_COMPRESSION.KDZA_DELETE
+kdza_dump_map|DBMS_COMPRESSION.KDZA_DUMP_MAP
 kdzc|compression
+kdzcmptype|DBMS_COMPRESSION.KDZCMPTYPE
 kdzd|decompression
 kdzh|compression
 kdzk|HPK
@@ -984,11 +992,31 @@ knanr|propogation receiver
 knas|server
 kncd|dequeue generic functions
 knl|streams replication
+knl_DropTableSuppLog|DBMS_CAPTURE_ADM_INTERNAL.DROP_TABLE_SUPP_LOGGING
 knlGetAPRType|DBMS_APPLY_ADM_INTERNAL.UNPICKLE_PROGRESS_REDO_META
+knlIsPreObj|DBMS_CAPTURE_ADM_INTERNAL.VALIDATE_PREPARE_TABLE
+knlStorePrepareInfo|DBMS_CAPTURE_ADM_INTERNAL.STORE_PREPARE_INFO
 knlUnPickleAPR|DBMS_APPLY_ADM_INTERNAL.UNPICKLE_APPLY_PROGRESS_REDO
 knlUnPickleLsbyPR|DBMS_APPLY_ADM_INTERNAL.UNPICKLE_LSBY_PROGRESS_REDO
+knlabortschemainst_cdb|DBMS_CAPTURE_ADM_INTERNAL.ABORT_SCHEMA_INST_CDB
+knlaborttableinst_cdb|DBMS_CAPTURE_ADM_INTERNAL.ABORT_TABLE_INST_CDB
 knlc|capture
+knlcabortglobalinst|DBMS_CAPTURE_ADM_INTERNAL.ABORT_GLOBAL_INST
+knlcabortglobalinst_pdb|DBMS_CAPTURE_ADM_INTERNAL.ABORT_GLOBAL_INST_ONE_PDB
+knlciAddLogfile|DBMS_CAPTURE_ADM_INTERNAL.ADD_LOGFILE
+knlciAlterCapture|DBMS_CAPTURE_ADM_INTERNAL.ALTER_CAPTURE_INTERNAL
+knlciCreateCapture|DBMS_CAPTURE_ADM_INTERNAL.CREATE_CAPTURE_INTERNAL
+knlciDropCapture|DBMS_CAPTURE_ADM_INTERNAL.DROP_CAPTURE
+knlciIncludeExtraAttribute|DBMS_CAPTURE_ADM_INTERNAL.INCLUDE_EXTRA_ATTRIBUTE
+knlciwfit|DBMS_CAPTURE_ADM_INTERNAL.WAIT_FOR_INFLIGHT_TXN
+knlcprepglobalinst|DBMS_CAPTURE_ADM_INTERNAL.PREPARE_GLOBAL_INST
+knlcprepglobalinst_pdb|BMS_CAPTURE_ADM_INTERNAL.PREPARE_GLOBAL_INST_ONE_PDB
+knlcpreptabinst|DBMS_CAPTURE_ADM_INTERNAL.PREPARE_TABLE_INST
+knlcpreptabinstuid|DBMS_CAPTURE_ADM_INTERNAL.PREPARE_TABLE_INST_UID
 knlcsv|propogation sender
+knlprepschemainst_cdb|DBMS_CAPTURE_ADM_INTERNAL.PREPARE_SCHEMA_INST_CDB
+knlprepsynctabs|DBMS_CAPTURE_ADM_INTERNAL.PREPARE_SYNC_TABLE_LIST
+knlpreptableinst_cdb|DBMS_CAPTURE_ADM_INTERNAL.PREPARE_TABLE_INST_CDB
 knlsaoerr|DBMS_APPLY_ADM_INTERNAL.ALTER_OBJECT_ERROR_NOTIFIER
 knlsaooper|DBMS_APPLY_ADM.SET_DML_HANDLER_INTERNAL
 knlsiCmpOldVal|DBMS_APPLY_ADM_INTERNAL.COMPARE_OLD_VALUES_INTERNAL
@@ -1082,6 +1110,10 @@ kpoxcAppContPrepareReplay|DBMS_APP_CONT_PRVT.PREPARE_REPLAY_INT
 kpp2|parse routine for dimensions
 kpp3|parse routine for create/alter/drop summary statements
 kppl|connection pool
+kppliatpcp|DBMS_CONNECTION_POOL.ALTER_PARAM
+kpplicfgcp|DBMS_CONNECTION_POOL.CONFIGURE_POOL
+kpplistpcp|DBMS_CONNECTION_POOL.STOP_POOL
+kpplistrcp|DBMS_CONNECTION_POOL.START_POOL
 kpr|recursive program interface
 kprball|execute all bundled kpr/rpi operations
 kprc|copy routines
@@ -2005,6 +2037,16 @@ kzrt|privileges
 kzs|privileges
 kzsp|privileges
 kzsr|roles/remote password file
+kzstc|DBMS_CRYPTO_FFI.COOKIE
+kzstdl|DBMS_CRYPTO_FFI.DECRYPT
+kzstdr|DBMS_CRYPTO_FFI.DECRYPT
+kzstel|DBMS_CRYPTO_FFI.ENCRYPT
+kzster|DBMS_CRYPTO_FFI.ENCRYPT
+kzsthl|DBMS_CRYPTO_FFI.HASH
+kzsthr|DBMS_CRYPTO_FFI.HASH
+kzstml|DBMS_CRYPTO_FFI.MAC
+kzstmr|DBMS_CRYPTO_FFI.MAC
+kzstr|DBMS_CRYPTO_FFII.RANDOM
 kzsu|XS principal
 kzv|database vault
 kzu|privileges
