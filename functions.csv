@@ -538,6 +538,9 @@ keomg|DBOP generic service/monitoring daemon
 keomm|DBOP composite type
 keomn|DBOP monitoring
 ker|orarep
+kerpiFinishFullCapture|DBMS_AUTO_REPORT.FINISH_REPORT_CAPTURE_CALLOUT
+kerpiMarkSqlMonEntryExt|DBMS_AUTO_REPORT_INTERNAL.I_MARK_SQLMON_CALLOUT
+kerpiStartFullCapture|DBMS_AUTO_REPORT.START_REPORT_CAPTURE_CALLOUT
 kes|SQL manageability
 kesai|infrastructure
 kesatm|infrastructure
@@ -2387,8 +2390,43 @@ xctctl|commit top level transaction in a transaction tree
 xctrol|rollback: rollback current transaction of the current session
 xpl|SQL explain plan
 xs|olap analytic workspace
+xsAdvSparse|DBMS_AW.XSADVSPARSE
+xsAWNameOk|DBMS_AW.XSAWNAMEOK
+xsCmdExcKL|DBMS_AW.XSCMDEXCKL
+xsCmdExcKN|DBMS_AW.XSCMDEXCKN
+xsCmdExcLL|DBMS_AW.XSCMDEXCLL
+xsFileNameOK|DBMS_AW.XSFILENAMEOK
+xsGetCompat|DBMS_AW.XSGETCOMPAT
+xsInAWCleanup|DBMS_AW.IN_AW_CLEANUP
+xsRunKK|DBMS_AW.XSRUNKK
+xsRunKL|DBMS_AW.XSRUNKL
+xsRunKN|DBMS_AW.XSRUNKN
+xsRunLK|DBMS_AW.XSRUNLK
+xsRunLL|DBMS_AW.XSRUNLL
+xsRunLN|DBMS_AW.XSRUNLN
+xsSmplGetObjProtect|DBMS_AW.GET_OBJ_PROTECT
+xsagAdvCube|DBMS_AW.ADVISE_CUBE
+xsagAdvRel|DBMS_AW.ADVISE_REL
+xsawUpgrade|DBMS_AW.XSAWUPGRADE
 xsdb|paging manager
+xscatClean|DBMS_AW.CLEAN_ACCESS_TRACKING
+xscatDisable|DBMS_AW.DISABLE_ACCESS_TRACKING
+xscatEnable|DBMS_AW.ENABLE_ACCESS_TRACKING
+xseifExportBLOB|DBMS_AW.INT_EIF_BLOB_OUT
+xseifExportTable|DBMS_AW.INT_EIF_TABLE_OUT
+xseifImportBLOB|DBMS_AW.INT_EIF_BLOB_IN
+xseifImportTable|DBMS_AW.INT_EIF_TABLE_IN
+xsevalnum|DBMS_AW.XSEVALNUM
+xsevaltxt|DBMS_AW.EVAL_TEXT
+xsinitdrv|DBMS_AW.STARTUP
+xskilldrv|DBMS_AW.SHUTDOWN
+xsociClean|DBMS_AW.OCI_CLEAN
 xspg|paging manager
+xspgPValClob|DBMS_AW.XSPVALCLOB
+xspgPValGet|DBMS_AW.PROP_VAL
+xspgPValLen|DBMS_AW.XSPGPVALLEN
+xsrunning|DBMS_AW.OLAP_RUNNING
+xsisactive|DBMS_AW.OLAP_ACTIVE
 xty|type checking
 xtydrv|driver
 xtyinpr|insert numeric precision operator
