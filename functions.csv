@@ -60,6 +60,39 @@ dbkePostKGE_kgsf|Post KGE error for KGSF
 dbked|Dumper
 dbkedDefDump|do DDE default dump
 dbkgc|generic configuration
+dbkh|health monitor
+dbkhicd_create_offl_dict|DBMS_HM.DBKHICD_CREATE_OFFL_DICT CREATE_OFFLINE_DICTIONARY
+dbkhicd_create_schema|DBMS_HM.DBKHICD_CREATE_SCHEMA CREATE_SCHEMA
+dbkhicd_drop_schema|DBMS_HM.DBKHICD_DROP_SCHEMA DROP_SCHEMA
+dbkhicd_get_run_report|DBMS_HM.DBKHICD_GET_RUN_REPORT GET_RUN_REPORT
+dbkhicd_isTraceEnabled|DBMS_HM.DBKHICD_ISTRACEENABLED
+dbkhicd_run_dde_action|DBMS_HM.DBKHICD_RUN_DDE_ACTION RUN_DDE_ACTION
+dbkhicd_run_check|DBMS_HM.DBKHICD_RUN_CHECK RUN_CHECK
+dbkhicd_writeToTrace|DBMS_HM.DBKHICD_WRITETOTRACE SENDTRACEMSG
+dbkiicd_addLine|DBMS_IR.DBKIICD_ADDLINE
+dbkiicd_addToFailureSet|DBMS_IR.DBKIICD_ADDTOFAILURESET
+dbkiicd_adviseDone|DBMS_IR.DBKIICD_ADVISEDONE
+dbkiicd_beginFailureSet|DBMS_IR.DBKIICD_BEGINFAILURESET
+dbkiicd_cancelFailureSet|DBMS_IR.DBKIICD_CANCELFAILURESET
+dbkiicd_changePriority|DBMS_IR.DBKIICD_CHANGEPRIORITY
+dbkiicd_cleanupAdvise|DBMS_IR.DBKIICD_CLEANUPADVISE
+dbkiicd_closeFailure|DBMS_IR.DBKIICD_CLOSEFAILURE
+dbkiicd_closeScriptFile|DBMS_IR.DBKIICD_CLOSESCRIPTFILE
+dbkiicd_completeFailureSet|DBMS_IR.DBKIICD_COMPLETEFAILURESET
+dbkiicd_completeRepairOption|DBMS_IR.DBKIICD_COMPLETEREPAIROPTION
+dbkiicd_consolidateRepair|DBMS_IR.DBKIICD_CONSOLIDATEREPAIR
+dbkiicd_createScriptFile|DBMS_IR.DBKIICD_CREATESCRIPTFILE
+dbkiicd_createWorkingRepairSet|DBMS_IR.DBKIICD_CREATEWORKINGREPAIRSET
+dbkiicd_getFeasAndImpact|DBMS_IR.DBKIICD_GETFEASANDIMPACT
+dbkiicd_getLine|DBMS_IR.DBKIICD_GETFILE
+dbkiicd_getRepairAdvice|DBMS_IR.DBKIICD_GETREPAIRADVICE
+dbkiicd_isTraceEnabled|DBMS_IR.DBKIICD_STRACEENABLED
+dbkiicd_openScriptFile|DBMS_IR.DBKIICD_OPENSCRIPTFILE
+dbkiicd_reeval|DBMS_IR.DBKIICD_REEVAL
+dbkiicd_startRepairOption|DBMS_IR.DBKIICD_STARTREPAIROPTION
+dbkiicd_updateFeasAndImpact|DBMS_IR.DBKIICD_UPDATEFEASANDIMPACT
+dbkiicd_updateRepairOption|DBMS_IR.DBKIICD_UPDATEREPAIROPTION
+dbkiicd_writeToTrace|DBMS_IR.DBKIICD_WRITETOTRACE
 dbkpls_get_location|DBMS_ADR_INTERNAL.GET_LOCATION
 dbkpls_home_reserve_incids|DBMS_ADR_INTERNAL.RESERVE_INCIDS
 dbkpls_incident_add_metadata|DBMS_ADR_INTERNAL.INCIDENT_ADD_METADATA
@@ -77,6 +110,35 @@ dbkriprs_recover_schema|DBMS_ADR.RECOVER_SCHEMA
 dbkt|RDBMS UTS tracefile
 del|delete
 delexe|execute
+dgliaio|DBMS_INTERNAL_LOG_STDBY.APPLY_IS_OFF
+dglibld|DBMS_INTERNAL_LOG_STDBY.BUILD
+dglicdscn|DBMS_INTERNAL_LOG_STDBY.CAPTURE_SCN
+dglicfs|DBMS_INTERNAL_LOG_STDBY.CREATE_FUTURE_SESSION
+dgliclin|DBMS_INTERNAL_LOG_STDBY.CLEAR_LOGICAL_INSTANTIATION
+dglidfs|DBMS_INTERNAL_LOG_STDBY.DESTROY_FUTURE_SESSION
+dglidlfp|DBMS_INTERNAL_LOG_STDBY.PURGE_LOGS
+dglidlr|DBMS_INTERNAL_LOG_STDBY.DISABLE_LOGICAL_REPLICATION
+dglidxd|DBMS_INTERNAL_LOG_STDBY.DUMP_XDAT
+dgliechgvec|DBMS_INTERNAL_LOG_STDBY.EDS_EVAL_CHANGE_VECTOR
+dglielr|DBMS_INTERNAL_LOG_STDBY.ENABLE_LOGICAL_REPLICATION
+dglieuc|DBMS_INTERNAL_LOG_STDBY.EDS_USER_CURSOR
+dglifgbs|DBMS_INTERNAL_LOG_STDBY.FAL_REQ_BY_SEQ
+dglifsrl|DBMS_INTERNAL_LOG_STDBY.FLUSH_SRLS
+dgligbchk|DBMS_INTERNAL_LOG_STDBY.GUARD_BYPASS_CHK
+dgligboffi|DBMS_INTERNAL_LOG_STDBY.GUARD_PASS_OFF
+dgligboni|DBMS_INTERNAL_LOG_STDBY.GUARD_BYPASS_ON
+dgligchk|DBMS_INTERNAL_LOG_STDBY.GUARD_CHECK
+dgligss|DBMS_INTERNAL_LOG_STDBY.GET_SAFE_SCN
+dglilm|DBMS_INTERNAL_LOG_STDBY.LOCK_LSBY_META
+dglilmc|DBMS_INTERNAL_LOG_STDBY.UNLOCK_LSBY_CON
+dglilmd|DBMS_INTERNAL_LOG_STDBY.LOCK_LSBY_META
+dglirl|DBMS_INTERNAL_LOG_STDBY.REPAIR_LSBY_INTERNAL
+dglisd_nowait|DBMS_INTERNAL_LOG_STDBY.APPLY_STOP_NOWAIT
+dglisgnr|DBMS_INTERNAL_LOG_STDBY.SET_GUARD_NOT_READY
+dglislin|DBMS_INTERNAL_LOG_STDBY.SET_LOGICAL_INSTANTIATION
+dgliudo|DBMS_INTERNAL_LOG_STDBY.UPDATE_DYNAMIC_LSBY_OPTION
+dgliulm|DBMS_INTERNAL_LOG_STDBY.UNLOCK_LSBY_META
+dglius|DBMS_INTERNAL_LOG_STDBY.SEQUENCE_UPDATE
 dglr_build_main|DBMS_ROLLING.BUILD_PLAN
 dglr_destroy_main|DBMS_ROLLING.DESTROY_PLAN
 dglr_finish_main|DBMS_ROLLING.FINISH_PLAN
@@ -84,9 +146,13 @@ dglr_init_main|DMBS_ROLLING.INIT_PLAN
 dglr_rollback_main|DBMS_ROLLING.ROLLBACK_PLAN
 dglr_set_main|DBMS_ROLLING.SET_PARAMETER
 dglr_set_main_ns|(additional definition?)
+dglr_set_upg_flags|DBMS_INTERNAL_ROLLING.SET_UPGRADE_FLAGS
 dglr_start_main|DBMS_ROLLING.START_PLAN
 dglr_switch_main|DBMS_ROLLING.SWITCHOVER
 di|PLSQL apps
+dmutil|DBMS_DATA_MINING utilities
+dmutilECol|DBMS_DATA_MINING_TRANSFORM.EXPR_COL_LIB
+dmutilEMrg|DBMS_DATA_MINING_TRANSFORM.EXPR_MERGE_LIB
 dr|text
 dre|index
 drex|query
@@ -114,6 +180,11 @@ evaxl|vector translate
 expcop|evaluate callback operator list
 expeal|evaluate its argument AND list
 expepr|evaluate the argument predicate
+gwm|global service manager (GSM)
+gwm_db_info|DBMS_GSM_FIX.GWM_DB_INFO
+gwm_call_schagent|DBMS_GSM_FIX.GWM_CALL_SCHAGENT
+gwm_trace_output|DBMS_GSM_FIX.GWM_TRACE_OUTPUT
+gwm_validate_db|DBMS_GSM_FIX.GWM_VALIDATE_DB
 hep|PLSQL_KG_Interface
 hsh|PLSQL_KG_Interface
 ins|insert
@@ -126,6 +197,96 @@ ipc|inter process calls
 ipclw|lightweight (exafusion)
 ipp|internal probe processor capabilities(?)
 jox|java compiler/runtime
+jsaAddAgentCert|DBMS_ISCHED.ADD_AGENT_CERT
+jsaAddEvtQSub|DBMS_ISCHED.ADD_EVENT_QUEUE_SUBSCRIBER
+jsaAddGroupMember|DBMS_ISCHED.ADD_GROUP_MEMBER
+jsaAddMemberWgr|DBMS_ISCHED.ADD_WINDOW_GROUP_MEMBER
+jsaAlterChn|DBMS_ISCHED.ALTER_CHAIN
+jsaAlterStepChn|DBMS_ISCHED.ALTER_CHAIN_STEP
+jsaAssArgJob|DBMS_ISCHED.SET_JOB_ARGUMENT_VALUE
+jsaAuditSysPriv|DBMS_ISCHED.AUDIT_SYS_PRIV
+jsaCheckPurge|DBMS_ISCHED.CHECK_PURGE
+jsaCloseWin|DBMS_ISCHED.CLOSE_WINDOW
+jsaCompleteJobRun|DBMS_ISCHED.COMPLETE_JOB_RUN
+jsaCopyJob|DBMS_ISCHED.COPY_JOB
+jsaCreateAgentDestination|DBMS_ISCHED.CREATE_AGENT_DESTINATION
+jsaCreateCls|DBMS_ISCHED.CREATE_JOB_CLASS
+jsaCreateDatabaseDestination|DBMS_ISCHED.CREATE_DATABASE_DESTINATION
+jsaCreateFileWatch|DBMS_ISCHED.CREATE_FILE_WATCH
+jsaCreateJob|DBMS_ISCHED.CREATE_JOB
+jsaCreateJobStep|DBMS_ISCHED.CREATE_CHAIN_STEP
+jsaCreateGroup|DBMS_ISCHED.CREATE_GROUP
+jsaCreatePrg|DBMS_ISCHED.CREATE_PROGRAM
+jsaCreateResource|DBMS_ISCHED.CREATE_RESOURCE
+jsaCreateSch|DBMS_ISCHED.CREATE_SCHEDULE
+jsaCreateWalletDir|DBMS_ISCHED.CREATE_WALLET_DIR_CALLOUT
+jsaCreateWin|DBMS_ISCHED.CREATE_WINDOW
+jsaDisable|DBMS_ISCHED.DISABLE
+jsaDropAgentDestination|DBMS_ISCHED.DROP_AGENT_DESTINATION
+jsaDropArgJob|DBMS_ISCHED.RESET_JOB_ARGUMENT_VALUE
+jsaDropArgPrg|DBMS_ISCHED.DROP_PROGRAM_ARGUMENT
+jsaDropCls|DBMS_ISCHED.DROP_JOB_CLASS
+jsaDropDatabaseDestination|DBMS_ISCHED.DROP_DATABASE_DESTINATION
+jsaDropFileWatch|DBMS_ISCHED.DROP_FILE_WATCHER
+jsaDropGlobalAttrib|DBMS_ISCHED.DROP_SCHEDULER_ATTRIBUTE
+jsaDropGroup|DBMS_ISCHED.DROP_GROUP
+jsaDropJob|DBMS_ISCHED.DROP_JOB
+jsaDropPrg|DBMS_ISCHED.DROP_PROGRAM
+jsaDropResource|DBMS_ISCHED.DROP_RESOURCE
+jsaDropSch|DBMS_ISCHED.DROP_SCHEDULE
+jsaDropWgr|DBMS_ISCHED.DROP_WINDOW_GROUP
+jsaDropWin|DBMS_ISCHED.DROP_WINDOW
+jsaEnable|DBMS_ISCHED.ENABLE
+jsaEnqEndChainJob|DBMS_ISCHED.ENQ_END_CHAIN_JOB
+jsaFileTransfer|DBMS_ISCHED.FILE_TRANSFER
+jsaGenAgentPassSalt|DBMS_ISCHED.GEN_AGENT_PASS_SALT
+jsaGetAgentPassVer|DBMS_ISCHED.GET_AGENT_PASS_VERIFIER
+jsaGetBoolAttrib|DBMS_ISCHED.GET_BOOL_ATTRIBUTE
+jsaGetCharAttrib|DBMS_ISCHED.GET_CHAR_ATTRIBUTE
+jsaGetCredPass|DBMS_ISCHED.GET_CREDENTIAL_PASSWORD
+jsaGetDateAttrib|DBMS_ISCHED.GET_DATE_ATTRIBUTE
+jsaGetGlobalAttrib|DBMS_ISCHED.GET_SCHEDULER_ATTRIBUTE
+jsaGetIntAttrib|DBMS_ISCHED.GET_INT_ATTRIBUTE
+jsaGetInterAttrib|DBMS_ISCHED.GET_INTERVAL_ATTRIBUTE
+jsaGetTns|DBMS_ISCHED.GET_TNS_NVPAIR
+jsaObfCredPass|DBMS_ISCHED.OBFUSCATE_CREDENTIAL_PASSWORD
+jsaOpenWin|DBMS_ISCHED.OPEN_WINDOW
+jsaNotifyServiceMetricsUpdate|DBMS_ISCHED.NTFY_SVC_METRICS_UPDT
+jsaRaiseError|DBMS_ISCHED.RAISE_ORACLE_ERROR
+jsaRegArgPrg|DBMS_ISCHED.DEFINE_PROGRAM_ARGUMENT
+jsaRegisterCallback|DBMS_ISCHED.REGISTER_CALLBACK
+jsaRemEvtQSub|DBMS_ISCHED.REMOVE_EVENT_QUEUE_SUBSCRIBER
+jsaRemoveMemberWgr|DBMS_ISCHED.REMOVE_WINDOW_GROUP_MEMBER
+jsaRemoveGroupMember|DBMS_ISCHED.REMOVE_GROUP_MEMBER
+jsaRunJob|DBMS_ISCHED.RUN_JOB
+jsaSetAgentPass|DBMS_ISCHED.SET_AGENT_REGISTRATION
+jsaSetBoolAttrib|DBMS_ISCHED.SET_BOOL_ATTRIBUTE
+jsaSetCharAttrib|DBMS_ISCHED.SET_CHAR_ATTRIBUTE
+jsaSetDateAttrib|DBMS_ISCHED.SET_DATE_ATTRIBUTE
+jsaSetGlobalAttrib|DBMS_ISCHED.SET_SCHEDULER_ATTRIBUTE
+jsaSetIntAttrib|DBMS_ISCHED.SET_INT_ATTRIBUTE
+jsaSetInterAttrib|DBMS_ISCHED.SET_INTERVAL_ATTRIBUTE
+jsaSetListAttrib|DBMS_ISCHED.SET_LIST_ATTRIBUTE
+jsaSetResourceConstraint|DBMS_ISCHED.SET_RESOURCE_CONSTRAINT
+jsaStopJob|DBMS_ISCHED.STOP_JOB
+jsaTime|DBMS_ISCHED.STIME
+jsaTranslateJssuErrorCode|DBMS_IJOB.TRANSLATE_JSSU_ERROR_CODE
+jsaValidateLocalCred|DBMS_ISCHED.CHECK_LOCAL_CREDENTIAL
+jsbaBatchJobOps|DBMS_ISCHED.BATCH_JOB_OPS
+jsbaCreateJobs|DBMS_ISCHED.CREATE_JOBS
+jsbaSetJobAttribs|DBMS_ISCHED.SET_JOB_ATTRIBUTES
+jsbaShowErrors|DBMS_ISCHED.SHOW_ERRORS
+jskeCheckAQCbkPrivs|DBMS_ISCHED.CHECK_AQ_CBK_PRIVS
+jskeCheckReqPrivs|DBMS_ISCHED.CHECK_REQUEST_PRIVS
+jskeEventCondFilter|DBMS_ISCHED.EVENT_COND_FILTER
+jskeFileWatchFilter|DBMS_ISCHED.FILE_WATCH_FILTER
+jskeGetSchLimMsgid|DBMS_ISCHED.RAISE_SCHLIM_EVT
+jskeGetLastFWRun|DBMS_ISCHED.GET_LAST_RUN_TIME
+jskeRecResendReq|DBMS_ISCHED.RECORD_RESENT_REQUEST
+jskeSetEvtMsgArg|DBMS_ISCHED.SET_EVTMSG_ARG
+jskeSetLastFWRun|DBMS_ISCHED.SET_LAST_RUN_TIME
+jsxsExecPrePostApply|DBMS_ISCHED.EXEC_JOB_RUN_LSA
+jsxsGetSysTimeZoneName|DBMS_ISCHED.GET_SYS_TIME_ZONE_NAME
 k|kernel
 k2|distributed execution
 k2c|kernel to kernel 
@@ -312,6 +473,7 @@ kcoapl_validate|validate applied changes
 kcopcv|prepare change vector/redo entry generation and retrieval
 kcoubk|undo callback
 kcosze|calculate undo record size
+kcpcheckxmlsch|DBMS_EXTENDED_TTS_CHECKS.
 kcr|redo
 kcra|redo application/access
 kcramr|apply media recovery
@@ -483,6 +645,17 @@ kdmgd|GD
 kdmime|IME
 kdml|populating
 kdmo|optimizer
+kdmpdeallocateversions|DBMS_INMEMORY_ADMIN.DEALLOCATE_VERSIONS
+kdmpdisablefaststart|DBMS_INMEMORY_ADMIN.FASTSTART_DISABLE
+kdmpenablefaststart|DBMS_INMEMORY_ADMIN.FASTSTART_ENABLE
+kdmpgetfaststarttbs|DBMS_INMEMORY_ADMIN.GET_FASTSTART_TABLESPACE
+kdmpimecapexpr|DBMS_INMEMORY_ADMIN.IME_CAPTURE_EXPRESSIONS
+kdmpimeclosewindow|DBMS_INMEMORY_ADMIN.IME_CLOSE_CAPTURE_WINDOW
+kdmpimedropallexpr|DBMS_INMEMORY_ADMIN.IME_DROP_ALL_EXPRESSIONS
+kdmpimeopenwindow|DBMS_INMEMORY_ADMIN.IME_OPEN_CAPTURE_WINDOW
+kdmppopulate|DBMS_INMEMORY.POPULATE_INTERNAL
+kdmprepopulate|DBMS_INMEMORY.REPOPULATE_INTERNAL
+kdmpsegmentdeallocateversions|DBMS_INMEMORY.SEG_DEALLOC_VERS_INTERNAL
 kdmr|background
 kdn|sequence number
 kdns|sequence enqueue
@@ -775,6 +948,10 @@ kgxSharedExamine|examine
 kgxRelease|release
 kgxg|node monitor/cluster group services layer
 kgxgncin|group membership cssd initiate
+khpro|hierarchical profiler
+khproanalyze|DBMS_HPROF.KHPROANALYZE
+khprostart|DBMS_HPROF.KHPROSTART
+khprostop|DBMS_HPROF.KHPROSTOP
 kj|lock management
 kjac|application continuity 
 kjac_11203_monitor_txn_pls|DBMS_APP_CONT_PRVT.MONITOR_TXN
@@ -790,6 +967,17 @@ kjci|cross instance call
 kjcvcvd|deadlock detection routines
 kjfm|heartbeat monitoring
 kjfz|DLM-client freeze/unfreeze
+kjhn_get_alert_severity_plsql|DBMS_HA_ALERTS.GET_SEVERITY
+kjhn_get_db_unique_name_plsql|DBMS_HA_ALERTS.GET_DB_UNIQUE_NAME
+kjhn_get_db_domain_plsql|DBMS_HA_ALERTS.GET_DB_DOMAIN
+kjhn_get_cardinality_plsql|DBMS_HA_ALERTS.GET_CARDINALITY
+kjhn_get_event_time_plsql|DBMS_HA_ALERTS.GET_EVENT_TIME0
+kjhn_get_host_plsql|DBMS_HA_ALERTS.GET_HOST
+kjhn_get_incarnation_plsql|DBMS_HA_ALERTS.GET_INCARNATION
+kjhn_get_instance_plsql|DBMS_HA_ALERTS.GET_INSTANCE
+kjhn_get_reason_plsql|DBMS_HA_ALERTS.GET_REASON
+kjhn_get_service_plsql|DBMS_HA_ALERTS.GET_SERVICE
+kjhn_get_version_plsql|DBMS_HA_ALERTS.GET_VERSION
 kjk|RAC kernel accelerator
 kjlt|lock table
 kjm|RAC multiple LMS
@@ -818,6 +1006,7 @@ kjzf|flow control layer
 kjzg|group services layer
 kjzh|API layer
 kjzm|membership layer
+kjznpsp|DBMS_HANG_MANAGER.SET_PARAM_INTERNAL
 kk|compile
 kkb|table
 kkbn|nested table
@@ -847,7 +1036,13 @@ kkfr|fast rowid (PQ)
 kkhf|hash join file and memory management
 kkhr|hash join row management
 kkj|job queue
+kkjdva|DBMS_IJOB.KKJDVA 
+kkjexi|DBMS_IJOB.KKJEXI
+kkjges|DBMS_IJOB.KKJGES
 kkjp|package
+kkjpru|DBMS_IJOB.KKJPRU
+kkjses|DBMS_IJOB.KKJSES
+kkjspc|DBMS_IJOB.KKJSPC
 kkm|SQL semantic analysis
 kkmpost|post processing
 kkmupd|extra semantic processing for update
@@ -934,6 +1129,7 @@ kksumc|unmap shared cursor
 kksvld|validate cursor
 kkt|triggers
 kktalt|alter trigger
+kktiddlt|DBMS_DDL_INTERNAL.IS_DDL_TRIGGER
 kkx|Programmatic Interfaces to/from PL/SQL
 kkxa|external/asynch RPC
 kkxb|external tables
@@ -947,11 +1143,17 @@ kkxppp|private pipe
 kkxrd|DBMS_ROWID
 kkxrpc|rpc
 kkxsem|semantic phase
+kkxt|trigger
 kkxtexe|trigger execute
+kkxtgsv|DBMS_INTERNAL_TRIGGER.KKXTGSV GET_UGAKNT
+kkxtilc|DBMS_INTERNAL_TRIGGER.KKXTILC INVALIDATE_LIBRARY_CACHE
+kkxtmit|DBMS_INTERNAL_TRIGGER.KKXTMIT MAINTAIN_INTERNAL_TRIGGER
+kkxtusv|DBMS_INTERNAL_TRIGGER.KKXTUSV SET_UGAKNT
 kkxuexe|stub execute
 kkxwtp|compiler
 kky|system
 kkyasy|alter system driver
+kkziacset|DBMS_IREFRESH.SET_AUTOCOMMIT
 kl|loader
 klc|column array builder
 klclil1r|c level interface load 1 row
@@ -979,6 +1181,15 @@ kmnsbm|buffer memory allocation callback
 kmp|connection broker
 kn|replication
 kna|streams apply
+knaladmAddAutoCDR|DBMS_GOLDENGATE_ADM_INT_INVOK.ADD_AUTO_CDR_INT
+knaladmAddAutoCDRColGroup|DBMS_GOLDENGATE_ADM_INT_INVOK.ADD_AUTO_CDR_COLGROUP_INT
+knaladmAddAutoCDRDeltaRes|DBMS_GOLDENGATE_ADM_INT_INVOK.ADD_AUTO_CDR_DELTA_RES_INT
+knaladmAlterAutoCDR|DBMS_GOLDENGATE_ADM_INT_INVOK.ALTER_AUTO_CRD_INT
+knaladmAlterAutoCDRColGroup|DBMS_GOLDENGATE_ADM_INT_INVOK.ALTER_AUTO_CDR_COLGROUP_INT
+knaladmImportACDRMetadata|DBMS_GOLDENGATE_IMP.ACDR_UPDATE_METADATA
+knaladmRemoveAutoCDR|DBMS_GOLDENGATE_ADM_INT_INVOK.REMOVE_AUTO_CRD_INT
+knaladmRemoveAutoCDRColGroup|DBMS_GOLDENGATE_ADM_INT_INVOK.REMOVE_AUTO_CDR_COLGROUP_INT
+knaladmRemoveAutoCDRDeltaRes|DBMS_GOLDENGATE_ADM_INT_INVOK.REMOVE_AUTO_CDR_DELTA_RES_INT
 knac|coordinator
 knalf|reader
 knalExtractFromUserProps|DBMS_APPLY_ERROR.PROCESS_USER_PROPERTIES
@@ -992,12 +1203,12 @@ knanr|propogation receiver
 knas|server
 kncd|dequeue generic functions
 knl|streams replication
-knl_DropTableSuppLog|DBMS_CAPTURE_ADM_INTERNAL.DROP_TABLE_SUPP_LOGGING
 knlGetAPRType|DBMS_APPLY_ADM_INTERNAL.UNPICKLE_PROGRESS_REDO_META
 knlIsPreObj|DBMS_CAPTURE_ADM_INTERNAL.VALIDATE_PREPARE_TABLE
 knlStorePrepareInfo|DBMS_CAPTURE_ADM_INTERNAL.STORE_PREPARE_INFO
 knlUnPickleAPR|DBMS_APPLY_ADM_INTERNAL.UNPICKLE_APPLY_PROGRESS_REDO
 knlUnPickleLsbyPR|DBMS_APPLY_ADM_INTERNAL.UNPICKLE_LSBY_PROGRESS_REDO
+knl_DropTableSuppLog|DBMS_CAPTURE_ADM_INTERNAL.DROP_TABLE_SUPP_LOGGING
 knlabortschemainst_cdb|DBMS_CAPTURE_ADM_INTERNAL.ABORT_SCHEMA_INST_CDB
 knlaborttableinst_cdb|DBMS_CAPTURE_ADM_INTERNAL.ABORT_TABLE_INST_CDB
 knlc|capture
@@ -1074,6 +1285,9 @@ koxsihread|image handle write from buffer
 koxs|OBJECTS streams
 kp|programmatic interface
 kpbf|progint miscellaneous
+kpbfcopy|DBMS_FILE_TRANSFER.COPY_FILE_I
+kpbfget|DBMS_FILE_TRANSFER.GET_FILE_I
+kpbfput|DBMS_FILE_TRANSFER.PUT_FILE_I
 kpce|streams advanaced queuing 
 kpcm|streams advanaced queuing 
 kpfs|NPI
@@ -1137,6 +1351,14 @@ kpurcsc|remote call with service context, callbacks
 kpureq|request (a statement to be executed)
 kpuzxs|XS midtier
 kq|query
+kqaiconn|DBMS_DEBUG_JDWP.KQAICONN CONNECT_TCP
+kqaidisc|DBMS_DEBUG_JDWP.KQAIDISC DISCONNECT
+kqaignp|DBMS_DEBUG_JDWP.KQAIGNP GET_NLS_PARAMETERS
+kqaigcsi|DBMS_DEBUG_JDWP.KQAIGCSI
+kqaigcss|DBMS_DEBUG_JDWP.KQAIGCSS
+kqaipcs|DBMS_DEBUG_JDWP.KQAIPCS PROCESS_CONNECT_STRING
+kqaisnp|DBMS_DEBUG_JDWP.KQAISNP SET_NLS_PARAMETERS
+kqaivsn|DBMS_DEBUG_JDWP.KQAIVSN CURRENT_SESSION_SERIAL, CURRENT_SESSION_ID, CONNECT_TCP, DISCONNECT, PROCESS_CONNECT_STRING, GET_NLS_PARAMETERS, SET_NLS_PARAMETERS
 kqan|server side debug operations
 kqap|server side debug operations
 kqas|server side debug operations
@@ -1469,6 +1691,7 @@ ksbt|background processes
 kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|system notifications to be passed to components
 ksd|debug internal errors
+ksdnfsp_restore_df_perm|DBMS_DNFS.RESTORE_DATAFILE_PERMISSION
 ksdwra|write to alert
 ksdwrf|write to (trace) file
 ksddoa|debug support do an action
@@ -1525,6 +1748,10 @@ ksfm|file mapping
 ksfpec|io post and event
 ksfq|io sequential io interface
 ksfq_alo|allocate device
+ksfsp|DBMS_FS
+ksfsp_make_fs|KSFSP_MAKE_FS
+ksfsp_mount_fs|KSFSP_MOUNT_FS
+ksfsp_destroy_fs|KSFSP_DESTROY_FS
 ksfv|io server
 ksi|instance locking
 ksim|messaging
@@ -1740,11 +1967,38 @@ ktelrwi|redoless write initialize
 kteop|operations
 kteu|redo support for segment header/extent map changes
 ktf|flashback support
+ktfa|flashback archive
+ktfa_add_table_to_application|DBMS_FLASHBACK_ARCHIVE.ADD_TABLE_TO_APPLICATION
+ktfa_disable_application|DBMS_FLASHBACK_ARCHIVE.DISABLE_APPLICATION
+ktfa_disassociate_fba|DBMS_FLASHBACK_ARCHIVE.DISASSOCIATE_FBA_INTERNAL
+ktfa_drop_application|DBMS_FLASHBACK_ARCHIVE.DROP_APPLICATION
+ktfa_enable_application|DBMS_FLASHBACK_ARCHIVE.ENABLE_APPLICATION
+ktfa_extend_mappings|DBMS_FLASHBACK_ARCHIVE.EXTEND_MAPPINGS
+ktfa_get_sys_context|DBMS_FLASHBACK_ARCHIVE.GET_SYS_CONTEXT
+ktfa_import_history|DBMS_FLASHBACK_ARCHIVE.IMPORT_HISTORY
+ktfa_lock_down_application|DBMS_FLASHBACK_ARCHIVE.LOCK_DOWN_APPLICATION
+ktfa_purge_context|DBMS_FLASHBACK_ARCHIVE.PURGE_CONTEXT
+ktfa_reassociate_fba|DBMS_FLASHBACK_ARCHIVE.REASSOCIATE_FBA_INTERNAL
+ktfa_register_application|DBMS_FLASHBACK_ARCHIVE.REGISTER_APPLICATION
+ktfa_remtabfapp|DBMS_FLASHBACK_ARCHIVE.REMOVE_TABLE_FROM_APPLICATION
+ktfa_set_context_level|DBMS_FLASHBACK_ARCHIVE.SET_CONTEXT_LEVEL
+ktfa_unlock_application|DBMS_FLASHBACK_ARCHIVE.UNLOCK_APPLICATION
+ktfactht|DBMS_FLASHBACK_ARCHIVE.CREATE_TEMP_HISTORY_TABLE
 ktfb|bitmapped space manipulation of files/tablespaces
 ktfd|dictionary based extent management
+ktfgscnn|DBMS_FLASHBACK.GET_SYSTEM_CHANGE_NUMBER
 ktft|temporary file manipulation
 ktfwtsm|write timestamp
+ktfsnrb|DBMS_FLASHBACK.ENABLE_AT_SYSTEM_CHANGE_NUMBER
+ktfsrb|DBMS_FLASHBACK.ENABLE_AT_TIME
+ktfsrd|DBMS_FLASHBACK.DISABLE
+ktftb_backout_names|DBMS_FLASHBACK.INTERNAL_NAMES_BACKOUT
+ktftbp_backout_xids|DBMS_FLASHBACK.INTERNAL_XIDS_BACKOUT
 kti|in memory undo(?)
+ktilm_flush_one_seg|DBMS_ILM.FLUSH_SEGMENT_ACCESS_INTERNAL
+ktilm_flush_rowmaps|DBMS_ILM.FLUSH_ROWMAPS
+ktilm_flush_seg|DBMS_ILM.FLUSH_ALL_SEGMENTS
+ktilm_flush_seg_rowmaps|DBMS_ILM.FLUSH_SEGMENT_ROWMAP_INTERNAL
 ktl|list blocks changed
 ktldbl|delete list of block SO's
 ktm|transaction monitor
@@ -1805,6 +2059,7 @@ ktsxr_add|redoless add extent to a segment
 ktsxs_add|add extent to a segment
 ktsxterr|find extent error
 ktt|tablespace
+ktte_ts_gettarget|check if the tbs needs to be extended
 ktu|undo
 ktu4smck|semantic check of the block
 ktu4ubck|undo block check
@@ -2021,9 +2276,17 @@ kzangins|insert record
 kzap|policy
 kzar|application
 kzc|Code-Based Access Control
+kzcicrStatsDecryptNum|DBMS_CRYPTO_INTERNAL.STATS_DECRYPT_NUM_CALLOUT
+kzcicrStatsDecryptRaw|DBMS_CRYPTO_INTERNAL.STATS_DECRYPT_RAW_CALLOUT
+kzcicrStatsEncryptNum|DBMS_CRYPTO_INTERNAL.STATS_ENCRYPT_NUM_CALLOUT
+kzcicrStatsEncryptRaw|DBMS_CRYPTO_INTERNAL.STATS_ENCRYPT_RAW_CALLOUT
+kzcicrUpdateSensitiveStats|DBMS_CRYPTO_INTERNAL.UPDATESENSITIVESTATS
 kzck|encryption support
 kzd|dictionary access support
 kzfa|fine grained auditing
+kzfaadp|DBMS_FGA.ADD_POLICY
+kzfadrp|DBMS_FGA.DROP_POLICY
+kzfaenp|DBMS_FGA.ENABLE_POLICY, DISABLE_POLICY
 kzft|fine grained auditing
 kzia|identification and authentication 
 kziaia|main identification and authentication function
@@ -2259,6 +2522,8 @@ psdevn|plsql debugger
 psdicd|plsql call c
 psdmsc|system dependent misc functions
 psdpgi|open and close cursor support
+psdstfp|DBMS_DDL.PSDSTFP
+psdwat|DBMS_DG.PSDWAT
 psf|instantiating plsql in library cache
 pso|PLSQL PSD generic
 psu|PLSQL PSD generic
@@ -2406,6 +2671,19 @@ qesSageEnabled|test if exadata storage servers are used
 qesaAggNonDist|create/compute non-distinct aggregates
 qesbl|bloom filter
 qesdp|AQP
+qesdpiBeginPrepare|DBMS_DST.BEGIN_PREPARE_KERNEL
+qesdpiBeginUpgrade|DBMS_DST.BEGIN_UPGRADE_KERNEL
+qesdpiChkPrivs|DBMS_DST.CHECK_PRIVILEGES
+qesdpiChkTZVer|DBMS_DST.CHECK_TZ_VERSION
+qesdpiEndPrepare|DBMS_DST.END_PREPARE_KERNEL
+qesdpiEndUpgrade|DBMS_DST.END_UPGRADE_KERNEL
+qesdpiFindAffTabs|DBMS_DST.FIND_AFFECTED_TABLES_KERNEL
+qesdpiGetAndLockDSTProp|DBMS_DST.GET_AND_LOCK_DST_PROPERTY
+qesdpiGetLatestTZVer|DBMS_DST.GET_LATEST_TIMEZONE_VERSION
+qesdpiGetSGAUpStateTyp|DBMS_DST.SGA_UPGRADE_STATE
+qesdpiLoadSecTZ|DBMS_DST.LOAD_SECONDARY_KERNEL
+qesdpiUnLoadSecTZ|DBMS_DST.UNLOAD_SECONDARY_KERNEL
+qesdpiUpgradeTable|DBMS_DST.UPGRADE_TABLE_KERNEL
 qesgv|vector aggregate
 qesma|partitioning
 qesmm|memory manager (pga)
@@ -2504,6 +2782,40 @@ rfrdb|data guard broker monitor
 rfrla|data guard broker monitor
 rfrm|data guard broker monitor
 rfrxpt|data guard broker monitor
+rfsAfPing|DBMS_DG.RFSAFPING
+rfsAfReadyToFailover|DBMS_DG.RFSAFREADYTOFAILOVER
+rfsAfStateChangeRecorded|DBMS_DG.RFSAFSTATECHANGERECORDED
+rfs_add_database|DBMS_DG.RFS_ADD_DATABASE
+rfs_add_far_sync|DBMS_DG.RFS_ADD_FAR_SYNC
+rfs_check_connect|DBMS_DG.RFS_CHECK_CONNECT
+rfs_create_configuration|DBMS_DG.RFS_CREATE_CONFIGURATION
+rfs_disable_fsfo|DBMS_DG.RFS_DISABLE_FSFO
+rfs_do_observe|DBMS_DG.RFS_DO_OBSERVE
+rfs_dump_broker|DBMS_DG.RFS_DUMP_BROKER
+rfs_dump_observer|DBMS_DG.RFS_DUMP_OBSERVER
+rfs_enable_fsfo|DBMS_DG.RFS_ENABLE_FSFO
+rfs_enable_member|DBMS_DG.RFS_ENABLE_MEMBER
+rfs_fs_failover_for_hc_cond|DBMS_DG.RFS_FS_FAILOVER_FOR_HC_COND
+rfs_initiate_fs_failover|DBMS_DG.RFS_INITIATE_FS_FAILOVER
+rfs_remove_configuration|DBMS_DG.RFS_REMOVE_CONFIGURATION
+rfs_remove_member|DBMS_DG.RFS_REMOVE_MEMBER
+rfs_replace_name_in_props|DBMS_DG.RFS_REPLACE_NAME_IN_PROPS
+rfs_reset_config_property|DBMS_DG.RFS_RESET_CONFIG_PROPERTY
+rfs_reset_member_property|DBMS_DG.RFS_RESET_MEMBER_PROPERTY
+rfs_set_member_property|DBMS_DG.RFS_SET_MEMBER_PROPERTY
+rfs_set_protection_mode|DBMS_DG.RFS_SET_PROTECTION_MODE
+rfs_startup_for_relocate|DBMS_DG.RFS_STARTUP_FOR_RELOCATE
+rfs_stop_observer|DBMS_DG.RFS_STOP_OBSERVER
+rfs_wait|DBMS_DG.RFS_WAIT
+rfsbrq|DBMS_DG.RFSBRQ
+rfsc2r|DBMS_DG.RFSC2R
+rfscnl|DBMS_DG.RFSCNL
+rfsdel|DBMS_DG.RFSDEL
+rfsinfo|DBMS_DG.RFSINFO
+rfspmeta|DBMS_DG.RFSPMETA
+rfsreq|DBMS_DG.RFSREQ
+rfsr2c|DBMS_DG.RFSR2C
+rfsrsp|DBMS_DG.RFSRSP
 rixima|rowsource index implementation a
 rnm|rename statement operation
 rpi|recursive program interface
@@ -2695,15 +3007,25 @@ xseifImportBLOB|DBMS_AW.INT_EIF_BLOB_IN
 xseifImportTable|DBMS_AW.INT_EIF_TABLE_IN
 xsevalnum|DBMS_AW.XSEVALNUM
 xsevaltxt|DBMS_AW.EVAL_TEXT
+xsiculog_enable_loc|DBMS_CUBE_LOG.ENABE
+xsiculog_enable_text|DBMS_CUBE_LOG.TEXT
+xsiculog_disable|DBMS_CUBE_LOG.DISABLE
+xsiculog_get_log|DBMS_CUBE_LOG.GET_LOG
+xsiculog_get_log_spec|DBMS_CUBE_LOG.GET_LOG_SPEC
+xsiculog_set_log_spec|DBMS_CUBE_LOG.SET_LOG_SPEC
 xsinitdrv|DBMS_AW.STARTUP
 xsisactive|DBMS_AW.OLAP_ACTIVE
 xskilldrv|DBMS_AW.SHUTDOWN
 xsociClean|DBMS_AW.OCI_CLEAN
+xsoplog_complete_tco|DBMS_CUBE_LOG.COMPLETEOPLOGTCO
+xsoplog_start_tco|DBMS_CUBE_LOG.STARTOPLOGTCO
+xsoplog_write_tco|DBMS_CUBE_LOG.WRITEOPLOGTCO
 xspg|paging manager
 xspgPValClob|DBMS_AW.XSPVALCLOB
 xspgPValGet|DBMS_AW.PROP_VAL
 xspgPValLen|DBMS_AW.XSPGPVALLEN
 xsrunning|DBMS_AW.OLAP_RUNNING
+xstco_check_olap|DBMS_CUBE_LOG.CHECK_OLAP
 xsttsfreeze|DBMS_AW_EXP.TTS_AW_FREEZE
 xsttsthaw|DBMS_AW_EXP.TTS_AW_THAW
 xty|type checking
