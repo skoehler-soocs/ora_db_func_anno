@@ -1,6 +1,19 @@
 Ldi|date/time conversion
 Lpx|xml parser
 LpxFSM|FSM parser
+OCILobCreateTemporary|DBMS_LOB.KKXL_CREATETEMPORARY
+OCILobFileCloseAll|DBMS_LOB.KKXL_FILECLOSEALL
+OCILobFileExists|DBMS_LOB.KKXL_FILEEXISTS
+OCILobFileGetName|DBMS_LOB.KKXL_FILEGETNAME
+OCILobFileIsOpen|DBMS_LOB.KKXL_FILEISOPEN
+OCILobFreeTemporary|DBMS_LOB.KKXL_FREETEMPORARY
+OCILobGetChunkSize|DBMS_LOB.KKXL_GETCHUNKSIZE
+OCILobGetLength|DBMS_LOB.KKXL_GETLENGTH
+OCILobGetOptions|DBMS_LOB.KKXL_GETOPTIONS
+OCILobIsOpen|DBMS_LOB.KKXL_ISOPEN
+OCILobIsTemporary|DBMS_LOB.KKXL_ISTEMPORARY
+OCILobLoadFromFile|DBMS_LOB.KKXL_LOADFROMFILE
+OCILobSetOptions|DBMS_LOB.KKXL_SETOPTIONS
 adbdrv|alter database driver
 ain|alter index
 aop|audit options
@@ -180,6 +193,79 @@ evaxl|vector translate
 expcop|evaluate callback operator list
 expeal|evaluate its argument AND list
 expepr|evaluate the argument predicate
+gslcsq_add_s|DBMS_LDAP_API_FFI.LDAP_ADD_S
+gslcsq_authenticate_user|DBMS_LDAP_API_FFI.ORA_LDAP_AUTHENTICATE_USER
+gslcsq_authenticate_user_ext|DBMS_LDAP_API_FFI.ORA_LDAP_AUTHENTICATE_USER_EXT
+gslcsq_ber_free|DBMS_LDAP_API_FFI.BER_FREE
+gslcsq_bind_s|DBMS_LDAP_API_FFI.LDAP_BIND_S
+gslcsq_check_grp_membership|DBMS_LDAP_API_FFI.ORA_LDAP_CHECK_GRP_MEMBERSHIP
+gslcsq_compare_s|DBMS_LDAP_API_FFI.LDAP_COMPARE_S
+gslcsq_count_entries|DBMS_LDAP_API_FFI.LDAP_COUNT_ENTRIES
+gslcsq_create_grp_handle|DBMS_LDAP_API_FFI.ORA_LDAP_CREATE_GRP_HANDLE
+gslcsq_create_mod_array|DBMS_LDAP_API_FFI.CREATE_MOD_ARRAY
+gslcsq_create_mod_pset|DBMS_LDAP_API_FFI.ORA_LDAP_CREATE_MOD_PSET
+gslcsq_create_srv_handle|DBMS_LDAP_API_FFI.ORA_LDAP_CREATE_SRV_HANDLE
+gslcsq_create_sub_handle|DBMS_LDAP_API_FFI.ORA_LDAP_CREATE_SUB_HANDLE
+gslcsq_create_user_handle|DBMS_LDAP_API_FFI.ORA_LDAP_CREATE_USER_HANDLE
+gslcsq_check_user_scription|DBMS_LDAP_API_FFI.ORA_LDAP_CHECK_USER_SCRIPTION
+gslcsq_delete_s|DBMS_LDAP_API_FFI.LDAP_DELETE_S
+gslcsq_err2string|DBMS_LDAP_API_FFI.LDAP_ERR2STRING
+gslcsq_explode_dn|DBMS_LDAP_API_FFI.LDAP_EXPLODE_DN
+gslcsq_first_attr|DBMS_LDAP_API_FFI.LDAP_FIRST_ATTRIBUTE
+gslcsq_first_entry|DBMS_LDAP_API_FFI.LDAP_FIRST_ENTRY
+gslcsq_free_handle|DBMS_LDAP_API_FFI.ORA_LDAP_FREE_HANDLE
+gslcsq_free_mod_array|DBMS_LDAP_API_FFI.FREE_MOD_ARRAY
+gslcsq_free_mod_pset|DBMS_LDAP_API_FFI.ORA_LDAP_FREE_MOD_PSET
+gslcsq_free_pset_coll|DBMS_LDAP_API_FFI.ORA_LDAP_FREE_PSET_COLL
+gslcsq_get_avail_srvs|DBMS_LDAP_API_FFI.ORA_LDAP_GET_AVAIL_SRVS
+gslcsq_get_dbcharset_name|DBMS_LDAP_API_FFI.LDAP_GET_DBCHARSET_NAME
+gslcsq_get_dn|DBMS_LDAP_API_FFI.LDAP_GET_DN
+gslcsq_get_grp_dn|DBMS_LDAP_API_FFI.ORA_LDAP_GET_GRP_DN
+gslcsq_get_grp_membership|DBMS_LDAP_API_FFI.ORA_LDAP_GET_GRP_MEMBERSHIP
+gslcsq_get_grp_props|DBMS_LDAP_API_FFI.ORA_LDAP_GET_GRP_PROPS
+gslcsq_get_prop_names|DBMS_LDAP_API_FFI.ORA_LDAP_GET_PROP_NAMES
+gslcsq_get_prop_values|DBMS_LDAP_API_FFI.ORA_LDAP_GET_PROP_VALUES
+gslcsq_get_prop_values_blob|DBMS_LDAP_API_FFI.ORA_LDAP_GET_PROP_VALUES_BLOB
+gslcsq_get_prop_values_len|DBMS_LDAP_API_FFI.ORA_LDAP_GET_PROP_VALUES_LEN
+gslcsq_get_scribed_srvs|DBMS_LDAP_API_FFI.ORA_LDAP_GET_SCRIBED_SRVS
+gslcsq_get_scribed_users|DBMS_LDAP_API_FFI.ORA_LDAP_GET_SCRIBED_USERS
+gslcsq_get_session_info|DBMS_LDAP_API_FFI.LDAP_GET_SESSION_INFO
+gslcsq_get_sub_dn|DBMS_LDAP_API_FFI.ORA_LDAP_GET_SUB_DN
+gslcsq_get_sub_ext_props|DBMS_LDAP_API_FFI.ORA_LDAP_GET_SUB_EXT_PROPS
+gslcsq_get_sub_props|DBMS_LDAP_API_FFI.ORA_LDAP_GET_SUB_PROPS
+gslcsq_get_tracelvl|DBMS_LDAP_API_FFI.LDAP_GET_TRACE_LEVEL
+gslcsq_get_user_dn|DBMS_LDAP_API_FFI.ORA_LDAP_GET_USER_DN
+gslcsq_get_user_ext_props|DBMS_LDAP_API_FFI.ORA_LDAP_GET_USER_EXT_PROPS
+gslcsq_get_user_props|DBMS_LDAP_API_FFI.ORA_LDAP_GET_USER_PROPS
+gslcsq_get_user_props_and_auth|DBMS_LDAP_API_FFI.ORA_LDAP_GET_USER_PROPS_AUTH
+gslcsq_get_values|DBMS_LDAP_API_FFI.LDAP_GET_VALUES
+gslcsq_get_values_blob|DBMS_LDAP_API_FFI.LDAP_GET_VALUES_BLOB
+gslcsq_get_values_len|DBMS_LDAP_API_FFI.LDAP_GET_VALUES_LEN
+gslcsq_init|DBMS_LDAP_API_FFI.LDAP_INIT
+gslcsq_locate_sub_for_user|DBMS_LDAP_API_FFI.ORA_LDAP_LOCATE_SUB_FOR_USER
+gslcsq_memfree|DBMS_LDAP_API_FFI.LDAP_MEMFREE
+gslcsq_modify_s|DBMS_LDAP_API_FFI.LDAP_MODIFY_S
+gslcsq_modrdn2_s|DBMS_LDAP_API_FFI.LDAP_MODRDN2_S
+gslcsq_msgfree|DBMS_LDAP_API_FFI.LDAP_MSGFREE
+gslcsq_next_entry|DBMS_LDAP_API_FFI.LDAP_NEXT_ENTRY
+gslcsq_next_attr|DBMS_LDAP_API_FFI.LDAP_NEXT_ATTRIBUTE
+gslcsq_norm_dn_with_case|DBMS_LDAP_API_FFI.ORA_LDAP_NORM_DN_WITH_CASE
+gslcsq_open_ssl|DBMS_LDAP_API_FFI.LDAP_OPEN_SSL
+gslcsq_populate_mod_array|DBMS_LDAP_API_FFI.POPULATE_MOD_ARRAY
+gslcsq_populate_mod_array_blob|DBMS_LDAP_API_FFI.POPULATE_MOD_ARRAY
+gslcsq_populate_mod_pset|DBMS_LDAP_API_FFI.ORA_LDAP_POPULATE_MOD_PSET
+gslcsq_rename_s|DBMS_LDAP_API_FFI.LDAP_RENAME_S
+gslcsq_scribe_user|DBMS_LDAP_API_FFI.ORA_LDAP_SCRIBE_USER
+gslcsq_search_s|DBMS_LDAP_API_FFI.LDAP_SEARCH_S
+gslcsq_search_st|DBMS_LDAP_API_FFI.LDAP_SEARCH_ST
+gslcsq_set_grp_handle_props|DBMS_LDAP_API_FFI.ORA_LDAP_SET_GRP_HANDLE_PROPS
+gslcsq_set_tracelvl|DBMS_LDAP_API_FFI.LDAP_SET_TRACE_LEVEL
+gslcsq_set_user_handle_props|DBMS_LDAP_API_FFI.ORA_LDAP_SET_USER_HANDLE_PROPS
+gslcsq_set_user_props|DBMS_LDAP_API_FFI.ORA_LDAP_SET_USER_PROPS
+gslcsq_simple_bind_s|DBMS_LDAP_API_FFI.LDAP_SIMPLE_BIND_S
+gslcsq_unbind_s|DBMS_LDAP_API_FFI.LDAP_UNBIND_S
+gslcsq_unscribe_user|DBMS_LDAP_API_FFI.ORA_LDAP_UNSCRIBE_USER
+gslcsq_value_free_blob|DBMS_LDAP_API_FFI.VALUE_FREE_BLOB
 gwm|global service manager (GSM)
 gwm_db_info|DBMS_GSM_FIX.GWM_DB_INFO
 gwm_call_schagent|DBMS_GSM_FIX.GWM_CALL_SCHAGENT
@@ -205,6 +291,7 @@ jsaAlterChn|DBMS_ISCHED.ALTER_CHAIN
 jsaAlterStepChn|DBMS_ISCHED.ALTER_CHAIN_STEP
 jsaAssArgJob|DBMS_ISCHED.SET_JOB_ARGUMENT_VALUE
 jsaAuditSysPriv|DBMS_ISCHED.AUDIT_SYS_PRIV
+jsaCheckObjectPrivs|DBMS_ISCHED_UTL.CHECK_OBJECT_PRIVS
 jsaCheckPurge|DBMS_ISCHED.CHECK_PURGE
 jsaCloseWin|DBMS_ISCHED.CLOSE_WINDOW
 jsaCompleteJobRun|DBMS_ISCHED.COMPLETE_JOB_RUN
@@ -1036,6 +1123,7 @@ kkfr|fast rowid (PQ)
 kkhf|hash join file and memory management
 kkhr|hash join row management
 kkj|job queue
+kkjbgd|DBMS_JOB.KKJBGD BACKGROUND_PROCESS
 kkjdva|DBMS_IJOB.KKJDVA 
 kkjexi|DBMS_IJOB.KKJEXI
 kkjges|DBMS_IJOB.KKJGES
@@ -1137,7 +1225,27 @@ kkxcls|close cursor
 kkxcmp|compile (all compilation phases)
 kkxexe|execute plsql
 kkxl|lob
-kkxlnu|dbms_lobutil
+kkxlnu|DBMS_LOBUTIL
+kkxlnugi|KKXLNU_GETINODE
+kkxlnugl|KKXLNU_GETLOBMAP
+kkxlnugd|KKXLNU_GETDEDUPSET
+kkxlnucpprm|KKXLNU_CPPRMDEDUP
+kkxlr|DBMS_LOB
+kkxlr_append|KKXL_APPEND
+kkxlr_close|KKXL_CLOSE
+kkxlr_compare|KKXL_COMPORE
+kkxlr_convertToBlob|KKXL_CONVERTTOBLOB
+kkxlr_convertToClob|KKXL_CONVERTTOCLOB
+kkxlr_copy|KKXL_COPY
+kkxlr_erase|KKXL_ERASE
+kkxlr_get_storage_limit|KKXL_GET_STORAGE_LIMIT
+kkxlr_instr|KKXL_INSTR
+kkxlr_open|KKXL_OPEN
+kkxlr_read|KKXL_READ
+kkxlr_substr|KKXL_SUBSTR
+kkxlr_trim|KKXL_TRIM
+kkxlr_write|KKXL_WRITE
+kkxlr_writeappend|KKXL_WRITEAPPEND
 kkxpfr|PGA free
 kkxppp|private pipe
 kkxrd|DBMS_ROWID
@@ -1154,6 +1262,9 @@ kkxwtp|compiler
 kky|system
 kkyasy|alter system driver
 kkziacset|DBMS_IREFRESH.SET_AUTOCOMMIT
+kkzickusrpriv|DBMS_ISNAPSHOT.CHECK_USERPRIV
+kkzipllg|DBMS_ISNAPSHOT.KKZIPLLG PURGE_LDR_LOG
+kkzipsl_xid|DBMS_ISNAPSHOT.KKZIPSL_XID PURGE_LOG_XID
 kl|loader
 klc|column array builder
 klclil1r|c level interface load 1 row
@@ -1357,6 +1468,7 @@ kqaignp|DBMS_DEBUG_JDWP.KQAIGNP GET_NLS_PARAMETERS
 kqaigcsi|DBMS_DEBUG_JDWP.KQAIGCSI
 kqaigcss|DBMS_DEBUG_JDWP.KQAIGCSS
 kqaipcs|DBMS_DEBUG_JDWP.KQAIPCS PROCESS_CONNECT_STRING
+kqairjd|DBMS_JAVA_DUMP.KQAIRJD DUMP
 kqaisnp|DBMS_DEBUG_JDWP.KQAISNP SET_NLS_PARAMETERS
 kqaivsn|DBMS_DEBUG_JDWP.KQAIVSN CURRENT_SESSION_SERIAL, CURRENT_SESSION_ID, CONNECT_TCP, DISCONNECT, PROCESS_CONNECT_STRING, GET_NLS_PARAMETERS, SET_NLS_PARAMETERS
 kqan|server side debug operations
@@ -1668,8 +1780,53 @@ krta2bz|obtain blocksize of tablespace
 krta2rfn|obtain file number (mos says absolute file number)
 krtchk|check consistency (with control file)
 krtcktt|check temporary tablespace configuration
+krvarf|DBMS_LOGMNR.KRVARF ADD_LOGFILE
+krvcp|DBMS_LOGMNR.KRVCP COLUMN_PRESENT
+krvend|DBMS_LOGMNR.KRVEND END_LOGMNR
 krvg|generation of redo with DDL
+krvgdrm|DBMS_LOGMNR_INTERNAL.KRVGDRM
+krviad11202to112|DBMS_LOGMNR_INTERNAL.AGESPILL_11202TO112
+krviad112to11|DBMS_LOGMNR_INTERNAL.AGESPILL_112TO11
+krviad121to11204|DBMS_LOGMNR_INTERNAL.AGESPILL_121TO11204
+krviad12202to122|DBMS_LOGMNR_INTERNAL.AGESPILL_12202TO122
+krviad122to12|DBMS_LOGMNR_INTERNAL.AGESPILL_122TO12
+krviad122to12202|DBMS_LOGMNR_INTERNAL.AGESPILL_122TO12202
+krviarscn|DBMS_LOGMNR_INTERNAL.ADVANCE_READ_SCN
+krviau11204to121|DBMS_LOGMNR_INTERNAL.AGESPILL_11204TO121
+krviau11to112|DBMS_LOGMNR_INTERNAL.AGESPILL_11TO112
+krviau122to12202|DBMS_LOGMNR_INTERNAL.AGESPILL_122TO12202
+krviau12to122|DBMS_LOGMNR_INTERNAL.AGESPILL_12TO122
+krvicl|DBMS_LOGMNR_INTERNAL.LOGMNR_KRVICL
+krvidcd|DBMS_LOGMNR_INTERNAL.DUMP_CKPT_DATA
+krvidib|DBMS_LOGMNR_INTERNAL.KRVIDIB
+krvidpd|DBMS_LOGMNR_INTERNAL.DUMP_PAGEOUT_DATA
+krvidscd|DBMS_LOGMNR_INTERNAL.DUMP_STREAMS_CKPT_DATA
+krviftsi|DBMS_LOGMNR_INTERNAL.LOGMNR_KRVIFTSI
+krvigrg|DBMS_LOGMNR_INTERNAL.GET_ROOT_GLOBAL_NAME
+krvild|DBMS_LOGMNR_INTERNAL.LOGMNR_KRVILD
+krvilss|DBMS_LOGMNR_INTERNAL.LOGMNR_KRVILSS
+krvilt|DBMS_LOGMNR_INTERNAL.LOGMNR_KRVILT
+krvislegc|DBMS_LOGMNR_INTERNAL.KRVISLEQC
+krvisobj|DBMS_LOGMNR_INTERNAL.SKIP_OBJ_C
+krvisrba|DBMS_LOGMNR_INTERNAL.SKIP_RBA
+krvisxid|DBMS_LOGMNR_INTERNAL.SKIP_XID
+krviuld|DBMS_LOGMNR_INTERNAL.LOGMNR_KRVIULD
+krviulss|DBMS_LOGMNR_INTERNAL.LOGMNR_KRVIULSS
+krviult|DBMS_LOGMNR_INTERNAL.LOGMNR_KRVIULT
+krviusobj|DBMS_LOGMNR_INTERNAL.UNSKIP_OBJ_C
+krviusrba|DBMS_LOGMNR_INTERNAL.UNSKIP_RBA
+krviusxid|DBMS_LOGMNR_INTERNAL.UNSKIP_XID
+krvmv|DBMS_LOGMNR.KRVMV MINE_VALUE
+krvspd|DBMS_LOGMNR_INTERNAL.KRVSPD
+krvstart|DBMS_LOGMNR.KRVSTART START_LOGMNR
+krvrgse|DBMS_LOGMNR_INTERNAL.KRVRGSE
+krvrgse2|DBMS_LOGMNR_INTERNAL.KRVRGSE2
+krvrmgb|DBMS_LOGMNR_INTERNAL.KRVRMGB
+krvrrse|DBMS_LOGMNR_INTERNAL.KRVRRSE
+krvrrrf|DBMS_LOGMNR.KRVRRRF REMOVE_LOGFILE
 krvt|log miner viewer support
+krvugaclr|DBMS_LOGMNR_INTERNAL.KRVUGACLR
+krvugaset|DBMS_LOGMNR_INTERNAL.KRVUGASET
 ks|service
 ksa|async
 ksaamb|allocate message buffer
@@ -2426,6 +2583,7 @@ pbs|KNLDE
 pbt3g|KNLDE
 pci|PLSQL infrastructure
 pckl|Programmatic Interfaces to/from PL/SQL
+kcklfun|DBMS_JAVA_TEST.CALL_STATIC_JAVA_METHOD
 pcm|PLSQL infrastructure
 pd|PLSQL code execution
 pdlifu|internal entrypoint for the PL/SQL code generator
@@ -2520,6 +2678,10 @@ psddr0|Null pointer definitions for ttcdrv callback and context.
 psdgbt|get bind info
 psdevn|plsql debugger
 psdicd|plsql call c
+psdlcv|DBMS_LOCK.PSDLCV
+psdlgt|DBMS_LOCK.PSDLGT
+psdlrl|DBMS_LOCK.PSDLRL
+psdwat|DBMS_LOCK.PSDWAT
 psdmsc|system dependent misc functions
 psdpgi|open and close cursor support
 psdstfp|DBMS_DDL.PSDSTFP
