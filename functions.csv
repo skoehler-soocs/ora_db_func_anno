@@ -36,6 +36,7 @@ ausdrv|driver
 bam|PLSQL_KG_Interface
 csy|create synonym
 ctc|create table or cluster
+ctccom_cleanup_online_move|DBMS_PART.CLEANUP_ONLINE_OP_INTERNAL
 ctcdrv|driver
 cvw|create view
 dbga|Unified Tracing Service
@@ -575,7 +576,21 @@ kcoapl_validate|validate applied changes
 kcopcv|prepare change vector/redo entry generation and retrieval
 kcoubk|undo callback
 kcosze|calculate undo record size
-kcpcheckxmlsch|DBMS_EXTENDED_TTS_CHECKS.
+kcpacomp|DBMS_PLUGTS.KCP_ACOMP
+kcpaldfts|DBMS_PLUGTS.KCP_ALDTFS
+kcpbexp|DBMS_PLUGTS.KCP_BEXP
+kcpcheckxmlsch|DBMS_EXTENDED_TTS_CHECKS.KCP_CHECKXMLSCHEMA
+kcpchkxPlatform|DBMS_PLUGTS.KCP_CHKXPLATFORM
+kcpcmt|DBMS_PLUGTS.KCP_CMT
+kcpgetchar|DBMS_PLUGTS.KCP_GETCHAR
+kcpgetfh|DBMS_PLUGTS.KCP_GETFH
+kcpinit|DBMS_PLUGTS.KCP_INIT INITIMPORT
+kcpnewts|DBMS_PLUGTS.KCP_NEWTS
+kcppd|DBMS_PLUGTSP.KCP_PD PATCHDICTIONARY
+kcpplgdf|DBMS_PLUGTS.KCP_PLGDF
+kcpplobp|DBMS_PLUGTSP.KCP_PLOBP PATCHLOBPROP
+kcpptmd|DBMS_PLUGTSP.KCP_PTMD PATCHTABLEMETADATA
+kcprdfh|DBMS_PLUGTS.KCP_RDFH
 kcr|redo
 kcra|redo application/access
 kcramr|apply media recovery
@@ -770,6 +785,16 @@ kdoirp|insert row piece
 kdoiur|insert undo record
 kdp|archive compression: pcode
 kdq|query
+kdrpCC|DBMS_REPAIR.CHECK_COMPAT
+kdrpCO|DBMS_REPAIR.CHECK_OBJECT
+kdrpDK|DBMS_REPAIR.DUMP_ORPHAN_KEYS
+kdrpFB|DBMS_REPAIR.SEGMENT_FIX_STATUS
+kdrpFC|DBMS_REPAIR.FIX_CORRUPT_BLOCKS
+kdrpFL|DBMS_REPAIR.REBUILD_FREELISTS
+kdrpOIC|DBMS_REPAIR.ONLINE_INDEX_CLEAN
+kdrpRQI|DBMS_REPAIR.REBUILD_SHC_INDEX
+kdrpRCK|DBMS_REPAIR.REPAIR_CLUSTER_INDEX_KEYCOUNT
+kdrpSC|DBMS_REPAIR.SKIP_CORRUPT_BLOCKS
 kds|seek/scan
 kdse|extent
 kdselini|list initialize
@@ -817,6 +842,8 @@ ke|event
 keb|MMON/MMNL infrastructure
 kec|real application testing
 kecprm|masking
+kecprmEntryExtract|DBMS_RAT_MASK_INTERNAL.DBR_EXTRACT_CALLOUT
+kecprmEntryReplace|DBMS_RAT_MASK_INTERNAL_DBR_MASK_CALLOUT
 keiut|UIT infrastructure
 kel|server generated alert infrastructure
 keomg|DBOP generic service/monitoring daemon
@@ -831,6 +858,8 @@ kesai|infrastructure
 kesatm|infrastructure
 kesds|SQL repair advisor
 kesm|real application testing: masking
+kesmdStsExtractExt|DBMS_RAT_MASK_INTERNAL.STS_EXTRACT_CALLOUT
+kesmdStsReplaceExt|DBMS_RAT_MASK_INTERNAL.STS_MASK_CALLOUT
 kesp|SQL performance analyzer
 kesqs|infrastructure
 kessi|infrastructure
@@ -850,6 +879,18 @@ keswx|SQL monitor
 ket|automated maintenance tasks
 kew|AWR
 kewa|ASH
+kewe_cln_stat_disable|DBMS_MONITOR.CLIENT_ID_STAT_DISABLE
+kewe_cln_stat_enable|DBMS_MONITOR.CLIENT_ID_STAT_ENABLE
+kewe_cln_trace_disable|DBMS_MONITOR.CLIENT_ID_TRACE_DISABLE
+kewe_cln_trace_enable|DBMS_MONITOR.CLIENT_ID_TRACE_ENABLE
+kewe_database_trace_disable|DBMS_MONITOR.DATABASE_TRACE_DISABLE
+kewe_database_trace_enable|DBMS_MONITOR.DATABASE_TRACE_ENABLE
+kewe_sid_trace_disable|DBMS_MONITOR.SESSION_TRACE_DISABLE
+kewe_sid_trace_enable|DBMS_MONITOR.SESSION_TRACE_ENABLE
+kewe_svm_stat_disable|DBMS_MONITOR.SERV_MOD_ACT_STAT_DISABLE
+kewe_svm_stat_enable|DBMS_MONITOR.SERV_MOD_ACT_STAT_ENABLE
+kewe_svm_trace_disable|DBMS_MONITOR.SERV_MOD_ACT_TRACE_DISABLE
+kewe_svm_trace_enable|DBMS_MONITOR.SERV_MOD_ACT_TRACE_ENABLE
 kewm|metrics
 kewr|repository
 kewrf|flush
@@ -1239,8 +1280,12 @@ kktiddlt|DBMS_DDL_INTERNAL.IS_DDL_TRIGGER
 kkx|Programmatic Interfaces to/from PL/SQL
 kkxa|external/asynch RPC
 kkxb|external tables
+kkxcg1|DBMS_PREPROCESSOR.KKXCG1 GET_PP_SOURCE_LINES
+kkxcg2|DBMS_PREPROCESSOR.KKXCG2 GET_PP_SOURCE_LINES
+kkxcg3|DBMS_PREPROCESSOR.KKXCG3 GET_PP_SOURCE_LINES
 kkxcls|close cursor
 kkxcmp|compile (all compilation phases)
+kkxerae|DBMS_OUTPUT.KKXERAE RAISE_APPLICATION_ERROR
 kkxexe|execute plsql
 kkxl|lob
 kkxlnu|DBMS_LOBUTIL
@@ -1279,10 +1324,35 @@ kkxuexe|stub execute
 kkxwtp|compiler
 kky|system
 kkyasy|alter system driver
+kkziIsUserCreatedIdx|DBMS_REDEFINITION.IS_USER_CREATED
+kkzi_is_XMLtab_Objrel|DBMS_REDEFINITION.IS_XMLTAB_OBJREL
+kkzi_reg_idx_param|DBMS_REDEFINITION.REG_XMLIDX_PARAMSTR
+kkzi_reg_idx_param|DBMS_REDEFINITION.IS_PARAM_NM_TAKEN
+kkzi_test_dml_refresh_trigger|DBMS_REDEFINITION.TEST_DML_REFRESH_TRIGGER
+kkzi_xmlidx_parmstr|DBMS_REDEFINITION.GET_XMLIDX_PARAMSTR
+kkzi_xmlidx_sxtab|DBMS_REDEFINITION.GET_XMLIDX_SX_TAB
 kkziacset|DBMS_IREFRESH.SET_AUTOCOMMIT
+kkziaord|DBMS_REDEFINITION.ABORT_REDEF_INT
+kkzichkprivs|DBMS_REDEFINITION.CHECK_PRIVS
 kkzickusrpriv|DBMS_ISNAPSHOT.CHECK_USERPRIV
+kkzicort|DBMS_REDEFINITION.CAN_REFEF_INT
+kkzicptable_vdollar_basic|DBMS_REDEFINITION.COPY_TABLE_DEPENDENTS_VBASIC
+kkzicptable_vdollar_prog|DBMS_REDEFINITION.COPY_TABLE_DEPENDENTS_VPROG
+kkzicptable_vdollar_setb|DBMS_REDEFINITION.COPY_TABLE_DEPENDENTS_SETB
+kkzicptable_vdollar_waitb|DBMS_REDEFINITION.COPY_TABLE_DEPENDENTS_WAITB
+kkziexecddl|DBMS_REDEFINITION.PARSE_DDL
+kkziford|DBMS_REDEFINITION.FINISH_REDEF_INT
+kkzigunqnm|DBMS_REDEFINITION.GET_UNQ_NAME
+kkzigtn|DBMS_REDEFINITION.GET_TABLE_NAME
+kkziorset|DBMS_REDEFINITION.SET_REDEF_SESSION
 kkzipllg|DBMS_ISNAPSHOT.KKZIPLLG PURGE_LDR_LOG
 kkzipsl_xid|DBMS_ISNAPSHOT.KKZIPSL_XID PURGE_LOG_XID
+kkzirdobj|DBMS_REDEFINITION.REGISTER_DEP_OBJ_INT
+kkzisint|DBMS_REDEFINITION.SYNC_INTERIM_INT
+kkzisord|DBMS_REDEFINITION.START_REDEF_INT
+kkziudobj|DBMS_REDEFINITION.UNREGISTER_DEP_OBJ_INT
+kkzivordclr|DBMS_REDEFINITION.VDOLLAR_ORD_CLR
+kkzivordini|DBMS_REDEFINITION.VDOLLAR_ORD_INIT
 kl|loader
 klc|column array builder
 klclil1r|c level interface load 1 row
@@ -1457,6 +1527,28 @@ kpbfget|DBMS_FILE_TRANSFER.GET_FILE_I
 kpbfput|DBMS_FILE_TRANSFER.PUT_FILE_I
 kpce|streams advanaced queuing 
 kpcm|streams advanaced queuing 
+kpdb|pluggable database
+kpdbCheckNFT|DBMS_PDB.KPDBCHECKNFT CHECK_NFT
+kpdbCheckPlugCompatible|DBMS_PDB.KPDBCHECKPLUGCOMPATIBLE CHECK_PLUG_COMPATIBILITY
+kpdbChkLockdown|DBMS_PDB.KPDBCHKLOCKDOWN CHECK_LOCKDOWN
+kpdbCleanResolve|DBMS_PDB.KPDBCLEANRESOLVE CLEAR_PLUGIN_VIOLATIONS
+kpdbCleanupTask|DBMS_PDB.KPDBCLEANUPTASK CLEANUP_TASK
+kpdbConvertToLocal|DBMS_PDB.KPDBCONVERTTOLOCAL CONVERT_TO_LOCAL
+kpdbCreateCFTables|DBMS_PDB.KPDBCREATECFTABLES CREATEX$PERMANENTTABLES
+kpdbDescribe|DBMS_PDB.KPDBDESCRIBE DESCRIBE
+kpdbDropCFTables|DBMS_PDB.KPDBDROPCFTABLES DROPX$PERMANENTTABLES
+kpdbExecOracleScript|DBMS_PDB.EXEC_AS_ORACLE_SCRIPT
+kpdbIsValidPath|DBMS_PDB.KPDBISVALIDPATH IS_VALID_PATH
+kpdbNonCdb2Pdb|DBMS_PDB.KPDBNONCDB2PDB NONCDB_TO_PDB
+kpdbPopulateSyncTable|DBMS_PDB.KPDBPOPULATESYNCTABLE POPULATESYNCTABLE
+kpdbSync|DBMS_PDB.KPDBSYNC SYNC_PDB
+kpdbRecover|DBMS_PDB.KPDBRECOVER RECOVER
+kpdbUpdateCrossConStats|DBMS_PDB.KPDBCVUPDATECROSSCONSTRATS UPDATE_CDBVW_STATS
+kpdbUpdateVsn|DBMS_PDB.KPDBUPDATEVSN UPDATE_VERSION
+kpdbfdSetSharing|DBMS_PDB_ALTER_SHARING.KPDBFDSETSHARING SET_METADATA_LINKED SET_DATA_LINKED SET_EXT_DATA_LINKED SET_SHARING_NONE
+kpdbfdSetProfExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETPROFEXPLICIT SET_PROFILE_EXPLICIT
+kpdbfdSetUserExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETUSEREXPLICIT SET_USER_EXPLICIT
+kpdbfdSetRoleExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETROLEEXPLICIT SET_ROLE_EXPLICIT
 kpfs|NPI
 kpin|progint miscellaneous
 kpk|OCI
@@ -1830,6 +1922,13 @@ krp_check_slave_exit|wait for ksv slaves to exit
 krp_slave_apply|main redo apply loop
 krp_slave_main|main pmr slave callback
 krpi|dbms_pitr support
+krpiacp|DBMS_PITR.KRPIACP ADJUSTCOMPATIBILITY
+krpibexp|DBMS_PITR.KRPIBEXP BEGINEXPORT
+krpibimp|DBMS_PITR.KRPIBIMP BEGINIMPORT
+krpibts|DBMS_PITR.KRPIBTS BEGINTABLESPACE
+krpicpt|DBMS_PITR.KRPICPT COMMITPITR
+krpidfv|DBMS_PITR.KRPIDFV DOFILEVERIFY
+krpists|DBMS_PITR.KRPISTS SELECTTABLESPACE
 krs|standby/dataguard (?)
 krt|tablespaces
 krta2bz|obtain blocksize of tablespace
@@ -2063,6 +2162,9 @@ ksmuhe|allocate the uga heap using the parent heap specified if state = KSMUGCRE
 ksmupg|check for references in the session global area to process
 ksn|two task
 kso|operations
+kso_prespawn_queue_disable|DBMS_PROCESS.STOP_POOL
+kso_prespawn_queue_enable|DBMS_PROCESS.START_POOL
+kso_prespawn_queue_update|DBMS_PROCESS.CONFIGURE_POOL
 ksols|object level statistics(?)
 ksolt|lightweight threads
 ksopid_alive|pid alive check
@@ -2334,6 +2436,7 @@ kwqaAnalyzeMC|DBMS_AQADM_SYSCALLS.KWQA_3GL_ANALYZE_MSG_CACHE
 kwqaCalculateMC|DBMS_AQADM_SYSCALLS.KWQA_3GL_CALCULATE_MSG_CACHE
 kwqaGetMaxStreamspool|DBMS_AQADM_SYSCALLS.GET_MAX_STREAMS_POOL
 kwqaGetMinStreamspool|DBMS_AQADM_SYSCALLS.GET_MIN_STREAMS_POOL
+kwqaGetPassword|DBMS_PRVTAQIP.KWQA_3GL_GETPASSWORD
 kwqaIsOggDest|DBMS_AQADM_SYSCALLS.IS_OGG_DEST
 kwqaIsOggSrc|DBMS_AQADM_SYSCALLS.IS_OGG_SRC
 kwqaIsLsby|DBMS_AQADM_SYSCALLS.IS_LOGICAL_STBY
@@ -2520,11 +2623,41 @@ kziaia|main identification and authentication function
 kzl|label
 kzp|privileges
 kzpchkc|check privileges on a object cyclic
+kzppCapturePLSQL|DBMS_PRIVILEGE_CAPTURE.CAPTURE_DEPENDENCY_PRIVS
+kzppCreateCapture|DBMS_PRIVILEGE_CAPTURE.CREATE_CAPTURE
+kzppDeleteRun|DBMS_PRIVILEGE_CAPTURE.DELETE_RUN
+kzppDisableCapture|DBMS_PRIVILEGE_CAPTURE.DISABLE_CAPTURE
+kzppDropCapture|DBMS_PRIVILEGE_CAPTURE.DROP_CAPTURE
+kzppEnableCapture|DBMS_PRIVILEGE_CAPTURE.ENABLE_CAPTURE
+kzppGenerateResult|DBMS_PRIVILEGE_CAPTURE.GENERATE_RESULT
+kzppinsdc|DBMS_PRIV_CAPTURE.CAPTURE_PRIVILEGE_USE
+kzppinsdc_str|DBMS_PRIV_CAPTURE.CAPTURE_PRIVILEGE_USE
+kzppobjpriv|DBMS_PRIV_CAPTURE.SES_HAS_OBJ_PRIV
+kzpprolepriv|DBMS_PRIV_CAPTURE.SES_HAS_ROLE_PRIV
+kzppsyspriv|DBMS_PRIV_CAPTURE.SES_HAS_SYS_PRIV
 kzr|resource routines
 kzra|privileges
 kzradm|real-time application-controlled data masking
+kzradmadd|DBMS_REDACT_INT.ADD_POLICY
+kzradmalter|DBMS_REDACT_INT.ALTER_POLICY
+kzradmdisable|DBMS_REDACT_INT.DISABLE_POLICY
+kzradmenable|DBMS_REDACT_INT.ENABLE_POLICY
+kzradmfpmmask|DBMS_REDACT_INT.FPM_MASK
+kzradmfpmunmask|DBMS_REDACT_INT.FPM_UNMASK
+kzradmdrop|DBMS_REDACT_INT.DROP_POLICY
+kzradmupdfull|DBMS_REDACT_INT.UPDATE_FULL_REDACTION_VALUES
+kzredact_apply_pe_col|DBMS_REDACT_INT.APPLY_POLICY_EXPR_TO_COL
+kzredact_create_pe|DBMS_REDACT_INT.CREATE_POLICY_EXPRESSIONS
+kzredact_drop_pe|DBMS_REDACT_INT.DROP_POLICY_EXPRESSIONS
+kzredact_update_pe|DBMS_REDACT_INT.UPDATE_POLICY_EXPRESSIONS
 kzrt|privileges
 kzs|privileges
+kzsob_DES3Decrypt|DBMS_OBFUSCATION_TOOLKIT_FFI.DES3DECRYPT
+kzsob_DES3Encrypt|DBMS_OBFUSCATION_TOOLKIT_FFI.DES3ENCRYPT
+kzsob_DESDecrypt|DBMS_OBFUSCATION_TOOLKIT_FFI.DESDECRYPT
+kzsob_DESEncrypt|DBMS_OBFUSCATION_TOOLKIT_FFI.DESENCRYPT
+kzsob_GetKey|DBMS_OBFUSCATION_TOOLKIT_FFI.GETKEY
+kzsob_MD5|DBMS_OBFUSCATION_TOOLKIT_FFI.MD5
 kzsp|privileges
 kzsr|roles/remote password file
 kzstc|DBMS_CRYPTO_FFI.COOKIE
@@ -2648,12 +2781,27 @@ p2c|PLSQL PSD standalones
 par|PLSQL KG interface
 pb|PLSQL code execution
 pbbicd|KNLDE
+pbcov3gsct|DBMS_PLSQL_CODE_COVERAGE.PBCOV3GSCT START_COVERAGE
+pbcov3gstt|DBMS_PLSQL_CODE_COVERAGE.PBCOV3GSTT STOP_COVERAGE
 pbp3g|KNLDE
+pbp3gfpd|DBMS_PROFILER.PBP3GFPD FLUSH_PROFILER FLUSH_DATA
+pbp3gkcb|DBMS_PROFILER.PBP3GKCB GET_VERSION
+pbp3gpp|DBMS_PROFILER.PBP3GPP PAUSE_PROFILER
+pbp3grp|DBMS_PROFILER.PBP3GRP RESUME_PROFILER
+pbp3gsrp|DBMS_PROFILER.PBP3GSRP START_PROFILER
+pbp3gstp|DBMS_PROFILER.PBP3GSTP STOP_PROFILER
+pbp3gvck|DBMS_PROFILER.PBP3GVCK INTERNAL_VERSION_CHECK
 pbs|KNLDE
 pbt3g|KNLDE
 pci|PLSQL infrastructure
-pckl|Programmatic Interfaces to/from PL/SQL
-kcklfun|DBMS_JAVA_TEST.CALL_STATIC_JAVA_METHOD
+pckl|dbms_pickler
+pcklfdo|DBMS_PICKLER.GET_FORMAT_BUFFER
+pcklfun|DBMS_JAVA_TEST.CALL_STATIC_JAVA_METHOD
+pckltds|DBMS_PICKLER.GET_DESCRIPTORS
+pckltds2|DBMS_PICKLER.GET_DESCRIPTORS
+pckltds3|DBMS_PICKLER.GET_DESCRIPTORS
+pckltds4|DBMS_PICKLER.GET_DESCRIPTORS
+pcklupd|DBMS_PICKLER.UPDATE_THRU_REF
 pcm|PLSQL infrastructure
 pd|PLSQL code execution
 pdlifu|internal entrypoint for the PL/SQL code generator
@@ -2992,6 +3140,8 @@ qsmqutl|support
 qsms|management advisor
 qx|query execution
 qxdid|domain index ddl operations
+qxdid_odci_get_impltype_num|DBMS_ODCI.GET_IMPLTYPE_NUM
+qxdid_odci_set_privs|DBMS_ODCI.ODCI_SET_PRIVS
 qxidm|extensible index dml operations
 qxidp|domain index ddl partition operations
 qxim|support for objects
