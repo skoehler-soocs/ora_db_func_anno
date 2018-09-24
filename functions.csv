@@ -14,6 +14,7 @@ OCILobIsOpen|DBMS_LOB.KKXL_ISOPEN
 OCILobIsTemporary|DBMS_LOB.KKXL_ISTEMPORARY
 OCILobLoadFromFile|DBMS_LOB.KKXL_LOADFROMFILE
 OCILobSetOptions|DBMS_LOB.KKXL_SETOPTIONS
+OCIStmtExecute|execute
 adbdrv|alter database driver
 ain|alter index
 aop|audit options
@@ -38,6 +39,7 @@ csy|create synonym
 ctc|create table or cluster
 ctccom_cleanup_online_move|DBMS_PART.CLEANUP_ONLINE_OP_INTERNAL
 ctcdrv|driver
+cur|cursor manipulation
 cvw|create view
 dbga|Unified Tracing Service
 dbgc|diagnostic framework
@@ -124,6 +126,7 @@ dbkriprs_recover_schema|DBMS_ADR.RECOVER_SCHEMA
 dbkt|RDBMS UTS tracefile
 del|delete
 delexe|execute
+delrow|row procedure used by KXRD to delete or lock a row
 dgliaio|DBMS_INTERNAL_LOG_STDBY.APPLY_IS_OFF
 dglias|DBMS_LOGSTDBY.IS_APPLY_SERVER
 dglibld|DBMS_INTERNAL_LOG_STDBY.BUILD
@@ -189,7 +192,7 @@ dsy|drop synonym
 dtb|drop table
 dteerr|date error handler
 err|error recovery
-erroer|oracle error position
+erroep|oracle error position
 eva|evaluate
 evadid|date: internal date to date format
 evadis|date: internal date to string
@@ -425,7 +428,8 @@ k2v|recovery
 ka|access
 kad|objects anydata/images
 kaf|fetch
-kau|update
+kau|perform inserts, updates, deletes modifying indexes on tables
+kaudel|delete row from table and modify indexes (?)
 kauupd|update table and modify indexes
 kauxsin|insert a key into x index segment(s) only 
 kb|backup
@@ -442,11 +446,12 @@ kcbblwr|create redo records for list of blocks written (media recovery marker)
 kcbbwlru|write buffers from one of the LRU write lists
 kcbbxsv|take single buffer and check if we have to return to LRU
 kcbcbo|call begin object checkpoint (?)
-kcbdbh|dump one buffer
-kcbdnb|dump n buffers
 kcbchg|change a block
 kcbchg1|change a block
 kcbchk_ctx|check context, execute check functions
+kcbdbh|dump one buffer
+kcbdnb|dump n buffers
+kcbema|exam and maybe applu
 kcbgcur|get current read
 kcbget|get buffer (retry scan performed earlier by kcbgtcr)
 kcbgtcr|get consistent read
@@ -470,7 +475,7 @@ kcblgt|get buffer
 kcblin|operations for redo-less write interface
 kcblnb|load new buffer
 kcblnb_dscn|load new buffer
-kcblrd|read
+kcblrd|initiate read ahead
 kcblrl|load release buffer
 kcblrs|read submit
 kcblsy|load sync IO
@@ -610,7 +615,7 @@ kcpplgdf|DBMS_PLUGTS.KCP_PLGDF
 kcpplobp|DBMS_PLUGTSP.KCP_PLOBP PATCHLOBPROP
 kcpptmd|DBMS_PLUGTSP.KCP_PTMD PATCHTABLEMETADATA
 kcprdfh|DBMS_PLUGTS.KCP_RDFH
-kcr|redo
+kcr|recovery
 kcra|redo application/access
 kcramr|apply media recovery
 kcratr|thread redo application
@@ -632,6 +637,7 @@ kcrf_sync_adaptive_set|set adaptive log file sync mode
 kcrfds|do switch of current log
 kcrfisd|redo is on disk
 kcrfnl|next log
+kcrp|parallel
 kcrpap|apply change vector
 kcrfrgv|get change vector header/data
 kcrfsl|switch log
@@ -765,6 +771,7 @@ kdl|lob
 kdl_write|write into an ilob instance
 kdla|SecureFile Archive
 kdlgsp_init|space management batching
+kdlsfb|pull in up to size bytes of data from stream and start writing at offset
 kdli|Inode
 kdlrci|rci
 kdlrdb|read a block at a time
@@ -1131,8 +1138,12 @@ kfia|remote
 kfiac|IOServer client
 kfias|IOServer
 kfio|translation I/O layer
+kfioDumpPg|dump routine
 kfis|intelligent storage interfaces
 kfk|KFK
+kfk_dump|dump routine
+kfk_dump_iosubsys|io subsystem
+kfk_dump_kfkio|KFK IO 
 kfkio|IO
 kfksubs|subs
 kfks|sage (exadata)
@@ -1171,6 +1182,7 @@ kfpkgDGResizeFile|RESIZEFILE
 kfpkgDGSetSparseParent|SETSPARSEPARENT
 kfr|recovery
 kftha|transparent high availability
+kftr2ah|relative to absolute file number translation with hint
 kfv|volume subsystem
 kfvsd|background
 kfvsu|umbilicus
@@ -1225,7 +1237,7 @@ kghfrunp|free unpinned space
 kghfrx|free extent
 kghgex|get a new extent
 kghini|heap initialize
-kghnospc|no space available in the heap
+kghnospc|no space available in the heap, signal an error
 kghphini|parent heap initialize
 kghpmalo|find and return permanent chunk of space
 kghsrch|search freelists for a memory chunk
@@ -1249,6 +1261,7 @@ kgldpo|depend on an object
 kglfnd|find a chunk of at least the minimum size
 kglfrunp|ask a client to free unpinned space
 kglfrx|free extent (heap unpin)
+kglget|get a lock on an object
 kglgob|get an objected locked and pinned
 kglh|heap management
 kglhpd|heap deallocate
@@ -1271,6 +1284,7 @@ kglpndl|pin delete
 kglr|remote
 kglrfcl|reference clear
 kglsim|simulator 
+kglsscn|scan a loaded set invoking a supplied callback for each element
 kglunp|unpin heaps of an object
 kgm|inter-language method services
 kgmexcb|execution callback
@@ -1342,6 +1356,12 @@ kjbl|lock table
 kjbr|resource table
 kjc|communication
 kjci|cross instance call
+kjctr_pbmsg|process batch message
+kjctr_rksxp|read message from KSXP service
+kjctr_watq|read messages from wait queue
+kjctrcv|receive messages
+kjcts_dmpbmsg|dump batch message content
+kjctsrmg|receive a vector of messages
 kjcvcvd|deadlock detection routines
 kjfm|heartbeat monitoring
 kjfz|DLM-client freeze/unfreeze
@@ -1359,7 +1379,7 @@ kjhn_get_version_plsql|DBMS_HA_ALERTS.GET_VERSION
 kjk|RAC kernel accelerator
 kjlt|lock table
 kjm|RAC multiple LMS
-kjmsm|main action callback
+kjmsm|main action callback (LMS main loop)
 kjoe|DLM omni enqueue service
 kjpt|processes
 kjpsod|disconnect from DLM
@@ -1398,11 +1418,13 @@ kkbo|object
 kkcn|streams advanaced queuing 
 kkcnRegApply|DBMS_AQ.REGOP_APPLY
 kkcne|streams advanaced queuing notitication
-kkdc|data check
+kkdc|data check (constraints)
 kkdcacr|get all check and referential constrains
 kkdcico|insert constraint definition
 kkdl|dictionary lookup
+kkdlacd|get all column definitions
 kkdo|OBJECTS dictionary
+kkdoloi|load objects related information
 kke|cost engine
 kkeapr|analyze predicates for optimization returns stat ptr
 kkecdn|determine cardinality of a table given single table predicates
@@ -1448,6 +1470,8 @@ kkkiverify_root_pdb|DBMS_RMIN_SYS.RM$_IS_ROOT_PDB
 kkkiverify_str_in|DBMS_RMIN_SYS.RM$_VERIFY_STR_IND_INT
 kkkivldparea|DBMS_RMIN_SYS.RM$_VLDPAREA_EXT
 kkm|SQL semantic analysis
+kkmdel|extra semantic processes for deletes
+kkmevw|expand view
 kkmpost|post processing
 kkmupd|extra semantic processing for update
 kkn|analyze command
@@ -1462,6 +1486,7 @@ kkoOrExpand|or expansion
 kkoads|ADS
 kkoasj|add semi-join function
 kkoat|auto tuning optimizer
+kkocpjoinqb|copy and join query block
 kkocpqb|copy query block
 kkocri|create index
 kkodp|AQP
@@ -1483,11 +1508,16 @@ kkpo|partitioned objects
 kkpod|partitioning dictionary
 kkq|query 
 kkqcby|connect by
+kkqctdrv|cost based transformation driver
+kkqctdrvIT|initiate cost based transformation
+kkqctdrvTD|transformation directives
+kkqdrv|transformatiosn driver
 kkqgb|group by
 kkqgbp|placement
 kkqgbpColHasHighNDV|Column has high NDV
 kkqgbpCheckPred|check validity of predicate
 kkqgbpCheckValidity|check basic validity
+kkqgbpdrv|driver
 kkqgbptravChkTran|traverse, check and transfor
 kkqctdrv|cost based transformation driver
 kkqctdrvTD|transformation directives
@@ -1511,12 +1541,28 @@ kkri|parallel index create
 kkrp|parallelizer (DFO)
 kkrt|rowsource table create as select
 kks|shared objects (cursor)
+kksLoadChild|load child
+kksParseCursor|parse cursor
 kksalc|allocate compile time memory
 kksald|auxiliary load function
 kksalx|allocate bytes from the execution time heap
 kksarm|authorize for remote
-kksauc|authorize to use this child
+kksauc|authorized to use this child?
 kksaxs|semantic analysis, authorize and audit
+kkscls|close cursor, user is done with it
+kkscs|child cursor
+kksdopt|smart disk no option
+kksfbc|find bound cursor
+kksffr|free a frame
+kksh|cursor hash table
+kkslod|cursor load callback
+kkslof|log off (?)
+kkspfda|multiple context area management
+kkspsc0|parse shared cursor
+kkssbt|set bind types
+kksscl|scan child list
+kksumc|unmap shared cursor
+kksvld|validate cursor
 kksxCreate|DBMS_SQL_TRANSLATOR.CREATE_PROFILE
 kksxDeregErrorTrans|DBMS_SQL_TRANSLATOR.DEREGISTER_ERROR_TRANSLATION
 kksxDeregSQLTrans|DBMS_SQL_TRANSLATOR.DEREGISTER_SQL_TRANSLATION
@@ -1536,20 +1582,6 @@ kksxSetSQLTransError|DBMS_SQL_TRANSLATOR.SET_SQL_TRANSLATION_ERROR
 kksxSetSQLTransMod|DBMS_SQL_TRANSLATOR.SET_SQL_TRANSLATION_MODULE
 kksxTranslateError|DBMS_SQL_TRANSLATOR.TRANSLATE_ERROR
 kksxTranslateSQL|DBMS_SQL_TRANSLATOR.TRANSLATE_SQL
-kkscls|close cursor
-kkscs|child cursor
-kksdopt|smart disk no option
-kksfbc|find bound cursor
-kksh|cursor hash table
-kkslod|cursor load callback
-kkslof|log off (?)
-kksParseCursor|parse cursor
-kkspfda|multiple context area management
-kkspsc0|parse shared cursor
-kkssbt|set bind types
-kksscl|scan child list
-kksumc|unmap shared cursor
-kksvld|validate cursor
 kkt|triggers
 kktalt|alter trigger
 kktf|polymorphic table functions
@@ -1732,6 +1764,7 @@ klc|column array builder
 klclil1r|c level interface load 1 row
 klcs|character set
 kll|library
+kllcqgf|circular queue get free slot
 klllr|logical record
 klm|memory
 klmalf|allocate freeable memory
@@ -1882,10 +1915,15 @@ knlustrcmpcs|DBMS_LOGREP_UTIL.STRCMP_CS
 knlxmltolcr|DBMS_STREAMS_LCR_INT.CONVERT_XML_TO_LCR_INT
 knlzseshasrol|DBMS_LOGREP_UTIL.SESS_HAS_ROLE
 knlzusrhasrol|DBMS_LOGREP_UTIL.USER_HAS_ROLE
+knt|(internal) triggers
+kntxit|execute internal triggers
+kntxlp|exeucte internal triggers for LOB piecewise
+kntxrl|execute replication trigger for LOB
 ko|objects
 koc|cache manager
+kociih|instantiate an instance in the object heap
 kocedd|end duration
-kod|data manager
+kod|data manager (pickler)
 kodpunp|unpickle an image into an object
 kodrdel|UTL_REF.DELETE_OBJECT
 kodrlk|UTL_REF.LOCK_OBJECT
@@ -1894,13 +1932,21 @@ kodrslk|UTL_REF.LOCK_OBJECT
 kodrslsn|UTL_REF.SELECT_OBJECT_WITH_CR
 kodrupd|UTL_REF.UPDATE_OBJECT
 koh|heap manager
+kohaii|allocate and initialize an instance
 kohalc|allocate memory chunk
+kohatd|allocate using TDs
 kohdee|duration entry end
 kohdtg|duration table get a duration entry
 kohedu|end an user duration
 kohrsc|resize memory chunk
 koi|interface
+koicadt|construct ADT
+koicupt|construct UPT
+koio|?
+koiocon|constructor
+koionew|create (and pin) a new named instance
 kok|kernel side
+kokmrwo|KOK methods get new RWO vector enhanced with ordering
 koka|access
 kokd|driver
 koke|OBJECTS images
@@ -1918,17 +1964,26 @@ kokliclo|create with another locator
 kokligrd|initialize kdllfn with row data
 koklm|lob Default
 koklread|read
+kokltrim|trim
 koklv|lob default
 koks|OBJECTS semantic analysis
 kokt|OBJECTS DDL
 kola|lob
 kolaErrorHandler|error handler
+kolc|?
+kolcins|inset space for the element at the given index
+kolccst|construct element callback
 kole|lob default
 kolfgdir|file get directory object path and filenames
 koll|lob
 kolo|OBJECTS images
 kolr|lob refcount
+kols|?
+kolsins|insert space for the element at the given index
+kolstins|tree insert space for the element at the given index
 koluislc|UTL_COLL.IS_LOCATOR
+kopetrv|kop engine and traverse
+kopldsinit|kop lds initialize a pre-allocated lds
 kos|stream interfaces for images/objects
 kot|type manager
 kotg|accessor (get)
@@ -1960,6 +2015,8 @@ kpdbSync|DBMS_PDB.KPDBSYNC SYNC_PDB
 kpdbRecover|DBMS_PDB.KPDBRECOVER RECOVER
 kpdbUpdateCrossConStats|DBMS_PDB.KPDBCVUPDATECROSSCONSTRATS UPDATE_CDBVW_STATS
 kpdbUpdateVsn|DBMS_PDB.KPDBUPDATEVSN UPDATE_VERSION
+kpdbfCopyTaskCbk|parallel copy or move file task callback
+kpdbfDeleteFile|delete a file based on copy or move
 kpdbfdSetSharing|DBMS_PDB_ALTER_SHARING.KPDBFDSETSHARING SET_METADATA_LINKED SET_DATA_LINKED SET_EXT_DATA_LINKED SET_SHARING_NONE
 kpdbfdSetProfExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETPROFEXPLICIT SET_PROFILE_EXPLICIT
 kpdbfdSetUserExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETUSEREXPLICIT SET_USER_EXPLICIT
@@ -1986,6 +2043,7 @@ kponPurgeUnreachLoc|remove registrations for unreachable locations
 kpond|streams advanced queuing notitication
 kpoodr|replaces ttcdrv to handle pisdef in fastpath mode
 kpoopq|set keyword value pair
+kpooprx|open, parse, and optionally execute
 kpor|stream protocol used by replication
 kporpc|the oracle side function to start rpc
 kposc|scrollable cursors
@@ -2055,6 +2113,7 @@ kqlb|bootstrapping support
 kqld|dictionary callbacks
 kqldprr|parent referential constraint read
 kqlfgl|get row for Lock, fixed table support
+kqlfgx|get row for access table entry, fixed table support
 kqlftl|cache fixed Table for Locks callback
 kqllod|database object load
 kqlm|multi-instance manager
@@ -2450,14 +2509,16 @@ ksdxen|2-task entry point
 ksdxcb|ksdx callback for sosd layer signal handler
 ksdxfdmp|ksdx function: invoke named dump
 kse|error
+ksed|debug
 ksedmp|dump process state
-ksedst|dump call stack
-ksedst1|helper
+ksedst|dump the call stack
+ksedst1|stack trace 1 helper
 ksepop|perform cleanup when an error frame is being popped
 kserec1|record an error code
 ksesec1|recovery operations
 ksf|functions
 ksfd|disk IO
+ksfdDumpPGA|dump ksfd PGA
 ksfd_addtoissueq|add requests to issue queue
 ksfd_chkio|IO checker/io stats
 ksfd_clear_pgaobjsc|clear pga objects
@@ -2482,6 +2543,7 @@ ksfdmp|call the relevant dump routine
 ksfdnfy|PDB open notifier
 ksfdopn|open random access file fname
 ksfdpcl|process IO completion
+ksfdpgadump|ksfd dump PGA routine
 ksfdpoll|poll for IO completion
 ksfdread|read random access file in sync mode
 ksfdss|snapshot (clonedb)
@@ -2585,6 +2647,7 @@ ksmp|pga heap
 ksms|sga heap
 ksmshu|instance shutdown final check on sga
 ksmu|uga heap
+ksmudr|stack segment underflow, free the current stack segment and restore ?
 ksmuga|allocate user session global data
 ksmugf|release session global memory
 ksmuhe|allocate the uga heap using the parent heap specified if state = KSMUGCRE
@@ -2631,9 +2694,10 @@ ksucln|cleanup detached process
 ksucresg|create session with a process group specified
 ksucre|create user session in process
 ksucrp|create and initialise process
+ksudps|dump this processes
 ksugtcpums|get cpu measurement (?)
 ksuded|user disconnect
-ksudel|delete user session
+ksudel|delete specified user session
 ksudlc|delete call
 ksudlp|delete process. called when user deteches or cleanup by pmon
 ksudmp|dump process state object
@@ -2677,6 +2741,7 @@ kta|table access
 ktaadm|get all dml locks
 ktagetp|get partition lock
 ktagetg0|get generic dml lock
+ktagdm|get dml lock
 ktaiam|internal allocate dml lock 
 ktaidm|internal delete dml lock
 ktaifm|internal find dml lock
@@ -3014,7 +3079,7 @@ kwqaSetMaxStreamspool|DBMS_AQADM_SYSCALLS.SET_MAX_STREAMS_POOL
 kwqaSetMinStreamspool|DBMS_AQADM_SYSCALLS.SET_MIN_STREAMS_POOL
 kwqaStopMsgForwarding|DBMS_AQADM_SYSCALLS.KWQA_3GL_STOP_MSG_FORWARDING
 kwqd|dequeue
-kwqi|plsql trusted callouts
+kwqi|internal/plsql trusted callouts
 kwqiautoplsreg|DBMS_AQ.CREATE_DEQUEUE_JOB
 kwqiautoplsstart|DBMS_AQ.ENABLE_DEQUEUE_JOB
 kwqiautoplsstop|DMBS_AQ.DISABLE_DEQUEUE_JOB
@@ -3023,6 +3088,8 @@ kwqiadtdeq|DBMS_AQ.DEQUEUE
 kwqiadtenq|DBMS_AQ.ENQUEUE
 kwqic|pre-12c notitication
 kwqicRepBgOper|DBMS_AQ.AQ$_BACKGROUND_OPER_INT
+kwqicdelrow|delete row from queue table
+kwqicgpc|common get parsed cursor
 kwqichkopt|DBMS_AQADM_SYS.CHECKOPTION
 kwqid|dequeue
 kwqideqarr|DBMS_AQ.DEQUEUE_ARRAY
@@ -3060,10 +3127,15 @@ kwqiplspost|DBMS_AQ.POST
 kwqisetdeqsort|DBMS_AQIN.SET_DEQ_SORT_IN
 kwqisretry|DBMS_AQIN.SET_MULTI_RETRY_IN
 kwqit|time manager
+kwqitmmit|calback function which processes tables
+kwqitmmsgs|messages
+kwqitnmptme|newstyle multiconsumer queues
+kwqitptm|perform time management
 kwqj|job queue scheduler for propagation
 kwqm|multiconsumer queue IOT support
 kwqmn|time manager
 kwqmnslv|slave callback called by ksvrdp
+kwqmstmgr|queue scan time manager entries
 kwqn|queue notifier
 kwqngetfrommail|DBMS_AQELM.GET_SENDFROM
 kwqngethostmail|DBMS_AQELM.GET_MAILHOST
@@ -3126,7 +3198,7 @@ kxfp|process and queue manager
 kxfpb|buffers
 kxfpbgpc|get permanent chunks
 kxfpbgtc|buffer allocation get chunk
-kxfpgcg|get server group (coordinator)
+kxfpgsg|get server group (coordinator)
 kxfpnfy|notify
 kxfpqdqr|Queue DeQueue queue Reference
 kxfpqidqr|Queue Internal DeQueue queue Reference
@@ -3143,12 +3215,15 @@ kxfrAllocSlaves|allocate slaves
 kxfralo|allocate rowid ranges and slave processes
 kxfs|slave
 kxft|parallel execution PTL
+kxftaskload|this is the load callback that is called for by qerfxFetch to get ...
 kxfx|execution
 kxfxcp|client side (qc) interface
 kxfxcw|kxfxrytab yields the (greatest) reply type expected from a
 kxfxgs|get start
 kxfxmai|slave process main entry point
 kxfxq|queueing
+kxfxsExecute|slave execute
+kxfxsStmtExecute|statement execute
 kxfxse|execute
 kxfxsp|open, parse, bind entire DFO
 kxh|hash join
@@ -3163,6 +3238,7 @@ kxru|row update
 kxs|shared cursor
 kxsGetRuntimeLock|get runtime lock
 kxsbndinf|bind variable information
+kxscln|cleanup instantiation object
 kxsffir|function fire called when the appropriate heap is going away
 kxst|sql trace
 kxstcls|cursor closing
@@ -3388,6 +3464,7 @@ mdgr|spatial georaster
 mdr|spatial indexing
 msqima|generating sql statements
 msqimb|generating sql statements
+msqrxq|make sql for remote execution
 n|network
 na|authentication
 nau_ctl|aUthentication ConTroL
@@ -3450,6 +3527,7 @@ opifch2|main routine
 opifch|oracle side of the fetch interface
 opifcr|fetch callback - fetch a row?
 opifcs|free cursors by session close
+opigln|get long column
 opiino|initialize opi
 opikndf2|OPIINO: Kernel route which sits on top of the SQL*Net
 opilof|log off
@@ -3898,7 +3976,8 @@ prs|parse
 prsase|initialisation parameter names
 prscmd|command
 prsctc|create table/cluster
-prsdrv|delete
+prsdel|delete
+prsdrv|driver (?)
 prspo_proc_opts|(or only validate) PHysical Attribute specification
 prsrss|recursive alter system or session
 prssz|parse context to be saved
@@ -3960,7 +4039,20 @@ qbaopn|create control structures
 qc|compile
 qcd|semantic analysis
 qcdo|dictionary support for objects
+qcdoloi|load object specific information
 qcp|parse
+qcpbex|boolean expression
+qcpbfa|boolean term
+qcpbte|boolean factor
+qcpicmd|command
+qcpiere|expression relop expression
+qcpierr|raise error
+qcpiidn|next identifier
+qcpilcl|logical clause
+qcpilcl0|(private) 
+qcpiltb|lock table command
+qcpitnm|table name
+qcplgnt|lexer get next token
 qci|language parser and semantic analyser
 qciSetPlSqlCtx|set plsql context during a compile
 qcop|parse
@@ -3981,6 +4073,9 @@ qct|type check operations
 qctcopn|typechecks the query block and its descendant
 qcto|operators
 qctopls|typecheck OPTPLS operator
+qcu|utility
+qcuErr|error
+qcuErroep|oracle error position
 qe|execute
 qeae|aggregate (order by) elimination (?)
 qeaeCn1Serial|count function
@@ -4010,7 +4105,7 @@ qerep|explosion
 qerff|fifo buffer
 qerfi|first row
 qerfl|filter definition
-qerflFetchOutside|fetch row from a sort row source table
+qerflFetchOutside|fetch row from a row source
 qerfu|update
 qerfx|fixed table
 qerfxArrayMaxSize|array max size
@@ -4018,6 +4113,7 @@ qerfxGConId|get container id
 qerfxGCol|get column
 qerfxFetch|fetch
 qergh|hash group by
+qerghStart|start
 qergi|granule iterator (partitioning)
 qergiFetch|Fetch procedure of PX granule Iterator Row source Rowid
 qergr|group by rollup
@@ -4031,6 +4127,7 @@ qerhjWalkHashBucket|walk a list of pointers in a hash bucket and check for a mat
 qeril|in list
 qerim|index maintenance
 qerix|index
+qerixFetchFastFullScan|index fast full scan
 qerixtFetch|fetch operation for index range scan
 qerjo|nested loop outer
 qerjoFetch|fetch from join rowsource
@@ -4039,6 +4136,7 @@ qerjotFetch|fetch
 qerle|linear execution implementation
 qerli|parallel create index
 qerlt|load table
+qerltRop|row procedure callback
 qerlt_olev|out-of-line columns, evaluate and stash away
 qerlt_snv|stash away and new values
 qerltFetch|fetch
@@ -4059,7 +4157,8 @@ qerpa|partition
 qerpf|query execution prefetch
 qerpsel|parallel execution PX selector
 qerpx|parallel execution 
-qerpxFetch|fetch
+qerpxFetch|fetch method for parallelizer row source
+qerpxSlaveFetch|fetch method row source
 qerrc|vector translate
 qerrm|remote
 qersc|AQP
@@ -4075,8 +4174,10 @@ qertbFetch|fetch
 qertbFetchByRowId|using inderlying row source by rowid or cluster key
 qertbSaveMethod|save IO request for batching(?)
 qertq|table queue (px)
+qertqoFetch|output table queue fetch method
 qertqoInitRowDesc|use tqo row vector to determine the partitioning columns
 qerua|union all
+qeruaStart|start
 qeruaFetch|fetch
 qerup|update
 qerupFetch|fetch
@@ -4084,6 +4185,7 @@ qerus|upsert
 qerusAllocateX|allocate row source
 qervw|view
 qervwFetch|fetch 
+qervwRowProcedure|row procedure
 qerwn|window
 qerxl|vector translate
 qerxp|XDB Query
@@ -4138,6 +4240,7 @@ qkadrv|allocate query structures
 qkaffs|fast full scan
 qkajoi|join processing
 qkanindex|analyzes the usage of the argument non-clustered index
+qkaqkn|row source allocation
 qkaset|set expression
 qkatab|runtime allocation for base table row sources
 qkatrv|traverse set expression tree
@@ -4404,6 +4507,7 @@ rwsaidX|allocate new identity source
 rwsima|retrieval according to defining query
 rwsdef|definitions
 rwsfcd|fetch from rowsource
+rwsstd|start row source
 sdbima|sort operation
 sdbgrf|Diagnostic directory and file services
 sdbgrfwf_write_file|write to tracefile
@@ -4507,6 +4611,8 @@ sskgpwpost|post
 sskgxp|ipc communication
 sskgxpu|udp
 sskgxph|hmp implementation (hpux)
+sslssSynchHdlr|SSLS signal handler for synch. signals
+sslsshandler|SSLS signal handler for all signals
 sspuser|handle SIGUSR2 for Oracle
 ssthrdmain|main for every thread in a threaded oracle
 std|PLSQL apps
@@ -4520,6 +4626,7 @@ ttcc2u|convert type x to type y
 ttcclr|send/receive without conversion
 ttcpip|pipe read/write
 ttp|Database Audit Next Generation
+subex1|evaluate subquery; exists subquery method 1
 subsr1|evaluate subquery; single row subquery method 1
 subsr3|evaluate subquery; single row subquery method 3
 ub8_to_kscn_impl|convert ub8 to kernel SCN
@@ -4533,6 +4640,7 @@ updexe|update execute
 updpcr|perform constraint operations for each row updated
 updrow|Row Procedure used by KXRD to update or lock a row
 upi|user program interface
+upirtrc|router with callback
 ups|upsert
 upsexe|execute
 vop|view optimisation
