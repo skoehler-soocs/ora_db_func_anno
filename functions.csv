@@ -4385,30 +4385,31 @@ qosdImportSPD|DBMS_SPD_INTERNAL.IMPORT_SPD_CALLOUT
 qosdUB8ToSqlId|DBMS_SPD_INTERNAL.UB8_TO_SQLID
 qosdVecbit|DBMS_SPD_INTERNAL.VECBIT
 qosdgelc|DBMS_STATS_INTERNAL.GET_EXP_LIST_CALLOUT
-qs|query summary
-qsme|management expression processing
+qs|system
+qsm|management
+qsme|expression processing
 qsmg_generate_checksum|PRVT_TUNE_MVIEW.GENERATE_CHECKSUM
 qsmg_mvlog_advisor|PRVT_SYS_TUNE_MVIEW.ANALYZE_MVLOGS
 qsmg_rewrite_query|PRVT_TUNE_MVIEW.REWRITE_QUERY_INTERNAL
 qsmka|determine if summary would be useful
 qsmkz|create/alter summary semantic analysis
+qsmmcd|access advisor
 qsmmcdGetTaskScript|PRVT_ACCESS_ADVISOR.GET_TASK_SCRIPT
 qsmmcdImplementTask|PRVT_ACCESS_ADVISOR.X_IMPLEMENT_TASK
 qsmmcdMain|PRVT_ACCESS_ADVISOR.AA_MAIN
 qsmmcdParamValidate|PRVT_ACCESS_ADVISOR.PARAM_VALIDATE_EXT PRVT_WORKLOAD.PARAM_VALIDATE_EXT
 qsmmhwghw|PRVT_WORKLOAD.GEN_HYP_WKD
-qsmmwrkDeleteStatement|PRVT_WORKLOAD.DELETE_ST
 qsmmutlGetNewName|PRVT_ACCESS_ADVISOR.GET_NEW_NAME
-qsmmwrkImportSqlTuningSet|PRVT_WORKLOAD.IMPORT_SQLCACHE
-qsmmwrkImportSqlTuningSet|PRVT_WORKLOAD.IMPORT_STS
+qsmmwrkDeleteStatement|PRVT_WORKLOAD.DELETE_ST
+qsmmwrkImportSqlTuningSet|PRVT_WORKLOAD.IMPORT_SQLCACHE PRVT_WORKLOAD.IMPORT_STS 
 qsmmwrkImportSumadv|PRVT_WORKLOAD.IMPORT_SUMADV
-qsmmwrkInsertStatement|PRVT_WORKLOAD.SQLW_INSERT
 qsmmwrkImportUser|PRVT_WORKLOAD.IMPORT_USER
+qsmmwrkInsertStatement|PRVT_WORKLOAD.SQLW_INSERT
 qsmmwrkRecordJournal|PRVT_WORKLOAD.RECORD_JNL_ENTRY
 qsmmwrkResetWorkload|PRVT_WORKLOAD.X_RESET_WORKLOAD
 qsmmwrkUpdateStatement|PRVT_WORKLOAD.UPDATE_ST
 qsmp|partition processing
-qsmo|summary o(?)
+qsmo|optimizer
 qsmoAcceptAdaptivePlanExt|DBMS_SPM_INTERNAL.I_ACCEPT_ADAPTIVE_PLAN
 qsmoAlterPlans|alter plans driver
 qsmoAlterPlansExt|DBMS_SPM.I_ALTER_SQL_PLAN_BASELINE
@@ -4422,8 +4423,9 @@ qsmoSPMAllowedExt|DBMS_SPM_INTERNAL.CHECK_SPM_ALLOWED
 qsmq|dictionary access
 qsmqcsm|create/drop/alter summary
 qsmqutl|support
-qsms|management advisor
+qsms|advisor
 qsmssql|PRVT_WORKLOAD.ANALYZE_SQL
+qsoda|DBMS_SODA
 qsodaplsCreateColl|DBMS_SODA.CREATE_COLLECTION
 qsodaplsDropColl|DBMS_SODA.DROP_COLLECTION
 qsodaplsOpenColl|DBMS_SODA.OPEN_COLLECTION
