@@ -44,6 +44,10 @@ cvw|create view
 dbga|Unified Tracing Service
 dbgc|diagnostic framework
 dbgd|diagnostic events
+dbgdCopyEventNode|transfers event information from PGA to SGA and back
+dbgdLinkEvent|link event information into the list 
+dbgdSetEvents|set event
+dbgdUnLinkEvent|unlink event information from the list 
 dbge|diagnostic data extractor
 dbgeEndDDEInvocation|Explicitly end a DDE invocation
 dbgeEndDDEInvocationImpl|(internal)
@@ -1483,7 +1487,8 @@ kknpob|partition object
 kknls|locks/security
 kko|optimizer
 kkoOrExpand|or expansion
-kkoads|ADS
+kkoads|active dynamic sampling (ADS)
+kkoadsComputeSqlid|compute sqlid
 kkoasj|add semi-join function
 kkoat|auto tuning optimizer
 kkocpjoinqb|copy and join query block
@@ -4254,7 +4259,13 @@ qks|sql
 qks3t|temp table transformation
 qksan|analyze
 qksctx|MPGE
-qksds|Dynamic Sampling Services
+qksds|Dynamic Sampling Services (ADS)
+qksdsCheckPreds|check and find usable predicates
+qksdsExecute|execute sql to obtain information before actual sampling
+qksdsExeStmt|execute sql for actual sampling
+qksdsFindSampleTable|find tables to sample
+qksdsDumpResult|dump results (to trace file); trace[ADS]
+qksdsInitCtx|start and initialize ADS
 qksmm|compiler memory management
 qksmms|simulation
 qksop|compilter operand processing
@@ -4381,6 +4392,7 @@ qosdCheckWindowMode|DBMS_STATS_INTERNAL.CHECK_WINDOW_CAPTURE_MODE
 qosdDelExprStats|DBMS_STATS_INTERNAL.DELETE_EXPR_STATS_CALLOUT
 qosdDSResExternal|DBMS_SPD_INTERNAL.DS_RES_INTERNAL
 qosdFlushSPD|DBMS_SPD_INTERNAL.FLUSH_SPD_CALLOUT
+qosdGetFObjKeyFromStmt|get stat/DS(?) results using sql text (stmt)?
 qosdImportSPD|DBMS_SPD_INTERNAL.IMPORT_SPD_CALLOUT
 qosdUB8ToSqlId|DBMS_SPD_INTERNAL.UB8_TO_SQLID
 qosdVecbit|DBMS_SPD_INTERNAL.VECBIT
