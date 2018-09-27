@@ -4261,7 +4261,7 @@ qksan|analyze
 qksctx|MPGE
 qksds|Dynamic Sampling Services (ADS)
 qksdsCheckPreds|check and find usable predicates
-qksdsExecute|execute sql to obtain information before actual sampling
+qksdsExecute|execute
 qksdsExeStmt|execute sql for actual sampling
 qksdsFindSampleTable|find tables to sample
 qksdsDumpResult|dump results (to trace file); trace[ADS]
@@ -4527,6 +4527,11 @@ sdbgrf|Diagnostic directory and file services
 sdbgrfwf_write_file|write to tracefile
 scg|concurrency global locks
 scm|PLSQL apps
+scu|concurrency unique(?) 
+scuinst|instance
+sculkget|lockfile (lk<DB_UNIQUE_NAME>)
+scumnt|mount
+scurls|release
 sel|select
 selexe|execute: prepare area for fetch
 seq|sequence numbers
