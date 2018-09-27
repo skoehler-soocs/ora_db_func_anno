@@ -184,6 +184,7 @@ dmutilTxtTokensClob|ODM_UTIL.DM_TXT_TOKENS
 dmutilTxtTokensStr|ODM_UTIL.DM_TXT_TOKENS
 dr|text
 dre|index
+drepprep|perform the document indexing
 drex|query
 drg|index
 drn|index
@@ -473,7 +474,7 @@ kcbk|checkpoint queue manipulation
 kcbk_prefetch_track|db_block_prefetch administration
 kcbklbc|link buffer into ckpt queue
 kcbkllrba|find lowest low RBA on checkpoint queues
-kcbl|direct io routines
+kcbl|(loader) direct io routines
 kcblci|check input
 kcblgt|get buffer
 kcblin|operations for redo-less write interface
@@ -641,8 +642,7 @@ kcrf_sync_adaptive_set|set adaptive log file sync mode
 kcrfds|do switch of current log
 kcrfisd|redo is on disk
 kcrfnl|next log
-kcrp|parallel
-kcrpap|apply change vector
+kcrfr|read
 kcrfrgv|get change vector header/data
 kcrfsl|switch log
 kcrfvh|verify header
@@ -681,10 +681,11 @@ kcrhvbo|header verify
 kcrm|media recovery
 kcropn|open online logfile for kcroio and kcrfoc
 kcrp|recovery parallel
-kcrpclaim|claim recovery buffers
-kcrpsend_claim|send recovery buffer claim message
+kcrpap|apply change vector
 kcrpap|recovery parallel
+kcrpclaim|claim recovery buffers
 kcrpdv|recovery parallel (driver?)
+kcrpsend_claim|send recovery buffer claim message
 kcrr|redo archival
 kcrrlh|log history
 kcrv|recovery
@@ -729,7 +730,7 @@ kdblai|database block loader array insertion
 kdblailb|load block
 kdbmrd|multi row slot delete
 kdc|cluster
-kdd|delete
+kdd|delete/(cluster?)
 kddchg|perform delete/update change
 kdddgb|delete get block
 kdeu|export unload
@@ -855,7 +856,7 @@ kduovw|updates already existing rows
 kduurp|singe row update, main entry
 kdusru|single row update
 kdwf|worker framework
-kdx|index
+kdx|index block
 kdxokcmp|Auto Prefix Compressed Index
 kdxt|temporary block
 kdz|archive compression
@@ -1674,7 +1675,7 @@ kkxtilc|DBMS_INTERNAL_TRIGGER.KKXTILC INVALIDATE_LIBRARY_CACHE
 kkxtmit|DBMS_INTERNAL_TRIGGER.KKXTMIT MAINTAIN_INTERNAL_TRIGGER
 kkxtusv|DBMS_INTERNAL_TRIGGER.KKXTUSV SET_UGAKNT
 kkxuexe|stub execute
-kkxwtp|compiler
+kkxwtp|plsql compiler
 kky|system
 kkyasy|alter system driver
 kkziIsUserCreatedIdx|DBMS_REDEFINITION.IS_USER_CREATED
@@ -2049,7 +2050,7 @@ kpond|streams advanced queuing notitication
 kpoodr|replaces ttcdrv to handle pisdef in fastpath mode
 kpoopq|set keyword value pair
 kpooprx|open, parse, and optionally execute
-kpor|stream protocol used by replication
+kpor|RPC callback for streaming
 kporpc|the oracle side function to start rpc
 kposc|scrollable cursors
 kpotc|setting up trusted external procedure callbacks
@@ -2067,8 +2068,9 @@ kpplicfgcp|DBMS_CONNECTION_POOL.CONFIGURE_POOL
 kpplistpcp|DBMS_CONNECTION_POOL.STOP_POOL
 kpplistrcp|DBMS_CONNECTION_POOL.START_POOL
 kpr|recursive program interface
+kprb|bundled operations
 kprball|execute all bundled kpr/rpi operations
-kprc|copy routines
+kprc|RPI copy routines
 kps|transparent Session Migration
 kpscrcap|DBMS_SESSION_STATE.SS_CAPTURE
 kpscrmrk|DBMS_SESSION_STATE.SS_MARK_CAPTURE
@@ -2480,7 +2482,7 @@ krvt|log miner viewer support
 krvugaclr|DBMS_LOGMNR_INTERNAL.KRVUGACLR
 krvugaset|DBMS_LOGMNR_INTERNAL.KRVUGASET
 ks|service
-ksa|async
+ksa|asynchronous messages
 ksaamb|allocate message buffer
 ksadmb|deallocate message buffer
 ksarcv|receive message
@@ -2497,6 +2499,7 @@ ksbrdp|run a detached background process
 ksbxiaf|ksbxic (cross instance calls) message and interrupt action
 ksbxiafdomsg|ksbxic and async xic static functions
 ksbt|background processes
+ksc|component notifier
 kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|system notifications to be passed to components
 ksd|debug internal errors
@@ -2568,15 +2571,15 @@ ksfmplsmapfile|DBMS_STORAGE_MAP.MAP_FILE_CALLOUT
 ksfmplsrestore|DBMS_STORAGE_MAP.RESTORE_CALLOUT
 ksfmplsunlockmap|DBMS_STORAGE_MAP.UNLOCK_MAP_CALLOUT
 ksfpec|io post and event
-ksfq|io sequential io interface
+ksfq|sequential file io interface
 ksfq_alo|allocate device
 ksfsp|DBMS_FS
 ksfsp_make_fs|KSFSP_MAKE_FS
 ksfsp_mount_fs|KSFSP_MOUNT_FS
 ksfsp_destroy_fs|KSFSP_DESTROY_FS
-ksfv|io server
+ksfv|file io server
 ksi|instance locking
-ksim|messaging
+ksim|manager
 ksimPrintGroupMemPGA|print out pga group memory (oradebug)
 ksimPrintGroupMemCache|print out group memory cache (oradebug)
 ksimgchg|group state change
@@ -2597,7 +2600,7 @@ kskthexit|thread exit
 kskthrsod|thread state object delete
 kskvmstatact|measure swap-in and swap-out (and generate error if amount is more than 2% of real memory)
 kskwait_timed_cpu|resource manager wait routine
-ksl|lock management
+ksl|latching & post-wait
 ksl_get_child_latch_range|get all child latches for a range
 ksl_get_child_latches|get all child latches
 ksl_get_shared_latch|get latch in shared mode
@@ -2842,7 +2845,7 @@ ktl|list blocks changed
 ktldbl|delete list of block SO's
 ktli_UpgradeUpdateInstIdAllLogs|DBMS_SECUREFILE_LOG_ADMIN.UPGRADE_INST_ALL_LOGS
 ktliDestroyAllLogs_Mig|DBMS_SECUREFILE_LOG_ADMIN.DESTROY_ALL_LOGS
-ktm|transaction monitor
+ktm|transaction monitor (smon)
 ktma|IM ADG
 ktmSmonMain|main smon routine
 ktmb|IM block
@@ -2930,7 +2933,7 @@ ktubgn|begin transaction
 ktubko|get undo record to rollback transaction, non-cr only
 ktubnd|bind undo segment
 ktubsy|check if an extent can be reclaimed using extent commit time
-ktuc|called from cache
+ktuc|called from cache layer
 ktuchg|write logs and perform changes
 ktucmt|commit transaction
 ktudba|convert from usn to dba
@@ -2943,6 +2946,7 @@ ktugusc|get undo segment
 ktuisonline1|return undo segment info if undo segment is online
 ktundo|undo
 ktunfy|notification procedure
+ktur|recovery
 kturCRBackoutOneChg|consistent read; backout changes
 kturGetUndoRec|get an undo record
 kturcm|redo commit
@@ -3246,7 +3250,7 @@ kxsbndinf|bind variable information
 kxscln|cleanup instantiation object
 kxsffir|function fire called when the appropriate heap is going away
 kxst|sql trace
-kxstcls|cursor closing
+kxstcls|trace cursor closing
 kxtex1|execute trigger
 kxti|trigger
 kxto|trigger
@@ -3467,8 +3471,7 @@ main|general c starting function
 md|spatial
 mdgr|spatial georaster
 mdr|spatial indexing
-msqima|generating sql statements
-msqimb|generating sql statements
+msq|generating sql statements
 msqrxq|make sql for remote execution
 n|network
 na|authentication
@@ -3550,6 +3553,7 @@ opistr|start oracle
 opitca|sets up context area
 opitsk|two task function dispatcher
 opiul|direct loader
+opix|transfer to remote
 orp|oracle external pickler/opaque type interface
 ort|OBJECTS Types
 osn|Two Task
@@ -3979,6 +3983,7 @@ priold|rpc forwarding to older releases
 prm|parameter handling with sql layer
 prs|parse
 prsase|initialisation parameter names
+prsc|create database
 prscmd|command
 prsctc|create table/cluster
 prsdel|delete
@@ -4456,7 +4461,6 @@ qxope|support for operator ddl
 qxopq|support for user-defined operators
 qxuag|support for user-defined aggragate processing
 qxxm|support external tables
-rae|rowsource and-equal 
 rbfima|rowsource buffer implementation a
 rcoima|rowsource count implementation a
 rfa|data guard (?)
