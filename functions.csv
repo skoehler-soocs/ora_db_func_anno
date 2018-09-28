@@ -4546,7 +4546,7 @@ sdbgrf|Diagnostic directory and file services
 sdbgrfwf_write_file|write to tracefile
 scg|concurrency global locks
 scm|PLSQL apps
-scu|concurrency unique(?) 
+scu|operating system concurrency unique(?) 
 scuinst|instance
 sculkget|lockfile (lk<DB_UNIQUE_NAME>)
 scumnt|mount
