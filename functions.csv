@@ -531,6 +531,7 @@ kcbzwb|wait buffer (buffer busy wait)
 kcbzwc|wait (write) complete
 kcbzwcw|wait
 kcc|controlfile
+kcc_tac_callback|timed-out actions callback routine (could signal waiting too long)
 kccbcx|begin control transaction
 kccccf|close control files
 kccchb|cache header block 
@@ -639,6 +640,7 @@ kcrf_pvt_strand_bind|try to bind private strand
 kcrf_read_header|read header
 kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
 kcrf_sync_adaptive_set|set adaptive log file sync mode
+kcrf_val_log_bsz|evaluate physical blocksize for logfile IO(?)
 kcrfds|do switch of current log
 kcrfisd|redo is on disk
 kcrfnl|next log
@@ -679,10 +681,10 @@ kcrfwr|write redo into the logbuffer
 kcrfws|wait for space (logswitch)
 kcrhvbo|header verify
 kcrm|media recovery
+kcroio|online logfile IO routines
 kcropn|open online logfile for kcroio and kcrfoc
 kcrp|recovery parallel
 kcrpap|apply change vector
-kcrpap|recovery parallel
 kcrpclaim|claim recovery buffers
 kcrpdv|recovery parallel (driver?)
 kcrpsend_claim|send recovery buffer claim message
@@ -1144,6 +1146,7 @@ kfiac|IOServer client
 kfias|IOServer
 kfio|translation I/O layer
 kfioDumpPg|dump routine
+kfioPhysical|get physical sector size
 kfis|intelligent storage interfaces
 kfk|KFK
 kfk_dump|dump routine
@@ -1159,6 +1162,8 @@ kfmsInit|initialise group services (>kgxgncin>cssd)
 kfn|networking subsystem
 kfnb|umbilicus
 kfnc|client networking
+kfncPhysical|request physical sector size
+kfncSlaveSubmit|submit request
 kfnm|umbilicus
 kfnor|KFN orion
 kfns|server networking
@@ -2513,9 +2518,10 @@ ksdind|DBMS_SYSTEM.KSDIND_ICD KSDIND
 ksdp|parser
 ksdpcg|post and check event in the specified event group
 ksdpec|post event and check trigger condition
-ksdxen|2-task entry point
 ksdxcb|ksdx callback for sosd layer signal handler
+ksdxen|2-task entry point
 ksdxfdmp|ksdx function: invoke named dump
+ksdxfstk|dump abridged os stack
 kse|error
 ksed|debug
 ksedmp|dump process state
@@ -2531,6 +2537,7 @@ ksfd_addtoissueq|add requests to issue queue
 ksfd_chkio|IO checker/io stats
 ksfd_clear_pgaobjsc|clear pga objects
 ksfd_do_io_verification|do IO verification
+ksfd_get_physical_sectsz|read physical sectorsize from device
 ksfd_gosdrq|get os dependent requests
 ksfd_osdrqfil|operating system dependent request 
 ksfd_sage_poosible|exadata offloading possible check
@@ -2546,6 +2553,7 @@ ksfdfchkaio|check if aio can be done
 ksfdgaiolmt|get aio limit
 ksfdgfno|get file number
 ksfdgo|execute IO
+ksfdgpsz|get physical (sector) size
 ksfdgrsz|get request size
 ksfdmp|call the relevant dump routine
 ksfdnfy|PDB open notifier
@@ -2697,7 +2705,7 @@ kstmchkdrift|check drift
 kstmgethighresustick|get high resolution time
 ksu|user
 ksu_detactive_tac|deactivete time accounting
-ksu_dispatch_tac|dispatch timed-out action (updates wait interface)
+ksu_dispatch_tac|dispatch timed-out actions (updates wait interface)
 ksucln|cleanup detached process
 ksucresg|create session with a process group specified
 ksucre|create user session in process
@@ -2728,7 +2736,13 @@ ksuxds|acquires the ksupol, the so latch protects access to the sniper bit
 ksuxdl|delete state object for PMON
 ksuxfl|find dead processes and cleanup their latches. called by PMON
 ksv|slave management
+ksvcheckwait|validate waiting situation
+ksvcreate|create slave process
 ksvrdp|run generic detached slave process
+ksvsend|send message to slave process
+ksvsubmit|submit request for ASM Onnn slave process
+ksvwait|setup waiting 
+ksvworkwait|wait for submitted work
 ksws_int_tag_sess|DBMS_SERVICE.INT_TAG_SESSION
 ksws_kill_sess|DBMS_SERVICE.IKILL_SESSION
 ksws_map_rc_to_error|DBMS_SERVICE.I_MAP_ERROR (?)
@@ -3144,6 +3158,7 @@ kwqj|job queue scheduler for propagation
 kwqm|multiconsumer queue IOT support
 kwqmn|time manager
 kwqmnslv|slave callback called by ksvrdp
+kwqmnstslv|start AQ slave process
 kwqmstmgr|queue scan time manager entries
 kwqn|queue notifier
 kwqngetfrommail|DBMS_AQELM.GET_SENDFROM
