@@ -769,6 +769,7 @@ kdiins0|inserts the argument key and associated keydata
 kdiixs|index range scan
 kdil|load
 kdim|coalesce
+kdimod0|modifies the argument key's row from the argument index according
 kdis|split
 kdiss|skip scan
 kdiulk|undo leaf operation
@@ -2692,6 +2693,7 @@ ksqcnv|convert an enqueue's mode
 ksqcmi|change lock mode internal
 ksqded|deadlock check
 ksqdel|release an enqueue
+ksqdldnl|deadlock dump ktagetg0
 ksqgel|get an enqueue
 ksqget|get an enqueue
 ksqgtl|get an enqueue
@@ -2944,9 +2946,12 @@ ktspfpblk|pin useful block
 ktspfsrch|first level bitmap block search
 ktspfsteal|Search cache for Pointer to data area of LII bitmap block
 ktspgetf|Get next set of L1s
+ktspgfblk3|let L1 BMB
 ktspgsp_cbk|Get Space for inserts
 ktspgsp_cbk1|Get Space for inserts bitmap segment only
 ktspgsp_main|get space for inserts
+ktsplbfmb|reclaim free fatblocks from lob index
+ktsplbrecl|reclaim lob
 ktspmlhwm|Move the Low High Water Mark. Called when a range of blocks is formatted
 ktspsc|search cache
 ktspscan_bmb|scan the level 1 bitmap blocks
@@ -4261,6 +4266,7 @@ qesdpiUpgradeTable|DBMS_DST.UPGRADE_TABLE_KERNEL
 qesgv|vector aggregate
 qesma|partitioning
 qesmm|memory manager (pga)
+qesltc|load table conventional
 qespc|partitioning
 qesrc|result cache
 qesrcPS_BKDrv|DBMS_RESULT_CACHE.BK_DRV BLACKLIST_ADD/REMOVE/CLEAR
