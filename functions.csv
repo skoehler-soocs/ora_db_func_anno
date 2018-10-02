@@ -63,7 +63,7 @@ dbgre|export/import services
 dbgrf|directory and file services
 dbgri|incident metadata services
 dbgrm|meta-data repository
-dbgt|diagnostic component test parent
+dbgt|Unified tracing service, diagnostic component test parent
 dbgtf|directory and file services
 dbgtn|UTS viewer toolkit
 dbgtp|UTS viewer toolkit
@@ -1153,8 +1153,8 @@ kfk_dump|dump routine
 kfk_dump_iosubsys|io subsystem
 kfk_dump_kfkio|KFK IO 
 kfkio|IO
-kfksubs|subs
 kfks|sage (exadata)
+kfksubs|subs
 kfm|node monitor interface implementation
 kfmd|layer for diskgroup registration
 kfms|layers support function interface
@@ -1307,7 +1307,11 @@ kgmgchd|get compilation handle
 kgmtconv|conversion
 kgmtimob|image to object (named types)
 kgnfs|network file system
+kgnfs_wat|wait
+kgnfswat|wait
 kgodm|oracle disk manager
+kgodm_io|IO
+kgodm_wait_ios|wait on IOs
 kgs|service
 kgsc|cache, session cache for cursors
 kgsd|debugging
@@ -2539,6 +2543,8 @@ ksfd_clear_pgaobjsc|clear pga objects
 ksfd_do_io_verification|do IO verification
 ksfd_get_physical_sectsz|read physical sectorsize from device
 ksfd_gosdrq|get os dependent requests
+ksfd_odm|oracle disks manager
+ksfd_odmio|IO
 ksfd_osdrqfil|operating system dependent request 
 ksfd_sage_poosible|exadata offloading possible check
 ksfd_sbio|submit block IO
@@ -2722,6 +2728,7 @@ ksul|license/language
 ksumcl|multi(?) check for process to be alive (checks pmon)
 ksup|processes
 ksupalv|process alive check
+ksupd|planned draining
 ksupop|pop (restore) user or recursive call
 ksupr|process object
 ksupucg|push user call general
@@ -2906,6 +2913,21 @@ ktsfbfmt|format block and link
 ktsfsmhwm|segment move high water mark
 ktsfsnblk|new block
 ktsfx|datafile extention
+ktsl|lob
+ktsl_disp_gsp_driver|dispenser get space driver
+ktsl_fill_dispenser_main|fill dispenser main loop
+ktsl_ins_fsb|insert into free space block
+ktsla|space allocation
+ktsla_ins_fsg|insert into free space generation(?)
+ktslagsp|get space
+ktsld|delete
+ktsld_fsp|free space
+ktsld_ins_hbb|insert into hash bucket block
+ktsldfsp_main|free space main procedure
+ktslf|free allocated space
+ktslfbupd|buffer update
+ktslfsp|procedure
+ktslgfs|get free space
 ktsmg_icmt|insert direct load commit
 ktsmg_seg|merge segments
 ktsmgaex|DBMS_UNDO_ADV.IF_AUTO_EXTEND
@@ -3535,6 +3557,8 @@ nz|security
 oba|operator buffer allocation
 oci|oracle call interface
 ociextp|PLSQL External proc
+odm|oracle disk manager
+odm_io|IO
 opi|oracle program interface
 opiSem|semantic analysis driver
 opiamr|archival and media recovery
@@ -4578,6 +4602,7 @@ skgfrwat|wait for IO to complete
 skgm|memory (os dependent)
 skgmstack|call specified function with extra stack space
 skgnfs|network file system
+skgnfs_poll_channels|poll network paths
 skgpnumcpu|return number of cpus in system
 skgptalive|thread alive (check if process or thread is alive)
 skgpw|post/wait
