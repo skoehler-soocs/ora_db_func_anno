@@ -2927,8 +2927,12 @@ ktsfx|datafile extention
 ktsl|lob
 ktsl_disp_gsp_driver|dispenser get space driver
 ktsl_fill_dispenser_main|fill dispenser main loop
+ktsl_format_cfs_hbb|format commited free space hash bucket block
+ktsl_format_ehdr|format extent header block
+ktsl_format_ufs_hbb|format uncommitted free space hash bucket block
 ktsl_ins_fsb|insert into free space block
 ktsla|space allocation
+ktsla_format_ufs_fsg|format uncommitted free space FSG block
 ktsla_ins_fsg|insert into free space generation(?)
 ktslagsp|get space
 ktsld|delete
@@ -2948,12 +2952,15 @@ ktsmgmql|DBMS_UNDO_ADV.GET_LONGEST_QUERY
 ktsmgru|DBMS_UNDO_ADV.GET_REQUIRED_UNDO
 ktsmgruarr|DBMS_UNDO_ADV.GET_REQUIRED_UNDO
 ktsp|segment pagetable
+ktspffbmb|format first level bitmap block
 ktspffc|Fill First Level bmb dbas
+ktspfsbmb|format second level bitmap block
 ktspfmdb|format a range of data blocks
 ktspfmtrng|format one range or less of data blocks
 ktspfpblk|pin useful block
 ktspfsrch|first level bitmap block search
 ktspfsteal|Search cache for Pointer to data area of LII bitmap block
+ktspftbmb|format bitmap, formats lob persistent undo blocks(?)
 ktspgetf|Get next set of L1s
 ktspgfblk3|let L1 BMB
 ktspgsp_cbk|Get Space for inserts
