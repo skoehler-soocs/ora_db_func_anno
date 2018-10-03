@@ -41,6 +41,9 @@ ctccom_cleanup_online_move|DBMS_PART.CLEANUP_ONLINE_OP_INTERNAL
 ctcdrv|driver
 cur|cursor manipulation
 cvw|create view
+cvwdrv|driver
+cvwgcd|get column definition
+cvwgcpr|get table/view name, owner id given object id
 dbga|Unified Tracing Service
 dbgc|diagnostic framework
 dbgd|diagnostic events
@@ -456,7 +459,7 @@ kcbchg1|change a block
 kcbchk_ctx|check context, execute check functions
 kcbdbh|dump one buffer
 kcbdnb|dump n buffers
-kcbema|exam and maybe applu
+kcbema|exam and maybe apply
 kcbgcur|get current read
 kcbget|get buffer (retry scan performed earlier by kcbgtcr)
 kcbgtcr|get consistent read
@@ -1438,6 +1441,7 @@ kkdcacr|get all check and referential constrains
 kkdcico|insert constraint definition
 kkdl|dictionary lookup
 kkdlacd|get all column definitions
+kkdllk|lock an object
 kkdo|OBJECTS dictionary
 kkdoloi|load objects related information
 kke|cost engine
@@ -1962,7 +1966,6 @@ koio|?
 koiocon|constructor
 koionew|create (and pin) a new named instance
 kok|kernel side
-kokmrwo|KOK methods get new RWO vector enhanced with ordering
 koka|access
 kokd|driver
 koke|OBJECTS images
@@ -1971,18 +1974,23 @@ kokl|lob access
 kokl3|temporary lob access
 kokla|LOB default
 koklcopy|lob copy
-kolkcre|lob create
+koklcre|lob create
 koklcpb2c|copy binary data into lob
 koklcwrite|lob write
 kokleva|lob evaluate
 kokli|internal
 kokliclo|create with another locator
 kokligrd|initialize kdllfn with row data
+koklivrl|verify the row containing the lob is locked
 koklm|lob Default
 koklread|read
 kokltrim|trim
 koklv|lob default
+kokm|methods
+kokmrwo|get new RWO vector enhanced with ordering
 koks|OBJECTS semantic analysis
+kokscupd|check for updatability of column and change adf flag
+koksxlv|xform operand tree into an L-Value
 kokt|OBJECTS DDL
 kola|lob
 kolaErrorHandler|error handler
@@ -2514,6 +2522,7 @@ kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|system notifications to be passed to components
 ksd|debug internal errors
 ksdnfsp_restore_df_perm|DBMS_DNFS.RESTORE_DATAFILE_PERMISSION
+ksdocrl|check if row is locked
 ksdwra|write to alert
 ksdwrf|write to (trace) file
 ksdwrt|DBMS_SYSTEM.KSDWRT_ICD KSDWRT
@@ -3295,6 +3304,7 @@ kxst|sql trace
 kxstcls|trace cursor closing
 kxtex1|execute trigger
 kxti|trigger
+kxtivwt|view with active trigger for current ML
 kxto|trigger
 kxtr|trigger
 kxtt|temporary table operations
@@ -4136,6 +4146,7 @@ qeaeCn1Serial|count function
 qec|checks
 qecdrv|driver
 qecrlssub|release resources subroutine
+qecvdm|view dml
 qee|SQL execution
 qer|rowsource
 qerae|and equal
@@ -4713,6 +4724,8 @@ upirtrc|router with callback
 ups|upsert
 upsexe|execute
 vop|view optimisation
+vopdrv|driver
+vopqbc|query block
 vsn|version (?)
 wpiu|PLSQL apps
 xct|transaction management
