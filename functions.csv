@@ -35,6 +35,8 @@ audtar|audit create/alter/drop tablespace,rollback segment and alter system
 aus|audit statement
 ausdrv|driver
 bam|PLSQL_KG_Interface
+cdb|create database
+cdbdrv|driver
 csy|create synonym
 ctc|create table or cluster
 ctccom_cleanup_online_move|DBMS_PART.CLEANUP_ONLINE_OP_INTERNAL
@@ -539,6 +541,7 @@ kcbzwc|wait (write) complete
 kcbzwcw|wait
 kcc|controlfile
 kcc_tac_callback|timed-out actions callback routine (could signal waiting too long)
+kccbcf|begin controlfile update
 kccbcx|begin control transaction
 kccccf|close control files
 kccchb|cache header block 
@@ -547,6 +550,7 @@ kcccmt|commit changes
 kccecx|end controlfile transaction
 kccexpd|expand controlfile section for rectype
 kccgft|get for fixed table
+kccidf|identify all copies of the controlfile. sends a message to the dbwr
 kcckfr|deallocate controlfile cache using kernel memory free routine
 kccocx|open control transaction
 kccpcp|prepare(?) checkpoint progress records
@@ -557,7 +561,9 @@ kcf|file management
 kcfaioe|aio error. checks if aio is possible.
 kcfbsy|background synchronisation of SGA and controlfile
 kcfcaf|close all files
+kcfcdb|create and mount the database
 kcfcld|close database
+kcfcmb|create/mount database subroutines
 kcfcsy|cross instance sync
 kcfida|identify file action
 kcfis|intelligent storage
@@ -756,6 +762,7 @@ kdgvss|validate structure scan
 kdi|index
 kdib|bitmap index generation definitions
 kdiblsorget|extract key/rewoid from sorter
+kdiblwrite|write a kdi entry
 kdibc|bitmap index compression stream
 kdibco|stream output
 kdibh|hash table
@@ -772,12 +779,14 @@ kdifbk|fetches the single index row matching the argument key
 kdifind|find the appropriate index block to store the key
 kdifxs|fetch next or previous row from index block
 kdifxs1|fetch row from index block inner function
-kdiins0|inserts the argument key and associated keydata
+kdiins|inserts the argument key and associated keydata
+kdiins0|0
 kdiixs|index range scan
 kdil|load
 kdim|coalesce
 kdimod0|modifies the argument key's row from the argument index according
 kdis|split
+kdisle|split the argument leaf block and insert the argument key
 kdiss|skip scan
 kdiulk|undo leaf operation
 kdizoltp|OLTP HIGH Index
@@ -863,8 +872,8 @@ kdu|update
 kdugetpart|get partition information for a deleted or opdated row
 kdumrp|update multiple row pieces
 kduovw|updates already existing rows
-kduurp|singe row update, main entry
-kdusru|single row update
+kduurp|update row piece
+kdusru|single row update, main entry
 kdwf|worker framework
 kdx|index block
 kdxokcmp|Auto Prefix Compressed Index
@@ -1239,6 +1248,7 @@ kgf|ASM
 kgfd|io subsystem driver
 kgfdvf|Voting file Interface
 kgff|direct file io adapter
+kgffdcn|disconnect from kgff instance
 kgfpm|PATCH repository
 kgg|generic lists
 kgh|heap manager
@@ -1309,11 +1319,12 @@ kgmexcb|execution callback
 kgmexec|execute
 kgmexsc|execute call with SCD (used only by PLSQL)
 kgmexch|execute by compilation handle
-kgmimio|implementation fro mmethod instantion object
 kgmgaicn|generic arguments input conversions
+kgmgaocn|generic arguments output conversions
 kgmgchd|get compilation handle
-kgmtconv|conversion
-kgmtimob|image to object (named types)
+kgmimio|implementation fro mmethod instantion object
+kgmtconv|performconversion
+kgmtomib|image to object (named types)
 kgnfs|network file system
 kgnfs_wat|wait
 kgnfswat|wait
@@ -1510,6 +1521,8 @@ kkoads|active dynamic sampling (ADS)
 kkoadsComputeSqlid|compute sqlid
 kkoasj|add semi-join function
 kkoat|auto tuning optimizer
+kkobmp|bitmap processing
+kkocnp|cost next permutation
 kkocpjoinqb|copy and join query block
 kkocpqb|copy query block
 kkocri|create index
@@ -1517,11 +1530,13 @@ kkodp|AQP
 kkoecp|evaluate constant predicate
 kkogfp|get first permutation
 kkoiqb|initialise query block
+kkojnp|join order path
 kkooqb|optimize query block
 kkopm|plan management
 kkopmCheckSmbUpdate|Check if updates to the Sql Management Base are pending
 kkopq|parallel optimization
 kkoqbc|query block optimization start point
+kkosbn|sort bitmap nodes
 kkoshd|shard sql
 kkostran|star transformation
 kkotap|table path
@@ -1563,6 +1578,7 @@ kkrbx|index access
 kkrh|hash
 kkri|parallel index create
 kkrp|parallelizer (DFO)
+kkrpfch|fetch from rowsource
 kkrt|rowsource table create as select
 kks|shared objects (cursor)
 kksLoadChild|load child
@@ -1639,7 +1655,7 @@ kktficdcstoreallchr|DBMS_TF.KKTFICDSTOREALLCHR CSTORE_GET
 kktficdcstorealldat|DBMS_TF.KKTFICDSTOREALLDAT CSTORE_GET
 kktficdcstoreallnum|DBMS_TF.KKTFICDSTOREALLNUM CSTORE_GET
 kktiddlt|DBMS_DDL_INTERNAL.IS_DDL_TRIGGER
-kkx|Programmatic Interfaces to/from PL/SQL
+kkx|execute
 kkxa|external/asynch RPC
 kkxb|external tables
 kkxcg1|DBMS_PREPROCESSOR.KKXCG1 GET_PP_SOURCE_LINES
@@ -1686,6 +1702,8 @@ kkxppp|private pipe
 kkxrd|DBMS_ROWID
 kkxrpc|rpc
 kkxsem|semantic phase
+kkxsexe|execute a cursor
+kkxsexr|execute with returning binds
 kkxt|trigger
 kkxtexe|trigger execute
 kkxtgsv|DBMS_INTERNAL_TRIGGER.KKXTGSV GET_UGAKNT
@@ -1787,6 +1805,7 @@ kl|loader
 klc|column array builder
 klclil1r|c level interface load 1 row
 klcs|character set
+klcslod|load NLS data object
 kll|library
 kllcqgf|circular queue get free slot
 klllr|logical record
@@ -1795,8 +1814,10 @@ klmalf|allocate freeable memory
 km|multi threaded/mman
 kmgs|manage (sga) space (?)
 kmgsdrv|driver
-kmc|circuit
+kmc|virtual circuit
 kmcadq|add circuit to a queue
+kcmcvc|create virtual circuit
+kmcdrv|driver
 kmcmbf|mark buffer
 kmcrowrt|private functions
 kmd|dispatcher
@@ -1948,6 +1969,7 @@ koc|cache manager
 kociih|instantiate an instance in the object heap
 kocedd|end duration
 kod|data manager (pickler)
+kod2ppic|pickle an object into an image
 kodpunp|unpickle an image into an object
 kodrdel|UTL_REF.DELETE_OBJECT
 kodrlk|UTL_REF.LOCK_OBJECT
@@ -1971,6 +1993,7 @@ koiocon|constructor
 koionew|create (and pin) a new named instance
 kok|kernel side
 koka|access
+kokbtns|type check the nested select operator
 kokd|driver
 koke|OBJECTS images
 koki|id generator
@@ -2010,6 +2033,7 @@ kols|?
 kolsins|insert space for the element at the given index
 kolstins|tree insert space for the element at the given index
 koluislc|UTL_COLL.IS_LOCATOR
+kope2pic|pickler mumbo jumbo
 kopetrv|kop engine and traverse
 kopldsinit|kop lds initialize a pre-allocated lds
 kos|stream interfaces for images/objects
@@ -2093,6 +2117,8 @@ kpr|recursive program interface
 kprb|bundled operations
 kprball|execute all bundled kpr/rpi operations
 kprc|RPI copy routines
+kprccu|copy data given Uac
+kprcdt|delete trailing spaces for binds
 kps|transparent Session Migration
 kpscrcap|DBMS_SESSION_STATE.SS_CAPTURE
 kpscrmrk|DBMS_SESSION_STATE.SS_MARK_CAPTURE
@@ -2675,10 +2701,11 @@ ksmcpg|create (variable) pga
 ksmcsg|create sga
 ksmd|state object memory (?)
 ksmdfr|free memory
-ksmdpg|compare the size of the PGA at ksurspr
+ksmdpg|deallocate the variable pga. just free top pga heap, the callback will free the extents to osd.
 ksmerr|cleanup any stack memory allocated within the given error frame
 ksmf|fixed sga
 ksmh|any heap
+ksmlsg|check for errors which occured during sga allocation and mapping
 ksmp|pga heap
 ksms|sga heap
 ksmshu|instance shutdown final check on sga
@@ -2697,9 +2724,10 @@ ksols|object level statistics(?)
 ksolt|lightweight threads
 ksopid_alive|pid alive check
 ksp|parameter
+kspGetInstType|validate instance_type
 kspgir|get range
 kspgpnicd|DBMS_UTILITY.KSPGPNICD GET_PARAMETER_VALUE
-kspGetInstType|validate instance_type
+kspgsp|get string parameter
 ksq|enqueue
 ksqcnl|convert an enqueue's mode
 ksqcnv|convert an enqueue's mode
@@ -3271,6 +3299,7 @@ kxdrs|resilvering layer
 kxf|parallel query
 kxfc|coordinator
 kxfp|process and queue manager
+kxfpGetTotalCpuCount|get cpu counts for parallel sql profile recommendation
 kxfpb|buffers
 kxfpbgpc|get permanent chunks
 kxfpbgtc|buffer allocation get chunk
@@ -3316,6 +3345,7 @@ kxsGetRuntimeLock|get runtime lock
 kxsbndinf|bind variable information
 kxscln|cleanup instantiation object
 kxsffir|function fire called when the appropriate heap is going away
+kxspoac|put oacdef into the cursor instantiation
 kxst|sql trace
 kxstcls|trace cursor closing
 kxtex1|execute trigger
@@ -3555,15 +3585,18 @@ nio|operating system dependent networking
 nioqrc|receive
 nioqwa|wait
 nl|library
+nldatxt|put current date/time into string
 nn|names
 npi|network program interface
 npiall|use bundled execution
 npiane|add new nco entry
 npicom|old style commit
+npicon0|connect; connect and log on to an external database
 npidri0|driver common
 npidsc|DiSConnect
 npierr|check for errors requiring ksesec, also reacquire DX lock
 npil|local
+npisnl|set network link
 npitcc|Test/Clear connections
 npixfr|transfer
 ns|session
@@ -3575,6 +3608,7 @@ nsevwait|wait: wait for event notification on all registered connections
 nso|SQL Transformation
 nsprecv|receive packet from network transport layer
 nsrdr|packet reader
+nstimexp|expire function. invoked by LTM with these specific arguments
 nt|transport
 ntm|mailbox
 ntp|ipc
@@ -3611,10 +3645,12 @@ opikndf2|OPIINO: Kernel route which sits on top of the SQL*Net
 opilof|log off
 opilon|log on
 opimai|main
+opiobv|bind a variable
 opiodr|oracle code request driver, route the current request
 opiomc|map cursor
 opiope|open cursor
 opiosq0|prepare to parse a cursor
+opipbr|process bind by reference chain
 opipls|contains opi bundled call executor and support routines
 opiprs|parse
 opirip|run independent process. initializes fixed-PGA in RAM and SQL layers.
@@ -4120,10 +4156,15 @@ qc|compile
 qcd|semantic analysis
 qcdo|dictionary support for objects
 qcdoloi|load object specific information
+qci|language parser and semantic analyser
+qciSetPlSqlCtx|set plsql context during a compile
+qcop|parse
 qcp|parse
 qcpbex|boolean expression
 qcpbfa|boolean term
 qcpbte|boolean factor
+qcpi|interim
+qcpiaex|arithmetic expression
 qcpicmd|command
 qcpiere|expression relop expression
 qcpierr|raise error
@@ -4133,13 +4174,6 @@ qcpilcl0|(private)
 qcpiltb|lock table command
 qcpitnm|table name
 qcplgnt|lexer get next token
-qci|language parser and semantic analyser
-qciSetPlSqlCtx|set plsql context during a compile
-qcop|parse
-qcpi|parse
-qcpi3|parse
-qcpi4|parse
-qcpi5|parse
 qcpibex|boolean expressions
 qcpibfa|boolean term
 qcpibte|boolean factor
@@ -4633,6 +4667,8 @@ skgfrliopo|listio (AIO) poll
 skgfrvldtrq|validate requests
 skgfrwat|wait for IO to complete
 skgm|memory (os dependent)
+skgmattach|attach to shared memory realm
+skgmlocate|locate a primary segment from a realm
 skgmstack|call specified function with extra stack space
 skgnfs|network file system
 skgnfs_poll_channels|poll network paths
@@ -4669,6 +4705,7 @@ sou2o|main oracle executable entry point
 sl|operating system dependent call
 slcpu|get cpu usage
 slcpums|measurement (for getrusage)
+slcra|we trip here if someone else other than ssexhd() calls us
 slgei|call function with the oracle error code and arguments
 slgts|get time stamp (for gettimeofday)
 slmsrd|message file read, reads .msb file
@@ -4678,6 +4715,7 @@ sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
 sltrusleep|sleep (for nanosleep)
 sn|operating system dependent network
+snltmdf|timer driver: called by SIGALRM
 snt|transport
 sntp|ipc
 sntpread|issue read
@@ -4705,6 +4743,7 @@ sskgpwvectorpost|post multiple semaphores
 sskgpwwait|wait
 sskgpwpost|post
 sskgxp|ipc communication
+sskgxp_select|waits "timeout" microseconds for an asynchronous request/event associated with context. if zero, return immediately
 sskgxpu|udp
 sskgxph|hmp implementation (hpux)
 sslssSynchHdlr|SSLS signal handler for synch. signals
