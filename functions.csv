@@ -469,6 +469,10 @@ kcbhlchk|logical check
 kcbhsbs_ub8|write SCN base and wrap in buffer header
 kcbhxor|xor buffer contents
 kcbhxoro|operation
+kcbi_|shared IO pool
+kcbi_get_rsv_bh|get reserved buffer header
+kcbi_issue_io|issue IO
+kcbi_issue_write|issue write
 kcbibr|invalidate range of blocks
 kcbism|is medium (selection of read strategy)
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
@@ -2858,6 +2862,7 @@ ktfa_set_context_level|DBMS_FLASHBACK_ARCHIVE.SET_CONTEXT_LEVEL
 ktfa_unlock_application|DBMS_FLASHBACK_ARCHIVE.UNLOCK_APPLICATION
 ktfactht|DBMS_FLASHBACK_ARCHIVE.CREATE_TEMP_HISTORY_TABLE
 ktfb|bitmapped space manipulation of files/tablespaces
+ktfbtgex|get a free extent
 ktfd|dictionary based extent management
 ktfedml|KUPP$PROC.ENABLE_FLASHBACK_DMLS
 ktfgscnn|DBMS_FLASHBACK.GET_SYSTEM_CHANGE_NUMBER
@@ -2932,9 +2937,12 @@ ktsl_format_ehdr|format extent header block
 ktsl_format_ufs_hbb|format uncommitted free space hash bucket block
 ktsl_ins_fsb|insert into free space block
 ktsla|space allocation
+ktsla_cfsgsp_main|committed free space get space main
+ktsla_hbb_gsp|hash bucket block get space
 ktsla_format_ufs_fsg|format uncommitted free space FSG block
-ktsla_ins_fsg|insert into free space generation(?)
+ktsla_ins_fsg|insert into FSG
 ktslagsp|get space
+ktslagsp_main|main routine
 ktsld|delete
 ktsld_fsp|free space
 ktsld_ins_hbb|insert into hash bucket block
@@ -2943,6 +2951,7 @@ ktslf|free allocated space
 ktslfbupd|buffer update
 ktslfsp|procedure
 ktslgfs|get free space
+ktslghb|get hash bucket block
 ktsmg_icmt|insert direct load commit
 ktsmg_seg|merge segments
 ktsmgaex|DBMS_UNDO_ADV.IF_AUTO_EXTEND
