@@ -1,3 +1,5 @@
+BZ2|bzip2
+BZ2_decompress|decompress
 Ldi|date/time conversion
 Lpx|xml parser
 LpxFSM|FSM parser
@@ -37,6 +39,7 @@ ausdrv|driver
 bam|PLSQL_KG_Interface
 cdb|create database
 cdbdrv|driver
+cls|clusterware integration
 csy|create synonym
 ctc|create table or cluster
 ctccom_cleanup_online_move|DBMS_PART.CLEANUP_ONLINE_OP_INTERNAL
@@ -215,6 +218,8 @@ evaxl|vector translate
 expcop|evaluate callback operator list
 expeal|evaluate its argument AND list
 expepr|evaluate the argument predicate
+fplib|filter projection library (exadata smartscan)
+gipc|grid inter process calls
 gslcsq_add_s|DBMS_LDAP_API_FFI.LDAP_ADD_S
 gslcsq_authenticate_user|DBMS_LDAP_API_FFI.ORA_LDAP_AUTHENTICATE_USER
 gslcsq_authenticate_user_ext|DBMS_LDAP_API_FFI.ORA_LDAP_AUTHENTICATE_USER_EXT
@@ -826,6 +831,8 @@ kdmppopulate|DBMS_INMEMORY.POPULATE_INTERNAL
 kdmprepopulate|DBMS_INMEMORY.REPOPULATE_INTERNAL
 kdmpsegmentdeallocateversions|DBMS_INMEMORY.SEG_DEALLOC_VERS_INTERNAL
 kdmr|background
+kdmrIMCLOAD|in memory chunk load/populate
+kdmrIMCLOAD_cb|callback
 kdn|sequence number
 kdns|sequence enqueue
 kdo|operations
@@ -888,6 +895,7 @@ kdzd|decompression
 kdzh|compression
 kdzk|HPK
 kdzs|decompression
+kdzu|uncompress
 ke|event
 keadDeleteDirectivePLSQL|PRVT_ADVISOR.DELETE_DIRECTIVE_I
 keadEvalDirectivePLSQL|PRVT_ADVISOR.EVAL_DIRECTIVE_VALUE_I
@@ -1714,6 +1722,8 @@ kkxuexe|stub execute
 kkxwtp|plsql compiler
 kky|system
 kkyasy|alter system driver
+kkz|security
+kkzgna|generate name
 kkziIsUserCreatedIdx|DBMS_REDEFINITION.IS_USER_CREATED
 kkziSetAclmv|DBMS_SNAP_INTERNAL.SET_I_AM_AN_ACLMV
 kkzi_is_XMLtab_Objrel|DBMS_REDEFINITION.IS_XMLTAB_OBJREL
@@ -2570,6 +2580,7 @@ kse|error
 ksed|debug
 ksedmp|dump process state
 ksedst|dump the call stack
+ksedsts|dump stack (short version)
 ksedst1|stack trace 1 helper
 ksepop|perform cleanup when an error frame is being popped
 kserec1|record an error code
@@ -2695,7 +2706,9 @@ kslwt_update_stats_int|update statistics
 kslwtbctx|begin context/wait
 kslwtectx|end context/wait
 ksm|memory
+ksm_prepage_sga_seg|sga segment selection for prepaging
 ksmapg|callback for allocating a pga extent
+ksmapply_v2|used for prepaging; apply prepage?
 ksmasg|callback for allocating an sga extent
 ksmcpg|create (variable) pga
 ksmcsg|create sga
@@ -2707,6 +2720,8 @@ ksmf|fixed sga
 ksmh|any heap
 ksmlsg|check for errors which occured during sga allocation and mapping
 ksmp|pga heap
+ksmprepage|prepage function (only used by sa00?)
+ksmprepage_memory|actual prepage function
 ksms|sga heap
 ksmshu|instance shutdown final check on sga
 ksmu|uga heap
@@ -2735,7 +2750,8 @@ ksqcmi|change lock mode internal
 ksqded|deadlock check
 ksqdel|release an enqueue
 ksqdldnl|deadlock dump ktagetg0
-ksqgel|get an enqueue
+ksqenqalloc|allocate an enqueue
+ksqgel|get and allocate enqueue
 ksqget|get an enqueue
 ksqgtl|get an enqueue
 ksqrcl|release an enqueue
@@ -2758,6 +2774,7 @@ ksu_dispatch_tac|dispatch timed-out actions (updates wait interface)
 ksucln|cleanup detached process
 ksucresg|create session with a process group specified
 ksucre|create user session in process
+ksucri|create and initialise process
 ksucrp|create and initialise process
 ksudps|dump this processes
 ksugtcpums|get cpu measurement (?)
@@ -2913,14 +2930,16 @@ ktliDestroyAllLogs_Mig|DBMS_SECUREFILE_LOG_ADMIN.DESTROY_ALL_LOGS
 ktm|transaction monitor (smon)
 ktma|IM ADG
 ktmSmonMain|main smon routine
-ktmb|IM block
-ktmc|IM concurrency
-ktmjs|IM journal scan
+ktmb|IM transaction block
+ktmc|IM transaction concurrency
+ktmjs|IM transaction journal scan
 ktmirc|instance recovery
 ktmmon|tx monitor background timeout action (smon)
-ktmpj|IM private journal
-ktmr|IM read
-ktmsj|IM shared journal
+ktmpj|IM transaction private journal
+ktmpjInvalidateRow|invalidates the row in a private journal
+ktmpjUpdInMemExtStat|update inmemory extent statistics
+ktmr|IM transaction read
+ktmsj|IM transaction shared journal
 ktp|parallel
 ktpcmt|commit
 ktr|read consistency
@@ -2935,6 +2954,7 @@ ktrigst|GET_SESSION_TIMEOUT
 ktrigt|GET_TIMEOUT
 ktrisst|SET_SESSION_TIMEOUT
 ktrist|SET_TIMEOUT
+ktrsexec|space management execute
 ktrvac|validate active transactions(?)
 kts|segment management
 kts4smck|semantic check of the block
@@ -3012,6 +3032,7 @@ ktss|segment procedures
 ktssdt_segs|drops stray temporary segments
 ktst|sort management
 ktsx|extent management
+ktsx_endtx|end add extent transaction
 ktsxr_add|redoless add extent to a segment
 ktsxs_add|add extent to a segment
 ktsxterr|find extent error
@@ -3566,6 +3587,7 @@ lnxn2copt|converts an oracle number to a character string with option for paddin
 lnxn2coptg|with nls global
 lnxqchk|private number check function
 main|general c starting function
+mDNS|multicast dns
 md|spatial
 mdgr|spatial georaster
 mdr|spatial indexing
@@ -3660,6 +3682,7 @@ opitca|sets up context area
 opitsk|two task function dispatcher
 opiul|direct loader
 opix|transfer to remote
+opixrm|check remote cursor
 orp|oracle external pickler/opaque type interface
 ort|OBJECTS Types
 osn|Two Task
@@ -4620,6 +4643,7 @@ rpidru|setup memory for recursive session
 rpidrus|recursive program handling
 rpidrv|recursive program interface driver
 rpiexe|execute
+rpipl|switch user and parse
 rpiswu2|switch user in recursive sql
 rtb|rowsource table
 rw|row
@@ -4632,10 +4656,12 @@ rwsima|retrieval according to defining query
 rwsdef|definitions
 rwsfcd|fetch from rowsource
 rwsstd|start row source
+sage|exadata specific
 sdbima|sort operation
 sdbgrf|Diagnostic directory and file services
 sdbgrfwf_write_file|write to tracefile
 scg|concurrency global locks
+scls|operating system dependent clusterware integration
 scm|PLSQL apps
 scu|operating system concurrency unique(?) 
 scuinst|instance
@@ -4645,6 +4671,7 @@ scurls|release
 sel|select
 selexe|execute: prepare area for fetch
 seq|sequence numbers
+sgipc|operatign system dependent grid inter process calls
 sk|operating system dependent kernel
 skdstdst|dump a stack trace
 skg|generic
