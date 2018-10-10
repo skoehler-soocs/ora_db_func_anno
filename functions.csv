@@ -3186,6 +3186,7 @@ kuxslTransformCtoC|UTL_XML.XSLTRANSFORM
 kuxslTransformCtoX|UTL_XML.XSLTRANSFORMCTOX
 kuxslTransformXtoX|UTL_XML.XSLTRANSFORMXTOC
 kuxtypeHashCodeEq|UTL_XML.TYPEHASHCODEEQ
+kuz|security (orapw utility)
 kv|performance
 kvi|information tables
 kwq|advanced queuing 
@@ -4720,6 +4721,8 @@ skgxnreg|registers with process group as primary member (LMON)
 skgxnsrg|registers with process group as slave member 
 skgxp|IPC
 skgxppost|post the owner of a contact out of a blocking call
+skuz|security (orapwd)
+skuzfbs|determine orapw file block size
 sm|operating system dependent memory
 smb|buffer
 smbalo|allocate an smkdef from specified storage bin
