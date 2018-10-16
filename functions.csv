@@ -83,6 +83,7 @@ dbgvm|for ams metadata
 dbgvp|parser
 dbgxtk|xml toolkit
 dbkd|RDBMS events
+dbkdChkEventRdbmsErr|check event of RDBMS error
 dbke|RDBMS diagnostic data extractor
 dbkePostKGE_kgsf|Post KGE error for KGSF
 dbked|Dumper
@@ -1224,6 +1225,9 @@ kfvsu|umbilicus
 kfz|zecurity subsystem
 kfzp|password file layer
 kg|generic
+kgas|tcp/ip networking
+kgasr|receive
+kgass|send
 kgbt|btree operations
 kgc|compression
 kgcc|compress
@@ -2025,7 +2029,7 @@ kokltrim|trim
 koklv|lob default
 kokm|methods
 kokmrwo|get new RWO vector enhanced with ordering
-koks|OBJECTS semantic analysis
+koks|semantic analysis
 kokscupd|check for updatability of column and change adf flag
 koksxlv|xform operand tree into an L-Value
 kokt|OBJECTS DDL
