@@ -1294,6 +1294,7 @@ kgi|instantiation manager
 kgicli|close all cursors for an instantiation 
 kgidel|delete an instantiation object
 kgidlt|delete an instantiation object
+kgimal|memory allocate
 kgiscl|state close cursors
 kgk|token
 kgkp|generic services scheduling policies
@@ -3606,11 +3607,13 @@ msqrxq|make sql for remote execution
 n|network
 nb|buffer
 nbi|incoming
+nbiCreate|create buffer
 nbiRead|read
 nbiReadLine|a line
 nbiReadLineMB|multiple buffers(?)
 nbiReadLineSB|single buffer(?)
 nbo|outgoing
+nboCreate|create buffer
 nboFlush|flush buffer
 nboWrite|write (to socket?)
 na|authentication
@@ -3663,6 +3666,7 @@ nsdo|execute network session operation. NS protocol engine
 nsevdansw|event deferred: complete deferred nsanswer operation
 nsevrec|record: record event occurence
 nsevwait|wait: wait for event notification on all registered connections
+nsmal|memory allocate
 nso|SQL Transformation
 nsprecv|receive packet from network transport layer
 nsrdr|packet reader
@@ -3882,6 +3886,7 @@ piht|utl_http support
 pihtAvailable|is connection available
 pihtConnect|setup tcp connection
 pihtDisconnect|disconnect tcp connection
+pihtMalloc|allocate memory
 pihtSend|send tcp request
 pihtca|UTL_HTTP.ADD_COOKIE
 pihtcc|UTL_HTTP.GET_COOKIE_COUNT
