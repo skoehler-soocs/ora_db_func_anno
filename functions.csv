@@ -322,7 +322,8 @@ insrow|Fetch a row for insertion. This is called back by multirow insert
 ipc|inter process calls
 ipclw|lightweight (exafusion)
 ipp|internal probe processor capabilities(?)
-jox|java compiler/runtime
+joe|java runtime environment(?)
+jox|java jit compiler
 joxas|dbms_xa
 joxas_end|DBMS_XA.INTERNAL_JOXAS_END XA_END
 joxas_commit|DBMS_XA.INTERNAL_JOXAS_COMMIT XA_COMMIT
@@ -1683,6 +1684,8 @@ kkxcls|close cursor
 kkxcmp|compile (all compilation phases)
 kkxerae|DBMS_OUTPUT.KKXERAE RAISE_APPLICATION_ERROR
 kkxexe|execute plsql
+kkxj|java
+kkxjexe|execute
 kkxl|lob
 kkxlcisopen|UTL_SYS_COMPRESS.ISOPEN
 kkxlcomplzadd|UTL_SYS_COMPRESS.LZ_COMPRESS_ADD
@@ -2045,7 +2048,8 @@ kolc|?
 kolcins|inset space for the element at the given index
 kolccst|construct element callback
 kole|lob default
-kolfgdir|file get directory object path and filenames
+kolf|file
+kolfgdir|get directory object path and filenames
 koll|lob
 kolo|OBJECTS images
 kolr|lob refcount
@@ -2192,8 +2196,13 @@ kqlfgx|get row for access table entry, fixed table support
 kqlftl|cache fixed Table for Locks callback
 kqllod|database object load
 kqlm|multi-instance manager
+kqlmcdlod|mcode heap load
 kqlnfy|notify
+kqlobld|object load
+kqlobpn|object pin heaps and load data pieces
 kqlp|sharing of sql statements
+kqlpim|pin and load more heaps
+kqlplslod|pl/sql object load
 kqlr|remote
 kqls|subordinate set manager
 kqlsadd|add a new element to a subordinate set
@@ -3689,6 +3698,8 @@ odm_io|IO
 opi|oracle program interface
 opiSem|semantic analysis driver
 opiamr|archival and media recovery
+opibnd|bind
+opibrn|bind reference numeric
 opicca|clear context area
 opiclo|close cursor
 opidcl|cleanup after the sqlnet connection is terminated
@@ -3711,7 +3722,8 @@ opiobv|bind a variable
 opiodr|oracle code request driver, route the current request
 opiomc|map cursor
 opiope|open cursor
-opiosq0|prepare to parse a cursor
+opiosq|prepare to parse a cursor
+opiosq0|0
 opipbr|process bind by reference chain
 opipls|contains opi bundled call executor and support routines
 opiprs|parse
@@ -4682,6 +4694,7 @@ rfsrsp|DBMS_DG.RFSRSP
 rixima|rowsource index implementation a
 rnm|rename statement operation
 rpi|recursive program interface
+rpibnn|bind by number
 rpicls|close
 rpidrr|error handler for setup memory for the recursive session (dru)
 rpidru|setup memory for recursive session
