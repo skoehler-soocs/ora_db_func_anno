@@ -1,0 +1,3 @@
+copy_functions:
+  script:
+    sudo cp functions.csv /u01/app/django/orafun/ 
