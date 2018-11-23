@@ -1,5 +1,6 @@
 copy_functions:
-  script:
+  script: |
+    sed -i 1i"name|description" functions.csv
     sudo cp functions.csv /u01/app/django/orafun/ 
   tags:
     - orafun1
