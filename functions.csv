@@ -49,9 +49,10 @@ cvw|create view
 cvwdrv|driver
 cvwgcd|get column definition
 cvwgcpr|get table/view name, owner id given object id
+db|debug and diagnostics
 dbga|Unified Tracing Service
 dbgc|diagnostic framework
-dbgd|diagnostic events
+dbgd|generic debug API
 dbgdCopyEventNode|transfers event information from PGA to SGA and back
 dbgdLinkEvent|link event information into the list 
 dbgdSetEvents|set event
@@ -71,7 +72,7 @@ dbgre|export/import services
 dbgrf|directory and file services
 dbgri|incident metadata services
 dbgrm|meta-data repository
-dbgt|Unified tracing service, diagnostic component test parent
+dbgt|Unified tracing service, generic trace API
 dbgtf|directory and file services
 dbgtn|UTS viewer toolkit
 dbgtp|UTS viewer toolkit
@@ -82,7 +83,7 @@ dbgvl|parser
 dbgvm|for ams metadata
 dbgvp|parser
 dbgxtk|xml toolkit
-dbkd|RDBMS events
+dbkd|kernel debug
 dbkdChkEventRdbmsErr|check event of RDBMS error
 dbke|RDBMS diagnostic data extractor
 dbkePostKGE_kgsf|Post KGE error for KGSF
@@ -4280,6 +4281,8 @@ qecvdm|view dml
 qee|SQL execution
 qer|rowsource
 qerae|and equal
+qeraeMax|max
+qeraeMinmax|min/max
 qerandv|approximate NDV
 qerandvFetch|fetch
 qerandvRop|row procedure callback
@@ -4323,6 +4326,7 @@ qeril|in list
 qerim|index maintenance
 qerix|index
 qerixFetchFastFullScan|index fast full scan
+qerixFetchSkipScan|index skip scan
 qerixtFetch|fetch operation for index range scan
 qerjo|nested loop outer
 qerjoFetch|fetch from join rowsource
@@ -4800,7 +4804,7 @@ slrac|verify (memory) read access
 sltrgatime64|arbitrary time lookup 
 sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
-sltrusleep|sleep (for nanosleep)
+sltrusleep|true (?) sleep (calls nanosleep)
 sn|operating system dependent network
 snltmdf|timer driver: called by SIGALRM
 snt|transport
