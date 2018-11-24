@@ -1,6 +1,7 @@
 .load_sqlite: &load_sqlite |
   cd /u01/app/django/orafun/
   sudo python3 manage.py shell << EOF
+  import load_data
   load_data.load_fun("functions.csv")
   exit()
   EOF
