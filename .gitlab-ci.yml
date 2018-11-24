@@ -1,3 +1,10 @@
+.load_sqlite: &load_sqlite |
+  cd /u01/app/django/orafun/
+  sudo python3 manage.py shell << EOF
+  load_data.load_fun("functions.csv")
+  exit()
+  EOF
+
 copy_functions:
   script: 
     - sed -i 1i"name|description" functions.csv
@@ -5,10 +12,3 @@ copy_functions:
     - *load_sqlite
   tags:
     - orafun1
-
-.load_sqlite: &load_sqlite |
-  cd /u01/app/django/orafun/
-  sudo python3 manage.py shell << EOF
-  load_data.load_fun("functions.csv")
-  exit()
-  EOF
