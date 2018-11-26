@@ -16,6 +16,7 @@ OCILobIsOpen|DBMS_LOB.KKXL_ISOPEN
 OCILobIsTemporary|DBMS_LOB.KKXL_ISTEMPORARY
 OCILobLoadFromFile|DBMS_LOB.KKXL_LOADFROMFILE
 OCILobSetOptions|DBMS_LOB.KKXL_SETOPTIONS
+OCIStmtFetch|fetch
 OCIStmtExecute|execute
 adbdrv|alter database driver
 ain|alter index
@@ -438,9 +439,12 @@ k2i|indoubt table interface
 k2l|log records and log interface
 k2labo|abort session: first abort aborts tx
 k2lcom|commit session, first commit commits tx
+k2lpre|prepare: enter prepared state for session, if last session, prepare tx
 k2r|multiple RPC
 k2s|server
+k2send|server end transaction - 2PC state machine
 k2serv|service a transaction manager RPC
+k2sfor|forget current session of current transaction
 k2udio|message unmarshalling
 k2v|recovery
 ka|access
@@ -494,6 +498,7 @@ kcbkllrba|find lowest low RBA on checkpoint queues
 kcbl|(loader) direct io routines
 kcblci|check input
 kcblgt|get buffer
+kcblibr|locally invalidate block range or object
 kcblin|operations for redo-less write interface
 kcblnb|load new buffer
 kcblnb_dscn|load new buffer
@@ -579,6 +584,7 @@ kcfis_tablespace_is_on_sage|test if tablespace is on exadata
 kcfl|loader
 kcflci|check status of IO
 kcflwi|wait for IO
+kcfmdb|mount database
 kcfopd|open/close database code
 kcfrbd|read buffers from database
 kcfris|release instance state queue
@@ -776,6 +782,9 @@ kdibco|stream output
 kdibh|hash table
 kdibi|inversion item-table
 kdibl|maintenance for dml and direct load
+kdiblFinish1|callback processing for KXIB
+kdiblLockRange|lock the range associated with a given dml target
+kdiblcfls|conventional flush batch with undo overhead
 kdibq|queue class
 kdibr|row source utility
 kdic|create
@@ -785,7 +794,7 @@ kdics|cluster table scan
 kdif|scan
 kdifbk|fetches the single index row matching the argument key
 kdifind|find the appropriate index block to store the key
-kdifxs|fetch next or previous row from index block
+kdifxs|fetch next or previous row in the argument index scan
 kdifxs1|fetch row from index block inner function
 kdiins|inserts the argument key and associated keydata
 kdiins0|0
@@ -1287,6 +1296,7 @@ kghini|heap initialize
 kghnospc|no space available in the heap, signal an error
 kghphini|parent heap initialize
 kghpmalo|find and return permanent chunk of space
+kghrcappl|apply this heap function depth first
 kghsrch|search freelists for a memory chunk
 kghstack_alloc|allocate pga memory
 kghstack_free|free pga memory
@@ -1576,8 +1586,8 @@ kkqgbp|placement
 kkqgbpColHasHighNDV|Column has high NDV
 kkqgbpCheckPred|check validity of predicate
 kkqgbpCheckValidity|check basic validity
+kkqgbpTravChkTran|traverse, check and transform
 kkqgbpdrv|driver
-kkqgbptravChkTran|traverse, check and transfor
 kkqctdrv|cost based transformation driver
 kkqctdrvTD|transformation directives
 kkqctdrvIT|initiate cost-based transformation
@@ -2111,6 +2121,7 @@ kpoauth|authenticate
 kpoclsa|close all cursors
 kpodny|describe any arguments used
 kpodp|direct path load
+kpofchswcbk|fetch switch callback
 kpogsk|initializes the session and returns the encrypted session key
 kpohal|This is the memory allocator that uses kpcch (the common heap module)
 kpolob|lob operations
@@ -2126,6 +2137,7 @@ kporpc|the oracle side function to start rpc
 kposc|scrollable cursors
 kpotc|setting up trusted external procedure callbacks
 kpotx|local transaction coordination
+kpotxcap|commit, abort and prepare
 kpotxen|2-phase end transaction driver
 kpov|distributed transaction coordination
 kpoxcAppContBeginReplay|DBMS_APP_CONT_PRVT.BEGIN_REPLAY
@@ -2574,9 +2586,10 @@ ksbcti|call timeout/interrupts
 ksbd|detached process
 ksbmsg|call cpu count changed callbacks
 ksbrdp|run a detached background process
+ksbsrv|start a multi-stated server process
+ksbt|background processes
 ksbxiaf|ksbxic (cross instance calls) message and interrupt action
 ksbxiafdomsg|ksbxic and async xic static functions
-ksbt|background processes
 ksc|component notifier
 kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|system notifications to be passed to components
@@ -2848,6 +2861,7 @@ ksz|oracle storage server (OSS) server layer
 kt|transaction
 kta|table access
 ktaadm|get all dml locks
+ktaftt|free temporary table
 ktagetp|get partition lock
 ktagetg0|get generic dml lock
 ktagdm|get dml lock
@@ -2866,6 +2880,7 @@ ktbchg2|(header) change
 ktbconv|block convert
 ktbgcl|performs ITL cleanout for RC and CU blocks
 ktbgcl1|general clean 1
+ktbgcur|get
 ktbgds|get dependent SCN
 ktbgfc|flush cleanout to disk
 ktbgfi|get free ITL
@@ -3051,6 +3066,8 @@ ktspscan_bmb|scan the level 1 bitmap blocks
 ktss|segment procedures
 ktssdt_segs|drops stray temporary segments
 ktst|sort management
+ktstdropobj|drop the temporary space object
+ktstdt|deletes the sort handle (ktstused) state object
 ktsx|extent management
 ktsx_endtx|end add extent transaction
 ktsxr_add|redoless add extent to a segment
@@ -3342,9 +3359,12 @@ kxf|parallel query
 kxfc|coordinator
 kxfp|process and queue manager
 kxfpGetTotalCpuCount|get cpu counts for parallel sql profile recommendation
+kxfpProcessError|process error
 kxfpb|buffers
 kxfpbgpc|get permanent chunks
 kxfpbgtc|buffer allocation get chunk
+kxfpcrel|create local query server process
+kxfpg1sg|get one server group
 kxfpgsg|get server group (coordinator)
 kxfpnfy|notify
 kxfpqdqr|Queue DeQueue queue Reference
@@ -3703,6 +3723,7 @@ opibnd|bind
 opibrn|bind reference numeric
 opicca|clear context area
 opiclo|close cursor
+opicom|oracle side, commit current transaction
 opidcl|cleanup after the sqlnet connection is terminated
 opidr|route current request
 opidrv|driver, entry side into two task interface
@@ -4312,7 +4333,7 @@ qerfxGCol|get column
 qerfxFetch|fetch
 qergh|hash group by
 qerghStart|start
-qergi|granule iterator (partitioning)
+qergi|granule iterator (partitioning? or PX granules?)
 qergiFetch|Fetch procedure of PX granule Iterator Row source Rowid
 qergr|group by rollup
 qergs|group by sort
@@ -4321,6 +4342,8 @@ qergv|vector aggregate
 qerhc|hash clusters
 qerhj|hash join
 qerhjAllocateX|allocate
+qerhjFetch|fetch
+qerhjInnerProbeHashTable|inner probe hash table
 qerhjWalkHashBucket|walk a list of pointers in a hash bucket and check for a match
 qeril|in list
 qerim|index maintenance
@@ -4358,6 +4381,7 @@ qerpsel|parallel execution PX selector
 qerpx|parallel execution 
 qerpxFetch|fetch method for parallelizer row source
 qerpxSlaveFetch|fetch method row source
+qerpxStart|start
 qerrc|vector translate
 qerrm|remote
 qersc|AQP
@@ -4370,7 +4394,7 @@ qerst|statistics
 qerstFetch|row source fetch
 qertb|table access
 qertbFetch|fetch
-qertbFetchByRowId|using inderlying row source by rowid or cluster key
+qertbFetchByRowId|using inderlying row source fetch by rowid or cluster key
 qertbSaveMethod|save IO request for batching(?)
 qertq|table queue (px)
 qertqoFetch|output table queue fetch method
@@ -4386,6 +4410,7 @@ qervw|view
 qervwFetch|fetch 
 qervwRowProcedure|row procedure
 qerwn|window
+qerwnFetch|fetch
 qerxl|vector translate
 qerxp|XDB Query
 qerxt|external table
@@ -4468,7 +4493,7 @@ qksqbApplyToQbc|Query compilation for query blocks - apply to QB
 qksqbApplyToQbcLoc|local
 qksvc|Virtual Column
 qkswc|with clause
-qkswcDriver|WITH Clause execution: Recursively traverse through all query blocks
+qkswcDriver|Recursively traverse through all query blocks
 qkx|SQL code generator
 qm|XDB
 qmcx|CSX
@@ -4847,10 +4872,14 @@ sxorchk|system xor check
 tbsdrv|create/alter/drop tablespace function support
 tre|PLSQL infrastructure
 ttc|two task common
+ttcacr|read into a user data area
 ttcbur|burst record
 ttcc2u|convert type x to type y
 ttcclr|send/receive without conversion
+ttcdrv|called when message received
+ttcgcshnd|get character set handle(?): oracle is checking that the remote character set id is valid to do type conversions with different character sets
 ttcpip|pipe read/write
+ttcrs2c|result set to cursor conversion routine
 ttp|Database Audit Next Generation
 subex1|evaluate subquery; exists subquery method 1
 subsr1|evaluate subquery; single row subquery method 1
