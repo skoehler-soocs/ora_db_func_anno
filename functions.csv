@@ -2672,7 +2672,7 @@ ksfmplsunlockmap|DBMS_STORAGE_MAP.UNLOCK_MAP_CALLOUT
 ksfpec|io post and event
 ksfq|sequential file io interface
 ksfq_alo|allocate device
-ksfqcls|close a sequential file
+ksfqfcls|close a sequential file
 ksfsp|DBMS_FS
 ksfsp_make_fs|KSFSP_MAKE_FS
 ksfsp_mount_fs|KSFSP_MOUNT_FS
