@@ -4768,11 +4768,11 @@ skg|generic
 skgf|file
 skgfalo|allocate sequential device
 skgfcls|close device
-skgfqio|queue I/O request(s)
 skgfgiod|get IO done (?)
 skgfnxtio|next IO
 skgfofi|open file
 skgfospo|operating system poll for IO completion
+skgfqio|queue I/O request(s)
 skgfr|requests
 skgfr_error64|check for errors
 skgfr_lio_listio64|perform listio (AIO) 64 bits
@@ -4781,6 +4781,7 @@ skgfrciohdlr|concurrent IO handler
 skgfrdup|duplicate file handle
 skgfrgsz|get size
 skgfrliopo|listio (AIO) poll
+skgfrls|release a sequential device previously allocated
 skgfrvldtrq|validate requests
 skgfrwat|wait for IO to complete
 skgm|memory (os dependent)
