@@ -2475,6 +2475,7 @@ krbiwtrc|DBMS_BACKUP_RESTORE.KRBIWTRC WRITETRACE
 krbizerf|DBMS_BACKUP_RESTORE.KRBIZERF ZERODBID
 krbm|miscellaneous functions
 krbr|restore and recovery
+krbrcc|clean up conversation
 krbrpr|piece read
 krbrr|reread corrupt block
 krbrrp|from back piece
@@ -2671,6 +2672,7 @@ ksfmplsunlockmap|DBMS_STORAGE_MAP.UNLOCK_MAP_CALLOUT
 ksfpec|io post and event
 ksfq|sequential file io interface
 ksfq_alo|allocate device
+ksfqcls|close a sequential file
 ksfsp|DBMS_FS
 ksfsp_make_fs|KSFSP_MAKE_FS
 ksfsp_mount_fs|KSFSP_MOUNT_FS
@@ -3704,6 +3706,7 @@ nstimexp|expire function. invoked by LTM with these specific arguments
 nt|transport
 ntm|mailbox
 ntp|ipc
+ntprd|read
 ntt|tcp/ip
 ntt2err|error procedure
 nttrd|basic read
