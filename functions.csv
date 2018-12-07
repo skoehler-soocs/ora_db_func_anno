@@ -1579,6 +1579,7 @@ kkq|query
 kkqcby|connect by
 kkqctdrv|cost based transformation driver
 kkqctdrvIT|initiate cost based transformation
+kkqctdrvJPPD|join predicate push-down
 kkqctdrvTD|transformation directives
 kkqdrv|transformatiosn driver
 kkqgb|group by
