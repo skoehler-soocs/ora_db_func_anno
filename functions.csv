@@ -1576,13 +1576,37 @@ kkpcrt|create
 kkpo|partitioned objects
 kkpod|partitioning dictionary
 kkq|query 
+kkqbj|bushy join
+kkqbjdrv|driver
 kkqcby|connect by
-kkqctdrv|cost based transformation driver
-kkqctdrvIT|initiate cost based transformation
-kkqctdrvJPPD|join predicate push-down
+kkqct|cost based query transformation
+kkqctCostTransfQB|transfer query block cost (?)
+kkqctInterleave|interleave
+kkqctInterleaveCVM|complex view merging
+kkqctInterleaveDP|distinct placement
+kkqctInterleaveJF|join filter
+kkqctInterleaveJPPD|join predicate pushdown
+kkqctInterleaveLargeQry|large query
+kkqctInterleaveORE|or-expansion
+kkqctInterleaveSTJF|STJF
+kkqctdrv|driver
+kkqctdrvBJ|bushy join
+kkqctdrvCVM|complex view merging
+kkqctdrvDP|distinct placement
+kkqctdrvGBP|group by placement
+kkqctdrvIT|initiate cost-based transformation
+kkqctdrvJF|join filter
+kkqctdrvJPPD|Join Predicate Push Down
 kkqctdrvORE|or-expansion
+kkqctdrvPU|PU
+kkqctdrvST|star transformation
+kkqctdrvSU|subquery unnesting
+kkqctdrvTE|table expansion
 kkqctdrvTD|transformation directives
-kkqdrv|transformatiosn driver
+kkqctdrvVT|vector transformation
+kkqctnojppd|no join predicate pushdown (?)
+kkqdrv|query transformation driver
+kkqdrvIT|initiate cost-based transformation
 kkqgb|group by
 kkqgbp|placement
 kkqgbpColHasHighNDV|Column has high NDV
@@ -1590,15 +1614,22 @@ kkqgbpCheckPred|check validity of predicate
 kkqgbpCheckValidity|check basic validity
 kkqgbpTravChkTran|traverse, check and transform
 kkqgbpdrv|driver
-kkqctdrv|cost based transformation driver
-kkqctdrvTD|transformation directives
-kkqctdrvIT|initiate cost-based transformation
-kkqctdrvTD|transformation directives
-kkqdrv|query transformation driver
-kkqdtdrvJPPD|cost-based query transformation - DRiVer for Join Pred push down
 kkqj|join analysis
-kkqjpdctr|join predicate push down - traverse and transform
+kkqjf|join filter
+kkqjfdrv|driver
+kkqjpd|predicate push down
+kkqjpdctr|traverse and transform
+kkqjpddrv|driver
+kkqore|or-expansion
+kkqoredrv|driver
+kkqstar|star transformation
+kkqstardrv|driver
+kkqte|table expansion
+kkqtedrv|driver
 kkqvm|view merging
+kkqvmdrv|driver
+kkqvt|vector transformation
+kkqvtdrv|driver
 kkr|rowsource
 kkrba|bitmap index and 
 kkrbc|bitmap index compaction
