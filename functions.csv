@@ -874,6 +874,7 @@ kdsgnp|fetch by rowid get continued row piece (chained row)
 kdsgrp|fetch by rowid get row piece
 kdsics|cluster table scan
 kdso|service object
+kdsocrl|check if row is locked
 kdst|table
 kdst_compile|compile scan type
 kdst_fetch|fetch blocks
@@ -2507,6 +2508,7 @@ krbivts|DBMS_BACKUP_RESTORE.KRBIVTS VALIDATETABLESPACE
 krbiwtrc|DBMS_BACKUP_RESTORE.KRBIWTRC WRITETRACE
 krbizerf|DBMS_BACKUP_RESTORE.KRBIZERF ZERODBID
 krbm|miscellaneous functions
+krbo|optimisation
 krbr|restore and recovery
 krbrcc|clean up conversation
 krbrpr|piece read
