@@ -763,6 +763,7 @@ kdd|delete/(cluster?)
 kddchg|perform delete/update change
 kdddgb|delete get block
 kdeu|export unload
+kdfi|memoptimize for write
 kdfs|dbfs c api
 kdg|gathering
 kdglfp|locator function perform
@@ -808,6 +809,7 @@ kdiss|skip scan
 kdiulk|undo leaf operation
 kdizoltp|OLTP HIGH Index
 kdk|search key
+kdkv|in-memory OLTP keyvalue
 kdl|lob
 kdl_write|write into an ilob instance
 kdla|SecureFile Archive
@@ -822,7 +824,7 @@ kdlw|kdlw
 kdlx|xfm
 kdlxdup|dedup
 kdlxgs_init|reclaim space from transaction freelist in index
-kdm|IM data layer
+kdm|in-memory data layer
 kdmado|ADO
 kdmd|dictionary and cache
 kdmemopt_drop_object|DBMS_MEMOPTIMIZE.DROP_OBJECT_INT
@@ -976,7 +978,7 @@ kehASHqueryPLSQL|PRVT_HDM.GET_QUERY_PREDICATE
 kehExecute|PRVT_HDM.EXECUTE
 kehPlsqlValidateInstance|PRVT_HDM.VALIDATE_INSTANCE
 kehePlsqlRacFloodControl|PRVT_RTADDM.RAC_FLOOD_CONTROL
-keiut|UIT infrastructure
+keiut|IUT infrastructure
 kel|server generated alert infrastructure
 keltpost_plsql|DBMS_SERVER_ALERT_PRVT.POST_ALERT_I
 kelr_reconcile_threshold|DBMS_SERVER_ALERT.RECONCILE_THRESHOLD
@@ -986,6 +988,7 @@ keomm|DBOP composite type
 keommBeginOperationExt|DBMS_SQL_MONITOR.BEGIN_OPERATION_INT
 keommEndOperationExt|DBMS_SQL_MONITOR.END_OPERATION_INT
 keomn|DBOP monitoring
+keplan|SQL compare plans
 ker|orarep
 kerctcBuildGenericTag|DBMS_REPORT.BUILD_GENERIC_TAG
 kerpiFinishFullCapture|DBMS_AUTO_REPORT.FINISH_REPORT_CAPTURE_CALLOUT
@@ -1076,9 +1079,11 @@ kestsProcessStsCallout|DBMS_SQLTUNE_INTERNAL.I_PROCESS_SQLSET_CALLOUT
 kestsRemoteExecSqlExt|DBMS_SQLPA.REMOTE_PROCESS_SQL_CALLOUT
 kestsUpdCapStats|DBMS_SQLTUNE_INTERNAL.I_UPD_CAP_STATS_CALLOUT
 kestsa|fix regression/parallel execution
+kestsaExa|exadata
 kestse|SQL test-execute service
 kestsi|index-tune
 kestsp|plan node analysis
+kestss|statistics advisor
 kesutl|infrastructure
 kesutlCdbConDbid2NameExt|DBMS_SQLTUNE_UTIL0.CDBCON_DBID_TO_NAME
 kesutlCdbConId2DbidExt|DBMS_SQLTUNE_UTIL0.CDBCON_ID_TO_DBID
@@ -1121,6 +1126,7 @@ kewm|metrics
 kewr|repository
 kewrcmp_create_manual_partns|DBMS_SWRF_INTERNAL.CREATE_IMPORT_PARTITIONS
 kewrcup_create_upgrade_partns|DBMS_SWRF_INTERNAL.CREATE_UPGRADE_PARTITIONS
+kewrf|flush
 kewrmas_modify_apurge_setting|DBMS_SWRF_INTERNAL.MODIFY_AUTOPURGE_SETTINGS
 kewrpacs_add_colored_sql|DBMS_WORKLOAD_REPOSITORY.ADD_COLORED_SQL
 kewrpcb_create_baseline|DBMS_WORKLOAD_REPOSITORY.CREATE_BASELINE_CALLOUT
@@ -1142,6 +1148,7 @@ kewrprmdb_register_multidb|DBMS_SWRF_INTERNAL.REGISTER_MULTIDB_CALLOUT
 kewrprstdb_reset_database|DBMS_SWRF_INTERNAL.RESET_AWR_CALLOUT
 kewrprstgs_remove_stg_schema|DBMS_SWRF_INTERNAL.REMOVE_STAGING_SCHEMA
 kewrprwc_remove_wr_control|DBMS_SWRF_INTERNAL.REMOVE_WR_CONTROL
+kewrps|purge
 kewrpulc_updbl_last_computed|DBMS_SWRF_INTERNAL.BLUPDATE_LAST_TIME_COMPUTED
 kewrpurdb_unregister_database|DBMS_SWRF_INTERNAL.UNREGISTER_DATABASE
 kewrpurmdb_unregister_multidb|DBMS_SWRF_INTERNAL.UNREGISTER_REMOTE_DATABASE
@@ -1176,6 +1183,7 @@ kffb|metadata block
 kffd|metadata directory
 kffg|file group
 kffm|map header
+kffs|split mirror operations
 kffscrub|scrubbing
 kfg|diskgroups
 kfgb|background
@@ -1185,6 +1193,8 @@ kfias|IOServer
 kfio|translation I/O layer
 kfioDumpPg|dump routine
 kfioPhysical|get physical sector size
+kfioer|translation
+kfios|simple
 kfis|intelligent storage interfaces
 kfk|KFK
 kfk_dump|dump routine
@@ -1233,6 +1243,7 @@ kftha|transparent high availability
 kftr2ah|relative to absolute file number translation with hint
 kfv|volume subsystem
 kfvsd|background
+kfvioc|cell storage
 kfvsu|umbilicus
 kfz|zecurity subsystem
 kfzp|password file layer
@@ -1412,10 +1423,11 @@ kjac_clr_failpoint_pls|DBMS_TG_DBG.I_CLEAR_FAILPOINT
 kjac_force_outcome_pls|DBMS_APP_CONT.INT_FORCE_OUTCOME
 kjac_set_failpoint_pls|DBMS_TG_DBG.I_SET_FAILPOINT
 kjac_set_session_drainable_pls|DBMS_TG_DBG.I_SET_SESSION_DRAINABLE
+kjb|global cache service
 kjbcr|consistent read
 kjbcropen|open LE lock
 kjbcrconvert|convert LE lock
-kjb|global cache service
+kjbfp|persistent cluster flash cache
 kjbl|lock table
 kjbr|resource table
 kjc|communication
@@ -1498,6 +1510,7 @@ kkegvl|get a value from an opndef and normalize it for cost
 kkepsl|selectivity of a single predicate
 kkest|statistics
 kkevcs|set view column stats for underlying column
+kkevp|vector processing
 kkfd|fast dataflow (PQ DFO)
 kkfi|optimizer virtual column/indexes
 kkfr|fast rowid (PQ)
@@ -1892,6 +1905,7 @@ kmd|dispatcher
 kmdmai|main loop
 kmdrdp|run a dispatcher process
 kmdu2s|route messages from user to server
+kml|listener registration
 kmm|monitor
 kmmrdp|run dispatcher process
 kmms|server
@@ -2089,13 +2103,15 @@ koksxlv|xform operand tree into an L-Value
 kokt|OBJECTS DDL
 kola|lob
 kolaErrorHandler|error handler
+kolace|XDB CSX print
+kolars|XDB CSX print
 kolc|?
 kolcins|inset space for the element at the given index
 kolccst|construct element callback
 kole|lob default
 kolf|file
 kolfgdir|get directory object path and filenames
-koll|lob
+koll|lob default
 kolo|OBJECTS images
 kolr|lob refcount
 kols|?
@@ -2108,7 +2124,7 @@ kopldsinit|kop lds initialize a pre-allocated lds
 kos|stream interfaces for images/objects
 kot|type manager
 kotg|accessor (get)
-koxs|lob Default
+koxs|lob default
 koxsihread|image handle write from buffer
 koxs|OBJECTS streams
 kp|programmatic interface
@@ -2190,7 +2206,7 @@ kprball|execute all bundled kpr/rpi operations
 kprc|RPI copy routines
 kprccu|copy data given Uac
 kprcdt|delete trailing spaces for binds
-kps|transparent Session Migration
+kps|transparent session migration
 kpscrcap|DBMS_SESSION_STATE.SS_CAPTURE
 kpscrmrk|DBMS_SESSION_STATE.SS_MARK_CAPTURE
 kpscrres|DBMS_SESSION_STATE.SS_RESTORE
@@ -2607,7 +2623,7 @@ krvrrrf|DBMS_LOGMNR.KRVRRRF REMOVE_LOGFILE
 krvt|log miner viewer support
 krvugaclr|DBMS_LOGMNR_INTERNAL.KRVUGACLR
 krvugaset|DBMS_LOGMNR_INTERNAL.KRVUGASET
-ks|service
+ks|service (VOS)
 ksa|asynchronous messages
 ksaamb|allocate message buffer
 ksadmb|deallocate message buffer
@@ -2630,17 +2646,17 @@ ksc|component notifier
 kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|system notifications to be passed to components
 ksd|debug internal errors
-ksdnfsp_restore_df_perm|DBMS_DNFS.RESTORE_DATAFILE_PERMISSION
-ksdocrl|check if row is locked
-ksdwra|write to alert
-ksdwrf|write to (trace) file
-ksdwrt|DBMS_SYSTEM.KSDWRT_ICD KSDWRT
 ksddoa|debug support do an action
 ksdhng|hang analysis
 ksdind|DBMS_SYSTEM.KSDIND_ICD KSDIND
+ksdnfsp_restore_df_perm|DBMS_DNFS.RESTORE_DATAFILE_PERMISSION
+ksdocrl|check if row is locked
 ksdp|parser
 ksdpcg|post and check event in the specified event group
 ksdpec|post event and check trigger condition
+ksdwra|write to alert
+ksdwrf|write to (trace) file
+ksdwrt|DBMS_SYSTEM.KSDWRT_ICD KSDWRT
 ksdxcb|ksdx callback for sosd layer signal handler
 ksdxen|2-task entry point
 ksdxfdmp|ksdx function: invoke named dump
@@ -2708,6 +2724,9 @@ ksfpec|io post and event
 ksfq|sequential file io interface
 ksfq_alo|allocate device
 ksfqfcls|close a sequential file
+ksfsd|OFS file system dispatcher
+ksfsm|OFS file system metadata
+ksfsc1|OFS file system callback
 ksfsp|DBMS_FS
 ksfsp_make_fs|KSFSP_MAKE_FS
 ksfsp_mount_fs|KSFSP_MOUNT_FS
@@ -2719,6 +2738,7 @@ ksimPrintGroupMemPGA|print out pga group memory (oradebug)
 ksimPrintGroupMemCache|print out group memory cache (oradebug)
 ksimgchg|group state change
 ksipget|get a group lock (synchronous interface to DLM for lock get)
+ksipc|VOS IPC
 ksipcon|convert a group lock
 ksiprls|release a group lock
 ksk|resource manager
@@ -2794,6 +2814,7 @@ ksmprepage|prepage function (only used by sa00?)
 ksmprepage_memory|actual prepage function
 ksms|sga heap
 ksmshu|instance shutdown final check on sga
+ksmsq|message queue services
 ksmu|uga heap
 ksmudr|stack segment underflow, free the current stack segment and restore ?
 ksmuga|allocate user session global data
@@ -2826,12 +2847,15 @@ ksqget|get an enqueue
 ksqgtl|get an enqueue
 ksqrcl|release an enqueue
 ksr|reliable messages
+ksrma|ksrma
+ksrmf|ksrmf
 kss|state object
 kssadf|add SO from free list
 kssdch|delete children of SO
 kssdct|delete children of specified type
 kssdel|delete SO
 kssdmp|dump children of a SO
+kssmc|registration caches
 kssrmf|delete SO 
 kssxdl|delete SO ignoring errors, clean latches
 kst|trace (x$trace)
@@ -2865,6 +2889,7 @@ ksupucg|push user call general
 ksur|resource usage
 ksus|statistics
 ksuse|sessions
+ksusgn|session signature
 ksut|timer
 ksuwaitsysevent|seems to deal with channels (x$ksrchdl, x$ksrcctx)
 ksux|instance
@@ -2892,7 +2917,7 @@ kswsists|DBMS_SERVICE.ISTOP_SERVICE
 ksx|cross instance
 ksxa|parallel affinity
 ksxmcln|DBMS_STATS_INTERNAL.PURGE_ORPHAN_ENTRIES_CALLOUT
-ksxp|main ipc
+ksxp|cross instance ipc
 ksxr|rac operations(?)
 ksz|oracle storage server (OSS) server layer
 kt|transaction
@@ -3000,7 +3025,7 @@ ktldbl|delete list of block SO's
 ktli_UpgradeUpdateInstIdAllLogs|DBMS_SECUREFILE_LOG_ADMIN.UPGRADE_INST_ALL_LOGS
 ktliDestroyAllLogs_Mig|DBMS_SECUREFILE_LOG_ADMIN.DESTROY_ALL_LOGS
 ktm|transaction monitor (smon)
-ktma|IM ADG
+ktma|IM transaction ADG
 ktmSmonMain|main smon routine
 ktmb|IM transaction block
 ktmc|IM transaction concurrency
@@ -3528,6 +3553,7 @@ kzft|fine grained auditing
 kzia|identification and authentication 
 kziaia|main identification and authentication function
 kzl|label
+kzlg|generic directory services integration
 kzp|privileges
 kzpchkc|check privileges on a object cyclic
 kzppCapturePLSQL|DBMS_PRIVILEGE_CAPTURE.CAPTURE_DEPENDENCY_PRIVS
@@ -3542,7 +3568,7 @@ kzppinsdc_str|DBMS_PRIV_CAPTURE.CAPTURE_PRIVILEGE_USE
 kzppobjpriv|DBMS_PRIV_CAPTURE.SES_HAS_OBJ_PRIV
 kzpprolepriv|DBMS_PRIV_CAPTURE.SES_HAS_ROLE_PRIV
 kzppsyspriv|DBMS_PRIV_CAPTURE.SES_HAS_SYS_PRIV
-kzr|resource routines
+kzr|virtual private database
 kzra|privileges
 kzraacx|DBMS_RLS_INT.ADD_POLICY_CONTEXT
 kzraadp|DBMS_RLS_INT.ADD_POLICY
@@ -4321,7 +4347,7 @@ qcpiere|expression relop expression
 qcpilcl|logical clause
 qcpilcl0|local
 qcplgte|logically group SQL text (?)
-qcs|semantic analysis
+qcs|semantic analysis (parser)
 qcso|OBJECTS
 qct|type check operations
 qctcopn|typechecks the query block and its descendant
@@ -4416,6 +4442,7 @@ qeroiirc|invoke rowsource close
 qerpa|partition
 qerpf|query execution prefetch
 qerpsel|parallel execution PX selector
+qerptf|polymorphic table function execution
 qerpx|parallel execution 
 qerpxFetch|fetch method for parallelizer row source
 qerpxSlaveFetch|fetch method row source
@@ -4450,7 +4477,7 @@ qervwRowProcedure|row procedure
 qerwn|window
 qerwnFetch|fetch
 qerxl|vector translate
-qerxp|XDB Query
+qerxp|XDB query
 qerxt|external table
 qerxtAllocate|row source allocate
 qes|services
@@ -4527,6 +4554,7 @@ qksdsInitCtx|start and initialize ADS
 qksmm|compiler memory management
 qksmms|simulation
 qksop|compilter operand processing
+qksptf|polymorphic table functions compilation
 qksqbApplyToQbc|Query compilation for query blocks - apply to QB
 qksqbApplyToQbcLoc|local
 qksvc|Virtual Column
@@ -4539,12 +4567,14 @@ qmcxd|DECODING
 qmcxe|ENCODING
 qmcxe|SELFCON
 qmcxm|ENCODING
+qme|repository
 qmf|ftp server
-qmh|Protocols
+qmh|protocols
 qmixq|XMLIndex
-qmn|Protocols
+qmn|protocols
 qmr|hierarchical resolver
 qms|XOB storage and retrieval
+qmtm|CSX tokenmgr
 qmudxClearBindValues|DBMS_XMLGEN.CLEARBINDVALUES
 qmudxClose|DBMS_XMLGEN.CLOSECONTEXT
 qmudxGetCtx|DBMS_XMLGEN.NEWCONTEXT
@@ -4563,8 +4593,12 @@ qmudxSetXSLT|DBMS_XMLGEN.SETXSLT
 qmudxSetXSLTParam|DBMS_XMLGEN.SETXSLTPARAM
 qmudxUseItemTagsForColl|DBMS_XMLGEN.USEITEMTAGSFORCOLL
 qmurs|handling URIs
-qmx|xml support
+qmx|XOB
+qmxp|CSX print
+qmxq|XML
+qmxrs|CSX print
 qmxsax|sax processing
+qmxt|XML
 qmxtc|ddl and other operator support sql XML support
 qmxtcDxsClearKeyCols|DBMS_XMLSTORE.CLEARKEYCOLUMNLIST
 qmxtcDxsClearUpdCols|DBMS_XMLSTORE.CLEARUPDATECOLUMNLIST
@@ -4582,11 +4616,8 @@ qmxtcDxsUpdateC|DBMS_XMLSTORE.UPDATEXML
 qmxtcDxsUpdateV|DBMS_XMLSTORE.UPDATEXML
 qmxtgx|ADT to XML transformation
 qmxtsk|xmltype support functions
-qmxq|XML
-qmxt|XML
-qmxtra|Query
-qmxtri|Schema
-qmxtri|XMLIndex
+qmxtra|query
+qmxtri|schema/XMLindex
 qo|optimizer
 qolclrevu|OUTLN_PKG.CLEAR_USED
 qolgenol|OUTLN_PKG_INTERNAL
@@ -4595,7 +4626,9 @@ qolrfcache|OUTLN_PKG.REFESH_OUTLINE_CACHE
 qolsigupd|OUTLN_PKG.UPDATE_SIGNATURES
 qolsigxct|OUTLN_PKG.EXACT_TEXT_SIGNATURES
 qos|statistics
+qosadv|SQL optimizer statistics advisor
 qosadvExecuteTaskDrv|DBMS_STATS_ADVISOR.I_EXECUTE_TASK_CALLOUT
+qosd|sql plan directive
 qoshgshrc|DBMS_STATS.GET_STATS_RETENTION_CALLOUT
 qoshposc|DBMS_STATS_INTERNAL.PURGE_OLD_STATS_CALLOUT
 qoshrsoc|DBMS_STATS.REPORTING_MAN_LOG_OP
@@ -4846,6 +4879,7 @@ skgxnreg|registers with process group as primary member (LMON)
 skgxnsrg|registers with process group as slave member 
 skgxp|IPC
 skgxppost|post the owner of a contact out of a blocking call
+skofs|OFS file system implementation
 skuz|security (orapwd)
 skuzfbs|determine orapw file block size
 sm|operating system dependent memory
