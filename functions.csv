@@ -909,6 +909,7 @@ kdzcmptype|DBMS_COMPRESSION.KDZCMPTYPE
 kdzd|decompression
 kdzh|compression
 kdzk|HPK
+kdzp|pcode
 kdzs|decompression
 kdzu|uncompress
 ke|event
@@ -2081,7 +2082,7 @@ koke|OBJECTS images
 koki|id generator
 kokl|lob access
 kokl3|temporary lob access
-kokla|LOB default
+kokla|OBJECTS anydata
 koklcopy|lob copy
 koklcre|lob create
 koklcpb2c|copy binary data into lob
@@ -2112,7 +2113,7 @@ kole|lob default
 kolf|file
 kolfgdir|get directory object path and filenames
 koll|lob default
-kolo|OBJECTS images
+kolo|OBJECTS anydata
 kolr|lob refcount
 kols|?
 kolsins|insert space for the element at the given index
@@ -2124,9 +2125,8 @@ kopldsinit|kop lds initialize a pre-allocated lds
 kos|stream interfaces for images/objects
 kot|type manager
 kotg|accessor (get)
-koxs|lob default
-koxsihread|image handle write from buffer
 koxs|OBJECTS streams
+koxsihread|image handle write from buffer
 kp|programmatic interface
 kpbf|progint miscellaneous
 kpbfcopy|DBMS_FILE_TRANSFER.COPY_FILE_I
@@ -3698,6 +3698,9 @@ mdr|spatial indexing
 msq|generating sql statements
 msqrxq|make sql for remote execution
 n|network
+na|authentication
+nau_ctl|aUthentication ConTroL
+nazslon|Zecurity Log ON
 nb|buffer
 nbi|incoming
 nbiCreate|create buffer
@@ -3709,9 +3712,6 @@ nbo|outgoing
 nboCreate|create buffer
 nboFlush|flush buffer
 nboWrite|write (to socket?)
-na|authentication
-nau_ctl|aUthentication ConTroL
-nazslon|Zecurity Log ON
 nco|network connection
 ncodfa|definition allocation, allocate a new ncodef
 ncrorou|receive OUT arguments for specified procedure
@@ -3808,7 +3808,7 @@ opiobv|bind a variable
 opiodr|oracle code request driver, route the current request
 opiomc|map cursor
 opiope|open cursor
-opiosq|prepare to parse a cursor
+opiosq|prepare to parse a sql command
 opiosq0|0
 opipbr|process bind by reference chain
 opipls|contains opi bundled call executor and support routines
@@ -3883,16 +3883,16 @@ pcklupd|DBMS_PICKLER.UPDATE_THRU_REF
 pcm|PLSQL infrastructure
 pd|PLSQL code execution
 pdlifu|internal entrypoint for the PL/SQL code generator
-pdn|COG native
+pdn|codegen native
 pdt|IDL; type generator
 pdtidc|PL/SQL Diana IDL to PL/SQL intermediate code IDL translator
 pdtimb|PL/SQL intermediate code IDL translator block module
 pdtist|PL/SQL intermediate code IDL translator statement support
 pdtitf|interested in finding the base
-pdw|COG IDL gen
-pdx|COG optimizer
-pdy|COG MCode gen
-pdz|COG infrastructure
+pdw|codegen IDL gen
+pdx|codegen optimizer
+pdy|codegen MCode gen
+pdz|codegen infrastructure
 pe|PLSQL code execution
 pef|external proc
 peftrusted|execute a trusted callout
@@ -3925,6 +3925,7 @@ pfri|plsql runtime
 pfrrun|Interpreter Main Instruction Loop
 pfrrun_no_tool|fast interpretation loop
 pfrsqc|callbacks for array sql and dml with returning
+pfrstk|runtime stack frame
 pgm|PLSQL ILMS
 ph|PLSQL infrastructure
 ph1|syntax
@@ -3942,9 +3943,9 @@ ph2qtx|IDL class TAB_EXP
 ph2sbo|IDL node D_S_BODY
 ph2sms|process statements
 ph2uni|IDL class UNIT_BODY
-pha|PLSQL semantics
-phdr|PLSQL KG interface
-phn|PLSQL semantics
+pha|semantics
+phdr|KG interface
+phn|semantics
 pi|PLSQL apps
 pico|utl_compress support
 picomplz|UTL_COMPRESS.LZ_COMPRESS_I
@@ -4238,7 +4239,7 @@ pls|PLSQL PSD standalones
 plslm|ncomp processing
 plsm|plsql handling collections
 plsql_run|single entry point for top level pfrrun and penrun
-plst|code execution
+plst|PLSQL code execution
 plswa|Programmatic Interfaces to/from PL/SQL
 plzsql|STANDARD.PLZSQL SQL_DDL
 pmuc|plsql handling collections
@@ -4246,7 +4247,7 @@ pmuo|plsql handling collections
 pmux|plsql handling collections
 pncutil|PLSQL infrastructure
 pp|PLSQL infrastructure
-pri|remote interface
+pri|PLSQL remote interface
 pricbr|callback, remote
 prient|run given (rpc) entrypoint
 prient2|common code to run given entrypoint, could be rpc or non-rpc
@@ -4556,7 +4557,7 @@ qksmms|simulation
 qksop|compilter operand processing
 qksptf|polymorphic table functions compilation
 qksqbApplyToQbc|Query compilation for query blocks - apply to QB
-qksqbApplyToQbcLoc|local
+qksqbApplyToQbcLoc|local implementation
 qksvc|Virtual Column
 qkswc|with clause
 qkswcDriver|Recursively traverse through all query blocks
