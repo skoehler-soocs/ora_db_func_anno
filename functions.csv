@@ -1292,6 +1292,7 @@ kgff|direct file io adapter
 kgffdcn|disconnect from kgff instance
 kgfpm|PATCH repository
 kgg|generic lists
+kgghash|produce hash value
 kgh|heap manager
 kghalf|non-recoverably allocate a freeable chunk of memory
 kghalo|main allocation entry point
@@ -2761,8 +2762,10 @@ ksl_get_child_latches|get all child latches
 ksl_get_shared_latch|get latch in shared mode
 ksl_get_shared_latch_int|(12.2)
 ksl_post_proc|post a single process
-ksl_postm_init|post multi initialise
-ksl_postm_do_posts|post multi do posts
+ksl_postm|post multiple processes
+ksl_postm_add|add a process
+ksl_postm_do_posts|post processes
+ksl_postm_init|initialise
 ksl_update_post_stats|update processing of posting stats ao. in x$kslpr
 kslawe|add post-wait entry
 kslccll|clean up after a given latch
