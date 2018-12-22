@@ -50,7 +50,7 @@ cvw|create view
 cvwdrv|driver
 cvwgcd|get column definition
 cvwgcpr|get table/view name, owner id given object id
-db|debug and diagnostics
+dbg|debug and diagnostics
 dbga|Unified Tracing Service
 dbgc|diagnostic framework
 dbgd|generic debug API
@@ -84,6 +84,7 @@ dbgvl|parser
 dbgvm|for ams metadata
 dbgvp|parser
 dbgxtk|xml toolkit
+dbk|debug and diagnostics
 dbkd|kernel debug
 dbkdChkEventRdbmsErr|check event of RDBMS error
 dbke|RDBMS diagnostic data extractor
@@ -139,6 +140,8 @@ dbkripds_downgrade_schema|DBMS_ADR.DOWNGRADE_SCHEMA
 dbkripms_migrate_schema|DBMS_ADR.MIGRATE_SCHEMA
 dbkriprs_recover_schema|DBMS_ADR.RECOVER_SCHEMA
 dbkt|RDBMS UTS tracefile
+dbs|database
+dbsgnmchg|global name change
 del|delete
 delexe|execute
 delrow|row procedure used by KXRD to delete or lock a row
@@ -326,6 +329,7 @@ ipclw|lightweight (exafusion)
 ipp|internal probe processor capabilities(?)
 joe|java runtime environment(?)
 jox|java jit compiler
+joxcsys|create or replace java system
 joxas|dbms_xa
 joxas_end|DBMS_XA.INTERNAL_JOXAS_END XA_END
 joxas_commit|DBMS_XA.INTERNAL_JOXAS_COMMIT XA_COMMIT
@@ -488,9 +492,11 @@ kcbi_get_rsv_bh|get reserved buffer header
 kcbi_issue_io|issue IO
 kcbi_issue_write|issue write
 kcbibr|invalidate range of blocks
+kcbifc|full database caching mode (?)
+kcbipnns|is (buffer) pinned (no statistics)
 kcbism|is medium (selection of read strategy)
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
-kcbipnns|is (buffer) pinned (no statistics)
+kcbivlo|is very large object (selection of read strategy)
 kcbk|checkpoint queue manipulation
 kcbk_prefetch_track|db_block_prefetch administration
 kcbklbc|link buffer into ckpt queue
@@ -574,6 +580,7 @@ kcf|file management
 kcfaioe|aio error. checks if aio is possible.
 kcfbsy|background synchronisation of SGA and controlfile
 kcfcaf|close all files
+kcfccfl|create control file logfile exam
 kcfcdb|create and mount the database
 kcfcld|close database
 kcfcmb|create/mount database subroutines
@@ -599,11 +606,13 @@ kcl_dissolve_readmostly|DBMS_CACHEUTIL.KCL_DISSOLVE_READMOSTLY
 kcl_grab_affinity|DBMS_CACHEUTIL.KCL_GRAB_AFFINITY
 kcl_grab_readmostly|DBMS_CACHEUTIL.KCL_GRAB_READMOSTLY
 kcl_obj_downconvert|DBMS_CACHEUTIL.KCL_OBJ_DOWNCONVERT
+kclalc|allocate and initialize lock context
 kclcfusion|claim fusion lock
 kclcsfusion|start fusion recovery request
 kclclaim|claim a recovery lock
 kclcls|check lock status
 kclcvb|convert lock background: send message(s) to background to convert lock
+kclebs|escalate buffer state. this routine attempts to make a shared current.
 kclgclk|global cache lock
 kclpto|background timeout action
 kclrdone|recovery is done so cleanup buffer
@@ -762,8 +771,11 @@ kdc|cluster
 kdd|delete/(cluster?)
 kddchg|perform delete/update change
 kdddgb|delete get block
+kddlkr|delete rows
 kdeu|export unload
 kdfi|memoptimize for write
+kdfiInitSGAState|create write buffer in large pool
+kdfiWrite|write into write buffer
 kdfs|dbfs c api
 kdg|gathering
 kdglfp|locator function perform
@@ -1311,6 +1323,7 @@ kghnospc|no space available in the heap, signal an error
 kghphini|parent heap initialize
 kghpmalo|find and return permanent chunk of space
 kghrcappl|apply this heap function depth first
+kghssgai|segmented allocation internal
 kghsrch|search freelists for a memory chunk
 kghstack_alloc|allocate pga memory
 kghstack_free|free pga memory
@@ -2099,6 +2112,8 @@ kokltrim|trim
 koklv|lob default
 kokm|methods
 kokmrwo|get new RWO vector enhanced with ordering
+koko|objects?
+kokoupkl|unpickle into and instance
 koks|semantic analysis
 kokscupd|check for updatability of column and change adf flag
 koksxlv|xform operand tree into an L-Value
@@ -2107,13 +2122,16 @@ kola|lob
 kolaErrorHandler|error handler
 kolace|XDB CSX print
 kolars|XDB CSX print
-kolc|?
-kolcins|inset space for the element at the given index
+kolc|collection?
 kolccst|construct element callback
+kolcins|inset space for the element at the given index
+kolcpupkl|unpickle collection
 kole|lob default
 kolf|file
 kolfgdir|get directory object path and filenames
-koll|lob default
+kolfopen|open a file
+koll|lob locator
+kollrsz|resize and initialize a lob locator
 kolo|OBJECTS anydata
 kolr|lob refcount
 kols|?
@@ -2124,6 +2142,7 @@ kope2pic|pickler mumbo jumbo
 kopetrv|kop engine and traverse
 kopldsinit|kop lds initialize a pre-allocated lds
 kos|stream interfaces for images/objects
+kosiend|image end and callback
 kot|type manager
 kotg|accessor (get)
 koxs|OBJECTS streams
@@ -2206,7 +2225,7 @@ kprb|bundled operations
 kprball|execute all bundled kpr/rpi operations
 kprc|RPI copy routines
 kprccu|copy data given Uac
-kprcdt|delete trailing spaces for binds
+kprcdt|copy data
 kps|transparent session migration
 kpscrcap|DBMS_SESSION_STATE.SS_CAPTURE
 kpscrmrk|DBMS_SESSION_STATE.SS_MARK_CAPTURE
@@ -2671,6 +2690,7 @@ ksedst1|stack trace 1 helper
 ksepop|perform cleanup when an error frame is being popped
 kserec1|record an error code
 ksesec1|recovery operations
+ksesin|signal an internal error (named)
 ksf|functions
 ksfd|disk IO
 ksfdDumpPGA|dump ksfd PGA
@@ -3363,7 +3383,7 @@ kwqm|multiconsumer queue IOT support
 kwqmn|time manager
 kwqmnslv|slave callback called by ksvrdp
 kwqmnstslv|start AQ slave process
-kwqmstmgr|queue scan time manager entries
+kwqmstmgr|scan time manager entries
 kwqn|queue notifier
 kwqngetfrommail|DBMS_AQELM.GET_SENDFROM
 kwqngethostmail|DBMS_AQELM.GET_MAILHOST
@@ -3787,6 +3807,7 @@ opi|oracle program interface
 opiSem|semantic analysis driver
 opiamr|archival and media recovery
 opibnd|bind
+opibnd0|0
 opibrn|bind reference numeric
 opicca|clear context area
 opiclo|close cursor
@@ -3807,6 +3828,7 @@ opikndf2|OPIINO: Kernel route which sits on top of the SQL*Net
 opilof|log off
 opilon|log on
 opimai|main
+opimai_real|real oracle start point
 opiobv|bind a variable
 opiodr|oracle code request driver, route the current request
 opiomc|map cursor
@@ -4426,10 +4448,10 @@ qerjotFetch|fetch
 qerle|linear execution implementation
 qerli|parallel create index
 qerlt|load table
-qerltRop|row procedure callback
 qerlt_olev|out-of-line columns, evaluate and stash away
 qerlt_snv|stash away and new values
 qerltFetch|fetch
+qerltRop|row procedure callback
 qerltc|conventional
 qerltcFetch|main processing function
 qerltcFreeMemory|free memory
@@ -4559,7 +4581,8 @@ qksmm|compiler memory management
 qksmms|simulation
 qksop|compilter operand processing
 qksptf|polymorphic table functions compilation
-qksqbApplyToQbc|Query compilation for query blocks - apply to QB
+qksqb|Query compilation for query blocks
+qksqbApplyToQbc|apply to QB
 qksqbApplyToQbcLoc|local implementation
 qksvc|Virtual Column
 qkswc|with clause
@@ -5041,6 +5064,7 @@ xsttsfreeze|DBMS_AW_EXP.TTS_AW_FREEZE
 xsttsthaw|DBMS_AW_EXP.TTS_AW_THAW
 xty|type checking
 xtydrv|driver
+xtyginf|get character set id and form
 xtyinpr|insert numeric precision operator
 xtyopn|expression typecheck operand
 xtypls|plsql functions
