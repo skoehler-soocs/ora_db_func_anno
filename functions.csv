@@ -141,7 +141,9 @@ dbkripms_migrate_schema|DBMS_ADR.MIGRATE_SCHEMA
 dbkriprs_recover_schema|DBMS_ADR.RECOVER_SCHEMA
 dbkt|RDBMS UTS tracefile
 dbs|database
+dbsclose|close
 dbsgnmchg|global name change
+dbslrn|log/db files rename
 del|delete
 delexe|execute
 delrow|row procedure used by KXRD to delete or lock a row
@@ -1152,6 +1154,7 @@ kewrpdbn_dropbl_byname|DBMS_WORKLOAD_REPOSITORY.DROP_BASELINE
 kewrpdbt_drop_bl_template|DBMS_WORKLOAD_REPOSITORY.DROP_BASELINE_TEMPLATE
 kewrpdsr_drop_snapshot_range|DBMS_WORKLOAD_REPOSITORY.DROP_SNAPSHOT_RANGE
 kewrpdtr_dump_trace|DBMS_SWRF_INTERNAL.DUMP_TRACE
+kewrcfp_create_first_partition|create first partition for all AWR after dbid is registered
 kewrpms_modify_settings|DBMS_WORKLOAD_REPOSITORY.MODIFY_SNAPSETTINGS_CALLOUT
 kewrpmws_modbl_window_size|DBMS_WORKLOAD_REPOSITORY.MODIFY_BASELINE_WINDOW_SIZE
 kewrprb_rename_baseline|DBMS_WORKLOAD_REPOSITORY.RENAME_BASELINE
@@ -1172,7 +1175,6 @@ kewrst2ss_source_t2s_snap|DBMS_SWRF_INTERNAL.AWR_FLUSH_T2SS_SNAP_CALLOUT
 kewrudf_update_datafile|DBMS_SWRF_INTERNAL.UPDATE_DATAFILE
 kewrusr_unreserve_snap_range|DBMS_SWRF_INTERNAL.UNRESERVE_SNAP_RANGE_CALLOUT
 kewrwfao_wait_for_awr_open|DBMS_SWRF_INTERNAL.WAIT_FOR_AWR_OPEN_CO
-kewrf|flush
 kewrpmvs_modify_view_settings|DBMS_MANAGEMENT_BOOTSTRAP.MODIFY_AWR_VIEW_SETTINGS_CO
 kewrps|purge
 kews|statistics
@@ -1813,8 +1815,7 @@ kkzgna|generate name
 kkziIsUserCreatedIdx|DBMS_REDEFINITION.IS_USER_CREATED
 kkziSetAclmv|DBMS_SNAP_INTERNAL.SET_I_AM_AN_ACLMV
 kkzi_is_XMLtab_Objrel|DBMS_REDEFINITION.IS_XMLTAB_OBJREL
-kkzi_reg_idx_param|DBMS_REDEFINITION.REG_XMLIDX_PARAMSTR
-kkzi_reg_idx_param|DBMS_REDEFINITION.IS_PARAM_NM_TAKEN
+kkzi_reg_idx_param|DBMS_REDEFINITION.REG_XMLIDX_PARAMSTR DBMS_REDEFINITION.IS_PARAM_NM_TAKEN
 kkzi_test_dml_refresh_trigger|DBMS_REDEFINITION.TEST_DML_REFRESH_TRIGGER
 kkzi_xmlidx_parmstr|DBMS_REDEFINITION.GET_XMLIDX_PARAMSTR
 kkzi_xmlidx_sxtab|DBMS_REDEFINITION.GET_XMLIDX_SX_TAB
@@ -2869,6 +2870,7 @@ ksqgel|get and allocate enqueue
 ksqget|get an enqueue
 ksqgtl|get an enqueue
 ksqrcl|release an enqueue
+ksqsgn|procedure to register database name for ?
 ksr|reliable messages
 ksrma|ksrma
 ksrmf|ksrmf
