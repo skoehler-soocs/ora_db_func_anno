@@ -447,6 +447,7 @@ k2labo|abort session: first abort aborts tx
 k2lcom|commit session, first commit commits tx
 k2lpre|prepare: enter prepared state for session, if last session, prepare tx
 k2r|multiple RPC
+k2rbeg|RPC for begin transaction
 k2s|server
 k2send|server end transaction - 2PC state machine
 k2serv|service a transaction manager RPC
@@ -1379,9 +1380,9 @@ kglsscn|scan a loaded set invoking a supplied callback for each element
 kglunp|unpin heaps of an object
 kgm|inter-language method services
 kgmexcb|execution callback
+kgmexch|execute by compilation handle
 kgmexec|execute
 kgmexsc|execute call with SCD (used only by PLSQL)
-kgmexch|execute by compilation handle
 kgmgaicn|generic arguments input conversions
 kgmgaocn|generic arguments output conversions
 kgmgchd|get compilation handle
@@ -1804,6 +1805,8 @@ kkxrpc|rpc
 kkxsem|semantic phase
 kkxsexe|execute a cursor
 kkxsexr|execute with returning binds
+kkxsfcn|scalar fetch n rows
+kkxsscfch|scalar fetch
 kkxt|trigger
 kkxtexe|trigger execute
 kkxtgsv|DBMS_INTERNAL_TRIGGER.KKXTGSV GET_UGAKNT
@@ -1812,17 +1815,17 @@ kkxtmit|DBMS_INTERNAL_TRIGGER.KKXTMIT MAINTAIN_INTERNAL_TRIGGER
 kkxtusv|DBMS_INTERNAL_TRIGGER.KKXTUSV SET_UGAKNT
 kkxuexe|stub execute
 kkxwtp|plsql compiler
-kky|system
+kky|system/session
 kkyasy|alter system driver
 kkz|security
 kkzgna|generate name
-kkziIsUserCreatedIdx|DBMS_REDEFINITION.IS_USER_CREATED
-kkziSetAclmv|DBMS_SNAP_INTERNAL.SET_I_AM_AN_ACLMV
 kkzi_is_XMLtab_Objrel|DBMS_REDEFINITION.IS_XMLTAB_OBJREL
 kkzi_reg_idx_param|DBMS_REDEFINITION.REG_XMLIDX_PARAMSTR DBMS_REDEFINITION.IS_PARAM_NM_TAKEN
 kkzi_test_dml_refresh_trigger|DBMS_REDEFINITION.TEST_DML_REFRESH_TRIGGER
 kkzi_xmlidx_parmstr|DBMS_REDEFINITION.GET_XMLIDX_PARAMSTR
 kkzi_xmlidx_sxtab|DBMS_REDEFINITION.GET_XMLIDX_SX_TAB
+kkziIsUserCreatedIdx|DBMS_REDEFINITION.IS_USER_CREATED
+kkziSetAclmv|DBMS_SNAP_INTERNAL.SET_I_AM_AN_ACLMV
 kkziacset|DBMS_IREFRESH.SET_AUTOCOMMIT
 kkziaord|DBMS_REDEFINITION.ABORT_REDEF_INT
 kkzibcrd|DBMS_SNAP_INTERNAL.KKZIBCRD CLEAR_DIRECTION
@@ -3775,6 +3778,7 @@ nn|names
 npi|network program interface
 npiall|use bundled execution
 npiane|add new nco entry
+npibeg|maybe begin a distributed transaction branch, release local DX
 npicom|old style commit
 npicon0|connect; connect and log on to an external database
 npidri0|driver common
@@ -4330,17 +4334,16 @@ psdlcv|DBMS_LOCK.PSDLCV
 psdlgt|DBMS_LOCK.PSDLGT
 psdlrl|DBMS_LOCK.PSDLRL
 psdnohot|DBMS_SHARED_POOL.PSDNOHOT UNMARKHOT
+psdmsc|system dependent misc functions
 psdocs|DBMS_UTILITY.PSDOCS OLD_CURRENT_SCHEMA
 psdocu|DBMS_UTILITY.PSDOCU OLD_CURRENT_USER
+psdpgi|open and close cursor support
 psdpur|DBMS_SHARED_POOL.PSDPUR PURGE
 psdpurnew|DBMS_SHARED_POOL.PSDPURNEW
-psdwat|DBMS_LOCK.PSDWAT DBMS_SESSION.PSDWAT SLEEP
-psdmsc|system dependent misc functions
-psdpgi|open and close cursor support
 psdrin|DBMS_SESSION.PSDRIN REINITIALIZE
 psdstfp|DBMS_DDL.PSDSTFP
 psduis|DBMS_SESSION.PSDUIS UNIQUE_SESSION_ID
-psdwat|DBMS_DG.PSDWAT
+psdwat|DBMS_DG.PSDWAT DBMS_LOCK.PSDWAT DBMS_SESSION.PSDWAT SLEEP
 psf|instantiating plsql in library cache
 pso|PLSQL PSD generic
 psu|PLSQL PSD generic
@@ -4839,7 +4842,7 @@ rpidru|setup memory for recursive session
 rpidrus|recursive program handling
 rpidrv|recursive program interface driver
 rpiexe|execute
-rpipl|switch user and parse
+rpispl|switch user and parse
 rpiswu2|switch user in recursive sql
 rtb|rowsource table
 rw|row
@@ -4990,6 +4993,7 @@ ttcclr|send/receive without conversion
 ttcdrv|called when message received
 ttcgcshnd|get character set handle(?): oracle is checking that the remote character set id is valid to do type conversions with different character sets
 ttcpip|pipe read/write
+ttcrd2r|rowid descriptor to rowid conversion routine
 ttcrs2c|result set to cursor conversion routine
 ttp|Database Audit Next Generation
 subex1|evaluate subquery; exists subquery method 1
