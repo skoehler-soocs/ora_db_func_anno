@@ -1340,8 +1340,8 @@ kgiscl|state close cursors
 kgk|token
 kgkp|generic services scheduling policies
 kgl|library cache management
-kgldd|object handle deallocate
-kgldda|a
+kglGetMutex|get mutex
+kglGetSO|get state object
 kgldmp|dump an object
 kgldon|depend on an object
 kgldpo|depend on an object
@@ -1351,6 +1351,10 @@ kglfrx|free extent (heap unpin)
 kglget|get a lock on an object
 kglgob|get an objected locked and pinned
 kglh|heap management
+kglhdal|deallocate
+kglhdd|object handle deallocate
+kglhdda|a
+kglhdgn|get handle
 kglhpd|heap deallocate
 kglhup|heap update
 kgllkal|lock allocate
@@ -2294,6 +2298,8 @@ kqlslod|load all subordinate set elements for a given heap
 kqludp|update with dependencies
 kqlvld|validate an object
 kqr|dictionary/row cache
+kqrfr|free
+kqrfrpo|pinned object(?)
 kqrpre|read a parent cache object
 kr|recovery
 kra|recovery area function
@@ -3063,7 +3069,7 @@ ktmpjUpdInMemExtStat|update inmemory extent statistics
 ktmr|IM transaction read
 ktmsj|IM transaction shared journal
 ktp|parallel
-ktpcmt|commit
+ktpcmt|commit transaction
 ktr|read consistency
 ktrexc|examine blocks (consistent gets - examination)
 ktrexf|examine blocks (returns best candidate)
@@ -4512,6 +4518,9 @@ qes|services
 qesSageEnabled|test if exadata storage servers are used
 qesaAggNonDist|create/compute non-distinct aggregates
 qesbl|bloom filter
+qesblAlo|allocate memory
+qesblGetFilter|get filter
+qesblStart|start
 qesdp|AQP
 qesdpiBeginPrepare|DBMS_DST.BEGIN_PREPARE_KERNEL
 qesdpiBeginUpgrade|DBMS_DST.BEGIN_UPGRADE_KERNEL
