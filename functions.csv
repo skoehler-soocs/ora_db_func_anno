@@ -1700,8 +1700,10 @@ kkspfda|multiple context area management
 kkspsc0|parse shared cursor
 kkssbt|set bind types
 kksscl|scan child list
+kkstpld|this functions returns a text pointer to a contiguous string (sqltext?)
 kksumc|unmap shared cursor
 kksvld|validate cursor
+kksx|execute(?)
 kksxCreate|DBMS_SQL_TRANSLATOR.CREATE_PROFILE
 kksxDeregErrorTrans|DBMS_SQL_TRANSLATOR.DEREGISTER_ERROR_TRANSLATION
 kksxDeregSQLTrans|DBMS_SQL_TRANSLATOR.DEREGISTER_SQL_TRANSLATION
@@ -1721,6 +1723,7 @@ kksxSetSQLTransError|DBMS_SQL_TRANSLATOR.SET_SQL_TRANSLATION_ERROR
 kksxSetSQLTransMod|DBMS_SQL_TRANSLATOR.SET_SQL_TRANSLATION_MODULE
 kksxTranslateError|DBMS_SQL_TRANSLATOR.TRANSLATE_ERROR
 kksxTranslateSQL|DBMS_SQL_TRANSLATOR.TRANSLATE_SQL
+kksxsccmp|shared cursor criteria compare(?)
 kkt|triggers
 kktalt|alter trigger
 kktf|polymorphic table functions
@@ -2204,7 +2207,7 @@ kpogsk|initializes the session and returns the encrypted session key
 kpohal|This is the memory allocator that uses kpcch (the common heap module)
 kpolob|lob operations
 kpolal|lob allocator
-kpon|streams advanaced queuing 
+kpon|streams advanced queuing 
 kponPurgeUnreachLoc|remove registrations for unreachable locations
 kpond|streams advanced queuing notitication
 kpoodr|replaces ttcdrv to handle pisdef in fastpath mode
@@ -2256,6 +2259,7 @@ kpur|remote
 kpurcs|call with service context
 kpurcsc|remote call with service context, callbacks
 kpureq|request (a statement to be executed)
+kpuvers|version
 kpuzxs|XS midtier
 kq|query
 kqaiconn|DBMS_DEBUG_JDWP.KQAICONN CONNECT_TCP
@@ -2830,6 +2834,7 @@ kslwtbctx|begin context/wait
 kslwtectx|end context/wait
 ksm|memory
 ksm_prepage_sga_seg|sga segment selection for prepaging
+ksmals|allocate stack
 ksmapg|callback for allocating a pga extent
 ksmapply_v2|used for prepaging; apply prepage?
 ksmasg|callback for allocating an sga extent
@@ -3789,6 +3794,12 @@ npisnl|set network link
 npitcc|Test/Clear connections
 npixfr|transfer
 ns|session
+nsb|block(?)
+nsbasic|basic
+nsbasic_brc|block receive
+nsbasic_bsd|block send
+nsbrecv|receive
+nsbsend|send
 nscon|connect
 nsdo|execute network session operation. NS protocol engine
 nsevdansw|event deferred: complete deferred nsanswer operation
@@ -3802,9 +3813,16 @@ nstimexp|expire function. invoked by LTM with these specific arguments
 nt|transport
 ntm|mailbox
 ntp|ipc
+ntpfp|?
+ntpfprd|read
+ntpfpwr|write
 ntprd|read
 ntt|tcp/ip
 ntt2err|error procedure
+nttctl|control
+nttfp|?
+nttfprd|read
+nttfpwr|write
 nttrd|basic read
 ntus|unix domain sockets
 ntz|SSL
@@ -4949,8 +4967,10 @@ snltmdf|timer driver: called by SIGALRM
 snt|transport
 sntp|ipc
 sntpread|issue read
+sntpwrite|issue write
 sntt|tcp/ip
-snttread|issue read
+snttread|read data on a socket
+snttwrite|write data to a socket
 sp|operating system dependent process functions
 spefcmpa|marshall procedure arguments
 spefmccallstd|c calling standard
