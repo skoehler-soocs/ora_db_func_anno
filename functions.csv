@@ -1292,14 +1292,18 @@ kgeasi|raise an error on an assertion failure
 kgeasnmierr|assert named internal error
 kgecrs|check and record O/S error code
 kgecxd|context of error driver
+kgefem|format error message (null-terminated)
+kgemef|mae error message (with Va_list)
 kgepop|pop to the current top error frame
 kgerem|record error code (with already-formatted message)
+kgerev|record error code (with Va_list)
 kgerinv|record internal named error with va_list
 kgerinv_internal|or soft internal named error
 kgeriv|record internal error code with va_list
 kgesev|signal error code
 kgesin|signal a named internal error
 kgesinv|signal internal named error with va_list
+kgespf|string printf (format a message straing)
 kgf|ASM
 kgfd|io subsystem driver
 kgfdvf|Voting file Interface
@@ -1324,6 +1328,7 @@ kghgex|get a new extent
 kghini|heap initialize
 kghnospc|no space available in the heap, signal an error
 kghphini|parent heap initialize
+kghpin|pin a heap
 kghpmalo|find and return permanent chunk of space
 kghrcappl|apply this heap function depth first
 kghssgai|segmented allocation internal
@@ -1338,6 +1343,7 @@ kgidel|delete an instantiation object
 kgidlt|delete an instantiation object
 kgimal|memory allocate
 kgiscl|state close cursors
+kgisdl|state delete
 kgk|token
 kgkp|generic services scheduling policies
 kgl|library cache management
@@ -1475,12 +1481,17 @@ kjhn_get_reason_plsql|DBMS_HA_ALERTS.GET_REASON
 kjhn_get_service_plsql|DBMS_HA_ALERTS.GET_SERVICE
 kjhn_get_version_plsql|DBMS_HA_ALERTS.GET_VERSION
 kjk|RAC kernel accelerator
-kjlt|lock table
+kjl|lock
+kjlrem|remove lock from all queues and free it
+kjlrlr|remove lock from resource queue
+kjlsod|state object delete
+kjlt|table
 kjm|RAC multiple LMS
 kjmsm|main action callback (LMS main loop)
 kjoe|DLM omni enqueue service
+kjpfr|process free
 kjpt|processes
-kjpsod|disconnect from DLM
+kjpsod|state object delete, disconnect from DLM
 kjr|resource table
 kjsc|RAC global stats
 kjskcvl|main cache convert routine
@@ -1924,6 +1935,7 @@ kmgsdrv|driver
 kmc|virtual circuit
 kmcadq|add circuit to a queue
 kcmcvc|create virtual circuit
+kmcdlc|state object delete routine
 kmcdrv|driver
 kmcmbf|mark buffer
 kmcrowrt|private functions
@@ -2305,9 +2317,11 @@ kqlslod|load all subordinate set elements for a given heap
 kqludp|update with dependencies
 kqlvld|validate an object
 kqr|dictionary/row cache
+kqreqd|enqueue delete
 kqrfr|free
 kqrfrpo|pinned object(?)
 kqrpre|read a parent cache object
+kqrrls|release lock
 kr|recovery
 kra|recovery area function
 krb|backup restore
@@ -2703,6 +2717,7 @@ ksedsts|dump stack (short version)
 ksedst1|stack trace 1 helper
 ksepop|perform cleanup when an error frame is being popped
 kserec1|record an error code
+kserec4|record an error code
 ksesec1|recovery operations
 ksesin|signal an internal error (named)
 ksf|functions
@@ -2755,7 +2770,7 @@ ksfmplsmapelement|DBMS_STORAGE_MAP.MAP_ELEMENT_CALLOUT
 ksfmplsmapfile|DBMS_STORAGE_MAP.MAP_FILE_CALLOUT
 ksfmplsrestore|DBMS_STORAGE_MAP.RESTORE_CALLOUT
 ksfmplsunlockmap|DBMS_STORAGE_MAP.UNLOCK_MAP_CALLOUT
-ksfpec|io post and event
+ksfpec|io post an event
 ksfq|sequential file io interface
 ksfq_alo|allocate device
 ksfqfcls|close a sequential file
@@ -2845,11 +2860,14 @@ ksmdfr|free memory
 ksmdpg|deallocate the variable pga. just free top pga heap, the callback will free the extents to osd.
 ksmerr|cleanup any stack memory allocated within the given error frame
 ksmf|fixed sga
+ksmfpg|free memory pages
 ksmh|any heap
 ksmlsg|check for errors which occured during sga allocation and mapping
 ksmp|pga heap
 ksmprepage|prepage function (only used by sa00?)
 ksmprepage_memory|actual prepage function
+ksmrf|real free heap
+ksmrf_init_alloc|initiate allocation of memory
 ksms|sga heap
 ksmshu|instance shutdown final check on sga
 ksmsq|message queue services
@@ -2876,6 +2894,7 @@ ksq|enqueue
 ksqcnl|convert an enqueue's mode
 ksqcnv|convert an enqueue's mode
 ksqcmi|change lock mode internal
+ksqcov|convert an enqueue's mode
 ksqded|deadlock check
 ksqdel|release an enqueue
 ksqdldnl|deadlock dump ktagetg0
@@ -2885,6 +2904,7 @@ ksqget|get an enqueue
 ksqgtl|get an enqueue
 ksqrcl|release an enqueue
 ksqsgn|procedure to register database name for ?
+ksqsod|state object delete
 ksr|reliable messages
 ksrma|ksrma
 ksrmf|ksrmf
@@ -2896,7 +2916,7 @@ kssdel|delete SO
 kssdmp|dump children of a SO
 kssmc|registration caches
 kssrmf|delete SO 
-kssxdl|delete SO ignoring errors, clean latches
+kssxdl|delete SO ignoring errors, cleans latches
 kst|trace (x$trace)
 kstm|time manager
 kstmchkdrift|check drift
@@ -2914,7 +2934,7 @@ ksugtcpums|get cpu measurement (?)
 ksuded|user disconnect
 ksudel|delete specified user session
 ksudlc|delete call
-ksudlp|delete process. called when user deteches or cleanup by pmon
+ksudlp|delete process. called when user detaches or cleanup by pmon
 ksudmp|dump process state object
 ksudss|dump system
 ksul|license/language
@@ -2933,7 +2953,7 @@ ksut|timer
 ksuwaitsysevent|seems to deal with channels (x$ksrchdl, x$ksrcctx)
 ksux|instance
 ksuxda|attempt to delete all processes that are marked dead
-ksuxds|acquires the ksupol, the so latch protects access to the sniper bit
+ksuxds|acquires the ksupol, the SO latch protects access to the sniper bit
 ksuxdl|delete state object for PMON
 ksuxfl|find dead processes and cleanup their latches. called by PMON
 ksv|slave management
@@ -3043,6 +3063,8 @@ ktfa_set_context_level|DBMS_FLASHBACK_ARCHIVE.SET_CONTEXT_LEVEL
 ktfa_unlock_application|DBMS_FLASHBACK_ARCHIVE.UNLOCK_APPLICATION
 ktfactht|DBMS_FLASHBACK_ARCHIVE.CREATE_TEMP_HISTORY_TABLE
 ktfb|bitmapped space manipulation of files/tablespaces
+ktfbh|header
+ktfbt|extents
 ktfbtgex|get a free extent
 ktfd|dictionary based extent management
 ktfedml|KUPP$PROC.ENABLE_FLASHBACK_DMLS
@@ -3075,6 +3097,7 @@ ktmpj|IM transaction private journal
 ktmpjInvalidateRow|invalidates the row in a private journal
 ktmpjUpdInMemExtStat|update inmemory extent statistics
 ktmr|IM transaction read
+ktmres|resource cleanup routine
 ktmsj|IM transaction shared journal
 ktp|parallel
 ktpcmt|commit transaction
@@ -3472,6 +3495,9 @@ kxfpqdqr|Queue DeQueue queue Reference
 kxfpqidqr|Queue Internal DeQueue queue Reference
 kxfpqput|put qb buffer back (create partial)
 kxfpqrfdb|Queue ref free dequeued buffer
+kzdpqrsod|queue ref state object delete
+kxfpqsod|queue state object delete
+kxfpqsrls|slave release
 kxfprdp|run detached process
 kxfprienq|Queue ref internal enqueue message
 kxfprifdb|Queue ref internal free dequeued buffer
@@ -3517,6 +3543,7 @@ kxtivwt|view with active trigger for current ML
 kxto|trigger
 kxtr|trigger
 kxtt|temporary table operations
+kxttClnUp|clean up state object
 kxwph|table/tabpart/cluster segment attribute management
 kywmabtpln|DBMS_WLM.IABORT_WLMPLAN
 kywmadclsfr|DBMS_WLM.IADD_WLMCLASSIFIERS
@@ -3775,7 +3802,9 @@ nhpSockSend|send via network socket
 nhpStartRequest|start request
 ni|interface
 nio|operating system dependent networking
+nioqer|error
 nioqrc|receive
+nioqsn|send
 nioqwa|wait
 nl|library
 nldatxt|put current date/time into string
@@ -4914,6 +4943,11 @@ skgfrwat|wait for IO to complete
 skgm|memory (os dependent)
 skgmattach|attach to shared memory realm
 skgmlocate|locate a primary segment from a realm
+skgmrf|real free heap
+skgmrf_alloc|allocate memory
+skgmrf_blknotoaddr|calculate memory address for mmap
+skgmrf_free|calculate memory ranges to be freed
+skgmrf_release|release memory
 skgmstack|call specified function with extra stack space
 skgnfs|network file system
 skgnfs_poll_channels|poll network paths
@@ -4986,6 +5020,10 @@ ssOswPthread_mutex_unlock|pthread_mutex_unlock
 ssexhd|dump routine
 ssk|kernel
 sskg|generic
+sskgm|memory
+sskgmrf|real free heap
+sskgmrf_unmaprange|unmap memory range
+sskgmrf_validaterange|mmap memory range
 sskgpw|post/wait
 sskgpwidcmp|compare semid of semaphores to be posted
 sskgpwpost|post a single semaphore
