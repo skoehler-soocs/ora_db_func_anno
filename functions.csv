@@ -1357,10 +1357,11 @@ kglfrunp|ask a client to free unpinned space
 kglfrx|free extent (heap unpin)
 kglget|get a lock on an object
 kglgob|get an objected locked and pinned
-kglh|heap management
-kglhdal|deallocate
-kglhdd|object handle deallocate
+kglhd|object handle
+kglhdal|allocate
+kglhdd|deallocate
 kglhdda|a
+kglhdgc|get child(?)
 kglhdgn|get handle
 kglhpd|heap deallocate
 kglhup|heap update
@@ -1380,6 +1381,8 @@ kglpnal|pin allocate
 kglpnc|pin heaps and load data pieces of a cursor object
 kglpndl|pin delete
 kglr|remote
+kglrddsc|describe callback function
+kglrds|describe a remote object
 kglrfcl|reference clear
 kglsim|simulator 
 kglsscn|scan a loaded set invoking a supplied callback for each element
@@ -2311,6 +2314,9 @@ kqlp|sharing of sql statements
 kqlpim|pin and load more heaps
 kqlplslod|pl/sql object load
 kqlr|remote
+kqlrddsc|describe callback function
+kqlrds|describe a cursor at the default host
+kqlrld|load a remote library object
 kqls|subordinate set manager
 kqlsadd|add a new element to a subordinate set
 kqlslod|load all subordinate set elements for a given heap
@@ -2320,6 +2326,7 @@ kqr|dictionary/row cache
 kqreqd|enqueue delete
 kqrfr|free
 kqrfrpo|pinned object(?)
+kqrhsh|hash
 kqrpre|read a parent cache object
 kqrrls|release lock
 kr|recovery
@@ -2852,6 +2859,7 @@ ksm_prepage_sga_seg|sga segment selection for prepaging
 ksmals|allocate stack
 ksmapg|callback for allocating a pga extent
 ksmapply_v2|used for prepaging; apply prepage?
+ksmarfg|allocate real free pga(?)
 ksmasg|callback for allocating an sga extent
 ksmcpg|create (variable) pga
 ksmcsg|create sga
@@ -2909,6 +2917,7 @@ ksr|reliable messages
 ksrma|ksrma
 ksrmf|ksrmf
 kss|state object
+kss_del_cb|delete callback
 kssadf|add SO from free list
 kssdch|delete children of SO
 kssdct|delete children of specified type
@@ -2930,7 +2939,7 @@ ksucre|create user session in process
 ksucri|create and initialise process
 ksucrp|create and initialise process
 ksudps|dump this processes
-ksugtcpums|get cpu measurement (?)
+ksugtcpums|get cpu measurement
 ksuded|user disconnect
 ksudel|delete specified user session
 ksudlc|delete call
@@ -2944,6 +2953,7 @@ ksupalv|process alive check
 ksupd|planned draining
 ksupop|pop (restore) user or recursive call
 ksupr|process object
+ksuprc|process recursive call
 ksupucg|push user call general
 ksur|resource usage
 ksus|statistics
@@ -4489,7 +4499,7 @@ qergsFetch|fetch
 qergv|vector aggregate
 qerhc|hash clusters
 qerhj|hash join
-qerhjAllocateX|allocate
+qerhjAllocate|allocate
 qerhjFetch|fetch
 qerhjInnerProbeHashTable|inner probe hash table
 qerhjWalkHashBucket|walk a list of pointers in a hash bucket and check for a match
@@ -4588,6 +4598,7 @@ qesdpiUpgradeTable|DBMS_DST.UPGRADE_TABLE_KERNEL
 qesgv|vector aggregate
 qesma|partitioning
 qesmm|memory manager (pga)
+qesmmIPgaFreeCb|pga free callback
 qesltc|load table conventional
 qespc|partitioning
 qesrc|result cache
@@ -4884,6 +4895,7 @@ rnm|rename statement operation
 rpi|recursive program interface
 rpibnn|bind by number
 rpicls|close
+rpidec|describe with callback
 rpidrr|error handler for setup memory for the recursive session (dru)
 rpidru|setup memory for recursive session
 rpidrus|recursive program handling
@@ -4897,7 +4909,7 @@ rwo|operand
 rwoima|vector implementation a
 rwoupo|unpack row from buffer queue (px)
 rws|source
-rwsaidX|allocate new identity source
+rwsaid|allocate new identity source
 rwsima|retrieval according to defining query
 rwsdef|definitions
 rwsfcd|fetch from rowsource
@@ -5135,11 +5147,11 @@ xsrunning|DBMS_AW.OLAP_RUNNING
 xstco_check_olap|DBMS_CUBE_LOG.CHECK_OLAP
 xsttsfreeze|DBMS_AW_EXP.TTS_AW_FREEZE
 xsttsthaw|DBMS_AW_EXP.TTS_AW_THAW
-xty|type checking
+xty|expression type check
 xtydrv|driver
 xtyginf|get character set id and form
 xtyinpr|insert numeric precision operator
-xtyopn|expression typecheck operand
+xtyopn|operand
 xtypls|plsql functions
 z|security
 zlke|label error handling
