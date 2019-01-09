@@ -1350,6 +1350,8 @@ kgkp|generic services scheduling policies
 kgl|library cache management
 kglGetMutex|get mutex
 kglGetSO|get state object
+kglchk1|check for 1 access on object
+kglchk2|check for access on an object
 kgldmp|dump an object
 kgldon|depend on an object
 kgldpo|depend on an object
@@ -1523,6 +1525,7 @@ kkae_reset_edition_always_icd|DBMS_SESSION.KKAE_RESET_EDITION_ALWAYS_ICD USE_DEF
 kkae_reset_edition_icd|DBMS_SESSION.KKAE_RESET_EDITION_ICD USE_DEFAULT_EDITION_DEFERRED
 kkae_set_edition_icd|DBMS_SESSION.KKAE_SET_EDITION_ICD SET_EDITION_DEFERRED
 kkb|table
+kkbdgdl_dll_get_dml_lock|lock the user and Get the User Cache entry
 kkbn|nested table
 kkbndrp|drop storage tables for nested table columns
 kkbnftn|format table for nested table
@@ -1606,7 +1609,7 @@ kkoat|auto tuning optimizer
 kkobmp|bitmap processing
 kkocnp|cost next permutation
 kkocpjoinqb|copy and join query block
-kkocpqb|copy query block
+kkocpqb|copy query block: copy a query block by reparsing its SQL text
 kkocri|create index
 kkodp|AQP
 kkoecp|evaluate constant predicate
@@ -4029,6 +4032,8 @@ ph|PLSQL infrastructure
 ph1|syntax
 ph2|semantics phase 2
 ph2blo|idl node D_BLOCK, D_DECL
+ph2exp|process IDL class EXP
+ph2ext|process IDL class EXP - top level
 ph2gbi|initialize bind variable type information
 ph2its|process items
 ph2obl|outermost block, outermost D_BLOCK in a body
@@ -4042,6 +4047,7 @@ ph2sbo|IDL node D_S_BODY
 ph2sms|process statements
 ph2uni|IDL class UNIT_BODY
 pha|semantics
+phdite|immediate type (S_OBJ_TY) of expressions
 phdr|KG interface
 phn|semantics
 pi|PLSQL apps
@@ -5068,6 +5074,7 @@ ttcc2u|convert type x to type y
 ttcclr|send/receive without conversion
 ttcdrv|called when message received
 ttcgcshnd|get character set handle(?): oracle is checking that the remote character set id is valid to do type conversions with different character sets
+ttci2u|integer type to universal representation
 ttcpip|pipe read/write
 ttcrd2r|rowid descriptor to rowid conversion routine
 ttcrs2c|result set to cursor conversion routine
@@ -5158,7 +5165,7 @@ xtydrv|driver
 xtyginf|get character set id and form
 xtyinpr|insert numeric precision operator
 xtyopn|operand
-xtypls|plsql functions
+xtypls|check plsql functions
 z|security
 zlke|label error handling
 zll|label security
