@@ -2592,7 +2592,7 @@ krccacp|advance the checkpoint
 krccckp|checkpoint
 krcpabs|I am ctwr
 krcptmo|ctwr timeout action, this is the main loop
-krd|datafiles (media&standby)
+krd|datafiles (media and standby)
 krd_end_rcv|end media recovery
 krd_implicit_rcv|IMPLICIT ReCoVery for standby open/activation
 krdrsb|read from standby (?)
@@ -2812,7 +2812,7 @@ kskthexit|thread exit
 kskthrsod|thread state object delete
 kskvmstatact|measure swap-in and swap-out (and generate error if amount is more than 2% of real memory)
 kskwait_timed_cpu|resource manager wait routine
-ksl|latching & post-wait
+ksl|latching and post-wait
 ksl_get_child_latch_range|get all child latches for a range
 ksl_get_child_latches|get all child latches
 ksl_get_shared_latch|get latch in shared mode
@@ -3772,6 +3772,7 @@ md|spatial
 mdgr|spatial georaster
 mdr|spatial indexing
 msq|generating sql statements
+msqcol|append column name
 msqrxq|make sql for remote execution
 n|network
 na|authentication
