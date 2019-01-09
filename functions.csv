@@ -46,6 +46,7 @@ ctc|create table or cluster
 ctccom_cleanup_online_move|DBMS_PART.CLEANUP_ONLINE_OP_INTERNAL
 ctcdrv|driver
 cur|cursor manipulation
+curdmp|dump
 cvw|create view
 cvwdrv|driver
 cvwgcd|get column definition
@@ -1543,6 +1544,7 @@ kkeapr|analyze predicates for optimization returns stat ptr
 kkecdn|determine cardinality of a table given single table predicates
 kkecpst|create copy of column statistics in compile time memory
 kkegvl|get a value from an opndef and normalize it for cost
+kkejcd|returns cardinality of a join between to tables
 kkepsl|selectivity of a single predicate
 kkest|statistics
 kkevcs|set view column stats for underlying column
@@ -1656,7 +1658,6 @@ kkqctdrvTD|transformation directives
 kkqctdrvVT|vector transformation
 kkqctnojppd|no join predicate pushdown (?)
 kkqdrv|query transformation driver
-kkqdrvIT|initiate cost-based transformation
 kkqgb|group by
 kkqgbp|placement
 kkqgbpColHasHighNDV|Column has high NDV
@@ -1695,6 +1696,7 @@ kkrpfch|fetch from rowsource
 kkrt|rowsource table create as select
 kks|shared objects (cursor)
 kksLoadChild|load child
+kksParseChildCursor|parse child cursor
 kksParseCursor|parse cursor
 kksalc|allocate compile time memory
 kksald|auxiliary load function
@@ -3874,6 +3876,7 @@ ociextp|PLSQL External proc
 odm|oracle disk manager
 odm_io|IO
 opi|oracle program interface
+opiParse|parse
 opiSem|semantic analysis driver
 opiamr|archival and media recovery
 opibnd|bind
@@ -4421,11 +4424,11 @@ qci|language parser and semantic analyser
 qciSetPlSqlCtx|set plsql context during a compile
 qcop|parse
 qcp|parse
-qcpbex|boolean expression
-qcpbfa|boolean term
-qcpbte|boolean factor
 qcpi|interim
 qcpiaex|arithmetic expression
+qcpibex|boolean expression
+qcpibfa|boolean factor
+qcpibte|boolean term
 qcpicmd|command
 qcpiere|expression relop expression
 qcpierr|raise error
@@ -4456,7 +4459,9 @@ qeae|aggregate (order by) elimination (?)
 qeaeCn1Serial|count function
 qec|checks
 qecdrv|driver
+qecgoc|group operand check
 qecrlssub|release resources subroutine
+qecsel|select list
 qecvdm|view dml
 qee|SQL execution
 qer|rowsource
