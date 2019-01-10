@@ -1223,7 +1223,7 @@ kfksubs|subs
 kfm|node monitor interface implementation
 kfmd|layer for diskgroup registration
 kfms|layers support function interface
-kfmsInit|initialise group services (>kgxgncin>cssd)
+kfmsInit|initialise group services (kgxgncin cssd)
 kfn|networking subsystem
 kfnb|umbilicus
 kfnc|client networking
@@ -4935,7 +4935,7 @@ scls|operating system dependent clusterware integration
 scm|PLSQL apps
 scu|operating system concurrency unique(?) 
 scuinst|instance
-sculkget|lockfile (lk<DB_UNIQUE_NAME>)
+sculkget|lockfile (lk DB_UNIQUE_NAME )
 scumnt|mount
 scurls|release
 sel|select
