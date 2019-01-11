@@ -46,6 +46,7 @@ ctc|create table or cluster
 ctccom_cleanup_online_move|DBMS_PART.CLEANUP_ONLINE_OP_INTERNAL
 ctcdrv|driver
 cur|cursor manipulation
+curdmp|dump
 cvw|create view
 cvwdrv|driver
 cvwgcd|get column definition
@@ -1222,7 +1223,7 @@ kfksubs|subs
 kfm|node monitor interface implementation
 kfmd|layer for diskgroup registration
 kfms|layers support function interface
-kfmsInit|initialise group services (>kgxgncin>cssd)
+kfmsInit|initialise group services (kgxgncin cssd)
 kfn|networking subsystem
 kfnb|umbilicus
 kfnc|client networking
@@ -1349,6 +1350,8 @@ kgkp|generic services scheduling policies
 kgl|library cache management
 kglGetMutex|get mutex
 kglGetSO|get state object
+kglchk1|check for 1 access on object
+kglchk2|check for access on an object
 kgldmp|dump an object
 kgldon|depend on an object
 kgldpo|depend on an object
@@ -1522,6 +1525,7 @@ kkae_reset_edition_always_icd|DBMS_SESSION.KKAE_RESET_EDITION_ALWAYS_ICD USE_DEF
 kkae_reset_edition_icd|DBMS_SESSION.KKAE_RESET_EDITION_ICD USE_DEFAULT_EDITION_DEFERRED
 kkae_set_edition_icd|DBMS_SESSION.KKAE_SET_EDITION_ICD SET_EDITION_DEFERRED
 kkb|table
+kkbdgdl_dll_get_dml_lock|lock the user and Get the User Cache entry
 kkbn|nested table
 kkbndrp|drop storage tables for nested table columns
 kkbnftn|format table for nested table
@@ -1543,6 +1547,7 @@ kkeapr|analyze predicates for optimization returns stat ptr
 kkecdn|determine cardinality of a table given single table predicates
 kkecpst|create copy of column statistics in compile time memory
 kkegvl|get a value from an opndef and normalize it for cost
+kkejcd|returns cardinality of a join between to tables
 kkepsl|selectivity of a single predicate
 kkest|statistics
 kkevcs|set view column stats for underlying column
@@ -1604,7 +1609,7 @@ kkoat|auto tuning optimizer
 kkobmp|bitmap processing
 kkocnp|cost next permutation
 kkocpjoinqb|copy and join query block
-kkocpqb|copy query block
+kkocpqb|copy query block: copy a query block by reparsing its SQL text
 kkocri|create index
 kkodp|AQP
 kkoecp|evaluate constant predicate
@@ -1656,7 +1661,6 @@ kkqctdrvTD|transformation directives
 kkqctdrvVT|vector transformation
 kkqctnojppd|no join predicate pushdown (?)
 kkqdrv|query transformation driver
-kkqdrvIT|initiate cost-based transformation
 kkqgb|group by
 kkqgbp|placement
 kkqgbpColHasHighNDV|Column has high NDV
@@ -1695,6 +1699,7 @@ kkrpfch|fetch from rowsource
 kkrt|rowsource table create as select
 kks|shared objects (cursor)
 kksLoadChild|load child
+kksParseChildCursor|parse child cursor
 kksParseCursor|parse cursor
 kksalc|allocate compile time memory
 kksald|auxiliary load function
@@ -3763,6 +3768,7 @@ kzxutilErr|XS_ADMIN_UTIL.RAISE_ERROR (?)
 kzxutilValidateDBuser|XS_ADMIN_UTIL.VALIDATE_DB_USER
 kzxutilValidateObjectName|XS_ADMIN_UTIL.VALIDATE_DB_OBJECT_NAME
 lis|PLSQL_KG_Interface
+lmtdcrel|compare two double-precision float-point numbers
 lnxn2copt|converts an oracle number to a character string with option for padding
 lnxn2coptg|with nls global
 lnxqchk|private number check function
@@ -3874,6 +3880,7 @@ ociextp|PLSQL External proc
 odm|oracle disk manager
 odm_io|IO
 opi|oracle program interface
+opiParse|parse
 opiSem|semantic analysis driver
 opiamr|archival and media recovery
 opibnd|bind
@@ -4026,6 +4033,8 @@ ph|PLSQL infrastructure
 ph1|syntax
 ph2|semantics phase 2
 ph2blo|idl node D_BLOCK, D_DECL
+ph2exp|process IDL class EXP
+ph2ext|process IDL class EXP - top level
 ph2gbi|initialize bind variable type information
 ph2its|process items
 ph2obl|outermost block, outermost D_BLOCK in a body
@@ -4039,6 +4048,7 @@ ph2sbo|IDL node D_S_BODY
 ph2sms|process statements
 ph2uni|IDL class UNIT_BODY
 pha|semantics
+phdite|immediate type (S_OBJ_TY) of expressions
 phdr|KG interface
 phn|semantics
 pi|PLSQL apps
@@ -4421,11 +4431,11 @@ qci|language parser and semantic analyser
 qciSetPlSqlCtx|set plsql context during a compile
 qcop|parse
 qcp|parse
-qcpbex|boolean expression
-qcpbfa|boolean term
-qcpbte|boolean factor
 qcpi|interim
 qcpiaex|arithmetic expression
+qcpibex|boolean expression
+qcpibfa|boolean factor
+qcpibte|boolean term
 qcpicmd|command
 qcpiere|expression relop expression
 qcpierr|raise error
@@ -4456,7 +4466,9 @@ qeae|aggregate (order by) elimination (?)
 qeaeCn1Serial|count function
 qec|checks
 qecdrv|driver
+qecgoc|group operand check
 qecrlssub|release resources subroutine
+qecsel|select list
 qecvdm|view dml
 qee|SQL execution
 qer|rowsource
@@ -4924,7 +4936,7 @@ scls|operating system dependent clusterware integration
 scm|PLSQL apps
 scu|operating system concurrency unique(?) 
 scuinst|instance
-sculkget|lockfile (lk<DB_UNIQUE_NAME>)
+sculkget|lockfile (lk DB_UNIQUE_NAME )
 scumnt|mount
 scurls|release
 sel|select
@@ -5063,6 +5075,7 @@ ttcc2u|convert type x to type y
 ttcclr|send/receive without conversion
 ttcdrv|called when message received
 ttcgcshnd|get character set handle(?): oracle is checking that the remote character set id is valid to do type conversions with different character sets
+ttci2u|integer type to universal representation
 ttcpip|pipe read/write
 ttcrd2r|rowid descriptor to rowid conversion routine
 ttcrs2c|result set to cursor conversion routine
@@ -5153,7 +5166,7 @@ xtydrv|driver
 xtyginf|get character set id and form
 xtyinpr|insert numeric precision operator
 xtyopn|operand
-xtypls|plsql functions
+xtypls|check plsql functions
 z|security
 zlke|label error handling
 zll|label security
