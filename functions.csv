@@ -3768,6 +3768,7 @@ kzxutilErr|XS_ADMIN_UTIL.RAISE_ERROR (?)
 kzxutilValidateDBuser|XS_ADMIN_UTIL.VALIDATE_DB_USER
 kzxutilValidateObjectName|XS_ADMIN_UTIL.VALIDATE_DB_OBJECT_NAME
 lis|PLSQL_KG_Interface
+lmtdcrel|compare two double-precision float-point numbers
 lnxn2copt|converts an oracle number to a character string with option for padding
 lnxn2coptg|with nls global
 lnxqchk|private number check function
