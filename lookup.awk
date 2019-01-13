@@ -1,4 +1,4 @@
-#!/bin/awk -f
+#!/usr/bin/awk -f
 function lookup_function( function_name ) {
   current_pos = 1; 
   annotation = "";

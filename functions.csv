@@ -528,6 +528,7 @@ kcbpioqcInit|initialize memory area in pga
 kcbr_apply_pending|apply changed pending read completion
 kcbr_media_apply|apply change vector for media recovery
 kcbrbuf|get a recovery buffer
+kcbrbr|reuse block rang
 kcbrls|release pin 
 kcbtema|thread recovery examine and maybe apply
 kcbtse|tablespace encryption
@@ -597,7 +598,7 @@ kcflci|check status of IO
 kcflwi|wait for IO
 kcfmdb|mount database
 kcfopd|open/close database code
-kcfrbd|read buffers from database
+kcfrbd|read buffers from disk
 kcfris|release instance state queue
 kcfrms|DBMS_SYSTEM.KCFRMS_ICD KCFRMS
 kcfwatwr|wait for write IOs to finish (dbwr)
@@ -636,9 +637,11 @@ kcmtdif|time difference
 kcn|nologging(?)
 kco|operation
 kco_blkchk|main block check function
+kcoadd|add change vector to kcocv array
 kcoadv_hdr|advance SCN in buffer header
 kcoapl|apply (changes to buffer)
 kcoapl_validate|validate applied changes
+kconew|create (new) array (kcocv) of change vectors
 kcopcv|prepare change vector/redo entry generation and retrieval
 kcoubk|undo callback
 kcosze|calculate undo record size
@@ -805,6 +808,7 @@ kdiblcfls|conventional flush batch with undo overhead
 kdibq|queue class
 kdibr|row source utility
 kdic|create
+kdicclean|cleanup IND$ if online builder crashes
 kdicdrv|driver routine
 kdicrws|using row source
 kdics|cluster table scan
@@ -1311,7 +1315,7 @@ kgfdvf|Voting file Interface
 kgff|direct file io adapter
 kgffdcn|disconnect from kgff instance
 kgfpm|PATCH repository
-kgg|generic lists
+kgg|generic routines
 kgghash|produce hash value
 kgh|heap manager
 kghalf|non-recoverably allocate a freeable chunk of memory
@@ -1327,6 +1331,7 @@ kghfrunp|free unpinned space
 kghfrx|free extent
 kghgex|get a new extent
 kghini|heap initialize
+kghmrk|mark heap
 kghnospc|no space available in the heap, signal an error
 kghphini|parent heap initialize
 kghpin|pin a heap
@@ -1607,6 +1612,7 @@ kkoadsComputeSqlid|compute sqlid
 kkoasj|add semi-join function
 kkoat|auto tuning optimizer
 kkobmp|bitmap processing
+kkocfb|cardinality feedback
 kkocnp|cost next permutation
 kkocpjoinqb|copy and join query block
 kkocpqb|copy query block: copy a query block by reparsing its SQL text
@@ -1699,6 +1705,7 @@ kkrpfch|fetch from rowsource
 kkrt|rowsource table create as select
 kks|shared objects (cursor)
 kksLoadChild|load child
+kksMapCursor|map cursor
 kksParseChildCursor|parse child cursor
 kksParseCursor|parse cursor
 kksalc|allocate compile time memory
@@ -2304,6 +2311,7 @@ kqfp|packages
 kqfrs|row source
 kql|library cache
 kqlb|bootstrapping support
+kqlclo|cleanup nonexistent objects in OBJ$
 kqld|dictionary callbacks
 kqldprr|parent referential constraint read
 kqlfgl|get row for Lock, fixed table support
@@ -2707,7 +2715,7 @@ kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|system notifications to be passed to components
 ksd|debug internal errors
 ksddoa|debug support do an action
-ksdhng|hang analysis
+ksdhng|hang analyze
 ksdind|DBMS_SYSTEM.KSDIND_ICD KSDIND
 ksdnfsp_restore_df_perm|DBMS_DNFS.RESTORE_DATAFILE_PERMISSION
 ksdocrl|check if row is locked
@@ -2721,6 +2729,8 @@ ksdxcb|ksdx callback for sosd layer signal handler
 ksdxen|2-task entry point
 ksdxfdmp|ksdx function: invoke named dump
 ksdxfstk|dump abridged os stack
+ksdxwcwpt|create watchpoint
+ksdxwdwpt|delete watchpoint
 kse|error
 ksed|debug
 ksedmp|dump process state
@@ -2832,17 +2842,18 @@ kslawe|add post-wait entry
 kslccll|clean up after a given latch
 kslcll|clean up after a given latch
 kslcllt|clean up after a given latch
-kslclt|child latch
+kslclt|create child latch
 kslconx|convert latch from shared to exclusive
 ksle|event wait
 kslf2c|free two child latches
 kslfre|free latch
 kslfred|free latch, debugging version
-kslges|get latch spinning in a loop
+kslges|get latch slow spinning in a loop
 kslgetl|get latch
 kslgetsl|get a shared latch
+kslg2c|get two child latches of the same parent
+kslg2csl|shared latches
 kslgpl|get parent and child latches
-kslg2c|get two child latches
 kslilcr|invoke latch cleanup routine
 ksliwat|inner wait function; setup a wait that times out
 ksliwat_cleanup|cleanup post/wait entry
@@ -2877,6 +2888,9 @@ ksmfpg|free memory pages
 ksmh|any heap
 ksmlsg|check for errors which occured during sga allocation and mapping
 ksmp|pga heap
+ksmpgd_cancel_detail|PGA_DETAIL_CANCEL (oradebug/alter session)
+ksmpgd_dump_detail|dumps pga detail to tracefile. 1 dumps all, otherwise ora pid
+ksmpgd_get_detail|PGA_DETAIL_GET (oradebug/alter session)
 ksmprepage|prepage function (only used by sa00?)
 ksmprepage_memory|actual prepage function
 ksmrf|real free heap
@@ -2923,8 +2937,10 @@ ksrma|ksrma
 ksrmf|ksrmf
 kss|state object
 kss_del_cb|delete callback
+kss_delete_children|delete children of SO
 kssadf|add SO from free list
 kssdch|delete children of SO
+kssdch_int|internal
 kssdct|delete children of specified type
 kssdel|delete SO
 kssdmp|dump children of a SO
@@ -2938,6 +2954,7 @@ kstmgethighresustick|get high resolution time
 ksu|user
 ksu_detactive_tac|deactivete time accounting
 ksu_dispatch_tac|dispatch timed-out actions (updates wait interface)
+ksuclc|cleanup current call
 ksucln|cleanup detached process
 ksucresg|create session with a process group specified
 ksucre|create user session in process
@@ -2950,7 +2967,8 @@ ksudel|delete specified user session
 ksudlc|delete call
 ksudlp|delete process. called when user detaches or cleanup by pmon
 ksudmp|dump process state object
-ksudss|dump system
+ksudps|dump process state
+ksudss|dump system state
 ksul|license/language
 ksumcl|multi(?) check for process to be alive (checks pmon)
 ksup|processes
@@ -3150,6 +3168,7 @@ ktsf_gsp|get space
 ktsfbfmt|format block and link
 ktsfsmhwm|segment move high water mark
 ktsfsnblk|new block
+ktsfunlk|undo free list
 ktsfx|datafile extention
 ktsl|lob
 ktsl_disp_gsp_driver|dispenser get space driver
@@ -3203,7 +3222,7 @@ ktspmlhwm|Move the Low High Water Mark. Called when a range of blocks is formatt
 ktspsc|search cache
 ktspscan_bmb|scan the level 1 bitmap blocks
 ktss|segment procedures
-ktssdt_segs|drops stray temporary segments
+ktssdt_segs|drops stray temporary segments (creates cursor to check)
 ktst|sort management
 ktstdropobj|drop the temporary space object
 ktstdt|deletes the sort handle (ktstused) state object
@@ -3246,6 +3265,7 @@ kturbt|rollback to time scn
 kturdb|write undo data to undo block
 kturdh|write undo header data to undo block
 kturef|rollback examine candidate undo block
+ktursal|shrink undo segments
 ktursn|rollback segments shrink numbered
 ktursp|rollback to savepoint
 ktursr|rollback segments shrink requested
@@ -3510,7 +3530,7 @@ kxfpqdqr|Queue DeQueue queue Reference
 kxfpqidqr|Queue Internal DeQueue queue Reference
 kxfpqput|put qb buffer back (create partial)
 kxfpqrfdb|Queue ref free dequeued buffer
-kzdpqrsod|queue ref state object delete
+kxfpqrsod|queue ref state object delete
 kxfpqsod|queue state object delete
 kxfpqsrls|slave release
 kxfprdp|run detached process
@@ -3546,8 +3566,11 @@ kxrd|row delete
 kxru|row update
 kxs|shared cursor
 kxsGetRuntimeLock|get runtime lock
+kxsSsa|session state array(?)
+kxsSsaUpdateAllssa|update all session state array (X$KSUSE)
 kxsbndinf|bind variable information
 kxscln|cleanup instantiation object
+kxsfbb|free bind buffers(?)
 kxsffir|function fire called when the appropriate heap is going away
 kxspoac|put oacdef into the cursor instantiation
 kxst|sql trace
@@ -3596,11 +3619,15 @@ kzcicrStatsEncryptNum|DBMS_CRYPTO_INTERNAL.STATS_ENCRYPT_NUM_CALLOUT
 kzcicrStatsEncryptRaw|DBMS_CRYPTO_INTERNAL.STATS_ENCRYPT_RAW_CALLOUT
 kzcicrUpdateSensitiveStats|DBMS_CRYPTO_INTERNAL.UPDATESENSITIVESTATS
 kzck|encryption support
+kzctx|context routines
+kzctxcdbli|construct DB link info
 kzctxecc|DBMS_SESSION.KZCTXECC CLEAR_CONTEXT
 kzctxecc1|DBMS_SESSION.KZCTXECC1 CLEAR_ALL_CONTEXT
 kzctxesc|DBMS_SESSION.KZCTXESC SET_CONTEXT
+kzctxg|global_context
 kzctxgci|DBMS_SESSION.KZCTXGCI CLEAR_IDENTIFIER
 kzctxgsi|DBMS_SESSION.KZCTXGSI SET_IDENTIFIER
+kzctxscv|set context value
 kzd|dictionary access support
 kzdpcrd|DBMS_TDE_TOOLKIT_FFI.DATAPUMP_DECRYPT
 kzdpcre|DBMS_TDE_TOOLKIT_FFI.DATAPUMP_ENCRYPT
@@ -4594,7 +4621,8 @@ qesbl|bloom filter
 qesblAlo|allocate memory
 qesblGetFilter|get filter
 qesblStart|start
-qesdp|AQP
+qesdp|adaptive features?
+qesdpi|internationalisation (timezones)?
 qesdpiBeginPrepare|DBMS_DST.BEGIN_PREPARE_KERNEL
 qesdpiBeginUpgrade|DBMS_DST.BEGIN_UPGRADE_KERNEL
 qesdpiChkPrivs|DBMS_DST.CHECK_PRIVILEGES
@@ -4932,6 +4960,10 @@ sdbima|sort operation
 sdbgrf|Diagnostic directory and file services
 sdbgrfwf_write_file|write to tracefile
 scg|concurrency global locks
+scl|latches
+sclfr|free
+sclgtf|fast get with no spin
+sclgts|slow get with spin (if CPU greater than 1)
 scls|operating system dependent clusterware integration
 scm|PLSQL apps
 scu|operating system concurrency unique(?) 
@@ -4983,6 +5015,8 @@ skgpwinit|initialization
 skgpwpost|post
 skgpwwait|wait
 skgs|service
+skgsl|latches
+skgslgf|get fast with no spin
 skgstm|time
 skgstmGetEpochTs|get epoch timestamp (gettimeofday)
 skgvm|virtual machine
