@@ -1343,6 +1343,8 @@ kghstack_alloc|allocate pga memory
 kghstack_free|free pga memory
 kghx|fixed sized memory
 kghxal|allocate shared memory
+kghxcb|callback to free memory on the free lists back to kgh
+kghxcb_internal|internal
 kgi|instantiation manager
 kgicli|close all cursors for an instantiation 
 kgidel|delete an instantiation object
@@ -3566,6 +3568,7 @@ kxrd|row delete
 kxru|row update
 kxs|shared cursor
 kxsGetRuntimeLock|get runtime lock
+kxsOpenACursor|open a cursor
 kxsSsa|session state array(?)
 kxsSsaUpdateAllssa|update all session state array (X$KSUSE)
 kxsbndinf|bind variable information
