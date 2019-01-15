@@ -1706,6 +1706,7 @@ kkrp|parallelizer (DFO)
 kkrpfch|fetch from rowsource
 kkrt|rowsource table create as select
 kks|shared objects (cursor)
+kksCheckForTrace|check for trace (not sure which; 10046?)
 kksLoadChild|load child
 kksMapCursor|map cursor
 kksParseChildCursor|parse child cursor
@@ -1718,6 +1719,12 @@ kksauc|authorized to use this child?
 kksaxs|semantic analysis, authorize and audit
 kkscls|close cursor, user is done with it
 kkscs|child cursor
+kkscsCheckCriteria|check cursor criteria
+kkscscid|criteria identification
+kkscscid_AdgRedirect|active dataguard redirect
+kkscscid_containers|PDB(?)
+kkscscid_pddl|parallel ddl(?)
+kkscscid_pdm|parallel dml(?)
 kksdopt|smart disk no option
 kksfbc|find bound cursor
 kksffr|free a frame
