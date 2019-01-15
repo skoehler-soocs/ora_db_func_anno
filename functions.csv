@@ -1338,9 +1338,13 @@ kghpin|pin a heap
 kghpmalo|find and return permanent chunk of space
 kghrcappl|apply this heap function depth first
 kghssgai|segmented allocation internal
+kghssgal|segmented allocate
+kghssgfr|segmented free
 kghsrch|search freelists for a memory chunk
 kghstack_alloc|allocate pga memory
 kghstack_free|free pga memory
+kghsup|unpaged page table
+kghsupmm|more memory
 kghx|fixed sized memory
 kghxal|allocate shared memory
 kghxcb|callback to free memory on the free lists back to kgh
@@ -1396,6 +1400,7 @@ kglrds|describe a remote object
 kglrfcl|reference clear
 kglsim|simulator 
 kglsscn|scan a loaded set invoking a supplied callback for each element
+kglssr|session state remove
 kglunp|unpin heaps of an object
 kgm|inter-language method services
 kgmexcb|execution callback
@@ -1416,7 +1421,9 @@ kgodm_io|IO
 kgodm_wait_ios|wait on IOs
 kgs|service
 kgsc|cache, session cache for cursors
+kgscCacheCursor|add cursor to cache
 kgscFindCursor|search cursor in the cache
+kgscFindFreeSlot|find a free slot in the cache
 kgsd|debugging
 kgsk|resource manager
 kgskbwt|begin wait
@@ -1732,6 +1739,7 @@ kksffr|free a frame
 kksh|cursor hash table
 kkslod|cursor load callback
 kkslof|log off (?)
+kksmcAlFree|conditially segmented array allocate. 
 kkspfda|multiple context area management
 kkspsc0|parse shared cursor
 kkssbt|set bind types
@@ -2348,6 +2356,7 @@ kqlvld|validate an object
 kqr|dictionary/row cache
 kqreqd|enqueue delete
 kqrfr|free
+kqrfrc|cache
 kqrfrpo|pinned object(?)
 kqrhsh|hash
 kqrpre|read a parent cache object
@@ -2964,6 +2973,7 @@ kstmgethighresustick|get high resolution time
 ksu|user
 ksu_detactive_tac|deactivete time accounting
 ksu_dispatch_tac|dispatch timed-out actions (updates wait interface)
+ksu_update_eoc_stats|update end of call state(?)
 ksuclc|cleanup current call
 ksucln|cleanup detached process
 ksucresg|create session with a process group specified
