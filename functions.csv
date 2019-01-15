@@ -1416,6 +1416,7 @@ kgodm_io|IO
 kgodm_wait_ios|wait on IOs
 kgs|service
 kgsc|cache, session cache for cursors
+kgscFindCursor|search cursor in the cache
 kgsd|debugging
 kgsk|resource manager
 kgskbwt|begin wait
@@ -4692,6 +4693,7 @@ qknr|rowsets setup
 qks|sql
 qks3t|temp table transformation
 qksan|analyze
+qksce|cursor evaluation
 qksctx|MPGE
 qksds|Dynamic Sampling Services (ADS)
 qksdsCheckPreds|check and find usable predicates
