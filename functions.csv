@@ -1318,6 +1318,7 @@ kgfpm|PATCH repository
 kgg|generic routines
 kgghash|produce hash value
 kgh|heap manager
+kgh_update_comment|add comment to memory chunk allocation
 kghalf|non-recoverably allocate a freeable chunk of memory
 kghalo|main allocation entry point
 kghalp|allocate permanent memory
@@ -1361,6 +1362,7 @@ kgkp|generic services scheduling policies
 kgl|library cache management
 kglGetMutex|get mutex
 kglGetSO|get state object
+kglHeapInitializeInternalFL|initialize heap allocation
 kglchk1|check for 1 access on object
 kglchk2|check for access on an object
 kgldmp|dump an object
@@ -1398,7 +1400,7 @@ kglr|remote
 kglrddsc|describe callback function
 kglrds|describe a remote object
 kglrfcl|reference clear
-kglsim|simulator 
+kglsim|simulator (library cache advise) 
 kglsscn|scan a loaded set invoking a supplied callback for each element
 kglssr|session state remove
 kglunp|unpin heaps of an object
