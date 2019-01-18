@@ -2861,6 +2861,7 @@ ksl_postm|post multiple processes
 ksl_postm_add|add a process
 ksl_postm_do_posts|post processes
 ksl_postm_init|initialise
+ksl_skgslgts|spin get of exclusive latch (11g)
 ksl_update_post_stats|update processing of posting stats ao. in x$kslpr
 kslawe|add post-wait entry
 kslccll|clean up after a given latch
@@ -2872,7 +2873,8 @@ ksle|event wait
 kslf2c|free two child latches
 kslfre|free latch
 kslfred|free latch, debugging version
-kslges|get latch slow spinning in a loop
+kslges|get exclusive latch slow spinning in a loop
+kslgess|shared latch
 kslgetl|get latch
 kslgetsl|get a shared latch
 kslg2c|get two child latches of the same parent
@@ -2885,6 +2887,7 @@ kslpsemf|post semaphores
 kslpslf|post list of foregrounds
 kslpspr|post the process with that latch
 kslpwrp_int|post/wait read post type (to choose single or multi process posting; guess)
+kslskgs|spin get of shared latch
 kslwait|wait for n centi-seconds or until posted
 kslwaitctx|wait context; wait until timeout
 kslwlmod|wait list modification
@@ -5044,7 +5047,9 @@ skgpwpost|post
 skgpwwait|wait
 skgs|service
 skgsl|latches
-skgslgf|get fast with no spin
+skgslcas|get latch fast with no spin (SPARC 11g)
+skgslgf|get latch fast with no spin (SPARC 8i-10g)
+skgslgts|8i-10g spin get of exclusive latch (SPARC)
 skgstm|time
 skgstmGetEpochTs|get epoch timestamp (gettimeofday)
 skgvm|virtual machine
@@ -5117,6 +5122,8 @@ sskgpwpost|post a single semaphore
 sskgpwvectorpost|post multiple semaphores
 sskgpwwait|wait
 sskgpwpost|post
+sskgslgf|immediate latch get (X86, 8i-10g)
+sskgslspin|spin for a latch
 sskgxp|ipc communication
 sskgxp_select|waits "timeout" microseconds for an asynchronous request/event associated with context. if zero, return immediately
 sskgxpu|udp
