@@ -1678,6 +1678,8 @@ kkqctdrvTE|table expansion
 kkqctdrvTD|transformation directives
 kkqctdrvVT|vector transformation
 kkqctnojppd|no join predicate pushdown (?)
+kkqctNxtLinearStt|next linear state
+kkqctUpdBestCostStt|pick the most efficient query transformation state
 kkqdrv|query transformation driver
 kkqgb|group by
 kkqgbp|placement
@@ -2200,6 +2202,7 @@ kope2pic|pickler mumbo jumbo
 kopetrv|kop engine and traverse
 kopldsinit|kop lds initialize a pre-allocated lds
 kos|stream interfaces for images/objects
+kosibegin|image begin
 kosiend|image end and callback
 kot|type manager
 kotg|accessor (get)
@@ -3818,6 +3821,7 @@ kzxutilErr|XS_ADMIN_UTIL.RAISE_ERROR (?)
 kzxutilValidateDBuser|XS_ADMIN_UTIL.VALIDATE_DB_USER
 kzxutilValidateObjectName|XS_ADMIN_UTIL.VALIDATE_DB_OBJECT_NAME
 lis|PLSQL_KG_Interface
+lm|low level math functions
 lmtdcrel|compare two double-precision float-point numbers
 lnxn2copt|converts an oracle number to a character string with option for padding
 lnxn2coptg|with nls global
@@ -4757,11 +4761,11 @@ qmudxSetXSLT|DBMS_XMLGEN.SETXSLT
 qmudxSetXSLTParam|DBMS_XMLGEN.SETXSLTPARAM
 qmudxUseItemTagsForColl|DBMS_XMLGEN.USEITEMTAGSFORCOLL
 qmurs|handling URIs
-qmx|XOB
+qmx|XML Objects
 qmxp|CSX print
 qmxq|XML
 qmxrs|CSX print
-qmxsax|sax processing
+qmxsax|SAX processing
 qmxt|XML
 qmxtc|ddl and other operator support sql XML support
 qmxtcDxsClearKeyCols|DBMS_XMLSTORE.CLEARKEYCOLUMNLIST
