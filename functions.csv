@@ -2651,6 +2651,15 @@ krpicpt|DBMS_PITR.KRPICPT COMMITPITR
 krpidfv|DBMS_PITR.KRPIDFV DOFILEVERIFY
 krpists|DBMS_PITR.KRPISTS SELECTTABLESPACE
 krs|standby/dataguard (?)
+krsa|access and lock
+krsc|crash recovery
+krsd|destination
+krsh|helper
+krsn|network/transport
+krsm|managed recovery process
+krso|monitor
+krss|scheduler
+krsr|remote file server
 krt|tablespaces
 krta2bz|obtain blocksize of tablespace
 krta2rfn|obtain file number (mos says absolute file number)
