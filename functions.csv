@@ -1613,6 +1613,7 @@ kkkivldparea|DBMS_RMIN_SYS.RM$_VLDPAREA_EXT
 kkm|SQL semantic analysis
 kkmdel|extra semantic processes for deletes
 kkmevw|expand view
+kkmpfcbk|process frodef callback
 kkmpost|post processing
 kkmupd|extra semantic processing for update
 kkn|analyze command
@@ -4530,7 +4531,14 @@ qcpilcl|logical clause
 qcpilcl0|local
 qcplgte|logically group SQL text (?)
 qcs|semantic analysis (parser)
+qcsevw|expand view
 qcso|OBJECTS
+qcsp|process
+qcspafq|all frodefs in query block
+qcsprfro|process frodef
+qcsprfro_tree|tree (handles ANSI join frodefs)
+qcspqb|query blocks
+qcspqbDescendents|descendents
 qct|type check operations
 qctcopn|typechecks the query block and its descendant
 qcto|operators
