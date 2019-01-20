@@ -1363,6 +1363,7 @@ kgl|library cache management
 kglGetMutex|get mutex
 kglGetSO|get state object
 kglHeapInitializeInternalFL|initialize heap allocation
+kglUnPin|release pin
 kglchk1|check for 1 access on object
 kglchk2|check for access on an object
 kgldmp|dump an object
@@ -1741,6 +1742,9 @@ kksdopt|smart disk no option
 kksfbc|find bound cursor
 kksffr|free a frame
 kksh|cursor hash table
+kkshin|incomplete list
+kkshinins|insert child
+kkshindel|remove child
 kkslod|cursor load callback
 kkslof|log off (?)
 kksmcAlFree|conditially segmented array allocate. 
@@ -2854,7 +2858,9 @@ kskiorm|I/O resource manager
 ksklheld|lock held
 kskosstatact|operating system statistics act (get os statistics)
 kskpthr|post thread
+kskthbcall|thread begin call
 kskthbwt|thread begin wait
+kskthecall|thread end call
 kskthewt|thread end wait
 kskthexit|thread exit
 kskthrsod|thread state object delete
@@ -3605,6 +3611,7 @@ kxs|shared cursor
 kxsGetRuntimeLock|get runtime lock
 kxsOpenACursor|open a cursor
 kxsSsa|session state array(?)
+kxsSsaSetSqlid|prepare to update X$SUSE with sqlid, updateallssa performs this
 kxsSsaUpdateAllssa|update all session state array (X$KSUSE)
 kxsbndinf|bind variable information
 kxscln|cleanup instantiation object
