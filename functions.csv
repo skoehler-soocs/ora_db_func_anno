@@ -1350,6 +1350,7 @@ kghx|fixed sized memory
 kghxal|allocate shared memory
 kghxcb|callback to free memory on the free lists back to kgh
 kghxcb_internal|internal
+kghxcu|latch cleanup for the fixed allocator
 kgi|instantiation manager
 kgicli|close all cursors for an instantiation 
 kgidel|delete an instantiation object
@@ -1369,6 +1370,8 @@ kglchk2|check for access on an object
 kgldmp|dump an object
 kgldon|depend on an object
 kgldpo|depend on an object
+kgldti|dependency table insert (under latch or KGLMX pin/load)
+kgldtin|?
 kglfnd|find a chunk of at least the minimum size
 kglfrunp|ask a client to free unpinned space
 kglfrx|free extent (heap unpin)
@@ -1382,6 +1385,7 @@ kglhdgc|get child(?)
 kglhdgn|get handle
 kglhpd|heap deallocate
 kglhup|heap update
+kgllcu|latch cleanup for the library cache and pin latches
 kgllkal|lock allocate
 kgllkdl|lock delete
 kgllkds|lock delete state object
