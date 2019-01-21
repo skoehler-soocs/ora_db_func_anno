@@ -2336,6 +2336,7 @@ kqap|server side debug operations
 kqas|server side debug operations
 kqd|dictionary management
 kqdgtc|return an open and parsed cursor for a statement
+kqdobr|read obj$ row using (owner#,name,namespace,remoteowner,linkname) as key
 kqdobu|verify object uniqueness (?)
 kqf|fixed tables
 kqfd|direct access to fixed tables
@@ -2353,6 +2354,7 @@ kqllod|database object load
 kqlm|multi-instance manager
 kqlmcdlod|mcode heap load
 kqlnfy|notify
+kqlobjlod|object load
 kqlobld|object load
 kqlobpn|object pin heaps and load data pieces
 kqlp|sharing of sql statements
@@ -3573,6 +3575,9 @@ kxfpbgtc|buffer allocation get chunk
 kxfpcrel|create local query server process
 kxfpg1sg|get one server group
 kxfpgsg|get server group (coordinator)
+kxfpi|instance
+kxfpiinfo|info; get information from instances
+kxfpldbl|loadbalancing
 kxfpnfy|notify
 kxfpqdqr|Queue DeQueue queue Reference
 kxfpqidqr|Queue Internal DeQueue queue Reference
@@ -3589,6 +3594,7 @@ kxfqira|initialize a TQ range
 kxfqupp|unpack message and put in sort buffer
 kxfr|granules
 kxfrAllocSlaves|allocate slaves
+kxfrDefaultDOP|calculate default DOP
 kxfralo|allocate rowid ranges and slave processes
 kxfs|slave
 kxft|parallel execution PTL
@@ -4532,6 +4538,7 @@ qcpilcl0|local
 qcplgte|logically group SQL text (?)
 qcs|semantic analysis (parser)
 qcsevw|expand view
+qcsj|java(?)
 qcso|OBJECTS
 qcsp|process
 qcspafq|all frodefs in query block
