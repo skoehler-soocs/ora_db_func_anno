@@ -1367,6 +1367,7 @@ kglHeapInitializeInternalFL|initialize heap allocation
 kglUnPin|release pin
 kglchk1|check for 1 access on object
 kglchk2|check for access on an object
+kglchk3|check for access on an object
 kgldmp|dump an object
 kgldon|depend on an object
 kgldpo|depend on an object
@@ -1740,6 +1741,7 @@ kkscs|child cursor
 kkscsCheckCriteria|check cursor criteria
 kkscscid|criteria identification
 kkscscid_AdgRedirect|active dataguard redirect
+kkscscid_auc|authorized to use this child
 kkscscid_containers|PDB(?)
 kkscscid_pddl|parallel ddl(?)
 kkscscid_pdm|parallel dml(?)
@@ -2376,6 +2378,7 @@ kqrfrc|cache
 kqrfrpo|pinned object(?)
 kqrhsh|hash
 kqrpre|read a parent cache object
+kqrprl|parent release enqueue
 kqrrls|release lock
 kr|recovery
 kra|recovery area function
@@ -3572,6 +3575,7 @@ kxfpProcessError|process error
 kxfpb|buffers
 kxfpbgpc|get permanent chunks
 kxfpbgtc|buffer allocation get chunk
+kxfpclinfo|get load info from instances
 kxfpcrel|create local query server process
 kxfpg1sg|get one server group
 kxfpgsg|get server group (coordinator)
