@@ -1319,6 +1319,7 @@ kgffdcn|disconnect from kgff instance
 kgfpm|PATCH repository
 kgg|generic routines
 kgghash|produce hash value
+kggmd5|functions to calculate md5 values
 kgh|heap manager
 kgh_update_comment|add comment to memory chunk allocation
 kghalf|non-recoverably allocate a freeable chunk of memory
@@ -1367,10 +1368,13 @@ kgisdl|state delete
 kgk|token
 kgkp|generic services scheduling policies
 kgl|library cache management
+kglConcurrencyId|return library cache hash bucket number
 kglGetMutex|get mutex
 kglGetSO|get state object
+kglGetSessionUOL|obtain location for AOL in KKSSP
 kglHeapInitializeInternalFL|initialize heap allocation
 kglUnPin|release pin
+kgl_can_unpin_heap_0|can heap 0 be unpinned
 kglati|authorization table insert(?)
 kglchk1|check for 1 access on object
 kglchk2|check for access on an object
@@ -1394,21 +1398,24 @@ kglhdgn|get handle
 kglhpd|heap deallocate
 kglhup|heap update
 kgllcu|latch cleanup for the library cache and pin latches
-kgllkal|lock allocate
-kgllkdl|lock delete
-kgllkds|lock delete state object
-kglllal|lock load allocate
-kglobal|object allocate
-kglobcl|object clear all tables
-kglobf0|object free heap/data block 0 of an object
-kglobfr|object free all heaps (except data block 0) of an object
-kglobld|object load
-kglobpn|object pin heaps and load data pieces
+kgllk|library cache lock
+kgllkal|allocate
+kgllkdl|delete
+kgllkds|delete state object
+kglllal|load allocate
+kglob|object
+kglobal|allocate
+kglobcl|clear all tables
+kglobf0|free heap/data block 0 of an object
+kglobfr|free all heaps (except data block 0) of an object
+kglobld|load
+kglobpn|pin heaps and load data pieces
 kglpim|pin and load more heaps
 kglpin|pin heaps and load data pieces of an object
-kglpnal|pin allocate
-kglpnc|pin heaps and load data pieces of a cursor object
-kglpndl|pin delete
+kglpn|pin
+kglpnal|allocate
+kglpnc|heaps and load data pieces of a cursor object
+kglpndl|delete
 kglr|remote
 kglrddsc|describe callback function
 kglrds|describe a remote object
@@ -1437,6 +1444,7 @@ kgodm_wait_ios|wait on IOs
 kgs|service
 kgsc|cache, session cache for cursors
 kgscCacheCursor|add cursor to cache
+kgscComputeHash|compute hash value for cursor
 kgscFindCursor|search cursor in the cache
 kgscFindFreeSlot|find a free slot in the cache
 kgsd|debugging
@@ -1463,18 +1471,33 @@ kgss|state object manager
 kgstm|time
 kgur|recovery
 kgx|mutex/communication
-kgxDecrement|decrement S mode counter
-kgxDecrementExamine|decrement RefCnt and set E mode
-kgxEndExamine|clear examine mode
-kgxExamine|set examine mode
-kgxExclusive|get in X mode
+kgxAllocWhereStats|mutex set statistics for wait
+kgxAOLInit|mutex initialize AOL
+kgxAolDump|mutex dump AOL
+kgxCleanup|mutex cleanup
+kgxDecrement|mutex decrement RefCnt
+kgxDecrementExamine|and set E mode
+kgxEndExamine|mutex clear E mode
+kgxExamine|mutex set E mode
+kgxExclusive|mutex get in X mode
 kgxExclusive2Shared|downgrade X to S mode
-kgxIncrement|increment S mode counter
-kgxIncrementExamine|increment RefCnt and set E mode
-kgxShared|get in S mode
-kgxSharedExamine|examine
-kgxRelease|release
-kgxWait|register wait and sleep
+kgxExclusiveNowait|nowait
+kgxIncrement|mutex increment RefCnt
+kgxIncrementExamine|and set E mode
+kgxLatchCleanup|mutex cleanup latch(?)
+kgxLongExclusive|mutex get in long exclusive mode
+kgxModifyRefCount|mutex modify RefCnt
+kgxMutexHng|mutex hang(?)
+kgxPgaInitialize|mutex initialize PGA
+kgxRegisterClient|mutex register client(?)
+kgxRelease|mutex release
+kgxSgaInitialize|mutex initialize SGA
+kgxShared|mutex get in S mode
+kgxSharedExamine|sharedexamine mode
+kgxSharedNowait|nowait
+kgxSharedNowaitExamine|sharedexamine mode
+kgxRelease|mutex release
+kgxWait|mutex register wait and sleep
 kgxg|node monitor/cluster group services layer
 kgxgncin|group membership cssd initiate
 khpro|hierarchical profiler
