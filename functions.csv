@@ -230,6 +230,8 @@ expeal|evaluate its argument AND list
 expepr|evaluate the argument predicate
 fplib|filter projection library (exadata smartscan)
 gipc|grid inter process calls
+gra|grant/revoke
+gradrv|driver
 gslcsq_add_s|DBMS_LDAP_API_FFI.LDAP_ADD_S
 gslcsq_authenticate_user|DBMS_LDAP_API_FFI.ORA_LDAP_AUTHENTICATE_USER
 gslcsq_authenticate_user_ext|DBMS_LDAP_API_FFI.ORA_LDAP_AUTHENTICATE_USER_EXT
@@ -1414,12 +1416,16 @@ kglpim|pin and load more heaps
 kglpin|pin heaps and load data pieces of an object
 kglpn|pin
 kglpnal|allocate
-kglpnc|heaps and load data pieces of a cursor object
-kglpndl|delete
+kglpnck|check if latch is held
+kglpndl|delete data heaps 
+kglpnds|delete state object
+kglpnmi|migration
+kglpnp|pin heaps and load data for stored procedures
 kglr|remote
 kglrddsc|describe callback function
 kglrds|describe a remote object
 kglrfcl|reference clear
+kglsec|signal error code
 kglsim|simulator (library cache advise) 
 kglsscn|scan a loaded set invoking a supplied callback for each element
 kglssr|session state remove
@@ -2412,6 +2418,7 @@ kqls|subordinate set manager
 kqlsadd|add a new element to a subordinate set
 kqlslod|load all subordinate set elements for a given heap
 kqludp|update with dependencies
+kqlunac|unauthenticate dependents of an object
 kqlvld|validate an object
 kqr|dictionary/row cache
 kqreqd|enqueue delete
