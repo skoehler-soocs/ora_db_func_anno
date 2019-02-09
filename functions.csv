@@ -20,6 +20,7 @@ OCIStmtFetch|fetch
 OCIStmtExecute|execute
 adbdrv|alter database driver
 ain|alter index
+ainPDrop|drop an index partition
 aop|audit options
 apa|SQL Access Path Analysis
 apaIMC|in-memory column store
@@ -777,6 +778,7 @@ kdb|block structures and manipulation
 kdbl|direct path load 
 kdblai|database block loader array insertion
 kdblailb|load block
+kdblcRejectedDueToChaining|c? rejected due to chaining
 kdbmrd|multi row slot delete
 kdc|cluster
 kdd|delete/(cluster?)
@@ -909,11 +911,13 @@ kdstf|full ultra fast scan
 kdstgr|get row
 kdsttgr|full table scan
 kdt|table insert
+kdtInsRow|insert a row immediately
+kdtSimpleInsRow|simple insert a row
+kdt_bseg_srch_cbk|check for uncommitted space
 kdtchg|generate change
 kdtgsp|table/cluster insert get space
 kdtgrs|get space
 kdtwrp|write row piece
-kdtInsRow|insert a row immediately
 kdu|update
 kdugetpart|get partition information for a deleted or opdated row
 kdumrp|update multiple row pieces
@@ -2694,6 +2698,7 @@ krccckp|checkpoint
 krcpabs|I am ctwr
 krcptmo|ctwr timeout action, this is the main loop
 krd|datafiles (media and standby)
+krd_do_mrp|do managed recovery processing
 krd_end_rcv|end media recovery
 krd_implicit_rcv|IMPLICIT ReCoVery for standby open/activation
 krdrsb|read from standby (?)
@@ -3111,6 +3116,7 @@ kswsiss|DBMS_SERVICE.ISTART_SERVICE
 kswsists|DBMS_SERVICE.ISTOP_SERVICE
 ksx|cross instance
 ksxa|parallel affinity
+ksxb1bqb|memcpy buffer to qb and increment the qb
 ksxmcln|DBMS_STATS_INTERNAL.PURGE_ORPHAN_ENTRIES_CALLOUT
 ksxp|cross instance ipc
 ksxr|broadcast
@@ -3327,7 +3333,9 @@ ktspmlhwm|Move the Low High Water Mark. Called when a range of blocks is formatt
 ktspsc|search cache
 ktspscan_bmb|scan the level 1 bitmap blocks
 ktss|segment procedures
+ktssdrp_segment|converts segment to temp in preparation for dropping
 ktssdt_segs|drops stray temporary segments (creates cursor to check)
+ktssof|callback for the x$ktsso implementation
 ktst|sort management
 ktstdropobj|drop the temporary space object
 ktstdt|deletes the sort handle (ktstused) state object
@@ -4585,15 +4593,10 @@ qcpilcl0|(private)
 qcpiltb|lock table command
 qcpitnm|table name
 qcplgnt|lexer get next token
-qcpibex|boolean expressions
-qcpibfa|boolean term
-qcpibte|boolean factor
-qcpiere|expression relop expression
-qcpilcl|logical clause
-qcpilcl0|local
 qcplgte|logically group SQL text (?)
 qcs|semantic analysis (parser)
-qcsevw|expand view
+qcse|expand
+qcsevw|view
 qcsj|java(?)
 qcso|OBJECTS
 qcsp|process
@@ -4609,6 +4612,7 @@ qctopls|typecheck OPTPLS operator
 qcu|utility
 qcuErr|error
 qcuErroep|oracle error position
+qcuSigErr|error raised by signal
 qe|execute
 qeae|aggregate (order by) elimination (?)
 qeaeCn1Serial|count function
@@ -4696,6 +4700,7 @@ qeroifcsu|fast call switch user
 qeroiirc|invoke rowsource close
 qerpa|partition
 qerpf|query execution prefetch
+qerpfFetch|fetch
 qerpsel|parallel execution PX selector
 qerptf|polymorphic table function execution
 qerpx|parallel execution 
@@ -4738,6 +4743,7 @@ qerxtAllocate|row source allocate
 qes|services
 qesSageEnabled|test if exadata storage servers are used
 qesaAggNonDist|create/compute non-distinct aggregates
+qesaPackCols|pack columns into queue buffer
 qesbl|bloom filter
 qesblAlo|allocate memory
 qesblGetFilter|get filter
