@@ -1153,6 +1153,7 @@ kewe_svm_trace_disable|DBMS_MONITOR.SERV_MOD_ACT_TRACE_DISABLE
 kewe_svm_trace_enable|DBMS_MONITOR.SERV_MOD_ACT_TRACE_ENABLE
 kewm|metrics
 kewr|repository
+kewrafm_auto_flush_main|auto flush main
 kewrcmp_create_manual_partns|DBMS_SWRF_INTERNAL.CREATE_IMPORT_PARTITIONS
 kewrcup_create_upgrade_partns|DBMS_SWRF_INTERNAL.CREATE_UPGRADE_PARTITIONS
 kewrf|flush
@@ -1334,6 +1335,7 @@ kghalp|allocate permanent memory
 kgherror|internal error routine for signalling an error
 kghfen|free a portion of a chunk of space at the end of the chunk
 kghfnd|find a chunk of memory of at least the minimum size
+kghfnd_in_free_lists|in free lists
 kghfre|free a chunk of memory
 kghfrf|non-recoverably free a freeable chunk of space
 kghfrh|free heap. free all the extents allocated in the heap using kghalfrx
@@ -1344,6 +1346,7 @@ kghfrunp|free unpinned space
 kghfrx|free extent
 kghgex|get a new extent
 kghini|heap initialize
+kghissga|is heap in SGA?
 kghmrk|mark heap
 kghnospc|no space available in the heap, signal an error
 kghphini|parent heap initialize
@@ -1359,6 +1362,8 @@ kghstack_alloc|allocate pga memory
 kghstack_free|free pga memory
 kghsup|unpaged page table
 kghsupmm|more memory
+kghup|unpin
+kghupr|recreatable chunk
 kghx|fixed sized memory
 kghxal|allocate shared memory
 kghxcb|callback to free memory on the free lists back to kgh
@@ -1371,6 +1376,7 @@ kgidlt|delete an instantiation object
 kgimal|memory allocate
 kgiscl|state close cursors
 kgisdl|state delete
+kgitrc|trace call stack
 kgk|token
 kgkp|generic services scheduling policies
 kgl|library cache management
@@ -1408,7 +1414,9 @@ kgllk|library cache lock
 kgllkal|allocate
 kgllkdl|delete
 kgllkds|delete state object
-kglllal|load allocate
+kglll|load lock
+kglllal|allocate
+kgllldl|delete
 kglob|object
 kglobal|allocate
 kglobcl|clear all tables
@@ -1799,6 +1807,7 @@ kkscscid_pdm|parallel dml(?)
 kksdopt|smart disk no option
 kksfbc|find bound cursor
 kksffr|free a frame
+kksfft|find first token
 kksh|cursor hash table
 kksheqd|clean/delete an enqueue
 kkshin|incomplete list
@@ -1922,6 +1931,7 @@ kkxsexr|execute with returning binds
 kkxsfcn|scalar fetch n rows
 kkxsscfch|scalar fetch
 kkxt|trigger
+kkxtcs|trace pl/sql call stack
 kkxtexe|trigger execute
 kkxtgsv|DBMS_INTERNAL_TRIGGER.KKXTGSV GET_UGAKNT
 kkxtilc|DBMS_INTERNAL_TRIGGER.KKXTILC INVALIDATE_LIBRARY_CACHE
@@ -2186,10 +2196,13 @@ kntxlp|exeucte internal triggers for LOB piecewise
 kntxrl|execute replication trigger for LOB
 ko|objects
 koc|cache manager
-kociih|instantiate an instance in the object heap
+kocbeg|begin transaction
 kocedd|end duration
+kociih|instantiate an instance in the object heap
+kocpnm|pin an object by name
 kod|data manager (pickler)
 kod2ppic|pickle an object into an image
+kodin2p|map a name to an pref
 kodpunp|unpickle an image into an object
 kodrdel|UTL_REF.DELETE_OBJECT
 kodrlk|UTL_REF.LOCK_OBJECT
@@ -2211,10 +2224,12 @@ koicupt|construct UPT
 koio|?
 koiocon|constructor
 koionew|create (and pin) a new named instance
+koiopnm|pin an object by name
 kok|kernel side
 koka|access
 kokbtns|type check the nested select operator
 kokd|driver
+kokdn2p|map a name to an pref
 koke|OBJECTS images
 koki|id generator
 kokl|lob access
@@ -2235,6 +2250,8 @@ kokltrim|trim
 koklv|lob default
 kokm|methods
 kokmrwo|get new RWO vector enhanced with ordering
+kokn|?
+koknmpn|map name and oid
 koko|objects?
 kokoupkl|unpickle into and instance
 koks|semantic analysis
@@ -2269,6 +2286,7 @@ kosibegin|image begin
 kosiend|image end and callback
 kot|type manager
 kotg|accessor (get)
+kotgtyp|type
 koxs|OBJECTS streams
 koxsihread|image handle write from buffer
 kp|programmatic interface
@@ -2392,6 +2410,7 @@ kqd|dictionary management
 kqdgtc|return an open and parsed cursor for a statement
 kqdobr|read obj$ row using (owner#,name,namespace,remoteowner,linkname) as key
 kqdobu|verify object uniqueness (?)
+kqdunr|get user id using name as key
 kqf|fixed tables
 kqfd|direct access to fixed tables
 kqfp|packages
@@ -3011,6 +3030,7 @@ ksmuga|allocate user session global data
 ksmugf|release session global memory
 ksmuhe|allocate the uga heap using the parent heap specified if state = KSMUGCRE
 ksmupg|check for references in the session global area to process
+ksmuse|set pointers to newly allocated memory?
 ksn|two task
 kso|operations
 kso_prespawn_queue_disable|DBMS_PROCESS.STOP_POOL
@@ -3021,9 +3041,13 @@ ksolt|lightweight threads
 ksopid_alive|pid alive check
 ksp|parameter
 kspGetInstType|validate instance_type
+ksp_spfile|spfile file management
+ksp_spfile_open|open
+ksp_spfile_write|write
 kspgir|get range
 kspgpnicd|DBMS_UTILITY.KSPGPNICD GET_PARAMETER_VALUE
 kspgsp|get string parameter
+ksprcvsp|receive spfile information for write to spfile
 ksq|enqueue
 ksqcnl|convert an enqueue's mode
 ksqcnv|convert an enqueue's mode
@@ -3045,6 +3069,7 @@ ksrmf|ksrmf
 kss|state object
 kss_del_cb|delete callback
 kss_delete_children|delete children of SO
+kssadd|add new SO
 kssadf|add SO from free list
 kssdch|delete children of SO
 kssdch_int|internal
@@ -3524,6 +3549,7 @@ kwqic|pre-12c notitication
 kwqicRepBgOper|DBMS_AQ.AQ$_BACKGROUND_OPER_INT
 kwqicdelrow|delete row from queue table
 kwqicgpc|common get parsed cursor
+kwqicgtoid|internal common get TOID
 kwqichkopt|DBMS_AQADM_SYS.CHECKOPTION
 kwqid|dequeue
 kwqideqarr|DBMS_AQ.DEQUEUE_ARRAY
@@ -3683,6 +3709,7 @@ kxpar|partition row sources
 kxrd|row delete
 kxru|row update
 kxs|shared cursor
+kxsDiag8711391|Check for bug 8711391 (cursor lock user session state object deleted before close of the cursors)
 kxsGetRuntimeLock|get runtime lock
 kxsOpenACursor|open a cursor
 kxsSsa|session state array(?)
@@ -3920,6 +3947,7 @@ lmtdcrel|compare two double-precision float-point numbers
 lnxn2copt|converts an oracle number to a character string with option for padding
 lnxn2coptg|with nls global
 lnxqchk|private number check function
+lxm|native language support
 main|general c starting function
 mDNS|multicast dns
 md|spatial
@@ -4176,6 +4204,7 @@ pfrrun|Interpreter Main Instruction Loop
 pfrrun_no_tool|fast interpretation loop
 pfrsqc|callbacks for array sql and dml with returning
 pfrstk|runtime stack frame
+pfrtcs|trace call stack(?) calls kgitrc on each kgiob on the stack
 pgm|PLSQL ILMS
 ph|PLSQL infrastructure
 ph1|syntax
