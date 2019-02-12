@@ -1329,6 +1329,7 @@ kgghash|produce hash value
 kggmd5|functions to calculate md5 values
 kgh|heap manager
 kgh_update_comment|add comment to memory chunk allocation
+kghaddex|add extent
 kghalf|non-recoverably allocate a freeable chunk of memory
 kghalo|main allocation entry point
 kghalp|allocate permanent memory
@@ -1353,6 +1354,7 @@ kghphini|parent heap initialize
 kghpin|pin a heap
 kghpir|pin a chunk of space that was specified to be recreatable
 kghpmalo|find and return permanent chunk of space
+kghprmalo|permanent memory allocate
 kghrcappl|apply this heap function depth first
 kghssgai|segmented allocation internal
 kghssgal|segmented allocate
@@ -1385,6 +1387,9 @@ kglGetMutex|get mutex
 kglGetSO|get state object
 kglGetSessionUOL|obtain location for AOL in KKSSP
 kglHeapInitializeInternalFL|initialize heap allocation
+kglLock|library cache lock
+kglUnLock|library cache unlock
+kglPinSO|pin SO
 kglUnPin|release pin
 kgl_can_unpin_heap_0|can heap 0 be unpinned
 kglati|authorization table insert(?)
@@ -1406,8 +1411,10 @@ kglhdal|allocate
 kglhdd|deallocate
 kglhdda|a
 kglhdgc|get child(?)
-kglhdgn|get handle
+kglhdgh|get handle
+kglhdgn|get new(?)
 kglhpd|heap deallocate
+kglhpn|heap pin
 kglhup|heap update
 kgllcu|latch cleanup for the library cache and pin latches
 kgllk|library cache lock
@@ -1441,6 +1448,7 @@ kglsec|signal error code
 kglsim|simulator (library cache advise) 
 kglsscn|scan a loaded set invoking a supplied callback for each element
 kglssr|session state remove
+kgltba|child cursor table?
 kglunp|unpin heaps of an object
 kgm|inter-language method services
 kgmexcb|execution callback
@@ -1715,9 +1723,11 @@ kkpcrt|create
 kkpo|partitioned objects
 kkpod|partitioning dictionary
 kkq|query 
+kkqanj|ansi join
 kkqbj|bushy join
 kkqbjdrv|driver
 kkqcby|connect by
+kkqcls|subquery coalescing
 kkqct|cost based query transformation
 kkqctCostTransfQB|transfer query block cost (?)
 kkqctInterleave|interleave
@@ -1760,12 +1770,16 @@ kkqjfdrv|driver
 kkqjpd|predicate push down
 kkqjpdctr|traverse and transform
 kkqjpddrv|driver
+kkqoj|outer join?
+kkqolap|olap
+kkqolapdrv|driver
 kkqore|or-expansion
 kkqoredrv|driver
 kkqstar|star transformation
 kkqstardrv|driver
 kkqte|table expansion
 kkqtedrv|driver
+kkqu|subquery unnesting
 kkqvm|view merging
 kkqvmdrv|driver
 kkqvt|vector transformation
@@ -3717,6 +3731,8 @@ kxsSsaSetSqlid|prepare to update X$SUSE with sqlid, updateallssa performs this
 kxsSsaUpdateAllssa|update all session state array (X$KSUSE)
 kxsbndinf|bind variable information
 kxscln|cleanup instantiation object
+kxscls|close
+kxsclsr|remote
 kxsfbb|free bind buffers(?)
 kxsffir|function fire called when the appropriate heap is going away
 kxspoac|put oacdef into the cursor instantiation
@@ -4621,8 +4637,9 @@ qcpilcl|logical clause
 qcpilcl0|(private) 
 qcpiltb|lock table command
 qcpitnm|table name
-qcplgnt|lexer get next token
-qcplgte|logically group SQL text (?)
+qcpl|lexer 
+qcplgnt|get next token
+qcplgte|group SQL text (?)
 qcs|semantic analysis (parser)
 qcse|expand
 qcsevw|view
