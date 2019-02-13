@@ -29,6 +29,8 @@ apadrv|drive access path selection for a sql command
 apakkoqb|drive access path analysis for every query block
 apaqbd|drive access path analysis for every query block
 atb|alter table
+atbedml|enable dml locks
+atbdrv|driver
 aud|audit
 audbeg|begin
 audend|end (commit) transaction
@@ -1356,6 +1358,7 @@ kghpir|pin a chunk of space that was specified to be recreatable
 kghpmalo|find and return permanent chunk of space
 kghprmalo|permanent memory allocate
 kghrcappl|apply this heap function depth first
+kghrsp|remove permanent chunk
 kghsc|stream compact
 kghssgai|segmented allocation internal
 kghssgal|segmented allocate
@@ -3093,6 +3096,7 @@ kssdch|delete children of SO
 kssdch_int|internal
 kssdct|delete children of specified type
 kssdel|delete SO
+kssdmh|dump children of a SO
 kssdmp|dump children of a SO
 kssmc|registration caches
 kssrmf|delete SO 
@@ -3996,6 +4000,7 @@ nboWrite|write (to socket?)
 nco|network connection
 ncodfa|definition allocation, allocate a new ncodef
 ncrorou|receive OUT arguments for specified procedure
+ncroxrend|xfr record end
 ncrsrend|end record
 ncrsrwrt|Record WRiTe output buffer
 nhp|http
@@ -4029,8 +4034,9 @@ npiall|use bundled execution
 npiane|add new nco entry
 npibeg|maybe begin a distributed transaction branch, release local DX
 npicom|old style commit
-npicon0|connect; connect and log on to an external database
-npidri0|driver common
+npicon|connect; connect and log on to an external database
+npidri|driver common
+npidsa|disconnect all
 npidsc|DiSConnect
 npierr|check for errors requiring ksesec, also reacquire DX lock
 npil|local
@@ -4654,6 +4660,7 @@ qcsj|java(?)
 qcso|OBJECTS
 qcsp|process
 qcspafq|all frodefs in query block
+qcsphnt|hint?
 qcsprfro|process frodef
 qcsprfro_tree|tree (handles ANSI join frodefs)
 qcspqb|query blocks
