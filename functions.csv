@@ -1356,6 +1356,7 @@ kghpir|pin a chunk of space that was specified to be recreatable
 kghpmalo|find and return permanent chunk of space
 kghprmalo|permanent memory allocate
 kghrcappl|apply this heap function depth first
+kghsc|stream compact
 kghssgai|segmented allocation internal
 kghssgal|segmented allocate
 kghssgfr|segmented free
@@ -1618,7 +1619,9 @@ kkdc|data check (constraints)
 kkdcacr|get all check and referential constrains
 kkdcico|insert constraint definition
 kkdl|dictionary lookup
+kkdlGetBaseUser|translate ownerid to a name
 kkdlacd|get all column definitions
+kkdlgun|get user name (translate ownerid to a name)
 kkdllk|lock an object
 kkdo|OBJECTS dictionary
 kkdoloi|load objects related information
@@ -2399,7 +2402,8 @@ kpuexecv8|execute V8
 kpufch|fetch one or more rows
 kpuhh|handle heap
 kpuhhalo|allocate memory freeable
-kpun|streams advanaced queuing 
+kpuhhmrk|mark
+kpun|streams advanced queuing 
 kpur|remote
 kpurcs|call with service context
 kpurcsc|remote call with service context, callbacks
@@ -3725,7 +3729,7 @@ kxru|row update
 kxs|shared cursor
 kxsDiag8711391|Check for bug 8711391 (cursor lock user session state object deleted before close of the cursors)
 kxsGetRuntimeLock|get runtime lock
-kxsOpenACursor|open a cursor
+kxsOpenACursor|open a cursor (local in PGA)
 kxsSsa|session state array(?)
 kxsSsaSetSqlid|prepare to update X$SUSE with sqlid, updateallssa performs this
 kxsSsaUpdateAllssa|update all session state array (X$KSUSE)
@@ -3814,6 +3818,7 @@ kzdpmpidx|DBMS_TDSP_MANAGE.INT_IMPORT_DISCOVERY_RESULT
 kzdpmpist|DBMS_TDSP_MANAGE.INT_IMPORT_SENSITIVE_TYPES
 kzdpmprco|DBMS_TDSP_MANAGE.DROP_SENSITIVE_COLUMN
 kzdpmprscs|DBMS_TDSP_MANAGE.REMOVE_DISCOVERY_RESULT
+kzdopcl|table privileges routines?
 kzekmaptkp|DBMS_TTS.ADD_PROTECTED_CE_TAB_KEY_INT
 kzekmgptkp|DBMS_TTS.GET_PROTECTED_CE_TAB_KEY_INT
 kzfa|fine grained auditing
@@ -3826,6 +3831,7 @@ kziaia|main identification and authentication function
 kzl|label
 kzlg|generic directory services integration
 kzp|privileges
+kzpcaobb|check for access on object using object
 kzpchkc|check privileges on a object cyclic
 kzppCapturePLSQL|DBMS_PRIVILEGE_CAPTURE.CAPTURE_DEPENDENCY_PRIVS
 kzppCreateCapture|DBMS_PRIVILEGE_CAPTURE.CREATE_CAPTURE
@@ -4102,6 +4108,7 @@ opiobv|bind a variable
 opiodr|oracle code request driver, route the current request
 opiomc|map cursor
 opiope|open cursor
+opiopr|open cursor
 opiosq|prepare to parse a sql command
 opiosq0|0
 opipbr|process bind by reference chain
@@ -4944,6 +4951,16 @@ qos|statistics
 qosadv|SQL optimizer statistics advisor
 qosadvExecuteTaskDrv|DBMS_STATS_ADVISOR.I_EXECUTE_TASK_CALLOUT
 qosd|sql plan directive
+qosdAlterSPD|DBMS_SPD_INTERNAL.ALTER_SPD_CALLOUT
+qosdCheckWindowMode|DBMS_STATS_INTERNAL.CHECK_WINDOW_CAPTURE_MODE
+qosdDelExprStats|DBMS_STATS_INTERNAL.DELETE_EXPR_STATS_CALLOUT
+qosdDSResExternal|DBMS_SPD_INTERNAL.DS_RES_INTERNAL
+qosdFlushSPD|DBMS_SPD_INTERNAL.FLUSH_SPD_CALLOUT
+qosdGetFObjKeyFromStmt|get stat/DS(?) results using sql text (stmt)?
+qosdImportSPD|DBMS_SPD_INTERNAL.IMPORT_SPD_CALLOUT
+qosdUB8ToSqlId|DBMS_SPD_INTERNAL.UB8_TO_SQLID
+qosdVecbit|DBMS_SPD_INTERNAL.VECBIT
+qosdgelc|DBMS_STATS_INTERNAL.GET_EXP_LIST_CALLOUT
 qoshgshrc|DBMS_STATS.GET_STATS_RETENTION_CALLOUT
 qoshposc|DBMS_STATS_INTERNAL.PURGE_OLD_STATS_CALLOUT
 qoshrsoc|DBMS_STATS.REPORTING_MAN_LOG_OP
@@ -4991,18 +5008,6 @@ qospslck|DBMS_STATS.SET_LOCK_MODE_CALLOUT
 qospsts|DBMS_STATS.SET_TABLE_STATS_CALLOUT
 qospsys|DBMS_STATS.SET_SYSTEM_STATS_CALLOUT
 qosptrc|DBMS_SPM_INTERNAL.I_NON_TERM_DUMP KSD_TRACE
-qosadv|advisor
-qosd|SQL plan directive
-qosdAlterSPD|DBMS_SPD_INTERNAL.ALTER_SPD_CALLOUT
-qosdCheckWindowMode|DBMS_STATS_INTERNAL.CHECK_WINDOW_CAPTURE_MODE
-qosdDelExprStats|DBMS_STATS_INTERNAL.DELETE_EXPR_STATS_CALLOUT
-qosdDSResExternal|DBMS_SPD_INTERNAL.DS_RES_INTERNAL
-qosdFlushSPD|DBMS_SPD_INTERNAL.FLUSH_SPD_CALLOUT
-qosdGetFObjKeyFromStmt|get stat/DS(?) results using sql text (stmt)?
-qosdImportSPD|DBMS_SPD_INTERNAL.IMPORT_SPD_CALLOUT
-qosdUB8ToSqlId|DBMS_SPD_INTERNAL.UB8_TO_SQLID
-qosdVecbit|DBMS_SPD_INTERNAL.VECBIT
-qosdgelc|DBMS_STATS_INTERNAL.GET_EXP_LIST_CALLOUT
 qs|system
 qsm|management
 qsme|expression processing
