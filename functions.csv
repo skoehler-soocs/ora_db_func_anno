@@ -1329,6 +1329,7 @@ kgfpm|PATCH repository
 kgg|generic routines
 kgghash|produce hash value
 kggmd5|functions to calculate md5 values
+kggsm|string mapping
 kgh|heap manager
 kgh_update_comment|add comment to memory chunk allocation
 kghaddex|add extent
@@ -1432,7 +1433,7 @@ kglob|object
 kglobal|allocate
 kglobcl|clear all tables
 kglobf0|free heap/data block 0 of an object
-kglobfr|free all heaps (except data block 0) of an object
+kglobfr|free all heaps (except data block 0's) of an object
 kglobld|load
 kglobpn|pin heaps and load data pieces
 kglpim|pin and load more heaps
@@ -1444,7 +1445,6 @@ kglpndl|delete data heaps
 kglpnds|delete state object
 kglpnmi|migration
 kglpnp|pin heaps and load data for stored procedures
-kglr|remote
 kglrddsc|describe callback function
 kglrds|describe a remote object
 kglrfcl|reference clear
@@ -1698,6 +1698,7 @@ kknpob|partition object
 kknls|locks/security
 kko|optimizer
 kkoOrExpand|or expansion
+kkoaccsqf|adjust cardinality and cost for subquery filters
 kkoads|active dynamic sampling (ADS)
 kkoadsComputeSqlid|compute sqlid
 kkoasj|add semi-join function
@@ -1762,7 +1763,7 @@ kkqctdrvVT|vector transformation
 kkqctnojppd|no join predicate pushdown (?)
 kkqctNxtLinearStt|next linear state
 kkqctUpdBestCostStt|pick the most efficient query transformation state
-kkqdrv|query transformation driver
+kkqdrv|transformation driver
 kkqgb|group by
 kkqgbp|placement
 kkqgbpColHasHighNDV|Column has high NDV
@@ -2303,7 +2304,7 @@ kopetrv|kop engine and traverse
 kopldsinit|kop lds initialize a pre-allocated lds
 kos|stream interfaces for images/objects
 kosibegin|image begin
-kosiend|image end and callback
+kosiend|image end callback
 kot|type manager
 kotg|accessor (get)
 kotgtyp|type
@@ -4084,6 +4085,7 @@ ociextp|PLSQL External proc
 odm|oracle disk manager
 odm_io|IO
 opi|oracle program interface
+opiDeferredSem|perform deferred semantic analysis
 opiParse|parse
 opiSem|semantic analysis driver
 opiamr|archival and media recovery
@@ -4661,7 +4663,7 @@ qcso|OBJECTS
 qcsp|process
 qcspafq|all frodefs in query block
 qcsphnt|hint?
-qcsprfro|process frodef
+qcsprfro|frodef
 qcsprfro_tree|tree (handles ANSI join frodefs)
 qcspqb|query blocks
 qcspqbDescendents|descendents
@@ -4676,7 +4678,7 @@ qcuSigErr|error raised by signal
 qe|execute
 qeae|aggregate (order by) elimination (?)
 qeaeCn1Serial|count function
-qec|checks
+qec|(edit) checks
 qecdrv|driver
 qecgoc|group operand check
 qecrlssub|release resources subroutine
@@ -4886,6 +4888,7 @@ qksptf|polymorphic table functions compilation
 qksqb|Query compilation for query blocks
 qksqbApplyToQbc|apply to QB
 qksqbApplyToQbcLoc|local implementation
+qkssm|string mapping
 qksvc|Virtual Column
 qkswc|with clause
 qkswcDriver|Recursively traverse through all query blocks
