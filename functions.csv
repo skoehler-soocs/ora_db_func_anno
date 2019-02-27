@@ -1619,7 +1619,8 @@ kkcn|streams advanaced queuing
 kkcnRegApply|DBMS_AQ.REGOP_APPLY
 kkcne|streams advanaced queuing notitication
 kkdc|data check (constraints)
-kkdcacr|get all check and referential constrains
+kkdcac|takes a table name as input and uses the obj# to get the constraint name for each constraint associated.
+kkdcacr|check and referential constrains
 kkdcico|insert constraint definition
 kkdl|dictionary lookup
 kkdlGetBaseUser|translate ownerid to a name
@@ -1636,11 +1637,13 @@ kkeTbScanImc|in-memory column store
 kkeTbScanImcCPUCost|calculate cost of CPU
 kkeTbScanImcIOCost|calculate cost of IO
 kkeapr|analyze predicates for optimization returns stat ptr
+kkeasl|process an AND chain of predicates
 kkecdn|determine cardinality of a table given single table predicates
 kkecpst|create copy of column statistics in compile time memory
 kkegvl|get a value from an opndef and normalize it for cost
 kkehrd|get column statistics for a table
 kkejcd|returns cardinality of a join between to tables
+kkeosl|process an OR chain of predicates
 kkepsl|selectivity of a single predicate
 kkercs|read column statistics for an object
 kkest|statistics
@@ -2461,6 +2464,7 @@ kqlrds|describe a cursor at the default host
 kqlrld|load a remote library object
 kqls|subordinate set manager
 kqlsadd|add a new element to a subordinate set
+kqlsget|get full constraint definition
 kqlslod|load all subordinate set elements for a given heap
 kqludp|update with dependencies
 kqlunac|unauthenticate dependents of an object
@@ -2851,6 +2855,7 @@ ksbmsg|call cpu count changed callbacks
 ksbrdp|run a detached background process
 ksbsrv|start a multi-stated server process
 ksbt|background processes
+ksbx|Xic cross instance calls
 ksbxiaf|ksbxic (cross instance calls) message and interrupt action
 ksbxiafdomsg|ksbxic and async xic static functions
 ksc|component notifier
