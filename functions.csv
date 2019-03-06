@@ -24,6 +24,7 @@ ainPDrop|drop an index partition
 aop|audit options
 apa|SQL Access Path Analysis
 apaIMC|in-memory column store
+apaStmtAddXplAnnotations|add explain annotations
 apacb|connect by
 apadrv|drive access path selection for a sql command
 apakkoqb|drive access path analysis for every query block
@@ -193,7 +194,8 @@ dglr_set_main_ns|(additional definition?)
 dglr_set_upg_flags|DBMS_INTERNAL_ROLLING.SET_UPGRADE_FLAGS
 dglr_start_main|DBMS_ROLLING.START_PLAN
 dglr_switch_main|DBMS_ROLLING.SWITCHOVER
-di|PLSQL apps
+di|PLSQL diana
+diugdn|utility get diana node
 dmkglcre|DMP_SEC.KGL_CREATE_LIB
 dmutil|DBMS_DATA_MINING utilities
 dmutilECol|DBMS_DATA_MINING_TRANSFORM.EXPR_COL_LIB
@@ -1387,6 +1389,7 @@ kgitrc|trace call stack
 kgk|token
 kgkp|generic services scheduling policies
 kgl|library cache management
+kglComputeHash|compute hash value
 kglConcurrencyId|return library cache hash bucket number
 kglGetMutex|get mutex
 kglGetSO|get state object
@@ -1688,9 +1691,11 @@ kkkiverify_str_in|DBMS_RMIN_SYS.RM$_VERIFY_STR_IND_INT
 kkkivldparea|DBMS_RMIN_SYS.RM$_VLDPAREA_EXT
 kkm|SQL semantic analysis
 kkmdel|extra semantic processes for deletes
+kkmdrv|driver
 kkmevw|expand view
 kkmpfcbk|process frodef callback
 kkmpost|post processing
+kkmqccr|query compile (memory) creation?
 kkmupd|extra semantic processing for update
 kkn|analyze command
 kkndgd|aNalyze Data Gathering Driver
@@ -1725,8 +1730,8 @@ kkoqbc|query block optimization start point
 kkosbn|sort bitmap nodes
 kkoshd|shard sql
 kkostran|star transformation
-kkotap|table path
-kkotsc|tablescan
+kkotap|table access path
+kkotsc|tablescan cost
 kkp|compilation 
 kkpa|partitioning
 kkpcrt|create
@@ -1833,7 +1838,7 @@ kksfbc|find bound cursor
 kksffr|free a frame
 kksfft|find first token
 kksh|cursor hash table
-kksheqd|clean/delete an enqueue
+kksheqd|clean/delete and enqueue
 kkshin|incomplete list
 kkshinins|insert child
 kkshindel|remove child
@@ -2441,6 +2446,7 @@ kqfd|direct access to fixed tables
 kqfp|packages
 kqfrs|row source
 kql|library cache
+kqlAddSchemaReference|add a schema during semantic checking
 kqlb|bootstrapping support
 kqlclo|cleanup nonexistent objects in OBJ$
 kqld|dictionary callbacks
@@ -2883,7 +2889,7 @@ kse|error
 ksed|debug
 ksedmp|dump process state
 ksedst|dump the call stack
-ksedsts|dump stack (short version)
+ksedsts|short stack
 ksedst1|stack trace 1 helper
 ksepop|perform cleanup when an error frame is being popped
 kserec1|record an error code
@@ -3842,6 +3848,7 @@ kzl|label
 kzlg|generic directory services integration
 kzp|privileges
 kzpcaobb|check for access on object using object
+kzpchkbu|check for privileges
 kzpchkc|check privileges on a object cyclic
 kzppCapturePLSQL|DBMS_PRIVILEGE_CAPTURE.CAPTURE_DEPENDENCY_PRIVS
 kzppCreateCapture|DBMS_PRIVILEGE_CAPTURE.CREATE_CAPTURE
@@ -4091,8 +4098,10 @@ odm|oracle disk manager
 odm_io|IO
 opi|oracle program interface
 opiDeferredSem|perform deferred semantic analysis
+opiNeedDeferredSem|is deferred semantic analysis needed (if so (r1), returns from kksParseChildCursor and starts kksFullTypeCheck)
 opiParse|parse
 opiSem|semantic analysis driver
+opiaba|access bind (variable) array?
 opiamr|archival and media recovery
 opibnd|bind
 opibnd0|0
@@ -4574,8 +4583,7 @@ priold|rpc forwarding to older releases
 prm|parameter handling with sql layer
 prs|parse
 prsase|initialisation parameter names
-prsc|create database
-prscmd|command
+prscmd|SQL command (syntax check)
 prsctc|create table/cluster
 prsdel|delete
 prsdrv|driver (?)
@@ -4638,6 +4646,7 @@ qbadrv|create control structures
 qbaopn|create control structures
 qc|compile
 qcd|semantic analysis
+qcdldtin|dependency table insert
 qcdo|dictionary support for objects
 qcdoloi|load object specific information
 qci|language parser and semantic analyser
@@ -4652,15 +4661,17 @@ qcpibte|boolean term
 qcpicmd|command
 qcpiere|expression relop expression
 qcpierr|raise error
-qcpiidn|next identifier
+qcpiidn|identifier
 qcpilcl|logical clause
 qcpilcl0|(private) 
 qcpiltb|lock table command
+qcpitnam|table name
 qcpitnm|table name
 qcpl|lexer 
 qcplgnt|get next token
 qcplgte|group SQL text (?)
 qcs|semantic analysis (parser)
+qcsbxl|first round of privilege checking
 qcse|expand
 qcsevw|view
 qcsj|java(?)
@@ -4671,7 +4682,7 @@ qcsphnt|hint?
 qcsprfro|frodef
 qcsprfro_tree|tree (handles ANSI join frodefs)
 qcspqb|query blocks
-qcspqbDescendents|descendents
+qcspqbDescendents|and descendents (this processes qbc and its inner qbc's, but not its sibling (qbcnxt) query blocks)
 qct|type check operations
 qctcopn|typechecks the query block and its descendant
 qcto|operators
@@ -4886,6 +4897,7 @@ qksdsExeStmt|execute sql for actual sampling
 qksdsFindSampleTable|find tables to sample
 qksdsDumpResult|dump results (to trace file); trace[ADS]
 qksdsInitCtx|start and initialize ADS
+qksfroIsFastDual|frolist is fast dual
 qksmm|compiler memory management
 qksmms|simulation
 qksop|compilter operand processing
@@ -4898,6 +4910,7 @@ qksvc|Virtual Column
 qkswc|with clause
 qkswcDriver|Recursively traverse through all query blocks
 qkx|SQL code generator
+qkxa|annotations
 qm|XDB
 qmcx|CSX
 qmcxd|DECODING
