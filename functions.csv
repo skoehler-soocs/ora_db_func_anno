@@ -1421,6 +1421,7 @@ kglhdda|a
 kglhdgc|get child(?)
 kglhdgh|get handle
 kglhdgn|get new(?)
+kglhdi|increase version count
 kglhpd|heap deallocate
 kglhpn|heap pin
 kglhup|heap update
@@ -1627,6 +1628,7 @@ kkdcacr|check and referential constrains
 kkdcico|insert constraint definition
 kkdl|dictionary lookup
 kkdlGetBaseUser|translate ownerid to a name
+kkdlGetUserId|get user id
 kkdlacd|get all column definitions
 kkdlgun|get user name (translate ownerid to a name)
 kkdllk|lock an object
@@ -1717,6 +1719,7 @@ kkocnp|cost next permutation
 kkocpjoinqb|copy and join query block
 kkocpqb|copy query block: copy a query block by reparsing its SQL text
 kkocri|create index
+kkoctx|setup context for optimizer
 kkodp|AQP
 kkoecp|evaluate constant predicate
 kkogfp|get first permutation
@@ -1814,10 +1817,12 @@ kkrpfch|fetch from rowsource
 kkrt|rowsource table create as select
 kks|shared objects (cursor)
 kksCheckForTrace|check for trace (not sure which; 10046?)
+kksFullTypeCheck|full type check (performs semantic and authorization checks, cost based optimization)
 kksLoadChild|load child
 kksMapCursor|map cursor
 kksParseChildCursor|parse child cursor
 kksParseCursor|parse cursor
+kksPopCompileCall|end compilation call
 kksalc|allocate compile time memory
 kksald|auxiliary load function
 kksalx|allocate bytes from the execution time heap
@@ -3834,7 +3839,7 @@ kzdpmpidx|DBMS_TDSP_MANAGE.INT_IMPORT_DISCOVERY_RESULT
 kzdpmpist|DBMS_TDSP_MANAGE.INT_IMPORT_SENSITIVE_TYPES
 kzdpmprco|DBMS_TDSP_MANAGE.DROP_SENSITIVE_COLUMN
 kzdpmprscs|DBMS_TDSP_MANAGE.REMOVE_DISCOVERY_RESULT
-kzdopcl|table privileges routines?
+kzdopcl|object privileges check routines?
 kzekmaptkp|DBMS_TTS.ADD_PROTECTED_CE_TAB_KEY_INT
 kzekmgptkp|DBMS_TTS.GET_PROTECTED_CE_TAB_KEY_INT
 kzfa|fine grained auditing
@@ -4645,8 +4650,10 @@ qba|buffer allocation
 qbadrv|create control structures
 qbaopn|create control structures
 qc|compile
-qcd|semantic analysis
+qcdl|dictionary lookup
+qcdlSynonymTranslation|translate synonym to object
 qcdldtin|dependency table insert
+qcdlgui|get user id
 qcdo|dictionary support for objects
 qcdoloi|load object specific information
 qci|language parser and semantic analyser
@@ -4654,10 +4661,12 @@ qciSetPlSqlCtx|set plsql context during a compile
 qcop|parse
 qcp|parse
 qcpi|interim
-qcpiaex|arithmetic expression
-qcpibex|boolean expression
-qcpibfa|boolean factor
-qcpibte|boolean term
+qcpia|arithmetic
+qcpiaex|expression
+qcpib|boolean 
+qcpibex|expression
+qcpibfa|factor
+qcpibte|term
 qcpicmd|command
 qcpiere|expression relop expression
 qcpierr|raise error
@@ -4667,6 +4676,7 @@ qcpilcl0|(private)
 qcpiltb|lock table command
 qcpitnam|table name
 qcpitnm|table name
+qcpiq|query(?)
 qcpl|lexer 
 qcplgnt|get next token
 qcplgte|group SQL text (?)
