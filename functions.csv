@@ -1746,6 +1746,7 @@ kkqbj|bushy join
 kkqbjdrv|driver
 kkqcby|connect by
 kkqcls|subquery coalescing
+kkqcs|cost based query transformation
 kkqct|cost based query transformation
 kkqctCostTransfQB|transfer query block cost (?)
 kkqctInterleave|interleave
@@ -1795,7 +1796,9 @@ kkqore|or-expansion
 kkqoredrv|driver
 kkqstar|star transformation
 kkqstardrv|driver
-kkqte|table expansion
+kkqt|table
+kkqtcplog|copy log chain (query tools)
+kkqte|expansion
 kkqtedrv|driver
 kkqu|subquery unnesting
 kkqvm|view merging
@@ -1823,6 +1826,7 @@ kksMapCursor|map cursor
 kksParseChildCursor|parse child cursor
 kksParseCursor|parse cursor
 kksPopCompileCall|end compilation call
+kksReplaceLiterals|replace literals in SQL statement (cursor_sharing=force)
 kksalc|allocate compile time memory
 kksald|auxiliary load function
 kksalx|allocate bytes from the execution time heap
@@ -1849,6 +1853,7 @@ kkshinins|insert child
 kkshindel|remove child
 kkslod|cursor load callback
 kkslof|log off (?)
+kkslrpl|replace literals in SQL statement (cursor_sharing=force)
 kksmcAlFree|conditially segmented array allocate. 
 kkspfda|multiple context area management
 kkspsc0|parse shared cursor
@@ -4074,7 +4079,9 @@ nsevdansw|event deferred: complete deferred nsanswer operation
 nsevrec|record: record event occurence
 nsevwait|wait: wait for event notification on all registered connections
 nsmal|memory allocate
-nso|SQL Transformation
+nso|nest optimisation (sql transformation)
+nsoqbc|on query block
+nsotruns|traverse and unnest subquery
 nsprecv|receive packet from network transport layer
 nsrdr|packet reader
 nstimexp|expire function. invoked by LTM with these specific arguments
@@ -4912,6 +4919,7 @@ qksmm|compiler memory management
 qksmms|simulation
 qksop|compilter operand processing
 qksptf|polymorphic table functions compilation
+qkspm|plan management
 qksqb|Query compilation for query blocks
 qksqbApplyToQbc|apply to QB
 qksqbApplyToQbcLoc|local implementation
@@ -5174,6 +5182,14 @@ rwsdef|definitions
 rwsfcd|fetch from rowsource
 rwsstd|start row source
 sage|exadata specific
+sageCache|cache layer
+sageData|data layer
+sageIndex|index layer
+sageTxn|transaction layer
+sagebkcomp|block compression
+sagebxfer|block transfer
+sagecell|cell 
+sagesql|sql
 sdbima|sort operation
 sdbgrf|Diagnostic directory and file services
 sdbgrfwf_write_file|write to tracefile
@@ -5287,7 +5303,8 @@ snttwrite|write data to a socket
 sp|operating system dependent process functions
 spefcmpa|marshall procedure arguments
 spefmccallstd|c calling standard
-sqn|sequence reference parsing
+sqn|sequence
+sqnprs|reference parsing
 sr|sort operation
 st|sort operation
 ss|operating system dependent system
