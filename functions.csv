@@ -3101,6 +3101,7 @@ ksqdel|release an enqueue
 ksqdldnl|deadlock dump ktagetg0
 ksqenqalloc|allocate an enqueue
 ksqgel|get and allocate enqueue
+ksqgelctx|context
 ksqget|get an enqueue
 ksqgtl|get an enqueue
 ksqrcl|release an enqueue
@@ -4885,10 +4886,13 @@ qesstPIncGammaC|DBMS_STAT_FUNCS_AUX.INC_GAMMA_C_CALLOUT
 qesstPKSSig|DBMS_STAT_FUNCS.SIG_KS_CALLOUT
 qesxl|vector translate
 qesxlp|PX
+qjsn|json
 qk|kernel
 qka|allocation
 qkadrv|allocate query structures
-qkaffs|fast full scan
+qkadrv2|2
+qkadrv2Post|post processing
+qkaffsindex|fast full scan index
 qkagby|group by
 qkajoi|join processing
 qkanindex|analyzes the usage of the argument non-clustered index
@@ -5186,7 +5190,7 @@ sageCache|cache layer
 sageData|data layer
 sageIndex|index layer
 sageTxn|transaction layer
-sagebkcomp|block compression
+sagebkcomp|block(or backup?) compression
 sagebxfer|block transfer
 sagecell|cell 
 sagesql|sql
@@ -5381,6 +5385,7 @@ xctctl|commit top level transaction in a transaction tree
 xctrol|rollback: rollback current transaction of the current session
 xpl|SQL explain plan
 xplComputePlanHashExt|DBMS_SPM.I_COMPUTE_PLAN_HASH_VALUE
+xplGenXpl|generate explain plan
 xs|olap analytic workspace
 xsAdvSparse|DBMS_AW.XSADVSPARSE
 xsAnalyze|DBMS_AW_STATS.XSANALYZE
