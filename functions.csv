@@ -1103,7 +1103,7 @@ kessiGetOptParamValStrExt|DBMS_SQLTUNE_INTERNAL.I_GET_OPT_PARAM_VAL_STR
 kessiInsertSqlText|DBMS_SQLTUNE_INTERNAL.I_INSERT_SQLSET_SQLTEXT
 kessiUpdateStmtRefCount|DBMS_SQLTUNE_INTERNAL.I_UpDATE_AWR_SQLTEXT_REFCOUNT
 kesstp|SQL trace parser
-kest|SQL tuning advisor
+kest|tokenize (?)
 kestb_get_signature|DBMS_SQLTUNE_UTIL0.GET_SIGNATURE
 kestsInitCapStats|DBMS_SQLTUNE_INTERNAL.I_INIT_CAP_STATS_CALLOUT
 kestsMmonToTuneExt|DBMS_SQLTUNE_INTERNAL.EXEC_EMX_TUNING_TASK_CALLOUT
@@ -1836,6 +1836,7 @@ kksaxs|semantic analysis, authorize and audit
 kkscls|close cursor, user is done with it
 kkscs|child cursor
 kkscsCheckCriteria|check cursor criteria
+kkscsCheckCursor|check if child cursor can be used
 kkscscid|criteria identification
 kkscscid_AdgRedirect|active dataguard redirect
 kkscscid_auc|authorized to use this child
@@ -3458,6 +3459,9 @@ ktz|testing
 ku|utility
 kueuld|export unloader
 kup|datapump
+kupc|queue services
+kupd|data package
+kupf|file manager
 kupfxCloseCtx|KUPF$FILE_INT.CLOSE_CONTEXT
 kupfxCreDmpFile|KUPF$FILE_INT.CREATE_DUMP_FILE
 kupfxCreKeyInfo|KUPF$FILE_INT.CREATE_KEY_INFO
@@ -3484,6 +3488,7 @@ kupfxSetTransParams|KUPF$FILE_INT.SET_TRANS_PARAMS
 kupfxTerm|KUPF$FILE_INT.TERM
 kupfxVerKeyInfo|KUPF$FILE_INT.VERIFY_KEY_INFO
 kupfxWriteLob|KUPF$FILE_INT.WRITE_LOB
+kupm|master control process
 kupmuar|KUPU$UTILITIES_INT.WRITEAUDITRECORD
 kuppchus|KUPP$PROC.CHANGE_USER_INT
 kuppcki|KUPP$PROC.CHECK_FOR_INTERRUPT
@@ -3526,6 +3531,7 @@ kupuxDecode|KUPU$UTILITIES_INT.DECODE
 kupuxDirScan|KUPU$UTILITIES_INT.DIRECTORY_SCAN_INT
 kupuxEncode|KUPU$UTILITIES_INT.ENCODE
 kupuxIsSuperset|KUPU$UTILITIES_INT.IS_SUPERSET_INT
+kupv|fixed table
 kupvcrat|KUPV$FT_INT.CREATE_ATTACH_ENTRY
 kupvcrjb|KUPV$FT_INT.CREATE_JOB_ENTRY
 kupvdlat|KUPV$FT_INT.DELETE_ATTACH_ENTRY
