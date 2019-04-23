@@ -844,12 +844,11 @@ kdl|lob
 kdl_write|write into an ilob instance
 kdla|SecureFile Archive
 kdlgsp_init|space management batching
-kdlsfb|pull in up to size bytes of data from stream and start writing at offset
 kdli|Inode
 kdlrci|rci
 kdlrdb|read a block at a time
 kdlprl|read a contiguous range of blocks starting at a fatblock
-kdlsfb|pull in upto size bytes of data from stream and start
+kdlsfb|pull in up to size bytes of data from stream and start writing at offset
 kdlw|kdlw
 kdlx|xfm
 kdlxdup|dedup
@@ -1195,7 +1194,6 @@ kewrudf_update_datafile|DBMS_SWRF_INTERNAL.UPDATE_DATAFILE
 kewrusr_unreserve_snap_range|DBMS_SWRF_INTERNAL.UNRESERVE_SNAP_RANGE_CALLOUT
 kewrwfao_wait_for_awr_open|DBMS_SWRF_INTERNAL.WAIT_FOR_AWR_OPEN_CO
 kewrpmvs_modify_view_settings|DBMS_MANAGEMENT_BOOTSTRAP.MODIFY_AWR_VIEW_SETTINGS_CO
-kewrps|purge
 kews|statistics
 kews_cln_timestate|clean timestate
 kews_sqlst_flush|flush cursor statistics
@@ -1249,7 +1247,6 @@ kfncSlaveSubmit|submit request
 kfnm|umbilicus
 kfnor|KFN orion
 kfns|server networking
-kfns|umbilicus
 kfpkgDG|DBMS_DISKGROUP
 kfpkgDGChangeClientCluster|CHANGECLIENTCLUSTER
 kfpkgDGCheckFile|CHECKFILE
@@ -1530,7 +1527,6 @@ kgxShared|mutex get in S mode
 kgxSharedExamine|sharedexamine mode
 kgxSharedNowait|nowait
 kgxSharedNowaitExamine|sharedexamine mode
-kgxRelease|mutex release
 kgxWait|mutex register wait and sleep
 kgxg|node monitor/cluster group services layer
 kgxgncin|group membership cssd initiate
@@ -1705,7 +1701,6 @@ kkndrv|aNalyze DRiVer
 kknls|aNalyze Locks/Security
 kknpat|partition analyze table
 kknpob|partition object
-kknls|locks/security
 kko|optimizer
 kkoOrExpand|or expansion
 kkoaccsqf|adjust cardinality and cost for subquery filters
@@ -3139,8 +3134,6 @@ ksucresg|create session with a process group specified
 ksucre|create user session in process
 ksucri|create and initialise process
 ksucrp|create and initialise process
-ksudps|dump this processes
-ksugtcpums|get cpu measurement
 ksuded|user disconnect
 ksudel|delete specified user session
 ksudlc|delete call
@@ -3148,6 +3141,7 @@ ksudlp|delete process. called when user detaches or cleanup by pmon
 ksudmp|dump process state object
 ksudps|dump process state
 ksudss|dump system state
+ksugtcpums|get cpu measurement
 ksul|license/language
 ksumcl|multi(?) check for process to be alive (checks pmon)
 ksup|processes
@@ -4944,7 +4938,6 @@ qm|XDB
 qmcx|CSX
 qmcxd|DECODING
 qmcxe|ENCODING
-qmcxe|SELFCON
 qmcxm|ENCODING
 qme|repository
 qmf|ftp server
@@ -5336,7 +5329,6 @@ sskgpwidcmp|compare semid of semaphores to be posted
 sskgpwpost|post a single semaphore
 sskgpwvectorpost|post multiple semaphores
 sskgpwwait|wait
-sskgpwpost|post
 sskgslgf|immediate latch get (X86, 8i-10g)
 sskgslspin|spin for a latch
 sskgxp|ipc communication
