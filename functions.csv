@@ -227,12 +227,12 @@ evadis|date: internal date to string
 evadsd|date string to date
 evaopn2|operand
 evapls|plsql function
-evareo|relational operator
+evareo|relational operator. Compare two operands of relational expression. After compare, branch on operator type and return true or false.
 evaval|val
 evaxl|vector translate
 expcop|evaluate callback operator list
-expeal|evaluate its argument AND list
-expepr|evaluate the argument predicate
+expeal|evaluate its argument AND list. It returns true if argument is true, false if argument is false, and unknown if argument is unkown.
+expepr|evaluate the argument predicate. It returns the result of the evaluation. If the operators ODFFNEARG flas is set (currently only for OPTLNN), dont evaluate the operands.
 fplib|filter projection library (exadata smartscan)
 gipc|grid inter process calls
 gra|grant/revoke
@@ -4838,6 +4838,7 @@ qervwFetch|fetch
 qervwRowProcedure|row procedure
 qerwn|window
 qerwnFetch|fetch
+qerxj|json
 qerxl|vector translate
 qerxp|XDB query
 qerxt|external table
