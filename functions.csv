@@ -339,6 +339,7 @@ ipc|inter process calls
 ipclw|lightweight (exafusion)
 ipp|internal probe processor capabilities(?)
 joe|java runtime environment(?)
+jon|java
 jox|java jit compiler
 joxcsys|create or replace java system
 joxas|dbms_xa
