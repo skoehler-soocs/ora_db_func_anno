@@ -339,6 +339,7 @@ ipc|inter process calls
 ipclw|lightweight (exafusion)
 ipp|internal probe processor capabilities(?)
 joe|java runtime environment(?)
+jom|java
 jon|java
 jox|java jit compiler
 joxcsys|create or replace java system
@@ -3999,6 +4000,7 @@ lmtdcrel|compare two double-precision float-point numbers
 lnxn2copt|converts an oracle number to a character string with option for padding
 lnxn2coptg|with nls global
 lnxqchk|private number check function
+ltx|XDB
 lxm|native language support
 main|general c starting function
 mDNS|multicast dns
@@ -4111,6 +4113,7 @@ oci|oracle call interface
 ociextp|PLSQL External proc
 odm|oracle disk manager
 odm_io|IO
+ofs|oracle filesystem (ACFS)?
 opi|oracle program interface
 opiDeferredSem|perform deferred semantic analysis
 opiNeedDeferredSem|is deferred semantic analysis needed (if so (r1), returns from kksParseChildCursor and starts kksFullTypeCheck)
