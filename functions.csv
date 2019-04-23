@@ -441,6 +441,7 @@ jskeSetEvtMsgArg|DBMS_ISCHED.SET_EVTMSG_ARG
 jskeSetLastFWRun|DBMS_ISCHED.SET_LAST_RUN_TIME
 jsxsExecPrePostApply|DBMS_ISCHED.EXEC_JOB_RUN_LSA
 jsxsGetSysTimeZoneName|DBMS_ISCHED.GET_SYS_TIME_ZONE_NAME
+jzn|json
 k|kernel
 k2|distributed execution
 k2c|kernel to kernel 
