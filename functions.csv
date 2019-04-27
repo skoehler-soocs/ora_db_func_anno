@@ -352,6 +352,7 @@ joxas_prepare|DBMS_XA.INTERNAL_JOXAS_PREPARE XA_PREPARE
 joxas_rollback|DBMS_XA.INTERNAL_JOXAS_ROLLBACK XA_ROLLBACK
 joxas_settimeout|DBMS_XA.INTERNAL_JOXAS_SETTMO XA_SETTIMEOUT
 joxas_start|DBMS_XA.INTERNAL_JOXAS_START XA_START
+js|job scheduing
 jsaAddAgentCert|DBMS_ISCHED.ADD_AGENT_CERT
 jsaAddEvtQSub|DBMS_ISCHED.ADD_EVENT_QUEUE_SUBSCRIBER
 jsaAddGroupMember|DBMS_ISCHED.ADD_GROUP_MEMBER
@@ -807,6 +808,8 @@ kdgsts|Gathering STatistics Scan
 kdgvsp|validate structure perform
 kdgvss|validate structure scan
 kdi|index
+kdiXuFinish|finish processing of delaued index maintenance
+kdibFinish|kxib finish index maintenance processing
 kdib|bitmap index generation definitions
 kdiblsorget|extract key/rewoid from sorter
 kdiblwrite|write a kdi entry
@@ -833,11 +836,14 @@ kdifxs1|fetch row from index block inner function
 kdiins|inserts the argument key and associated keydata
 kdiins0|0
 kdiixs|index range scan
+kdiknf|key not found - debug code for oer-8102
 kdil|load
 kdim|coalesce
 kdimod0|modifies the argument key's row from the argument index according
 kdis|split
 kdisle|split the argument leaf block and insert the argument key
+kdisnew|allocate a new index block during a split
+kdisnewle|leaf block
 kdiss|skip scan
 kdiulk|undo leaf operation
 kdizoltp|OLTP HIGH Index
@@ -1596,6 +1602,7 @@ kjuscl|synchronous close a lock
 kjuscv|synchronous convert a lock
 kjusuc|synchronous open and convert a lock
 kjuuc|asynchronous open and convert a lock
+kjx|cross instance
 kjxg|cluster group services
 kjxgr|instance membership recovery
 kjz|DIAG
@@ -1606,6 +1613,7 @@ kjzf|flow control layer
 kjzg|group services layer
 kjzh|API layer
 kjzm|membership layer
+kjzn|node layer
 kjznpsp|DBMS_HANG_MANAGER.SET_PARAM_INTERNAL
 kk|compile
 kkae_reset_edition_always_icd|DBMS_SESSION.KKAE_RESET_EDITION_ALWAYS_ICD USE_DEFAULT_EDITION_ALWAYS
@@ -3173,6 +3181,8 @@ ksvsend|send message to slave process
 ksvsubmit|submit request for ASM Onnn slave process
 ksvwait|setup waiting 
 ksvworkwait|wait for submitted work
+ksw|workgroup
+ksws|services
 ksws_int_tag_sess|DBMS_SERVICE.INT_TAG_SESSION
 ksws_kill_sess|DBMS_SERVICE.IKILL_SESSION
 ksws_map_rc_to_error|DBMS_SERVICE.I_MAP_ERROR (?)
