@@ -549,6 +549,7 @@ kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
 kcbtsn|get tablespace number
 kcbs|simulator
 kcbsacc|access 
+kcbv|vlm (very large memory)
 kcbw|working set management
 kcbz|subroutines for kcb
 kcbz_encdec_tbsblk|tablespace block encrypt
@@ -1208,6 +1209,7 @@ kews_cln_timestate|clean timestate
 kews_sqlst_flush|flush cursor statistics
 kews_update_wait_time|update wait time
 kewu|utilities
+kewx|sysaux?
 kex|EM express
 kf|automatic storage management
 kfa|alias operations
@@ -2772,6 +2774,9 @@ krd_implicit_rcv|IMPLICIT ReCoVery for standby open/activation
 krdrsb|read from standby (?)
 krdsmr|serial? slave? media recovery
 krf|flashback
+krf_flashback_db|flashback a database from a client other than RMAN
+krf_restore_driver|restore the files in the restore set/flashback restore of the database
+krfbBuildRestoreSet|adds a list if files to flashback to the flashback context
 krfgdelfb1|calculate deleted space (?)
 krfgfbtofree|calculate free space
 krfxfblog|fixed table callback routine for x$kcrfblog
@@ -4882,6 +4887,7 @@ qesmmIPgaFreeCb|pga free callback
 qesltc|load table conventional
 qespc|partitioning
 qesrc|result cache
+qesrcCM|commit?
 qesrcPS_BKDrv|DBMS_RESULT_CACHE.BK_DRV BLACKLIST_ADD/REMOVE/CLEAR
 qesrcPS_BKLst|DBMS_RESULT_CACHE.BK_LST BLACK_LIST
 qesrcPS_Byp|DBMS_RESULT_CACHE.BYPASS_
