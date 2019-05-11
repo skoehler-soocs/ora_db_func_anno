@@ -1765,6 +1765,8 @@ kkqctInterleaveJPPD|join predicate pushdown
 kkqctInterleaveLargeQry|large query
 kkqctInterleaveORE|or-expansion
 kkqctInterleaveSTJF|STJF
+kkqctNxtLinearStt|next linear state
+kkqctUpdBestCostStt|pick the most efficient query transformation state
 kkqctdrv|driver
 kkqctdrvBJ|bushy join
 kkqctdrvCVM|complex view merging
@@ -1779,10 +1781,10 @@ kkqctdrvST|star transformation
 kkqctdrvSU|subquery unnesting
 kkqctdrvTE|table expansion
 kkqctdrvTD|transformation directives
+kkqctdrvVM|view merging
 kkqctdrvVT|vector transformation
 kkqctnojppd|no join predicate pushdown (?)
-kkqctNxtLinearStt|next linear state
-kkqctUpdBestCostStt|pick the most efficient query transformation state
+kkqcttcalo|type check allocate
 kkqdrv|transformation driver
 kkqgb|group by
 kkqgbp|placement
@@ -1990,6 +1992,7 @@ kkxwtp|plsql compiler
 kky|system/session
 kkyasy|alter system driver
 kkz|security
+kkzgdcol|get distinct column. This function checks the column chain for a frodef and mark the columns needed for materialized view.
 kkzgna|generate name
 kkzi_is_XMLtab_Objrel|DBMS_REDEFINITION.IS_XMLTAB_OBJREL
 kkzi_reg_idx_param|DBMS_REDEFINITION.REG_XMLIDX_PARAMSTR DBMS_REDEFINITION.IS_PARAM_NM_TAKEN
@@ -4009,6 +4012,7 @@ kzxsp|XS Security Class
 kzxutilErr|XS_ADMIN_UTIL.RAISE_ERROR (?)
 kzxutilValidateDBuser|XS_ADMIN_UTIL.VALIDATE_DB_USER
 kzxutilValidateObjectName|XS_ADMIN_UTIL.VALIDATE_DB_OBJECT_NAME
+libc_start_main|(non oracle)libc support for starting the main function
 lis|PLSQL_KG_Interface
 lm|low level math functions
 lmtdcrel|compare two double-precision float-point numbers
@@ -4017,7 +4021,7 @@ lnxn2coptg|with nls global
 lnxqchk|private number check function
 ltx|XDB
 lxm|native language support
-main|general c starting function
+main|(non oracle)general c starting function
 mDNS|multicast dns
 md|spatial
 mdgr|spatial georaster
@@ -4277,10 +4281,21 @@ pesxlt|STANDARD.PESXLT TRANSLATE
 pesxup|STANDARD.PESXUP NLS_UPPER
 pextproc|pefm call external procedure
 pf|PLSQL Code Execution
-pfri|plsql runtime
+pfr|runtime
+pfrba_bind_array|bind array
+pfrci_compute_index|compute index
+pfrecl_excp_caught_locally|exception caught locally
+pfrexc|plsql interpreter exception support
+pfrfeb_format_error_backtrace|format error backtrace
+pfrfi_find_index|find index
+pfrfoe_flush_oci_error|flush oci error
+pfrfxh|finds an exception handler
+pfrrbt_record_backtrace|record backtrace
 pfrrun|Interpreter Main Instruction Loop
 pfrrun_no_tool|fast interpretation loop
 pfrsqc|callbacks for array sql and dml with returning
+pfrsi_sort_index|sort index
+pfrsim_sort_index_main|sort index main
 pfrstk|runtime stack frame
 pfrtcs|trace call stack(?) calls kgitrc on each kgiob on the stack
 pgm|PLSQL ILMS
@@ -4722,6 +4737,8 @@ qcsprfro_tree|tree (handles ANSI join frodefs)
 qcspqb|query blocks
 qcspqbDescendents|and descendents (this processes qbc and its inner qbc's, but not its sibling (qbcnxt) query blocks)
 qct|type check operations
+qctErr932|raise ORA 932 (inconsistent data types)
+qctErrConvertDataType|error routine for data type conversions
 qctcopn|typechecks the query block and its descendant
 qcto|operators
 qctopls|typecheck OPTPLS operator
@@ -5331,7 +5348,6 @@ spefmccallstd|c calling standard
 sqn|sequence
 sqnprs|reference parsing
 sr|sort operation
-st|sort operation
 ss|operating system dependent system
 ssOsw|operating system (call) wrapper (?)
 ssOswClose|close
@@ -5360,6 +5376,7 @@ sslssSynchHdlr|SSLS signal handler for synch. signals
 sslsshandler|SSLS signal handler for all signals
 sspuser|handle SIGUSR2 for Oracle
 ssthrdmain|main for every thread in a threaded oracle
+start|(non oracle)c program entry point
 std|PLSQL apps
 stsima|sort support implementation
 sxorchk|system xor check
