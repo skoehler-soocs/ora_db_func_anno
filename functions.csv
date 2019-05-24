@@ -2416,6 +2416,8 @@ kpplistrcp|DBMS_CONNECTION_POOL.START_POOL
 kpr|recursive program interface
 kprb|bundled operations
 kprball|execute all bundled kpr/rpi operations
+kprbalo|allocator callback
+kprbbin|number of bind variables
 kprc|RPI copy routines
 kprccu|copy data given Uac
 kprcdt|copy data
