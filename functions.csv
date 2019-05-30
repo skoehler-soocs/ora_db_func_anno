@@ -540,7 +540,7 @@ kcbpioqcInit|initialize memory area in pga
 kcbr_apply_pending|apply changed pending read completion
 kcbr_media_apply|apply change vector for media recovery
 kcbrbuf|get a recovery buffer
-kcbrbr|reuse block rang
+kcbrbr|reuse block range: called by space management
 kcbrls|release pin 
 kcbtema|thread recovery examine and maybe apply
 kcbtse|tablespace encryption
@@ -2112,8 +2112,11 @@ kmn|network
 kmnsbm|buffer memory allocation callback
 kmp|connection broker
 kn|replication
-kna|streams apply
+kna|apply
 knac|coordinator
+knah|HA DB
+knahsma|slave main
+knahspx|process transaction
 knaladmAddAutoCDR|DBMS_GOLDENGATE_ADM_INT_INVOK.ADD_AUTO_CDR_INT
 knaladmAddAutoCDRColGroup|DBMS_GOLDENGATE_ADM_INT_INVOK.ADD_AUTO_CDR_COLGROUP_INT
 knaladmAddAutoCDRDeltaRes|DBMS_GOLDENGATE_ADM_INT_INVOK.ADD_AUTO_CDR_DELTA_RES_INT
@@ -2134,7 +2137,10 @@ knalsDropAPR|DBMS_APPLY_ADM_INTERNAL.DROP_APPLY_PROGRESS_REDO
 knalsGetSender|DBMS_STREAMS.GET_SENDER_INTERNAL
 knalspCleanApplySpill|DBMS_XSTREAM_ADM_UTL.CLEAN_APPLY_SPILL
 knanr|propogation receiver
-knas|server
+knas|slave
+knasm2|main 2
+knasplcr|process logical change record
+knaspx|process transaction
 knasxStopClient|DBMS_XSTREAM_ADM_UTL.STOP_XOUT_CLIENT
 kncd|dequeue generic functions
 kngocachep_ext|DBMS_LOGREP_UTIL.LCR_CACHE_PURGE
@@ -2509,9 +2515,9 @@ kqrpre|read a parent cache object
 kqrpre1|additional 1
 kqrprl|parent release enqueue
 kqrrls|release lock
-kr|recovery
+kr|redo
 kra|recovery area function
-krb|backup restore
+krb|backup/restore
 krb1g|read (and optionally validate) first block of file
 krbabr|auto block media recovery
 krbb|creation of a backuppiece
@@ -2772,6 +2778,7 @@ krccacp|advance the checkpoint
 krccckp|checkpoint
 krcpabs|I am ctwr
 krcptmo|ctwr timeout action, this is the main loop
+krcrfi|read file. rman is traversing the bitmaps to find enough historical bitmap data.
 krd|datafiles (media and standby)
 krd_do_mrp|do managed recovery processing
 krd_end_rcv|end media recovery
@@ -2812,6 +2819,7 @@ krta2bz|obtain blocksize of tablespace
 krta2rfn|obtain file number (mos says absolute file number)
 krtchk|check consistency (with control file)
 krtcktt|check temporary tablespace configuration
+krv|recovery
 krvarf|DBMS_LOGMNR.KRVARF ADD_LOGFILE
 krvcp|DBMS_LOGMNR.KRVCP COLUMN_PRESENT
 krvend|DBMS_LOGMNR.KRVEND END_LOGMNR
@@ -2860,17 +2868,21 @@ krviult|DBMS_LOGMNR_INTERNAL.LOGMNR_KRVIULT
 krviusobj|DBMS_LOGMNR_INTERNAL.UNSKIP_OBJ_C
 krviusrba|DBMS_LOGMNR_INTERNAL.UNSKIP_RBA
 krviusxid|DBMS_LOGMNR_INTERNAL.UNSKIP_XID
+krvm|mine
 krvmv|DBMS_LOGMNR.KRVMV MINE_VALUE
-krvspd|DBMS_LOGMNR_INTERNAL.KRVSPD
-krvstart|DBMS_LOGMNR.KRVSTART START_LOGMNR
 krvrgse|DBMS_LOGMNR_INTERNAL.KRVRGSE
 krvrgse2|DBMS_LOGMNR_INTERNAL.KRVRGSE2
 krvrmgb|DBMS_LOGMNR_INTERNAL.KRVRMGB
 krvrrse|DBMS_LOGMNR_INTERNAL.KRVRRSE
 krvrrrf|DBMS_LOGMNR.KRVRRRF REMOVE_LOGFILE
+krvs|apply service
+krvspd|DBMS_LOGMNR_INTERNAL.KRVSPD
+krvssf|survive failure
+krvstart|DBMS_LOGMNR.KRVSTART START_LOGMNR
 krvt|log miner viewer support
 krvugaclr|DBMS_LOGMNR_INTERNAL.KRVUGACLR
 krvugaset|DBMS_LOGMNR_INTERNAL.KRVUGASET
+krvx|extract
 ks|service (VOS)
 ksa|asynchronous messages
 ksaamb|allocate message buffer
@@ -2895,6 +2907,7 @@ ksc|component notifier
 kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|system notifications to be passed to components
 ksd|debug internal errors
+ksdacn|action routines for parser
 ksddoa|debug support do an action
 ksdhng|hang analyze
 ksdind|DBMS_SYSTEM.KSDIND_ICD KSDIND
@@ -2903,6 +2916,7 @@ ksdocrl|check if row is locked
 ksdp|parser
 ksdpcg|post and check event in the specified event group
 ksdpec|post event and check trigger condition
+ksdprs|parse string
 ksdwra|write to alert
 ksdwrf|write to (trace) file
 ksdwrt|DBMS_SYSTEM.KSDWRT_ICD KSDWRT
@@ -2910,6 +2924,7 @@ ksdxcb|ksdx callback for sosd layer signal handler
 ksdxen|2-task entry point
 ksdxfdmp|ksdx function: invoke named dump
 ksdxfstk|dump abridged os stack
+ksdxftev|set trace event
 ksdxwcwpt|create watchpoint
 ksdxwdwpt|delete watchpoint
 kse|error
@@ -3049,6 +3064,7 @@ kslpwrp_int|post/wait read post type (to choose single or multi process posting;
 kslskgs|spin get of shared latch
 kslwait|wait for n centi-seconds or until posted
 kslwaitctx|wait context; wait until timeout
+kslwaitns|wait to be awakened w/o calling into the db scheduler
 kslwlmod|wait list modification
 kslwlscan|scan write list
 kslwt|wait interface
@@ -3151,6 +3167,7 @@ ksu_dispatch_tac|dispatch timed-out actions (updates wait interface)
 ksu_update_eoc_stats|update end of call state(?)
 ksuclc|cleanup current call
 ksucln|cleanup detached process
+ksuclnwt|wait for specified time in seconds
 ksucresg|create session with a process group specified
 ksucre|create user session in process
 ksucri|create and initialise process
@@ -3196,6 +3213,7 @@ ksws|services
 ksws_int_tag_sess|DBMS_SERVICE.INT_TAG_SESSION
 ksws_kill_sess|DBMS_SERVICE.IKILL_SESSION
 ksws_map_rc_to_error|DBMS_SERVICE.I_MAP_ERROR (?)
+kswsdls|delete service
 kswsgetosstat|get host cpu utilization
 kswsics|DBMS_SERVICE.ICREATE_SERVICE
 kswsidl|DBMS_SERVICE.IDELETE_SERVICE
@@ -3605,6 +3623,7 @@ kwqaIsPri|DBMS_AQADM_SYSCALLS.IS_PRIMARY
 kwqaSetMaxStreamspool|DBMS_AQADM_SYSCALLS.SET_MAX_STREAMS_POOL
 kwqaSetMinStreamspool|DBMS_AQADM_SYSCALLS.SET_MIN_STREAMS_POOL
 kwqaStopMsgForwarding|DBMS_AQADM_SYSCALLS.KWQA_3GL_STOP_MSG_FORWARDING
+kwqadrpq|drop queue
 kwqd|dequeue
 kwqi|internal/plsql trusted callouts
 kwqiautoplsreg|DBMS_AQ.CREATE_DEQUEUE_JOB
@@ -3679,6 +3698,7 @@ kwqo|insttype checking options
 kwqp|queueing propagation
 kwqs|statistics handling
 kwqu|lob data
+kwqvdsvc|drop service
 kwqx|transformations
 kwqxEvalTrans|DBMS_TRANSFORMATION_INTERNAL.COMPUTE_TRANSFORMATION
 kwqxcreate|DBMS_TRANSFORMATION_INTERNAL.I_CREATE_TRANSFORMATION
@@ -4112,6 +4132,7 @@ nsprecv|receive packet from network transport layer
 nsrdr|packet reader
 nstimexp|expire function. invoked by LTM with these specific arguments
 nt|transport
+ntevque|event vector query
 ntm|mailbox
 ntp|ipc
 ntpfp|?
