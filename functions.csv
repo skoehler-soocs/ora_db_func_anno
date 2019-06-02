@@ -1618,6 +1618,7 @@ kjzm|membership layer
 kjzn|node layer
 kjznpsp|DBMS_HANG_MANAGER.SET_PARAM_INTERNAL
 kk|compile
+kkae|editions
 kkae_reset_edition_always_icd|DBMS_SESSION.KKAE_RESET_EDITION_ALWAYS_ICD USE_DEFAULT_EDITION_ALWAYS
 kkae_reset_edition_icd|DBMS_SESSION.KKAE_RESET_EDITION_ICD USE_DEFAULT_EDITION_DEFERRED
 kkae_set_edition_icd|DBMS_SESSION.KKAE_SET_EDITION_ICD SET_EDITION_DEFERRED
@@ -1628,9 +1629,9 @@ kkbndrp|drop storage tables for nested table columns
 kkbnftn|format table for nested table
 kkbl|lob
 kkbo|object
-kkcn|streams advanaced queuing 
+kkcn|streams/advanced queuing connection
 kkcnRegApply|DBMS_AQ.REGOP_APPLY
-kkcne|streams advanaced queuing notitication
+kkcnsuctx|set user context
 kkdc|data check (constraints)
 kkdcac|takes a table name as input and uses the obj# to get the constraint name for each constraint associated.
 kkdcacr|check and referential constrains
@@ -1719,6 +1720,7 @@ kkoOrExpand|or expansion
 kkoaccsqf|adjust cardinality and cost for subquery filters
 kkoads|active dynamic sampling (ADS)
 kkoadsComputeSqlid|compute sqlid
+kkoar|automatic (sql) reoptimisation
 kkoasj|add semi-join function
 kkoat|auto tuning optimizer
 kkobmp|bitmap processing
@@ -2106,11 +2108,14 @@ kmdrdp|run a dispatcher process
 kmdu2s|route messages from user to server
 kml|listener registration
 kmm|monitor
+kmmd|dispatcher
+kmml|listener
+kmmlrl|remote listener
 kmmrdp|run dispatcher process
 kmms|server
 kmn|network
 kmnsbm|buffer memory allocation callback
-kmp|connection broker
+kmp|pool
 kn|replication
 kna|apply
 knac|coordinator
@@ -2201,6 +2206,7 @@ knlgsn|DBMS_STREAMS.GET_STREAMS_NAME
 knlgst|DBMS_STREAMS.GET_STREAMS_TYPE
 knlgmt|DBMS_STREAMS_ADM_IVK..GET_MESSAGE_TRACKING_INTERNAL
 knllcrtoxml|DBMS_STREAMS_LCR_INT.CONVERT_LCR_TO_XML_INT
+knlog|goldengate
 knlprepschemainst_cdb|DBMS_CAPTURE_ADM_INTERNAL.PREPARE_SCHEMA_INST_CDB
 knlprepsynctabs|DBMS_CAPTURE_ADM_INTERNAL.PREPARE_SYNC_TABLE_LIST
 knlpreptableinst_cdb|DBMS_CAPTURE_ADM_INTERNAL.PREPARE_TABLE_INST_CDB
@@ -2247,6 +2253,8 @@ knlustrcmpcs|DBMS_LOGREP_UTIL.STRCMP_CS
 knlxmltolcr|DBMS_STREAMS_LCR_INT.CONVERT_XML_TO_LCR_INT
 knlzseshasrol|DBMS_LOGREP_UTIL.SESS_HAS_ROLE
 knlzusrhasrol|DBMS_LOGREP_UTIL.USER_HAS_ROLE
+knst|streams/goldengate
+knsq|streams/goldengate message queueing
 knt|(internal) triggers
 kntxit|execute internal triggers
 kntxlp|exeucte internal triggers for LOB piecewise
@@ -2395,12 +2403,14 @@ kpogsk|initializes the session and returns the encrypted session key
 kpohal|This is the memory allocator that uses kpcch (the common heap module)
 kpolob|lob operations
 kpolal|lob allocator
-kpon|streams advanced queuing 
+kpon|notification
 kponPurgeUnreachLoc|remove registrations for unreachable locations
-kpond|streams advanced queuing notitication
+kpond|advanced queuing 
+kpone|event monitor
 kpoodr|replaces ttcdrv to handle pisdef in fastpath mode
 kpoopq|set keyword value pair
 kpooprx|open, parse, and optionally execute
+kpoq|result cache
 kpor|RPC callback for streaming
 kporpc|the oracle side function to start rpc
 kposc|scrollable cursors
@@ -2414,7 +2424,7 @@ kpoxcAppContEndReplay|DBMS_APP_CONT_PRVT.END_REPLAY
 kpoxcAppContPrepareReplay|DBMS_APP_CONT_PRVT.PREPARE_REPLAY_INT
 kpp2|parse routine for dimensions
 kpp3|parse routine for create/alter/drop summary statements
-kppl|connection pool
+kppl|database resistent connection pool
 kppliatpcp|DBMS_CONNECTION_POOL.ALTER_PARAM
 kpplicfgcp|DBMS_CONNECTION_POOL.CONFIGURE_POOL
 kpplistpcp|DBMS_CONNECTION_POOL.STOP_POOL
