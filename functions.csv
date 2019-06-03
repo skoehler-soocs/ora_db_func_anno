@@ -626,6 +626,7 @@ kcl_grab_affinity|DBMS_CACHEUTIL.KCL_GRAB_AFFINITY
 kcl_grab_readmostly|DBMS_CACHEUTIL.KCL_GRAB_READMOSTLY
 kcl_obj_downconvert|DBMS_CACHEUTIL.KCL_OBJ_DOWNCONVERT
 kclalc|allocate and initialize lock context
+kclbla|release processing?
 kclcfusion|claim fusion lock
 kclcsfusion|start fusion recovery request
 kclclaim|claim a recovery lock
@@ -1318,6 +1319,7 @@ kgeasi|raise an error on an assertion failure
 kgeasnmierr|assert named internal error
 kgecrs|check and record O/S error code
 kgecxd|context of error driver
+kgefec|fatal error code
 kgefem|format error message (null-terminated)
 kgemef|mae error message (with Va_list)
 kgepop|pop to the current top error frame
@@ -1558,7 +1560,9 @@ kjbcropen|open LE lock
 kjbcrconvert|convert LE lock
 kjbfp|persistent cluster flash cache
 kjbl|lock table
+kjbmpocr|master<-client (receive) process open convert request
 kjbr|resource table
+kjbrpread|pred read request at master
 kjc|communication
 kjci|cross instance call
 kjctr_pbmsg|process batch message
@@ -1568,6 +1572,8 @@ kjctrcv|receive messages
 kjcts_dmpbmsg|dump batch message content
 kjctsrmg|receive a vector of messages
 kjcvcvd|deadlock detection routines
+kjdd|deadlock detection
+kjdr|dynamic remastering
 kjfm|heartbeat monitoring
 kjfz|DLM-client freeze/unfreeze
 kjhn_get_alert_severity_plsql|DBMS_HA_ALERTS.GET_SEVERITY
@@ -1588,6 +1594,7 @@ kjlrlr|remove lock from resource queue
 kjlsod|state object delete
 kjlt|table
 kjm|RAC multiple LMS
+kjmpmsg|process the message
 kjmsm|main action callback (LMS main loop)
 kjoe|DLM omni enqueue service
 kjpfr|process free
@@ -3023,6 +3030,7 @@ ksk|resource manager
 kskadjcpuutil|adjust cpu utilization (adjusted for instance caging)
 kskchk|check resource state for RM
 kskgetpgalimit|get pga limit
+kskinitrm|initialise resource manager
 kskiorm|I/O resource manager
 ksklheld|lock held
 kskosstatact|operating system statistics act (get os statistics)
@@ -3420,6 +3428,7 @@ ktslfbupd|buffer update
 ktslfsp|procedure
 ktslgfs|get free space
 ktslghb|get hash bucket block
+ktslj|slave process
 ktsmg_icmt|insert direct load commit
 ktsmg_seg|merge segments
 ktsmgaex|DBMS_UNDO_ADV.IF_AUTO_EXTEND
