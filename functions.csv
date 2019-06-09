@@ -1244,9 +1244,6 @@ kfk|KFK
 kfk_dump|dump routine
 kfk_dump_iosubsys|io subsystem
 kfk_dump_kfkio|KFK IO 
-kfkio|IO
-kfks|sage (exadata)
-kfksubs|subs
 kfm|node monitor interface implementation
 kfmd|layer for diskgroup registration
 kfms|layers support function interface
@@ -1282,6 +1279,8 @@ kfpkgDGRemap|REMAP
 kfpkgDGResizeFile|RESIZEFILE
 kfpkgDGSetSparseParent|SETSPARSEPARENT
 kfr|recovery
+kfrb|buffer
+kfrc|COD
 kftha|transparent high availability
 kftr2ah|relative to absolute file number translation with hint
 kfv|volume subsystem
@@ -3311,6 +3310,8 @@ ktel|loader
 ktelck|set segment header extent map lock 
 ktelrwi|redoless write initialize
 kteop|operations
+kteopins|insert a formatted extent after the high water mark
+kteopmerge|marge extent extent maps
 kteu|redo support for segment header/extent map changes
 ktf|flashback support
 ktfa|flashback archive
@@ -3429,8 +3430,9 @@ ktslfsp|procedure
 ktslgfs|get free space
 ktslghb|get hash bucket block
 ktslj|slave process
-ktsmg_icmt|insert direct load commit
-ktsmg_seg|merge segments
+ktsmg|merge
+ktsmg_icmt|insert direct load commit. called by transaction code at commit.
+ktsmg_seg|segments
 ktsmgaex|DBMS_UNDO_ADV.IF_AUTO_EXTEND
 ktsmgbpr|DBMS_UNDO_ADV.GET_BEST_POSSIBLE_RETENTION
 ktsmgmsz|DBMS_UNDO_ADV.MAXSIZE
@@ -3481,7 +3483,6 @@ ktubgn|begin transaction
 ktubko|get undo record to rollback transaction, non-cr only
 ktubnd|bind undo segment
 ktubsy|check if an extent can be reclaimed using extent commit time
-ktuc|called from cache layer
 ktuchg|write logs and perform changes
 ktucmt|commit transaction
 ktudba|convert from usn to dba
@@ -3918,6 +3919,7 @@ kzft|fine grained auditing
 kzia|identification and authentication 
 kziaia|main identification and authentication function
 kzl|label
+kzld|ldap
 kzlg|generic directory services integration
 kzp|privileges
 kzpcaobb|check for access on object using object
@@ -5460,6 +5462,7 @@ vsn|version (?)
 wpiu|PLSQL apps
 xct|transaction management
 xctend|end
+xctcom|commit: commit the current tranaction of the current session
 xctctl|commit top level transaction in a transaction tree 
 xctrol|rollback: rollback current transaction of the current session
 xpl|SQL explain plan
