@@ -1453,6 +1453,7 @@ kglpim|pin and load more heaps
 kglpin|pin heaps and load data pieces of an object
 kglpn|pin
 kglpnal|allocate
+kglpnc|pin heaps and load data pieces of a cursor object
 kglpnck|check if latch is held
 kglpndl|delete data heaps 
 kglpnds|delete state object
