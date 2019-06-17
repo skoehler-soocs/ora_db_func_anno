@@ -337,6 +337,7 @@ insini|initialisation
 insrow|Fetch a row for insertion. This is called back by multirow insert
 ipc|inter process calls
 ipclw|lightweight (exafusion)
+ipcor|on wire
 ipp|internal probe processor capabilities(?)
 joe|java runtime environment(?)
 jom|java
@@ -1250,6 +1251,7 @@ kfms|layers support function interface
 kfmsInit|initialise group services (kgxgncin cssd)
 kfn|networking subsystem
 kfnb|umbilicus
+kfnbGrpFindDisks|group find disks
 kfnc|client networking
 kfncPhysical|request physical sector size
 kfncSlaveSubmit|submit request
@@ -2113,7 +2115,8 @@ kmd|dispatcher
 kmdmai|main loop
 kmdrdp|run a dispatcher process
 kmdu2s|route messages from user to server
-kml|listener registration
+kml|listener registration (lreg)
+kmlini|initialization
 kmm|monitor
 kmmd|dispatcher
 kmml|listener
@@ -3125,6 +3128,28 @@ ksmugf|release session global memory
 ksmuhe|allocate the uga heap using the parent heap specified if state = KSMUGCRE
 ksmupg|check for references in the session global area to process
 ksmuse|set pointers to newly allocated memory?
+ksmxm|extended memory (persistent memory)
+ksmxm|alloc_handle|allocate handle
+ksmxm|allocate_areas|allocate areas
+ksmxm_attach_xga|attach xga
+ksmxm_apply|apply
+ksmxm_calculate_memory_info_per_node|calculate memory info per node
+ksmxm_check_area_exists|check area exists
+ksmxm_create_get_memory_stats|create get memory statistics
+ksmxm_create_region|create region
+ksmxm_create_xga|create xga
+ksmxm_create_xga_metadata|create xga metadata
+ksmxm_destroy_xga|destroy xga
+ksmxm_detach_xga|detach xga
+ksmxm_display_xga_segments_info|display xga segments info
+ksmxm_distribute_bc_xmem_regions|distribute buffer cache regions
+ksmxm_distribute_imc_xmem_regions|distribute in-memory column store regions
+ksmxm_distribute_region_cb|distribute region callback
+ksmxm_dump_xga_info|dump sga info
+ksmxm_get_area_name|get area name
+ksmxm_init|initialize
+ksmxm_prepage|prepage xga
+ksmxmnfy|notify
 ksn|two task
 kso|operations
 kso_prespawn_queue_disable|DBMS_PROCESS.STOP_POOL
@@ -3150,6 +3175,8 @@ ksqcov|convert an enqueue's mode
 ksqded|deadlock check
 ksqdel|release an enqueue
 ksqdldnl|deadlock dump ktagetg0
+ksqdmc|dump lock
+ksqdmp|dump details
 ksqenqalloc|allocate an enqueue
 ksqgel|get and allocate enqueue
 ksqgelctx|context
@@ -3729,6 +3756,7 @@ kwrc|rules engine evaluation(?)
 kwre|rules engine evaluation(?)
 kws|streams advanced queuing 
 kwsbg|background
+kwsbgshms|shutdown masters (AQ process coordinator)
 kwsbit|time manager for sharded queue
 kwsbjc|time manager for sharded queue
 kwsbsm|background
@@ -3824,7 +3852,8 @@ kxsOpenACursor|open a cursor (local in PGA)
 kxsSsa|session state array(?)
 kxsSsaSetSqlid|prepare to update X$SUSE with sqlid, updateallssa performs this
 kxsSsaUpdateAllssa|update all session state array (X$KSUSE)
-kxsbndinf|bind variable information
+kxsbnddmp|bind variable dump. master routine per bind for providing bind info in sql trace files.
+kxsbndinf|bind variable information. provides actual bind data in sql trace files.
 kxscln|cleanup instantiation object
 kxscls|close
 kxsclsr|remote
@@ -3832,7 +3861,14 @@ kxsfbb|free bind buffers(?)
 kxsffir|function fire called when the appropriate heap is going away
 kxspoac|put oacdef into the cursor instantiation
 kxst|sql trace
+kxstTraceBinds|bind variable
+kxstTraceClose|close tracefile
+kxstTraceWait|provide wait information
+kxstcol|collect. provide parse, execute and fetch statistics.
+kxstcol2|for LOB types
 kxstcls|trace cursor closing
+kxstper|process error
+kxstsql|sql processing. provide SQL information
 kxtex1|execute trigger
 kxti|trigger
 kxtivwt|view with active trigger for current ML
@@ -4184,6 +4220,7 @@ opiNeedDeferredSem|is deferred semantic analysis needed (if so (r1), returns fro
 opiParse|parse
 opiSem|semantic analysis driver
 opiaba|access bind (variable) array?
+opiabt|abort instance
 opiamr|archival and media recovery
 opibnd|bind
 opibnd0|0
@@ -5468,6 +5505,7 @@ xctctl|commit top level transaction in a transaction tree
 xctrol|rollback: rollback current transaction of the current session
 xpl|SQL explain plan
 xplComputePlanHashExt|DBMS_SPM.I_COMPUTE_PLAN_HASH_VALUE
+xplDumpSqlTrace|produce STAT lines in sql trace
 xplGenXpl|generate explain plan
 xs|olap analytic workspace
 xsAdvSparse|DBMS_AW.XSADVSPARSE
