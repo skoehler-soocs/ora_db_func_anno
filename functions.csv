@@ -3130,8 +3130,8 @@ ksmuhe|allocate the uga heap using the parent heap specified if state = KSMUGCRE
 ksmupg|check for references in the session global area to process
 ksmuse|set pointers to newly allocated memory?
 ksmxm|extended memory (persistent memory)
-ksmxm|alloc_handle|allocate handle
-ksmxm|allocate_areas|allocate areas
+ksmxm_alloc_handle|allocate handle
+ksmxm_allocate_areas|allocate areas
 ksmxm_attach_xga|attach xga
 ksmxm_apply|apply
 ksmxm_calculate_memory_info_per_node|calculate memory info per node
