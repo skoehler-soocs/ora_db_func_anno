@@ -2107,6 +2107,7 @@ kmgsdrv|driver
 kmc|virtual circuit
 kmcadq|add circuit to a queue
 kcmcvc|create virtual circuit
+kmcdflu|flush. perform the flush operation, forces the data in the current send buffer to get flushed out to the user.
 kmcdlc|state object delete routine
 kmcdrv|driver
 kmcmbf|mark buffer
@@ -4164,7 +4165,7 @@ npicom|old style commit
 npicon|connect; connect and log on to an external database
 npidri|driver common
 npidsa|disconnect all
-npidsc|DiSConnect
+npidsc|DiSConnect connection
 npierr|check for errors requiring ksesec, also reacquire DX lock
 npil|local
 npisnl|set network link
@@ -4240,7 +4241,8 @@ opifcr|fetch callback - fetch a row?
 opifcs|free cursors by session close
 opigln|get long column
 opiino|initialize opi
-opikndf2|OPIINO: Kernel route which sits on top of the SQL*Net
+opikndf1|OPIINO: Kernel route which sits on top of the SQL*Net driver. we asusme that only MTS uses this function right before it detaches the session.
+opikndf2|OPIINO: Kernel route which sits on top of the SQL*Net driver
 opilof|log off
 opilon|log on
 opimai|main
@@ -4255,7 +4257,7 @@ opiosq0|0
 opipbr|process bind by reference chain
 opipls|contains opi bundled call executor and support routines
 opiprs|parse
-opirip|run independent process. initializes fixed-PGA in RAM and SQL layers.
+opirip|run independent process. invoked from special function sou2o direct call in opimai of detached process invocation. initializes fixed-PGA in RAM and SQL layers.
 opistp|stop oracle
 opistr|start oracle
 opitca|sets up context area
