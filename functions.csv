@@ -234,6 +234,7 @@ expcop|evaluate callback operator list
 expeal|evaluate its argument AND list. It returns true if argument is true, false if argument is false, and unknown if argument is unkown.
 expepr|evaluate the argument predicate. It returns the result of the evaluation. If the operators ODFFNEARG flas is set (currently only for OPTLNN), dont evaluate the operands.
 fplib|filter projection library (exadata smartscan)
+getpid|get process id
 gipc|grid inter process calls
 gra|grant/revoke
 gradrv|driver
@@ -3108,6 +3109,7 @@ ksmcsg|create sga
 ksmd|state object memory (?)
 ksmdfr|free memory
 ksmdpg|deallocate the variable pga. just free top pga heap, the callback will free the extents to osd.
+ksmem_|manipulation
 ksmerr|cleanup any stack memory allocated within the given error frame
 ksmf|fixed sga
 ksmfpg|free memory pages
@@ -5432,6 +5434,9 @@ sltsmnt|named try. wrapper for ssOswPthread_mutex_trylock
 sltsmnta|named timed acquire. calls pthread_mutex_timedlock
 sltsmxi|'exchange' insert. insert a mutex
 sltsmxd|'exchange' destroy. destroy a mutex
+slz|zoned (NLS)
+slzgetevar|get environment variable
+slzsetevar|set environment variable
 sn|operating system dependent network
 snltmdf|timer driver: called by SIGALRM
 snt|transport
@@ -5442,17 +5447,43 @@ sntt|tcp/ip
 snttread|read data on a socket
 snttwrite|write data to a socket
 sp|operating system dependent process functions
+sp_sigset_raise_signal|obtain process ID and send signal
 spefcmpa|marshall procedure arguments
 spefmccallstd|c calling standard
 sqn|sequence
 sqnprs|reference parsing
 sr|sort operation
 ss|operating system dependent system
+ssMem|memory
+ssMemCalloc|calls ksmem_calloc or calloc
+ssMemCalloc_shared|calls calloc
+ssMemFree|calls ksmem_free or free
+ssMemFree_shared|calls free
+ssMemMalloc|calls ksmem_malloc or malloc
+ssMemMalloc_shared|calls malloc
+ssMemRealloc|calls ksmem_realloc or realloc
+ssMemRealloc_shared|calls realloc
+ssMemStrdup|calls ksmem_strdup or __intel_sse2_strdup
+ssMemStrdup_shared|calls __intel_sse2_strdup
 ssOsw|operating system (call) wrapper (?)
-ssOswClose|close
-ssOswOpen|open 
+ssOswClose|close. close a file descriptor
+ssOswCreat|creat. open and possibly create a file or device
+ssOswDlclose|dlclose. decrements dynamic library file handle count, on zero is unloaded
+ssOswDlopen|dlopen. load dynamic library file
+ssOswFclose|fclose. close file
+ssOswFdopen|fdopen. associate a stream with a file descriptor
+ssOswFopen|fopen. open file
+ssOswFreopen|freopen. open file and associate stream with it
+ssOswDup|dup. duplicate a file descriptor
+ssOswDup2|dup2. duplicate a file descriptor
+ssOswOpen|open64. open a file
+ssOswPipe|pipe. create pipe
+ssOswPclose|pclose. close pipe
+ssOswPopen|popen. pipe stream to process
 ssOswPthread_mutex_lock|pthread_mutex_lock
+ssOswPthread_mutex_trylock|pthread_mutex_trylock
 ssOswPthread_mutex_unlock|pthread_mutex_unlock
+ssOswSocket|socket. create an endpoint for communication
 ssexhd|dump routine
 ssk|kernel
 sskg|generic
@@ -5460,6 +5491,9 @@ sskgm|memory
 sskgmrf|real free heap
 sskgmrf_unmaprange|unmap memory range
 sskgmrf_validaterange|mmap memory range
+sskgp|process
+sskgp_gettid|get thread id
+sskgp_tgkill|thread get and kill. send a signal to a process/thread
 sskgpw|post/wait
 sskgpwidcmp|compare semid of semaphores to be posted
 sskgpwpost|post a single semaphore
