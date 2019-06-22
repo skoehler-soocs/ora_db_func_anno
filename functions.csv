@@ -2370,8 +2370,9 @@ kpbf|progint miscellaneous
 kpbfcopy|DBMS_FILE_TRANSFER.COPY_FILE_I
 kpbfget|DBMS_FILE_TRANSFER.GET_FILE_I
 kpbfput|DBMS_FILE_TRANSFER.PUT_FILE_I
-kpce|streams advanaced queuing 
-kpcm|streams advanaced queuing 
+kpce|multi threaded network
+kpceterm|terminate any connections from this layer
+kpcm|streams advanced queuing 
 kpdb|pluggable database
 kpdbCheckNFT|DBMS_PDB.KPDBCHECKNFT CHECK_NFT
 kpdbCheckPlugCompatible|DBMS_PDB.KPDBCHECKPLUGCOMPATIBLE CHECK_PLUG_COMPATIBILITY
@@ -2418,6 +2419,7 @@ kpon|notification
 kponPurgeUnreachLoc|remove registrations for unreachable locations
 kpond|advanced queuing 
 kpone|event monitor
+kponemn|main. emon main loop
 kpoodr|replaces ttcdrv to handle pisdef in fastpath mode
 kpoopq|set keyword value pair
 kpooprx|open, parse, and optionally execute
@@ -5405,7 +5407,7 @@ sor|sort operation
 soreod|end of data: close data input for sort
 sorputqb|insert record into sort
 sou2o|main oracle executable entry point
-sl|operating system dependent call
+sl|operating system (dependent) library
 slcpu|get cpu usage
 slcpums|measurement (for getrusage)
 slcra|we trip here if someone else other than ssexhd() calls us
@@ -5417,6 +5419,19 @@ sltrgatime64|arbitrary time lookup
 sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
 sltrusleep|true (?) sleep (calls nanosleep)
+slts|threading services
+sltsm|mutex
+sltsmda|? acquire. wrapper for ssOswPthread_mutex_lock
+sltsmdi|? insert memory? calls ssMemAlloc
+sltsmdr|? release. wrapper for ssOswPthread_mutex_unlock
+sltsmdt|? try. wrapper for ssOswPthread_mutex_trylock
+sltsmdta|? timed acquire. calls sltsmnta
+sltsmna|named acquire. wrapper for ssOswPthread_mutex_lock
+sltsmnr|named release. wrapper for ssOswPthread_mutex_unlock
+sltsmnt|named try. wrapper for ssOswPthread_mutex_trylock
+sltsmnta|named timed acquire. calls pthread_mutex_timedlock
+sltsmxi|'exchange' insert. insert a mutex
+sltsmxd|'exchange' destroy. destroy a mutex
 sn|operating system dependent network
 snltmdf|timer driver: called by SIGALRM
 snt|transport
