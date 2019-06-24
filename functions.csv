@@ -5423,11 +5423,11 @@ sltrgftime64_cgt|clock_gettime
 sltrusleep|true (?) sleep (calls nanosleep)
 slts|threading services
 sltsm|mutex
-sltsmda|? acquire. wrapper for ssOswPthread_mutex_lock
-sltsmdi|? insert memory? calls ssMemAlloc
-sltsmdr|? release. wrapper for ssOswPthread_mutex_unlock
-sltsmdt|? try. wrapper for ssOswPthread_mutex_trylock
-sltsmdta|? timed acquire. calls sltsmnta
+sltsmda|directed acquire. wrapper for ssOswPthread_mutex_lock
+sltsmdi|directed insert memory? calls ssMemAlloc
+sltsmdr|directed release. wrapper for ssOswPthread_mutex_unlock
+sltsmdt|directed try. wrapper for ssOswPthread_mutex_trylock
+sltsmdta|drected timed acquire. calls sltsmnta
 sltsmna|named acquire. wrapper for ssOswPthread_mutex_lock
 sltsmnr|named release. wrapper for ssOswPthread_mutex_unlock
 sltsmnt|named try. wrapper for ssOswPthread_mutex_trylock
