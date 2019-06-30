@@ -3403,6 +3403,8 @@ ktmres|resource cleanup routine
 ktmsj|IM transaction shared journal
 ktp|parallel
 ktpcmt|commit transaction
+ktpr|recovery
+ktprbeg|begin
 ktr|read consistency
 ktrexc|examine blocks (consistent gets - examination)
 ktrexf|examine blocks (returns best candidate)
@@ -3529,8 +3531,13 @@ ktuisonline1|return undo segment info if undo segment is online
 ktundo|undo
 ktunfy|notification procedure
 ktur|recovery
-kturCRBackoutOneChg|consistent read; backout changes
+kturCRBackoutOneChg|consistent read; backout change
+kturCurrBackoutOneChg|current read; backout change
 kturGetUndoRec|get an undo record
+kturRecover|recover
+kturRecoverActiveTxns|active transactions
+kturRecoverTxn|transaction
+kturRecoverUndoSegment|undo segment
 kturcm|redo commit
 kturbk|rollback for CR only, reads undo record pointed by uba and call ktundo to back out the change
 kturbt|rollback to time scn
@@ -5427,7 +5434,7 @@ sltsmda|directed acquire. wrapper for ssOswPthread_mutex_lock
 sltsmdi|directed insert memory? calls ssMemAlloc
 sltsmdr|directed release. wrapper for ssOswPthread_mutex_unlock
 sltsmdt|directed try. wrapper for ssOswPthread_mutex_trylock
-sltsmdta|drected timed acquire. calls sltsmnta
+sltsmdta|directed timed acquire. calls sltsmnta
 sltsmna|named acquire. wrapper for ssOswPthread_mutex_lock
 sltsmnr|named release. wrapper for ssOswPthread_mutex_unlock
 sltsmnt|named try. wrapper for ssOswPthread_mutex_trylock
