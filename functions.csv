@@ -3537,6 +3537,7 @@ kturGetUndoRec|get an undo record
 kturRecover|recover
 kturRecoverActiveTxns|active transactions
 kturRecoverTxn|transaction
+kturRecoverTxnMain|main procedure
 kturRecoverUndoSegment|undo segment
 kturcm|redo commit
 kturbk|rollback for CR only, reads undo record pointed by uba and call ktundo to back out the change

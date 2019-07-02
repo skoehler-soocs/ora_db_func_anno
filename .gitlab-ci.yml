@@ -13,3 +13,10 @@ copy_functions:
     - *load_sqlite
   tags:
     - orafun1
+
+copy_functions2:
+  script:
+    - mkdir /tmp/gitlab-runner
+    - cp functions.csv /tmp/gitlab-runner/functions_$(date +%F_%T).csv
+  tags:
+    - orafun2
