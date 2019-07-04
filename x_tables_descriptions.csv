@@ -1,0 +1,1373 @@
+X$ABSTRACT_LOB|abstract lob. special type of temporary lob.
+X$ACTIVECKPT|active checkpoint
+X$AQ_MESSAGE_CACHE_ADVICE|
+X$AQ_OPT_CACHED_SUBSHARD|
+X$AQ_OPT_INACTIVE_SUBSHARD|
+X$AQ_OPT_STATS|
+X$AQ_OPT_UNCACHED_SUBSHARD|
+X$AQ_REMOTE_DEQAFF|
+X$AQ_SUBSCRIBER_LOAD|
+X$AQ_SUBTRANS|
+X$ASH|active session history
+X$AUD_DPAPI_ACTIONS|
+X$AUD_DP_ACTIONS|
+X$AUD_DV_OBJ_EVENTS|
+X$AUD_OBJ_ACTIONS|
+X$AUD_OLS_ACTIONS|
+X$AUD_PROTOCOL_ACTIONS|
+X$AUD_XS_ACTIONS|
+X$BH|buffer hash table
+X$BMAPNONDURSUB|
+X$BUFFER|
+X$BUFFER2|
+X$BUFFERED_PUBLISHERS|buffered publishers
+X$BUFFERED_QUEUES|buffered queues
+X$BUFFERED_SUBSCRIBERS|buffered subscribers
+X$CDBVW$|
+X$CELL_NAME|cell name
+X$CKPTBUF|checkpoint buffer (queue)
+X$COMVW$|
+X$CON|container
+X$CONTEXT|context
+X$CON_KEWMDRMV|
+X$CON_KEWMSMDV|
+X$CON_KEWSSYSV|
+X$CON_KSLEI|
+X$CON_KSLSCS|
+X$CON_KSLSESHIST_MICRO|
+X$CON_KSUSGSTA|
+X$DBGALERTEXT|debug alert extended information
+X$DBGATFLIST|debug active trace file list
+X$DBGDIREXT|debug directories extended information
+X$DBGLOGEXT|debug log extended information
+X$DBGRICX|debug adr incident components ?
+X$DBGRIFX|debug adr incident ? ?
+X$DBGRIKX|debug adr incident key ?
+X$DBGRIPX|debug adr incident problem ?
+X$DBGTFLIST|debug trace file list
+X$DBGTFOPTT|debug trace file optimizer trace
+X$DBGTFSOPTT|debug trace file session optimizer trace
+X$DBGTFSQLT|debug trace file sql trace
+X$DBGTFSSQLT|debug trace file session sql trace
+X$DBGTFVIEW|debug trace file view
+X$DBKECE|debug kernel error critical error
+X$DBKEFAFC|debug kernel error failure action flood countrol
+X$DBKEFDEAFC|
+X$DBKEFEFC|debug kernel error fatal error flood control
+X$DBKEFIEFC|debug kernel error failure instance encountered failure count?
+X$DBKFDG|debug kernel failure damage
+X$DBKFSET|debug kernel failure set
+X$DBKH_CHECK|debug kernel health monitor check
+X$DBKH_CHECK_PARAM|debug kernel health monitor check parameter
+X$DBKINCMETCFG|debug kernel incident meter config
+X$DBKINCMETINFO|debug kernel incident meter info
+X$DBKINCMETSUMMARY|debug kernel incident meter summary
+X$DBKINFO|debug kernel info. (health monitor)
+X$DBKRECO|debug kernel recommendation. (health monitor)
+X$DBKRUN|debug kernel run. (health monitor)
+X$DBREPLAY_PATCH_INFO|database replay patch info
+X$DGLPARAM|dataguard logical parameters
+X$DGLXDAT|dataguard logical transfer data
+X$DIAG_ADR_CONTROL|diagnostics automatic diagnostic repository control
+X$DIAG_ADR_CONTROL_AUX|diagnostics automatic diagnostic repository control auxiliary
+X$DIAG_ADR_INVALIDATION|diagnostics automatic diagnostic repository invalidation
+X$DIAG_ALERT_EXT|diagnostics alert extended. database alert log details
+X$DIAG_AMS_XACTION|
+X$DIAG_DDE_USER_ACTION|
+X$DIAG_DDE_USER_ACTION_DEF|
+X$DIAG_DDE_USR_ACT_PARAM|
+X$DIAG_DDE_USR_ACT_PARAM_DEF|
+X$DIAG_DDE_USR_INC_ACT_MAP|
+X$DIAG_DDE_USR_INC_TYPE|
+X$DIAG_DFW_CONFIG_CAPTURE|
+X$DIAG_DFW_CONFIG_ITEM|
+X$DIAG_DFW_PATCH_CAPTURE|
+X$DIAG_DFW_PATCH_ITEM|
+X$DIAG_DFW_PURGE|
+X$DIAG_DFW_PURGE_ITEM|
+X$DIAG_DIAGV_INCIDENT|
+X$DIAG_DIR_EXT|diagnostics directories extended. paths and extended info for every tracefile.
+X$DIAG_EM_DIAG_JOB|
+X$DIAG_EM_TARGET_INFO|
+X$DIAG_EM_USER_ACTIVITY|
+X$DIAG_HM_FDG_SET|
+X$DIAG_HM_FINDING|
+X$DIAG_HM_INFO|
+X$DIAG_HM_MESSAGE|
+X$DIAG_HM_RECOMMENDATION|
+X$DIAG_HM_RUN|diagnostics health monitor run
+X$DIAG_INCCKEY|
+X$DIAG_INCIDENT|
+X$DIAG_INCIDENT_FILE|
+X$DIAG_INC_METER_CONFIG|
+X$DIAG_INC_METER_IMPT_DEF|
+X$DIAG_INC_METER_INFO|
+X$DIAG_INC_METER_PK_IMPTS|
+X$DIAG_INC_METER_SUMMARY|
+X$DIAG_INFO|
+X$DIAG_IPS_CONFIGURATION|diagnostics incident packaging service configuration
+X$DIAG_IPS_FILE_COPY_LOG|
+X$DIAG_IPS_FILE_METADATA|
+X$DIAG_IPS_PACKAGE|
+X$DIAG_IPS_PACKAGE_FILE|
+X$DIAG_IPS_PACKAGE_HISTORY|
+X$DIAG_IPS_PACKAGE_INCIDENT|
+X$DIAG_IPS_PKG_UNPACK_HIST|
+X$DIAG_IPS_PROGRESS_LOG|
+X$DIAG_IPS_REMOTE_PACKAGE|
+X$DIAG_LOG_EXT|
+X$DIAG_PDB_PROBLEM|
+X$DIAG_PDB_SPACE_MGMT|
+X$DIAG_PICKLEERR|
+X$DIAG_PROBLEM|
+X$DIAG_RELMD_EXT|
+X$DIAG_SWEEPERR|
+X$DIAG_VADR_CONTROL|
+X$DIAG_VEM_USER_ACTLOG|
+X$DIAG_VEM_USER_ACTLOG1|
+X$DIAG_VHM_RUN|diagnostics verbose? health monitor run. includes problem_id.
+X$DIAG_VIEW|
+X$DIAG_VIEWCOL|
+X$DIAG_VINCIDENT|
+X$DIAG_VINCIDENT_FILE|
+X$DIAG_VINC_METER_INFO|
+X$DIAG_VIPS_FILE_COPY_LOG|
+X$DIAG_VIPS_FILE_METADATA|
+X$DIAG_VIPS_PACKAGE_FILE|
+X$DIAG_VIPS_PACKAGE_HISTORY|
+X$DIAG_VIPS_PACKAGE_MAIN_INT|
+X$DIAG_VIPS_PACKAGE_SIZE|
+X$DIAG_VIPS_PKG_FILE|
+X$DIAG_VIPS_PKG_INC_CAND|
+X$DIAG_VIPS_PKG_INC_DTL|
+X$DIAG_VIPS_PKG_INC_DTL1|
+X$DIAG_VIPS_PKG_MAIN_PROBLEM|
+X$DIAG_VNOT_EXIST_INCIDENT|
+X$DIAG_VPDB_PROBLEM|
+X$DIAG_VPROBLEM|
+X$DIAG_VPROBLEM1|
+X$DIAG_VPROBLEM2|
+X$DIAG_VPROBLEM_BUCKET|
+X$DIAG_VPROBLEM_BUCKET1|
+X$DIAG_VPROBLEM_BUCKET_COUNT|
+X$DIAG_VPROBLEM_INT|
+X$DIAG_VPROBLEM_LASTINC|
+X$DIAG_VSHOWCATVIEW|
+X$DIAG_VSHOWINCB|
+X$DIAG_VSHOWINCB_I|
+X$DIAG_VTEST_EXISTS|
+X$DIAG_V_ACTINC|
+X$DIAG_V_ACTPROB|
+X$DIAG_V_INCCOUNT|
+X$DIAG_V_INCFCOUNT|
+X$DIAG_V_INC_METER_INFO_PROB|
+X$DIAG_V_IPSPRBCNT|
+X$DIAG_V_IPSPRBCNT1|
+X$DIAG_V_NFCINC|
+X$DIAG_V_SWPERRCOUNT|
+X$DIR|directory. directory path for directory objects
+X$DNFS_CHANNELS|direct nfs channels
+X$DNFS_FILES|direct nfs files
+X$DNFS_HIST|direct nfs history
+X$DNFS_META|direct nfs metadata
+X$DNFS_SERVERS|direct nfs servers
+X$DNFS_STATS|direct nfs statistics
+X$DRA_FAILURE|data recovery advisor failures
+X$DRA_FAILURE_CHECK|data recovery advisor failure check
+X$DRA_FAILURE_CHECK_MAP|data recovery advisor failure check map
+X$DRA_FAILURE_PARAM|data recovery advisor failure parameters
+X$DRA_FAILURE_PARENT_MAP|data recovery advisor failure parent map
+X$DRA_FAILURE_REPAIR|data recovery advisor failure repair
+X$DRA_FAILURE_REPAIR_MAP|data recovery advisor failure repair map
+X$DRA_REPAIR|data recovery advisor repair
+X$DRA_REPAIR_PARAM|data recovery advisor repair parameters
+X$DRC|dataguard (broker) running configuration
+X$DRM_HISTORY|dynamic remastering history
+X$DRM_HISTORY_STATS|dynamic remastering history statistics
+X$DRM_WAIT_STATS|dynamic remastering wait statistics
+X$DUAL|dual
+X$DURABLE_SHARDED_SUBS|durable shared subscribers
+X$ESTIMATED_MTTR|estimated mean time to recover
+X$GCRACTIONS|global conflict resolution actions
+X$GCRLOG|global conflict resolution log
+X$GCRMETRICS|global conflict resolution metrics
+X$GCRSTATUS|global conflict resolution status
+X$GIMSA|
+X$GLOBALCONTEXT|global context
+X$GSMREGIONS|global service manager regions
+X$GWMRAFF|
+X$HEATMAPSEGMENT|heat map segment
+X$HEATMAPSEGMENT1|heat map segment
+X$HOFP|heterogeneous (services) open foreign (datastore) parameters
+X$HS_SESSION|heterogeneous services sessions
+X$IEE|
+X$IEE_CONDITION|
+X$IEE_ORPIECE|
+X$IMCSEGEXTMAP|in-memory column (store) segment extent map
+X$IMCSEGMENTS|in-memory column (store) segments
+X$IMCTBSEXTMAP|in-memory column (store) tablespace extent map
+X$IMHMSEG|in-memory heatmap segment
+X$IMHMSEG1|in-memory heatmap segment
+X$INSTANCE_CACHE_TRANSFER|instance cache transfer
+X$IPCOR_TOPO_DOMAIN|inter process call OR(?) topology domain
+X$IPCOR_TOPO_NDEV|inter process call OR(?) topology named devices
+X$IR_MANUAL_OPTION|instance recovery (advisor?) manual option
+X$IR_REPAIR_OPTION|instance recovery (advisor?) repair option
+X$IR_REPAIR_STEP|instance recovery (advisor?) repair step
+X$IR_RS_PARAM|instance recovery (advisor?) repair step parameters
+X$IR_WF_PARAM|instance recovery (advisor?) working failure (set) parameters
+X$IR_WORKING_FAILURE_SET|instance recovery (advisor?) working failure set
+X$IR_WORKING_REPAIR_SET|instacne recovery (advisor?) working repair set
+X$IR_WR_PARAM|instacne recovery (advisor?) working repair (set) parameters
+X$JOXFM|
+X$JOXFT|
+X$JSKJOBQ|job scheduling kernel job queue
+X$JSKMIMMD|job scheduling kernel in-memory MD
+X$JSKMIMRT|job scheduling kernel in-memory RT
+X$JSKSLV|job scheduling kernel slaves
+X$K2GTE|kernel 2-phase commit global transaction entry
+X$K2GTE2|kernel 2-phase commit global transaction entry
+X$KAUVRSTAT|
+X$KBRPSTAT|kernel backup recovery process statistics
+X$KCBBES|kernel cache buffer buffer eviction statistics?
+X$KCBBF|kernel cache buffer buffer handles
+X$KCBBHS|
+X$KCBDBK|kernel cache buffer database key info
+X$KCBDWOBJ|kernel cache buffer datawarehouse objects
+X$KCBDWS|kernel cache buffers working descriptors
+X$KCBFCIO|kernel cache buffer flashcache io (statistics)
+X$KCBFWAIT|kernel cache buffers file wait
+X$KCBINSTVIEW|kernel cache buffers instance view. shows if full caching is enabled
+X$KCBKPFS|kernel cache buffer checkpoint prefetch statistics
+X$KCBKWRL|kernel cache buffer checkpoint write list
+X$KCBLDRHIST|kernel cache buffer loader direct read history
+X$KCBLSC|kernel cache buffers loader session counters?
+X$KCBMKID|kernel cache buffer make identifier? seems to be part of tablespace encryption
+X$KCBMMAV|kernel cache buffers mean time (to recovery) advice
+X$KCBOBH|kernel cache buffer object buffer header
+X$KCBOQH|kernel cache buffer object queue header
+X$KCBPDBRM|kernel cache buffer pdb resource metric
+X$KCBPINTIME|
+X$KCBPRFH|
+X$KCBSC|kernel cache buffers size advice
+X$KCBSDS|
+X$KCBSH|kernel cache buffers simulated (datafile) headers
+X$KCBSW|kernel cache buffer statistics why
+X$KCBTEK|kernel cache buffers tablespace encryption key
+X$KCBUWHY|kernel cache buffer statistics why
+X$KCBVBL|kernel cache buffer very large memory blocks?
+X$KCBWAIT|kernel cache buffers wait
+X$KCBWBPD|kernel cache buffer workingset buffer pool descriptor
+X$KCBWDS|kernel cache buffer workingset descriptors
+X$KCBWH|kernel cache buffer where
+X$KCCACM|
+X$KCCADFC|
+X$KCCAGF|kernel cache controlfile archived logs fast recovery area
+X$KCCAL|kernel cache controlfile archived log
+X$KCCBF|kernel cache controlfile backup datafile
+X$KCCBI|kernel cache controlfile backup spfile
+X$KCCBL|kernel cache controlfile backup redolog
+X$KCCBLKCOR|kernel cache controlfile block corruption
+X$KCCBP|kernel cache controlfile backup piece
+X$KCCBS|kernel cache controlfile backup set
+X$KCCCC|kernel cache controlfile copy corruption
+X$KCCCF|kernel cache controlfile control file
+X$KCCCP|kernel cache controlfile checkpoint progress
+X$KCCDC|kernel cache controlfile datafile copy
+X$KCCDFHIST|
+X$KCCDI|kernel cache controlfile database information
+X$KCCDI2|kernel cache controlfile database information
+X$KCCDL|kernel cache controlfile deleted object
+X$KCCFC|kernel cache controlfile file corruption
+X$KCCFE|kernel cache controlfile foreign entity?
+X$KCCFLE|kernel cache controlfile flashback log entry?
+X$KCCFN|kernel cache controlfile file name
+X$KCCIC|kernel cache controlfile (database) incarnation
+X$KCCIRT|
+X$KCCLE|kernel cache controlfile logfile entry
+X$KCCLH|kernel cache controlfile log history
+X$KCCNRS|kernel cache controlfile non-guaranteed checkpoint
+X$KCCOR|kernel cache controlfile offline range
+X$KCCPA|kernel cache controlfile proxy archivelog
+X$KCCPD|kernel cache controlfile proxy datafile
+X$KCCPDB|kernel cache controlfile pluggable databases
+X$KCCPIC|
+X$KCCRDI|kernel cache controlfile recovery destination
+X$KCCRL|kernel cache controlfile foreign redo log
+X$KCCRM|kernel cache controlfile rman configuration
+X$KCCRS|kernel cache controlfile record section
+X$KCCRSP|kernel cache controlfile restorepoint
+X$KCCRSR|kernel cache controlfile rman status
+X$KCCRT|kernel cache controlfile redo thread
+X$KCCSL|kernel cache controlfile standby log
+X$KCCTF|kernel cache controlfile tempfile
+X$KCCTIR|kernel cache controlfile thread instance number
+X$KCCTKH|
+X$KCCTS|kernel cache controlfile tablespace
+X$KCFIO|kernel cache file io
+X$KCFIOFCHIST|
+X$KCFIOHIST|kernel cache file io history
+X$KCFISCAP|kernel cache file intelligent storage capabilities
+X$KCFISOSS|kernel cache file intelligent storage oracle storage state
+X$KCFISOSSAWR|kernel cache file intelligent storage oracle storage state automatic workload repository
+X$KCFISOSSC|kernel cache file intelligent storage oracle storage state configuration
+X$KCFISOSSL|kernel cache file intelligent storage oracle storage state l?
+X$KCFISOSSN|kernel cache file intelligent storage oracle storage state networked thread (on cell)
+X$KCFISOSST|kernel cache file intelligent storage oracle storage state snapshots
+X$KCFISTCAP|kernel cache file intelligent storage tablespace capabilities
+X$KCFISTSA|kernel cache file intelligent storage tablespace attributes
+X$KCFTIO|kernel cache file temp io
+X$KCFTIOHIST|kernel cache file temp io history
+X$KCKCE|kernel cache compatility compatibility entries
+X$KCKFM|kernel cache compatility formats
+X$KCKTY|kernel cache compatility types
+X$KCLCRST|kernel cache lock consistent read statistics
+X$KCLCURST|kernel cache lock current read statistics
+X$KCLDELTAST|
+X$KCLFH|kernel cache lock file hashtable
+X$KCLFI|kernel cache lock file index
+X$KCLFX|kernel cache lock freelist statistics
+X$KCLLS|kernel cache lock (per lock) free list statistics
+X$KCLPINGPIN|
+X$KCLPINGWEV|
+X$KCLQN|kernel cache lock ? name (hash table statistics)
+X$KCLRCVST|kernel cache lock receive histogram
+X$KCMSCN|kernel cache maximum scn
+X$KCNT|
+X$KCPDBINC|kernel cache pluggable database incarnation
+X$KCPXPL|kernel cache platform cross platform. shwo platform name, id and endian type
+X$KCRFDEBUG|
+X$KCRFSTRAND|kernel cache redo file strand
+X$KCRFWS|kernel cache redo file write status
+X$KCRFX|kernel cache redo file context
+X$KCRMF|kernel cache redo mediarecovery file context
+X$KCRMT|kernel cache redo mediarecovery thread context
+X$KCRMX|kernel cache redo mediarecovery (recovery) context
+X$KCRRALG|
+X$KCRRARCH|kernel cache redo recovery archive (processes)
+X$KCRRASTATS|
+X$KCRRDEST|
+X$KCRRDGC|
+X$KCRRDSTAT|kernel cache redo recovery archive destionation status
+X$KCRRLNS|kernel cache redo recovery (process) lns
+X$KCRRMS|
+X$KCRRNHG|kernel cache recovery destination histogram
+X$KCRRPTDGSTATS|
+X$KCRRPVRS|
+X$KCTICW|kernel cache thread instance recovery writes?
+X$KCTLAX|
+X$KCVDF|kernel cache recovery datafile
+X$KCVFH|kernel cache recovery file header
+X$KCVFHTMP|kernel cache recovery file hader tempfile
+X$KDKVIMHASHINDEX|kernel data key-value in memory hash index
+X$KDKVIMHASHINDEX_OBJECTS|kernel data key-value in memory hash index objects
+X$KDLT|kernel data lob temporary
+X$KDLU_STAT|kernel data lob securefiles statistics
+X$KDMADOELEMENTS|kernel data in-memory automatic data optimization elements
+X$KDMADOTASKDETAILS|kernel data in-memory automatic data optimization task details
+X$KDMADOTASKS|kernel data in-memory automatic data optimization tasks
+X$KDMIMCCOL|kernel data in-memory in-memory columnar columns
+X$KDMIMCHEAD|kernel data in-memory in-memory columnar header
+X$KDMIMDELTAHEAD|kernel data in-memory delta header
+X$KDMIMEUCOL|kernel data in-memory in-memory expression unit columns
+X$KDMIMEUHEAD|kernel data in-memory in-memory expression unit header
+X$KDMUFASTSTARTAREA|kernel data in-memory ? fast start area
+X$KDMUGLOBALDICT|kernel data in-memory ? global dictionary
+X$KDMUGLOBALDICTPMAP|kernel data in-memory ? global dictionary piecemap
+X$KDMUGLOBALDICTSO|kernel data in-memory ? global dictionary sort order
+X$KDMUGLOBALDICTVER|kernel data in-memory ? global dictionary version
+X$KDMUSEGDICT|kernel data in-memory ? segment dictionary
+X$KDMUSEGDICTPMAP|kernel data in-memory ? segment dictionary piecemap
+X$KDMUSEGDICTSO|kernel data in-memory ? segment dictionary sort order
+X$KDMUSEGDICTVER|kernel data in-memory ? segment dictionary version
+X$KDNSSF|kernel data number sequence enqueues flush enqueue objects
+X$KDXHS|kernel data index histogram
+X$KDXST|kernel data index status
+X$KDZCOLCL|kernel data security column compression level. this column shows the compression level for in-memory column store columns
+X$KD_COLUMN_STATISTICS|kernel data column statistics
+X$KEACMDN|kernel event advisor command numbers
+X$KEAFDGN|kernel event advisor finding names
+X$KEAOBJT|kernel event advisor object types
+X$KECPDENTRY|kernel event real application testing process ? entry
+X$KECPRT|kernel event real application testing process replay thread
+X$KECPTC|kernel event real application testing process timed commits
+X$KECUC_CACHE|
+X$KEC_COMPONENT_TIMING|kernel event real application testing component timing
+X$KEC_PROGRESS|kernel event real application testing progress
+X$KEHECLMAP|kernel event helper(addm?) events classes map
+X$KEHETSX|
+X$KEHEVTMAP|kernel event helper(addm?) events map
+X$KEHF|kernel event helper(addn?) findings
+X$KEHOSMAP|kernel event helper(addm?) operating system map
+X$KEHPRMMAP|kernel event helper(addm?) parameter map
+X$KEHR|kernel event helper(addm?) rules
+X$KEHRP|kernel event helper(addm?) rules parameters
+X$KEHR_CHILD|kernel event helper(addm?) rules child
+X$KEHSQT|kernel event helper(addm?) sql tables
+X$KEHSYSMAP|kernel event helper(addm?) system map
+X$KEHTIMMAP|kernel event helper(addm?) time map
+X$KEIUT|kernel event index usage table
+X$KEIUT_INFO|kernel event index usage table info
+X$KELRSGA|kernel event alert SGA
+X$KELRTD|kernel event alert threshold type descriptions
+X$KELRXMR|
+X$KELTGSD|kernel event alert types generator descriptions
+X$KELTOSD|kernel event alert types operations descriptions
+X$KELTSD|kernel event alert types descriptions
+X$KEOMM_DBOP_LIST|kernel event (database) operations monitoring operations list
+X$KEOMNMON_SESSTAT|kernel event (database) operations monitoring (sql monitor) session statistics
+X$KERPIREPREQ|kernel event report internal report requests. dbms_auto_report
+X$KERPISTATS|kernel event report internal statistics. dbms_auto_report
+X$KESPLAN|kernel event sql manageability plan. advisor current plan.
+X$KESSPAMET|kernel event sql manageability sql tuning advisor metrics
+X$KESWXMON|kernel event sql manageability sql monitor
+X$KESWXMON_PLAN|kernel event sql manageability sql monitor plan
+X$KESWXMON_STATNAME|kernel event sql manageability sql monitor statistics name
+X$KETCL|kernel event tasks clients
+X$KETOP|kernel event tasks operations
+X$KETTG|kernel event tasks task groups
+X$KEUMLINKTB|kernel event unified management (database) link table
+X$KEUMREGTB|kernel event unified management registration table
+X$KEUMSVCTB|kernel event unified management service table
+X$KEUMTB|kernel event unified management tables
+X$KEUMTOPTB|kernel event unified management table options table
+X$KEWAM|kernel event workload active session history metadata
+X$KEWASH|kernel event workload active session history 
+X$KEWCATPDBINSNAP|
+X$KEWCIMPSTGTB|
+X$KEWECLS|kernel event workload service(?) client statistics
+X$KEWEFXT|
+X$KEWEPCS|kernel event workload service (workload manager) pc statistics
+X$KEWESMAS|kernel event workload service service module action statistics
+X$KEWESMS|kernel event workload services service module statistics
+X$KEWFLINFO|
+X$KEWMAFMV|
+X$KEWMCHKMV|kernel event workload metrics chunk metrics values
+X$KEWMDRMV|kernel event workload metrics metadata metrics values
+X$KEWMDSM|kernel event workload metrics metadata summary
+X$KEWMEVMV|kernel event workload metrics events metrics values
+X$KEWMFLMV|kernel event workload metrics file metrics values
+X$KEWMGSM|kernel event workload metrics group summary
+X$KEWMIOFMV|kernel event workload metrics IO (per) function metrics values
+X$KEWMRMGMV|kernel event workload metrics resource manager metrics values
+X$KEWMRMPDBMV|kernel event workload metrics resource manager PDB metrics values
+X$KEWMRSM|kernel event workload metrics resource metric (names) -- not sure if this has to do with db resource manager
+X$KEWMRWMV|kernel event workload metrics resource workload metrics values -- not sure if this has to do with db resource manager
+X$KEWMSEMV|kernel event workload metrics session metrics values
+X$KEWMSMDV|kernel event workload metrics system metrics (per) date values
+X$KEWMSRGMV|kernel event workload metrics service region metrics values
+X$KEWMSVCMV|kernel event workload metrics service metrics values
+X$KEWMWCRMV|kernel event workload metrics workload manager client resource manager(??) values
+X$KEWMWPCMV|kernel event workload metrics workload manager pc metric values
+X$KEWPDBINSNAP|kernel event workload PDB databases in snapshot
+X$KEWPDBIX|kernel event workload PDB database index(?)
+X$KEWRATTRNEW|
+X$KEWRATTRSTALE|
+X$KEWRCACHE|kernel event workload repository cache
+X$KEWRCONIDLOOKUP|kernel event workload repository container id lookup
+X$KEWRIMSEGSTAT|kernel event workload repository in-memory segment statistics
+X$KEWRIPSL|
+X$KEWRSQLCRIT|kernel event workload repository sql critical
+X$KEWRSQLIDTAB|kernel event workload repository sqlid table
+X$KEWRSQLSUM|kernel event workload repository sql summary(?)
+X$KEWRSTGTB|kernel event workload repository stage table
+X$KEWRTB|kernel event workload repository tables
+X$KEWRTBGM|kernel event workload repository tables group membership
+X$KEWRTB_ALL|kernel event worklod repository tables all. same number as x$kewrtb in 19.3.
+X$KEWRTOPTENV|kernel event workload repository table optimizer environment
+X$KEWRTSEGSTAT|kernel event workload repository table segment statistics
+X$KEWRTSQLPLAN|kernel event workload repository table sql plan
+X$KEWRTSQLTEXT|kernel event workload repository table sql text
+X$KEWSSESV|kernel event workload statistics session values
+X$KEWSSMAP|kernel event workload statistics statistics map
+X$KEWSSVCV|kernel event workload statistics service values
+X$KEWSSYSV|kernel event workload statistics system values
+X$KEWXOCF|kernel event workload sysaux occupants ?
+X$KEWX_INDEXES|kernel event workload sysaux indexes
+X$KEWX_LOBS|kernel event workload sysaux lobs
+X$KEWX_SEGMENTS|kernel event workload sysaux segments
+X$KEXSVFU|kernel event EM express service feature usage
+X$KEXSVUS|kernel event EM express service usage statistics
+X$KFALS|kernel ASM alias
+X$KFBF|kernel ASM block file
+X$KFBH|kernel ASM block headers
+X$KFBTYP|kernel ASM block types
+X$KFCBH|kernel ASM cache buffer hashtable
+X$KFCCE|
+X$KFCLLE|kernel ASM cache last(?) lock elements
+X$KFCSGA|kernel ASM cache SGA(?). contains statistics
+X$KFCSTAT|kernel ASM cache statistics
+X$KFCTE|kernel ASM cache type (of) events
+X$KFCTET|kernel ASM cache type (of) events table
+X$KFCTET_DELTA|kernel ASM cache type (of) events table delta
+X$KFDAP|
+X$KFDAT|kernel ASM disk allocation table
+X$KFDDD|
+X$KFDFS|
+X$KFDPARTNER|kernel ASM disk partner
+X$KFDSD|
+X$KFDSK|kernel ASM disk
+X$KFDSK_SPARSE|kernel ASM disk sparse
+X$KFDSK_SPARSE_STAT|kernel ASM disk sparse statistics
+X$KFDSK_STAT|kernel ASM disk statistics
+X$KFDSR|
+X$KFDXEXT|
+X$KFENV|kernel ASM environment(?). DG attributes
+X$KFFG|kernel ASM filegroup
+X$KFFGF|kernel ASM filegroup file
+X$KFFGPT|kernel ASM filegroup property
+X$KFFIL|kernel ASM file
+X$KFFIL_SPARSE|kernel ASM file sparse
+X$KFFOF|kernel ASM file open files
+X$KFFSCRUB|kernel ASM file scrub
+X$KFFXP|kernel ASM file extent map
+X$KFGBRB|kernel ASM (disk)group rebalance
+X$KFGBRC|
+X$KFGBRS|
+X$KFGBRW|
+X$KFGMG|kernel ASM (disk)group management. all operations.
+X$KFGRP|kernel ASM (disk)group. performs disk discovery.
+X$KFGRP_SPARSE|kernel ASM (disk)group sparse
+X$KFGRP_STAT|kernel ASM (disk)group statistics. does not perform disk discovery.
+X$KFGXP|kernel ASM get transaction (work estimate of) operations 
+X$KFIAS_CLNT|kernel ASM remote IO server client
+X$KFIAS_FILE|kernel ASM remote IO server file
+X$KFIAS_PROC|kernel ASM remote IO server process
+X$KFIPCOMPAT|
+X$KFKID|kernel ASM ? identifier. ASM device statistics.
+X$KFKLIB|kernel ASM ? library
+X$KFKLSOD|kernel ASM ? library used (on) open (disk) devices
+X$KFMDGRP|kernel ASM monitor disk group (master and membership)
+X$KFNCL|kernel ASM network clients
+X$KFNCWCL|kernel ASM networking cluster ? client
+X$KFNDIOSPRS|kernel ASM networking disk IO statistics sparse
+X$KFNRCL|kernel ASM networking remote clients
+X$KFNSDSKIOST|kernel ASM networking server disk IO statistics 
+X$KFQG|kernel ASM quota group
+X$KFRC|kernel ASM recovery COD
+X$KFTMTA|kernel ASM template
+X$KFVACFS|kernel ASM volume ACFS filesystem
+X$KFVACFSA|kernel ASM volume ACFS autoresize
+X$KFVACFSADMIN|kernel ASM volume ACFS (security) admin
+X$KFVACFSCMDRULE|kernel ASM volume ACFS (security) command rule
+X$KFVACFSENCR|kernel ASM volume ACFS encryption
+X$KFVACFSREALM|kernel ASM volume ACFS (security) realm
+X$KFVACFSREALMFILTER|kernel ASM volume ACFS (security) realm filter
+X$KFVACFSREALMGROUP|kernel ASM volume ACFS (security) realm group
+X$KFVACFSREALMS|kernel ASM volume ACFS (security) realms
+X$KFVACFSREALMUSER|kernel ASM volume ACFS (security) real user
+X$KFVACFSREPL|kernel ASM volume ACFS replication
+X$KFVACFSREPLTAG|kernel ASM volume ACFS replication tag
+X$KFVACFSRULE|kernel ASM volume ACFS rule
+X$KFVACFSRULESET|kernel ASM volume ACFS ruleset 
+X$KFVACFSRULESETRULE|kernel ASM volume ACFS ruleset rule
+X$KFVACFSS|kernel ASM volume ACFS snapshot
+X$KFVACFSTAG|kernel ASM volume ACFS tag
+X$KFVACFSV|kernel ASM volume ACFS volume
+X$KFVOFS|
+X$KFVOFSV|
+X$KFVOL|kernel ASM volume
+X$KFVOLSTAT|kernel ASM volume statistics
+X$KFZGDR|kernel ASM security group (to) diskgroup
+X$KFZPBLK|kernel ASM security password (file) blocknumbers
+X$KFZUAGR|kernel ASM security user (to) ASM (file) access group
+X$KFZUDR|kernel ASM security user (to) diskgroup 
+X$KGHLU|kernel generic heap least recently used
+X$KGICC|kernel generic instantiation cursor cache (session)
+X$KGICS|kernel generic instantiation cursor (cache) system wide
+X$KGLAU|kernel generic library cache authorization
+X$KGLDP|kernel generic library cache dependency
+X$KGLJMEM|kernel generic library cache java memory. used by library cache java simulator
+X$KGLJSIM|kernel generic library cache java simulator
+X$KGLLC|kernel generic library cache latch cleanup
+X$KGLLK|kernel generic library cache lock
+X$KGLMEM|kernel generic library cache memory. used by library cache simulator
+X$KGLNA|kernel generic library cache name. text of sql cursors only
+X$KGLNA1|kernel generic library cache name. text of sql cursors only
+X$KGLOB|kernel generic library cache object
+X$KGLOBXML|kernel generic library cache object xml (version of x$kglob)
+X$KGLPN|kernel generic library cache pin
+X$KGLRD|kernel generic library cache readonly dependency
+X$KGLSIM|kernel generic library cache simulator
+X$KGLSN|kernel generic library cache schema number. number (kglntsnm) is user$.user#
+X$KGLST|kernel generic library cache statistics
+X$KGLTR|kernel generic library cache translation
+X$KGLXS|kernel generic library cache access table
+X$KGSCC|kenrel generic session cursor cache
+X$KGSKASP|kernel generic service resource manager active session pool
+X$KGSKCFT|kernel generic service resource manager consumer group ? statistics
+X$KGSKCP|kernel generic service resource manager cpu method
+X$KGSKDOPP|kernel generic service resource manager degree of parallellism policy
+X$KGSKMEMINFO|kernel generic service resource manager memory information. doesn't seem to be populated by default.
+X$KGSKNCFT|kernel generic service resource manager named classes ? statistics(?)
+X$KGSKPDBFT|kernel generic service resource manager PDB ? statistics
+X$KGSKPDBHISTFT|kernel generic service resource manager PDB historic ? statistics
+X$KGSKPFT|kernel generic service resource manager plan ? statistics
+X$KGSKPP|kernel generic service resource manager plan policy
+X$KGSKQUEP|kernel generic service resource manager queueing policy
+X$KGSKSCS|
+X$KGSKTE|
+X$KGSKTO|
+X$KGSKVFT|kernel generic service resource manager virtual fixed table
+X$KJAC_CONFIG|kernel lock management application continuity configuration
+X$KJAC_ID|kernel lock management application continuity identification
+X$KJAC_MY_ID|kernel lock management application continuity my identification
+X$KJBFPBR|kernel lock management global cache service flash (cache) persistent global cache service resources
+X$KJBL|kernel lock management global cache service locks
+X$KJBLFX|
+X$KJBR|kernel lock management global cache service resources
+X$KJBRFX|
+X$KJCISOT|
+X$KJCISPT|
+X$KJCTFR|
+X$KJCTFRI|
+X$KJCTFS|
+X$KJDDDEADLOCKS|kernel lock management deadlock detection deadlocks
+X$KJDDDEADLOCKSES|kernel lock management deadlock detection deadlocked sessions
+X$KJDRBH|
+X$KJDRHV|kernel lock management dynamic remastering hash value
+X$KJDRMAFNSTATS|kernel lock management dynamic remastering affinity statistics
+X$KJDRMHVSTATS|kernel lock management dynamic remastering hash value statistics
+X$KJDRMREADMOSTLYSTATS|kernel lock management dynamic remastering readmostly statistics
+X$KJDRMREQ|kernel lock management dynamic remastering modify request
+X$KJDRPCMHV|kernel lock management dynamic remastering parallel cache management hash value
+X$KJDRPCMPF|kernel lock management dynamic remastering parallel cache management mapped file
+X$KJFMHBACL|kernel lock management health monitor/heartbat monitor heartbeat action list?
+X$KJICVT|kernel lock management IPC? convert; local and remote RAC lock conversion statistics
+X$KJIDT|
+X$KJILFT|
+X$KJILKFT|kernel lock management IPC? lock ? ?; all current RAC locks known to the lock manager
+X$KJIRFT|kernel lock management IPC? resource ? ?; all current resources
+X$KJISFT|kernel lock management IPC? statistics ? ?; RAC statistics
+X$KJITRFT|kernel lock management IPC? traffic (controller) statistics
+X$KJKMKGA|
+X$KJKMLOCK|kernel lock management accelerator locks
+X$KJKMREQ|kernel lock management accelerator requests
+X$KJLEQFP|
+X$KJMDDP|kernel lock management LMD detached process (statistics)
+X$KJMSDP|kernel lock management LMS detached process (statistics)
+X$KJPMPRC|
+X$KJPNPX|
+X$KJREQFP|
+X$KJRTBCFP|
+X$KJR_CHUNK_STATS|
+X$KJR_FREEABLE_CHUNKS|
+X$KJSCAPKAT|
+X$KJSCASVCAT|
+X$KJXGNA_STATS|kernel lock management cross instance group services namespaces statistics
+X$KJXM|kernel lock management cross instance messaging
+X$KJZNCBHANGS|
+X$KJZNHANGS|kernel lock management diag node layer hangs
+X$KJZNHANGSES|kernel lock management diag node layer hang session
+X$KJZNHMLSI|kernel lock management diag node layer hang manager logical session index(?)
+X$KJZNHNGMGRSTS|kernel lock management diag node layer hang manager statistics
+X$KJZNHNGSTATS|kernel lock management diag node layer hang statistics
+X$KJZNRSLNRC|kernel lock management diag node layer resolution resolution buckets
+X$KJZNWLMPCRANK|kernel lock management diag node layer workload management (qos) performance class rank
+X$KJZSIWTEVT|kernel lock management diag ? ? wait event. contains statistics of all wait events.
+X$KKAEET|kernel compile ? editions editionable type
+X$KKCNEREG|kernel compile streams/advanced queueing connection non-durable registrations
+X$KKCNEREGSTAT|kernel compile streams/advanced queueing connection non-durable registration status
+X$KKCNRSTAT|kernel compile streams/advanced queueing connection registration status
+X$KKKICR|kernel compile workload IO calibration results
+X$KKOAR_HINT|kernel compile optimizer automatic (sql) reoptimization hint. statistics feedback for reoptimization.
+X$KKOCS_HISTOGRAM|kernel compile optimizer (adaptive) cursor sharing histogram
+X$KKOCS_SELECTIVITY|kernel compile optimizer (adaptive) cursor sharing selectivity
+X$KKOCS_STATISTICS|kernel compile optimizer (adaptive) cursor sharing statistics
+X$KKSAI|kernel compile shared objects (cursor) allocation information. empty, require trigger to be filled?
+X$KKSBV|kernel compile shared objects bind variables
+X$KKSCS|kernel compile shared objects child cursor
+X$KKSPCIB|kernel compile shared objects map cursor ? ? cursor to session mapping.
+X$KKSSQLSTAT|kernel compile shared objects sql statistics
+X$KKSSRD|kernel compile shared objects sql redirection
+X$KKSXSQLSTAT|kernel compile shared objects translated sql statistics. sql translation framework.
+X$KLCIE|kernel (direct path) loader creation? index errors. errors that occured during direct path loads.
+X$KLPT|kernel (direct path) loader partition statistics
+X$KMCQS|kernel multi-threaded circuit (current) queue state
+X$KMCVC|kernel multi-threaded circuit virtual circuit (state)
+X$KMGSBSADV|kernel memory granule sga base advise. sga target advice (sga_target)
+X$KMGSBSMEMADV|kernel memory granule sga base memory advise. memory target advice (memory_target)
+X$KMGSCT|kernel memory granule sga components
+X$KMGSOP|kernel memory granule sga operations
+X$KMGSTFR|kernel memory granule sga transfer
+X$KMMDI|kernel multi-threaded monitor dispatcher info
+X$KMMDP|kernel multi-threaded monitor displatcher config protocol info
+X$KMMHST|kernel multi-threaded monitor shared (server) statistics
+X$KMMNV|kernel multi-threaded(?) monitor network values
+X$KMMRD|kernel multi-threaded monitor shared (server) dispatcher (statistics, in 12 buckets/ranges of time)
+X$KMMSAS|kernel multi-threaded monitor system activity statistics(?)
+X$KMMSG|kernel multi-threaded monitor session global (statistics)
+X$KMMSI|kernel multi-threaded monitor (shared) server info (status)
+X$KMPCMON|kernel multi-threaded(?) pool connection monitor. database resident connection pool.
+X$KMPCP|kernel multi-threaded(?) pool connection processes. database resident connection pool.
+X$KMPCSO|kernel multi-threaded(?) pool connection state objects(?). database resident connection pool.
+X$KMPDH|
+X$KMPSRV|kernel multi-threaded(?) pool server. database resident connection pool.
+X$KNGFL|
+X$KNGFLE|
+X$KNLAROW|kernel replication pool advice rows
+X$KNLASG|kernel replication pool allocated SGA
+X$KNLPMSGSTAT|kernel replication AQ IPC message statistics
+X$KNLP_ACTV_MSGS|kernel replication AQ IPC active messages
+X$KNLP_PEND_MSGS|kernel replication AQ IPC pending messages
+X$KNSTACR|kernel replication streams apply coordinator
+X$KNSTANR|kernel replication streams apply acknowledge receive(?)
+X$KNSTASL|kernel replication streams apply slave
+X$KNSTCAP|kernel replication streams capture. streams and xstreams.
+X$KNSTCAPCACHE|kernel replication streams capture cache
+X$KNSTCAPS|kernel replication streams capture ? goldengate.
+X$KNSTMT|kernel replication streams statement tracking
+X$KNSTMVR|kernel replication streams materialized view refresh
+X$KNSTOGGC|kernel replication streams oracle goldengate capabilities. also shows count and last used time.
+X$KNSTORD|kernel replication streams online redefinition. information about current online redefinition actions.
+X$KNSTPSTS|kernel replication streams apply server statistics
+X$KNSTRPP|kernel replication streams replication properties
+X$KNSTRQU|kernel replication streams replication queue
+X$KNSTSESS|kernel replication streams sessions
+X$KNSTTXN|kernel replication streams transactions
+X$KNSTXSTS|kernel replication streams transaction status
+X$KOCST|kernel (session) object cache statistics
+X$KPDBVPROXY|kernel pluggable database serving (as) proxy (for)
+X$KPONDCONSTAT|kernel programmatic interface oracle notification advanced queueing connection statistics
+X$KPONDESTAT|kernel programmatic interface oracle notification advanced queueing extended statistics(?)
+X$KPONESTAT|kernel programmatic interface oracle notification event monitor statistics
+X$KPONEXSTAT|
+X$KPONJSTAT|
+X$KPOQSTA|kernel programmatic interface result cache statistics
+X$KPOXFT|kernel programmatic interface oracle connection interface types(?)
+X$KPPLCC_INFO|kernel programmatic interface database resistent connection pool connection class (level) info
+X$KPPLCC_STATS|kernel programmatic interface database resistent connection pool connection class (level) statistics
+X$KPPLCONN_INFO|kernel programmatic interface database resistent connection pool connection info
+X$KPPLCP_STATS|kernel programmatic interface database resistent connection pool connection pool statistics
+X$KQDPG|kernel query dictionary pga
+X$KQFCO|kernel query fixed table columns
+X$KQFDT|kernel query fixed derived table
+X$KQFOPT|
+X$KQFP|kernel query fixed package
+X$KQFSZ|kernel query fixed size
+X$KQFTA|kernel query fixed tables
+X$KQFTVRTTST0|
+X$KQFVI|kernel query fixed views
+X$KQFVT|kernel query fixed view table
+X$KQLFBC|kernel query library cache fixed table bind capture
+X$KQLFSQCE|kernel query library cache fixed table sql cursor environment
+X$KQLFXPL|kernel query library cache fixed table explain plans
+X$KQLSET|kernel query library cache subordinate cache entries
+X$KQPXINV|kernel query patching execute? inventory. recursively loads opatch data into opatch_xinv_tab.
+X$KQRFP|kernel query rowcache find parent
+X$KQRFS|kernel query rowcache find subordinate
+X$KQRPD|kernel query rowcache parent definition
+X$KQRSD|kernel query rowcache subordinate definition
+X$KQRST|kernel query rowcache statistics
+X$KRASGA|kernel redo fast recovery area ?. ceilasm column set to 1 sets rounding up to MB for FRA views.
+X$KRBABRSTAT|kernel redo backup/restore auto block (media) recovery statistics
+X$KRBAFF|kernel redo backup/restore affinity. holds affinity information which file is connected to which node/device.
+X$KRBMCA|kernel redo backup/restore miscellaneous compression algorithms
+X$KRBMROT|kernel redo backup/restore miscellaneous rman output
+X$KRBMRST|kernel redo backup/restore miscellaneous rman status current
+X$KRBMSFT|kernel redo backup/restore miscellaneous search file ?
+X$KRBPDATA|
+X$KRBPDIR|
+X$KRBPHEAD|
+X$KRBPPBCTX|
+X$KRBPPBTBL|
+X$KRBPSPARSE|
+X$KRBZA|kernel redo backup/restore encryption algorithms
+X$KRCBIT|kernel recovery block change tracking bitmap block
+X$KRCCDE|kernel redo block change tracking change descriptors
+X$KRCCDR|
+X$KRCCDS|kernel redo block change tracking change descriptors statistics
+X$KRCEXT|kernel redo block change tracking extent map (of block change tracking file)
+X$KRCFBH|kernel redo block change tracking file bitmap header
+X$KRCFDE|kernel redo block change tracking file descriptor
+X$KRCFH|kernel redo block change tracking file header
+X$KRCGFE|
+X$KRCSTAT|kernel redo block change tracking status
+X$KRDEVTHIST|kernel redo standby event histograms
+X$KRDMMIRA|kernel redo datafiles multi instance recovery multi instance recovery
+X$KRDRSBROV|
+X$KRFBLOG|kernel redo flashback database log
+X$KRFGSTAT|kernel redo flashback database log status
+X$KRFSTHRD|kernel redo/remote fileserver thread
+X$KRSOPROC|kernel redo standby monitor processes
+X$KRSSMS|kernel redo standby scheduler managed standby
+X$KRSSRTT|kernel redo standby scheduler process status
+X$KRSTALG|kernel redo standby facility messages
+X$KRSTAPPSTATS|kernel redo standby application status
+X$KRSTDEST|kernel redo status (archive) destination
+X$KRSTDGC|kernel redo standby dataguard config
+X$KRSTPVRS|kernel redo standby apply variance(?) status
+X$KRVSLV|kernel redo recovery apply server logical standby v? session
+X$KRVSLVAS|
+X$KRVSLVPG|kernel redo recovery apply server logical standby v? progress
+X$KRVSLVS|kernel redo recovery apply server logical standby v? session identification
+X$KRVSLVST|kernel redo recovery apply server logical standby v? status
+X$KRVSLVTHRD|kernel redo recovery apply server logical standby v? thread
+X$KRVXDKA|
+X$KRVXDTA|
+X$KRVXISPCHK|
+X$KRVXISPLCR|
+X$KRVXOP|kernel redo recovery extract operation
+X$KRVXSV|kernel redo recovery extract statistics values
+X$KRVXTHRD|kernel redo recovery extract thread
+X$KRVXTX|kernel redo recovery extract transaction
+X$KRVXWARNV|kernel redo recovery extract warning view(?)
+X$KRVXWNMESG|kernel redo recovery extract warning message
+X$KSACLTAB|kernel service access control list table
+X$KSAST|kernel service asynchronous messages status
+X$KSBDD|kernel service background detached (process) definition
+X$KSBDP|kernel service background detached processes
+X$KSBDPNEEDED|kernel service background determined (number of) processes needed
+X$KSBFT|
+X$KSBSRVDT|kernel service background server details. process name, description and c header file.
+X$KSBTABACT|kernel service background table of actions
+X$KSBUCPUWTM|kernel service background ? cpu wait time
+X$KSDAF|
+X$KSDAFT|
+X$KSDHNG_CACHE_HISTORY|kernel service debug hang cache history
+X$KSDHNG_CHAINS|kernel service debug hang chains
+X$KSDHNG_SESSION_BLOCKERS|kernel service debug hang session blockers
+X$KSFDFTYP|kernel service functions disk file types
+X$KSFDKLL|kernel service functions disk kernel ? outliers. only populated on solaris platform (uses dtrace in the background via the GEN0 process).
+X$KSFDSSCLONEINFO|kernel service functions disk statistics snapshot clone (file) info
+X$KSFDSTBLK|kernel service functions disk statistics blockdevice. empty, maybe this needs activating.
+X$KSFDSTCG|kernel service functions disk statistics consumer group
+X$KSFDSTCMP|kernel service functions disk statistics component (usage type)
+X$KSFDSTFILE|kernel service functions disk statistics file (type)
+X$KSFDSTHIST|kernel service functions disk statistics history
+X$KSFDSTLL|kernel service functions disk statistics ? outliers. all IOs except LGWR taking longer than 500ms.
+X$KSFDSTTHIST|
+X$KSFHDVNT|kernel service functions harddisk device entries(?)
+X$KSFMCOMPL|kernel service functions (file) mapping component list
+X$KSFMELEM|kernel service functions (file) mapping element
+X$KSFMEXTELEM|kernel service functions (file) mapping extra (information for) elements
+X$KSFMFILE|kernel service functions (file) mapping file
+X$KSFMFILEEXT|kernel service functions (file) mapping file extent
+X$KSFMIOST|kernel service functions (file) mapping file IO stack
+X$KSFMLIB|kernel service functions (file) mapping library
+X$KSFMSUBELEM|kernel service functions (file) mapping subelement
+X$KSFQDVNT|kernel service functions sequential (IO) device entries
+X$KSFQP|kernel service functions sequential (IO) performance
+X$KSFVQST|
+X$KSFVSL|kernel service functions (IO) slaves
+X$KSFVSTA|kernel service functions (IO) slave status
+X$KSIMAT|kernel service instance locking management attributes
+X$KSIMAV|kernel service instance locking management attribute values for all instances
+X$KSIMSI|kernel service instance locking management serial (and) instance (numbers)
+X$KSIMTSR|
+X$KSIPCIP|kernel service IPC ip addresses. 
+X$KSIPCIP_CI|
+X$KSIPCIP_KGGPNP|kernel generic IPC ip addresses. managed by kernel generic grid plug and play
+X$KSIPCIP_OSD|kernel generic IPC ip addresses. operating system dependent(?)
+X$KSIPC_INFO|kernel service IPC info. defined in x$kqfta, but not available.
+X$KSIPC_PROC_STATS|kernel service IPC process statistics. defined in x$kqfta, but not available.
+X$KSIPC_SKGSNDOMAIN|kernel service IPC os dependent kernel generic service NUMA domains
+X$KSIRESTYP|kernel service instance locking (lock/enqueue) resource types
+X$KSIRGD|
+X$KSIRPINFO|kernel service infrastructure(?) patch info. only returns rows in ASM instance, about GI patches applied.
+X$KSI_REUSE_STATS|kernel service instance locking (lock/enqueue) reuse stats
+X$KSKCDBPLW|kernel service resource manager CDB plan window
+X$KSKCGMETRIC|kernel service resource manager consumer group metrics
+X$KSKPDBMETRIC|kernel service resource manager PDB metrics
+X$KSKPLW|kernel service resource manager plan window
+X$KSKQDFT|
+X$KSKQVFT|
+X$KSLCS|kernel service latch (event) classes
+X$KSLECLASS|
+X$KSLED|kernel service latch event descriptions
+X$KSLEI|kernel service latch events for instance
+X$KSLEMAP|kernel service latch event map
+X$KSLEPX|
+X$KSLES|kernel service latch events for session
+X$KSLHOT|kernel service latch hot blocks. set _db_hot_block_tracking to true to track hot blocks in the buffercache
+X$KSLLCLASS|kernel service latch classes
+X$KSLLD|kernel service latch latch descriptions
+X$KSLLT|kernel service latch latch
+X$KSLLTR|kernel service latch resources(?)
+X$KSLLW|kernel service latch latch (context) where
+X$KSLPO|kernel service latch posting
+X$KSLSCS|kernel service latch statistics (event) classes
+X$KSLSESHIST|kernel service latch statistics event statistics histograms
+X$KSLSESHIST_MICRO|kernel service latch statistics event statistics histograms microseconds
+X$KSLSESOUT|kernel service latch statistics event statistics outliers
+X$KSLWH|kernel service latch wait (event) history
+X$KSLWSC|kernel service latch no-wait and sleep count statistics by context
+X$KSLWT|kernel service latch (per session) wait
+X$KSMDD|kernel service memory segmented (array) definition
+X$KSMDUT1|
+X$KSMFS|kernel service memory fixed sga
+X$KSMFSV|kernel service memory fixed sga vectors
+X$KSMGE|kernel service memory granule state
+X$KSMHP|kernel service memory heap
+X$KSMJCH|kernel service memory java chunks
+X$KSMJS|kernel service memory java sga
+X$KSMLRU|kernel service memory least recently used
+X$KSMLS|kernel service memory large sga
+X$KSMMEM|kernel service memory memory
+X$KSMMGAPID|kernel service memory MGA pid
+X$KSMMGASEG|kernel service memory MGA segments
+X$KSMNIM|
+X$KSMNS|kernel service memory numa statitics
+X$KSMPDBCSD|
+X$KSMPGDP|kernel service memory pga detailed program
+X$KSMPGDST|kernel service memory pga detailed statistics
+X$KSMPGDSTA|kernel service memory pga detailed statistics additional
+X$KSMPGST|kernel service memory pga statistics
+X$KSMPP|kernel service memory pga heap
+X$KSMSD|kernel service memory sga definitions
+X$KSMSGMAP|kernel service memory sga map
+X$KSMSGMEM|kernel service memory sga memory
+X$KSMSP|kernel service memory sga heap
+X$KSMSPR|kernel service memory shared pool reserved
+X$KSMSP_DSNEW|kernel service memory shared pool duration statistics new
+X$KSMSP_NWEX|kernel service memory shared pool new efficient examine. shows subpools and durations
+X$KSMSS|kernel service memory sga statistics
+X$KSMSSINFO|kernel service memory sga os info
+X$KSMSST|kernel service memory sga streams
+X$KSMSTRS|kernel service memory streams statistics
+X$KSMUP|kernel service memory uga heap
+X$KSMXMINFO|kernel service memory extended memory (persistent memory) info
+X$KSNSOBJ|
+X$KSNSRESINFO|
+X$KSOLSFTS|kernel service operations object level statistics fts?
+X$KSOLSSTAT|kernel service operations object level statistics statistic names
+X$KSOLTD|kernel service operations lightweight tasks descriptions(?)
+X$KSO_PRESPAWN_POOL|kernel service operations prespawn pool (multithreaded oracle only)
+X$KSO_SCHED_DELAY_HISTORY|kernel service operations scheduler delay history
+X$KSPCS_CPU_STAT|
+X$KSPPCV|kernel service parameter parameter current value
+X$KSPPCV2|kernel service parameter parameter current value
+X$KSPPI|kernel service parameter parameter info
+X$KSPPO|kernel service parameter parameter obsolete
+X$KSPPSCV|kernel service parameter parameter system current value
+X$KSPPSV|kernel service parameter parameter system value
+X$KSPPSV2|kernel service parameter parameter system value
+X$KSPRSTV|kernel service parameter reset value
+X$KSPRSTV2|kernel service parameter reset value
+X$KSPSPFH|kernel service parameter spfile header
+X$KSPSPFILE|kernel service parameter spfile
+X$KSPTCH|kernel service patch
+X$KSPVLD_VALUES|kernel service parameter valid values
+X$KSQDN|kernel service enqueue (global) database name
+X$KSQEQ|kernel service enqueue en-queue
+X$KSQEQTYP|kernel service enqueue enqueue types
+X$KSQRS|kernel service enqueue resource
+X$KSQST|kernel service enqueue status
+X$KSRCCTX|kernel service reliable message channel context
+X$KSRCDES|kernel service reliable message channel description
+X$KSRCHDL|kernel service reliable message channel handle
+X$KSRMPCTX|kernel service reliable message message progress context?
+X$KSRMSGDES|kernel service reliable message message descriptions
+X$KSRMSGO|kernel service reliable message message overview?
+X$KSRPCIOS|kernel service remote procedure calls (RPC) IOs
+X$KSSQUAR|kernel service state objects quarantine
+X$KSSQUAR_REG|kernel service state objects querantine ?
+X$KSSQUAR_SUM|kernel service state objects quarantine summary
+X$KSTEX|kernel service trace execution
+X$KSUCF|kernel service user cost function (resource limit)
+X$KSUCLNDPCC|kernel service user cleanup dead processes. shows dead to be cleaned up processes
+X$KSUCLNPROC|kernel service user cleanup processes. processes that can cleanup dead processes
+X$KSUCPUSTAT|kernel service user cpu statistics
+X$KSUGBLNETSTAT|
+X$KSUGBLNETSTATAWR|
+X$KSUINSTSTAT|kernel service user instance statistics. seems to be some cell and a lot NS (dg?) statistics
+X$KSULL|kernel service user license limit
+X$KSULOP|kernel service user long operations
+X$KSULV|kernel service user locale value
+X$KSUMYSTA|kernel service user mystat
+X$KSUNETSTAT|kernel service user network statistics
+X$KSUPDBSES|kernel service user pluggable database sessions
+X$KSUPGP|kernel service user process group
+X$KSUPGS|kernel service user process group sniped
+X$KSUPL|kernel service user process (resource) limit
+X$KSUPR|kernel service user process
+X$KSUPRLAT|kernel service user process latch
+X$KSURLMT|kernel service user resource limits
+X$KSURU|kernel service user resource usage
+X$KSUSD|kernel service user statistics descriptions
+X$KSUSE|kernel service user session
+X$KSUSECON|kernel service user session context
+X$KSUSECST|kernel service user session status for events
+X$KSUSEH|
+X$KSUSESTA|kernel service user session statistics
+X$KSUSEX|kernel service user session exclusive? seems to be used by rman.
+X$KSUSGIF|kernel service user session general information(?). contains one row in which ksusgstl indicates sesstat#+1 (sysstat contains more statistics)
+X$KSUSGSTA|kernel service user statistics global statistics
+X$KSUSIO|kernel service user session (disk) io
+X$KSUSM|kernel service user session migration
+X$KSUTM|kernel service user timer
+X$KSUVMSTAT|kernel service user virtual memory statistics
+X$KSUXSINST|kernel service user extended statistics instance
+X$KSUZSA|
+X$KSWSAFTAB|
+X$KSWSASTAB|kernel service workgroup services active services table
+X$KSWSCLSTAB|kernel service workgroup services (wait event) classes table
+X$KSWSCRSSVCTAB|kernel service workgroup services cluster ready services (CRS) services table.
+X$KSWSCRSTAB|kernel service workgroup services cluster ready services (CRS) table. contains ONS port and SCAN name.
+X$KSWSEVTAB|kernel service workgroup services event tab. waitevents per service
+X$KSWSINTTAB|
+X$KSWSJPOPERTAB|kernel service workgroup services java patching operations table(?)
+X$KSWSJPTAB|kernel service workgroup services java patching table
+X$KSXAFA|kernel service cross instance parallel affinity file affinity
+X$KSXMCOLST|
+X$KSXMME|kernel service cross instance modification dml entries?. set _dml_frequency_tracking to true to see data
+X$KSXM_DFT|kernel service cross instance modification dml frequency tracking. set _dml_frequency_tracking to true to see data
+X$KSXM_EXP_STATS|
+X$KSXM_ZUT|
+X$KSXPCLIENT|kernel service cross instance ipc client
+X$KSXPIA|kernel service cross instance ipc available. interfaces available (configured) by the instance for RAC.
+X$KSXPIF|kernel service cross instance ipc interfaces. all interfaces visible to instance
+X$KSXPPING|kernel service cross instance ipc ping
+X$KSXPTESTTBL|kernel service cross instance test table
+X$KSXP_STATS|kernel service cross instance ipc statistics. defined in x$kqfta, but not available.
+X$KSXRCH|kernel service cross instance broadcast channels
+X$KSXRCONQ|kernel service cross instance broadcast convert? queues 
+X$KSXRMSG|kernel service cross instance broadcast messages
+X$KSXRREPQ|kernel service cross instance broadcast reply? queues
+X$KSXRSG|kernel service cross instance broadcast sga(?)
+X$KTADM|kernel transaction table access dml lock
+X$KTATL|kernel transaction table access transaction lock
+X$KTATRFIL|
+X$KTATRFSL|
+X$KTCNCLAUSES|kernel transaction control change notification clauses
+X$KTCNINBAND|
+X$KTCNQROW|kernel transaction control change notification query row specifics
+X$KTCNQUERY|kernel transaction control change notification query
+X$KTCNREG|kernel transaction control change notification registration
+X$KTCNREGQUERY|kernel transaction control change notification registration query
+X$KTCSP|kernel transaction control savepoints
+X$KTCXB|kernel transaction control transaction object
+X$KTFBFE|kernel transaction file bitmap free extent
+X$KTFBHC|kernel transaction file bitmap header control
+X$KTFBNSTAT|kernel transaction file bigfile numeric? statistics
+X$KTFBUE|kernel transaction file bitmap used extent
+X$KTFSAN|
+X$KTFSBI|
+X$KTFSIMSTAT|
+X$KTFSRI|
+X$KTFSTAT|
+X$KTFTBTXNGRAPH|kernel transaction flashback transaction (dependency) graph
+X$KTFTBTXNMODS|kernel transaction flashback transaction modifications
+X$KTFTHC|kernel transaction file temp header space
+X$KTFTME|kernel transaction file temp map extents
+X$KTIFB|
+X$KTIFF|kernel transaction in-memory undo flush functions
+X$KTIFP|kernel transaction in-memory undo flush pools
+X$KTIFV|
+X$KTMTXNCHUNK|
+X$KTMTXNCRCLONE|
+X$KTMTXNDELTA|
+X$KTMTXNHEAD|
+X$KTPRHIST|kernel transaction parallel (transaction) recovery history
+X$KTPRXRS|kernel transaction parallel (transaction) recovery transaction recovery server
+X$KTPRXRT|kernel transaction parallel (transaction) recovery transaction recovery transactions
+X$KTRSO|kernel transaction resumable state object?
+X$KTSIMAPOOL|kernel transaction in-memory area pool
+X$KTSIMAU|kernel transaction in-memory area used
+X$KTSIMXMEMAREA|kernel transaction in-memory x-mem area
+X$KTSJPROC|kernel transaction space management job process
+X$KTSJTASK|kernel transaction space management job task
+X$KTSJTASKCLASS|kernel transaction space management job task class
+X$KTSKSTAT|kernel transaction space management shrink statistics
+X$KTSLCHUNK|kernel transaction space management lob chunk
+X$KTSPGS_STAT|kernel transaction space managemet get space statistics(?)
+X$KTSPSTAT|kernel transaction space management space statistics
+X$KTSP_REPAIR_LIST|kernel transaction space management repair list
+X$KTSSO|kernel transaction space management sort (segment)
+X$KTSSPU|kernel transaction space management space usage
+X$KTSTFC|kernel transaction space management sort segment file cached information
+X$KTSTSSD|kernel transaction sort segments sort segment descriptor
+X$KTSTUSC|
+X$KTSTUSG|
+X$KTSTUSS|
+X$KTTEFINFO|kernel transaction tablespace extra file info(?)
+X$KTTETS|kernel transaction tablespace extra tablespace statistics(?)
+X$KTTVS|kernel transaction tablespace valid slaveundo
+X$KTUCUS|kernel transaction corrupt undos? contains corrupt_xid field.
+X$KTUGD|kernel transaction undo global data
+X$KTUMASCN|kernel transaction undo minimum active scn
+X$KTUQQRY|kernel transaction undo flashback? query
+X$KTURD|kernel transaction undo inuse descriptors
+X$KTURHIST|kernel transaction undo recovery history
+X$KTUSMST|kernel transaction undo system managed (undo) statistics
+X$KTUSMST2|kernel transaction undo system manager (undo) statistics 2
+X$KTUSUS|kernel transaction system managed undo slots
+X$KTUTST|kernel transaction undo temporary undo statistics
+X$KTUXCHE|
+X$KTUXE|kernel transaction undo transaction entry
+X$KUPVA|kernel utility datapump fixed table session
+X$KUPVJ|kernel utility datapump fixed table job
+X$KVII|kernel view instance initialized (internal parameters)
+X$KVIS|kernel view instance structures (internal parameters)
+X$KVIT|kernel view instance transistory (internal parameters)
+X$KWDDEF|
+X$KWQBPMT|kernel advanced queueing buffer (streams memory) process measurement?
+X$KWQDLSTAT|
+X$KWQITCX|
+X$KWQMNC|
+X$KWQMNJIT|
+X$KWQMNSCTX|
+X$KWQMNTASK|
+X$KWQMNTASKSTAT|
+X$KWQPD|
+X$KWQPS|
+X$KWQSI|
+X$KWRSNV|
+X$KWSBGAQPCSTAT|
+X$KWSBGQMNSTAT|
+X$KWSBJCSQJIT|
+X$KWSBSMSLVSTAT|
+X$KWSCPJOBSTAT|
+X$KWSSUBUSTATS|
+X$KXDBIO_STATS|kernel execution exadata block level intelligent operations statistics
+X$KXDCM_DB|kernel execution exadata cell metrics per database
+X$KXDCM_DB_HISTORY|kernel execution exadata cell metrics per database history
+X$KXDCM_DISK|kernel execution exadata cell metrics per disk
+X$KXDCM_DISK_HISTORY|kernel execution exadata cell metrics per disk history
+X$KXDCM_GLOBAL|kernel execution exadata cell metrics global
+X$KXDCM_GLOBAL_HISTORY|kernel execution exadata cell metrics global history
+X$KXDCM_IOREASON|kernel execution exadata cell metrics io reason
+X$KXDCM_IOREASON_NAME|kernel execution exadata cell metrics io reason name
+X$KXDCM_METRIC_DESC|kernel execution exadata cell metrics metrics description
+X$KXDCM_OPEN_ALERTS|kernel execution exadata cell metrics open alerts
+X$KXDRS|kernel execution exadata resilvering
+X$KXDSPPHYSMP|kernel execution exadata space physical map?
+X$KXFBBOX|kernel execution fast (px) black box
+X$KXFPBS|kernel execution fast (px) process batch size
+X$KXFPCDS|kernel execution fast (px) process and queue manager dequeue statistics
+X$KXFPCMS|kernel execution fast (px) process and queue manager coordinator message statistics
+X$KXFPCST|kernel execution fast (px) process and queue manager coordinator (query) statistics
+X$KXFPDP|kernel execution fast (px) process and queue manager detached process statistics
+X$KXFPIG|kernel execution fast (px) process and queue manager instance groups
+X$KXFPINSTLOAD|kernel execution fast (px) process and queue manager instance load. trace file using _px_trace has same info, and is more complete
+X$KXFPNS|kernel execution fast (px) process and queue manager instance statistics
+X$KXFPPFT|
+X$KXFPPIG|kernel execution fast (px) process and queue manager process instance groups
+X$KXFPREMINSTLOAD|kernel execution fast (px) process and queue manager remote instance load. seems to be related to the resource manager and consumer groups.
+X$KXFPSDS|kernel execution fast (px) process and queue manager slave dequeue statistics
+X$KXFPSMS|kernel execution fast (px) process and queue manager slave message statistics
+X$KXFPSST|kernel execution fast (px) process and queue manager slave (query) statistics
+X$KXFPYS|kernel execution fast (px) process and queue manager system statistics
+X$KXFQSROW|kernel execution fast (px) query table queue statistics
+X$KXFRSVCHASH|kernel execution fast (px) granules service hash
+X$KXFSOURCE|kernel execution fast (px) source. seems to hold per slave statistics. usage unknown.
+X$KXFTASK|kernel execution fast (px) tasks. seems to be related to cross PDB PX.
+X$KXSBD|kernel execution shared cursor bind data
+X$KXSCC|kernel execution shared cursor cursor cache data
+X$KXSREPLAY|kernel execution shared cursor replay
+X$KXSREPLAYDATE|kernel execution shared cursor replay date
+X$KXSREPLAYGUID|kernel execution shared cursor replay GUID
+X$KXSREPLAYLOB|kernel execution shared cursor replay LOB
+X$KXSREPLAYSEQ|kernel execution shared cursor replay sequence
+X$KXSREPLAYTIME|kernel execution shared cursor replay timestamp
+X$KXTTSTECS|kernel execution temporary table statistics column statistics
+X$KXTTSTEHS|kernel execution temporary table statistics histograms
+X$KXTTSTEIS|kernel execution temporary table statistics index statistics
+X$KXTTSTETS|kernel execution temporary table statistics table statistics
+X$KXTT_PTT|kernel execution temporary table private temporary tables
+X$KYWMCLTAB|
+X$KYWMNF|
+X$KYWMPCMN|
+X$KYWMPCS|
+X$KYWMPCTAB|
+X$KYWMWRCTAB|
+X$KZAHIST|kernel security audit (cleanup events) history
+X$KZAJOBS|kernel security audit (cleanup) jobs
+X$KZALOADJOBS|kernel security audit load jobs
+X$KZAPARAMS|kernel security audit parameters
+X$KZATS|kernel security audit (last archive) timestamp
+X$KZCKMCS|kernel security code-based access encryption support management client secrets
+X$KZCKMEK|kernel security code-based access encryption support management encryption key
+X$KZDOS|kernel security dictionary support OS roles
+X$KZDPSUPSF|kernel security dictionary transparent sensitive data protection supported feature
+X$KZEKMENCWAL|kernel security encryption key management encryption wallet
+X$KZEKMFVW|kernel security encryption key management field values wallet
+X$KZPOPR|kernel security privileges object privileges
+X$KZRTPD|kernel security virtual private database current policies and predicates
+X$KZSPR|kernel security session privileges
+X$KZSRO|kernel security session roles
+X$KZSRPWFILE|kernel security session remote password file
+X$KZSRT|kernel security session remote password file table entries
+X$KZVDVCLAUSE|kernel security data vault valid (alter system/session) clauses
+X$LCR|
+X$LE|lock element
+X$LOBSEGSTAT|lob segment statistics
+X$LOBSTAT|lob statistics
+X$LOBSTATHIST|lob statistics history
+X$LOCKDOWN|lockdown rules (applicable in the PDB where it is queried)
+X$LOGBUF_READHIST|log buffer read history. DG async redo transport read history from log buffer.
+X$LOGMNR_ATTRCOL$|
+X$LOGMNR_ATTRIBUTE$|
+X$LOGMNR_CALLBACK|
+X$LOGMNR_CDEF$|
+X$LOGMNR_CLU$|
+X$LOGMNR_COL$|
+X$LOGMNR_COLTYPE$|
+X$LOGMNR_CONTENTS|
+X$LOGMNR_DICT$|
+X$LOGMNR_DICTIONARY|
+X$LOGMNR_DICTIONARY_LOAD|
+X$LOGMNR_ENC$|
+X$LOGMNR_ENCRYPTED_OBJ$|
+X$LOGMNR_ENCRYPTION_PROFILE$|
+X$LOGMNR_FILE$|
+X$LOGMNR_IND$|
+X$LOGMNR_INDCOMPART$|
+X$LOGMNR_INDPART$|
+X$LOGMNR_INDSUBPART$|
+X$LOGMNR_KOPM$|
+X$LOGMNR_KTFBUE|
+X$LOGMNR_LATCH|
+X$LOGMNR_LOB$|
+X$LOGMNR_LOBFRAG$|
+X$LOGMNR_LOG|
+X$LOGMNR_LOGFILE|
+X$LOGMNR_LOGS|
+X$LOGMNR_NTAB$|
+X$LOGMNR_OBJ$|
+X$LOGMNR_OPQTYPE$|
+X$LOGMNR_PARAMETERS|
+X$LOGMNR_PARTOBJ$|
+X$LOGMNR_PROCESS|
+X$LOGMNR_PROPS$|
+X$LOGMNR_REFCON$|
+X$LOGMNR_REGION|
+X$LOGMNR_ROOT$|
+X$LOGMNR_SEG$|
+X$LOGMNR_SESSION|
+X$LOGMNR_SUBCOLTYPE$|
+X$LOGMNR_TAB$|
+X$LOGMNR_TABCOMPART$|
+X$LOGMNR_TABPART$|
+X$LOGMNR_TABSUBPART$|
+X$LOGMNR_TS$|
+X$LOGMNR_TYPE$|
+X$LOGMNR_UET$|
+X$LOGMNR_UNDO$|
+X$LOGMNR_USER$|
+X$MEMOPTIMIZE_WRITE_AREA|memoptimize write area
+X$MESSAGES|messages (for background processes)
+X$MESSAGE_CACHE|message cache (for aq messages)
+X$MMON_ACTION|manageability monitor actions (with runtime and cputime limits)
+X$MMON_AUTOTASK|manageability monitor autotask tasks (with max runtime and interval)
+X$MMON_TRACKING_DEBUG|manageability monitor tracking debug. empty, probably needs enabling, unknown how currently.
+X$MODACT_LENGTH|(session) module action length (limit)
+X$MSGBM|messages bitmap. AQ messages.
+X$MUTEX_SLEEP|mutex sleep statistics
+X$MUTEX_SLEEP_HISTORY|mutex sleep statistics history
+X$NFSCLIENTS|nfs clients. XML DB nfs server
+X$NFSLOCKS|nfs locks. XML DB nfs server
+X$NFSOPENS|nfs opens. XML DB nfs server
+X$NLS_PARAMETERS|native language support parameters
+X$NONDURSUB|non-durable subscriptions on shared queues
+X$NONDURSUB_LWM|non-durable subscriptions on shared queues low watermarks
+X$NSV|netslave processes status. part of dataguard broker
+X$OBJECT_AFFINITY_STATISTICS|object affinity statistics
+X$OBJECT_POLICY_STATISTICS
+X$OBJ_BIN_EXCEPTIONS|object (recycle)bin exceptions(?)
+X$OBLNK$|
+X$OCT|oracle command types
+X$OFSMOUNT|oracle filesystem mount
+X$OFS_RW_LATENCY_STATS|oracle filesystem read/write latency statistics
+X$OFS_RW_SIZE_STATS|oracle fileysystem read/write size statistics
+X$OFS_STATS|oracle filesystem statistics
+X$OPARG|operator arguments metadata
+X$OPDESC|operator descriptions
+X$OPERATORS|operators
+X$OPTIM_CALIB_STATS|optimizer colibration status
+X$OPTION|option. enabled database options
+X$OPVERSION|operator versions
+X$ORAFN|oracle function. shows different call types
+X$PERSISTENT_PUBLISHERS|persistent publishers
+X$PERSISTENT_QUEUES|persistent queues
+X$PERSISTENT_SUBSCRIBERS|persistent subscribers
+X$POLICY_HISTORY|policy history
+X$PQSCANRATE|parallel query scanrate. shows BC (buffercache?) and DR (direct read?) numbers. not sure how/when this gets populated.
+X$PRMSLTYX|parameter handling systen level types explanation
+X$PROPS|(database) properties, like: name, endian type, NLS
+X$QERFXTST|
+X$QESBLSTAT|query execute sql bloom (join) filter statistics
+X$QESMMAHIST|query execute sql memory management (pga) advise histogram
+X$QESMMAPADV|query execute sql memory management advise PGA (target) advise
+X$QESMMIWH|query execute sql memory management (pga) ? workarea histogram
+X$QESMMIWT|query execute sql memory management (pga) ? workarea table
+X$QESMMSGA|query execute sql memory management (pga) sga
+X$QESRCDEP|query execute sql result cache dependencies
+X$QESRCDR|query execute sql result cache DR
+X$QESRCMEM|query execute sql result cache memory
+X$QESRCMSG|query execute sql result cache messages
+X$QESRCOBJ|query execute sql result cache objects
+X$QESRCRD|query execute sql result cache RD
+X$QESRCRR|query execute sql result cache RR
+X$QESRCSO|query execute sql result cache SO
+X$QESRCSTA|query execute sql result cache statistics
+X$QESRSTAT|
+X$QESRSTATALL|
+X$QESXL|query execute sql vector translate
+X$QKSBGSES|query compilation sql bug session
+X$QKSBGSYS|query compilation sql bug system
+X$QKSCESES|query compilation sql compilation environment session
+X$QKSCESYS|query compilation sql compilation environment system
+X$QKSCR|
+X$QKSCR_RSN|
+X$QKSFGI_CURSOR|query compilation sql fine graind invalidation cursor
+X$QKSFM|query compilation sql fix ?. list of fix_control numbers (optimizer fixes)
+X$QKSFMDEP|query compilation sql fix ? dependencies
+X$QKSFMPRT|query compilation sql fix ? prerequisites(?)
+X$QKSHT|query compilation sql hint
+X$QKSMMWDS|query compilation sql memory management workarea ? statistics
+X$QKSXA_REASON|
+X$QOSADVACTIONDEF|
+X$QOSADVFINDINGDEF|
+X$QOSADVRATIONALEDEF|
+X$QOSADVRECDEF|
+X$QOSADVRULEDEF|
+X$QUIESCE|instance quiesce state
+X$RFAFO|
+X$RFAHIST|
+X$RFMP|
+X$RFMTE|
+X$RFOB|
+X$RMA_LATCH|
+X$RO_USER_ACCOUNT|read-only user accounts. only populated when open in read-only mode.
+X$RPOP_FILESTATS|
+X$RULE|rule statistics
+X$RULE_SET|rule set statistics
+X$RXS_SESSION_ROLES|
+X$SHADOW_DATAFILE|shadow datafile. for new (12.2+) lost write protection
+X$SKGXPIA|operating system dependent kernel generic communication ipc ip address
+X$SKGXP_CONNECTION|operating system dependent kernel generic communication ipc connection. defined in x$kqfta, but not available.
+X$SKGXP_MISC|operating system dependent kernel generic communication ipc miscellaneous statistics. defined in x$kqfta, but not available.
+X$SKGXP_PORT|operating system dependent kernel generic communication ipc port. defined in x$kqfta, but not available.
+X$SQL_SHARD|sql shard
+X$SQL_TESTCASES|sql testcases
+X$TARGETRBA|target redo byte address
+X$TEMPORARY_LOB_REFCNT|temporary lob refcount
+X$TIMEZONE_FILE|timezone file and version (?/oracore/zoneinfo)
+X$TIMEZONE_NAMES|timezone names
+X$TRACE|KST (kernel server trace) tracing; shows trace results
+X$TRACE_EVENTS|KST (kernel server trace) tracing; shows enabled traces per event
+X$UGANCO|user global area network connection
+X$UNFLUSHED_DEQUEUES|
+X$UNIFIED_AUDIT_RECORD_FORMAT|unified audit record format
+X$UNIFIED_AUDIT_TRAIL|unified audit trail
+X$VERSION|version
+X$VINST|? used for standby state tracking? bug 3939102
+X$XML_AUDIT_TRAIL|xml audit trail
+X$XPLTON|explain plan trace operation name
+X$XPLTOO|explain plan trace operation option
+X$XSAGGR|olap analytic workspace aggragate
+X$XSAGOP|olap analytic workspace aggragate operations
+X$XSAWSO|olap analytic workspace analytic workspace session objects
+X$XSLONGOPS|olap analytic workspace long operations
+X$XSOBJECT|olap analytic workspace objects
+X$XSOQMEHI|olap analytic workspace API memory history
+X$XSOQOJHI|olap analytic workspace API object history
+X$XSOQOPHI|olap analytic workspace API operations history
+X$XSOQOPLU|olap analytic workspace API operations ?
+X$XSOQSEHI|olap analytic workspace API session history
+X$XSSINFO|olap analytic workspace session info
+X$XS_SESSIONS|olap analytic workspace sessions
+X$XS_SESSION_NS_ATTRIBUTES|olap analytic workspace session namespace attributes
+X$XS_SESSION_ROLES|olap analytic workspace session roles
+X$ZASAXTAB|
