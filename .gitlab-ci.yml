@@ -29,3 +29,11 @@ x_tables_descriptions_csv:
     - export ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE; echo "whenever sqlerror exit failure; exec load_csv_x_table_descriptions; exit" \| $ORACLE_HOME/bin/sqlplus orafun_loader/orafun_loader@//localhost/xepdb1
   tags:
     - orafun2
+
+v_tables_x_tables_mapping_csv:
+  script:
+    - if [ ! -d /tmp/gitlab-runner ]; then mkdir /tmp/gitlab-runner; fi
+    - cp v_tables_x_tables_mapping.csv /tmp/gitlab-runner/.v_tables_x_tables_mappingcsv
+    - export ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE; echo "whenever sqlerror exit failure; exec load_csv_v_tables_x_tables_mapping; exit" \| $ORACLE_HOME/bin/sqlplus orafun_loader/orafun_loader@//localhost/xepdb1
+  tags:
+    - orafun2
