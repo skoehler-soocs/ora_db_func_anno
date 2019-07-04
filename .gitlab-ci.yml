@@ -26,7 +26,7 @@ x_tables_descriptions_csv:
   script:
     - if [ ! -d /tmp/gitlab-runner ]; then mkdir /tmp/gitlab-runner; fi
     - cp x_tables_descriptions.csv /tmp/gitlab-runner/x_tables_descriptions.csv
-    - export ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE; echo "whenever sqlerror exit failure; exec load_csv_x_table_descriptions; exit" \| $ORACLE_HOME/bin/sqlplus orafun_loader/orafun_loader@//localhost/xepdb1
+    - export ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE; echo "whenever sqlerror exit failure; exec load_csv_x_table_descriptions; exit" | $ORACLE_HOME/bin/sqlplus orafun_loader/orafun_loader@//localhost/xepdb1
   tags:
     - orafun2
 
