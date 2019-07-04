@@ -39,7 +39,7 @@ x_tables_descriptions_csv:
 v_tables_x_tables_mapping_csv:
   script:
     - if [ ! -d /tmp/gitlab-runner ]; then mkdir /tmp/gitlab-runner; fi
-    - cp v_tables_x_tables_mapping.csv /tmp/gitlab-runner/.v_tables_x_tables_mappingcsv
+    - cp v_tables_x_tables_mapping.csv /tmp/gitlab-runner/v_tables_x_tables_mapping.csv
     - export ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE; 
       echo -e "whenever sqlerror exit failure;  \n
                exec load_csv_v_tables_x_tables_mapping;  \n
