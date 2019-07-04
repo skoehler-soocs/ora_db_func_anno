@@ -14,9 +14,10 @@ copy_functions:
   tags:
     - orafun1
 
-copy_functions2:
+functions_csv:
   script:
-    - mkdir /tmp/gitlab-runner
-    - cp functions.csv /tmp/gitlab-runner/functions_$(date +%F_%T).csv
+    - [ -d /tmp/gitlab-runner ] || mkdir /tmp/gitlab-runner
+    - cp functions.csv /tmp/gitlab-runner/functions.csv
+    - export ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE; echo "whenever sqlerror exit failure; exec load_csv_functions; exit" | $ORACLE_HOME/bin/sqlplus orafun_loader/orafun_loader@//localhost/xepdb1
   tags:
     - orafun2
