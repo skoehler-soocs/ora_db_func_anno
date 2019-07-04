@@ -19,9 +19,9 @@ functions_csv:
     - if [ ! -d /tmp/gitlab-runner ]; then mkdir /tmp/gitlab-runner; fi
     - cp functions.csv /tmp/gitlab-runner/functions.csv
     - export ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE; 
-      echo "whenever sqlerror exit failure; 
-            exec load_csv_functions; 
-            exit" | $ORACLE_HOME/bin/sqlplus orafun_loader/orafun_loader@//localhost/xepdb1
+      echo -e "whenever sqlerror exit failure; \n
+               exec load_csv_functions; \n 
+               exit" | $ORACLE_HOME/bin/sqlplus orafun_loader/orafun_loader@//localhost/xepdb1
   tags:
     - orafun2
 
@@ -30,9 +30,9 @@ x_tables_descriptions_csv:
     - if [ ! -d /tmp/gitlab-runner ]; then mkdir /tmp/gitlab-runner; fi
     - cp x_tables_descriptions.csv /tmp/gitlab-runner/x_tables_descriptions.csv
     - export ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE; 
-      echo "whenever sqlerror exit failure; 
-      exec load_csv_x_table_descriptions; 
-      exit" | $ORACLE_HOME/bin/sqlplus orafun_loader/orafun_loader@//localhost/xepdb1
+      echo -e "whenever sqlerror exit failure;  \n
+               exec load_csv_x_table_descriptions; \n
+               exit" | $ORACLE_HOME/bin/sqlplus orafun_loader/orafun_loader@//localhost/xepdb1
   tags:
     - orafun2
 
@@ -41,8 +41,8 @@ v_tables_x_tables_mapping_csv:
     - if [ ! -d /tmp/gitlab-runner ]; then mkdir /tmp/gitlab-runner; fi
     - cp v_tables_x_tables_mapping.csv /tmp/gitlab-runner/.v_tables_x_tables_mappingcsv
     - export ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE; 
-      echo "whenever sqlerror exit failure; 
-            exec load_csv_v_tables_x_tables_mapping; 
-            exit" | $ORACLE_HOME/bin/sqlplus orafun_loader/orafun_loader@//localhost/xepdb1
+      echo -e "whenever sqlerror exit failure;  \n
+               exec load_csv_v_tables_x_tables_mapping;  \n
+               exit" | $ORACLE_HOME/bin/sqlplus orafun_loader/orafun_loader@//localhost/xepdb1
   tags:
     - orafun2
