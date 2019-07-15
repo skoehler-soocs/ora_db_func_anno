@@ -1655,6 +1655,8 @@ kkdllk|lock an object
 kkdo|OBJECTS dictionary
 kkdoloi|load objects related information
 kke|cost engine
+kkeAdd|add
+kkeAdj|adjust
 kkeTbScan|table scan
 kkeTbScanCPUCost|calculate cost of CPU
 kkeTbScanIOCost|calculate cost of IO
@@ -1739,6 +1741,7 @@ kkocnp|cost next permutation
 kkocpjoinqb|copy and join query block
 kkocpqb|copy query block: copy a query block by reparsing its SQL text
 kkocri|create index
+kkocs|cursor sharing
 kkoctx|setup context for optimizer
 kkodp|AQP
 kkoecp|evaluate constant predicate
@@ -2971,6 +2974,7 @@ ksfd_clear_pgaobjsc|clear pga objects
 ksfd_do_io_verification|do IO verification
 ksfd_get_physical_sectsz|read physical sectorsize from device
 ksfd_gosdrq|get os dependent requests
+ksfd_io|perform IO
 ksfd_odm|oracle disks manager
 ksfd_odmio|IO
 ksfd_osdrqfil|operating system dependent request 
