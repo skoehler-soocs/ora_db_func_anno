@@ -60,6 +60,7 @@ dbg|debug and diagnostics
 dbga|Unified Tracing Service
 dbgc|diagnostic framework
 dbgd|generic debug API
+dbgdChkEventIntv|check events set for value to activate debug
 dbgdCopyEventNode|transfers event information from PGA to SGA and back
 dbgdLinkEvent|link event information into the list 
 dbgdSetEvents|set event
@@ -71,6 +72,7 @@ dbgePostErrorKGE|Post the error for DDE invocation from KGE
 dbgexExplicitEndInc|explicitly end a split error processing
 dbgexPhaseII|phase 2
 dbgexProcessError|process error
+dbgpd|IPS package and diagnostics
 dbgf|diagnostic inter library compile-time service
 dbgr|automatic diagnostic repository
 dbgrl|diagnostic arb alert log
@@ -80,6 +82,8 @@ dbgrf|directory and file services
 dbgri|incident metadata services
 dbgrm|meta-data repository
 dbgt|Unified tracing service, generic trace API
+dbgtCtrl_intEvalCtrlEvent|control internal evaluate control event
+dbgtCtrl_intEvalTraceFilters|control internal evaluate trace filters
 dbgtf|directory and file services
 dbgtn|UTS viewer toolkit
 dbgtp|UTS viewer toolkit
@@ -1302,7 +1306,6 @@ kgasra2_recv_avail_2|second routine
 kgass|send
 kgass_send|routine
 kgbt|btree operations
-kgc|compression
 kgcc|compress
 kgccbuf|buffer
 kgccbz2do|bzip2 do apply bzip2 compression
@@ -1313,6 +1316,15 @@ kgccm|memory (?)
 kgcd|decompress
 kgcddo|do, main decompression function
 kgce|encryption engine
+kgcs|cloud services
+kgcs_bmiaas|(detect) bare metal IaaS
+kgcs_bmiaasgen2|(detect) bare metal IaaS second generation
+kgcs_exacloud|(detect) exacloud
+kgcs_http_url_read|read url for determination of cloud and type of cloud
+kgcs_is_non_oracle_cloud|is the instance running in an non-oracle cloud?
+kgcs_is_on_premise|is the instance running on-premises?
+kgcs_is_oracle_cloud|is the instance running in oracle cloud?
+kgcs_nimbula|is the instance running in a nimbula infrastructure?
 kgds|vos generic stack trace
 kge|error
 kgeade|add error onto the error stack
@@ -1325,12 +1337,15 @@ kgefec|fatal error code
 kgefem|format error message (null-terminated)
 kgemef|mae error message (with Va_list)
 kgepop|pop to the current top error frame
-kgerem|record error code (with already-formatted message)
-kgerev|record error code (with Va_list)
-kgerinv|record internal named error with va_list
+kger|record
+kgerem|error code (with already-formatted message)
+kgerev|error code (with Va_list)
+kgerinv|internal named error with va_list
 kgerinv_internal|or soft internal named error
-kgeriv|record internal error code with va_list
-kgesev|signal error code
+kgeriv|internal error code with va_list
+kgese|signal error
+kgesec|code
+kgesev|code (with Va_list)
 kgesin|signal a named internal error
 kgesinv|signal internal named error with va_list
 kgespf|string printf (format a message straing)
@@ -1341,9 +1356,32 @@ kgff|direct file io adapter
 kgffdcn|disconnect from kgff instance
 kgfpm|PATCH repository
 kgg|generic routines
+kggec|element cache(?)
+kggecAlloc|allocate
+kggecInitH|initialise heap
+kggfa|freeable (memory) allocation
+kggfaAlloc|allocate
+kggfaDoKghAlloc|do KGH allocation. allocate memory in KGH managed heap
+kggfaInitH|initialise heap
 kgghash|produce hash value
+kgghte|hash table
+kgghteAdd|add
+kgghteGetEle|get element
 kggmd5|functions to calculate md5 values
+kggms|map service
+kggmsAdd|add
+kggmsAddUb4|unsigned 4 bytes
+kggmsCreateStaticMaps|create static maps
+kggmsCreateMap|create map
+kggmsHash|hashing function
+kggmsHash12|12 bit
+kggmsHash16|16 bit
+kggmsHash8|8 bit
+kggmsInitMapServiceH|initialise map service heap
 kggsm|string mapping
+kggsmInit|initialise
+kggsmInitStringMapService|string map service
+kggsmCommonInit|common initialisation. 
 kgh|heap manager
 kgh_update_comment|add comment to memory chunk allocation
 kghaddex|add extent
@@ -1507,6 +1545,7 @@ kgskentsch|enter scheduler
 kgskexitsch|exit scheduler
 kgskmodruncnt|modify run count
 kgsklheld|lock held
+kgskupdcputm|update cpu time
 kgskupdbalance|update balance
 kgskuselowthreshold|use low threshold
 kgskusedynshares|use dynamic shares
@@ -1657,6 +1696,10 @@ kkdoloi|load objects related information
 kke|cost engine
 kkeAdd|add
 kkeAdj|adjust
+kkeIdx|index
+kkeSort|sorting
+kkeSortCPUCost|calculate sort CPU cost
+kkeSortCosts|calculate sort (IO) cost
 kkeTbScan|table scan
 kkeTbScanCPUCost|calculate cost of CPU
 kkeTbScanIOCost|calculate cost of IO
@@ -1667,12 +1710,15 @@ kkeapr|analyze predicates for optimization returns stat ptr
 kkeasl|process an AND chain of predicates
 kkecdn|determine cardinality of a table given single table predicates
 kkecpst|create copy of column statistics in compile time memory
+kkeds|dynamic sampling (ADS)
 kkegvl|get a value from an opndef and normalize it for cost
 kkehrd|get column statistics for a table
 kkejcd|returns cardinality of a join between to tables
 kkeosl|process an OR chain of predicates
 kkepsl|selectivity of a single predicate
 kkercs|read column statistics for an object
+kkesIOScaleFactor|calculate the factor for converting the number of blocks to IO cost
+kkesScaleIO|calculate IO cost based on the number of blocks
 kkest|statistics
 kketac|table access cost(?)
 kkevcs|set view column stats for underlying column
@@ -1874,11 +1920,15 @@ kksffr|free a frame
 kksfft|find first token
 kksh|cursor hash table
 kksheqd|clean/delete and enqueue
+kkshh|?
+kkshhcins|child insert
+kkshhcdel|child delete
 kkshin|incomplete list
 kkshinins|insert child
 kkshindel|remove child
 kkslod|cursor load callback
 kkslof|log off (?)
+kkslrev|reverse system generated bind variable to litaral
 kkslrpl|replace literals in SQL statement (cursor_sharing=force)
 kksmcAlFree|conditially segmented array allocate. 
 kkspfda|multiple context area management
@@ -2513,6 +2563,7 @@ kqlfgx|get row for access table entry, fixed table support
 kqlftl|cache fixed Table for Locks callback
 kqllod|database object load
 kqlm|multi-instance manager
+kqlmbpil|background process a pin instance lock
 kqlmcdlod|mcode heap load
 kqlnfy|notify
 kqlobjlod|object load
@@ -2930,9 +2981,20 @@ ksbt|background processes
 ksbx|Xic cross instance calls
 ksbxiaf|ksbxic (cross instance calls) message and interrupt action
 ksbxiafdomsg|ksbxic and async xic static functions
-ksc|component notifier
 kscn_to_ub8_impl|convert SCN to ub8
 kscnfy|system notifications to be passed to components
+kscs|cloud service
+kscs_cloud_hcc_enabled|should HCC be enabled?
+kscs_clouddb_provider_detect|in what cloud is this instance running
+kscs_cloudprov_ut|cloud provider utility. outputs where oracle detects it is running
+kscs_cloudsim_paramcb|cloud simulation parameter callback
+kscs_enabled|are we in a cloud?
+kscs_is_exadata_or_oracle_cloud|is this exadata or oracle cloud?
+kscs_is_non_oracle_cloud|is this a non oracle cloud?
+kscs_is_on_premise|is this on-premises?
+iscs_is_oracle_cloud|is this oracle cloud?
+kscs_process_param|process cloud related parameters for determination of services
+kscsinitcapprovider|initialize capabilities per provider
 ksd|debug internal errors
 ksdacn|action routines for parser
 ksddoa|debug support do an action
@@ -3169,12 +3231,15 @@ ksolt|lightweight threads
 ksopid_alive|pid alive check
 ksp|parameter
 kspGetInstType|validate instance_type
+ksp_param_handle_param|allocate a set of chunks for parameter data
 ksp_spfile|spfile file management
 ksp_spfile_open|open
 ksp_spfile_write|write
 kspgir|get range
 kspgpnicd|DBMS_UTILITY.KSPGPNICD GET_PARAMETER_VALUE
 kspgsp|get string parameter
+ksppt|parameter table
+kspptval|value
 ksprcvsp|receive spfile information for write to spfile
 ksq|enqueue
 ksqcnl|convert an enqueue's mode
@@ -3355,6 +3420,7 @@ ktfa|flashback archive
 ktfa_add_table_to_application|DBMS_FLASHBACK_ARCHIVE.ADD_TABLE_TO_APPLICATION
 ktfa_disable_application|DBMS_FLASHBACK_ARCHIVE.DISABLE_APPLICATION
 ktfa_disassociate_fba|DBMS_FLASHBACK_ARCHIVE.DISASSOCIATE_FBA_INTERNAL
+ktfa_do_health_check|do a health check
 ktfa_drop_application|DBMS_FLASHBACK_ARCHIVE.DROP_APPLICATION
 ktfa_enable_application|DBMS_FLASHBACK_ARCHIVE.ENABLE_APPLICATION
 ktfa_extend_mappings|DBMS_FLASHBACK_ARCHIVE.EXTEND_MAPPINGS
@@ -4256,6 +4322,7 @@ opifch|oracle side of the fetch interface
 opifcr|fetch callback - fetch a row?
 opifcs|free cursors by session close
 opigln|get long column
+opiierr|internal error
 opiino|initialize opi
 opikndf1|OPIINO: Kernel route which sits on top of the SQL*Net driver. we asusme that only MTS uses this function right before it detaches the session.
 opikndf2|OPIINO: Kernel route which sits on top of the SQL*Net driver
@@ -4817,6 +4884,7 @@ qcpiidn|identifier
 qcpilcl|logical clause
 qcpilcl0|(private) 
 qcpiltb|lock table command
+qcpisqt|sql text
 qcpitnam|table name
 qcpitnm|table name
 qcpiq|query(?)
@@ -5058,6 +5126,7 @@ qksdsFindSampleTable|find tables to sample
 qksdsDumpResult|dump results (to trace file); trace[ADS]
 qksdsInitCtx|start and initialize ADS
 qksfroIsFastDual|frolist is fast dual
+qksht|hints
 qksmm|compiler memory management
 qksmms|simulation
 qksop|compilter operand processing
@@ -5066,6 +5135,8 @@ qkspm|plan management
 qksqb|Query compilation for query blocks
 qksqbApplyToQbc|apply to QB
 qksqbApplyToQbcLoc|local implementation
+qksSage|exadata
+qkssa|sampling
 qkssm|string mapping
 qksvc|Virtual Column
 qkswc|with clause
