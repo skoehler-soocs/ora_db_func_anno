@@ -1717,6 +1717,7 @@ kkejcd|returns cardinality of a join between to tables
 kkeosl|process an OR chain of predicates
 kkepsl|selectivity of a single predicate
 kkercs|read column statistics for an object
+kkesCreateCache|create cache for statistics 
 kkesIOScaleFactor|calculate the factor for converting the number of blocks to IO cost
 kkesScaleIO|calculate IO cost based on the number of blocks
 kkest|statistics
@@ -1798,6 +1799,10 @@ kkooqb|optimize query block
 kkopm|plan management
 kkopmCheckSmbUpdate|Check if updates to the Sql Management Base are pending
 kkopq|parallel optimization
+kkopqAllocPQCtx|allocate PQ context
+kkopqInitDopComputation|initialise DOP computation
+kkopqIsDegreePolicyManual|is degree policy manual
+kkopqIsDopComputedOrParallelHinted|is DOP computed or parallel hinted
 kkoqbc|query block optimization start point
 kkosbn|sort bitmap nodes
 kkoshd|shard sql
@@ -1855,7 +1860,8 @@ kkqgbpCheckValidity|check basic validity
 kkqgbpTravChkTran|traverse, check and transform
 kkqgbpdrv|driver
 kkqj|join analysis
-kkqjf|join filter
+kkqjf|join factorization
+kkqjfChkBasicValidity|check basic validity
 kkqjfdrv|driver
 kkqjpd|predicate push down
 kkqjpdctr|traverse and transform
@@ -1866,15 +1872,18 @@ kkqolapdrv|driver
 kkqore|or-expansion
 kkqoredrv|driver
 kkqstar|star transformation
+kkqstarChkValidity|check validity
 kkqstardrv|driver
 kkqt|table
 kkqtcplog|copy log chain (query tools)
 kkqte|expansion
+kkqteCheckValidity|check validity
 kkqtedrv|driver
 kkqu|subquery unnesting
 kkqvm|view merging
 kkqvmdrv|driver
 kkqvt|vector transformation
+kkqvtCheckGeneralValidity|check general validity
 kkqvtdrv|driver
 kkr|rowsource
 kkrba|bitmap index and 
@@ -2157,6 +2166,9 @@ klm|memory
 klmalf|allocate freeable memory
 km|multi threaded/mman
 kmgs|manage (sga) space (?)
+kmgs_create_request|creates and waits for a memory resize request involving a requestor
+kmgs_immediate_req|immediate mode request interface function
+kmgs_sleep_wait|this function should be used in kmgs whenever immediate mode memory is requested from auto-sga
 kmgsdrv|driver
 kmc|virtual circuit
 kmcadq|add circuit to a queue
@@ -3169,7 +3181,7 @@ ksmals|allocate stack
 ksmapg|callback for allocating a pga extent
 ksmapply_v2|used for prepaging; apply prepage?
 ksmarfg|allocate real free pga(?)
-ksmasg|callback for allocating an sga extent
+ksmasg|callback for allocating an sga extent. the sga is fixed size
 ksmcpg|create (variable) pga
 ksmcsg|create sga
 ksmd|state object memory (?)
@@ -4892,6 +4904,7 @@ qcpl|lexer
 qcplgnt|get next token
 qcplgte|group SQL text (?)
 qcs|semantic analysis (parser)
+qcsCheckPriv|check privileges
 qcsbxl|first round of privilege checking
 qcse|expand
 qcsevw|view
@@ -4946,7 +4959,7 @@ qercoFetch|fetch
 qerdl|delete
 qerep|explosion
 qerff|fifo buffer
-qerfi|first row
+qerf|first row
 qerfl|filter definition
 qerflFetchOutside|fetch row from a row source
 qerfu|update
@@ -5114,8 +5127,10 @@ qkk|allocate
 qkn|allocate
 qknr|rowsets setup
 qks|sql
+qksSage|exadata
 qks3t|temp table transformation
 qksan|analyze
+qksbg|bind (variable) management(?)
 qksce|cursor evaluation
 qksctx|MPGE
 qksds|Dynamic Sampling Services (ADS)
@@ -5127,6 +5142,7 @@ qksdsDumpResult|dump results (to trace file); trace[ADS]
 qksdsInitCtx|start and initialize ADS
 qksfroIsFastDual|frolist is fast dual
 qksht|hints
+qksrc|result cache
 qksmm|compiler memory management
 qksmms|simulation
 qksop|compilter operand processing
@@ -5135,7 +5151,9 @@ qkspm|plan management
 qksqb|Query compilation for query blocks
 qksqbApplyToQbc|apply to QB
 qksqbApplyToQbcLoc|local implementation
-qksSage|exadata
+qksqbCreateName|create name
+qksqbGenerateName|generate name
+qksqbRegister|register
 qkssa|sampling
 qkssm|string mapping
 qksvc|Virtual Column
@@ -5217,6 +5235,7 @@ qosdDSResExternal|DBMS_SPD_INTERNAL.DS_RES_INTERNAL
 qosdFlushSPD|DBMS_SPD_INTERNAL.FLUSH_SPD_CALLOUT
 qosdGetFObjKeyFromStmt|get stat/DS(?) results using sql text (stmt)?
 qosdImportSPD|DBMS_SPD_INTERNAL.IMPORT_SPD_CALLOUT
+qosdInitDirCtx|initialize directives context
 qosdUB8ToSqlId|DBMS_SPD_INTERNAL.UB8_TO_SQLID
 qosdVecbit|DBMS_SPD_INTERNAL.VECBIT
 qosdgelc|DBMS_STATS_INTERNAL.GET_EXP_LIST_CALLOUT
