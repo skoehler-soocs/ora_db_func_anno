@@ -226,6 +226,7 @@ dteerr|date error handler
 err|error recovery
 erroep|oracle error position
 eva|evaluate
+evacst|cast
 evadid|date: internal date to date format
 evadis|date: internal date to string
 evadsd|date string to date
@@ -3168,6 +3169,7 @@ kslskgs|spin get of shared latch
 kslwait|wait for n centi-seconds or until posted
 kslwaitctx|wait context; wait until timeout
 kslwaitns|wait to be awakened w/o calling into the db scheduler
+kslwat|wat for event
 kslwlmod|wait list modification
 kslwlscan|scan write list
 kslwt|wait interface
