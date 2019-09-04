@@ -1867,7 +1867,8 @@ kkqjfdrv|driver
 kkqjpd|predicate push down
 kkqjpdctr|traverse and transform
 kkqjpddrv|driver
-kkqoj|outer join?
+kkqoj|outer join
+kkqojeanl|expression analyze
 kkqolap|olap
 kkqolapdrv|driver
 kkqore|or-expansion
@@ -3038,7 +3039,8 @@ ksedst1|stack trace 1 helper
 ksepop|perform cleanup when an error frame is being popped
 kserec1|record an error code
 kserec4|record an error code
-ksesec1|recovery operations
+ksesec0|signal an error code
+ksesec1|signal an error code
 ksesin|signal an internal error (named)
 ksf|functions
 ksfd|disk IO
@@ -3298,6 +3300,7 @@ ksu|user
 ksu_detactive_tac|deactivete time accounting
 ksu_dispatch_tac|dispatch timed-out actions (updates wait interface)
 ksu_update_eoc_stats|update end of call state(?)
+ksucin|check interrupt
 ksuclc|cleanup current call
 ksucln|cleanup detached process
 ksuclnwt|wait for specified time in seconds
@@ -4487,7 +4490,9 @@ ph2blo|idl node D_BLOCK, D_DECL
 ph2exp|process IDL class EXP
 ph2ext|process IDL class EXP - top level
 ph2gbi|initialize bind variable type information
+ph2ima|images a
 ph2its|process items
+ph2of1|D_F_CALL or D_PARM_C
 ph2obl|outermost block, outermost D_BLOCK in a body
 ph2qlb|perform a schema.table lookup
 ph2qlk|lookup the set of tables in a from clause in a database
@@ -4497,6 +4502,7 @@ ph2qst|main routine for sql statements, IDL node Q_SQL_ST
 ph2qtx|IDL class TAB_EXP
 ph2sbo|IDL node D_S_BODY
 ph2sms|process statements
+ph2stm|statement(?)
 ph2uni|IDL class UNIT_BODY
 pha|semantics
 phdite|immediate type (S_OBJ_TY) of expressions
