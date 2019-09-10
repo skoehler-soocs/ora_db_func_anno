@@ -211,7 +211,7 @@ XmlDomSetAttrNS|namespace aware version
 XmlDomSetAttrNode|set attribute node
 XmlDomSetAttrNodeNS|namespace aware version
 XmlDomSetAttrValue|sets an attribute's value
-XmlDomSetAttrValueStream sets an attribute's value via orastream
+XmlDomSetAttrValueStream|sets an attribute's value via orastream
 XmlDomSetAttrValueStreamVA|oracle extension
 XmlDomSetBaseURI|set base URI for document
 XmlDomSetCharData|set data for node
