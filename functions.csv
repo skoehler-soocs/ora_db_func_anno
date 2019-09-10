@@ -18,6 +18,360 @@ OCILobLoadFromFile|DBMS_LOB.KKXL_LOADFROMFILE
 OCILobSetOptions|DBMS_LOB.KKXL_SETOPTIONS
 OCIStmtFetch|fetch
 OCIStmtExecute|execute
+XdkDomNodeTest|returns true if node complay with xpath node test
+XmlAccess|set access-method callbacks for URL
+XmlConvert|cert compiler-encoding string to data encoding
+XmlCreateDTD|create DTD
+XmlCreateDocument|create document (node)
+XmlCreateDocumentWithMem|create document (node) using different memory management structure
+XmlCreateNew|create an xml developers toolkit xmlctx
+XmlDestroy|destroy an xmlctx
+XmlDocSetSecurityFunction|set up the security violation call function
+XmlDomAddTextElem|adds a text-containing element
+XmlDomAppendData|append data to end of node's current data
+XmlDomClearLastError|clears the last error for a given document
+XmlDomCleanNode|clean a node (free dom allocations)
+XmlDomCloneNode|clone a node
+XmlDomCompareDocOrder|compare the document order of two nodes
+XmlDomCreateAttr|create attribute node
+XmlDomCreateAttrLen|create attribute node with length
+XmlDomCreateAttrNS|create attribute node with namespace information
+XmlDomCreateAttrNSLen|create attribute node with namespace information
+XmlDomCreateCDATA|create cdata node 
+XmlDomCreateCDATALen|create cdata node with its data content length passed in
+XmlDomCreateComment|create comment node 
+XmlDomCreateCommentLen|create comment node with the data length given
+XmlDomCreateDocumentWithMemFlag|create document (node) using different memory management structure
+XmlDomCreateElem|create an element node
+XmlDomCreateElemLen|create an element node
+XmlDomCreateElemNS|create an element node with namespace information
+XmlDomCreateElemNSLen|create an element node with namespace information
+XmlDomCreateEntityRef|create entity reference node
+XmlDomCreateFragment|create a document fragment
+XmlDomCreateNodeIter|create node iterator object
+XmlDomCreatePI|create PI node
+XmlDomCreatePILen|create PI node with its target and data length passed in
+XmlDomCreateRange|create range object
+XmlDomCreateText|create text node 
+XmlDomCreateTextLen|create text node with length
+XmlDomCreateTreeWalker|create tree walker object
+XmlDomDeleteData|remove part of node's data
+XmlDomFreeNode|free a node allocation with XmlDomCreateXXX
+XmlDomFreeNodeList|free a node list return by XmlDomGetElemsByTag etc
+XmlDomFreeString|frees a string allocated by XmlDomSubstringData etc
+XmlDomGetAttr|return attribute's value given its name
+XmlDomGetAttrLocal|returns an attribute's namespace local name as NULL-terminated string
+XmlDomGetAttrLocalLen|returns an attribute's namespace local name as length encoded string
+XmlDomGetAttrNS|and URI
+XmlDomGetAttrName|returns an attribute's name as NULL-terminated string
+XmlDomGetAttrNameLen|returns an attribute's name as length encoded string
+XmlDomGetAttrNode|get attribute by name
+XmlDomGetAttrNodeNS|namespace aware version
+XmlDomGetAttrPrefix|returns an attribute's namespace prefix
+XmlDomGetAttrSpecified|returns a flag saying whether an attribute was explicitly created
+XmlDomGetAttrURI|returns an attribute's namespace URI as NULL-terminated string
+XmlDomGetAttrURILen|returns an attribute's namespace URI as length encoded string
+XmlDomGetAttrValue|returns an attribute's value as NULL-terminated string
+XmlDomGetAttrValueLen|returns an attribute's value as length encoded string
+XmlDomGetAttrValueStream|returns an attribute's value via orastream
+XmlDomGetAttrValueStreamVA|oracle extension
+XmlDomGetAttrs|return attributes of a node
+XmlDomGetBaseURI|returns the base URI for a document
+XmlDomGetCharData|return data for node
+XmlDomGetCharDataLength|return length of data for node
+XmlDomGetChildNodes|return children of a node
+XmlDomGetChildText|return text of named element
+XmlDomGetChildren|obtain children elements
+XmlDomGetChildrenByTag|get children of element with tag name
+XmlDomGetChildrenByTagNS|namespace aware version
+XmlDomGetDTD|get dtd (document type definition) for document
+XmlDomGetDTDEntities|get entities of dtd
+XmlDomGetDTDInternalSubset|get dtd's internal subset
+XmlDomGetDTDName|get name dtd
+XmlDomGetDTDNotations|get notations dtd
+XmlDomGetDTDPubID|get dtd's public id
+XmlDomGetDTDSysID|get dtd's system id
+XmlDomGetDecl|returns a document's xmldecl information
+XmlDomGetDefaultNS|get the default namespace for a node
+XmlDomGetDocElemsByID|get document elements given ID
+XmlDomGetDocElemsByTag|obtain doc elements
+XmlDomGetDocElemsByTagNS|namespace aware version
+XmlDomGetDocOrder|get document order for a node
+XmlDomGetElem|get top-level element for document
+XmlDomGetElemsByTag|get elements with given URI and localname
+XmlDomGetElemsByTagNS|namespace aware version
+XmlDomGetEntityNotation|get entity's notation
+XmlDomGetEntityPubID|get entity's public id
+XmlDomGetEntitySysID|get entity's system id
+XmlDomGetEntityType|returns a boolean for an entity describing whether its is general (true) or parameter (false)
+XmlDomGetEnvHdl|get the external env handler from the root doc node
+XmlDomGetFirstAttr|return first attribute node of an element node
+XmlDomGetFirstChild|returns first child of node
+XmlDomGetFirstPfnsPair|get first prefix namespace pair
+XmlDomGetPIData|get processing instruction's data
+XmlDomGetPITarget|get processing instruction's target
+XmlDomGetLastChild|returns last child of node
+XmlDomGetLastError|return last error code for document
+XmlDomGetLastErrorStr|return last error message for document
+XmlDomGetNextAttr|return the next attribute node of the input attribute node
+XmlDomGetNextPfnsPair|get subsequent prefix namespace pair
+XmlDomGetNextSibling|return next sibling of node
+XmlDomGetNamedItem|return named node from list
+XmlDomGetNamedItemNS|namespace aware version
+XmlDomGetNodeListItem|return nth node in a node list. the first item is index 0.
+XmlDomGetNodeListLength|return length of node list
+XmlDomGetNodeLocal|get local part of node's qualified name as NULL-terminated string
+XmlDomGetNodeLocalLen|get local part of node's qualified name as length encoded string
+XmlDomGetNodeMapItem|return nth node in list
+XmlDomGetNodeMapLength|return length of named node map
+XmlDomGetNodeMiscInfo|return info about a node
+XmlDomGetNodeName|get node's name as NULL-terminated string
+XmlDomGetNodeNameLen|get node's name as length encoded string
+XmlDomGetNodePrefix|get namespace prefix as NULL-terminated string
+XmlDomGetNodePrefixLen|get nodes prefix as length-encoded string
+XmlDomGetNodeQNameID|get the qname of the node as ub8 integer id
+XmlDomGetNodeSchType|get node xmlschema type
+XmlDomGetNodeSecurity|get the security check flag of the node
+XmlDomGetNodeType|get node numeric type code
+XmlDomGetNodeTypedValue|get node xmlschema typed value
+XmlDomGetNodeURI|return namespace URI of node as NULL-terminated string
+XmlDomGetNodeURILen|return namespace URI of node as length-encouded string
+XmlDomGetNodeValue|get node's value as NULL-terminated string
+XmlDomGetNodeValueLen|get node's value as length encoded string
+XmlDomGetNodeValueStream|get node's value via orastream
+XmlDomGetNodeValueStreamVA|oracle extension
+XmlDomGetOwnerDocument|get the owner document of the node
+XmlDomGetOwnerElem|returns an attribute's owning element
+XmlDomGetParentNode|get parent node
+XmlDomGetPrevSibling|return previous sibling of node
+XmlDomGetSchema|returns URI of schema associated with document
+XmlDomGetSourceEntity|return the extern entity node whose inclusion caused the creation of the given node
+XmlDomGetSourceLine|returns the line# of the original source where the node started
+XmlDomGetSourceLocation|return source location (path, URI, etc) of node
+XmlDomGetTag|return an element node's tagname
+XmlDomGetXSLParentNode|get parent node per XSL spec
+XmlDomHasAttr|does named atribute exist
+XmlDomHasAttrNS|namespace aware version
+XmlDomHasAttrs|test if element has attributes
+XmlDomHasChildNodes|test if node has children
+XmlDomImportNode|import a node from another dom
+XmlDomImportNodeWithXQSem|create an new dom node from another dom with xquery semantics and import it into the target node
+XmlDomInsertAfter|insert new child into node's list of children
+XmlDomInsertAppendChild|append new child to node's list of children
+XmlDomInsertBefore|insert new child into node's list of children
+XmlDomInsertData|insert string into node's current data
+XmlDomIsNamespaceNode|returns true if node is namespace attribute
+XmlDomIsNodeNilled|informs if the node is xmlschema declared as "nilled"
+XmlDomIsSchemaBased|indicate whether a schema is associated with a document
+XmlDomIterDetach|detach a node iterator (deactivate it)
+XmlDomIterPrevNode|returns previous node for iterator
+XmlDomIterNextNode|returns next node for iterator
+XmlDomMgrWithPrevTxtOrCrtTxtNodeLen|create a text/cdata/comment node and merge it with previous text/cdata/comment node
+XmlDomNormalize|normalize a node, which means merge adjacent text nodes
+XmlDomNumAttrs|return number of attributes of element
+XmlDomNumChildNodes|return number of children of node
+XmlDomPrefixToURI|get namespace URI for prefix
+XmlDomRangeClone|clone a range
+XmlDomRangeCloneContents|clone contents selected by a range
+XmlDomRangeCollapse|collapse range to either start point or end point
+XmlDomRangeCompareBoundaryPoints|compare boundary points of two ranges
+XmlDomRangeDeleteContents|delete content selected by a range
+XmlDomRangeDetach|detach a range
+XmlDomRangeExtractContents|extract contents selected by a range
+XmlDomRangeGetCollapsed|return whether the range is collapsed
+XmlDomRangeGetCommonAncestor|return deepest common ancestor node of two boundary points
+XmlDomRangeGetDetached|return whether the range is detached
+XmlDomRangeGetEndContainer|return range end container node
+XmlDomRangeGetEndOffset|return range end offset
+XmlDomRangeGetStartContainer|return range start container node
+XmlDomRangeGetStartOffset|return range start offset
+XmlDomRangeIsConsistent|return whether the range is consistent
+XmlDomRangeSelectNode|select a node as a range
+XmlDomRangeSelectNodeContents|define range to select node contents
+XmlDomRangeSetEnd|set the end point
+XmlDomRangeSetEndBefore|set the end point before a node
+XmlDomRangeSetEndAfter|set the end point after a node
+XmlDomRangeSetStart|set the start point
+XmlDomRangeSetStartAfter|set the start point after a node
+XmlDomRangeSetStartBefore|set the start point before a node
+XmlDomRemoveAttr|remove attribute with specified name
+XmlDomRemoveAttrNS|and URI
+XmlDomRemoveAttrNode|node
+XmlDomRemoveChild|remove an existing child node
+XmlDomRemoveNamedItem|remove node from named node map
+XmlDomRemoveNamedItemNS|namespace aware version
+XmlDomRenameNode|update the name of a node (element/attr only)
+XmlDomRenameNodeNS|update the name, uri 
+XmlDomReplaceChild|replace an existing child of a node
+XmlDomReplaceData|replace part of node's data
+XmlDomSaveString|saves a string permanently in a document's memory pool
+XmlDomSaveString2|unicode
+XmlDomSetAttr|set new attribute for element
+XmlDomSetAttrNS|namespace aware version
+XmlDomSetAttrNode|set attribute node
+XmlDomSetAttrNodeNS|namespace aware version
+XmlDomSetAttrValue|sets an attribute's value
+XmlDomSetAttrValueStream sets an attribute's value via orastream
+XmlDomSetAttrValueStreamVA|oracle extension
+XmlDomSetBaseURI|set base URI for document
+XmlDomSetCharData|set data for node
+XmlDomSetDTD|set dtd (document type definition) for document
+XmlDomSetDecl|sets a document's xmldecl information
+XmlDomSetDefaultNS|set default namespace for a node
+XmlDomSetDocFragOrder|set document order for all nodes within a fragment
+XmlDomSetDocOrder|set document order for all nodes
+XmlDomSetEnvHdl|store external env handler into the root doc node
+XmlDomSetLastError|set last error code for document
+XmlDomSetNamedItem|set node in named node list
+XmlDomSetNamedItemNS|namespace aware version
+XmlDomSetNodePrefix|set namespace prefix of node
+XmlDomSetNodeSecurity|set/clear the security check flag for the node
+XmlDomSetNodeValue|set node's value as NULL-terminated string
+XmlDomSetNodeValueLen|set node's value as length encoded string
+XmlDomSetNodeValueStream|sets node's value via orastream
+XmlDomSetNodeValueStreamVA|oracle extension
+XmlDomSetProperties|set dom properties
+XmlDomSetPropertiesVA|oracle extension
+XmlDomXSLOutput|handle xsl's xls:output directive
+XmlDomSplitText|split text node into two
+XmlDomSubstringData|return substring of node's data
+XmlDomSync|synchronized the persistent version of a document with its dom
+XmlDomTreatDocAsNonSchemaBased|treat the xml dom s non-schema based
+XmlDomValidate|validate node against current dtd
+XmlDomWalkerFirstChild|return first visible child of the current node
+XmlDomWalkerGetCurrentNode|return (get) current node
+XmlDomWalkerGetRoot|return (get) root node
+XmlDomWalkerLastChild|return last visible child of the current node
+XmlDomWalkerNextNode|return next visible node
+XmlDomWalkerNextSibling|return next sibling node
+XmlDomWalkerParentNode|return parent node
+XmlDomWalkerPrevNode|return previous node
+XmlDomWalkerPrevSibling|return previous sibling node
+XmlDomWalkerSetCurrentNode|set current node
+XmlDomWalkerSetRoot|set the root node
+XmlFreeDocument|free a document (release all resources)
+XmlGetEncoding|returns data encoding in use by xml context
+XmlHasFeature|determine if dom feature is implemented
+XmlIsSimple|returns a flag saying whether the context's data encoding is simple, single byte per character like ASCI or EBCDIC 
+XmlIsUnicode|returns a flag saying whether the context's data encoding is unicode, UTF-16 with two byte per character
+XmlLoadDom|load (parse) an xml document and produce a dom
+XmlLoadSax|load (parse) an xml document from and produce sax events
+XmlLoadSaxVA|varargs
+XmlSaveDom|saves (serializes, formats) an xml document 
+XmlSaveDomVA|varargs
+XmlSetExternalAccess|enable or disable file system and http access
+XmlSetWhiteList|set a new whitelist for the xmlctx
+XmlSoapAddBodyElement|adds an element soap message body
+XmlSoapAddFaultReason|add additional reason to fault
+XmlSoapAddFaultSubDetail|add additional child to fault detail
+XmlSoapAddHeaderElement|adds an element ot a soap header
+XmlSoapCall|send a soap message and wait for reply
+XmlSoapCreateConnection|create a soap connection object
+XmlSoapCreateCtx|create and return a soap context
+XmlSoapCreateMsg|create and return an empty soap message
+XmlSoapDestroyConnection|destroy a soap connection object
+XmlSoapDestroyCtx|destroy a soap context
+XmlSoapDestroyMsg|destroy a soap message create w/XmlSoapCreateMsg
+XmlSoapError|get error message(s)
+XmlSoapGetBody|return a soap message's envelope body
+XmlSoapGetBodyElement|gets an element from a soap message body
+XmlSoapGetEnvelope|return a soap message's envelope
+XmlSoapGetFault|return fault code, reason and details
+XmlSoapGetHeader|return a soap message's envelope header
+XmlSoapGetHeaderElement|gets an element from a soap header
+XmlSoapGetMustUnderstand|get mustunderstand attr for soap hdr elem
+XmlSoapGetReasonLang|get a lang of a reason with a particular index
+XmlSoapGetReasonNum|get number of reasons in fault element
+XmlSoapGetRelay|get relay header element property
+XmlSoapGetRole|get role for soap header element
+XmlSoapHasFault|does soap message have a fault?
+XmlSoapSetFault|set fault in soap message
+XmlSoapSetMustUnderstand|set mustunderstand attr for soap hdr elem
+XmlSoapSetRelay|set relay header element property
+XmlSoapSetRole|set role for soap header element
+XmlUrl64Encode|return Base64 encoded input string
+XmlUrlBufferCon|return I/O buffer (and size) for connection
+XmlUrlClose|close open URL
+XmlUrlCloseCon|close connection
+XmlUrlCompose|turn parts into final URL
+XmlUrlComposeCon|compose final URL from connection's components
+XmlUrlCopy|copys an xmlurlpart
+XmlUrlDecode|decode hex encoding
+XmlUrlEncode|hex encode URL
+XmlUrlErrMsgCon|return last error message for connection
+XmlUrlError|return http server error message
+XmlUrlErrorCon|return last error code for connection
+XmlUrlFlushCon|flush connection buffer
+XmlUrlGetCallback|get access callbacks
+XmlUrlGetStream|get access-method stream (context-wide)
+XmlUrlHandleCon|return handles for connection
+XmlUrlHeaderCon|set additional http header value
+XmlUrlInit|initialize an LPU context
+XmlUrlInitCon|initialize LPU in multi-connection mode
+XmlUrlInitConVA|takes va_list 
+XmlUrlIsDefault|is there a default resolver in effect
+XmlUrlMakeCon|make connection object
+XmlUrlMakeCon|takes va_list
+XmlUrlOpen|open URL for reading
+XmlUrlOpenCon|open a connection
+XmlUrlOpenConVA|using va_list
+XmlUrlOpenIrl|open IRL for reading
+XmlUrlParse|parse an URL into parts
+XmlUrlParseIrl|parse a IRL into parts
+XmlUrlPath|return localised path part of URL
+XmlUrlRead|read data from open URL
+XmlUrlReadCon|read data from connection
+XmlUrlReadConVA|using va_list
+XmlUrlResolve|resolve relative URL references
+XmlUrlSetBufferCon|set the buffer
+XmlUrlSetCallback|set access callbacks
+XmlUrlSetStream|set access-method stream (context-wide)
+XmlUrlSetStreamCon|set access-method stream (per connection)
+XmlUrlSetStreamFlag|set the stream callback flag for an access type to true or false
+XmlUrlSimplify|simplify url paths
+XmlUrlTerm|terminate an LPU context
+XmlUrlTermCon|terminate a connection
+XmlVersion|returns version string for XDK
+XmlXvmCompileBuffer|compile xslt stylesheet from buffer into bytecode
+XmlXvmCompileDom|compile xslt stylesheet from DOM into bytecode
+XmlXvmCompileFile|compile xslt stylesheet from file into bytecode
+XmlXvmCompileURI|compile xslt stylesheet from URI into bytecode
+XmlXvmCompileXPath|compiles an xpath expression
+XmlXvmCreate|create an xslt virtual machine
+XmlXvmCreateComp|create an xslt compiler object. the xslt compiler is used to compile xslt stylesheets into bytecode
+XmlXvmDestroy|destroys an xslt virtual machine
+XmlXvmDestroyComp|destroys an xslt compiler object
+XmlXvmEvaluateXPath|evaluate already-compiled xpath expression
+XmlXvmGetBytcodeLength|returns the bytecode length
+XmlXvmGetObjectBoolean|get boolean value of xpath object
+XmlXvmGetObjectNSetArray|get all nodes from nodeset-type xpath object
+XmlXvmGetObjectNSetNode|get node from the nodeset-type xpath object
+XmlXvmGetObjectNSetNum|get the number of nodes in nodeset-type xpath object
+XmlXvmGetObjectNumber|get number from xpath object
+XmlXvmGetObjectString|get string from xpath object
+XmlXvmGetObjectType|get xpath object type
+XmlXvmGetOutputDom|returns the output dom
+XmlXvmGetXMLCtx|get the xmlctx for the xmlxvm
+XmlXvmResetComp|resets an xslt compiler object
+XmlXvmResetParams|resets the stylesheet top-level text params
+XmlXvmSetBaseURI|sets the base URI for the xsltvm
+XmlXvmSetBytecodeBuffer|set the compiled bytecode
+XmlXvmSetBytecodeFile|set the compiled bytecode from file
+XmlXvmSetBytecodeURI|sets the compiled bytecode
+XmlXvmSetDebugFlags|set flags for debug mode, in lieu of setting a callback function
+XmlXvmSetDebugFunc|set a callback function for debugging
+XmlXvmSetOutputDom|sets the xsltvm to output to document node
+XmlXvmSetOutputEncoding|sets the encoding for the xsltvm output
+XmlXvmSetOutputOraStream|sets the xsltvm output to an orastream
+XmlXvmSetOutputSax|sets xsltvm to output sax
+XmlXvmSetOutputStream|set xsltvm to a user-defined stream
+XmlXvmSetTextParam|sets the stylesheet top-level text param
+XmlXvmSetTextParamEx|and returns XMLERR_PARAM_SET_SET if an attempt is made to set a parameter that's already been set
+XmlXvmSetXMLCtx|reset the xmlctx for the xmlxvm
+XmlXvmTransformBuffer|run compiled xslt stylesheet on xml document in memory
+XmlXvmTransformDOM|run compiled xslt stylesheet on xml document as DOM
+XmlXvmTransformFile|run compiled xslt stylesheet on xml document in file
+XmlXvmTransformURI|run compiled xslt stylesheet on xml document from URI
 adbdrv|alter database driver
 ain|alter index
 ainPDrop|drop an index partition
@@ -29,6 +383,9 @@ apacb|connect by
 apadrv|drive access path selection for a sql command
 apakkoqb|drive access path analysis for every query block
 apaqbd|drive access path analysis for every query block
+appendData|Appends to a character node's data [DOM 1]
+appendChild|Appends a new child to a parent [DOM 1]
+associateDomDocument|Mechanism to associate xdkdomdoc with xmlctx [DOM X]
 atb|alter table
 atbedml|enable dml locks
 atbdrv|driver
@@ -45,7 +402,21 @@ ausdrv|driver
 bam|PLSQL_KG_Interface
 cdb|create database
 cdbdrv|driver
+cloneNode|Creates a duplicate of a node [DOM 1]
 cls|clusterware integration
+createAttribute|Creates an attribute node (non-namespace) [DOM 1]
+createAttributeNS|Creates an attribute node (namespace-aware) [DOM 2]
+createCDATASection|Creates a CDATA node [DOM 1]
+createComment|Creates a comment node [DOM 1]
+createDocument|Creates a new Document node (non-namespace) [DOM X]
+createDocumentNS|Creates a new Document node (namespace-aware) [DOM 2 createDocument]
+createDocumentFragment|Creates an empty document fragment node [DOM 1]
+createDocumentType|Creates a new DTD node [DOM 2]
+createElement|Creates an element node (non-namespace) [DOM 1]
+createElementNS|Creates an element node (namespace-aware) [DOM 2]
+createEntityReference|Creates an entity reference node [DOM 1]
+createProcessingInstruction|Creates a PI node [DOM 1]
+createTextNode|Creates a text node [DOM 1]
 csy|create synonym
 ctc|create table or cluster
 ctccom_cleanup_online_move|DBMS_PART.CLEANUP_ONLINE_OP_INTERNAL
@@ -155,6 +526,7 @@ dbsclose|close
 dbsgnmchg|global name change
 dbslrn|log/db files rename
 del|delete
+deleteData|Removes part of a character node's data [DOM 1]
 delexe|execute
 delrow|row procedure used by KXRD to delete or lock a row
 dgliaio|DBMS_INTERNAL_LOG_STDBY.APPLY_IS_OFF
@@ -239,6 +611,59 @@ expcop|evaluate callback operator list
 expeal|evaluate its argument AND list. It returns true if argument is true, false if argument is false, and unknown if argument is unkown.
 expepr|evaluate the argument predicate. It returns the result of the evaluation. If the operators ODFFNEARG flas is set (currently only for OPTLNN), dont evaluate the operands.
 fplib|filter projection library (exadata smartscan)
+freeElements|Frees an allocated list of element nodes [DOM X]
+freeNode|Frees memory allocated by a node [DOM X]
+getAttrLocal|Returns an attribute's namespace local name [DOM X]
+getAttrName|Returns an attribute's name [DOM 1 Attr.getName]
+getAttrNamespace|Returns an attribute's namespace URI [DOM X]
+getAttrPrefix|Returns an attribute's namespace prefix [DOM X]
+getAttrQualifiedName|Returns an attribute's name [DOM X]
+getAttrSpecified|Returns an attribute's specified flag [DOM 1 Attr.getSpecified]
+getAttrValue|Returns an attribute's value [DOM 1 Attr.value attribute]
+getAttribute|Returns an attribute's value given its name [DOM 1]
+getAttributes|Returns the attributes of an element [DOM 1]
+getAttributeIndex|Returns an attribute by index [DOM X]
+getAttributeNode|Returns the named attribute of an element [DOM 1]
+getCharData|Returns the data for a character node [DOM 1 getData]
+getCharLength|Returns the length of a character node's data [DOM 1 getLength]
+getChildNode|Return an item from a node map by index [DOM 1 item]
+getChildNodes|Returns a node's children [DOM 1]
+getContentModel|Returns the content model of the named element [DOM X]
+getDocOrder|Returns the document order of a node [DOM X]
+getDocType|Returns the current document's DTD [DOM 1 Document.DocumentType attribute]
+getDocTypeEntities|Returns a DTD's general entities [DOM 1 DocumentType.getEntities]
+getDocTypeName|Returns the name of a DTD [DOM 1 DocumentType.getName]
+getDocTypeNotations|Returns a DTD's notations [DOM 1 DocumentType.getNotations]
+getDocument|Returns the Document node [DOM X]
+getDocumentElement|Returns the root element node [DOM 1]
+getElementByID|Returns the element with the given ID [DOM 2]
+getElementsByTagName|Returns the elements matching a name (non-namespace) [DOM 1]
+getElementsByTagNameNS|Returns the elements matching a namespace URI and local [DOM 2]
+getEncoding|Returns name of data encoding [DOM X]
+getEntityNotation|Returns the notation name of an entity [DOM 1 Entity.getNotationName]
+getEntityPubID|Returns the public ID of an entity [DOM 1 Entity.getPublicId]
+getEntitySysID|Returns the system ID of an entity [DOM 1 Entity.getSystemId]
+getFirstChild|Returns the first child of a node [DOM 1]
+getImplementation|Returns a DOM implementation structure [DOM 1]
+getLastChild|Returns the last child of a node [DOM 1]
+getNamedItem|Returns an item from a node map by name [DOM 1]
+getNextSibling|Returns the next sibling of a node [DOM 1]
+getNodeLocal|Returns namespace local name of a node [DOM 2 Node.localName attribute]
+getNodeMapLength|Returns the length of a node map [DOM 1 NamedNodeMap.length attribute]
+getNodeName|Returns name of a node [DOM 1]
+getNodeNamespace|Returns namespace URI of a node [DOM 2 Node.namespaceURI attribute]
+getNodePrefix|Returns namespace prefix of a node [DOM 2 Node.prefix attribute]
+getNodeQualifiedName|Returns name of a node [DOM 2 Node.nodeName attribute]
+getNodeType|Returns the type code of a node [DOM 1]
+getNodeValue|Returns value (character data) of a node [DOM 1]
+getNotationPubID|Returns the public ID of a notation [DOM 1 Notation.publicId attribute]
+getNotationSysID|Returns the system ID of a notation [DOM 1 Notation.systemId attribute]
+getOwnerDocument|Returns the document containing a node [DOM 1]
+getPIData|Returns the data of a PI [DOM 1 ProcessingInstruction.getData]
+getPITarget|Returns the target of a PI [DOM 1 ProcessingInstruction.getTarget]
+getParentNode|Returns a node's parent [DOM 1]
+getPreviousSibling|Returns the previous sibling of a node [DOM 1]
+getTagName|Returns the tagName of a node [DOM 1]
 getpid|get process id
 gipc|grid inter process calls
 gra|grant/revoke
@@ -321,6 +746,9 @@ gwm_db_info|DBMS_GSM_FIX.GWM_DB_INFO
 gwm_call_schagent|DBMS_GSM_FIX.GWM_CALL_SCHAGENT
 gwm_trace_output|DBMS_GSM_FIX.GWM_TRACE_OUTPUT
 gwm_validate_db|DBMS_GSM_FIX.GWM_VALIDATE_DB
+hasAttributes|Determines if an element has attributes [DOM X]
+hasChildNodes|Determines if a node has children [DOM 1]
+hasFeature|Tests if the DOM implementation supports a feature [DOM 1]
 hep|PLSQL_KG_Interface
 hcsOdboClosePCo|DBMS_MDX_ODBO.CLOSE_CALLOUT
 hcsOdboConvertFormatStringPCo|DBMS_MDX_ODBO.EXECUTE_CONVERT_FMT_STR
@@ -335,8 +763,11 @@ hcsOdboLogCloseSchemaRowsetPCo|DBMS_MDX_ODBO.LOG_CLOSE_SCHEMA_ROWSET
 hcsOdboLogSchemaRowsetPCo|DBMS_MDX_ODBO.LOG_SCHEMA_ROWSET
 hcsOdboMdxComponentIdPCo|DBMS_MDX_ODBO.EXECUTE_MDX_COMPONENT_ID
 hsh|PLSQL_KG_Interface
+importNode|Copies a node from one document to another [DOM 2]
 ins|insert
 insdlexe|direct load execute
+insertBefore|Inserts a new child into a parent [DOM 1]
+insertData|Inserts into a character node's data [DOM 1]
 insexe|execute
 insidx|Insert indexed keys into the indexes after each row is inserted into the table
 insini|initialisation
@@ -345,6 +776,9 @@ ipc|inter process calls
 ipclw|lightweight (exafusion)
 ipcor|on wire
 ipp|internal probe processor capabilities(?)
+isSingleChar|Returns single-byte data encoding flag [DOM X]
+isStandalone|Returns value of standalone flag [DOM X]
+isUnicode|Returns Unicode data flag [DOM X]
 joe|java runtime environment(?)
 jom|java
 jon|java
@@ -4013,6 +4447,7 @@ kzcicrStatsEncryptNum|DBMS_CRYPTO_INTERNAL.STATS_ENCRYPT_NUM_CALLOUT
 kzcicrStatsEncryptRaw|DBMS_CRYPTO_INTERNAL.STATS_ENCRYPT_RAW_CALLOUT
 kzcicrUpdateSensitiveStats|DBMS_CRYPTO_INTERNAL.UPDATESENSITIVESTATS
 kzck|encryption support
+kzckmcre|key management create keystore
 kzctx|context routines
 kzctxcdbli|construct DB link info
 kzctxecc|DBMS_SESSION.KZCTXECC CLEAR_CONTEXT
@@ -4256,7 +4691,9 @@ nioqwa|wait
 nl|library
 nldatxt|put current date/time into string
 nn|names
-npi|network program interface
+nodeValid|Determines if a node is valid again a DTD [DOM X]
+normalize|Merges adjacent text nodes in an element [DOM 1]
+npi|program interface
 npiall|use bundled execution
 npiane|add new nco entry
 npibeg|maybe begin a distributed transaction branch, release local DX
@@ -4307,7 +4744,79 @@ nttrd|basic read
 ntus|unix domain sockets
 ntz|SSL
 nu|trace route utility
+numAttributes|Returns the number of attributes of an element [DOM X]
+numChildNodes|Returns the number of children of a node [DOM X]
 nz|security
+nzCEW_CreateEmptyWallet|create empty wallet
+nzICE_Install_Cert_ext|installs a cert into a wallet with trustflag value set for the certificate
+nzt|toolkit
+nztDeEnvelope|reverse ntEnvelope
+nztDecrypt|symmetric key decryption
+nztEncrypt|symmetric key encryption
+nztEnvelope|sign then encrypt data for recipient(s)
+nztHash|generate hash
+nztKeyedHash|generate keyed hash
+nztSeedRandom|see the random number generator
+nztSign|generate an attached signature
+nztValidate|validate an identity
+nztVerify|verify an identity
+nztbb|buffer block
+nztbbGrowBlock|brow initialized buffer block by 'inc' bytes
+nztbbInitBlock|initialise a buffer bock
+nztbbPurgeBlock|purge the memory used within a buffer block
+nztbbReuseBlock|reuse a buffer block
+nztbbSetBlock|set block to known state
+nztbbSizeBlock|find the size of a buffer block
+nztcts_CipherSpecToStr|converts the cipher spec code to string
+nzte|persona/certificates
+nzteClosePersona|close a persona
+nzteCreatePersona|create a persona
+nzteDestroyPersona|destroy a persona
+nzteGetProtection|get the protection set in a persona
+nzteMyCert|get the certificate (x509 only)
+nzteOpenOpersona|open a persona
+nztePriKey|get the private key (x509 only)
+nzteRemovePersona|remove a persona from a wallet
+nzteRetrieveTrustedIdentCopy|retrieves a trusted identity from persona
+nzteSetProtection|get the protection set in a persona
+nzteStorePersona|store a persona in the wallet
+nzteX509CreatePersona|create a persona in an x509 certificate
+nzti|identity
+nztiAbortIdentity|discard an unstored identity
+nztiCreateIdentity|create an identity
+nztiDuplicateIdentity|create a complete copy of an identity
+nztiRemoveIdentity|remove an identity from a persona
+nztiStoreTrustedIdentity|store an identity with associated trust
+nztiae_IsAuthEnabled|checks to see if authentication is enabled in the current cipher spec
+nztiae_IsEncrEnabled|checks to see if encryption is enabled in the current cipher spec
+nztiae_IsHashEnabled|checks to see if hashing is enabled in the current cipher spec
+nztid|description
+nztidFreeIdentityDesc|frees memory for identity desc object
+nztidGetIdentityDesc|gets identity description from identity
+nztifdn|create an identity from a distinguished name
+nztific_FreeIdentityContent|free the contents of an identity
+nztk|key
+nztkdc_PKDecrypt|decrypt PKEncrypted data
+nztkec_PKEncrypt|encrypt data then encrypt key for recipient
+nztr|random
+nztrb_RandomBytes|generate a series of random bytes
+nztrn_RandomNumber|generate a random number
+nztsd_SignDetached|generate a detached signature
+nztv|verify
+nztved_VerifyDetached|verify a detached signature
+nztw|wallet
+nztwCloseWallet|close a wallet
+nztwCreateWallet|create a new wallet
+nztwDestroyWallet|destroy an existing wallet
+nztwGetCertInfo|get peer certificate info
+nztwOpenWallet|open a wallet based on a WRL and pwd
+nztwRetrievePersonaCopy|retrieve a copy of a particular persona
+nztx|expansion
+nztxEncryptExpansion|determine the tdu length for encryption
+nztxHashExpansion|determine the size ofthe tdu for a hash
+nztxKeyedHashExpansion|determine size of tdu for keyed hash
+nztxSignExpansion|determine size of signature
+nztxsd_SignDetachedExpansion|determine size of detached signature
 oba|operator buffer allocation
 oci|oracle call interface
 ociextp|PLSQL External proc
@@ -4809,11 +5318,19 @@ pmuo|plsql handling collections
 pmux|plsql handling collections
 pncutil|PLSQL infrastructure
 pp|PLSQL infrastructure
+prefixToURI|Maps a namespace prefix to a URI [DOM X]
 pri|PLSQL remote interface
 pricbr|callback, remote
 prient|run given (rpc) entrypoint
 prient2|common code to run given entrypoint, could be rpc or non-rpc
 prifold|rpc forwarding to older releases
+printBuffer|Prints XML tree to memory buffer [DOM X]
+printBufferEnc|Prints XML tree to memory buffer in specified encoding [DOM X]
+printOraStream|Prints XML tree to orastream in specified encoding [DOM X]
+printSize|Returns size of formatted XML tree [DOM X]
+printSizeEnc|Returns size of formatted XML tree in specified encoding [DOM X]
+printStream|Prints XML tree to stdio stream [DOM X]
+printStreamEnc|Prints XML tree to stdio stream in specified encoding [DOM X]
 priold|rpc forwarding to older releases
 prm|parameter handling with sql layer
 prs|parse
@@ -5355,6 +5872,12 @@ qxuag|support for user-defined aggragate processing
 qxxm|support external tables
 rbfima|rowsource buffer implementation a
 rcoima|rowsource count implementation a
+removeAttribute|Removes an attribute from an element (by name) [DOM 1]
+removeAttributeNode|Removes an attribute from an element (by pointer) [DOM 1]
+removeChild|Removes a child node [DOM 1]
+removeNamedItem|Removes an item from a node map by name [DOM 1]
+replaceChild|Replaces one child node with another [DOM 1]
+replaceData|Replaces part of a character node's data [DOM 1]
 rfa|data guard (?)
 rfuima|rowsource for update implementation a
 rfmon|data guard broker monitor
@@ -5430,6 +5953,8 @@ sagebkcomp|block(or backup?) compression
 sagebxfer|block transfer
 sagecell|cell 
 sagesql|sql
+saveString|Saves single/multibyte string in XML context memory [DOM X]
+saveString2|Saves Unicode string in XML context memory [DOM X]
 sdbima|sort operation
 sdbgrf|Diagnostic directory and file services
 sdbgrfwf_write_file|write to tracefile
@@ -5448,6 +5973,14 @@ scurls|release
 sel|select
 selexe|execute: prepare area for fetch
 seq|sequence numbers
+setAttrValue|Sets an attribute's value [DOM 1 Attr.value attribute]
+setAttribute|Creates an attribute for an element [DOM 1]
+setAttributeNode|Adds an attribute node to an element [DOM 1]
+setCharData|Sets the data for a character node [DOM 1 setData]
+setDocOrder|Sets the document order for each node in a Document [DOM X]
+setNamedItem|Add a new item to a node map [DOM 1]
+setNodeValue|Sets the new value (character data) of a node [DOM 1]
+setPIData|Sets the data of a PI [DOM 1 ProcessingInstruction.setData]
 sgipc|operatign system dependent grid inter process calls
 sk|operating system dependent kernel
 skdstdst|dump a stack trace
@@ -5560,6 +6093,7 @@ sp|operating system dependent process functions
 sp_sigset_raise_signal|obtain process ID and send signal
 spefcmpa|marshall procedure arguments
 spefmccallstd|c calling standard
+splitText|Splits one text node into two [DOM 1]
 sqn|sequence
 sqnprs|reference parsing
 sr|sort operation
@@ -5622,6 +6156,7 @@ ssthrdmain|main for every thread in a threaded oracle
 start|(non oracle)c program entry point
 std|PLSQL apps
 stsima|sort support implementation
+substringData|Returns a substring of a character node's data [DOM 1]
 sxorchk|system xor check
 tbsdrv|create/alter/drop tablespace function support
 tre|PLSQL infrastructure
@@ -5664,10 +6199,37 @@ xctend|end
 xctcom|commit: commit the current tranaction of the current session
 xctctl|commit top level transaction in a transaction tree 
 xctrol|rollback: rollback current transaction of the current session
+xmlLocation|Returns the current location while parsing [DOM X]
+xmlWhere|Returns the location where an error occured [DOM X]
+xmlaccess|Sets I/O callbacks for URI access method [DOM X]
+xmlclean|Cleans up an XML context between parses [DOM X]
+xmlinit|Initializes XML parser [DOM X]
+xmlinitenc|Initalizes XML parser (specifying data encoding) [DOM X]
+xmlparse|Parses XML document from a URI [DOM X]
+xmlparsebuf|Parses XML document from a memory buffer [DOM X]
+xmlparsedtd|Parses an external subset (DTD) specified by a URI [DOM X]
+xmlparsefile|Parses XML document from a disk file [DOM X]
+xmlparseorastream|Parses XML document from an orastream [DOM X]
+xmlparsestream|Parses XML document from a user-defined stream [DOM X]
+xmlsetexternalaccess|Enable or disable access to exteran files and protocols 
+xmlterm|Terminates XML parser [DOM X]
+xpevalxpathexpr|Evaluates an XPath expression
+xpfreexpathctx|Frees an XPath context
+xpgetbooleanval|Returns the value of a boolean XPath object
+xpgetfirstnsetelem|Returns first element in a node-set
+xpgetnextnsetelem|Returns next element in a node-set
+xpgetnsetelemnode|Returns the XML node for a node-set element
+xpgetnsetval|Returns the node-set of a node-set XPath object
+xpgetnumval|Returns the value of a numeric XPath object
+xpgetrtfragval|Returns the XML node of a result-tree fragment
+xpgetstrval|Returns the value of a string XPath object
+xpgetxpobjtyp|Returns the type code of an XPath object
 xpl|SQL explain plan
 xplComputePlanHashExt|DBMS_SPM.I_COMPUTE_PLAN_HASH_VALUE
 xplDumpSqlTrace|produce STAT lines in sql trace
 xplGenXpl|generate explain plan
+xpmakexpathctx|Makes an XPath context
+xpparsexpathexpr|Parses an XPath expression
 xs|olap analytic workspace
 xsAdvSparse|DBMS_AW.XSADVSPARSE
 xsAnalyze|DBMS_AW_STATS.XSANALYZE
@@ -5709,6 +6271,30 @@ xsiculog_set_log_spec|DBMS_CUBE_LOG.SET_LOG_SPEC
 xsinitdrv|DBMS_AW.STARTUP
 xsisactive|DBMS_AW.OLAP_ACTIVE
 xskilldrv|DBMS_AW.SHUTDOWN
+xsl|XSL
+xslgetbaseuri|Get base URI associated with XSL context
+xslgetoutputdomctx|Returns XML context for storing XSL output
+xslgetoutputorastream|Returns the XSL output orastream
+xslgetoutputsax|Returns SAX callbacks
+xslgetoutputstream|Returns the XSL output stream
+xslgetresultdocfrag|Gets resulting document fragment
+xslgettextparam|Enquire about the preexisting top level parameter or value
+xslgetxslctx|Get the input stylesheet DOM context with XSL context
+xslinit|Initialize XSL context
+xslprocess|Process XSL
+xslprocessex|Process XSL
+xslprocessxml|Process XML
+xslprocessxmldocfrag|document fragment
+xslresetallparams|Reset all the top level XSL parameters added
+xslsetoutputdomctx|Set XML context for storing XSL processing result
+xslsetoutputencoding|Set encoding for XSL output
+xslsetoutputmethod|Set overriding XSL output method
+xslsetoutputorastream|Set the XSL output orastream
+xslsetoutputsax|sets the SAX based events to be generated
+xslsetoutputsaxctx|Sets the context for SAX events
+xslsetoutputstream|DEPRECATED Set the XSL output stream
+xslsettextparam|Set a top-level XSL parameter
+xslterm|Terminates XSL context
 xsociClean|DBMS_AW.OCI_CLEAN
 xsoplog_complete_tco|DBMS_CUBE_LOG.COMPLETEOPLOGTCO
 xsoplog_start_tco|DBMS_CUBE_LOG.STARTOPLOGTCO
