@@ -311,7 +311,7 @@ XmlUrlInitCon|initialize LPU in multi-connection mode
 XmlUrlInitConVA|takes va_list 
 XmlUrlIsDefault|is there a default resolver in effect
 XmlUrlMakeCon|make connection object
-XmlUrlMakeCon|takes va_list
+XmlUrlMakeConVA|takes va_list
 XmlUrlOpen|open URL for reading
 XmlUrlOpenCon|open a connection
 XmlUrlOpenConVA|using va_list
