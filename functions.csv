@@ -3,6 +3,55 @@ BZ2_decompress|decompress
 Ldi|date/time conversion
 Lpx|xml parser
 LpxFSM|FSM parser
+OCICacheFlush|OCI flsuh the modified persistent objects in the cache
+OCICacheFree|OCI free all instances in the environment
+OCICacheRefresh|OCI refresh persistent objects in the cache
+OCICacheUnmark|OCI unmark all dirty referenceable objects in the cache
+OCICacheUnpin|OCI unpin referenceable objects in the cache
+OCICollAppend|OCIColl aPPend the given element to the end of the collection
+OCICollAssign|OCIColl ASsiGn collection; perform deep-copy of source collection to target collection
+OCICollAssignElem|OCIColl assign to element at given index
+OCICollGetElem|OCIColl GET pointer to the element at the given position
+OCICollIsLocator|OCIColl indicates whether a collection is locator based or not
+OCICollMax|OCIColl return the MAXimum number of elements in the collection (i.e. upper-bound)
+OCICollSize|OCIColl return current SIZe of the given collection (in number of elements)
+OCICollTrim|OCIColl trim (delete) the given number of elements from the end of the collection
+OCIDateAddDays|OCIDate ADd or subtract Days
+OCIDateAddMonths|OCIDate ADd or subtract Months
+OCIDateAssign|OCIDate Assignment
+OCIDateCheck|OCIDate CHecK if the given date is valid
+OCIDateCompare|OCIDate CoMPare dates
+OCIDateDaysBetween|OCIDate get number of days BeTWeen two dates
+OCIDateFromExternal|OCIDate convert external form of date into OCIDate
+OCIDateFromText|OCIDate convert String TO Date
+OCIDateLastDay|OCIDate get date of LaST day of month
+OCIDateNextDay|OCIDate get date of Next DaY
+OCIDateSysDate|OCIDate get current SYStem date and time
+OCIDateToExternal|OCIDate convert date to external form
+OCIDateToText|OCIDate convert date TO String
+OCIDateZoneToZone|OCIDate convert date from one time Zone TO another Zone
+OCIDirPathAbort|OCI: Abort a direct path operation
+OCIDirPathColArrayEntryGet|OCI:  Get column array entry
+OCIDirPathColArrayEntrySet|OCI:  Set column array entry
+OCIDirPathColArrayReset|OCI: Reset Column Array State
+OCIDirPathColArrayRowGet|OCI:  Get column array row pointers
+OCIDirPathColArrayToStream|OCI: Convert Column Array to Stream Format
+OCIDirPathDataSave|OCI: Execute a data save point
+OCIDirPathFinish|OCI: Finish a direct path operation
+OCIDirPathFlushRow|OCI: Flush a partial row from the server
+OCIDirPathLoadStream|OCI: Load a direct path stream
+OCIDirPathPrepare|OCI: Prepare a direct path operation
+OCIExtProc|PL/SQL External Procedures
+OCIExtProcAllocCallMemory|Allocate Call memory
+OCIExtProcGetEnv|Get OCI Environment
+OCIExtProcRaiseExcp|Raise Exception
+OCIExtProcRaiseExcpWithMsg|with message
+OCIIterCreate|OCIColl Create an ITerator to scan the collection elements
+OCIIterDelete|OCIColl Delete ITerator
+OCIIterGetCurrent|OCIColl Iterator based, get CURrent collection element
+OCIIterInit|OCIColl Initialize ITerator to scan the given collection
+OCIIterNext|OCIColl Iterator based, get NeXT collection element
+OCIIterPrev|OCIColl Iterator based, get PReVious collection element
 OCILobCreateTemporary|DBMS_LOB.KKXL_CREATETEMPORARY
 OCILobFileCloseAll|DBMS_LOB.KKXL_FILECLOSEALL
 OCILobFileExists|DBMS_LOB.KKXL_FILEEXISTS
@@ -16,8 +65,155 @@ OCILobIsOpen|DBMS_LOB.KKXL_ISOPEN
 OCILobIsTemporary|DBMS_LOB.KKXL_ISTEMPORARY
 OCILobLoadFromFile|DBMS_LOB.KKXL_LOADFROMFILE
 OCILobSetOptions|DBMS_LOB.KKXL_SETOPTIONS
+OCINumberAbs|OCINumber ABSolute value
+OCINumberAdd|OCINumber ADD numbers
+OCINumberArcCos|OCINumber Arc COSine
+OCINumberArcSin|OCINumber Arc SINe
+OCINumberArcTan|OCINumber Arc TANgent
+OCINumberArcTan2|OCINumber Arc TaNgent 2
+OCINumberAssign|OCINumber ASsiGn number
+OCINumberCeil|OCINumber CEiling of number
+OCINumberCmp|OCINumber CoMPare numbers
+OCINumberCos|OCINumber COSine
+OCINumberDec|OCINumber DECrement (optimized)
+OCINumberDiv|OCINumber DIVide numbers
+OCINumberExp|OCINumber EXPonentiation to base e
+OCINumberFloor|OCINumber FLooR of number
+OCINumberFromInt|OCINumber convert machine-format Integer TO Number
+OCINumberFromReal|OCINumber convert machine-format Real TO Number
+OCINumberFromText|OCINumber convert String TO Number
+OCINumberHypCos|OCINumber CoSine Hyperbolic
+OCINumberHypSin|OCINumber SiNe Hyperbolic
+OCINumberHypTan|OCINumber TaNgent Hyperbolic
+OCINumberInc|OCINumber INCrement (optimized)
+OCINumberIntPower|OCINumber integer PoWeR
+OCINumberIsInt|OCINumber Is an Integer
+OCINumberIsZero|OCINumber comparison with ZERo
+OCINumberLn|OCINumber Logarithm Natural
+OCINumberLog|OCINumber LOGarithm to arbitrary base
+OCINumberMod|OCINumber MODulo division
+OCINumberMul|OCINumber MULtiply numbers
+OCINumberNeg|OCINumber NEGate number
+OCINumberPower|OCINumber arbitrary Base EXponentiation
+OCINumberPrec|OCINumber round to Precision digits
+OCINumberRound|OCINumber ROUnd number
+OCINumberSetPi|OCINumber Set number to Pi
+OCINumberSetZero|OCINumber Set number to Zero value
+OCINumberShift|OCINumber decimal ShiFT number
+OCINumberSign|OCINumber get SIGN of number
+OCINumberSin|OCINumber SINe
+OCINumberSqrt|OCINumber SQuare Root of number
+OCINumberSub|OCINumber SUBtract numbers
+OCINumberTan|OCINumber TANgent
+OCINumberToInt|OCINumber convert number TO machine-format Integer
+OCINumberToReal|OCINumber convert number TO machine-format Real
+OCINumberToRealArray|OCINumber convert array of numbers TO machine-format Real
+OCINumberToText|OCINumber convert number TO String
+OCINumberTrunc|OCINumber TRUncate an Oracle number
+OCIObjectArrayPin|OCI pin array of objects
+OCIObjectCopy|OCI CoPy one object to another
+OCIObjectExists|OCI get the existence of a referenceable object
+OCIObjectFlush|OCI flush a persistent object
+OCIObjectFree|OCI free a standalone instance
+OCIObjectGetAttr|ORID GET attribute value
+OCIObjectGetInd|OCI get Null Structure of an standalone object
+OCIObjectGetNewOID|OCI Create a new Object ID
+OCIObjectGetObjectRef|OCI get the Object's Reference
+OCIObjectGetPrimayKeyTypeRef|OCI get the Ref for the primary key OID's type
+OCIObjectGetProperty|get object property
+OCIObjectGetTypeRef|OCI get the Type Reference of a standalone object
+OCIObjectIsDirty|OCI get the dirty status of a referenceable object
+OCIObjectIsLocked|OCI get the lock status of a referenceable object
+OCIObjectLock|OCI lock a persistent object
+OCIObjectLockNoWait|OCI lock a persistent object
+OCIObjectMakeObjectRef|OCI Create a pk or sys generated REF
+OCIObjectMarkDelete|OCI mark a referenceable object as deleted
+OCIObjectMarkDeleteByRef|OCI mark a referenceable object as deleted by giving a reference
+OCIObjectMarkUpdate|OCI mark a referenceable object as updated
+OCIObjectNew|OCI new a standalone instance
+OCIObjectPin|OCI pin an object by reference
+OCIObjectPinCountReset|OCI reset the pin count of a referenceable object
+OCIObjectPinTable|OCI get Table object
+OCIObjectRefresh|OCI refresh a persistent object
+OCIObjectSetAttr|ORID SET attribute value
+OCIObjectUnmark|OCI unmark a dirtied referenceable object
+OCIObjectUnmarkByRef|OCI unmark a dirtied object by reference
+OCIObjectUnpin|OCI unpin a referenceable object
+OCIRawAllocSize|OCIRaw get Allocated Size
+OCIRawAssignRaw|OCIRaw Assign Raw (of type OCIRaw*) to raw (of type OCIRaw*)
+OCIRawPtr|OCIRaw get Raw data Pointer
+OCIRawResize|OCIRaw Resize raw
+OCIRawSize|OCIRaw get Raw Size
+OCIRefAssign|OCIRef ASsiGn a ref to another
+OCIRefClear|OCIRef CLeaR or nullify a ref
+OCIRefFromHex|OCIRef convert a Hexadecimal string TO a Ref
+OCIRefHexSize|OCIRef get size of buffer in bytes to store hexadecimal string
+OCIRefIsEqual|OCIRef compare two refs for EQUality
+OCIRefIsNull|OCIRef test if a ref is NULl
+OCIRefToHex|OCIRef convert a ref to a Hexadecimal string
 OCIStmtFetch|fetch
 OCIStmtExecute|execute
+OCIStringAllocSize|OCIString get Allocated SiZe
+OCIStringAssign|OCIString Assign string to string
+OCIStringAssignText|OCIString Assign Text string to string
+OCIStringPtr|OCIString get String PoinTeR
+OCIStringResize|OCIString ReSiZe string
+OCIStringSize|OCIString get String Size
+OCITableDelete|OCITable if element(i) exists then the element is marked as deleted else the function returns false. So delete's create "holes"
+OCITableExists|OCITable return true iff an element at position i EXIsts
+OCITableFirst|OCITable return the smallest value of i for which exists(i) is true
+OCITableLast|OCITable return the largest value of i for which exists(i) is true.
+OCITableNext|OCITable return pointer to the smallest position j, greater than i, such that OCITableExists(j) is true
+OCITablePrev|OCITable return pointer to the largest position j, ess than i, such that OCITableExists(j) is true
+OCITableSize|OCITable return current SIZe of the given nested table not including deleted elements
+OCITypeArrayByFullName|Get an array of types using a full name string
+OCITypeArrayByName|Get an array of types by their names
+OCITypeArrayByRef|Get an array of types by their CREFs
+OCITypeAttrByName|** OBSOLETE ** Get an Attribute by Name
+OCITypeAttrNext|** OBSOLETE ** Get an Attribute by Iteration
+OCITypeAttrs|** OBSOLETE ** OCI Get a Type's Number of Attributes
+OCITypeByFullName|Get a type using a full name string
+OCITypeByName|** OBSOLETE ** Get a type by name
+OCITypeByRef|** OBSOLETE ** Get a type by its CREF
+OCITypeCollElem|** OBSOLETE ** Get a named collection's element's type element information
+OCITypeCollSize|** OBSOLETE ** Get a named collection's size in number of elements
+OCITypeCollTypeCode|** OBSOLETE ** Get a named collection's typecode
+OCITypeElemCharSetForm|** OBSOLETE ** Get a fixed or variable length string's character set form (how character set information has been specified)
+OCITypeElemCharSetID|** OBSOLETE ** Get a fixed or variable length string's character set ID
+OCITypeElemDefaultValue|** OBSOLETE ** Get element's Default Value
+OCITypeElemLength|** OBSOLETE ** Get a raw, fixed or variable length string's length
+OCITypeElemName|** OBSOLETE ** Get a type element's (only for attributes) name
+OCITypeElemNumPrec|** OBSOLETE ** Get a number's precision
+OCITypeElemNumScale|** OBSOLETE ** Get a decimal or oracle Number's Scale
+OCITypeElemParamMode|** OBSOLETE ** Get element's parameter's mode (only valid for parameter)
+OCITypeElemParameterizedType|** OBSOLETE ** Get a type element's parameterized type's type descriptor
+OCITypeElemType|** OBSOLETE ** Get a type element's type descriptor
+OCITypeElemTypeCode|** OBSOLETE ** Get a type element's typecode
+OCITypeIterFree|** OBSOLETE ** Free instance of iterator
+OCITypeIterNew|** OBSOLETE ** Create new instance of an iteraton
+OCITypeIterSet|** OBSOLETE ** Initialize iterator
+OCITypeMethodByName|** OBSOLETE ** Get one or more methods by name
+OCITypeMethodEncap|** OBSOLETE ** Get method's encapsulation level
+OCITypeMethodFlags|** OBSOLETE ** et method's flags
+OCITypeMethodMap|** OBSOLETE ** Get type's map function
+OCITypeMethodName|** OBSOLETE ** Get method's name
+OCITypeMethodNext|** OBSOLETE ** Iterate to the next method to retrieve.
+OCITypeMethodOrder|** OBSOLETE ** Get type's order function
+OCITypeMethodOverload|** OBSOLETE ** Get number of overloaded methods with the given method name. (no direct equivalent for OCIDescribe interface)
+OCITypeMethodParams|** OBSOLETE ** Get a method's number of parameters
+OCITypeMethods|** OBSOLETE ** OCI Get a Type's Number of Methods
+OCITypeName|** OBSOLETE ** OCI Get a type's name
+OCITypePackage|OCI Get a type's package name
+OCITypeParamByName|** OBSOLETE ** Get a Parameter in a method By Name
+OCITypeParamByPos|** OBSOLETE ** Get a Parameter in a method By Position
+OCITypeParamPos|** OBSOLETE ** Get a Parameter's PoSition in a method
+OCITypeResult|** OBSOLETE ** OCI Get a method's Result
+OCITypeSchema|** OBSOLETE ** OCI Get a type's schema name
+OCITypeTypeCode|** OBSOLETE ** OCI Get a type's type code
+OCITypeVersion|** OBSOLETE ** OCI Get a Type's user-readable Version
+OCIXmlDbFreeXmlCtx|To free any allocations done during OCIXmlDbInitXmlCtx
+OCIXmlDbInitXmlCtx|To get a xmlctx structure initialized with error-handler and XDB callbacks
+OCIXmlDbOrastreamFromLob|To create an orastream from a lob. This orastream can be used by functions like XMLLoadDom()
 XdkDomNodeTest|returns true if node complay with xpath node test
 XmlAccess|set access-method callbacks for URL
 XmlConvert|cert compiler-encoding string to data encoding
@@ -249,6 +445,10 @@ XmlDomWalkerPrevNode|return previous node
 XmlDomWalkerPrevSibling|return previous sibling node
 XmlDomWalkerSetCurrentNode|set current node
 XmlDomWalkerSetRoot|set the root node
+XmlEvCreateSVCtx|Return event context with streaming validator plugged in
+XmlEvDestroySVCtx|Destroy a streaming validator context
+XmlEvSchemaValidate|Validate the instance document (opaque mode)
+XmlEvSchemaValidateFragment|Validate a fragment (used by XDB)
 XmlFreeDocument|free a document (release all resources)
 XmlGetEncoding|returns data encoding in use by xml context
 XmlHasFeature|determine if dom feature is implemented
@@ -259,6 +459,22 @@ XmlLoadSax|load (parse) an xml document from and produce sax events
 XmlLoadSaxVA|varargs
 XmlSaveDom|saves (serializes, formats) an xml document 
 XmlSaveDomVA|varargs
+XmlSchemaClean|Clean up loaded schemas in a schema context
+XmlSchemaCreate|Create and return a schema context
+XmlSchemaDestroy|Destroy a schema context
+XmlSchemaErrorWhere|Return error location information
+XmlSchemaLoad|Load a schema document
+XmlSchemaLoadDepFromCache|Load a list of dependent schemas into the schema context
+XmlSchemaLoadDepToCache|Return a list of dependent schemas from the schema context
+XmlSchemaLoadFromCache|Set the schema into the schema context
+XmlSchemaLoadToCache|return the requested schema in a schema context
+XmlSchemaLoadedList|Return the size and/or list of loaded schema documents
+XmlSchemaSetErrorHandler|Set error message handler
+XmlSchemaSetValidateOptions|Set option(s) to be used in the next validation session
+XmlSchemaTargetNamespace|Return target namespace of a given schema document
+XmlSchemaUnload|Unload a schema document
+XmlSchemaValidate|Validate an element node against a schema
+XmlSchemaVersion|Return the version of this schema implementation
 XmlSetExternalAccess|enable or disable file system and http access
 XmlSetWhiteList|set a new whitelist for the xmlctx
 XmlSoapAddBodyElement|adds an element soap message body
@@ -332,6 +548,16 @@ XmlUrlSimplify|simplify url paths
 XmlUrlTerm|terminate an LPU context
 XmlUrlTermCon|terminate a connection
 XmlVersion|returns version string for XDK
+XmlXPointerEval|Evaluates xpointer string
+XmlXPtr|Oracle XML XPointer
+XmlXPtrLocGetNode|Returns xmlnode from XPtrLoc
+XmlXPtrLocGetPoint|Returns xmlpoint from XPtrLoc
+XmlXPtrLocGetRange|Returns xmlrange from XPtrLoc
+XmlXPtrLocGetType|Return type of XPtrLoc
+XmlXPtrLocSetFree|Free a location set
+XmlXPtrLocSetGetItem|Returns location with idx position in XPtrLocSet
+XmlXPtrLocSetGetLength|Returns length of XPtrLocSet
+XmlXPtrLocToString|Returns string for a location
 XmlXvmCompileBuffer|compile xslt stylesheet from buffer into bytecode
 XmlXvmCompileDom|compile xslt stylesheet from DOM into bytecode
 XmlXvmCompileFile|compile xslt stylesheet from file into bytecode
@@ -4819,7 +5045,36 @@ nztxSignExpansion|determine size of signature
 nztxsd_SignDetachedExpansion|determine size of detached signature
 oba|operator buffer allocation
 oci|oracle call interface
+ocibin|bind by value by name
+ocibndps|bind by reference by name (array) piecewise or with skips
+ocibnn|bind by value numeric
+ocibra|bind by reference by name (array)
+ocibre|send break. sends a break to oracle.
+ocibrn|bind by reference numeric
+ocibrv|bind by reference by name
+ocican|cancel the operation on the cursor, no additional ofetch calls will be issued for the exisiting cursor
+ociclo|close a cursor
+ocicom|commit the current transaction
+ocidhe|will return the message associated with the default host
+ocidsc|obtain information about a column
+ocidsr|obtain information about a column
+ocierr|will return the message associated with the hstdef stored in the lda
+ociexe|execute a cursor
+ociexn|execute a cursor N times
 ociextp|PLSQL External proc
+ocifen|fetch n rows
+ocifet|fetch the next row
+ocifse|user interface set error options
+ocilgi|version 2 compatible ORACLE logon call. no login to ORACLE is performed: the LDA is initialized
+ocilof|disconnect from ORACLE
+ocilon|logon to oracle
+ocinam|get the name of a column
+ocinlo|logon in non-blocking fashion
+ociope|cursor open
+ocirlo|version 5 compatible ORACLE Remote Login call, oracle login is executed
+ocirol|roll back the current transaction
+ocisq3|user interface parse sql statement
+ocisqd|oci delayed parse
 odm|oracle disk manager
 odm_io|IO
 ofs|oracle filesystem (ACFS)?
