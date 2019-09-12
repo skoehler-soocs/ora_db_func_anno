@@ -1,3 +1,4 @@
+_cms|color management system (little cms)
 BZ2|bzip2
 BZ2_decompress|decompress
 Ldi|date/time conversion
@@ -643,6 +644,7 @@ createElementNS|Creates an element node (namespace-aware) [DOM 2]
 createEntityReference|Creates an entity reference node [DOM 1]
 createProcessingInstruction|Creates a PI node [DOM 1]
 createTextNode|Creates a text node [DOM 1]
+cms|color management system (little cms)
 csy|create synonym
 ctc|create table or cluster
 ctccom_cleanup_online_move|DBMS_PART.CLEANUP_ONLINE_OP_INTERNAL
