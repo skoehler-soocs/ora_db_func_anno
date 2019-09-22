@@ -631,6 +631,21 @@ cdb|create database
 cdbdrv|driver
 cloneNode|Creates a duplicate of a node [DOM 1]
 cls|clusterware integration
+clscrs|cluster ready services
+clsdhcp|dhcp
+clsdns|DNS
+clsdget|debug get property
+clsdset|debug set property
+clsevmnb|(?)
+clsgpnp|grid plug and play
+clsinet|internal networking(?)
+clsk|(?)
+clsr|(?)
+clssgs|(?)
+clsmdns|multicast dns
+clsns|name service (GNS)
+clsss|system state
+clsu|(?)
 createAttribute|Creates an attribute node (non-namespace) [DOM 1]
 createAttributeNS|Creates an attribute node (namespace-aware) [DOM 2]
 createCDATASection|Creates a CDATA node [DOM 1]
