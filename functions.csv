@@ -632,6 +632,100 @@ cdbdrv|driver
 cloneNode|Creates a duplicate of a node [DOM 1]
 cls|clusterware integration
 clscrs|cluster ready services
+clscrs_action_getentity|return the entity of the action
+clscrs_action_getparams|return the list of params for the action
+clscrs_action_gettype|return the type of the action
+clscrs_actionlist_count|count the number of actions in the list
+clscrs_actionlist_create|create an actionlist
+clscrs_actionlist_destroy|destroy the actionlist
+clscrs_actionlist_first|return the first action in an actionlist
+clscrs_actionlist_next|return the next action in an actionlist
+clscrs_actionlist_print|print the actionlist
+clscrs_actionlist_seqid|return the sequence ID for the list
+clscrs_check_resource|check resource
+clscrs_check_resource3|11gR1 API
+clscrs_check_resource3|12gR1 API
+clscrs_compfilter_create|create a comparison filter
+clscrs_crsentity_attr_count|get the number of attributes for an entity
+clscrs_crsentity_get_attr|get the value of an entity
+clscrs_crsentity_destroy|destroy an entity
+clscrs_crsentity_get_attr_list|get the attribute list for an entity
+clscrs_crsentity_get_crsentitylist|get the entity list for an entity
+clscrs_crsentity_get_name|get the name of an entity
+clscrs_crsentity_get_op_status|get the statuf of an operation on an entity
+clscrs_crsentity_set_attr|set an attribute for an entity
+clscrs_crsentity_set_attr_list|set the attribute list for an entity
+clscrs_crsentity_set_crsentitylist|set the entity list for an entity
+clscrs_crsentitylist_append|append an entity to a list
+clscrs_crsentitylist_count|count the number of entities in the list
+clscrs_crsentitylist_create|create a list of entities (entitylist)
+clscrs_crsentitylist_delete_crsentity|delete the entity matching the given name
+clscrs_crsentitylist_destroy|destroy an entity list
+clscrs_crsentitylist_find|find the entity matching the given name
+clscrs_crsentitylist_first|get the first entity on the list
+clscrs_crsentitylist_get_registered|find out if an entity is registered
+clscrs_crsentitylist_next|get the next entity on the list
+clscrs_entity_id_destroy|destroy an entity id
+clscrs_exprfilter_create|create an expression filter
+clscrs_filter_destroy|destroy a filter
+clscrs_get_entity_type|returns the clscrs_entity for the id provided
+clscrs_get_fixed_attrlist|get the list of attributes corresponding to an attribute group identifier
+clscrs_get_resource_instance_details|gets the details of the resource instance id provided
+clscrs_getnodename|get nodename for the current node
+clscrs_init_crs|init clscrs context
+clscrs_is_crs_admin|indicates if a user is a CRS admin
+clscrs_register_resource|register resource
+clscrs_register_resource2|11gR2 API
+clscrs_register_resource3|12.2 API
+clscrs_register_servercategory|register server category
+clscrs_register_serverpool|register a server pool
+clscrs_register_type|register resource type(s)
+clscrs_relocate_resource|relocate resource(s)
+clscrs_relocate_resource2|11gR2 API
+clscrs_relocate_server|relocate a server to a different serverpool
+clscrs_request_action|action entrypoint for the resource
+clscrs_res_get_node_list|get the hosting members for a resource
+clscrs_restart_resource|stop+start running resource(s)
+clscrs_sp_get|get the name and value for a stringpair
+clscrs_sp_get_value|get the value for a stringpair
+clscrs_sp_set|set the value for a stringpair
+clscrs_splist_add|append a stringpair
+clscrs_splist_count|count the number of stringpairs in a splist
+clscrs_splist_create|create a list of stringpairs (splist)
+clscrs_splist_create_and_set|and add a stringpair
+clscrs_splist_delete_sp|delete the stringpair with given name (frees mem)
+clscrs_splist_destroy|destroy a splist (frees memory)
+clscrs_splist_find|find the stringpair matching the given name
+clscrs_splist_first|get the first stringpair in the splist
+clscrs_splist_next|get the next stringpair in the splist
+clscrs_splist_replace|replace the value for a stringpair
+clscrs_start_resource_in_pools|start resources in the server pool(s)
+clscrs_stat|query multiple entity kinds atomically
+clscrs_stat2|11gR1 API
+clscrs_stat3|12gR1 API
+clscrs_stop_resource|stop resources
+clscrs_stop_resource2|11gR2
+clscrs_stop_resource_in_pools|stop resources in server pool(s)
+clscrs_term_crs|term clscrs context
+clscrs_type_create|create a resource type (allocates memory)
+clscrs_type_get_attr|get the value/property of a resource type attribute
+clscrs_type_set_attr|set an attribute for a resource type
+clscrs_unregister_resource|unregister resource(s)
+clscrs_unregister_resource2|11gR2
+clscrs_unregister_servercategory|unregister server category
+clscrs_unregister_serverpool|unregister a server pool
+clscrs_unregister_type|unregister resource type(s)
+clscrs_whatif_add_server|evaluates the impact of adding a new server to the cluster
+clscrs_whatif_delete_server|evaluates the impact of a server failure
+clscrs_whatif_fail_resource|evaluates the impact of a resource 
+clscrs_whatif_fail_resource2|12.1.0.2. API
+clscrs_whatif_register_resource|evaluates the impact of register a resource
+clscrs_whatif_register_serverpool|evaluates the impact of register a server pool
+clscrs_whatif_relocate_server|evaluates the impact of the relocating a server
+clscrs_whatif_relocate_resource|evaluates the impact of relocating a resource
+clscrs_whatif_start_resource|evaluates the impact of starting a resource
+clscrs_whatif_stop_resource|evaluates the impact of stopping a resource
+clscrs_whatif_unregister_serverpool|evaluates the impact of unregister a server pool
 clsdhcp|dhcp
 clsdns|DNS
 clsdget|debug get property
