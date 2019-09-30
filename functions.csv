@@ -4964,6 +4964,7 @@ kzxsp|XS Security Class
 kzxutilErr|XS_ADMIN_UTIL.RAISE_ERROR (?)
 kzxutilValidateDBuser|XS_ADMIN_UTIL.VALIDATE_DB_USER
 kzxutilValidateObjectName|XS_ADMIN_UTIL.VALIDATE_DB_OBJECT_NAME
+ldx|core date functions
 libc_start_main|(non oracle)libc support for starting the main function
 lis|PLSQL_KG_Interface
 lm|low level math functions
@@ -5317,6 +5318,7 @@ pef|external proc
 peftrusted|execute a trusted callout
 peibp|PLSQL KNLDE
 peicnt|PL/SQL Controlled execution
+pen|native interfaces
 pes|Shared Object Manager
 pesacos|STANDARD.PESACOS ACOS
 pesasin|STANDARD.PESASIN ASIN
@@ -6459,6 +6461,7 @@ sp|operating system dependent process functions
 sp_sigset_raise_signal|obtain process ID and send signal
 spefcmpa|marshall procedure arguments
 spefmccallstd|c calling standard
+spen|execute native interfaces
 splitText|Splits one text node into two [DOM 1]
 sqn|sequence
 sqnprs|reference parsing
