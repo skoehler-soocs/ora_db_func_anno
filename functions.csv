@@ -4977,8 +4977,8 @@ lxm|native language support
 main|(non oracle)general c starting function
 mDNS|multicast dns
 md|spatial
-mdgr|spatial georaster
-mdr|spatial indexing
+mdgr|georaster
+mdr|indexing
 msq|generating sql statements
 msqcol|append column name
 msqrxq|make sql for remote execution
