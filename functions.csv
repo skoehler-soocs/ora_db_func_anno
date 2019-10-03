@@ -678,7 +678,7 @@ clscrs_actionlist_next|return the next action in an actionlist
 clscrs_actionlist_print|print the actionlist
 clscrs_actionlist_seqid|return the sequence ID for the list
 clscrs_check_resource|check resource
-clscrs_check_resource3|11gR1 API
+clscrs_check_resource2|11gR1 API
 clscrs_check_resource3|12gR1 API
 clscrs_compfilter_create|create a comparison filter
 clscrs_crsentity_attr_count|get the number of attributes for an entity
