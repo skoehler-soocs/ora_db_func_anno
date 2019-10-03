@@ -1,4 +1,39 @@
 _cms|color management system (little cms)
+_cms15Fixed16toDouble|Converts from 15.16 (signed) fixed point to cmsFloat64Number
+_cms8Fixed8toDouble|Converts from 8.8 fixed point to cmsFloat64Number
+_cmsCalloc|Allocate space for an array of num elements each of whose size in bytes is size
+_cmsDecodeDateTimeNumber|Decodes from ICC date and time format to the standard “C” struct tm
+_cmsDefaultICCintents|This function implements the standard ICC intents perceptual, relative colorimetric, saturation and absolute colorimetric
+_cmsDoubleTo15Fixed16|Converts from cmsFloat64Number to 15.16 fixed point, rounding properly
+_cmsDoubleTo8Fixed8|Converts from cmsFloat64Number to 8.8 fixed point, rounding properly
+_cmsDupMem|duplicates the contents of org into a new block 
+_cmsEncodeDateTimeNumber|Decodes from the standard “C” struct tm to ICC date and time format
+_cmsFree|Cause the space pointed to by Ptr to be deallocated; that is, made available for further allocation
+_cmsGetTransformUserData|Returns a pointer to the user data associated with current color transform
+_cmsICCcolorSpace|Converts from Little CMS color space notation to ICC color space notation
+_cmsIOPrintf|Outputs printf-like strings to the given IOHANDLER. To deal with text streams. 2K at most
+_cmsLCMScolorSpace|Converts from ICC color space notation to Little CMS color space notation
+_cmsMAT3eval|Evaluates a matrix
+_cmsMAT3identity|fills 'a' with identity matrix
+_cmsMAT3inverse|inverse of matrix b = a-1. returns false if singular matrix
+_cmsMAT3isIdentity|Return true if “a” is close enough to be interpreted as identity. Else return false
+_cmsMAT3per|multiply two matrices
+_cmsMAT3solve|Solves a system in the form ax = b. Returns FALSE if singular matrix
+_cmsMalloc|Allocate size bytes of memory.
+_cmsMallocZero|Initialize it to zero
+_cmsPipelineSetOptimizationParameters|Set the optimization parameters for a given pipeline
+_cmsReadAlignment|Skips bytes on the given IOHANDLER until a 32-bit aligned position
+_cmsReadTypeBase|Reads a cmsTagTypeSignature from the given IOHANDLER
+_cmsRealloc|The size of the memory block pointed to by the Ptr parameter is changed to the NewSize bytes, expanding or reducing the amount of memory available in the block^
+_cmsStageAllocPlaceholder|create a new Stage type
+_cmsVEC3cross|Vector cross product
+_cmsVEC3distance|Returns euclidean distance between two 3D points
+_cmsVEC3dot|Vector dot product
+_cmsVEC3init|Populates a vector
+_cmsVEC3length|Euclidean length of 3D vector
+_cmsVEC3minus|Vector subtraction
+_cmsWriteAlignment|Writes zeros on the given IOHANDLER until a 32-bit aligned position
+_cmsWriteTypeBase|Writes s a cmsTagTypeSignature to the given IOHANDLER
 BZ2|bzip2
 BZ2_decompress|decompress
 Ldi|date/time conversion
@@ -754,6 +789,272 @@ createEntityReference|Creates an entity reference node [DOM 1]
 createProcessingInstruction|Creates a PI node [DOM 1]
 createTextNode|Creates a text node [DOM 1]
 cms|color management system (little cms)
+cmsAllocNamedColorList|Allocates an empty named color dictionary
+cmsAllocProfileSequenceDescription|Creates an empty container for profile sequences
+cmsAppendNamedColor|Adds a new spot color to the list
+cmsBFDdeltaE|These functions does compute the difference between two Lab colors
+cmsBuildGamma|Simplified wrapper to cmsBuildParametricToneCurve
+cmsBuildParametricToneCurve|Builds a parametric tone curve
+cmsBuildSegmentedToneCurve|Builds a tone curve from given segment information
+cmsBuildTabulatedToneCurve16|Builds a tone curve based on a table of 16-bit values
+cmsBuildTabulatedToneCurveFloat|Builds a tone curve based on a table of floating point values
+cmsCIE2000DeltaE|These functions does compute the difference between two Lab colors
+cmsCIE94DeltaE|These functions does compute the difference between two Lab colors
+cmsCIECAM02Done|Terminates a CAM02 object, freeing all involved resources
+cmsCIECAM02Forward|Evaluates the CAM02 model in the forward direction XYZ->JCh
+cmsCIECAM02Init|Does create a CAM02 object based on given viewing conditions
+cmsCIECAM02Reverse|Evaluates the CAM02 model in the reverse direction JCh->XYZ
+cmsCMCdeltaE|These functions does compute the difference between two Lab colors
+cmsChangeBuffersFormat|This function does change the encoding of buffers in a yet-existing transform
+cmsChannelsOf|Returns channel count for a given color space
+cmsCloseIOhandler|Closes the iohandler object, freeing any associated resources
+cmsCloseProfile|Closes a profile handle and frees any associated resource
+cmsCreate_sRGBProfile|Create an ICC virtual profile for sRGB space
+cmsCreate_sRGBProfileTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateBCHSWabstractProfile|Creates an abstract devicelink operating in Lab for Bright/Contrast/Hue/Saturation and white point translation
+cmsCreateBCHSWabstractProfileTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateContext|creates a new context with optional associated plug-ins
+cmsCreateExtendedTransform|Extended form of multiprofile color transform creation, exposing all parameters for each profile in the chain
+cmsCreateGrayProfile|This function creates a gray profile based on White point and transfer function
+cmsCreateGrayProfileTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateInkLimitingDeviceLink|This is a devicelink operating in CMYK for ink-limiting
+cmsCreateInkLimitingDeviceLinkTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateLab2Profile|Creates a Lab->Lab identity, marking it as v2 ICC profile
+cmsCreateLab2ProfileTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateLab4Profile|Creates a Lab->Lab identity, marking it as v4 ICC profile
+cmsCreateLab4ProfileTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateLinearizationDeviceLink|This is a devicelink operating in the target colorspace with as many transfer functions as components
+cmsCreateLinearizationDeviceLinkTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateMultiprofileTransform|User passes in an array of handles to open profiles
+cmsCreateMultiprofileTransformTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateNULLProfile|Creates a fake NULL profile
+cmsCreateNULLProfileTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateProfilePlaceholder|Creates an empty profile object, ready to be populated by the programmer
+cmsCreateRGBProfile|This function creates a display RGB profile based on White point, primaries and transfer functions
+cmsCreateRGBProfileTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateProofingTransform|Same as cmsCreateTransform(), but including soft-proofing
+cmsCreateProofingTransformTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateTransform|Creates a color transform for translating bitmaps
+cmsCreateTransformTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsCreateXYZProfile|Creates a XYZ->XYZ identity, marking it as v4 ICC profile
+cmsCreateXYZProfileTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsD50_XYZ|Returns pointer to constant structures
+cmsD50_xyY|Returns pointer to constant structures
+cmsDetectBlackPoint|Estimate the black point of a given profile. Used by black point compensation algorithm
+cmsDeleteContext|frees any resources assiciated with the given context, and destroys the context placeholder
+cmsDeltaE|These functions does compute the difference between two Lab colors
+cmsDetectDestinationBlackPoint|Estimate the black point of a given destination profile by using the Black point compensation ICC algorithm
+cmsDetectTAC|When several colors are printed on top of each other, there is a limit to the amount of ink that can be put on paper. This maximum total dot percentage is referred to as either TIC (Total Ink Coverage) or TAC (Total Area Coverage)
+cmsDeleteTransform|Closes a transform handle and frees any associated memory
+cmsDesaturateLab|desaturate 
+cmsDictAddEntry|Adds data to a dictionary linked list object
+cmsDictAlloc|Allocates an empty dictionary linked list object
+cmsDictDup|Duplicates a dictionary linked list object
+cmsDictFree|Destroys a dictionary linked list object, freeing any associated resource
+cmsDictGetEntryList|Returns a pointer to first element in linked list
+cmsDictNextEntry|Returns a pointer to the next element in linked list
+cmsDoTransform|This function translates bitmaps according of parameters setup when creating the color transform
+cmsDoTransformLineStride|This function translates bitmaps with complex organization
+cmsDoTransformStride|Deprecated. Use cmsDoTransformLineStride instead
+cmsDupContext|duplicates a context with all associated plug-ins
+cmsDupNamedColorList|Duplicates a named color list object, and all associated resources
+cmsDupProfileSequenceDescription|Duplicates a profile sequence object, and all associated resources
+cmsDupToneCurve|Duplicates a tone curve object, and all associated resources
+cmsEstimateGamma|Estimates the apparent gamma of the tone curve by using least squares fitting to a pure exponential expression in the f(x) = xy
+cmsEvalToneCurve16|Evaluates the given 16-bit number across the given tone curve
+cmsEvalToneCurveFloat|Evaluates the given floating-point number across the given tone curve
+cmsFloat2LabEncoded|Encodes a Lab value, from a cmsCIELab value to ICC v4 convention
+cmsFloat2LabEncodedV2|to ICC v2 convention
+cmsFloat2XYZEncoded|Encodes a XYZ value, from a cmsCIELab to ICC convention
+cmsFreeNamedColorList|Destroys a Named color list object, freeing any associated resources
+cmsFreeProfileSequenceDescription|Destroys a profile sequence object, freeing all associated memory
+cmsFreeToneCurve|Destroys a tone curve object, freeing any associated resource
+cmsFreeToneCurveTriple|Destroys tree tone curve object placed into an array
+cmsGDBAddPoint|Adds a new sample point for computing the gamut boundary descriptor
+cmsGBDAlloc|Allocates an empty gamut boundary descriptor with no known points
+cmsGDBCheckPoint|Checks whatever a Lab value is inside a given gamut boundary descriptor
+cmsGDBCompute|Computes the gamut boundary descriptor using all know points and interpolating any missing sector(s)
+cmsGBDFree|Frees a gamut boundary descriptor and any associated resources
+cmsGetAlarmCodes|Gets the current global codes used to mark out-out-gamut on Proofing transforms. Values are meant to be encoded in 16 bits
+cmsGetColorSpace|Gets the color space used by the given profile, using the ICC convention
+cmsGetContextuserData|Returns the user data associated to the given ContextID, or NULL if no user data was attached on context creation
+cmsGetDeviceClass|Gets the device class signature from profile header
+cmsGetEncodedCMMversion|returns the of LCMS_VERSION
+cmsGetEncodedICCversion|Returns the profile ICC version in the same format as it is stored in the header
+cmsGetHeaderAttributes|Gets the attribute flags 
+cmsGetHeaderCreationDateTime|Returns the date and time when profile was created. This is a field stored in profile header
+cmsGetHeaderFlags|Get header flags of given ICC profile object
+cmsGetHeaderManufacturer|Returns the manufacturer signature as described in the header
+cmsGetHeaderModel|Returns the model signature as described in the header
+cmsGetHeaderProfileID|Retrieves the Profile ID stored in the profile header
+cmsGetHeaderRenderingIntent|Gets the profile header rendering intent
+cmsGetNamedColorList|Retrieve a named color list from a given color transform
+cmsGetPCS|Gets the profile connection space used by the given profile, using the ICC convention
+cmsGetPostScriptCRD|A wrapper on cmsGetPostScriptColorResource to simplify CRD generation
+cmsGetPostScriptCSA|A wrapper on cmsGetPostScriptColorResource to simplify CSA generation
+cmsGetPostScriptColorResource|Little CMS 2 unified method to create postscript color resources
+cmsGetProfileContextID|Returns the ContextID associated with a given profile
+cmsGetProfileIOhandler|Returns the iohandler used by a given profile object
+cmsGetProfileInfo|Gets several information strings from the profile, dealing with localization
+cmsGetProfileInfoASCII|Strings are returned as ASCII
+cmsGetProfileVersion|Returns the profile ICC version
+cmsGetTagCount|Returns the number of tags present in a given profile
+cmsGetTagSignature|Returns the signature of a tag located in n position being n a 0-based index
+cmsGetToneCurveEstimatedTable|Tone curves do maintain a shadow low-resolution tabulated representation of the curve. This returns a pointer to this table
+cmsGetToneCurveEstimatedTableEntries|returns the number of such entries
+cmsGetTransformContextID|Returns the ContextID associated with a given transform
+cmsGetTransformInputFormat|Returns the input format associated with a given transform
+cmsGetTransformOutputFormat|Returns the output format associated with a given transform
+cmsGetSupportedIntents|Fills a table with id-numbers and descriptions for all supported intents
+cmsGetSupportedIntentsTHR|?
+cmsIT8Alloc|Allocates an empty CGATS.17 object
+cmsIT8DefineDblFormat|Sets the format string for float numbers
+cmsIT8EnumDataFormat|Returns an array with pointers to the column names in current table
+cmsIT8EnumProperties|Enumerates all properties in current table
+cmsIT8EnumPropertyMulti|Enumerates all the identifiers found in a multi-value property in current table
+cmsIT8FindDataFormat|Returns the position (column) of a given data sample name in current table
+cmsIT8Free|This function frees the CGATS.17 object
+cmsIT8GetData|Gets a cell [Patch, Sample] as a literal string (uncooked string) in current table
+cmsIT8GetDataDbl|Gets a cell [Patch, Sample] as a cmsFloat64Number in current table
+cmsIT8GetDataRowCol|Gets a cell [row, col] as a literal string in current table
+cmsIT8GetDataRowColDbl|Gets a cell [row, col] as a cmsFloat64Number in current table
+cmsIT8GetPatchName|Fills buffer with the contents of SAMPLE_ID column for the set given in nPatch
+cmsIT8GetProperty|Gets a property as a literal string in current table
+cmsIT8GetPropertyDbl|Gets a property as a cmsFloat64Number in current table
+cmsIT8GetSheetType|This function returns the type of the IT8 object
+cmsIT8LoadFromFile|This function allocates a CGATS.17 object and fills it with the contents of cFileName
+cmsIT8LoadFromMem|Same as anterior, but the IT8/CGATS.13 stream is read from a memory block
+cmsIT8SaveToFile|This function saves a CGATS.17 object to a file
+cmsIT8SaveToMem|This function saves a CGATS.17 object to a contiguous memory block
+cmsIT8SetComment|This function is intended to provide a way automated IT8 creators can embed comments into the file
+cmsIT8SetData|Sets a cell [Patch, Sample] as a literal string (uncooked string) in current table
+cmsIT8SetDataDbl|Sets a cell [Patch, Sample] as a cmsFloat64Number in current table
+cmsIT8SetDataFormat|Sets column names in current table
+cmsIT8SetDataRowCol|Sets a cell [row, col] as a literal string in current table
+cmsIT8SetDataRowColDbl|Sets a cell [Patch, Sample] as a cmsFloat64Number in current table
+cmsIT8SetPropertyDbl|Sets a property as a cmsFloat64Number in current table
+cmsIT8SetPropertyHex|Sets a property as an hexadecimal constant (appends 0x) in current table
+cmsIT8SetPropertyMulti|Adds a new sub-property to the property Key
+cmsIT8SetPropertyStr|Sets a property as a literal string in current table
+cmsIT8SetPropertyUncooked|Sets a property with no interpretation in current table
+cmsIT8SetSheetType|This function sets the type of a CGATS.17 object
+cmsIT8SetTable|This function positions the IT8 object in a given table, identified by its position
+cmsIT8TableCount|This function returns the number of tables found in the current CGATS object
+cmsIsCLUT|Returns whatever a CLUT is present in the profile for the given intent and direction
+cmsIsIntentSupported|Returns TRUE if the requested intent is implemented in the given direction
+cmsIsMatrixShaper|Returns whatever a matrix-shaper is present in the profile
+cmsIsTag|Returns TRUE if a tag with signature sig is found on the profile
+cmsIsToneCurveDescending|returns true if (0) > f(1), false otherwise
+cmsIsToneCurveLinear|Returns an estimation of cube being an identity (1:1) in the [0..1] domain
+cmsIsToneCurveMonotonic|Returns an estimation of monotonicity of curve in the [0..1] domain
+cmsIsToneCurveMultisegment|Returns TRUE if the tone curve contains more than one segment, FALSE if it has only one segment
+cmsJoinToneCurve|Composites two tone curves in the form y-1(x(t))
+cmsLab2LCh|Colorimetric space conversions
+cmsLCh2Lab|Colorimetric space conversions
+cmsLab2XYZ|Colorimetric space conversions
+cmsLabEncoded2Float|Decodes a Lab value, encoded on ICC v4 convention to a cmsCIELab value
+cmsLabEncoded2FloatV2|encoded on ICC v2 convention
+cmsLinkTag|Creates a directory entry on tag sig that points to same location as tag dest
+cmsMD5computeID|Computes a MD5 checksum and stores it as Profile ID in the profile header
+cmsMLUalloc|Allocates an empty multilocalized unicode object
+cmsMLUdup|Duplicates a multilocalized unicode object, and all associated resources
+cmsMLUfree|Destroys a multilocalized unicode object, freeing any associated resources
+cmsMLUgetASCII|Gets an ASCII (7 bit) entry for the given Language and country
+cmsMLUgetTranslation|Obtains the translation rule for given multilocalized unicode object
+cmsMLUgetWide|Gets a UNICODE wchar_t (16 bit) entry for the given Language and country
+cmsMLUsetASCII|Fills an ASCII (7 bit) entry for the given Language and country
+cmsMLUsetWide|Fills a UNICODE wide char (16 bit) entry for the given Language and country
+cmsMLUtranslationsCodes|Obtains the translation codes for a true translation stored in a given multilocalized unicode object
+cmsMLUtranslationsCount|Obtains the number of true translations stored in a given multilocalized unicode object
+cmsNamedColorCount|Returns the number of spot colors in a named color list
+cmsNamedColorIndex|Performs a look-up in the dictionary and returns an index on the given color name
+cmsNamedColorInfo|Gets extended information on a spot color, given its index
+cmsOpenIOhandlerFromFile|Creates an IO handler object from a disk-based file
+cmsOpenIOhandlerFromMem|Creates an IO handler object from a memory block
+cmsOpenIOhandlerFromNULL|Creates a void iohandler object (similar to a file iohandler on /dev/null)
+cmsOpenIOhandlerFromStream|Creates an IO handler object from an already open stream
+cmsOpenProfileFromFile|Opens a file-based ICC profile returning a handle to it
+cmsOpenProfileFromFileTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsOpenProfileFromIOhandler2THR|Opens a profile, returning a handle to it
+cmsOpenProfileFromIOhandlerTHR|Opens a profile, returning a handle to it
+cmsOpenProfileFromMem|Opens an ICC profile which is entirely contained in a memory block
+cmsOpenProfileFromMemTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsOpenProfileFromStream|Opens a stream-based ICC profile returning a handle to it
+cmsOpenProfileFromStreamTHR|Same as anterior, but allowing a ContextID to be passed through
+cmsPipelineAlloc|Allocates an empty pipeline
+cmsPipelineCat|Appends pipeline l2 at the end of pipeline l1. Channel count must match
+cmsPipelineCheckAndRetreiveStages|This function is quite useful to analyze the structure of a Pipeline and retrieve the Stage elements that conform the Pipeline
+cmsPipelineDup|Duplicates a pipeline object, and all associated resources
+cmsPipelineEval16|Evaluates a pipeline usin 16-bit numbers, optionally using the optimized path
+cmsPipelineEvalFloat|Evaluates a pipeline using floating point numbers
+cmsPipelineEvalReverseFloat|Evaluates a pipeline in the reverse direction, using Newton’s method
+cmsPipelineFree|Frees a pipeline and all owned stages
+cmsPipelineGetPtrToFirstStage|Get a pointer to the first stage in the pipeline, or NULL if pipeline is empty
+cmsPipelineGetPtrToLastStage|Get a pointer to the last stage in the pipeline, or NULL if pipeline is empty
+cmsPipelineInputChannels|Returns the number of input channels of a given pipeline
+cmsPipelineInsertStage|Inserts a stage on either the head or the tail of a given pipeline
+cmsPipelineOutputChannels|Returns number of output channels of a given pipeline
+cmsPipelineSetSaveAs8bitsFlag|Sets an internal flag that marks the pipeline to be saved in 8 bit precision
+cmsPipelineStageCount|Returns number of stages of a given pipeline
+cmsPipelineUnlinkStage|Removes the stage from the pipeline
+cmsPlugin|Declare external extensions to the core engine in the global context. The "Plugin" parameter may hold one or several plug-ins, as defined by the plug-in developer
+cmsPluginTHR|Installs a plug-in bundle in the given context
+cmsReadRawTag|Similar to cmsReadTag, but different in two important aspects.
+cmsReadTag|Reads an existing tag with signature sig, parses it and returns a pointer to an object owned by the profile object holding a representation of tag contents
+cmsReverseToneCurve|Creates a tone curve that is the inverse f−1 of given tone curve
+cmsReverseToneCurveEx|In the case it couldn’t be analytically reversed, a tablulated curve of nResultSamples is created
+cmsSaveProfileToFile|Saves the contents of a profile to a given filename
+cmsSaveProfileToIOhandler|Low-level save to IOHANDLER. It returns the number of bytes used to store the profile, or zero on error
+cmsSaveProfileToMem|Same as anterior, but for memory blocks
+cmsSaveProfileToStream|Saves the contents of a profile to a given stream
+cmsSetAlarmCodes|Sets the global codes used to mark out-out-gamut on Proofing transforms. Values are meant to be encoded in 16 bits
+cmsSetAlarmCodesTHR|for a given context
+cmsSetAdaptationState|Sets adaptation state for absolute colorimetric intent, on all but cmsCreateExtendedTransform
+cmsSetAdaptationStateTHR|in the given context
+cmsSetColorSpace|Sets the color space signature in profile header, using ICC convention
+cmsSetDeviceClass|Sets the device class signature in profile header
+cmsSetEncodedICCversion|Sets the ICC version in profile header, without any decoding
+cmsSetHeaderAttributes|Sets the attribute flags in the profile header
+cmsSetHeaderFlags|Sets header flags of given ICC profile object
+cmsSetHeaderManufacturer|Sets the manufacturer signature in the header
+cmsSetHeaderModel|Sets the model signature in the profile header
+cmsSetHeaderProfileID|Replaces the the Profile ID stored in the profile header
+cmsSetHeaderRenderingIntent|Sets the profile header rendering intent
+cmsSetLogErrorHandler|Allows user to set any specific logger
+cmsSetLogErrorHandlerTHR|Allows user to set any specific logger for the given context
+cmsSetPCS|Sets the profile connection space signature in profile header, using ICC convention
+cmsSetProfileVersion|Sets the ICC version in profile header
+cmsSignalError|signal an error
+cmsSliceSpace16|Slices target space executing a 16 bits callback of type cmsSAMPLER16
+cmsSliceSpaceFloat|Slices target space executing a floating point callback of type cmsSAMPLERFLOAT
+cmsSmoothToneCurve|Smoothes tone curve according to the lambda parameter
+cmsStageAllocCLut16bit|Creates a stage that contains a 16 bits multidimensional lookup table (CLUT)
+cmsStageAllocCLut16bitGranular|but it allows different granularity on each CLUT dimension
+cmsStageAllocCLutFloat|Creates a stage that contains a float multidimensional lookup table (CLUT)
+cmsStageAllocCLutFloatGranular|but it allows different granularity on each CLUT dimension
+cmsStageAllocIdentity|Creates an empty (identity) stage that does no operation
+cmsStageAllocToneCurves|Creates a stage that contains nChannels tone curves, one per channel
+cmsStageAllocMatrix|Creates a stage that contains a matrix plus an optional offset
+cmsStageDup|Duplicates a pipeline stage and all associated resources
+cmsStageFree|Destroys a pipeline stage object, freeing any associated resources
+cmsStageInputChannels|Returns the number of input channels of a given stage object
+cmsStageNext|Returns next stage in pipeline list, or NULL if end of list
+cmsStageOutputChannels|Returns the number of output channels of a given stage object
+cmsStageSampleCLut16bit|Iterate on all nodes of a given CLUT stage, calling a 16-bit sampler on each node
+cmsStageSampleCLutFloat|Iterate on all nodes of a given CLUT stage, calling a floating point sampler on each node
+cmsStageType|Returns the type of a given stage object
+cmsTagLinkedTo|Returns the tag linked to sig, in the case two tags are sharing same resource, or NULL if the tag is not linked to any other tag
+cmsTempFromWhitePoint|Correlates a black body temperature in oK from given chromaticity.
+cmsTransform2DeviceLink|Generates a device-link profile from a given color transform
+cmsUnregisterPlugins|This function returns Little CMS global context to its default pristine state, as no plug-ins were declared
+cmsUnregisterPluginsTHR|This function returns the given context its default pristine state, as no plug-ins were declared
+cmsWhitePointFromTemp|Correlates a black body chromaticity from given temperature in oK. Valid range is 4000K-25000K
+cmsWriteRawTag|The RAW version does the same as cmsWriteTag but without any interpretation of the data
+cmsWriteTag|Writes an object to an ICC profile tag, doing all necessary serialization
+cmsXYZ2Lab|Colorimetric space conversions
+cmsXYZ2xyY|Colorimetric space conversions
+cmsXYZEncoded2Float|Decodes a XYZ value, encoded on ICC convention to a cmsCIEXYZ value
+cmsxyY2XYZ|Colorimetric space conversions
 csy|create synonym
 ctc|create table or cluster
 ctccom_cleanup_online_move|DBMS_PART.CLEANUP_ONLINE_OP_INTERNAL
