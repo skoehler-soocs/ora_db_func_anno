@@ -5268,6 +5268,11 @@ kzxutilValidateObjectName|XS_ADMIN_UTIL.VALIDATE_DB_OBJECT_NAME
 ldx|core date functions
 libc_start_main|(non oracle)libc support for starting the main function
 lis|PLSQL_KG_Interface
+liscar|list cell as reference
+liscau|list cell as unsigned
+lisemp|list iterator - empty check
+lismak|list allocator
+lismor|list iterator - more elements in list
 lm|low level math functions
 lmtdcrel|compare two double-precision float-point numbers
 lnxn2copt|converts an oracle number to a character string with option for padding
@@ -5661,9 +5666,21 @@ pfrsim_sort_index_main|sort index main
 pfrstk|runtime stack frame
 pfrtcs|trace call stack(?) calls kgitrc on each kgiob on the stack
 pgm|PLSQL ILMS
-ph|PLSQL infrastructure
-ph1|syntax
-ph2|semantics phase 2
+ph|PLSQL
+ph1|phase 1 (parser)
+ph1chk|identifier equality check
+ph1drv|parser driver
+ph1dte|DIANA tree entry
+ph1dti|DIANA tree identifier
+ph1dtn|DIANA tree node
+ph1dtr|DIANA tree reference
+ph1lex|lexical analyzer
+ph1mak|make DIANA node
+ph1mpc|make DIANA procedure call node (D_P_CALL)
+ph1mtk|make token
+ph1run|parser executor
+ph1typ|DIANA type tree
+ph2|phase 2 (semantic analyzer)
 ph2blo|idl node D_BLOCK, D_DECL
 ph2exp|process IDL class EXP
 ph2ext|process IDL class EXP - top level
@@ -6061,6 +6078,10 @@ psx|PLSQL PSD standalones
 pt|PLSQL IDL
 ptf|polymorphic table functions
 pu|PLSQL infrastructure
+px|PLSQL lexical analyzer
+pxgett|get token interface
+pxt|token
+pxtgid|get id
 q|query
 qba|buffer allocation
 qbadrv|create control structures
