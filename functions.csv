@@ -1791,13 +1791,13 @@ kcrfw_alfs_save_redowrite_time|save redo write time (lgwr)
 kcrfw_alfs_cron_job|calculate alfs stats (ckpt)
 kcrfw_cal_target_rba|calculate target redo byte address
 kcrfw_copy_cv|copy change vectors to public redo buffer
-kcrfw_do_null_write|execute write cycle without write only increase on disk SCN
+kcrfw_do_null_write|execute write cycle without write, only increase on disk SCN
 kcrfw_do_write|execute write cycle with write and increase on disk and real redo SCN
 kcrfw_gather_lwn|gather strand info for LWN batch and put results in PIC
 kcrfw_gather_strand|gather strand write info
 kcrfw_have_non_idle_strand|gather strands needing writing from PIC
 kcrfw_partial_checksum|write checksum into the redo strand
-kcrfw_post|post processing after (null)write
+kcrfw_post|post processing after write
 kcrfw_redo_gen|main redo generation function 
 kcrfw_redo_gen_ext|(12c)
 kcrfw_redo_write|redo
@@ -3613,6 +3613,7 @@ kpur|remote
 kpurcs|call with service context
 kpurcsc|remote call with service context, callbacks
 kpureq|request (a statement to be executed)
+kpuxc|db replay?
 kpuvers|version
 kpuzxs|XS midtier
 kq|query
