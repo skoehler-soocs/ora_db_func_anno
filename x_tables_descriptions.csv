@@ -742,7 +742,7 @@ X$KPPLCP_STATS|kernel programmatic interface database resistent connection pool 
 X$KQDPG|kernel query dictionary pga
 X$KQFCO|kernel query fixed table columns
 X$KQFDT|kernel query fixed derived table
-X$KQFOPT|
+X$KQFOPT|kernel query fixed options. holds flag (bitmap) field for (fixed table) object ids
 X$KQFP|kernel query fixed package
 X$KQFSZ|kernel query fixed size
 X$KQFTA|kernel query fixed tables
