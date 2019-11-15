@@ -1418,8 +1418,13 @@ isSingleChar|Returns single-byte data encoding flag [DOM X]
 isStandalone|Returns value of standalone flag [DOM X]
 isUnicode|Returns Unicode data flag [DOM X]
 joe|java runtime environment(?)
+joevm_invokeonvirtual|invokes precompiled java code
 jom|java
 jon|java
+jonfos_write_bytes|System.out.println
+jonfos8|JIT wrapper
+jonfos8_write_bytes|System.out.println
+jonfos8_write_bytes__cst__|System.out.println
 jox|java jit compiler
 joxcsys|create or replace java system
 joxas|dbms_xa
@@ -1610,6 +1615,7 @@ kcblsy|load sync IO
 kcbnlc|analyze cleanout
 kcbo|object queue
 kcbo_ckpt_obj|fast object checkpoint
+kcbo_service_ockpt|object checkpoint completion check
 kcbpioq|physical IO queueing (batched in planline)
 kcbpioqAddIO|add IO to batched IO
 kcbpioqInit|initialize memory area in shared pool
@@ -6139,6 +6145,7 @@ qctErrConvertDataType|error routine for data type conversions
 qctcopn|typechecks the query block and its descendant
 qcto|operators
 qctopls|typecheck OPTPLS operator
+qctset|set operator
 qcu|utility
 qcuErr|error
 qcuErroep|oracle error position
@@ -6673,6 +6680,8 @@ setNamedItem|Add a new item to a node map [DOM 1]
 setNodeValue|Sets the new value (character data) of a node [DOM 1]
 setPIData|Sets the data of a PI [DOM 1 ProcessingInstruction.setData]
 sgipc|operatign system dependent grid inter process calls
+sjon|java
+sjoninvk_jit|invoke JIT. calls java code mapped in private memory
 sk|operating system dependent kernel
 skdstdst|dump a stack trace
 skg|generic
