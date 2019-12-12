@@ -1069,7 +1069,7 @@ dbg|debug and diagnostics
 dbga|Unified Tracing Service
 dbgc|diagnostic framework
 dbgd|generic debug API
-dbgdChkEventIntv|check events set for value to activate debug
+dbgdChkEventIntV|check events set for value to activate debug
 dbgdCopyEventNode|transfers event information from PGA to SGA and back
 dbgdLinkEvent|link event information into the list 
 dbgdSetEvents|set event
@@ -1417,7 +1417,12 @@ ipp|internal probe processor capabilities(?)
 isSingleChar|Returns single-byte data encoding flag [DOM X]
 isStandalone|Returns value of standalone flag [DOM X]
 isUnicode|Returns Unicode data flag [DOM X]
-joe|java runtime environment(?)
+joe|java oracle runtime environment(?)
+joe_make_primitive_array|initialize array
+joe_really_blow_it_internal|handle uncaught java exception
+joed|debug
+joedwp|wire protocol
+joevm|virtual machine
 joevm_invokeonvirtual|invokes precompiled java code
 jom|java
 jon|java
@@ -4376,9 +4381,9 @@ kstm|time manager
 kstmchkdrift|check drift
 kstmgethighresustick|get high resolution time
 ksu|user
-ksu_detactive_tac|deactivete time accounting
+ksu_detactivate_tac|deactivate timed-out actions
 ksu_dispatch_tac|dispatch timed-out actions (updates wait interface)
-ksu_update_eoc_stats|update end of call state(?)
+ksu_update_eoc_stats|update end of call statistics
 ksucin|check interrupt
 ksuclc|cleanup current call
 ksucln|cleanup detached process
@@ -6680,6 +6685,9 @@ setNamedItem|Add a new item to a node map [DOM 1]
 setNodeValue|Sets the new value (character data) of a node [DOM 1]
 setPIData|Sets the data of a PI [DOM 1 ProcessingInstruction.setData]
 sgipc|operatign system dependent grid inter process calls
+sjoe|execute
+sjoez|security
+sjoezshm_map_object|shared memory map object. maps compiled java code into private memory from /tmp/.SHM*
 sjon|java
 sjoninvk_jit|invoke JIT. calls java code mapped in private memory
 sk|operating system dependent kernel
