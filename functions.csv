@@ -1083,6 +1083,7 @@ dbgexPhaseII|phase 2
 dbgexProcessError|process error
 dbgpd|IPS package and diagnostics
 dbgf|diagnostic inter library compile-time service
+dbghmo|health monitor framework
 dbgr|automatic diagnostic repository
 dbgrl|diagnostic arb alert log
 dbgrlr|diagnostic arb alert log
@@ -1110,6 +1111,7 @@ dbke|RDBMS diagnostic data extractor
 dbkePostKGE_kgsf|Post KGE error for KGSF
 dbked|Dumper
 dbkedDefDump|do DDE default dump
+dbkfdgcb|call back for X$DBKFDG
 dbkgc|generic configuration
 dbkh|health monitor
 dbkhicd_create_offl_dict|DBMS_HM.DBKHICD_CREATE_OFFL_DICT CREATE_OFFLINE_DICTIONARY
@@ -1251,6 +1253,7 @@ expepr|evaluate the argument predicate. It returns the result of the evaluation.
 fplib|filter projection library (exadata smartscan)
 freeElements|Frees an allocated list of element nodes [DOM X]
 freeNode|Frees memory allocated by a node [DOM X]
+gen|core library functions
 getAttrLocal|Returns an attribute's namespace local name [DOM X]
 getAttrName|Returns an attribute's name [DOM 1 Attr.getName]
 getAttrNamespace|Returns an attribute's namespace URI [DOM X]
@@ -1583,7 +1586,7 @@ kcbchk_ctx|check context, execute check functions
 kcbdbh|dump one buffer
 kcbdnb|dump n buffers
 kcbema|exam and maybe apply
-kcbgcur|get current read
+kcbgcur|get in current mode
 kcbget|get buffer (retry scan performed earlier by kcbgtcr)
 kcbgtcr|get consistent read
 kcbh|header
@@ -1667,6 +1670,7 @@ kcbzwb|wait buffer (buffer busy wait)
 kcbzwc|wait (write) complete
 kcbzwcw|wait
 kcc|controlfile
+kcc_get_enqueue|get controlfile enqueue
 kcc_tac_callback|timed-out actions callback routine (could signal waiting too long)
 kccbcf|begin controlfile update
 kccbcx|begin control transaction
@@ -1674,12 +1678,15 @@ kccccf|close control files
 kccchb|cache header block 
 kccchm|cache header block 
 kcccmt|commit changes
-kccecx|end controlfile transaction
+kccecx|end controlfile transaction. release enqueue
 kccexpd|expand controlfile section for rectype
+kccfup|if arg1 != arg2 then return, otherwise call kccecx()
 kccgft|get for fixed table
 kccidf|identify all copies of the controlfile. sends a message to the dbwr
 kcckfr|deallocate controlfile cache using kernel memory free routine
-kccocx|open control transaction
+kccocx|open controlfile transaction
+kccocx_noenq|no enqueue? there is an enqueue get in the function?
+kccpbcx|prepare begin controlfile transaction.
 kccpcp|prepare(?) checkpoint progress records
 kccrhd|read header
 kccwbp|write block physically
@@ -1736,6 +1743,7 @@ kcm_GetSCNAutoRolloverParams|DBMS_SCN.GETSCNAUTOROLLOVERPARAMS
 kcm_GetSCNParamsByCompat|DBMS_SCN.GETSCNPARAMSBYCOMPAT
 kcmadj|adjust scn
 kcmclscn|check lamport scn
+kcmclscn8|8
 kcmdsc|dfs: set/get/inc lock value scn and mess with backup scn if needed
 kcmgtsf|get timestamp full
 kcmtdif|time difference
@@ -4059,7 +4067,7 @@ krvt|log miner viewer support
 krvugaclr|DBMS_LOGMNR_INTERNAL.KRVUGACLR
 krvugaset|DBMS_LOGMNR_INTERNAL.KRVUGASET
 krvx|extract
-ks|service (VOS)
+ks|service 
 ksa|asynchronous messages
 ksaamb|allocate message buffer
 ksadmb|deallocate message buffer
@@ -4148,6 +4156,7 @@ ksfdaio|asynchronous IO
 ksfdbio|block IO
 ksfdbio_updatestats|update statistics for X$KSFDSTCMP (V$IOSTAT_FUNCTION)
 ksfdckerr|check for errrors
+ksfdcreg|register controlfiles with CSS
 ksfdfchkaio|check if aio can be done
 ksfdgaiolmt|get aio limit
 ksfdgfno|get file number
@@ -4163,6 +4172,7 @@ ksfdpoll|poll for IO completion
 ksfdread|read random access file in sync mode
 ksfdss|snapshot (clonedb)
 ksfdss_fob_is_snap|are files in file open block (fob) snapshot files?
+ksfdtrcwrt|trace write
 ksfdwat|wait for IOs to finish
 ksfdwtio|wait for IO
 ksfflt|free latch
@@ -4471,7 +4481,7 @@ ktbchg2|(header) change
 ktbconv|block convert
 ktbgcl|performs ITL cleanout for RC and CU blocks
 ktbgcl1|general clean 1
-ktbgcur|get
+ktbgcur|get block in current mode
 ktbgds|get dependent SCN
 ktbgfc|flush cleanout to disk
 ktbgfi|get free ITL
@@ -5277,7 +5287,8 @@ kzxsp|XS Security Class
 kzxutilErr|XS_ADMIN_UTIL.RAISE_ERROR (?)
 kzxutilValidateDBuser|XS_ADMIN_UTIL.VALIDATE_DB_USER
 kzxutilValidateObjectName|XS_ADMIN_UTIL.VALIDATE_DB_OBJECT_NAME
-ldx|core date functions
+l|core library functions
+ldx|date functions
 libc_start_main|(non oracle)libc support for starting the main function
 lis|PLSQL_KG_Interface
 liscar|list cell as reference
@@ -5321,6 +5332,7 @@ ncrorou|receive OUT arguments for specified procedure
 ncroxrend|xfr record end
 ncrsrend|end record
 ncrsrwrt|Record WRiTe output buffer
+nd|directory
 nhp|http
 nhpDestroyConnection|remove connection
 nhpEndConnection|end connection
@@ -5347,6 +5359,7 @@ nioqwa|wait
 nl|library
 nldatxt|put current date/time into string
 nn|names
+nm|management
 nodeValid|Determines if a node is valid again a DTD [DOM X]
 normalize|Merges adjacent text nodes in an element [DOM 1]
 npi|program interface
@@ -5363,7 +5376,8 @@ npil|local
 npisnl|set network link
 npitcc|Test/Clear connections
 npixfr|transfer
-ns|session
+nr|interchange
+ns|transparent network service
 nsb|block(?)
 nsbasic|basic
 nsbasic_brc|block receive
@@ -5382,7 +5396,7 @@ nsotruns|traverse and unnest subquery
 nsprecv|receive packet from network transport layer
 nsrdr|packet reader
 nstimexp|expire function. invoked by LTM with these specific arguments
-nt|transport
+nt|transport (drivers)
 ntevque|event vector query
 ntm|mailbox
 ntp|ipc
@@ -6684,7 +6698,7 @@ setDocOrder|Sets the document order for each node in a Document [DOM X]
 setNamedItem|Add a new item to a node map [DOM 1]
 setNodeValue|Sets the new value (character data) of a node [DOM 1]
 setPIData|Sets the data of a PI [DOM 1 ProcessingInstruction.setData]
-sgipc|operatign system dependent grid inter process calls
+sgipc|operating system dependent grid inter process calls
 sjoe|execute
 sjoez|security
 sjoezshm_map_object|shared memory map object. maps compiled java code into private memory from /tmp/.SHM*
@@ -6709,6 +6723,7 @@ skgfrciohdlr|concurrent IO handler
 skgfrdup|duplicate file handle
 skgfrgsz|get size
 skgfrliopo|listio (AIO) poll
+skgfrlk|release a lock on a fob
 skgfrls|release a sequential device previously allocated
 skgfrvldtrq|validate requests
 skgfrwat|wait for IO to complete
@@ -6771,7 +6786,7 @@ slrac|verify (memory) read access
 sltrgatime64|arbitrary time lookup 
 sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
-sltrusleep|true (?) sleep (calls nanosleep)
+sltrusleep|true sleep (calls nanosleep)
 slts|threading services
 sltsm|mutex
 sltsmda|directed acquire. wrapper for ssOswPthread_mutex_lock
@@ -6903,6 +6918,7 @@ vopdrv|driver
 vopqbc|query block
 vsn|version (?)
 wpiu|PLSQL apps
+xa|external functions for XA applications
 xct|transaction management
 xctend|end
 xctcom|commit: commit the current tranaction of the current session
