@@ -1598,6 +1598,7 @@ kcbhxoro|operation
 kcbi_|shared IO pool
 kcbi_get_rsv_bh|get reserved buffer header
 kcbi_issue_io|issue IO
+kcbi_issue_read|issue read
 kcbi_issue_write|issue write
 kcbibr|invalidate range of blocks
 kcbifc|full database caching mode (?)
@@ -4142,6 +4143,7 @@ ksfd_chkio|IO checker/io stats
 ksfd_clear_pgaobjsc|clear pga objects
 ksfd_do_io_verification|do IO verification
 ksfd_get_physical_sectsz|read physical sectorsize from device
+ksfd_glblksz|get logical blocksize
 ksfd_gosdrq|get os dependent requests
 ksfd_io|perform IO
 ksfd_odm|oracle disks manager
@@ -4630,6 +4632,7 @@ ktsl_format_ehdr|format extent header block
 ktsl_format_ufs_hbb|format uncommitted free space hash bucket block
 ktsl_ins_fsb|insert into free space block
 ktsla|space allocation
+ktsla_alloc_fsg|add a FSG to a freelist
 ktsla_cfsgsp_main|committed free space get space main
 ktsla_hbb_gsp|hash bucket block get space
 ktsla_format_ufs_fsg|format uncommitted free space FSG block
