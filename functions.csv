@@ -6705,8 +6705,9 @@ sgipc|operating system dependent grid inter process calls
 sjoe|execute
 sjoez|security
 sjoezshm_map_object|shared memory map object. maps compiled java code into private memory from /tmp/.SHM*
-sjon|java
+sjon|java virtual machine wrappers for OS specific functions
 sjoninvk_jit|invoke JIT. calls java code mapped in private memory
+sjonfile_write|(non JIT) wrapper for OS specific write function
 sk|operating system dependent kernel
 skdstdst|dump a stack trace
 skg|generic
@@ -6782,6 +6783,8 @@ sl|operating system (dependent) library
 slcpu|get cpu usage
 slcpums|measurement (for getrusage)
 slcra|we trip here if someone else other than ssexhd() calls us
+slfifl|wrapper for OS specific flush stream function (fflush on solaris)
+slfiwrb|wrapper for OS specific binary output function (fwrite on solaris)
 slgei|call function with the oracle error code and arguments
 slgts|get time stamp (for gettimeofday)
 slmsrd|message file read, reads .msb file
