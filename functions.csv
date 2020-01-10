@@ -1993,6 +1993,8 @@ kdoapl|apply
 kdodrp|delete row piece
 kdoirp|insert row piece
 kdoiur|insert undo record
+kdolkr|lock row piece
+kdourp|update row piece
 kdp|archive compression: pcode
 kdq|query
 kdrpCC|DBMS_REPAIR.CHECK_COMPAT
@@ -4125,6 +4127,7 @@ ksdxwcwpt|create watchpoint
 ksdxwdwpt|delete watchpoint
 kse|error
 ksed|debug
+ksedec|delete the top error for entry
 ksedmp|dump process state
 ksedst|dump the call stack
 ksedsts|short stack
@@ -4154,6 +4157,7 @@ ksfd_sbio|submit block IO
 ksfd_skgfqio|to system kernel generic file queue IO
 ksfd_update_iostatstime|update statistics for X$KSFDSTFILE (V$IOSTAT_FILE)
 ksfdaf|asm files
+ksfdafGo|execute IO
 ksfdaio|asynchronous IO
 ksfdbio|block IO
 ksfdbio_updatestats|update statistics for X$KSFDSTCMP (V$IOSTAT_FUNCTION)
@@ -4477,6 +4481,7 @@ ktamp_remove_backupfile|DBMS_APBACKEND.REMOVEBACKUPFILE
 ktamp_send_command|DBMS_APBACKEND.SENDCOMMANDINTERNAL
 ktamp_write_tarball|DBMS_APBACKEND.WRITETARBALL
 ktb|block
+ktbIsItlOKForDLC|is ITL (interested transaction list) OK for DLC (delayed logging changes)
 ktbapundo|apply undo
 ktbdbc|fast block cleanout function
 ktbchg2|(header) change
@@ -4714,7 +4719,8 @@ ktugusc|get undo segment
 ktuisonline1|return undo segment info if undo segment is online
 ktundo|undo
 ktunfy|notification procedure
-ktur|recovery
+ktur|rollback
+ktursp|to savepoint 
 kturCRBackoutOneChg|consistent read; backout change
 kturCurrBackoutOneChg|current read; backout change
 kturGetUndoRec|get an undo record
@@ -6792,6 +6798,7 @@ slrac|verify (memory) read access
 sltrgatime64|arbitrary time lookup 
 sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
+sltrsleep|sleep for arg2 seconds
 sltrusleep|true sleep (calls nanosleep)
 slts|threading services
 sltsm|mutex
