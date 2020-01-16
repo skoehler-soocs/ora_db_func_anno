@@ -1161,6 +1161,7 @@ dbkripds_downgrade_schema|DBMS_ADR.DOWNGRADE_SCHEMA
 dbkripms_migrate_schema|DBMS_ADR.MIGRATE_SCHEMA
 dbkriprs_recover_schema|DBMS_ADR.RECOVER_SCHEMA
 dbkt|RDBMS UTS tracefile
+dbnest|dbnest
 dbs|database
 dbsclose|close
 dbsgnmchg|global name change
