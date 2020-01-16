@@ -1571,6 +1571,11 @@ kbc|backup appliance containers
 kbrs|backup appliance
 kc|cache
 kcb|buffers
+kcb_apply|apply changes
+kcb_commit|commit issued, apply block changes main function
+kcb_commit_main|main
+kcb_post_apply|post-apply (CBC latch is freed)
+kcb_pre_apply|pre-apply (CBC latch is taken)
 kcb_sync_last_change|call kcrf_commit_force to sync redo
 kcbapl|apply (changes to buffer; kcoapl executes changes)
 kcbb|databasewriter
@@ -1751,6 +1756,7 @@ kcmtdif|time difference
 kcn|nologging(?)
 kco|operation
 kco_blkchk|main block check function
+kco_issue_callback|callback function
 kcoadd|add change vector to kcocv array
 kcoadv_hdr|advance SCN in buffer header
 kcoapl|apply (changes to buffer)
@@ -4429,6 +4435,7 @@ ksur|resource usage
 ksus|statistics
 ksuse|sessions
 ksusgn|session signature
+ksusws|switch user session (MTS)
 ksut|timer
 ksuwaitsysevent|seems to deal with channels (x$ksrchdl, x$ksrcctx)
 ksux|instance
@@ -4566,7 +4573,10 @@ ktfsrb|DBMS_FLASHBACK.ENABLE_AT_TIME
 ktfsrd|DBMS_FLASHBACK.DISABLE
 ktftb_backout_names|DBMS_FLASHBACK.INTERNAL_NAMES_BACKOUT
 ktftbp_backout_xids|DBMS_FLASHBACK.INTERNAL_XIDS_BACKOUT
-kti|in memory undo(?)
+kti|in memory undo
+ktiCommitCleanout|commit changes, cleanout/update blocks
+ktiConUndoBlocks|condense undo blocks (create final undo block from IMU undo map)
+kticmt|commit (main commit function)
 ktilm_flush_one_seg|DBMS_ILM.FLUSH_SEGMENT_ACCESS_INTERNAL
 ktilm_flush_rowmaps|DBMS_ILM.FLUSH_ROWMAPS
 ktilm_flush_seg|DBMS_ILM.FLUSH_ALL_SEGMENTS
@@ -4664,6 +4674,7 @@ ktsmgmql|DBMS_UNDO_ADV.GET_LONGEST_QUERY
 ktsmgru|DBMS_UNDO_ADV.GET_REQUIRED_UNDO
 ktsmgruarr|DBMS_UNDO_ADV.GET_REQUIRED_UNDO
 ktsp|segment pagetable
+ktsp_bump_hwm|bump highwatermark (holding HW enqueue)
 ktspffbmb|format first level bitmap block
 ktspffc|Fill First Level bmb dbas
 ktspfsbmb|format second level bitmap block
@@ -4683,6 +4694,7 @@ ktsplbrecl|reclaim lob
 ktspmlhwm|Move the Low High Water Mark. Called when a range of blocks is formatted
 ktspsc|search cache
 ktspscan_bmb|scan the level 1 bitmap blocks
+ktsptrn_fixbmbs|transaction fix bitmap blocks
 ktss|segment procedures
 ktssdrp_segment|converts segment to temp in preparation for dropping
 ktssdt_segs|drops stray temporary segments (creates cursor to check)
@@ -4700,9 +4712,13 @@ ktte_ts_gettarget|check if the tbs needs to be extended
 ktu|undo
 ktu4smck|semantic check of the block
 ktu4ubck|undo block check
+ktuFindUndoSegment|find undo segment
+ktuGetUsegDba|get undo segment data block address
+ktuGetUsegHdr|get undo segment header
 ktuIM|in memory
 ktuabt|abort
 ktuapundo|apply undo
+ktubdb|build data block(?)
 ktubgn|begin transaction
 ktubko|get undo record to rollback transaction, non-cr only
 ktubnd|bind undo segment
@@ -4713,6 +4729,7 @@ ktudba|convert from usn to dba
 ktudecrustat|decrement undo usage statistics in the resource maanger
 ktudnx|decrease active transaction count
 ktugct|get commit times for transction ids in the data block's ITL
+ktugfb|get free buffer
 ktugur|generate undo and redo
 ktugus|get undo segment header
 ktugusc|get undo segment
@@ -4720,7 +4737,6 @@ ktuisonline1|return undo segment info if undo segment is online
 ktundo|undo
 ktunfy|notification procedure
 ktur|rollback
-ktursp|to savepoint 
 kturCRBackoutOneChg|consistent read; backout change
 kturCurrBackoutOneChg|current read; backout change
 kturGetUndoRec|get an undo record
@@ -4729,7 +4745,7 @@ kturRecoverActiveTxns|active transactions
 kturRecoverTxn|transaction
 kturRecoverTxnMain|main procedure
 kturRecoverUndoSegment|undo segment
-kturcm|redo commit
+kturcm|redo commit (update transaction table)
 kturbk|rollback for CR only, reads undo record pointed by uba and call ktundo to back out the change
 kturbt|rollback to time scn
 kturdb|write undo data to undo block
@@ -4743,6 +4759,9 @@ ktusrs|shrink rollback segments
 ktuulc|unlock (?)
 ktz|testing
 ku|utility
+kubs|big data sql
+kubsavro|avro
+kubsprq|parquet
 kueuld|export unloader
 kup|datapump
 kupc|queue services
@@ -5053,6 +5072,7 @@ kxsDiag8711391|Check for bug 8711391 (cursor lock user session state object dele
 kxsGetRuntimeLock|get runtime lock
 kxsOpenACursor|open a cursor (local in PGA)
 kxsSsa|session state array(?)
+kxsSsaClearSession|remove session information from session state array (X$KSUSE)
 kxsSsaSetSqlid|prepare to update X$SUSE with sqlid, updateallssa performs this
 kxsSsaUpdateAllssa|update all session state array (X$KSUSE)
 kxsbnddmp|bind variable dump. master routine per bind for providing bind info in sql trace files.
@@ -5558,7 +5578,7 @@ opifcs|free cursors by session close
 opigln|get long column
 opiierr|internal error
 opiino|initialize opi
-opikndf1|OPIINO: Kernel route which sits on top of the SQL*Net driver. we asusme that only MTS uses this function right before it detaches the session.
+opikndf1|OPIINO: Kernel route which sits on top of the SQL*Net driver. we assume that only MTS uses this function right before it detaches the session.
 opikndf2|OPIINO: Kernel route which sits on top of the SQL*Net driver
 opilof|log off
 opilon|log on
