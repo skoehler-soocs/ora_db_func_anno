@@ -4761,7 +4761,11 @@ ktuulc|unlock (?)
 ktz|testing
 ku|utility
 kubs|big data sql
+kubsCR|consistent read (?)
 kubsavro|avro
+kubscpr|compression (?)
+kubscsvi|CSV (?)
+kubsjni|JNI
 kubsprq|parquet
 kueuld|export unloader
 kup|datapump
@@ -6280,7 +6284,7 @@ qerltcSingleRowLoad|main single row insertion function
 qerns|group by nosort
 qeroc|object collection iterator
 qerocStart|create a collection iterator row-source to iterate
-qeroi|extensibel indexing query component
+qeroi|extensible indexing query component
 qeroifcc|fast call close
 qeroifcsu|fast call switch user
 qeroiirc|invoke rowsource close
@@ -6417,7 +6421,7 @@ qksht|hints
 qksrc|result cache
 qksmm|compiler memory management
 qksmms|simulation
-qksop|compilter operand processing
+qksop|operand processing
 qksptf|polymorphic table functions compilation
 qkspm|plan management
 qksqb|Query compilation for query blocks
@@ -6602,7 +6606,7 @@ qsoda|DBMS_SODA
 qsodaplsCreateColl|DBMS_SODA.CREATE_COLLECTION
 qsodaplsDropColl|DBMS_SODA.DROP_COLLECTION
 qsodaplsOpenColl|DBMS_SODA.OPEN_COLLECTION
-qx|query execution
+qx|execution
 qxdid|domain index ddl operations
 qxdid_odci_get_impltype_num|DBMS_ODCI.GET_IMPLTYPE_NUM
 qxdid_odci_set_privs|DBMS_ODCI.ODCI_SET_PRIVS
