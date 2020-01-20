@@ -1560,6 +1560,7 @@ k2serv|service a transaction manager RPC
 k2sfor|forget current session of current transaction
 k2udio|message unmarshalling
 k2v|recovery
+k5|kerberos (authentication) version 5
 ka|access
 kad|objects anydata/images
 kaf|fetch
@@ -4278,9 +4279,10 @@ kslskgs|spin get of shared latch
 kslwait|wait for n centi-seconds or until posted
 kslwaitctx|wait context; wait until timeout
 kslwaitns|wait to be awakened w/o calling into the db scheduler
-kslwat|wat for event
-kslwlmod|wait list modification
-kslwlscan|scan write list
+kslwat|wait for event
+kslwl|wait list (list of other processes waiting on a semaphore)
+kslwlmod|wmodification
+kslwlscan|scan 
 kslwt|wait interface
 kslwt_end_snapshot|end snapshot
 kslwt_update_stats_int|update statistics
@@ -5348,6 +5350,24 @@ msqrxq|make sql for remote execution
 n|network
 na|authentication
 nau_ctl|aUthentication ConTroL
+nauk5|kerberos version 5
+nauk5aegetservcred|get service ticker
+nauk5agtgt_from_cache|get ticket getting ticket (tgt) from cache
+nauk5agtgt_from_kdc|get ticket getting ticket (tgt) from kerberos distribution center (kdc)
+nauk5b1_fcc_open_file|open credential cache file
+nauk5ba_fcc_retrieve|retrieve credential cache
+nauk5bb_fcc_read|read credential cache
+nauk5bc_fcc_principal|read principal from credential cache
+nauk5bz_fcc_close_file|close credential cache
+nauk5p01freenode|free node in parse tree
+nauk5p05addnode|add a node in parse tree
+nauk5p06getvalue|get value from prsing in the krb5.conf file
+nauk5p07parsefile|parse krb5.conf file
+nauk5p08parseline|parse line from krb5.conf file
+nauk5p10createnode|generate tree of krb5.conf file
+nauk5p12parseinitstate|initialize parse tree
+nauk5p13findnoderelation|walking the parse tree
+nauk5p14findnodesubsection|another parse tree operation
 nazslon|Zecurity Log ON
 nb|buffer
 nbi|incoming
