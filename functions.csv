@@ -4514,6 +4514,7 @@ ktcCommitTxn_new|main commit function
 ktcbgn|begin transaction
 ktcbod|delete the given branch state object and put it on the freelist
 ktcccdel|commit callback delete
+ktccr0|commit changes made to undo$
 ktcddt|delete distributed transaction
 ktcdso|delete state object
 ktcgtx|get action global area
@@ -4541,7 +4542,7 @@ ktelck|set segment header extent map lock
 ktelrwi|redoless write initialize
 kteop|operations
 kteopins|insert a formatted extent after the high water mark
-kteopmerge|marge extent extent maps
+kteopmerge|merge extent extent maps
 kteu|redo support for segment header/extent map changes
 ktf|flashback support
 ktfa|flashback archive
@@ -4593,8 +4594,8 @@ ktma|IM transaction ADG
 ktmSmonMain|main smon routine
 ktmb|IM transaction block
 ktmc|IM transaction concurrency
-ktmjs|IM transaction journal scan
 ktmirc|instance recovery
+ktmjs|IM transaction journal scan
 ktmmon|tx monitor background timeout action (smon)
 ktmpj|IM transaction private journal
 ktmpjInvalidateRow|invalidates the row in a private journal
@@ -4618,7 +4619,7 @@ ktrigst|GET_SESSION_TIMEOUT
 ktrigt|GET_TIMEOUT
 ktrisst|SET_SESSION_TIMEOUT
 ktrist|SET_TIMEOUT
-ktrsexec|space management execute
+ktrsexec|executes resumable function
 ktrvac|validate active transactions(?)
 kts|segment management
 kts4smck|semantic check of the block
@@ -4708,7 +4709,9 @@ ktstdt|deletes the sort handle (ktstused) state object
 ktsx|extent management
 ktsx_endtx|end add extent transaction
 ktsxr_add|redoless add extent to a segment
+ktsxr_delete|redoless delete extent from a segment
 ktsxs_add|add extent to a segment
+ktsxserr|segment (addition) error
 ktsxterr|find extent error
 ktt|tablespace
 ktte_ts_gettarget|check if the tbs needs to be extended
@@ -4719,6 +4722,7 @@ ktuFindUndoSegment|find undo segment
 ktuGetUsegDba|get undo segment data block address
 ktuGetUsegHdr|get undo segment header
 ktuIM|in memory
+ktuShrinkUndoSeg|shrink undo segment
 ktuabt|abort
 ktuapundo|apply undo
 ktubdb|build data block(?)
@@ -4732,6 +4736,7 @@ ktudba|convert from usn to dba
 ktudecrustat|decrement undo usage statistics in the resource maanger
 ktudnx|decrease active transaction count
 ktugct|get commit times for transction ids in the data block's ITL
+ktugdl|get ddl, get US enqueue for USN
 ktugfb|get free buffer
 ktugur|generate undo and redo
 ktugus|get undo segment header
@@ -4758,6 +4763,17 @@ ktursal|shrink undo segments
 ktursn|rollback segments shrink numbered
 ktursp|rollback to savepoint
 ktursr|rollback segments shrink requested
+ktusm|smu (system managed undo)
+ktusm_shrinkoff|shrink offline rollback segments
+ktusmasp|add space
+ktusmasplr|resumable
+ktusmdxu|walk across the undo segments in the row cache
+ktusp|space management
+ktusp_addextent|add extent
+ktusp_cleantx|clean transaction
+ktusp_delextent|delete extent
+ktusp_endtx|end transaction
+ktusp_starttx|start transaction
 ktusrs|shrink rollback segments
 ktuulc|unlock (?)
 ktz|testing
