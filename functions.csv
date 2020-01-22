@@ -3581,6 +3581,7 @@ kpoclsa|close all cursors
 kpodny|describe any arguments used
 kpodp|direct path load
 kpofchswcbk|fetch switch callback
+kpofcr|fetch callback for V8 protocol. fetch callback due to pipe functions execution in order to return collection.
 kpogsk|initializes the session and returns the encrypted session key
 kpohal|This is the memory allocator that uses kpcch (the common heap module)
 kpolob|lob operations
@@ -6344,9 +6345,11 @@ qersq|sequence number
 qerst|statistics
 qerstFetch|row source fetch
 qertb|table access
+qertbClose|close
 qertbFetch|fetch
 qertbFetchByRowId|using inderlying row source fetch by rowid or cluster key
 qertbSaveMethod|save IO request for batching(?)
+qertbStart|start
 qertq|table queue (px)
 qertqoFetch|output table queue fetch method
 qertqoInitRowDesc|use tqo row vector to determine the partitioning columns
