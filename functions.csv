@@ -1584,6 +1584,7 @@ kcbb|databasewriter
 kcbbacq|active checkpoint queue
 kcbbdrv|central write driver
 kcbblwr|create redo records for list of blocks written (media recovery marker)
+kcbbposts|post dbwr to write
 kcbbwlru|write buffers from one of the LRU write lists
 kcbbxsv|take single buffer and check if we have to return to LRU
 kcbcbo|call begin object checkpoint (?)
@@ -1709,6 +1710,7 @@ kcfcld|close database
 kcfcmb|create/mount database subroutines
 kcfcsy|cross instance sync
 kcfida|identify file action
+kcfido|is database open
 kcfis|intelligent storage
 kcfis_tablespace_is_on_sage|test if tablespace is on exadata
 kcfl|loader
@@ -1825,7 +1827,8 @@ kcrfw_gather_lwn|gather strand info for LWN batch and put results in PIC
 kcrfw_gather_strand|gather strand write info
 kcrfw_have_non_idle_strand|gather strands needing writing from PIC
 kcrfw_partial_checksum|write checksum into the redo strand
-kcrfw_post|post processing after write
+kcrfw_post|post-write activities
+kcrfw_postprocess_write|postprocessing and generating statistics
 kcrfw_redo_gen|main redo generation function 
 kcrfw_redo_gen_ext|(12c)
 kcrfw_redo_write|redo
@@ -1835,6 +1838,8 @@ kcrfw_slave_adaptive_cronjob|calculate lgwr slave stats (ckpt)
 kcrfw_slave_group_main|main logwriter worker function
 kcrfw_slave_group_postall|lgwr function to post lgwr workers
 kcrfw_slave_queue_insert|main lgwr function to provide writes to lgwr workers
+kcrfw_slave_queue_remove|main lgwr worker function to wait for work. wait in semtimedop.
+kcrfw_stats_writesize_record|calculate and provide statistics (sesstat/sysstat). optionally provide write elapsed message in logwriter tracefile.
 kcrfw_update_and_bcast_real_redo_scn|update real redo SCN and real write time in kcrfsg_
 kcrfw_update_redo_blk_hdrs|obtain write info from PIC and write redo headers
 kcrfw_wait_for_fg_copy|read redo copy latches accompanying shared pool structure to validate writes to redo are done
@@ -4407,6 +4412,8 @@ kstm|time manager
 kstmchkdrift|check drift
 kstmgethighresustick|get high resolution time
 ksu|user
+ksuSdi|shutdown immediate (?)
+ksuSdiInProgress|in progress
 ksu_detactivate_tac|deactivate timed-out actions
 ksu_dispatch_tac|dispatch timed-out actions (updates wait interface)
 ksu_update_eoc_stats|update end of call statistics
@@ -4451,6 +4458,7 @@ ksv|slave management
 ksvcheckwait|validate waiting situation
 ksvcreate|create slave process
 ksvrdp|run generic detached slave process
+ksvrdp_int|internal
 ksvsend|send message to slave process
 ksvsubmit|submit request for ASM Onnn slave process
 ksvwait|setup waiting 
@@ -6462,6 +6470,7 @@ qksmm|compiler memory management
 qksmms|simulation
 qksop|operand processing
 qksptf|polymorphic table functions compilation
+qksptfSQM|sql macro
 qkspm|plan management
 qksqb|Query compilation for query blocks
 qksqbApplyToQbc|apply to QB
@@ -6762,6 +6771,8 @@ scumnt|mount
 scurls|release
 sel|select
 selexe|execute: prepare area for fetch
+semop|(system call) semaphore operation
+semtimedop|(system call) semaphore timed operation
 seq|sequence numbers
 setAttrValue|Sets an attribute's value [DOM 1 Attr.value attribute]
 setAttribute|Creates an attribute for an element [DOM 1]
@@ -6856,6 +6867,8 @@ slcra|we trip here if someone else other than ssexhd() calls us
 slfifl|wrapper for OS specific flush stream function (fflush on solaris)
 slfiwrb|wrapper for OS specific binary output function (fwrite on solaris)
 slgei|call function with the oracle error code and arguments
+slgfn|get filename (?)
+slgtds|get delta seconds. returns number of seconds since a fixed epoch.
 slgts|get time stamp (for gettimeofday)
 slmsrd|message file read, reads .msb file
 slrac|verify (memory) read access
