@@ -36,6 +36,8 @@ _cmsWriteAlignment|Writes zeros on the given IOHANDLER until a 32-bit aligned po
 _cmsWriteTypeBase|Writes s a cmsTagTypeSignature to the given IOHANDLER
 BZ2|bzip2
 BZ2_decompress|decompress
+EGS|engineered system
+EGSLib|library
 Ldi|date/time conversion
 Lpx|xml parser
 LpxFSM|FSM parser
@@ -187,6 +189,7 @@ OCIRefHexSize|OCIRef get size of buffer in bytes to store hexadecimal string
 OCIRefIsEqual|OCIRef compare two refs for EQUality
 OCIRefIsNull|OCIRef test if a ref is NULl
 OCIRefToHex|OCIRef convert a ref to a Hexadecimal string
+OCIStmt|statement
 OCIStmtFetch|fetch
 OCIStmtExecute|execute
 OCIStringAllocSize|OCIString get Allocated SiZe
@@ -5366,7 +5369,7 @@ ltx|XDB
 lxm|native language support
 main|(non oracle)general c starting function
 mDNS|multicast dns
-md|spatial
+md|multidimension (spatial)
 mdgr|georaster
 mdr|indexing
 msq|generating sql statements
@@ -5656,8 +5659,29 @@ orp|oracle external pickler/opaque type interface
 ort|OBJECTS Types
 osn|Two Task
 oss|oracle storage server
+oss_read|read
+oss_wait|wait
+oss_write|write
+osscap|capability
 ossconf|configuration
+ossdisk|disk
+ossdscv|?
+ossfilcs|?
+osshdl|handle
+osslfht|? hash table
+osslib|library
+ossmem|memory
+ossmetrics|metrics
+ossnet|network
+ossprc|?
 osssec|security
+ossstore|?
+ossstore2d|?
+ossstore3d|?
+osstls|transport layer security
+ossutil|utility
+ossutl|utility
+osswallet|wallet
 p2c|PLSQL PSD standalones
 par|PLSQL KG interface
 pb|PLSQL code execution
@@ -6429,6 +6453,7 @@ qesstPIncGammaC|DBMS_STAT_FUNCS_AUX.INC_GAMMA_C_CALLOUT
 qesstPKSSig|DBMS_STAT_FUNCS.SIG_KS_CALLOUT
 qesxl|vector translate
 qesxlp|PX
+qeszm|zonemaps
 qjsn|json
 qk|kernel
 qka|allocation
