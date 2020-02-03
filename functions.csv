@@ -2403,6 +2403,7 @@ kfpkgDGSetSparseParent|SETSPARSEPARENT
 kfr|recovery
 kfrb|buffer
 kfrc|COD
+kfsp|spfile (asmparameterfile)
 kftha|transparent high availability
 kftr2ah|relative to absolute file number translation with hint
 kfv|volume subsystem
@@ -4218,6 +4219,7 @@ ksfpec|io post an event
 ksfq|sequential file io interface
 ksfq_alo|allocate device
 ksfqfcls|close a sequential file
+ksfs|filesystem
 ksfsd|OFS file system dispatcher
 ksfsm|OFS file system metadata
 ksfsc1|OFS file system callback
@@ -6821,7 +6823,16 @@ sjoninvk_jit|invoke JIT. calls java code mapped in private memory
 sjonfile_write|(non JIT) wrapper for OS specific write function
 sk|operating system dependent kernel
 skdstdst|dump a stack trace
+skfSIMD|SIMD
+skfs|filesystem
+skfn|networking
 skg|generic
+skgce|encryption
+skgcrc|cyclic redundancy check
+skgcs|cloud services
+skgcs_aws|aws
+skgcs_azure|azure
+skgcs_gce|google cloud engine(?)
 skgf|file
 skgfalo|allocate sequential device
 skgfcls|close device
@@ -6853,7 +6864,10 @@ skgmrf_release|release memory
 skgmstack|call specified function with extra stack space
 skgnfs|network file system
 skgnfs_poll_channels|poll network paths
+skgns|(kernel) namespace
+skgping|ping(?)
 skgpnumcpu|return number of cpus in system
+skgpm|persistent memory
 skgptalive|thread alive (check if process or thread is alive)
 skgpw|post/wait
 skgpwinit|initialization
@@ -6889,6 +6903,9 @@ smbput|put a record into the memory buffer
 sor|sort operation
 soreod|end of data: close data input for sort
 sorputqb|insert record into sort
+soss|oracle storage server
+sosscom|communication
+sosstcp|tcp (transmission control protocol)
 sou2o|main oracle executable entry point
 sl|operating system (dependent) library
 slcpu|get cpu usage
@@ -6979,6 +6996,7 @@ sskgm|memory
 sskgmrf|real free heap
 sskgmrf_unmaprange|unmap memory range
 sskgmrf_validaterange|mmap memory range
+sskgns|(kernel) namespace
 sskgp|process
 sskgp_gettid|get thread id
 sskgp_tgkill|thread get and kill. send a signal to a process/thread
