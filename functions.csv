@@ -1815,6 +1815,7 @@ kcrfds|do switch of current log
 kcrfisd|redo is on disk
 kcrfnl|next log
 kcrfr|read
+kcrfro|open a logfile for redo reading.
 kcrfrgv|get change vector header/data
 kcrfsl|switch log
 kcrfvh|verify header
@@ -1863,6 +1864,9 @@ kcrpdv|recovery parallel (driver?)
 kcrpsend_claim|send recovery buffer claim message
 kcrr|redo archival
 kcrrlh|log history
+kcrrschd|schedule multiple arch processes
+kcrrsmp|start multiple arch processes
+kcrrxmp|stop multiple arch processes
 kcrv|recovery
 kcrvfh|file headers
 kcs|scn management
@@ -5276,6 +5280,7 @@ kzsob_GetKey|DBMS_OBFUSCATION_TOOLKIT_FFI.GETKEY
 kzsob_MD5|DBMS_OBFUSCATION_TOOLKIT_FFI.MD5
 kzsp|privileges
 kzsr|roles/remote password file
+kzsrsdn|passwordfile identifiy(?)
 kzstc|DBMS_CRYPTO_FFI.COOKIE
 kzstdl|DBMS_CRYPTO_FFI.DECRYPT
 kzstdr|DBMS_CRYPTO_FFI.DECRYPT
