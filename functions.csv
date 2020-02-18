@@ -1250,6 +1250,7 @@ evaopn2|operand
 evapls|plsql function
 evareo|relational operator. Compare two operands of relational expression. After compare, branch on operator type and return true or false.
 evaval|val
+evavgby|vector group by
 evaxl|vector translate
 expcop|evaluate callback operator list
 expeal|evaluate its argument AND list. It returns true if argument is true, false if argument is false, and unknown if argument is unkown.
@@ -1257,6 +1258,15 @@ expepr|evaluate the argument predicate. It returns the result of the evaluation.
 fplib|filter projection library (exadata smartscan)
 freeElements|Frees an allocated list of element nodes [DOM X]
 freeNode|Frees memory allocated by a node [DOM X]
+fs|pmem based file store
+fsd|fsdirect
+fsdm|main
+fsdb|block
+fsdc|check
+fsddb|db
+fsdi|inode
+fsdodm|odm
+fsdofs|ofs
 gen|core library functions
 getAttrLocal|Returns an attribute's namespace local name [DOM X]
 getAttrName|Returns an attribute's name [DOM 1 Attr.getName]
@@ -2355,9 +2365,12 @@ kfgb|background
 kfia|remote
 kfiac|IOServer client
 kfias|IOServer
-kfio|translation I/O layer
+kfio|translation IO layer
 kfioDumpPg|dump routine
 kfioPhysical|get physical sector size
+kfioRequest|request
+kfioRequestPriv|privilege
+kfioSubmitIO|submit IO
 kfioer|translation
 kfios|simple
 kfis|intelligent storage interfaces
@@ -2365,6 +2378,12 @@ kfk|KFK
 kfk_dump|dump routine
 kfk_dump_iosubsys|io subsystem
 kfk_dump_kfkio|KFK IO 
+kfk_io1|IO 1
+kfk_submit|submit
+kfk_submit_io|IO
+kfk_submit_one_oss_io|one oracle storage server IO
+kfk_submit_oss_io|oracle storage server IO
+kfk_transitIO|transition IO
 kfm|node monitor interface implementation
 kfmd|layer for diskgroup registration
 kfms|layers support function interface
@@ -3335,8 +3354,8 @@ knalperr|DBMS_APPLY_ERROR.PROCESS_ERRORS
 knalsDropAPR|DBMS_APPLY_ADM_INTERNAL.DROP_APPLY_PROGRESS_REDO
 knalsGetSender|DBMS_STREAMS.GET_SENDER_INTERNAL
 knalspCleanApplySpill|DBMS_XSTREAM_ADM_UTL.CLEAN_APPLY_SPILL
-knanr|propogation receiver
-knas|slave
+knanr|propagation receiver
+knas|server
 knasm2|main 2
 knasplcr|process logical change record
 knaspx|process transaction
@@ -4108,7 +4127,7 @@ ksbd|detached process
 ksbmsg|call cpu count changed callbacks
 ksbrdp|run a detached background process
 ksbsrv|start a multi-stated server process
-ksbt|background processes
+ksbt|?
 ksbx|Xic cross instance calls
 ksbxiaf|ksbxic (cross instance calls) message and interrupt action
 ksbxiafdomsg|ksbxic and async xic static functions
@@ -4180,6 +4199,7 @@ ksfd_skgfqio|to system kernel generic file queue IO
 ksfd_update_iostatstime|update statistics for X$KSFDSTFILE (V$IOSTAT_FILE)
 ksfdaf|asm files
 ksfdafGo|execute IO
+ksfdafRequest|request
 ksfdaio|asynchronous IO
 ksfdbio|block IO
 ksfdbio_updatestats|update statistics for X$KSFDSTCMP (V$IOSTAT_FUNCTION)
@@ -4219,10 +4239,10 @@ ksfpec|io post an event
 ksfq|sequential file io interface
 ksfq_alo|allocate device
 ksfqfcls|close a sequential file
-ksfs|filesystem
-ksfsd|OFS file system dispatcher
-ksfsm|OFS file system metadata
-ksfsc1|OFS file system callback
+ksfs|OFS filesystem
+ksfsc1|callback
+ksfsd|dispatcher
+ksfsm|metadata
 ksfsp|DBMS_FS
 ksfsp_make_fs|KSFSP_MAKE_FS
 ksfsp_mount_fs|KSFSP_MOUNT_FS
@@ -4234,7 +4254,8 @@ ksimPrintGroupMemPGA|print out pga group memory (oradebug)
 ksimPrintGroupMemCache|print out group memory cache (oradebug)
 ksimgchg|group state change
 ksipget|get a group lock (synchronous interface to DLM for lock get)
-ksipc|VOS IPC
+ksipc|IPC
+ksipcenv|memory allocations on different sockets (?from oradebug)
 ksipcon|convert a group lock
 ksiprls|release a group lock
 ksk|resource manager
@@ -4362,6 +4383,7 @@ ksmxm_init|initialize
 ksmxm_prepage|prepage xga
 ksmxmnfy|notify
 ksn|two task
+ksns|(kernel) namespaces
 kso|operations
 kso_prespawn_queue_disable|DBMS_PROCESS.STOP_POOL
 kso_prespawn_queue_enable|DBMS_PROCESS.START_POOL
@@ -4378,9 +4400,12 @@ ksp_spfile_write|write
 kspgir|get range
 kspgpnicd|DBMS_UTILITY.KSPGPNICD GET_PARAMETER_VALUE
 kspgsp|get string parameter
+kspm|persistent memory
+kspmxs|extension services
 ksppt|parameter table
 kspptval|value
 ksprcvsp|receive spfile information for write to spfile
+kspt|?
 ksq|enqueue
 ksqcnl|convert an enqueue's mode
 ksqcnv|convert an enqueue's mode
@@ -4522,6 +4547,8 @@ ktbgfc|flush cleanout to disk
 ktbgfi|get free ITL
 ktbgwl|generate write list (?)
 ktbisc|ITL scan
+ktblch|block chain
+ktblchain|transaction
 ktbrcl|ITL cleanout routine
 ktbt|table
 ktbtul|unlock ITLs
@@ -5672,6 +5699,8 @@ oss_write|write
 osscap|capability
 ossconf|configuration
 ossdisk|disk
+ossdisk_issue_pmemlog_write|issue pmemlog write
+ossdisk_write|write
 ossdscv|?
 ossfilcs|?
 osshdl|handle
@@ -6327,7 +6356,7 @@ qergiFetch|Fetch procedure of PX granule Iterator Row source Rowid
 qergr|group by rollup
 qergs|group by sort
 qergsFetch|fetch
-qergv|vector aggregate
+qergv|vector aggregate (group by)
 qerhc|hash clusters
 qerhj|hash join
 qerhjAllocate|allocate
@@ -6432,7 +6461,7 @@ qesdpiGetSGAUpStateTyp|DBMS_DST.SGA_UPGRADE_STATE
 qesdpiLoadSecTZ|DBMS_DST.LOAD_SECONDARY_KERNEL
 qesdpiUnLoadSecTZ|DBMS_DST.UNLOAD_SECONDARY_KERNEL
 qesdpiUpgradeTable|DBMS_DST.UPGRADE_TABLE_KERNEL
-qesgv|vector aggregate
+qesgv|vector aggregate (group by)
 qesma|partitioning
 qesmm|memory manager (pga)
 qesmmIPgaFreeCb|pga free callback
@@ -6476,6 +6505,7 @@ qkaset|set expression
 qkatab|runtime allocation for base table row sources
 qkatrv|traverse set expression tree
 qkauna|union or union all
+qkaxl|vector transalte
 qke|expressions
 qkexl|vector translate
 qkk|allocate
@@ -6824,7 +6854,7 @@ sjonfile_write|(non JIT) wrapper for OS specific write function
 sk|operating system dependent kernel
 skdstdst|dump a stack trace
 skfSIMD|SIMD
-skfs|filesystem
+skfs|loopback (?) filesystem
 skfn|networking
 skg|generic
 skgce|encryption
