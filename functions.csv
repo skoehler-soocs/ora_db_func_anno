@@ -2664,9 +2664,11 @@ kgodm_wait_ios|wait on IOs
 kgs|service
 kgsc|cache, session cache for cursors
 kgscCacheCursor|add cursor to cache
+kgscCloseACursor|close a cursor
 kgscComputeHash|compute hash value for cursor
 kgscFindCursor|search cursor in the cache
 kgscFindFreeSlot|find a free slot in the cache
+kgscGetCursor|get a cursor
 kgsd|debugging
 kgsk|resource manager
 kgskbwt|begin wait
@@ -2825,6 +2827,7 @@ kkdlGetBaseUser|translate ownerid to a name
 kkdlGetUserId|get user id
 kkdlacd|get all column definitions
 kkdlgun|get user name (translate ownerid to a name)
+kkdlgus|get user (id)
 kkdllk|lock an object
 kkdo|OBJECTS dictionary
 kkdoloi|load objects related information
@@ -3694,6 +3697,10 @@ kqan|server side debug operations
 kqap|server side debug operations
 kqas|server side debug operations
 kqd|dictionary management
+kqdCloseCursor|close cursor
+kqdGetCursor|get cursor
+kqdOpenCursor|open cursor
+kqdReleaseACursor|release a cursor
 kqdgtc|return an open and parsed cursor for a statement
 kqdobr|read obj$ row using (owner#,name,namespace,remoteowner,linkname) as key
 kqdobu|verify object uniqueness (?)
@@ -3734,13 +3741,32 @@ kqludp|update with dependencies
 kqlunac|unauthenticate dependents of an object
 kqlvld|validate an object
 kqr|dictionary/row cache
+kqrAllocateEnqueue|allocate enqueue
+kqrFreeHashMutex|free mutex for row cache hash bucket
+kqrFreePOMutex|free mutex for parent object
+kqrFreePOToSGA|free parent object to sga: free memory
+kqrGetAllHashMutexes|get all hash bucket mutexes
+kqrGetHashMutex|get mutex for row cache hash bucket
+kqrGetPOMutex|get mutex for parent object
+kqrHashTableInsert|insert parent object into hash bucket
+kqrHashTableRemove|remove parent object from hash bucket
+kqrLockPo|lock parent object
+kqrReadFromDB|read row cache object
+kqrReleaseLock|unpin object in row cache
+kqrRelinkToHashTable|add object to hash table(?)
+kqrUpdateHashTable|update hash bucket
 kqreqd|enqueue delete
 kqrfr|free
 kqrfrc|cache
-kqrfrpo|pinned object(?)
-kqrhsh|hash
+kqrfrpo|parent object
+kqrhsh|hash - generate hash to find hash bucket, calls kgghash
+kqrinpo|insert parent object
+kqrmpin|mutex pin
+kqrmupin|mutex unpin
+kqrpad|parent add
 kqrpre|read a parent cache object
-kqrpre1|additional 1
+kqrpre1|1
+kqrpre2|2 - this is the real function
 kqrprl|parent release enqueue
 kqrrls|release lock
 kr|redo
@@ -4466,6 +4492,7 @@ ksudlp|delete process. called when user detaches or cleanup by pmon
 ksudmp|dump process state object
 ksudps|dump process state
 ksudss|dump system state
+ksugrs|generate recursive session
 ksugtcpums|get cpu measurement
 ksul|license/language
 ksumcl|multi(?) check for process to be alive (checks pmon)
@@ -6792,6 +6819,7 @@ rpidru|setup memory for recursive session
 rpidrus|recursive program handling
 rpidrv|recursive program interface driver
 rpiexe|execute
+rpiope|open cursor
 rpispl|switch user and parse
 rpiswu2|switch user in recursive sql
 rtb|rowsource table
