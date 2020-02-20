@@ -3674,6 +3674,7 @@ kpufch|fetch one or more rows
 kpuhh|handle heap
 kpuhhalo|allocate memory freeable
 kpuhhmrk|mark
+kpuhhrsp|remove permanent chunk
 kpun|streams advanced queuing 
 kpur|remote
 kpurcs|call with service context
@@ -3715,6 +3716,7 @@ kqlb|bootstrapping support
 kqlclo|cleanup nonexistent objects in OBJ$
 kqld|dictionary callbacks
 kqldprr|parent referential constraint read
+kqldsyr|synonym read
 kqlfgl|get row for Lock, fixed table support
 kqlfgx|get row for access table entry, fixed table support
 kqlftl|cache fixed Table for Locks callback
@@ -4563,6 +4565,8 @@ ktamp_WriteContentCO|DBMS_APBACKEND.WRITECONTENTCO
 ktamp_remove_backupfile|DBMS_APBACKEND.REMOVEBACKUPFILE
 ktamp_send_command|DBMS_APBACKEND.SENDCOMMANDINTERNAL
 ktamp_write_tarball|DBMS_APBACKEND.WRITETARBALL
+ktat|temporary
+ktatminextsz|minimum extent size
 ktb|block
 ktbIsItlOKForDLC|is ITL (interested transaction list) OK for DLC (delayed logging changes)
 ktbapundo|apply undo
@@ -4719,6 +4723,7 @@ ktsfsnblk|new block
 ktsfunlk|undo free list
 ktsfx|datafile extention
 ktsircinfo|index row cache info
+ktsitbs_info|tablespace info. get tablespace info from rowcache.
 ktsl|lob
 ktsl_disp_gsp_driver|dispenser get space driver
 ktsl_fill_dispenser_main|fill dispenser main loop
