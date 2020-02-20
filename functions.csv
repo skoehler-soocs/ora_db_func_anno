@@ -3742,11 +3742,13 @@ kqlunac|unauthenticate dependents of an object
 kqlvld|validate an object
 kqr|dictionary/row cache
 kqrAllocateEnqueue|allocate enqueue
+kqrCacheHit|cache hit; found an existing entry
 kqrFreeHashMutex|free mutex for row cache hash bucket
 kqrFreePOMutex|free mutex for parent object
 kqrFreePOToSGA|free parent object to sga: free memory
 kqrGetAllHashMutexes|get all hash bucket mutexes
 kqrGetHashMutex|get mutex for row cache hash bucket
+kqrGetClusterLock|get a row cache lock in cluster mode (cluster version of kqrget)
 kqrGetPOMutex|get mutex for parent object
 kqrHashTableInsert|insert parent object into hash bucket
 kqrHashTableRemove|remove parent object from hash bucket
@@ -3759,10 +3761,11 @@ kqreqd|enqueue delete
 kqrfr|free
 kqrfrc|cache
 kqrfrpo|parent object
+kqrget|get a row cache lock
 kqrhsh|hash - generate hash to find hash bucket, calls kgghash
 kqrinpo|insert parent object
-kqrmpin|mutex pin
-kqrmupin|mutex unpin
+kqrmpin|memory pin
+kqrmupin|memory unpin
 kqrpad|parent add
 kqrpre|read a parent cache object
 kqrpre1|1
@@ -4715,6 +4718,7 @@ ktsfsmhwm|segment move high water mark
 ktsfsnblk|new block
 ktsfunlk|undo free list
 ktsfx|datafile extention
+ktsircinfo|index row cache info
 ktsl|lob
 ktsl_disp_gsp_driver|dispenser get space driver
 ktsl_fill_dispenser_main|fill dispenser main loop
