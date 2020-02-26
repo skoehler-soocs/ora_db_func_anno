@@ -2519,6 +2519,7 @@ kggsmInitStringMapService|string map service
 kggsmCommonInit|common initialisation. 
 kgh|heap manager
 kgh_update_comment|add comment to memory chunk allocation
+kgh_get_spds_by_chunk|get shared pool descriptors by chunk
 kghaddex|add extent
 kghalf|non-recoverably allocate a freeable chunk of memory
 kghalo|main allocation entry point
@@ -2576,11 +2577,13 @@ kgkp|generic services scheduling policies
 kgl|library cache management
 kglComputeHash|compute hash value
 kglConcurrencyId|return library cache hash bucket number
+kglFreeSO|free state object
 kglGetMutex|get mutex
 kglGetSO|get state object
 kglGetSessionUOL|obtain location for AOL in KKSSP
 kglHeapInitializeInternalFL|initialize heap allocation
 kglLock|library cache lock
+kglOnErrorMutexCleanup|on error mutexes cleanup. called to cleanup mutexes when an error has occured.
 kglUnLock|library cache unlock
 kglPinSO|pin SO
 kglUnPin|release pin
@@ -2826,6 +2829,7 @@ kkdl|dictionary lookup
 kkdlGetBaseUser|translate ownerid to a name
 kkdlGetUserId|get user id
 kkdlacd|get all column definitions
+kkdlgtbz|get blocksize
 kkdlgun|get user name (translate ownerid to a name)
 kkdlgus|get user (id)
 kkdllk|lock an object
@@ -2850,7 +2854,7 @@ kkecdn|determine cardinality of a table given single table predicates
 kkecpst|create copy of column statistics in compile time memory
 kkeds|dynamic sampling (ADS)
 kkegvl|get a value from an opndef and normalize it for cost
-kkehrd|get column statistics for a table
+kkehrd|histogram read. get column statistics for a table
 kkejcd|returns cardinality of a join between to tables
 kkeosl|process an OR chain of predicates
 kkepsl|selectivity of a single predicate
@@ -2859,6 +2863,7 @@ kkesCreateCache|create cache for statistics
 kkesIOScaleFactor|calculate the factor for converting the number of blocks to IO cost
 kkesScaleIO|calculate IO cost based on the number of blocks
 kkest|statistics
+kkestRCSBase|read column statistics base function
 kketac|table access cost(?)
 kkevcs|set view column stats for underlying column
 kkevp|vector processing
@@ -3508,6 +3513,7 @@ koionew|create (and pin) a new named instance
 koiopnm|pin an object by name
 kok|kernel side
 koka|access
+kokagob|get objects
 kokbtns|type check the nested select operator
 kokd|driver
 kokdn2p|map a name to an pref
@@ -3729,6 +3735,7 @@ kqlobjlod|object load
 kqlobld|object load
 kqlobpn|object pin heaps and load data pieces
 kqlp|sharing of sql statements
+kqlpcdlod|pcode load
 kqlpim|pin and load more heaps
 kqlplslod|pl/sql object load
 kqlr|remote
@@ -3755,10 +3762,12 @@ kqrGetPOMutex|get mutex for parent object
 kqrHashTableInsert|insert parent object into hash bucket
 kqrHashTableRemove|remove parent object from hash bucket
 kqrLockPo|lock parent object
+kqrOnErrorMutexCleanup|on error mutex cleanup. called to free mutexes when an error has occured.
 kqrReadFromDB|read row cache object
 kqrReleaseLock|unpin object in row cache
 kqrRelinkToHashTable|add object to hash table(?)
 kqrUpdateHashTable|update hash bucket
+kqrdco|dump current object(?)
 kqreqd|enqueue delete
 kqrfr|free
 kqrfrc|cache
@@ -3773,6 +3782,7 @@ kqrpre|read a parent cache object
 kqrpre1|1
 kqrpre2|2 - this is the real function
 kqrprl|parent release enqueue
+kqrpspr|post process
 kqrrls|release lock
 kr|redo
 kra|recovery area function
@@ -4499,6 +4509,7 @@ ksudps|dump process state
 ksudss|dump system state
 ksugrs|generate recursive session
 ksugtcpums|get cpu measurement
+ksugpp|get parent process
 ksul|license/language
 ksumcl|multi(?) check for process to be alive (checks pmon)
 ksup|processes
@@ -5188,8 +5199,9 @@ kxsfbb|free bind buffers(?)
 kxsffir|function fire called when the appropriate heap is going away
 kxspoac|put oacdef into the cursor instantiation
 kxst|sql trace
+kxstAfterExec|after execution. row source statistics are written to trace.
 kxstTraceBinds|bind variable
-kxstTraceClose|close tracefile
+kxstTraceClose|close cursor
 kxstTraceWait|provide wait information
 kxstcol|collect. provide parse, execute and fetch statistics.
 kxstcol2|for LOB types
@@ -6534,6 +6546,7 @@ qkadrv2|2
 qkadrv2Post|post processing
 qkaffsindex|fast full scan index
 qkagby|group by
+qkaix|index
 qkajoi|join processing
 qkanindex|analyzes the usage of the argument non-clustered index
 qkaqkn|row source allocation
