@@ -2935,7 +2935,9 @@ kkocs|cursor sharing
 kkoctx|setup context for optimizer
 kkodp|AQP
 kkoecp|evaluate constant predicate
+kkogbp|generrate bitmap predicate(?;bitmap conversion/bitmap and/or?)
 kkogfp|get first permutation
+kkogtp|generate transitive predicates
 kkoiqb|initialise query block
 kkojnp|join order path
 kkooqb|optimize query block
@@ -4611,6 +4613,7 @@ ktcgtx|get action global area
 ktcifc|idl flush contexts
 ktcrab|real abort
 ktcrcm|real commit
+ktcsna|snapshot. read snapshot SCN.
 ktcsod|state object procedure vector definition
 ktcxcb|fixed table callback for x$ktcxb
 ktd|distributed 
@@ -5183,6 +5186,7 @@ kxpar|partition row sources
 kxrd|row delete
 kxru|row update
 kxs|shared cursor
+kxsBindBufferSetUp|bind buffer setup. allocate memory for bind buffers.
 kxsDiag8711391|Check for bug 8711391 (cursor lock user session state object deleted before close of the cursors)
 kxsGetRuntimeLock|get runtime lock
 kxsOpenACursor|open a cursor (local in PGA)
@@ -5197,6 +5201,7 @@ kxscls|close
 kxsclsr|remote
 kxsfbb|free bind buffers(?)
 kxsffir|function fire called when the appropriate heap is going away
+kxsmbb|memory bind buffers. allocate memory for bind buffers.
 kxspoac|put oacdef into the cursor instantiation
 kxst|sql trace
 kxstAfterExec|after execution. row source statistics are written to trace.
@@ -6388,7 +6393,7 @@ qercoFetch|fetch
 qerdl|delete
 qerep|explosion
 qerff|fifo buffer
-qerf|first row
+qerfi|first row
 qerfl|filter definition
 qerflFetchOutside|fetch row from a row source
 qerfu|update
