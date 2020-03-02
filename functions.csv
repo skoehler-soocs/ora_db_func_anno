@@ -2613,6 +2613,7 @@ kglhdi|increase version count
 kglhpd|heap deallocate
 kglhpn|heap pin
 kglhup|heap update
+kglivr|invalidate a read-only object
 kgllcu|latch cleanup for the library cache and pin latches
 kgllk|library cache lock
 kgllkal|allocate
@@ -3047,6 +3048,7 @@ kkrt|rowsource table create as select
 kks|shared objects (cursor)
 kksCheckForTrace|check for trace (not sure which; 10046?)
 kksFullTypeCheck|full type check (performs semantic and authorization checks, cost based optimization)
+kksIsNLSEqual|in NLS (native languange support) equal
 kksLoadChild|load child
 kksMapCursor|map cursor
 kksParseChildCursor|parse child cursor
@@ -3065,15 +3067,49 @@ kkscsCheckCriteria|check cursor criteria
 kkscsCheckCursor|check if child cursor can be used
 kkscscid|criteria identification
 kkscscid_AdgRedirect|active dataguard redirect
+kkscscid_antr_eval|anydata transformation mismatch
 kkscscid_auc|authorized to use this child
-kkscscid_containers|PDB(?)
-kkscscid_pddl|parallel ddl(?)
-kkscscid_pdm|parallel dml(?)
+kkscscid_bdm_eval|buffered dml mismatch
+kkscscid_bnd_eval|bind variable mismatch
+kkscscid_bucm_eval|? mismatch
+kkscscid_chkacl_eval|acl mismatch
+kkscscid_chkxdspriv_eval|? mismatch
+kkscscid_containers|container mismatch
+kkscscid_dsc_eval|describe mismatch
+kkscscid_edn_eval|edition mismatch
+kkscscid_fbc_eval|feedback statistics mismatch
+kkscscid_hmxl_eval|? mismatch
+kkscscid_idl_eval|? mismatch
+kkscscid_incar_eval|incarnation mismatch
+kkscscid_lit_eval|? mismatch
+kkscscid_lsam_eval|? mismatch
+kkscscid_mupx_eval|multi px mismtch
+kkscscid_mvre_eval|materialized view rewrite mismatch
+kkscscid_nls_eval|native language support
+kkscscid_ntg_eval|no trigger  mismatch
+kkscscid_opt_eval|optimizer mismatch
+kkscscid_pcsw_eval|psql comparse switches mismatch
+kkscscid_pddl|parallel ddl environment mismatch
+kkscscid_pdm|parallel dml environment mismatch
+kkscscid_permx_eval|? mismatch
+kkscscid_pqbp_eval|parallel query bind peeked mismatch
+kkscscid_pqsl_eval|parallel query slave mismatch
+kkscscid_pur_eval|purged cursor mismatch
+kkscscid_qol_eval|query outline mismatch
+kkscscid_rinv_eval|? mismatch
+kkscscid_rmt_pdb_id_eval|? mismatch
+kkscscid_ses_eval|? mismatch
+kkscscid_sic_eval|? mismatch
+kkscscid_sqlana_eval|? mismatch
+kkscscid_tbdif_eval|? mismatch
+kkscscid_tst_eval|? mismatch
+kkscscid_ubp_eval|user bind(variables) peek mismatch
 kksdopt|smart disk no option
 kksfbc|find bound cursor
 kksffr|free a frame
 kksfft|find first token
 kksh|cursor hash table
+kkshchv|check hash value
 kksheqd|clean/delete and enqueue
 kkshh|?
 kkshhcins|child insert
@@ -3725,9 +3761,12 @@ kqlclo|cleanup nonexistent objects in OBJ$
 kqld|dictionary callbacks
 kqldprr|parent referential constraint read
 kqldsyr|synonym read
-kqlfgl|get row for Lock, fixed table support
-kqlfgx|get row for access table entry, fixed table support
-kqlftl|cache fixed Table for Locks callback
+kqlf|fixed table support
+kqlfbct|bind capture table(?)
+kqlfbctc|callback(?)
+kqlfgl|get row for Lock
+kqlfgx|get row for access table entry
+kqlftl|Table for Locks callback
 kqllod|database object load
 kqlm|multi-instance manager
 kqlmbpil|background process a pin instance lock
@@ -5463,7 +5502,7 @@ msq|generating sql statements
 msqcol|append column name
 msqrxq|make sql for remote execution
 n|network
-na|authentication
+na|native services (authentication/security)
 nau_ctl|aUthentication ConTroL
 nauk5|kerberos version 5
 nauk5aegetservcred|get service ticker
@@ -5545,8 +5584,8 @@ npil|local
 npisnl|set network link
 npitcc|Test/Clear connections
 npixfr|transfer
-nr|interchange
-ns|transparent network service
+nr|route
+ns|session/transparent network service
 nsb|block(?)
 nsbasic|basic
 nsbasic_brc|block receive
@@ -5562,7 +5601,9 @@ nsmal|memory allocate
 nso|nest optimisation (sql transformation)
 nsoqbc|on query block
 nsotruns|traverse and unnest subquery
+nsp|packet
 nsprecv|receive packet from network transport layer
+nspsend|send packet from network transport layer
 nsrdr|packet reader
 nstimexp|expire function. invoked by LTM with these specific arguments
 nt|transport (drivers)
@@ -6329,6 +6370,7 @@ qcpiidn|identifier
 qcpilcl|logical clause
 qcpilcl0|(private) 
 qcpiltb|lock table command
+qcpicmd|command
 qcpisqt|sql text
 qcpitnam|table name
 qcpitnm|table name
@@ -6571,6 +6613,7 @@ qks3t|temp table transformation
 qksan|analyze
 qksbg|bind (variable) management(?)
 qksce|cursor evaluation
+qksceCompareSesEnvVer|compare session environment version. session parameters.
 qksctx|MPGE
 qksds|Dynamic Sampling Services (ADS)
 qksdsCheckPreds|check and find usable predicates
