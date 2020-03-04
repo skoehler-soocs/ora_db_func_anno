@@ -2589,6 +2589,7 @@ kglPinSO|pin SO
 kglUnPin|release pin
 kgl_can_unpin_heap_0|can heap 0 be unpinned
 kglati|authorization table insert(?)
+kglats|authorization table search(?)
 kglchk1|check for 1 access on object
 kglchk2|check for access on an object
 kglchk3|check for access on an object
@@ -2601,7 +2602,7 @@ kglfnd|find a chunk of at least the minimum size
 kglfrunp|ask a client to free unpinned space
 kglfrx|free extent (heap unpin)
 kglget|get a lock on an object
-kglgob|get an objected locked and pinned
+kglgob|get an object locked and pinned
 kglhd|object handle
 kglhdal|allocate
 kglhdd|deallocate
@@ -6349,6 +6350,7 @@ qc|compile
 qcdl|dictionary lookup
 qcdlSynonymTranslation|translate synonym to object
 qcdldtin|dependency table insert
+qcdlgob|get object
 qcdlgui|get user id
 qcdo|dictionary support for objects
 qcdoloi|load object specific information
