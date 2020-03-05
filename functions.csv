@@ -2596,7 +2596,9 @@ kglchk3|check for access on an object
 kgldmp|dump an object
 kgldon|depend on an object
 kgldpo|depend on an object
-kgldti|dependency table insert (under latch or KGLMX pin/load)
+kgldt|dependency table
+kgldtg|get(?)
+kgldti|insert (under latch or KGLMX pin/load)
 kgldtin|?
 kglfnd|find a chunk of at least the minimum size
 kglfrunp|ask a client to free unpinned space
@@ -2615,6 +2617,7 @@ kglhpd|heap deallocate
 kglhpn|heap pin
 kglhup|heap update
 kglivr|invalidate a read-only object
+kgllccl|latch cleanup clean
 kgllcu|latch cleanup for the library cache and pin latches
 kgllk|library cache lock
 kgllkal|allocate
@@ -3826,6 +3829,7 @@ kqrpre2|2 - this is the real function
 kqrprl|parent release enqueue
 kqrpspr|post process
 kqrrls|release lock
+kqrsrd|subordinate cache object read
 kr|redo
 kra|recovery area function
 krb|backup/restore
@@ -5345,8 +5349,11 @@ kzld|ldap
 kzlg|generic directory services integration
 kzp|privileges
 kzpcaobb|check for access on object using object
-kzpchkbu|check for privileges
-kzpchkc|check privileges on a object cyclic
+kzpcap|check access privilege
+kzpchk|check for privileges
+kzpchkbu|base userid
+kzpchkc|on an object cyclic
+kzpcsp|check system privilege
 kzppCapturePLSQL|DBMS_PRIVILEGE_CAPTURE.CAPTURE_DEPENDENCY_PRIVS
 kzppCreateCapture|DBMS_PRIVILEGE_CAPTURE.CREATE_CAPTURE
 kzppDeleteRun|DBMS_PRIVILEGE_CAPTURE.DELETE_RUN
@@ -5751,6 +5758,7 @@ opidcl|cleanup after the sqlnet connection is terminated
 opidr|route current request
 opidrv|driver, entry side into two task interface
 opidsa|array describe locals
+opidsi|describe indexes and statistics
 opiefn|execute function (?)
 opiexe|execute
 opifch2|main routine
