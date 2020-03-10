@@ -2489,6 +2489,7 @@ kgfd|io subsystem driver
 kgfdvf|Voting file Interface
 kgff|direct file io adapter
 kgffdcn|disconnect from kgff instance
+kgfm|machine/ODA
 kgfpm|PATCH repository
 kgg|generic routines
 kggec|element cache(?)
@@ -5348,6 +5349,7 @@ kzl|label
 kzld|ldap
 kzlg|generic directory services integration
 kzp|privileges
+kzpGen904Error|generate ora 904 (invalid identifier) error
 kzpcaobb|check for access on object using object
 kzpcap|check access privilege
 kzpchk|check for privileges
@@ -5426,6 +5428,9 @@ kzvd|data vault
 kzvdvedptransp|KUPM$MCP.CHECK_TTS_DVAUTH
 kzvdvexsgr|XS_PRINCIPAL.DV_ROLE_CHECK
 kzu|privileges
+kzulslt|last logon time
+kzulsltRead|reads user$.spare6
+kzulsltUpdate|updates user$.spare6
 kzx|XS Fusion Security
 kzxa|XS ACL
 kzxc|XS Security Class
