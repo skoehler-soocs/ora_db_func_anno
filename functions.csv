@@ -642,7 +642,10 @@ ain|alter index
 ainPDrop|drop an index partition
 aop|audit options
 apa|SQL Access Path Analysis
+apaHCC|hybrid column compression
+apaHCCScanPossible|scan possible
 apaIMC|in-memory column store
+apaIMCScanPossible|scan possible
 apaStmtAddXplAnnotations|add explain annotations
 apacb|connect by
 apadrv|drive access path selection for a sql command
@@ -667,6 +670,10 @@ ausdrv|driver
 bam|PLSQL_KG_Interface
 cdb|create database
 cdbdrv|driver
+ceil|ceiling function: smallest integral value not less than argument. from math.h
+chn|chained lists(?)
+chnatc|allocate temporary chunk(?) in pga
+clock_gettime|SYSCALL: clock and time functions, get time, clock precision dependent on arg1, clk_id, result in arg2
 cloneNode|Creates a duplicate of a node [DOM 1]
 cls|clusterware integration
 clscrs|cluster ready services
@@ -1255,6 +1262,8 @@ evaxl|vector translate
 expcop|evaluate callback operator list
 expeal|evaluate its argument AND list. It returns true if argument is true, false if argument is false, and unknown if argument is unkown.
 expepr|evaluate the argument predicate. It returns the result of the evaluation. If the operators ODFFNEARG flas is set (currently only for OPTLNN), dont evaluate the operands.
+floor|floor function: largest integral value not greater than argument. from math.h
+fmod|fmod function: floating-point remainder function. from math.h
 fplib|filter projection library (exadata smartscan)
 freeElements|Frees an allocated list of element nodes [DOM X]
 freeNode|Frees memory allocated by a node [DOM X]
@@ -1319,7 +1328,9 @@ getPITarget|Returns the target of a PI [DOM 1 ProcessingInstruction.getTarget]
 getParentNode|Returns a node's parent [DOM 1]
 getPreviousSibling|Returns the previous sibling of a node [DOM 1]
 getTagName|Returns the tagName of a node [DOM 1]
-getpid|get process id
+getpid|SYSCALL: get process id
+getrusage|SYSCALL: get resource usage
+gettimeofday|SYSCALL: get time of day
 gipc|grid inter process calls
 gra|grant/revoke
 gradrv|driver
@@ -2480,6 +2491,7 @@ kgerinv_internal|or soft internal named error
 kgeriv|internal error code with va_list
 kgese|signal error
 kgesec|code
+kgesem|wrapper for kgeseml
 kgesev|code (with Va_list)
 kgesin|signal a named internal error
 kgesinv|signal internal named error with va_list
@@ -2500,10 +2512,14 @@ kggfaAlloc|allocate
 kggfaDoKghAlloc|do KGH allocation. allocate memory in KGH managed heap
 kggfaInitH|initialise heap
 kgghash|produce hash value
-kgghte|hash table
+kgght|hash table
+kgghte|entry
 kgghteAdd|add
 kgghteGetEle|get element
 kggmd5|functions to calculate md5 values
+kggmd5Finish|finish
+kggmd5Process|process
+kggmd5Update|update
 kggms|map service
 kggmsAdd|add
 kggmsAddUb4|unsigned 4 bytes
@@ -2519,12 +2535,19 @@ kggsmInit|initialise
 kggsmInitStringMapService|string map service
 kggsmCommonInit|common initialisation. 
 kgh|heap manager
-kgh_update_comment|add comment to memory chunk allocation
+kgh_dsx_unreadable|read heap descriptor for validation
 kgh_get_spds_by_chunk|get shared pool descriptors by chunk
+kgh_heap_ds_is_valid|is heap memory descriptor valid? calls kgh_dsx_unreadable for verification.
+kgh_update_comment|add comment to memory chunk allocation
 kghaddex|add extent
 kghalf|non-recoverably allocate a freeable chunk of memory
 kghalo|main allocation entry point
 kghalp|allocate permanent memory
+kghdmp|wrapper for kghdmp_new
+kghdump_new|dump heap contents
+kghds|(heap) descriptor
+kghdsdmp|dumps heap descriptor
+kghdsdump|wrapper for kghdsdmp
 kgherror|internal error routine for signalling an error
 kghfen|free a portion of a chunk of space at the end of the chunk
 kghfnd|find a chunk of memory of at least the minimum size
@@ -2539,6 +2562,10 @@ kghfrunp|free unpinned space
 kghfrx|free extent
 kghgex|get a new extent
 kghini|heap initialize
+kghispi|is pinned
+kghispih|heap (wrapper for kghispih_new)
+kghispih_new|looks up first extent, then calls kghispir
+kghispir|recreatable chunk(?)
 kghissga|is heap in SGA?
 kghmrk|mark heap
 kghnospc|no space available in the heap, signal an error
@@ -2549,7 +2576,9 @@ kghpmalo|find and return permanent chunk of space
 kghprmalo|permanent memory allocate
 kghrcappl|apply this heap function depth first
 kghrsp|remove permanent chunk
-kghsc|stream compact
+kghsc|stream cache
+kghscInit|initialise
+kghssc|system(?) stream cache
 kghssgai|segmented allocation internal
 kghssgal|segmented allocate
 kghssgfr|segmented free
@@ -2583,9 +2612,12 @@ kglGetMutex|get mutex
 kglGetSO|get state object
 kglGetSessionUOL|obtain location for AOL in KKSSP
 kglHeapInitializeInternalFL|initialize heap allocation
+kglLargeHeapWarning|large heap warning. prints library cache object loaded in sga exceeds notification threshold message.
 kglLock|library cache lock
+kglLockInstance|instance object
 kglOnErrorMutexCleanup|on error mutexes cleanup. called to cleanup mutexes when an error has occured.
 kglUnLock|library cache unlock
+kglUnLockInstance|instance object
 kglPinSO|pin SO
 kglUnPin|release pin
 kgl_can_unpin_heap_0|can heap 0 be unpinned
@@ -2598,7 +2630,9 @@ kgldmp|dump an object
 kgldon|depend on an object
 kgldpo|depend on an object
 kgldt|dependency table
-kgldtg|get(?)
+kgldtc|check
+kgldtg|wrapper for kgldtg0
+kgldtg0|get
 kgldti|insert (under latch or KGLMX pin/load)
 kgldtin|?
 kglfnd|find a chunk of at least the minimum size
@@ -3051,10 +3085,13 @@ kkrp|parallelizer (DFO)
 kkrpfch|fetch from rowsource
 kkrt|rowsource table create as select
 kks|shared objects (cursor)
+kksAllocCursorStat|allocate SQL AREA STATS library cache object
 kksCheckForTrace|check for trace (not sure which; 10046?)
 kksFullTypeCheck|full type check (performs semantic and authorization checks, cost based optimization)
+kksGetBuildLock|get build lock: a SQL AREA BUILD library cache object
 kksIsNLSEqual|in NLS (native languange support) equal
 kksLoadChild|load child
+kksLockUserSchema|lock user SCHEMA library cache object
 kksMapCursor|map cursor
 kksParseChildCursor|parse child cursor
 kksParseCursor|parse cursor
@@ -5516,6 +5553,7 @@ msqcol|append column name
 msqrxq|make sql for remote execution
 n|network
 na|native services (authentication/security)
+nanosleep|SYSCALL: high-resolution sleep. can be interrupted by a signal (rc=-1)
 nau_ctl|aUthentication ConTroL
 nauk5|kerberos version 5
 nauk5aegetservcred|get service ticker
@@ -6418,6 +6456,7 @@ qcu|utility
 qcuErr|error
 qcuErroep|oracle error position
 qcuSigErr|error raised by signal
+qcuatc|allocate temporary chunk(?) in pga
 qe|execute
 qeae|aggregate (order by) elimination (?)
 qeaeCn1Serial|count function
@@ -6657,6 +6696,7 @@ qkssm|string mapping
 qksvc|Virtual Column
 qkswc|with clause
 qkswcDriver|Recursively traverse through all query blocks
+qksxa|explain annotations
 qkx|SQL code generator
 qkxa|annotations
 qm|XDB
@@ -6946,8 +6986,8 @@ scumnt|mount
 scurls|release
 sel|select
 selexe|execute: prepare area for fetch
-semop|(system call) semaphore operation
-semtimedop|(system call) semaphore timed operation
+semop|SYSCALL: semaphore operation
+semtimedop|SYSCALL: semaphore timed operation
 seq|sequence numbers
 setAttrValue|Sets an attribute's value [DOM 1 Attr.value attribute]
 setAttribute|Creates an attribute for an element [DOM 1]
