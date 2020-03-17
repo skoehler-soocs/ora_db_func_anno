@@ -2553,6 +2553,7 @@ kghfen|free a portion of a chunk of space at the end of the chunk
 kghfnd|find a chunk of memory of at least the minimum size
 kghfnd_in_free_lists|in free lists
 kghfre|free a chunk of memory
+kghfreup|unpinned
 kghfrf|non-recoverably free a freeable chunk of space
 kghfrh|free heap. free all the extents allocated in the heap using kghalfrx
 kghfrmrg|free a chunk, merge with neighbors if free returns merged chunk
@@ -2582,6 +2583,7 @@ kghssc|system(?) stream cache
 kghssgai|segmented allocation internal
 kghssgal|segmented allocate
 kghssgfr|segmented free
+kghspds_keyed|shared pool descriptors keyed
 kghsrch|search freelists for a memory chunk
 kghstack_alloc|allocate pga memory
 kghstack_free|free pga memory
@@ -2612,6 +2614,7 @@ kglGetMutex|get mutex
 kglGetSO|get state object
 kglGetSessionUOL|obtain location for AOL in KKSSP
 kglHeapInitializeInternalFL|initialize heap allocation
+kglHandleInitialize|initialize library cache handle
 kglLargeHeapWarning|large heap warning. prints library cache object loaded in sga exceeds notification threshold message.
 kglLock|library cache lock
 kglLockInstance|instance object
@@ -2642,15 +2645,15 @@ kglget|get a lock on an object
 kglgob|get an object locked and pinned
 kglhd|object handle
 kglhdal|allocate
-kglhdd|deallocate
-kglhdda|a
+kglhdd|wrapper for kglhdda
+kglhdda|deallocate
 kglhdgc|get child(?)
-kglhdgh|get handle
-kglhdgn|get new(?)
+kglhdgh|get handle for instance object
+kglhdgn|get handle, if it doesn't exist, create it
 kglhdi|increase version count
 kglhpd|heap deallocate
 kglhpn|heap pin
-kglhup|heap update
+kglhup|heap unpin
 kglivr|invalidate a read-only object
 kgllccl|latch cleanup clean
 kgllcu|latch cleanup for the library cache and pin latches
@@ -2685,7 +2688,7 @@ kglsec|signal error code
 kglsim|simulator (library cache advise) 
 kglsscn|scan a loaded set invoking a supplied callback for each element
 kglssr|session state remove
-kgltba|child cursor table?
+kgltba|dependency table allocate
 kglunp|unpin heaps of an object
 kgm|inter-language method services
 kgmexcb|execution callback
@@ -3159,8 +3162,11 @@ kkshhcdel|child delete
 kkshin|incomplete list
 kkshinins|insert child
 kkshindel|remove child
+kkslMarkLiteralBinds|mark binds that are literal
+kkglgbv|literal get bind variable
 kkslod|cursor load callback
 kkslof|log off (?)
+kkslpbp|literal peek bind persistence
 kkslrev|reverse system generated bind variable to litaral
 kkslrpl|replace literals in SQL statement (cursor_sharing=force)
 kksmcAlFree|conditially segmented array allocate. 
@@ -3808,7 +3814,7 @@ kqlfbct|bind capture table(?)
 kqlfbctc|callback(?)
 kqlfgl|get row for Lock
 kqlfgx|get row for access table entry
-kqlftl|Table for Locks callback
+kqlftl|cache Table for Locks callback
 kqllod|database object load
 kqlm|multi-instance manager
 kqlmbpil|background process a pin instance lock
@@ -3838,6 +3844,7 @@ kqrCacheHit|cache hit; found an existing entry
 kqrFreeHashMutex|free mutex for row cache hash bucket
 kqrFreePOMutex|free mutex for parent object
 kqrFreePOToSGA|free parent object to sga: free memory
+kqrFreeSOToSGA|free subordinate object to sga: free memory
 kqrGetAllHashMutexes|get all hash bucket mutexes
 kqrGetHashMutex|get mutex for row cache hash bucket
 kqrGetClusterLock|get a row cache lock in cluster mode (cluster version of kqrget)
@@ -3855,6 +3862,7 @@ kqreqd|enqueue delete
 kqrfr|free
 kqrfrc|cache
 kqrfrpo|parent object
+kqrfrso|subordinate object
 kqrget|get a row cache lock
 kqrhsh|hash - generate hash to find hash bucket, calls kgghash
 kqrinpo|insert parent object
@@ -4818,8 +4826,8 @@ ktsfsmhwm|segment move high water mark
 ktsfsnblk|new block
 ktsfunlk|undo free list
 ktsfx|datafile extention
-ktsircinfo|index row cache info
-ktsitbs_info|tablespace info. get tablespace info from rowcache.
+ktsircinfo|index(?) row cache info
+ktsitbs_info|index(?) tablespace info. get tablespace info from rowcache.
 ktsl|lob
 ktsl_disp_gsp_driver|dispenser get space driver
 ktsl_fill_dispenser_main|fill dispenser main loop
@@ -5440,6 +5448,7 @@ kzredact_drop_pe|DBMS_REDACT_INT.DROP_POLICY_EXPRESSIONS
 kzredact_update_pe|DBMS_REDACT_INT.UPDATE_POLICY_EXPRESSIONS
 kzrt|privileges
 kzs|privileges
+kzsini1|session initialize(?)
 kzsob_DES3Decrypt|DBMS_OBFUSCATION_TOOLKIT_FFI.DES3DECRYPT
 kzsob_DES3Encrypt|DBMS_OBFUSCATION_TOOLKIT_FFI.DES3ENCRYPT
 kzsob_DESDecrypt|DBMS_OBFUSCATION_TOOLKIT_FFI.DESDECRYPT
@@ -6402,6 +6411,7 @@ qcdl|dictionary lookup
 qcdlSynonymTranslation|translate synonym to object
 qcdldtin|dependency table insert
 qcdlgob|get object
+qcdlgtd|get dependencies(?)
 qcdlgui|get user id
 qcdo|dictionary support for objects
 qcdoloi|load object specific information
@@ -6419,6 +6429,7 @@ qcpibte|term
 qcpicmd|command
 qcpiere|expression relop expression
 qcpierr|raise error
+qcpifro|from
 qcpiidn|identifier
 qcpilcl|logical clause
 qcpilcl0|(private) 
@@ -6436,6 +6447,9 @@ qcsCheckPriv|check privileges
 qcsbxl|first round of privilege checking
 qcse|expand
 qcsevw|view
+qcsf|from(?)
+qcsfgob|get objects
+qcsfplob|pin local objects(?)
 qcsj|java(?)
 qcso|OBJECTS
 qcsp|process
@@ -6756,6 +6770,7 @@ qmxtsk|xmltype support functions
 qmxtra|query
 qmxtri|schema/XMLindex
 qo|optimizer
+qol|outlines
 qolclrevu|OUTLN_PKG.CLEAR_USED
 qolgenol|OUTLN_PKG_INTERNAL
 qolgensig|DBMS_SQLTCB_INTERNAL.I_TCB_GENERATE_SIGNATURE
