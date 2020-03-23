@@ -1996,11 +1996,11 @@ kdl_write|write into an ilob instance
 kdla|SecureFile Archive
 kdlgsp_init|space management batching
 kdli|Inode
+kdlprl|read a contiguous range of blocks starting at a fatblock
 kdlrci|rci
 kdlrdb|read a block at a time
-kdlprl|read a contiguous range of blocks starting at a fatblock
 kdlsfb|pull in up to size bytes of data from stream and start writing at offset
-kdlw|kdlw
+kdlw|write
 kdlx|xfm
 kdlxdup|dedup
 kdlxgs_init|reclaim space from transaction freelist in index
@@ -2615,6 +2615,7 @@ kglGetSO|get state object
 kglGetSessionUOL|obtain location for AOL in KKSSP
 kglHeapInitializeInternalFL|initialize heap allocation
 kglHandleInitialize|initialize library cache handle
+kglKeepHeaps|keep heaps
 kglLargeHeapWarning|large heap warning. prints library cache object loaded in sga exceeds notification threshold message.
 kglLock|library cache lock
 kglLockInstance|instance object
@@ -2651,6 +2652,7 @@ kglhdgc|get child(?)
 kglhdgh|get handle for instance object
 kglhdgn|get handle, if it doesn't exist, create it
 kglhdi|increase version count
+kglhdkp|keep
 kglhpd|heap deallocate
 kglhpn|heap pin
 kglhup|heap unpin
@@ -2683,6 +2685,7 @@ kglpnmi|migration
 kglpnp|pin heaps and load data for stored procedures
 kglrddsc|describe callback function
 kglrds|describe a remote object
+kglrdti|readonly dependency table insert
 kglrfcl|reference clear
 kglsec|signal error code
 kglsim|simulator (library cache advise) 
@@ -3857,6 +3860,7 @@ kqrReadFromDB|read row cache object
 kqrReleaseLock|unpin object in row cache
 kqrRelinkToHashTable|add object to hash table(?)
 kqrUpdateHashTable|update hash bucket
+kqrpad|parent add. main function to add an object to a parent bucket.
 kqrdco|dump current object(?)
 kqreqd|enqueue delete
 kqrfr|free
@@ -7090,6 +7094,7 @@ skgxnreg|registers with process group as primary member (LMON)
 skgxnsrg|registers with process group as slave member 
 skgxp|IPC
 skgxppost|post the owner of a contact out of a blocking call
+skgzib|z(?) infiniband
 skofs|OFS file system implementation
 skuz|security (orapwd)
 skuzfbs|determine orapw file block size
