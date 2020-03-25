@@ -5339,6 +5339,22 @@ kywmupcgmaps|DBMS_WLM.IUP_CG_MAPS
 kywmuppdbcgmap|DBMS_WLM.IUPDATE_PDBCG_MAPS
 kz|security
 kza|audit 
+kzam|management
+kzam_clean_atrail|DBMS_AUDIT_MGMT.CLEAN_AUDIT_TRAIL_INT
+kzam_get_commit_delay|DBMS_AUDIT_MGMT.GET_AUDIT_COMMIT_DELAY
+kzam_add_hcol|DBMS_AUDIT_MGMT.ADD_HIDDEN_COLUMNS
+kzam_enqueue_get_rel|DBMS_AUDIT_MGMT.ENQUEUE_GET_REL
+kzam_setup_ang_trail|DBMS_AUDIT_MGMT.SETUP_NG_AUDIT_TSPACE
+kzam_flush_ang_trail|DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL_INT
+kzam_load_ang_files|DBMS_AUDIT_MGMT.LOAD_UNIFIED_AUDIT_FILES_INT
+kzam_trans_uniaud_data|DBMS_AUDIT_MGMT.TRANSFER_UNIAUD_RECS_INT
+kzam_move_aud_tablespace|DBMS_AUDIT_MGMT.MOVE_STD_AUD_TABLESPACE
+kzam_drop_old_uatrail|DBMS_AUDIT_MGMT.DROP_OLD_UNIFIED_AUDTABLES_INT
+kzam_set_lat_in_mem|DBMS_AUDIT_MGMT.SET_LAST_ARCH_TS_IN_MEM
+kzam_get_lat_in_mem|DBMS_AUDIT_MGMT.GET_LAST_ARCHIVE_TS_MEM
+kzam_set_prop_in_mem|DBMS_AUDIT_MGMT.SET_ATRAIL_PROP_IN_MEM
+kzam_get_prop_in_mem|DBMS_AUDIT_MGMT.GET_ATRAIL_PROP_IN_MEM
+kzam_check_tablespace_fga|DBMS_AUDIT_MGMT.CHECK_TABLESPACE_FGA
 kzang|next generation
 kzangins|insert record
 kzap|policy
@@ -7095,6 +7111,7 @@ skgxnsrg|registers with process group as slave member
 skgxp|IPC
 skgxppost|post the owner of a contact out of a blocking call
 skgzib|z(?) infiniband
+skgznp|z(?) named pipe(?)
 skofs|OFS file system implementation
 skuz|security (orapwd)
 skuzfbs|determine orapw file block size
