@@ -2595,6 +2595,7 @@ kghx|fixed sized memory
 kghxal|allocate shared memory
 kghxcb|callback to free memory on the free lists back to kgh
 kghxcb_internal|internal
+kghxhal|execution heap allocate
 kghxcu|latch cleanup for the fixed allocator
 kgi|instantiation manager
 kgicli|close all cursors for an instantiation 
@@ -2687,6 +2688,7 @@ kglrddsc|describe callback function
 kglrds|describe a remote object
 kglrdti|readonly dependency table insert
 kglrfcl|reference clear
+kglrfst|reference set
 kglsec|signal error code
 kglsim|simulator (library cache advise) 
 kglsscn|scan a loaded set invoking a supplied callback for each element
@@ -3103,6 +3105,7 @@ kksParseChildCursor|parse child cursor
 kksParseCursor|parse cursor
 kksPopCompileCall|end compilation call
 kksReplaceLiterals|replace literals in SQL statement (cursor_sharing=force)
+kksaac|authorize access (via PGA authorization table)
 kksalc|allocate compile time memory
 kksald|auxiliary load function
 kksalx|allocate bytes from the execution time heap
@@ -3158,7 +3161,7 @@ kksffr|free a frame
 kksfft|find first token
 kksh|cursor hash table
 kkshchv|check hash value
-kksheqd|clean/delete and enqueue
+kksheqd|enqueue delete
 kkshh|?
 kkshhcins|child insert
 kkshhcdel|child delete
@@ -5400,7 +5403,10 @@ kzdpmpidx|DBMS_TDSP_MANAGE.INT_IMPORT_DISCOVERY_RESULT
 kzdpmpist|DBMS_TDSP_MANAGE.INT_IMPORT_SENSITIVE_TYPES
 kzdpmprco|DBMS_TDSP_MANAGE.DROP_SENSITIVE_COLUMN
 kzdpmprscs|DBMS_TDSP_MANAGE.REMOVE_DISCOVERY_RESULT
-kzdopcl|object privileges check routines?
+kzdop|object privileges
+kzdopcl|check list?
+kzdopg|get
+kzdoprl|release
 kzekmaptkp|DBMS_TTS.ADD_PROTECTED_CE_TAB_KEY_INT
 kzekmgptkp|DBMS_TTS.GET_PROTECTED_CE_TAB_KEY_INT
 kzfa|fine grained auditing
@@ -6328,6 +6334,7 @@ piur|utl_url support
 piuriesc|UTL_URL.ESCAPE_I
 piuriune|UTL_URL.UNESCAPE_I
 pk|PLSQL KG interface
+pkvclonepidl|process lower-versioned PLSQL
 pl|PLSQL infrastructure
 plio|object instantiation
 pliodl|delete function
@@ -6558,6 +6565,7 @@ qerjot|join tunneling
 qerjotFetch|fetch
 qerle|linear execution implementation
 qerli|parallel create index
+qerliFetch|fetch
 qerlt|load table
 qerlt_olev|out-of-line columns, evaluate and stash away
 qerlt_snv|stash away and new values
