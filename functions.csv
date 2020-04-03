@@ -2595,6 +2595,7 @@ kghx|fixed sized memory
 kghxal|allocate shared memory
 kghxcb|callback to free memory on the free lists back to kgh
 kghxcb_internal|internal
+kghxfr|execution heap free
 kghxhal|execution heap allocate
 kghxcu|latch cleanup for the fixed allocator
 kgi|instantiation manager
@@ -2611,19 +2612,24 @@ kgl|library cache management
 kglComputeHash|compute hash value
 kglConcurrencyId|return library cache hash bucket number
 kglFreeSO|free state object
+kglGetBucketMutex|get mutex for KGL hash table bucket, calls kglGetMutex
 kglGetMutex|get mutex
 kglGetSO|get state object
-kglGetSessionUOL|obtain location for AOL in KKSSP
+kglGetSessionUOL|obtain location for AOL in KKSSP, returns pointer to AOL
 kglHeapInitializeInternalFL|initialize heap allocation
 kglHandleInitialize|initialize library cache handle
+kglIsMutexHeld|validate mutex, returns pointer to AOL
 kglKeepHeaps|keep heaps
 kglLargeHeapWarning|large heap warning. prints library cache object loaded in sga exceeds notification threshold message.
 kglLock|library cache lock
 kglLockInstance|instance object
+kglMutexHeld|validate mutex state with AOL
 kglOnErrorMutexCleanup|on error mutexes cleanup. called to cleanup mutexes when an error has occured.
 kglUnLock|library cache unlock
 kglUnLockInstance|instance object
 kglPinSO|pin SO
+kglReleaseBucketMutex|release mutex for KGL hash table bucket, calls kglReleaseMutex
+kglReleaseMutex|release mutex
 kglUnPin|release pin
 kgl_can_unpin_heap_0|can heap 0 be unpinned
 kglati|authorization table insert(?)
@@ -2746,31 +2752,31 @@ kgstm|time
 kgur|recovery
 kgx|mutex/communication
 kgxAllocWhereStats|mutex set statistics for wait
-kgxAOLInit|mutex initialize AOL
-kgxAolDump|mutex dump AOL
-kgxCleanup|mutex cleanup
-kgxDecrement|mutex decrement RefCnt
-kgxDecrementExamine|and set E mode
-kgxEndExamine|mutex clear E mode
-kgxExamine|mutex set E mode
-kgxExclusive|mutex get in X mode
-kgxExclusive2Shared|downgrade X to S mode
+kgxAOLInit|initialize AOL
+kgxAolDump|dump AOL
+kgxCleanup|cleanup
+kgxDecrement|decrement RefCnt
+kgxDecrementExamine|in EXAM (15) mode
+kgxEndExamine|clear EXAM (15) mode
+kgxExamine|mutex set EXAM (15) mode
+kgxExclusive|mutex get in EXCL (6) mode
+kgxExclusive2Shared|downgrade EXCL (6) to SHRD (2) mode
 kgxExclusiveNowait|nowait
-kgxIncrement|mutex increment RefCnt
+kgxIncrement|increment RefCnt
 kgxIncrementExamine|and set E mode
-kgxLatchCleanup|mutex cleanup latch(?)
-kgxLongExclusive|mutex get in long exclusive mode
-kgxModifyRefCount|mutex modify RefCnt
+kgxLatchCleanup|cleanup latch(?)
+kgxLongExclusive|get in LONG_EXCL (18)mode. 
+kgxModifyRefCount|modify RefCnt
 kgxMutexHng|mutex hang(?)
-kgxPgaInitialize|mutex initialize PGA
-kgxRegisterClient|mutex register client(?)
-kgxRelease|mutex release
-kgxSgaInitialize|mutex initialize SGA
-kgxShared|mutex get in S mode
-kgxSharedExamine|sharedexamine mode
+kgxPgaInitialize|initialize PGA
+kgxRegisterClient|register client(?)
+kgxRelease|release, sets mutex to NONE (0) mode
+kgxSgaInitialize|initialize SGA
+kgxShared|mutex get in SHRD (2) mode
+kgxSharedExamine|set SHRD_EXAM (3) mode
 kgxSharedNowait|nowait
 kgxSharedNowaitExamine|sharedexamine mode
-kgxWait|mutex register wait and sleep
+kgxWait|register wait and sleep
 kgxg|node monitor/cluster group services layer
 kgxgncin|group membership cssd initiate
 khpro|hierarchical profiler
@@ -3701,6 +3707,8 @@ kpdbfdSetProfExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETPROFEXPLICIT SET_PROFILE_E
 kpdbfdSetUserExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETUSEREXPLICIT SET_USER_EXPLICIT
 kpdbfdSetRoleExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETROLEEXPLICIT SET_ROLE_EXPLICIT
 kpfs|NPI
+kpggGetPG|return pointer to generic PGA
+kpggGetSG|return pointer to SGA(?)
 kpin|progint miscellaneous
 kpk|OCI
 kpkptResolveTNSName|DBMS_TNS.RESOLVE_TNSNAME
@@ -4173,15 +4181,30 @@ krpicpt|DBMS_PITR.KRPICPT COMMITPITR
 krpidfv|DBMS_PITR.KRPIDFV DOFILEVERIFY
 krpists|DBMS_PITR.KRPISTS SELECTTABLESPACE
 krs|standby/dataguard (?)
-krsa|access and lock
+krsa|locking primitives
+krsb|buffer management
 krsc|crash recovery
 krsd|destination
+krse|archive engine
+krsf|FAL engine
+krsg|gap resolution
 krsh|helper
-krsn|network/transport
+krsi|input/output
+krsj|protection mode
+krsk|controlfile access
+krsl|log writer
 krsm|managed recovery process
-krso|monitor
+krsn|configuration
+krso|process monitor
+krsp|physical standby and availability machine RFS client
+krsq|SQL commands
+krsr|remote file server process
 krss|scheduler
-krsr|remote file server
+krst|tables
+krsu|network IO
+krsv|VOS frontend
+krsw|async process
+krsx|internal interfaces
 krt|tablespaces
 krta2bz|obtain blocksize of tablespace
 krta2rfn|obtain file number (mos says absolute file number)
