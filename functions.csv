@@ -3168,7 +3168,7 @@ kksfft|find first token
 kksh|cursor hash table
 kkshchv|check hash value
 kksheqd|enqueue delete
-kkshh|?
+kkshhc|hash chain
 kkshhcins|child insert
 kkshhcdel|child delete
 kkshin|incomplete list
@@ -3871,7 +3871,6 @@ kqrReadFromDB|read row cache object
 kqrReleaseLock|unpin object in row cache
 kqrRelinkToHashTable|add object to hash table(?)
 kqrUpdateHashTable|update hash bucket
-kqrpad|parent add. main function to add an object to a parent bucket.
 kqrdco|dump current object(?)
 kqreqd|enqueue delete
 kqrfr|free
@@ -3883,7 +3882,7 @@ kqrhsh|hash - generate hash to find hash bucket, calls kgghash
 kqrinpo|insert parent object
 kqrmpin|memory pin
 kqrmupin|memory unpin
-kqrpad|parent add
+kqrpad|parent add. main function to add an object to a parent bucket.
 kqrpre|read a parent cache object
 kqrpre1|1
 kqrpre2|2 - this is the real function
@@ -4686,6 +4685,7 @@ ksz|oracle storage server (OSS) server layer
 kt|transaction
 kta|table access
 ktaadm|get all dml locks
+ktadmc|X$KTADM callback function
 ktaftt|free temporary table
 ktagetp|get partition lock
 ktagetg0|get generic dml lock
@@ -6484,7 +6484,6 @@ qcpiidn|identifier
 qcpilcl|logical clause
 qcpilcl0|(private) 
 qcpiltb|lock table command
-qcpicmd|command
 qcpisqt|sql text
 qcpitnam|table name
 qcpitnm|table name
