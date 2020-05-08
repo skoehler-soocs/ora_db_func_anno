@@ -38,6 +38,7 @@ BZ2|bzip2
 BZ2_decompress|decompress
 EGS|engineered system
 EGSLib|library
+KQR|kernel query dictionary/row cache
 Ldi|date/time conversion
 Lpx|xml parser
 LpxFSM|FSM parser
@@ -1259,6 +1260,7 @@ evareo|relational operator. Compare two operands of relational expression. After
 evaval|val
 evavgby|vector group by
 evaxl|vector translate
+expcmpbnd|compare binds
 expcop|evaluate callback operator list
 expeal|evaluate its argument AND list. It returns true if argument is true, false if argument is false, and unknown if argument is unkown.
 expepr|evaluate the argument predicate. It returns the result of the evaluation. If the operators ODFFNEARG flas is set (currently only for OPTLNN), dont evaluate the operands.
@@ -3706,6 +3708,7 @@ kpdbfdSetSharing|DBMS_PDB_ALTER_SHARING.KPDBFDSETSHARING SET_METADATA_LINKED SET
 kpdbfdSetProfExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETPROFEXPLICIT SET_PROFILE_EXPLICIT
 kpdbfdSetUserExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETUSEREXPLICIT SET_USER_EXPLICIT
 kpdbfdSetRoleExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETROLEEXPLICIT SET_ROLE_EXPLICIT
+kpdbsec|security
 kpfs|NPI
 kpggGetPG|return pointer to generic PGA
 kpggGetSG|return pointer to SGA(?)
@@ -3829,6 +3832,7 @@ kqlfbctc|callback(?)
 kqlfgl|get row for Lock
 kqlfgx|get row for access table entry
 kqlftl|cache Table for Locks callback
+kqlindp|invalidate dependency(?)
 kqllod|database object load
 kqlm|multi-instance manager
 kqlmbpil|background process a pin instance lock
@@ -4167,6 +4171,8 @@ krfbBuildRestoreSet|adds a list if files to flashback to the flashback context
 krfgdelfb1|calculate deleted space (?)
 krfgfbtofree|calculate free space
 krfxfblog|fixed table callback routine for x$kcrfblog
+krm|rman (executable only; not database)
+krmcmcv|command change value (?)
 krp|recovery
 krp_check_slave_exit|wait for ksv slaves to exit
 krp_slave_apply|main redo apply loop
@@ -4273,7 +4279,7 @@ krvt|log miner viewer support
 krvugaclr|DBMS_LOGMNR_INTERNAL.KRVUGACLR
 krvugaset|DBMS_LOGMNR_INTERNAL.KRVUGASET
 krvx|extract
-ks|service 
+ks|service
 ksa|asynchronous messages
 ksaamb|allocate message buffer
 ksadmb|deallocate message buffer
@@ -4307,6 +4313,8 @@ kscs_is_on_premise|is this on-premises?
 iscs_is_oracle_cloud|is this oracle cloud?
 kscs_process_param|process cloud related parameters for determination of services
 kscsinitcapprovider|initialize capabilities per provider
+kscx|capability framework
+kscxcapdump|dump
 ksd|debug internal errors
 ksdacn|action routines for parser
 ksddoa|debug support do an action
@@ -4856,6 +4864,8 @@ ktsfsmhwm|segment move high water mark
 ktsfsnblk|new block
 ktsfunlk|undo free list
 ktsfx|datafile extention
+ktsimcs|in memory column store
+ktsimseg|in memory segment
 ktsircinfo|index(?) row cache info
 ktsitbs_info|index(?) tablespace info. get tablespace info from rowcache.
 ktsl|lob
@@ -4990,6 +5000,7 @@ ktusp_delextent|delete extent
 ktusp_endtx|end transaction
 ktusp_starttx|start transaction
 ktusrs|shrink rollback segments
+ktussto|snapshot too old (ORA-1555)
 ktuulc|unlock (?)
 ktz|testing
 ku|utility
@@ -6523,7 +6534,7 @@ qcuatc|allocate temporary chunk(?) in pga
 qe|execute
 qeae|aggregate (order by) elimination (?)
 qeaeCn1Serial|count function
-qec|(edit) checks
+qec|edit checking
 qecdrv|driver
 qecgoc|group operand check
 qecrlssub|release resources subroutine
