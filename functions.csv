@@ -1644,6 +1644,7 @@ kcbk|checkpoint queue manipulation
 kcbk_prefetch_track|db_block_prefetch administration
 kcbklbc|link buffer into ckpt queue
 kcbkllrba|find lowest low RBA on checkpoint queues
+kcbkubc|unlink buffer from chpt queue
 kcbl|(loader) direct io routines
 kcblci|check input
 kcblgt|get buffer
@@ -2991,6 +2992,7 @@ kkocs|cursor sharing
 kkoctx|setup context for optimizer
 kkodp|AQP
 kkoecp|evaluate constant predicate
+kkofkr|first k rows
 kkogbp|generrate bitmap predicate(?;bitmap conversion/bitmap and/or?)
 kkogfp|get first permutation
 kkogtp|generate transitive predicates
@@ -4471,9 +4473,11 @@ kslges|get exclusive latch slow spinning in a loop
 kslgess|shared latch
 kslgetl|get latch
 kslgetsl|get a shared latch
+kslgpl|get parent and child latches
+kslgprl|get process list of latch holders (X$KSUPRLAT)
+kslgprl_int|internal
 kslg2c|get two child latches of the same parent
 kslg2csl|shared latches
-kslgpl|get parent and child latches
 kslilcr|invoke latch cleanup routine
 ksliwat|inner wait function; setup a wait that times out
 ksliwat_cleanup|cleanup post/wait entry
