@@ -2961,6 +2961,7 @@ kkkiverify_root_pdb|DBMS_RMIN_SYS.RM$_IS_ROOT_PDB
 kkkiverify_str_in|DBMS_RMIN_SYS.RM$_VERIFY_STR_IND_INT
 kkkivldparea|DBMS_RMIN_SYS.RM$_VLDPAREA_EXT
 kkm|SQL semantic analysis
+kkmanz|analyze command
 kkmdel|extra semantic processes for deletes
 kkmdrv|driver
 kkmevw|expand view
@@ -3011,7 +3012,9 @@ kkosbn|sort bitmap nodes
 kkoshd|shard sql
 kkostran|star transformation
 kkotap|table access path
+kkotcqb|type check query blocks
 kkotsc|tablescan cost
+kkottrn|replace tables with temp table
 kkp|compilation 
 kkpa|partitioning
 kkpcrt|create
@@ -3643,6 +3646,11 @@ kokn|?
 koknmpn|map name and oid
 koko|objects?
 kokoupkl|unpickle into and instance
+kokq|?
+kokqpaqb|process all query blocks
+kokqpoqb|process only this query block
+kokqpqb|process query block (and its descendants and siblings)
+kokqpqbc2|calls kokqpqb.
 koks|semantic analysis
 kokscupd|check for updatability of column and change adf flag
 koksxlv|xform operand tree into an L-Value
@@ -6523,6 +6531,7 @@ qcsprfro|frodef
 qcsprfro_tree|tree (handles ANSI join frodefs)
 qcspqb|query blocks
 qcspqbDescendents|and descendents (this processes qbc and its inner qbc's, but not its sibling (qbcnxt) query blocks)
+qcsvsci|view seldef list, find column by incol# (position)
 qct|type check operations
 qctErr932|raise ORA 932 (inconsistent data types)
 qctErrConvertDataType|error routine for data type conversions
@@ -7319,6 +7328,7 @@ upsexe|execute
 vop|view optimisation
 vopdrv|driver
 vopqbc|query block
+vopscv|set view column operands: set colvop values to point to
 vsn|version (?)
 wpiu|PLSQL apps
 xa|external functions for XA applications
