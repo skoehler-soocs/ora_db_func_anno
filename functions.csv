@@ -3647,6 +3647,7 @@ koknmpn|map name and oid
 koko|objects?
 kokoupkl|unpickle into and instance
 kokq|?
+kokqopdup|copy the metadata from the old operator by checking optmdatx
 kokqpaqb|process all query blocks
 kokqpoqb|process only this query block
 kokqpqb|process query block (and its descendants and siblings)
