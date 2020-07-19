@@ -5021,6 +5021,7 @@ kubs|big data sql
 kubsCR|consistent read (?)
 kubsavro|avro
 kubscpr|compression (?)
+kubscrf|client row filtering(?)
 kubscsvi|CSV (?)
 kubsjni|JNI
 kubsprq|parquet
