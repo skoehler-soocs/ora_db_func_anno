@@ -6679,6 +6679,7 @@ qerxt|external table
 qerxtAllocate|row source allocate
 qes|services
 qesSageEnabled|test if exadata storage servers are used
+qesa|aggregate
 qesaAggNonDist|create/compute non-distinct aggregates
 qesaPackCols|pack columns into queue buffer
 qesbl|bloom filter
@@ -6701,6 +6702,27 @@ qesdpiLoadSecTZ|DBMS_DST.LOAD_SECONDARY_KERNEL
 qesdpiUnLoadSecTZ|DBMS_DST.UNLOAD_SECONDARY_KERNEL
 qesdpiUpgradeTable|DBMS_DST.UPGRADE_TABLE_KERNEL
 qesgv|vector aggregate (group by)
+qesh|hash table infrastructure
+qeshCloseHTI|close hash table infrastructure
+qeshFinishLoad|stub: calls qeshFinishLoad2
+qeshFinishLoad2|finish load
+qeshGBY|group by
+qeshHD|hash directory
+qeshIH|?
+qeshIHProbeUrow|probe U(?) row 
+qeshIHProbeUrow_Simple|simplified
+qeshInitHTI|initialize hash table infrastructure
+qeshLoadRowForGBY|load row for group by
+qeshPD|partition distribution
+qeshPDDump|dump
+qeshQB|query block
+qeshQBMarkRow|mark row (in hash table)
+qeshc|cluster
+qeshf|?
+qeshfBM|bucket manager
+qeshfTSM|temporary segment
+qeshr|row/record(?)
+qeshs|slots(?)
 qesma|partitioning
 qesmm|memory manager (pga)
 qesmmIPgaFreeCb|pga free callback
