@@ -5710,10 +5710,13 @@ npiane|add new nco entry
 npibeg|maybe begin a distributed transaction branch, release local DX
 npicom|old style commit
 npicon|connect; connect and log on to an external database
+npidr0|driver common interface
 npidri|driver common
-npidsa|disconnect all
+npidsa|disconnect all connections
 npidsc|DiSConnect connection
+npidsc0|with options
 npierr|check for errors requiring ksesec, also reacquire DX lock
+npifcc|fetch with callback. fetch from a statement N times, call a callback routine
 npil|local
 npisnl|set network link
 npitcc|Test/Clear connections
@@ -6041,18 +6044,18 @@ pesxlo|STANDARD.PESXLO NLS_LOWER
 pesxlt|STANDARD.PESXLT TRANSLATE
 pesxup|STANDARD.PESXUP NLS_UPPER
 pextproc|pefm call external procedure
-pf|PLSQL Code Execution
+pf|PLSQL interpeter
 pfr|runtime
 pfrba_bind_array|bind array
 pfrci_compute_index|compute index
 pfrecl_excp_caught_locally|exception caught locally
-pfrexc|plsql interpreter exception support
+pfrexc|exception support
 pfrfeb_format_error_backtrace|format error backtrace
 pfrfi_find_index|find index
 pfrfoe_flush_oci_error|flush oci error
 pfrfxh|finds an exception handler
 pfrrbt_record_backtrace|record backtrace
-pfrrun|Interpreter Main Instruction Loop
+pfrrun|Main Instruction Loop
 pfrrun_no_tool|fast interpretation loop
 pfrsqc|callbacks for array sql and dml with returning
 pfrsi_sort_index|sort index
