@@ -786,19 +786,6 @@ clsmdns|multicast dns
 clsns|name service (GNS)
 clsss|system state
 clsu|(?)
-createAttribute|Creates an attribute node (non-namespace) [DOM 1]
-createAttributeNS|Creates an attribute node (namespace-aware) [DOM 2]
-createCDATASection|Creates a CDATA node [DOM 1]
-createComment|Creates a comment node [DOM 1]
-createDocument|Creates a new Document node (non-namespace) [DOM X]
-createDocumentNS|Creates a new Document node (namespace-aware) [DOM 2 createDocument]
-createDocumentFragment|Creates an empty document fragment node [DOM 1]
-createDocumentType|Creates a new DTD node [DOM 2]
-createElement|Creates an element node (non-namespace) [DOM 1]
-createElementNS|Creates an element node (namespace-aware) [DOM 2]
-createEntityReference|Creates an entity reference node [DOM 1]
-createProcessingInstruction|Creates a PI node [DOM 1]
-createTextNode|Creates a text node [DOM 1]
 cms|color management system (little cms)
 cmsAllocNamedColorList|Allocates an empty named color dictionary
 cmsAllocProfileSequenceDescription|Creates an empty container for profile sequences
@@ -1066,10 +1053,25 @@ cmsXYZ2Lab|Colorimetric space conversions
 cmsXYZ2xyY|Colorimetric space conversions
 cmsXYZEncoded2Float|Decodes a XYZ value, encoded on ICC convention to a cmsCIEXYZ value
 cmsxyY2XYZ|Colorimetric space conversions
+createAttribute|Creates an attribute node (non-namespace) [DOM 1]
+createAttributeNS|Creates an attribute node (namespace-aware) [DOM 2]
+createCDATASection|Creates a CDATA node [DOM 1]
+createComment|Creates a comment node [DOM 1]
+createDocument|Creates a new Document node (non-namespace) [DOM X]
+createDocumentNS|Creates a new Document node (namespace-aware) [DOM 2 createDocument]
+createDocumentFragment|Creates an empty document fragment node [DOM 1]
+createDocumentType|Creates a new DTD node [DOM 2]
+createElement|Creates an element node (non-namespace) [DOM 1]
+createElementNS|Creates an element node (namespace-aware) [DOM 2]
+createEntityReference|Creates an entity reference node [DOM 1]
+createProcessingInstruction|Creates a PI node [DOM 1]
+createTextNode|Creates a text node [DOM 1]
 csy|create synonym
 ctc|create table or cluster
 ctccom_cleanup_online_move|DBMS_PART.CLEANUP_ONLINE_OP_INTERNAL
 ctcdrv|driver
+cts|change tablespace
+ctsdrv1|driver
 cur|cursor manipulation
 curdmp|dump
 cvw|create view
@@ -1409,11 +1411,12 @@ gslcsq_simple_bind_s|DBMS_LDAP_API_FFI.LDAP_SIMPLE_BIND_S
 gslcsq_unbind_s|DBMS_LDAP_API_FFI.LDAP_UNBIND_S
 gslcsq_unscribe_user|DBMS_LDAP_API_FFI.ORA_LDAP_UNSCRIBE_USER
 gslcsq_value_free_blob|DBMS_LDAP_API_FFI.VALUE_FREE_BLOB
-gwm|global service manager (GSM)
+gwm|global workload manager (global service manager, GSM)
 gwm_db_info|DBMS_GSM_FIX.GWM_DB_INFO
 gwm_call_schagent|DBMS_GSM_FIX.GWM_CALL_SCHAGENT
 gwm_trace_output|DBMS_GSM_FIX.GWM_TRACE_OUTPUT
 gwm_validate_db|DBMS_GSM_FIX.GWM_VALIDATE_DB
+gws|global workload sharding
 hasAttributes|Determines if an element has attributes [DOM X]
 hasChildNodes|Determines if a node has children [DOM 1]
 hasFeature|Tests if the DOM implementation supports a feature [DOM 1]
@@ -1736,6 +1739,7 @@ kcfcdb|create and mount the database
 kcfcld|close database
 kcfcmb|create/mount database subroutines
 kcfcsy|cross instance sync
+kcffo|file operations
 kcfida|identify file action
 kcfido|is database open
 kcfis|intelligent storage
@@ -7212,8 +7216,10 @@ sl|operating system (dependent) library
 slcpu|get cpu usage
 slcpums|measurement (for getrusage)
 slcra|we trip here if someone else other than ssexhd() calls us
+slcts|custom(?) timestamp. prints a formatted date
 slfifl|wrapper for OS specific flush stream function (fflush on solaris)
 slfiwrb|wrapper for OS specific binary output function (fwrite on solaris)
+slfp|floating point functions (?)
 slgei|call function with the oracle error code and arguments
 slgfn|get filename (?)
 slgtds|get delta seconds. returns number of seconds since a fixed epoch.
