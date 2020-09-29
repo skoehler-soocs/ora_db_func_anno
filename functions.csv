@@ -1620,6 +1620,7 @@ kcbcbo|call begin object checkpoint (?)
 kcbchg|change a block
 kcbchg1|change a block
 kcbchk_ctx|check context, execute check functions
+kcbcbr|checkpoint block range, dirty blocks are written and kept in cache
 kcbdbh|dump one buffer
 kcbdnb|dump n buffers
 kcbema|exam and maybe apply
@@ -1637,7 +1638,7 @@ kcbi_get_rsv_bh|get reserved buffer header
 kcbi_issue_io|issue IO
 kcbi_issue_read|issue read
 kcbi_issue_write|issue write
-kcbibr|invalidate range of blocks
+kcbibr|invalidate range of blocks, does not wait for busy buffer. sets invalid flag.
 kcbifc|full database caching mode (?)
 kcbipnns|is (buffer) pinned (no statistics)
 kcbism|is medium (selection of read strategy)
@@ -1672,7 +1673,8 @@ kcbpioqcInit|initialize memory area in pga
 kcbr_apply_pending|apply changed pending read completion
 kcbr_media_apply|apply change vector for media recovery
 kcbrbuf|get a recovery buffer
-kcbrbr|reuse block range: called by space management
+kcbrbr|reuse block range: called by space management. dirty blocks are written, then flushed from all caches.
+kcbrlb|reuse local buffer
 kcbrls|release pin 
 kcbtema|thread recovery examine and maybe apply
 kcbtse|tablespace encryption
@@ -1683,7 +1685,7 @@ kcbs|simulator
 kcbsacc|access 
 kcbv|vlm (very large memory)
 kcbw|working set management
-kcbz|subroutines for kcb
+kcbz|buffer handling
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_fp_cr|fast pin consistent read
 kcbz_fp_shr|fast pin shared mode
@@ -1846,6 +1848,7 @@ kcrfr|read
 kcrfro|open a logfile for redo reading.
 kcrfrgv|get change vector header/data
 kcrfsl|switch log
+kcrfss|synchronize redo up to a given SCN
 kcrfvh|verify header
 kcrfw|write/broadcast SCN
 kcrfw_alfs|adaptive log file sync
@@ -3918,6 +3921,7 @@ krbb|creation of a backuppiece
 krbb3fwb|finish write buffer for creation of compressed backup pieces
 krbb2ec|write backuplog records to controlfile at end of backup set
 krbbcdo|compression do
+krbbnbf|number of blocks to be read from file
 krbbpc|piece create
 krbc|controlfile
 krbd|device control
@@ -4172,6 +4176,7 @@ krccacp|advance the checkpoint
 krccckp|checkpoint
 krcpabs|I am ctwr
 krcptmo|ctwr timeout action, this is the main loop
+krcput|put changed block address into the block change tracking buffer
 krcrfi|read file. rman is traversing the bitmaps to find enough historical bitmap data.
 krd|datafiles (media and standby)
 krd_do_mrp|do managed recovery processing
