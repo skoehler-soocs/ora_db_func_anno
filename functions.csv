@@ -1646,6 +1646,7 @@ kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
 kcbivlo|is very large object (selection of read strategy)
 kcbk|checkpoint queue manipulation
 kcbk_prefetch_track|db_block_prefetch administration
+kcbkcpa|checkpoint 'after': post checkpoint processing
 kcbklbc|link buffer into ckpt queue
 kcbkllrba|find lowest low RBA on checkpoint queues
 kcbkubc|unlink buffer from chpt queue
@@ -1683,6 +1684,7 @@ kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
 kcbtsn|get tablespace number
 kcbs|simulator
 kcbsacc|access 
+kcbstc1|start check 
 kcbv|vlm (very large memory)
 kcbw|working set management
 kcbz|buffer handling
@@ -1856,6 +1858,7 @@ kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
 kcrf_sync_adaptive_set|set adaptive log file sync mode
 kcrf_val_log_bsz|evaluate physical blocksize for logfile IO(?)
 kcrfds|do switch of current log
+kcrfgr|get RBA
 kcrfisd|redo is on disk
 kcrfnl|next log
 kcrfr|read
@@ -1923,6 +1926,8 @@ kcscu8|read current SCN
 kcscur_rba|read redo byte address from kcrfsg_
 kcscur3|read current SCN 
 kcsdnfy|distributed notify
+kcsgasn|get and advance(?) SCN
+kcsgasn8|get and advance(?) SCN
 kcsgbsn|get batched SCN
 kcsgbsn8|get batched SCN (12.2)
 kcsgcsn|get current SCN
@@ -1939,6 +1944,7 @@ kctrcp|record checkpoint progress
 kcttsc|thread state change
 kcv|recovery
 kcvcca|checkpoint check action
+kcvccp|checkpoint check progress???
 kcvcrv|thread recovery
 kcvdmr|do media recovery
 kcvirv|instance recovery
