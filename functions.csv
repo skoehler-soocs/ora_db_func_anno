@@ -1711,17 +1711,28 @@ kcbzwb|wait buffer (buffer busy wait)
 kcbzwc|wait (write) complete
 kcbzwcw|wait
 kcc|controlfile
+kcc_begin_txn_internal|begin controlfile transaction (kccocx)
 kcc_get_enqueue|get controlfile enqueue
 kcc_tac_callback|timed-out actions callback routine (could signal waiting too long)
+kcc_verify_header|verify header (identical to buffer cache blocks: kcbzvb, kcbhvbo, kcbhxoro, sxorchk)
+kccbc_|io buffer
+kccbc_alloc|allocation
+kccbc_init|initialisation
 kccbcf|begin controlfile update
 kccbcx|begin control transaction
+kccbmp_|bitmap
+kccbmp_get|get
 kccccf|close control files
 kccchb|cache header block 
 kccchm|cache header block 
 kcccmt|commit changes
 kccecx|end controlfile transaction. release enqueue
 kccexpd|expand controlfile section for rectype
+kccext|extent
+kccext2rec|to record
 kccfup|if arg1 != arg2 then return, otherwise call kccecx()
+kccgcpe|get checkpoint progress enqueue (wrapper)
+kccgcpe_wTimeout|with timeout
 kccgft|get for fixed table
 kccidf|identify all copies of the controlfile. sends a message to the dbwr
 kcckfr|deallocate controlfile cache using kernel memory free routine
@@ -1729,6 +1740,9 @@ kccocx|open controlfile transaction
 kccocx_noenq|no enqueue? there is an enqueue get in the function?
 kccpbcx|prepare begin controlfile transaction.
 kccpcp|prepare(?) checkpoint progress records
+kccrec|record
+kccrec_rbl|read block
+kccrbp|read block physically
 kccrhd|read header
 kccwbp|write block physically
 kccxfe|fixed table callback: database file entries
@@ -1848,6 +1862,7 @@ kcrfr|read
 kcrfro|open a logfile for redo reading.
 kcrfrgv|get change vector header/data
 kcrfsl|switch log
+kcrfsr|read instance current RBA from kcrfsg_
 kcrfss|synchronize redo up to a given SCN
 kcrfvh|verify header
 kcrfw|write/broadcast SCN
