@@ -40,6 +40,8 @@ EGS|engineered system
 EGSLib|library
 KQR|kernel query dictionary/row cache
 Ldi|date/time conversion
+LdiTZReadFile|timezone read file
+LdiTZGetPathAndSize|timezone get path and size
 Lpx|xml parser
 LpxFSM|FSM parser
 OCICacheFlush|OCI flsuh the modified persistent objects in the cache
@@ -254,6 +256,9 @@ OCITypeVersion|** OBSOLETE ** OCI Get a Type's user-readable Version
 OCIXmlDbFreeXmlCtx|To free any allocations done during OCIXmlDbInitXmlCtx
 OCIXmlDbInitXmlCtx|To get a xmlctx structure initialized with error-handler and XDB callbacks
 OCIXmlDbOrastreamFromLob|To create an orastream from a lob. This orastream can be used by functions like XMLLoadDom()
+Sl|(O/S dependent?) system library
+Slf|file management
+Slfgfn|get file name
 XdkDomNodeTest|returns true if node complay with xpath node test
 XmlAccess|set access-method callbacks for URL
 XmlConvert|cert compiler-encoding string to data encoding
@@ -2780,6 +2785,10 @@ kgskthewt|thread end wait
 kgskthrexit|thread exit
 kgss|state object manager
 kgstm|time
+kgstmPushBegin|begin
+kgstmPushEnd|end
+kgstmPushHighResTs|high resolution timestamp (via skgstmGetEpochTs)
+kgstmPushLowResTs|low resolution timestamp (via (offset in) memory location in parameter 1)
 kgur|recovery
 kgx|mutex/communication
 kgxAllocWhereStats|mutex set statistics for wait
@@ -4658,6 +4667,7 @@ kst|trace (x$trace)
 kstm|time manager
 kstmchkdrift|check drift
 kstmgethighresustick|get high resolution time
+kstmrmtickcntkeeper|resource manager tick count keeper. maintains SGA var ksudbrmseccnt_
 ksu|user
 ksuSdi|shutdown immediate (?)
 ksuSdiInProgress|in progress
@@ -5641,7 +5651,8 @@ kzxutilErr|XS_ADMIN_UTIL.RAISE_ERROR (?)
 kzxutilValidateDBuser|XS_ADMIN_UTIL.VALIDATE_DB_USER
 kzxutilValidateObjectName|XS_ADMIN_UTIL.VALIDATE_DB_OBJECT_NAME
 l|core library functions
-ldx|date functions
+ld|date functions
+ldirtzd|read timezone data
 libc_start_main|(non oracle)libc support for starting the main function
 lis|PLSQL_KG_Interface
 liscar|list cell as reference
@@ -7104,6 +7115,8 @@ rwsima|retrieval according to defining query
 rwsdef|definitions
 rwsfcd|fetch from rowsource
 rwsstd|start row source
+sLdi|system specific library time/data functions
+sLdiGetFullPath|get full path (for oracore/timezone file)
 sage|exadata specific
 sageCache|cache layer
 sageData|data layer
@@ -7243,6 +7256,8 @@ slcpu|get cpu usage
 slcpums|measurement (for getrusage)
 slcra|we trip here if someone else other than ssexhd() calls us
 slcts|custom(?) timestamp. prints a formatted date
+sldi|date/time functions
+sldigpt|get path (calls LdiTZGetPathAndSize)
 slfifl|wrapper for OS specific flush stream function (fflush on solaris)
 slfiwrb|wrapper for OS specific binary output function (fwrite on solaris)
 slfp|floating point functions (?)
