@@ -6063,6 +6063,8 @@ peftrusted|execute a trusted callout
 peibp|PLSQL KNLDE
 peicnt|PL/SQL Controlled execution
 pen|native interfaces
+pen_INST|instantiate another libunit body
+pen_XCALL_i|call an entrypoint in an external libunit (interprented?)
 pes|Shared Object Manager
 pesacos|STANDARD.PESACOS ACOS
 pesasin|STANDARD.PESASIN ASIN
@@ -6084,6 +6086,31 @@ pesxcp|STANDARD.PESXCP NLS_INITCAP
 pesxlo|STANDARD.PESXLO NLS_LOWER
 pesxlt|STANDARD.PESXLT TRANSLATE
 pesxup|STANDARD.PESXUP NLS_UPPER
+pevm|virtual machine
+pevm_BAD|bad instruction
+pevm_BRREINI|branch reinitalization
+pevm_EXIM|execute immediate
+pevm_I4EXIM|initialize statement for execute immediate
+pevm_I4OPND|initialize open dynamic (initialize for opening a cursor for a dynamic string)
+pevm_MOVRPAT|move REGEXP pattern
+pevm_OPND|open dynamic (dynamic sql: do a dynamic OPEN on a query string)
+pevm_RAISE_JUMP|raise an exception
+pevm_REGEXP_COUNT_CLB|function REGEXP_COUNT (CLOB)
+pevm_REGEXP_COUNT_TXT|function REGEXP_COUNT
+pevm_REGEXP_LIKE_CLB|function REGEXP_LIKE (CLOB)
+pevm_REGEXP_LIKE_TXT|function REGEXP_LIKE
+pevm_REGEXP_INSTR_CLB|function REGEXP_INSTR (CLOB)
+pevm_REGEXP_INSTR_CLB2|2
+pevm_REGEXP_INSTR_TXT|function REGEXP_INSTR
+pevm_REGEXP_INSTR_TXT2|2
+pevm_REGEXP_SUBSTR_CLB|function REGEXP_SUBSTR (CLOB)
+pevm_REGEXP_SUBSTR_CLB2|2
+pevm_REGEXP_SUBSTR_TXT|function REGEXP_SUBSTR
+pevm_REGEXP_SUBSTR_TXT2|2
+pevm_REGEXP_REPLACE_CLB|function REGEXP_REPLACE (CLOB)
+pevm_REGEXP_REPLACE_CLB2|2
+pevm_REGEXP_REPLACE_TXT|function REGEXP_REPLACE
+pevm_RCPAT|compile REGEXP pattern
 pextproc|pefm call external procedure
 pf|PLSQL interpeter
 pfr|runtime
@@ -7297,7 +7324,7 @@ sntpwrite|issue write
 sntt|tcp/ip
 snttread|read data on a socket
 snttwrite|write data to a socket
-sp|operating system dependent process functions
+sp|operating system dependent process functions 
 sp_sigset_raise_signal|obtain process ID and send signal
 spefcmpa|marshall procedure arguments
 spefmccallstd|c calling standard
