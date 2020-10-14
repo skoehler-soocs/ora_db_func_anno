@@ -1758,7 +1758,8 @@ kccocx|open controlfile transaction
 kccocx_noenq|no enqueue? there is an enqueue get in the function?
 kccpb_sanity_check|physical block sanity check. 
 kccpbcx|prepare begin controlfile transaction.
-kccpcp|prepare(?) checkpoint progress records
+kccpcp|persist checkpoint progress 
+kccprd|persist record(?). writes checkpoint progress record
 kccrec|record
 kccrec_rbl|read block
 kccrbp|read block physical
@@ -7273,9 +7274,11 @@ skgmstack|call specified function with extra stack space
 skgnfs|network file system
 skgnfs_poll_channels|poll network paths
 skgns|(kernel) namespace
+skgpcorecpu|return number of cores in system
 skgping|ping(?)
-skgpnumcpu|return number of cpus in system
 skgpm|persistent memory
+skgpnumcpu|return number of cpus (cpu threads) in system
+skgpphyscpu|return number of physical cpus in system
 skgptalive|thread alive (check if process or thread is alive)
 skgpw|post/wait
 skgpwinit|initialization
@@ -7333,6 +7336,7 @@ slgtds|get delta seconds. returns number of seconds since a fixed epoch.
 slgts|get time stamp (for gettimeofday)
 slmsrd|message file read, reads .msb file
 slrac|verify (memory) read access
+slsgetstat|get operating system statistics
 sltrgatime64|arbitrary time lookup 
 sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
