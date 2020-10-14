@@ -1633,6 +1633,7 @@ kcbgcur|get in current mode
 kcbget|get buffer (retry scan performed earlier by kcbgtcr)
 kcbgtcr|get consistent read
 kcbh|header
+kcbhfho|fix header operation
 kcbhfix_tail|update tail (low-order two bytes of the scn+block type+block sequence number)
 kcbhlchk|logical check 
 kcbhsbs_ub8|write SCN base and wrap in buffer header
@@ -1650,13 +1651,19 @@ kcbism|is medium (selection of read strategy)
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
 kcbivlo|is very large object (selection of read strategy)
 kcbk|checkpoint queue manipulation
+kcbk_populate_history|populate history table for db_block_prefetching, make decision, write to fixed SGA
 kcbk_prefetch_track|db_block_prefetch administration
 kcbkcpa|checkpoint 'after': post checkpoint processing
-kcbklbc|link buffer into ckpt queue
+kcbkdac|dump active checkpoint queue
+kcbkdcq|dump checkpoint queue
+kcbkgcql|get checkpoint queue latch
+kcbklbc|link buffer into checkpoint queue
 kcbkllrba|find lowest low RBA on checkpoint queues
-kcbkubc|unlink buffer from chpt queue
+kcbkubc|unlink buffer from checkpoint queue
 kcbl|(loader) direct io routines
 kcblci|check input
+kcblclc|check slot count. seems to be the auto tuning mechanism for dynamic AIO read slots (?).
+kcblgs|get state
 kcblgt|get buffer
 kcblibr|locally invalidate block range or object
 kcblin|operations for redo-less write interface
@@ -1665,6 +1672,7 @@ kcblnb_dscn|load new buffer
 kcblrd|initiate read ahead
 kcblrl|load release buffer
 kcblrs|read submit
+kcblsltck|slot check. 
 kcblsy|load sync IO
 kcbnlc|analyze cleanout
 kcbo|object queue
@@ -1719,6 +1727,7 @@ kcbzwc|wait (write) complete
 kcbzwcw|wait
 kcc|controlfile
 kcc_begin_txn_internal|begin controlfile transaction (kccocx)
+kcc_cfseqno_chk|controlfile sequence number check. checks for controlfile sequence number reaching its limit.
 kcc_get_enqueue|get controlfile enqueue
 kcc_tac_callback|timed-out actions callback routine (could signal waiting too long)
 kcc_verify_header|verify header (identical to buffer cache blocks: kcbzvb, kcbhvbo, kcbhxoro, sxorchk)
@@ -1731,7 +1740,6 @@ kccbmp_|bitmap
 kccbmp_get|get
 kccccf|close control files
 kccchb|cache header block 
-kccchm|cache header block 
 kcccmt|commit changes
 kccecx|end controlfile transaction. release enqueue
 kccexpd|expand controlfile section for rectype
@@ -1740,18 +1748,24 @@ kccext2rec|to record
 kccfup|if arg1 != arg2 then return, otherwise call kccecx()
 kccgcpe|get checkpoint progress enqueue (wrapper)
 kccgcpe_wTimeout|with timeout
+kccgdi|get database information(?)
+kccgfi|get file information(?)
 kccgft|get for fixed table
+kccibc|insert block change(?)
 kccidf|identify all copies of the controlfile. sends a message to the dbwr
 kcckfr|deallocate controlfile cache using kernel memory free routine
 kccocx|open controlfile transaction
 kccocx_noenq|no enqueue? there is an enqueue get in the function?
+kccpb_sanity_check|physical block sanity check. 
 kccpbcx|prepare begin controlfile transaction.
 kccpcp|prepare(?) checkpoint progress records
 kccrec|record
 kccrec_rbl|read block
-kccrbp|read block physically
+kccrbp|read block physical
 kccrhd|read header
-kccwbp|write block physically
+kccsed|select edition.
+kccsup|start update
+kccwbp|write block physical
 kccxfe|fixed table callback: database file entries
 kcf|file management
 kcfaioe|aio error. checks if aio is possible.
@@ -1805,6 +1819,8 @@ kcm_EnableAutoRollover|DBMS_SCN.ENABLEAUTOROLLOVER
 kcm_GetCurrentSCNParams|DBMS_SCN.GETCURRENTSCNPARAMS
 kcm_GetSCNAutoRolloverParams|DBMS_SCN.GETSCNAUTOROLLOVERPARAMS
 kcm_GetSCNParamsByCompat|DBMS_SCN.GETSCNPARAMSBYCOMPAT
+kcm_low_scn_headroom_alert|low SCN headroom alert
+kcm_scn_intrinsic_growth_alert|SCN growth alert
 kcmadj|adjust scn
 kcmclscn|check lamport scn
 kcmclscn8|8
@@ -1893,6 +1909,8 @@ kcrfw_redo_write|redo
 kcrfw_redo_write_driver|main redo handling function
 kcrfw_redo_write_initpic|initialise pending IO context buffer (PIC)
 kcrfw_slave_adaptive_cronjob|calculate lgwr slave stats (ckpt)
+kcrfw_slave_adaptive_redorate|calculate lgwr redorate (ckpt)
+kcrfw_slave_adaptive_saveslvdelay|save slave delay (ckpt)
 kcrfw_slave_group_main|main logwriter worker function
 kcrfw_slave_group_postall|lgwr function to post lgwr workers
 kcrfw_slave_queue_insert|main lgwr function to provide writes to lgwr workers
@@ -1943,6 +1961,7 @@ kcsnew8|get new SCN
 kcsm|shared routines
 kct|threads
 kctmttr|mean time to recover (?)
+kctmttrca|calculation
 kctmttrest|estimation
 kctrec|recovery threads, recover and close threads
 kctrcp|record checkpoint progress
@@ -1950,11 +1969,15 @@ kcttsc|thread state change
 kcv|recovery
 kcvcca|checkpoint check action
 kcvccp|checkpoint check progress???
+kcvcra|recovery actions
 kcvcrv|thread recovery
 kcvdmr|do media recovery
+kcvfh|file headers
+kcvfhabmr|automatic block media recovery
 kcvirv|instance recovery
 kcvrcrba|read current redo byte address
 kcvsurs|set unrecoverable SCN
+kcvucp|update checkpoint
 kcvvra|verify reset allowed
 kd|data
 kda|analyze/statistics
@@ -3446,7 +3469,9 @@ klclil1r|c level interface load 1 row
 klcs|character set
 klcslod|load NLS data object
 kll|library
-kllcqgf|circular queue get free slot
+kllcq|circular queue
+kllcqe|error (dumps circular queue to trace)
+kllcqgf|get free slot
 klllr|logical record
 klm|memory
 klmalf|allocate freeable memory
@@ -4221,6 +4246,13 @@ krfbBuildRestoreSet|adds a list if files to flashback to the flashback context
 krfgdelfb1|calculate deleted space (?)
 krfgfbtofree|calculate free space
 krfxfblog|fixed table callback routine for x$kcrfblog
+krh|?
+krha|Asynchronous I/O
+krhahra|header read all(?)
+krhahrd|header read
+krhcvt_filhdr_pre10|convert fileheader from pre-oracle 10 version
+krhgfh|get file header
+krhpfh|process file header
 krm|rman (executable only; not database)
 krmcmcv|command change value (?)
 krp|recovery
@@ -4399,6 +4431,7 @@ kserec4|record an error code
 ksesec0|signal an error code
 ksesec1|signal an error code
 ksesin|signal an internal error (named)
+ksevsn|version
 ksf|functions
 ksfd|disk IO
 ksfdDumpPGA|dump ksfd PGA
@@ -4425,10 +4458,12 @@ ksfdbio|block IO
 ksfdbio_updatestats|update statistics for X$KSFDSTCMP (V$IOSTAT_FUNCTION)
 ksfdckerr|check for errrors
 ksfdcreg|register controlfiles with CSS
+ksfdderegmem|de-register memory
 ksfdfchkaio|check if aio can be done
 ksfdgaiolmt|get aio limit
 ksfdgfno|get file number
 ksfdgo|execute IO
+ksfdgpiocnt|get physical IO count
 ksfdgpsz|get physical (sector) size
 ksfdgrsz|get request size
 ksfdmp|call the relevant dump routine
@@ -4619,9 +4654,11 @@ ksp_param_handle_param|allocate a set of chunks for parameter data
 ksp_spfile|spfile file management
 ksp_spfile_open|open
 ksp_spfile_write|write
+kspges|get session parameter(?)
+kspgip|get integer parameter (parameter value=indx-1)
 kspgir|get range
 kspgpnicd|DBMS_UTILITY.KSPGPNICD GET_PARAMETER_VALUE
-kspgsp|get string parameter
+kspgsp|get string (or session?) parameter
 kspm|persistent memory
 kspmxs|extension services
 ksppt|parameter table
@@ -4689,7 +4726,9 @@ ksudlp|delete process. called when user detaches or cleanup by pmon
 ksudmp|dump process state object
 ksudps|dump process state
 ksudss|dump system state
+ksugetosstat|get operating system statistics (executed by dbrm process)
 ksugrs|generate recursive session
+ksugsta|generate statistic (v$sysstat; v$sesstat?)
 ksugtcpums|get cpu measurement
 ksugpp|get parent process
 ksul|license/language
