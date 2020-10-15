@@ -3133,8 +3133,10 @@ kkqjfdrv|driver
 kkqjpd|predicate push down
 kkqjpdctr|traverse and transform
 kkqjpddrv|driver
-kkqoj|outer join
+kkqoje|outer join elimination
 kkqojeanl|expression analyze
+kkqojeanlCB|callback
+kkqojedrv|driver
 kkqolap|olap
 kkqolapdrv|driver
 kkqore|or-expansion
@@ -7332,11 +7334,18 @@ slfiwrb|wrapper for OS specific binary output function (fwrite on solaris)
 slfp|floating point functions (?)
 slgei|call function with the oracle error code and arguments
 slgfn|get filename (?)
-slgtds|get delta seconds. returns number of seconds since a fixed epoch.
+slgtds|get delta seconds. returns number of seconds since a fixed epoch. taking timezone into account.
 slgts|get time stamp (for gettimeofday)
 slmsrd|message file read, reads .msb file
 slrac|verify (memory) read access
+slsget|get statistcs from OS getrusage call
 slsgetstat|get operating system statistics
+slsgnetstat|get network statistics. reads /proc/sys/net/ipv4/tcp_wmem&tcp_rmem, /proc/sys/net/core/wmem_max&rmem_max for statistics
+slsid|sid. calls slzgetevar to read environment to read ORACLE_SID environment variable
+slskstat|kernel statistics. reads /proc/loadavg for load average.
+slsstdts|calls slgtds.
+slstdts|timestamp delta timestamp. calls slsstdts and prints local time and UTC time.
+slsthreadstats|thread stats. calls getrusage to read current (self) process/thread statistics.
 sltrgatime64|arbitrary time lookup 
 sltrgftime64|time lookup main (for clock_gettime)
 sltrgftime64_cgt|clock_gettime
