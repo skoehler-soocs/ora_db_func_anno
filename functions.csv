@@ -1619,6 +1619,8 @@ kcbbacq|active checkpoint queue
 kcbbdrv|central write driver
 kcbblwr|create redo records for list of blocks written (media recovery marker)
 kcbbposts|post dbwr to write
+kcbbtifc|thread in full caching mode
+kcbbvr|verify (write verification)
 kcbbwlru|write buffers from one of the LRU write lists
 kcbbxsv|take single buffer and check if we have to return to LRU
 kcbcbo|call begin object checkpoint (?)
@@ -1674,8 +1676,11 @@ kcblrl|load release buffer
 kcblrs|read submit
 kcblsltck|slot check. 
 kcblsy|load sync IO
+kcbm|MTTR (mean time to recover)
+kcbm_trace|trace
 kcbnlc|analyze cleanout
 kcbo|object queue
+kcbo_add_ckpt|add checkpoint
 kcbo_ckpt_obj|fast object checkpoint
 kcbo_service_ockpt|object checkpoint completion check
 kcbpioq|physical IO queueing (batched in planline)
@@ -1729,9 +1734,10 @@ kcc|controlfile
 kcc_begin_txn_internal|begin controlfile transaction (kccocx)
 kcc_cfseqno_chk|controlfile sequence number check. checks for controlfile sequence number reaching its limit.
 kcc_get_enqueue|get controlfile enqueue
+kcc_nid_in_progress|NID (database new ID) in progress
 kcc_tac_callback|timed-out actions callback routine (could signal waiting too long)
 kcc_verify_header|verify header (identical to buffer cache blocks: kcbzvb, kcbhvbo, kcbhxoro, sxorchk)
-kccbc_|io buffer
+kccbc_|io buffer/cache
 kccbc_alloc|allocation
 kccbc_init|initialisation
 kccbcf|begin controlfile update
@@ -1742,6 +1748,9 @@ kccccf|close control files
 kccchb|cache header block 
 kcccmt|commit changes
 kccecx|end controlfile transaction. release enqueue
+kccehtt|hold time tracking
+kccehttdump|dump
+kccehttupdate|update
 kccexpd|expand controlfile section for rectype
 kccext|extent
 kccext2rec|to record
@@ -1764,8 +1773,14 @@ kccrec|record
 kccrec_rbl|read block
 kccrbp|read block physical
 kccrhd|read header
+kccrsz|resize
 kccsed|select edition.
 kccsup|start update
+kccucp|use copy
+kccupg|upgrade
+kccupid|update id (NID)
+kccupnm|update name (NID)
+kccuss|use snapshot
 kccwbp|write block physical
 kccxfe|fixed table callback: database file entries
 kcf|file management
@@ -1791,6 +1806,8 @@ kcfopd|open/close database code
 kcfrbd|read buffers from disk
 kcfris|release instance state queue
 kcfrms|DBMS_SYSTEM.KCFRMS_ICD KCFRMS
+kcfrcs|release cache state enqueue (IS enqueue)
+kcftcs|take cache state enqueue (IS enqueue)
 kcfwatwr|wait for write IOs to finish (dbwr)
 kcht|hash table
 kci|oracle text
@@ -4476,6 +4493,9 @@ ksfdpcl|process IO completion
 ksfdpgadump|ksfd dump PGA routine
 ksfdpoll|poll for IO completion
 ksfdread|read random access file in sync mode
+ksfdrq|request
+ksfdrqgfob|get file object
+ksfdrqgcctx|get call(?) context
 ksfdss|snapshot (clonedb)
 ksfdss_fob_is_snap|are files in file open block (fob) snapshot files?
 ksfdtrcwrt|trace write
@@ -4687,6 +4707,9 @@ ksqrcl|release an enqueue
 ksqsgn|procedure to register database name for ?
 ksqsod|state object delete
 ksr|reliable messages
+ksrb|broadcast
+ksrbbuild|build
+ksrbwait|wait
 ksrma|ksrma
 ksrmf|ksrmf
 kss|state object
