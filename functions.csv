@@ -1615,13 +1615,17 @@ kcb_pre_apply|pre-apply (CBC latch is taken)
 kcb_sync_last_change|call kcrf_commit_force to sync redo
 kcbapl|apply (changes to buffer; kcoapl executes changes)
 kcbb|databasewriter
+kcbb_current_space|current write size, allocate next chunk/space if max IO size is reached
+kcbb_prepare|prepare buffer(s) in this batch for write
 kcbbacq|active checkpoint queue
-kcbbdrv|central write driver
-kcbblwr|create redo records for list of blocks written (media recovery marker)
+kcbbdrv|driver. main loop
+kcbbiop|IO progress
+kcbblwr|lost write (detection). create redo records for list of blocks written (media recovery marker)
 kcbbposts|post dbwr to write
 kcbbtifc|thread in full caching mode
 kcbbvr|verify (write verification)
 kcbbwlru|write buffers from one of the LRU write lists
+kcbbwdb|write deferred buffer
 kcbbxsv|take single buffer and check if we have to return to LRU
 kcbcbo|call begin object checkpoint (?)
 kcbchg|change a block
@@ -1655,13 +1659,17 @@ kcbivlo|is very large object (selection of read strategy)
 kcbk|checkpoint queue manipulation
 kcbk_populate_history|populate history table for db_block_prefetching, make decision, write to fixed SGA
 kcbk_prefetch_track|db_block_prefetch administration
+kcbkcbc|check buffer cache (buffer and header count)
 kcbkcpa|checkpoint 'after': post checkpoint processing
 kcbkdac|dump active checkpoint queue
 kcbkdcq|dump checkpoint queue
 kcbkgcql|get checkpoint queue latch
+kcbkgetdbq|get database queue(?)
 kcbklbc|link buffer into checkpoint queue
 kcbkllrba|find lowest low RBA on checkpoint queues
 kcbkubc|unlink buffer from checkpoint queue
+kcbkv|validate
+kcbkvlo|low RBA
 kcbl|(loader) direct io routines
 kcblci|check input
 kcblclc|check slot count. seems to be the auto tuning mechanism for dynamic AIO read slots (?).
@@ -1683,6 +1691,7 @@ kcbo|object queue
 kcbo_add_ckpt|add checkpoint
 kcbo_ckpt_obj|fast object checkpoint
 kcbo_service_ockpt|object checkpoint completion check
+kcbo_switch_cq1|put buffer onto checkpoint queue
 kcbpioq|physical IO queueing (batched in planline)
 kcbpioqAddIO|add IO to batched IO
 kcbpioqInit|initialize memory area in shared pool
@@ -1706,6 +1715,7 @@ kcbstc1|start check
 kcbv|vlm (very large memory)
 kcbw|working set management
 kcbz|buffer handling
+kcbz_check_lrba|check buffers logical block address (versus checkpoint)
 kcbz_encdec_tbsblk|tablespace block encrypt
 kcbz_fp_cr|fast pin consistent read
 kcbz_fp_shr|fast pin shared mode
@@ -1714,7 +1724,7 @@ kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
 kcbz_table_scan_read|buffered multiblock read main loop
 kcbzar|release buffer
 kcbzcb|create/maybe clone buffer
-kcbzdh|dump buffer routine
+kcbzdh|dump buffer handle routine
 kcbzfb|format block
 kcbzfs|free state object (buffer handle/kcbbf)
 kcbzgb|get cr/read/rec (space for) buffer with dba/class; set buffer state to reading
@@ -1792,11 +1802,13 @@ kcfcdb|create and mount the database
 kcfcld|close database
 kcfcmb|create/mount database subroutines
 kcfcsy|cross instance sync
+kcffetch|fetch
 kcffo|file operations
 kcfida|identify file action
 kcfido|is database open
-kcfis|intelligent storage
+kcfis_|intelligent storage
 kcfis_tablespace_is_on_sage|test if tablespace is on exadata
+kcfisio|insert IOs
 kcfl|loader
 kcflci|check status of IO
 kcflwi|wait for IO
@@ -1937,6 +1949,7 @@ kcrfw_stats_writesize_record|calculate and provide statistics (sesstat/sysstat).
 kcrfw_update_and_bcast_real_redo_scn|update real redo SCN and real write time in kcrfsg_
 kcrfw_update_redo_blk_hdrs|obtain write info from PIC and write redo headers
 kcrfw_wait_for_fg_copy|read redo copy latches accompanying shared pool structure to validate writes to redo are done
+kcrfwcr|current redo byte address
 kcrfwh|write header
 kcrfwi|write redo into the logfile
 kcrfwl|sWitch logs
@@ -2831,6 +2844,8 @@ kgstmPushEnd|end
 kgstmPushHighResTs|high resolution timestamp (via skgstmGetEpochTs)
 kgstmPushLowResTs|low resolution timestamp (via (offset in) memory location in parameter 1)
 kgur|recovery
+kgws|mts/shared server(?)
+kgwscl|client
 kgx|mutex/communication
 kgxAllocWhereStats|mutex set statistics for wait
 kgxAOLInit|initialize AOL
@@ -3814,6 +3829,8 @@ kpo|oracle
 kpoal8|V8 bundled execution
 kpoaq|streams advanaced queuing 
 kpoauth|authenticate
+kpob|bind variables
+kpobii|? ?. reads bind values and sets kxsbbavl to value size
 kpoclsa|close all cursors
 kpodny|describe any arguments used
 kpodp|direct path load
@@ -5444,13 +5461,17 @@ kxsSsa|session state array(?)
 kxsSsaClearSession|remove session information from session state array (X$KSUSE)
 kxsSsaSetSqlid|prepare to update X$SUSE with sqlid, updateallssa performs this
 kxsSsaUpdateAllssa|update all session state array (X$KSUSE)
+kxsbbclr|bind buffer clear
 kxsbnddmp|bind variable dump. master routine per bind for providing bind info in sql trace files.
 kxsbndinf|bind variable information. provides actual bind data in sql trace files.
+kxscbb|clear bind buffers
 kxscln|cleanup instantiation object
 kxscls|close
 kxsclsr|remote
 kxsfbb|free bind buffers(?)
 kxsffir|function fire called when the appropriate heap is going away
+kxsgbb|get bind buffers
+kxsibb|initialize bind buffers
 kxsmbb|memory bind buffers. allocate memory for bind buffers.
 kxspoac|put oacdef into the cursor instantiation
 kxst|sql trace
