@@ -1617,15 +1617,27 @@ kcbapl|apply (changes to buffer; kcoapl executes changes)
 kcbb|databasewriter
 kcbb_current_space|current write size, allocate next chunk/space if max IO size is reached
 kcbb_prepare|prepare buffer(s) in this batch for write
+kcbb_service_rbr_ckpt|service reuse block range checkpoint
 kcbbacq|active checkpoint queue
+kcbbc|check
+kcbbcthc|thread checkpoint
+kcbbctsc|tablespace (file) checkpoint
+kcbbcrcv|recovery checkpoint
+kcbbcwr|write
 kcbbdrv|driver. main loop
 kcbbiop|IO progress
 kcbblwr|lost write (detection). create redo records for list of blocks written (media recovery marker)
 kcbbposts|post dbwr to write
 kcbbtifc|thread in full caching mode
 kcbbvr|verify (write verification)
-kcbbwlru|write buffers from one of the LRU write lists
-kcbbwdb|write deferred buffer
+kcbbw|write
+kcbbwdb|deferred buffer
+kcbbwdl|dirty list(?)
+kcbbwlru|buffers from one of the LRU write lists
+kcbbwrcv|recovery checkpoint
+kcbbwthc|thread checkpoint
+kcbbwtsc|tablespace (file) checkpoint
+kcbbwtl2|buffers to L2 buffer cache (db flash cache)
 kcbbxsv|take single buffer and check if we have to return to LRU
 kcbcbo|call begin object checkpoint (?)
 kcbchg|change a block
@@ -1635,6 +1647,7 @@ kcbcbr|checkpoint block range, dirty blocks are written and kept in cache
 kcbdbh|dump one buffer
 kcbdnb|dump n buffers
 kcbema|exam and maybe apply
+kcbflc|flash cache
 kcbgcur|get in current mode
 kcbget|get buffer (retry scan performed earlier by kcbgtcr)
 kcbgtcr|get consistent read
@@ -2574,6 +2587,7 @@ kgefem|format error message (null-terminated)
 kgemef|mae error message (with Va_list)
 kgepop|pop to the current top error frame
 kger|record
+kgerecoserr|operating system error
 kgerem|error code (with already-formatted message)
 kgerev|error code (with Va_list)
 kgerinv|internal named error with va_list
@@ -4412,6 +4426,8 @@ ksbckbast|check blocking asynchronous trap
 ksbcti|call timeout/interrupts
 ksbd|detached process
 ksbmsg|call cpu count changed callbacks
+ksbpro|process number(?)
+ksbprocnum|obtain process number(?)
 ksbrdp|run a detached background process
 ksbsrv|start a multi-stated server process
 ksbt|?
@@ -4550,6 +4566,8 @@ ksimPrintGroupMemCache|print out group memory cache (oradebug)
 ksimgchg|group state change
 ksipget|get a group lock (synchronous interface to DLM for lock get)
 ksipc|IPC
+ksipc_allocate_dwork|allocate work element
+ksipc_queue_dwork|queue/defer work element
 ksipcenv|memory allocations on different sockets (?from oradebug)
 ksipcon|convert a group lock
 ksiprls|release a group lock
@@ -4561,7 +4579,7 @@ kskinitrm|initialise resource manager
 kskiorm|I/O resource manager
 ksklheld|lock held
 kskosstatact|operating system statistics act (get os statistics)
-kskpthr|post thread
+kskpthr|post thread (process), wake/end resource manager wait if needed
 kskthbcall|thread begin call
 kskthbwt|thread begin wait
 kskthecall|thread end call
@@ -4581,7 +4599,7 @@ ksl_postm_add|add a process
 ksl_postm_do_posts|post processes
 ksl_postm_init|initialise
 ksl_skgslgts|spin get of exclusive latch (11g)
-ksl_update_post_stats|update processing of posting stats ao. in x$kslpr
+ksl_update_post_stats|update processing of posting stats ao. in x$kslpo
 kslawe|add post-wait entry
 kslccll|clean up after a given latch
 kslcll|clean up after a given latch
@@ -4607,6 +4625,7 @@ ksliwat_cleanup|cleanup post/wait entry
 kslpsemf|post semaphores
 kslpslf|post list of foregrounds
 kslpspr|post the process with that latch
+kslpsprns|post process numbers
 kslpwrp_int|post/wait read post type (to choose single or multi process posting; guess)
 kslskgs|spin get of shared latch
 kslwait|wait for n centi-seconds or until posted
@@ -4821,6 +4840,18 @@ ksxa|parallel affinity
 ksxb1bqb|memcpy buffer to qb and increment the qb
 ksxmcln|DBMS_STATS_INTERNAL.PURGE_ORPHAN_ENTRIES_CALLOUT
 ksxp|cross instance ipc
+ksxp_ipclw|IPC lightweight
+ksxp_ipclw_post|post
+ksxp_ipclw_post_native|native
+ksxp_ipclw_post_old|old
+ksxpdmpmem|dump memory
+ksxpkst|?
+ksxpkst_archive|archive
+ksxppst|post
+ksxppst_getcid|ctxid
+ksxppst_one|one (process?)
+ksxppst_real|real
+ksxpsigosderr|signal OS D(?) error. IPC OS error.
 ksxr|broadcast
 ksxrpollremote|poll for remote messages
 ksxrrcvmsg|receive message
@@ -7258,6 +7289,8 @@ scumnt|mount
 scurls|release
 sel|select
 selexe|execute: prepare area for fetch
+semctl|SYSCALL: semaphore control
+semget|SYSCALL: semaphore get
 semop|SYSCALL: semaphore operation
 semtimedop|SYSCALL: semaphore timed operation
 seq|sequence numbers
@@ -7328,7 +7361,7 @@ skgpphyscpu|return number of physical cpus in system
 skgptalive|thread alive (check if process or thread is alive)
 skgpw|post/wait
 skgpwinit|initialization
-skgpwpost|post
+skgpwpost|post. calls sskgpwpost
 skgpwwait|wait
 skgs|service
 skgsl|latches
@@ -7471,11 +7504,20 @@ sskgns|(kernel) namespace
 sskgp|process
 sskgp_gettid|get thread id
 sskgp_tgkill|thread get and kill. send a signal to a process/thread
+sskgpbitspersem|bits per semaphore. 
+sskgpcreatesem|create semaphore
+sskgpgetsyssemparam|get system semaphore parameters
+sskgpgetval|get value from semaphore
 sskgpw|post/wait
+sskgpwcr|create
+skgpwfindops|find (semaphore) operations
 sskgpwidcmp|compare semid of semaphores to be posted
 sskgpwpost|post a single semaphore
+sskgpwrm|remove
 sskgpwvectorpost|post multiple semaphores
 sskgpwwait|wait
+sskgpremovesem||remove semaphore
+sskgpsemspersemid|semaphores per semid. validates OS settings for semaphores.
 sskgslgf|immediate latch get (X86, 8i-10g)
 sskgslspin|spin for a latch
 sskgxp|ipc communication
