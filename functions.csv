@@ -1124,7 +1124,7 @@ dbgvp|parser
 dbgxtk|xml toolkit
 dbk|debug and diagnostics
 dbkd|kernel debug
-dbkdChkEventRdbmsErr|check event of RDBMS error
+dbkdChkEventRdbmsErr|check for RDBMS error arg1
 dbke|RDBMS diagnostic data extractor
 dbkePostKGE_kgsf|Post KGE error for KGSF
 dbked|Dumper
@@ -2911,6 +2911,7 @@ kjbr|resource table
 kjbrpread|pred read request at master
 kjc|communication
 kjci|cross instance call
+kjcibal|buffer allocate
 kjctr_pbmsg|process batch message
 kjctr_rksxp|read message from KSXP service
 kjctr_watq|read messages from wait queue
@@ -3422,7 +3423,9 @@ kkxtusv|DBMS_INTERNAL_TRIGGER.KKXTUSV SET_UGAKNT
 kkxuexe|stub execute
 kkxwtp|plsql compiler
 kky|system/session
+kkyase|alter session driver
 kkyasy|alter system driver
+kkyasy_options|options
 kkz|security
 kkzgdcol|get distinct column. This function checks the column chain for a frodef and mark the columns needed for materialized view.
 kkzgna|generate name
@@ -6601,6 +6604,9 @@ printSizeEnc|Returns size of formatted XML tree in specified encoding [DOM X]
 printStream|Prints XML tree to stdio stream [DOM X]
 printStreamEnc|Prints XML tree to stdio stream in specified encoding [DOM X]
 priold|rpc forwarding to older releases
+profile|dbms_profiler
+profile_begin_run|begin run.
+profiler_setup|initalize profiler data structures
 prm|parameter handling with sql layer
 prs|parse
 prsase|initialisation parameter names
@@ -6813,6 +6819,7 @@ qerltcFreeMemory|free memory
 qerltcPostInsertProcessing|post single row load processing
 qerltcStart|initialising function
 qerltcSingleRowLoad|main single row insertion function
+qermr|match recognise
 qerns|group by nosort
 qeroc|object collection iterator
 qerocStart|create a collection iterator row-source to iterate
