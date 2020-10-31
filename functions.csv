@@ -5985,6 +5985,7 @@ mDNS|multicast dns
 md|multidimension (spatial)
 mdgr|georaster
 mdr|indexing
+mp_|multiple precision cryptography
 msq|generating sql statements
 msqcol|append column name
 msqrxq|make sql for remote execution
@@ -7459,6 +7460,8 @@ rwsima|retrieval according to defining query
 rwsdef|definitions
 rwsfcd|fetch from rowsource
 rwsstd|start row source
+s_bmul|cryptography binary polynomials multiply
+s_mp|cryptography multiple precision
 sLdi|system specific library time/data functions
 sLdiGetFullPath|get full path (for oracore/timezone file)
 sage|exadata specific
