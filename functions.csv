@@ -5986,6 +5986,7 @@ md|multidimension (spatial)
 mdgr|georaster
 mdr|indexing
 mp_|multiple precision cryptography
+mpl|Bitwise logical operations on MPI values
 msq|generating sql statements
 msqcol|append column name
 msqrxq|make sql for remote execution
