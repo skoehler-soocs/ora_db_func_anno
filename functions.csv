@@ -7461,8 +7461,9 @@ rwsima|retrieval according to defining query
 rwsdef|definitions
 rwsfcd|fetch from rowsource
 rwsstd|start row source
-s_bmul|cryptography binary polynomials multiply
-s_mp|cryptography multiple precision
+s_|cryptography
+s_bmul|binary polynomials multiply
+s_mp|multiple precision
 sLdi|system specific library time/data functions
 sLdiGetFullPath|get full path (for oracore/timezone file)
 sage|exadata specific
@@ -7720,7 +7721,7 @@ sskgpwpost|post a single semaphore
 sskgpwrm|remove
 sskgpwvectorpost|post multiple semaphores
 sskgpwwait|wait
-sskgpremovesem||remove semaphore
+sskgpremovesem|remove semaphore
 sskgpsemspersemid|semaphores per semid. validates OS settings for semaphores.
 sskgslgf|immediate latch get (X86, 8i-10g)
 sskgslspin|spin for a latch
