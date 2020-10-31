@@ -36,8 +36,42 @@ _cmsWriteAlignment|Writes zeros on the given IOHANDLER until a 32-bit aligned po
 _cmsWriteTypeBase|Writes s a cmsTagTypeSignature to the given IOHANDLER
 BZ2|bzip2
 BZ2_decompress|decompress
+EC|elleptic curve cryptography
+EC_DecodeParams|decode parameters
+EC_FillParams|Fill out the rest of the ECParams structure based on the encoded params
+EC_FreeCurveParams|Free an allocated ECCurveParams
+EC_GetNamedCurveParams|Construct ECCurveParams from an ECCurveName
+EC_NewKey|Generates a new EC key pair
+EC_NewKeyFromSeed|Generates a new EC key pair. The private key is a supplied random value (in seed) and the public key is the result of performing a scalar point multiplication of that value with the curve's base point
+EC_ValidatePublicKey|Validates an EC public key as described in Section 5.2.2 of X9.62
+ECCurvePrams_dup|Duplicates an ECCurveParams
+ECDH|diffie-hellman 
+ECDH_Derive|Performs an ECDH key derivation by computing the scalar point multiplication of privateValue and publicValue
+ECDSA|digital signature algorithm 
+ECDSA_SignDigest|sign digest
+ECDSA_SignDigestWithSeed|with seed
+ECDSA_VerifyDigest|verify digest
+ECGroup|group
+ECGroup_consGF2m|Construct a generic ECGroup for elliptic curves over binary polynomial fields
+ECGroup_consGFp|Construct a generic ECGroup for elliptic curves over prime fields
+ECGroup_consGFp_mon|implemented in Montgomery coordinates
+ECGroup_free|Free the memory allocated (if any) to an ECGroup object
+ECGroup_fromHex|Construct ECGroup from hex parameters and name, if any. Called by ECGroup_fromHex and ECGroup_fromName
+ECGroup_fromName|Construct ECGroup from named parameters
+ECGroup_new|allocate memory for a new ECGroup object
+ECPoint|a point on an elliptic curve (EC) in affine coordinates.
+ECPoint_mul|Elliptic curve scalar-point multiplication.
+ECPoint_validate|Validates an EC public key as described in Section 5.2.2 of X9.62
+ECPoints_mul|Elliptic curve scalar-point multiplication.
 EGS|engineered system
 EGSLib|library
+FreeECParams|Deep free of the ECParams struct
+GFMethod|GF method (cryptography)
+GFMethod_consGF2m|Construct a generic GFMethod for arithmetic over binary polynomial fields with irreducible irr that has array representation irr_arr
+GFMethod_consGFp|Construct a generic GFMethod for arithmetic over prime fields with irreducible irr
+GFMethod_consGFp_mont|implemented in Montgomery coordinates
+GFMethod_free|Free the memory allocated (if any) to a GFMethod object
+GFMethod_new|Allocate memory for a new GFMethod object
 Java|java classes
 Java_com_|com.
 Java_com_sun_|sun.
@@ -188,12 +222,18 @@ Java_sun_java2d_pipe_|pipe.
 Java_sun_java2d_pipe_Region_|Region.
 Java_sun_java2d_pipe_ShapeSpanIterator_|ShapeSpanIterator.
 Java_sun_java2d_pipe_SpanClipRenderer_|SpanClipRenderer.
+Java_sun_security_|security.
+Java_sun_security_ec_|ec.
+Java_sun_security_ec_ECDHKeyAgreement_|ECDHKeyAgreement.
+Java_sun_security_ec_ECDSASignature_|ECDSASignature.
+Java_sun_security_ec_ECKeyPairGenerator_|ECKeyPairGenerator.
 KQR|kernel query dictionary/row cache
 Ldi|date/time conversion
 LdiTZReadFile|timezone read file
 LdiTZGetPathAndSize|timezone get path and size
 Lpx|xml parser
 LpxFSM|FSM parser
+LZ4|Fast LZ compression algorithm
 OCICacheFlush|OCI flsuh the modified persistent objects in the cache
 OCICacheFree|OCI free all instances in the environment
 OCICacheRefresh|OCI refresh persistent objects in the cache
@@ -406,6 +446,7 @@ OCITypeVersion|** OBSOLETE ** OCI Get a Type's user-readable Version
 OCIXmlDbFreeXmlCtx|To free any allocations done during OCIXmlDbInitXmlCtx
 OCIXmlDbInitXmlCtx|To get a xmlctx structure initialized with error-handler and XDB callbacks
 OCIXmlDbOrastreamFromLob|To create an orastream from a lob. This orastream can be used by functions like XMLLoadDom()
+SECITEM|security item
 Sl|(O/S dependent?) system library
 Slf|file management
 Slfgfn|get file name
@@ -793,6 +834,7 @@ XmlXvmTransformBuffer|run compiled xslt stylesheet on xml document in memory
 XmlXvmTransformDOM|run compiled xslt stylesheet on xml document as DOM
 XmlXvmTransformFile|run compiled xslt stylesheet on xml document in file
 XmlXvmTransformURI|run compiled xslt stylesheet on xml document from URI
+ZSTD|Zstandard. fast lossless compression algorithm
 adbdrv|alter database driver
 ain|alter index
 ainPDrop|drop an index partition
@@ -1404,6 +1446,7 @@ dry|query
 dsy|drop synonym
 dtb|drop table
 dteerr|date error handler
+ec_|elleptic curve cryptography
 err|error recovery
 erroep|oracle error position
 eva|evaluate
