@@ -1,3 +1,4 @@
+__xstat|SYSCALL:POSIX (2003) implementation stat systemcall
 _cms|color management system (little cms)
 _cms15Fixed16toDouble|Converts from 15.16 (signed) fixed point to cmsFloat64Number
 _cms8Fixed8toDouble|Converts from 8.8 fixed point to cmsFloat64Number
@@ -1868,7 +1869,10 @@ kcbk_prefetch_track|db_block_prefetch administration
 kcbkcbc|check buffer cache (buffer and header count)
 kcbkcpa|checkpoint 'after': post checkpoint processing
 kcbkdac|dump active checkpoint queue
+kcbkdaq|dump entries from active queuehead
 kcbkdcq|dump checkpoint queue
+kcbkde|dump (checkpoint) entry
+kcbkend|free memory and end call
 kcbkgcql|get checkpoint queue latch
 kcbkgetdbq|get database queue(?)
 kcbklbc|link buffer into checkpoint queue
@@ -1876,6 +1880,7 @@ kcbkllrba|find lowest low RBA on checkpoint queues
 kcbkubc|unlink buffer from checkpoint queue
 kcbkv|validate
 kcbkvlo|low RBA
+kcbkxac|X$ACTIVECKPT
 kcbl|(loader) direct io routines
 kcblci|check input
 kcblclc|check slot count. seems to be the auto tuning mechanism for dynamic AIO read slots (?).
@@ -1949,6 +1954,9 @@ kcbzwcw|wait
 kcc|controlfile
 kcc_begin_txn_internal|begin controlfile transaction (kccocx)
 kcc_cfseqno_chk|controlfile sequence number check. checks for controlfile sequence number reaching its limit.
+kcc_dump_blkcor|dump block corruption records
+kcc_dump_datafile_hist|dump datafile history records
+kcc_dump_nrsp|dump normal restorepoint records
 kcc_get_enqueue|get controlfile enqueue
 kcc_nid_in_progress|NID (database new ID) in progress
 kcc_tac_callback|timed-out actions callback routine (could signal waiting too long)
@@ -1963,6 +1971,31 @@ kccbmp_get|get
 kccccf|close control files
 kccchb|cache header block 
 kcccmt|commit changes
+kccdacm|dump acm service records
+kccdal|dump archived log records
+kccdbl|dump backup log records
+kccdbp|dump backup piece records
+kccdbs|dump backup set records
+kccdcc|dump datafile copy corruption
+kccdccc|dump create controlfile creation (backup controlfile to trace)
+kccdcrs|dump controlfile records
+kccddc|dump datafile copy (corruption) records
+kccddl|dump deletion records
+kccdfc|dump (backup) datafile corruption records
+kccdfh|dump (control) file header
+kccdfhg|(V10 style)
+kccdfn|dump file name.  
+kccdic|dump incarnation records
+kccdlh|dump log file history records
+kccdmp|dump; main dump controlfile function
+kccdmp1|dump1; actual overall dump controlfile function
+kccdor|dump offline range records
+kccdpc|dump (backup) piece records
+kccdpdb|dump pluggable database records
+kccdpic|dump pluggable database incarnation records
+kccdrm|dump rman configuration records
+kccdrs|dump (controlfile) records
+kccdtir|dump thread instance mapping records
 kccecx|end controlfile transaction. release enqueue
 kccehtt|hold time tracking
 kccehttdump|dump
@@ -1997,6 +2030,7 @@ kccupg|upgrade
 kccupid|update id (NID)
 kccupnm|update name (NID)
 kccuss|use snapshot
+kccvcf_xtest|verify controlfile, future version test(?)
 kccwbp|write block physical
 kccxfe|fixed table callback: database file entries
 kcf|file management
@@ -2102,6 +2136,7 @@ kcratr_claim|claim recovery buffers
 kcratr1|pass one: construct recovery set
 kcratr2|pass two: apply change vectors
 kcrcrl|corrupt redo log
+kcrdle|dump logfile records
 kcrf|file
 kcrf_cnv_fh_before_write|convert file header before write
 kcrf_cnv_fh_after_read|convert file header after read
@@ -2197,6 +2232,9 @@ kcsnew3|get new SCN
 kcsnew8|get new SCN
 kcsm|shared routines
 kct|threads
+kctdcpr|dump checkpoint progress records
+kctdmtr|dump mttr records
+kctdrt|dump redo thread records
 kctmttr|mean time to recover (?)
 kctmttrca|calculation
 kctmttrest|estimation
@@ -2208,7 +2246,9 @@ kcvcca|checkpoint check action
 kcvccp|checkpoint check progress???
 kcvcra|recovery actions
 kcvcrv|thread recovery
+kcvdfe|dump datafile records
 kcvdmr|do media recovery
+kcvdtf|dump tempfile records
 kcvfh|file headers
 kcvfhabmr|automatic block media recovery
 kcvirv|instance recovery
@@ -4026,6 +4066,7 @@ kpdbfdSetSharing|DBMS_PDB_ALTER_SHARING.KPDBFDSETSHARING SET_METADATA_LINKED SET
 kpdbfdSetProfExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETPROFEXPLICIT SET_PROFILE_EXPLICIT
 kpdbfdSetUserExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETUSEREXPLICIT SET_USER_EXPLICIT
 kpdbfdSetRoleExplicit|DBMS_PDB_ALTER_SHARING.KPDBFDSETROLEEXPLICIT SET_ROLE_EXPLICIT
+kpdbksrpcCbk|ks? remote procedure call callback
 kpdbsec|security
 kpfs|NPI
 kpggGetPG|return pointer to generic PGA
@@ -4484,12 +4525,15 @@ krd|datafiles (media and standby)
 krd_do_mrp|do managed recovery processing
 krd_end_rcv|end media recovery
 krd_implicit_rcv|IMPLICIT ReCoVery for standby open/activation
+krdmdmip|dump multi instance redo apply records
 krdrsb|read from standby (?)
 krdsmr|serial? slave? media recovery
 krf|flashback
 krf_flashback_db|flashback a database from a client other than RMAN
 krf_restore_driver|restore the files in the restore set/flashback restore of the database
 krfbBuildRestoreSet|adds a list if files to flashback to the flashback context
+krff_dump_kccfle|dump flashback logfile records
+krff_dump_kccrsp|dump restore points records
 krfgdelfb1|calculate deleted space (?)
 krfgfbtofree|calculate free space
 krfxfblog|fixed table callback routine for x$kcrfblog
@@ -4525,6 +4569,7 @@ krsg|gap resolution
 krsh|helper
 krsi|input/output
 krsj|protection mode
+krsj_dumpsdm|dump standby database map records
 krsk|controlfile access
 krsl|log writer
 krsm|managed recovery process
@@ -4544,6 +4589,7 @@ krta2bz|obtain blocksize of tablespace
 krta2rfn|obtain file number (mos says absolute file number)
 krtchk|check consistency (with control file)
 krtcktt|check temporary tablespace configuration
+krtdts|dump tablespace records
 krv|recovery
 krvarf|DBMS_LOGMNR.KRVARF ADD_LOGFILE
 krvcp|DBMS_LOGMNR.KRVCP COLUMN_PRESENT
@@ -4679,6 +4725,7 @@ kserec1|record an error code
 kserec4|record an error code
 ksesec0|signal an error code
 ksesec1|signal an error code
+ksesecl0|security
 ksesin|signal an internal error (named)
 ksevsn|version
 ksf|functions
@@ -4936,7 +4983,7 @@ ksqgelctx|context
 ksqget|get an enqueue
 ksqgtl|get an enqueue
 ksqrcl|release an enqueue
-ksqsgn|procedure to register database name for ?
+ksqsgn|set global name. procedure to register database name for ? not sure if this is RAC only.
 ksqsod|state object delete
 ksr|reliable messages
 ksrb|broadcast
@@ -4944,6 +4991,8 @@ ksrbbuild|build
 ksrbwait|wait
 ksrma|ksrma
 ksrmf|ksrmf
+ksrpc|remote procedure call
+ksrpc_sgfun|singel function
 kss|state object
 kss_del_cb|delete callback
 kss_delete_children|delete children of SO
@@ -7702,6 +7751,10 @@ ssexhd|dump routine
 ssk|kernel
 sskg|generic
 sskgm|memory
+sskgm_devshm_stats|executes '/bin/df -k /dev/shm' to see if enough space is available
+sskgm_dump_lsof|dumps output of /usr/bin/lsof execution
+sskgm_dump_shmfiles|dumps files in /dev/shm to tracefile
+sskgm_memory_target_supported|validates /dev/shm and checks if enough memory space is available
 sskgmrf|real free heap
 sskgmrf_unmaprange|unmap memory range
 sskgmrf_validaterange|mmap memory range
