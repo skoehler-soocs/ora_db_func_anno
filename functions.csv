@@ -1821,7 +1821,9 @@ kcbbcwr|write
 kcbbdrv|driver. main loop
 kcbbiop|IO progress
 kcbblwr|lost write (detection). create redo records for list of blocks written (media recovery marker)
+kcbbnwa|number of database writer altered. 
 kcbbposts|post dbwr to write
+kcbbsdw|suspend (and resume) database writer (alter system suspend/resume)
 kcbbtifc|thread in full caching mode
 kcbbvr|verify (write verification)
 kcbbw|write
@@ -1841,7 +1843,7 @@ kcbcbr|checkpoint block range, dirty blocks are written and kept in cache
 kcbdbh|dump one buffer
 kcbdnb|dump n buffers
 kcbema|exam and maybe apply
-kcbflc|flash cache
+kcbflc|flash cache (exadata)
 kcbgcur|get in current mode
 kcbget|get buffer (retry scan performed earlier by kcbgtcr)
 kcbgtcr|get consistent read
@@ -1858,7 +1860,7 @@ kcbi_issue_io|issue IO
 kcbi_issue_read|issue read
 kcbi_issue_write|issue write
 kcbibr|invalidate range of blocks, does not wait for busy buffer. sets invalid flag.
-kcbifc|full database caching mode (?)
+kcbifc|in full database caching mode 
 kcbipnns|is (buffer) pinned (no statistics)
 kcbism|is medium (selection of read strategy)
 kcbispnd|is (buffer) pinned (is buffer pinned stat is incremented)
@@ -1870,7 +1872,7 @@ kcbkcbc|check buffer cache (buffer and header count)
 kcbkcpa|checkpoint 'after': post checkpoint processing
 kcbkdac|dump active checkpoint queue
 kcbkdaq|dump entries from active queuehead
-kcbkdcq|dump checkpoint queue
+kcbkdcq|dump checkpoint queue buffers
 kcbkde|dump (checkpoint) entry
 kcbkend|free memory and end call
 kcbkgcql|get checkpoint queue latch
@@ -1882,9 +1884,12 @@ kcbkv|validate
 kcbkvlo|low RBA
 kcbkxac|X$ACTIVECKPT
 kcbl|(loader) direct io routines
+kcbl_free|free memory
+kcblasm|allocate space m?
 kcblci|check input
 kcblclc|check slot count. seems to be the auto tuning mechanism for dynamic AIO read slots (?).
-kcblgs|get state
+kcblfs|free state object
+kcblgs|get state object
 kcblgt|get buffer
 kcblibr|locally invalidate block range or object
 kcblin|operations for redo-less write interface
@@ -1892,8 +1897,9 @@ kcblnb|load new buffer
 kcblnb_dscn|load new buffer
 kcblrd|initiate read ahead
 kcblrl|load release buffer
-kcblrs|read submit
 kcblsltck|slot check. 
+kcblsod|state object delete
+kcblrs|read submit
 kcblsy|load sync IO
 kcbm|MTTR (mean time to recover)
 kcbm_trace|trace
@@ -1915,14 +1921,15 @@ kcbrbuf|get a recovery buffer
 kcbrbr|reuse block range: called by space management. dirty blocks are written, then flushed from all caches.
 kcbrlb|reuse local buffer
 kcbrls|release pin 
+kcbt|static routines
 kcbtema|thread recovery examine and maybe apply
 kcbtse|tablespace encryption
 kcbtse_encdec_tbsblk|block encrypt
 kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
 kcbtsn|get tablespace number
-kcbs|simulator
-kcbsacc|access 
-kcbstc1|start check 
+kcbs|simulator access
+kcbsacc|access
+kcbstc1|set checkpoint
 kcbv|vlm (very large memory)
 kcbw|working set management
 kcbz|buffer handling
@@ -1963,6 +1970,7 @@ kcc_tac_callback|timed-out actions callback routine (could signal waiting too lo
 kcc_verify_header|verify header (identical to buffer cache blocks: kcbzvb, kcbhvbo, kcbhxoro, sxorchk)
 kccbc_|io buffer/cache
 kccbc_alloc|allocation
+kccbc_free|frees allocated memor
 kccbc_init|initialisation
 kccbcf|begin controlfile update
 kccbcx|begin control transaction
@@ -1997,7 +2005,7 @@ kccdrm|dump rman configuration records
 kccdrs|dump (controlfile) records
 kccdtir|dump thread instance mapping records
 kccecx|end controlfile transaction. release enqueue
-kccehtt|hold time tracking
+kccehtt|enqueue holding time tracking
 kccehttdump|dump
 kccehttupdate|update
 kccexpd|expand controlfile section for rectype
@@ -2034,6 +2042,7 @@ kccvcf_xtest|verify controlfile, future version test(?)
 kccwbp|write block physical
 kccxfe|fixed table callback: database file entries
 kcf|file management
+kcf_record_fn|record filename. gets filename from file number.
 kcfaioe|aio error. checks if aio is possible.
 kcfbsy|background synchronisation of SGA and controlfile
 kcfcaf|close all files
@@ -2059,6 +2068,7 @@ kcfrbd|read buffers from disk
 kcfris|release instance state queue
 kcfrms|DBMS_SYSTEM.KCFRMS_ICD KCFRMS
 kcfrcs|release cache state enqueue (IS enqueue)
+kcfsauto|standby file management validation
 kcftcs|take cache state enqueue (IS enqueue)
 kcfwatwr|wait for write IOs to finish (dbwr)
 kcht|hash table
@@ -2246,6 +2256,7 @@ kcvcca|checkpoint check action
 kcvccp|checkpoint check progress???
 kcvcra|recovery actions
 kcvcrv|thread recovery
+kcvctc|complete checkpoint
 kcvdfe|dump datafile records
 kcvdmr|do media recovery
 kcvdtf|dump tempfile records
@@ -3755,7 +3766,11 @@ klcs|character set
 klcslod|load NLS data object
 kll|library
 kllcq|circular queue
+kllcqas|allocate space
+kllcqc|create
+kllcqd|delete
 kllcqe|error (dumps circular queue to trace)
+kllcgf|free memory
 kllcqgf|get free slot
 klllr|logical record
 klm|memory
@@ -4539,9 +4554,16 @@ krfgfbtofree|calculate free space
 krfxfblog|fixed table callback routine for x$kcrfblog
 krh|?
 krha|Asynchronous I/O
+krhahini|header(?) initialize
 krhahra|header read all(?)
 krhahrd|header read
+krhahrs|header read state (checks slots, could call io_getevents)
+krhahtrm|header terminate
+krhahws|header write state (checks slots, could call io_getevents)
 krhcvt_filhdr_pre10|convert fileheader from pre-oracle 10 version
+krhm|memory
+krhmalf|allocate freeable 
+krhmfrf|free freeable
 krhgfh|get file header
 krhpfh|process file header
 krm|rman (executable only; not database)
@@ -4736,6 +4758,7 @@ ksfd_chkio|IO checker/io stats
 ksfd_clear_pgaobjsc|clear pga objects
 ksfd_do_io_verification|do IO verification
 ksfd_get_physical_sectsz|read physical sectorsize from device
+ksfd_getrob|get FOB, a memory area
 ksfd_glblksz|get logical blocksize
 ksfd_gosdrq|get os dependent requests
 ksfd_io|perform IO
@@ -4757,6 +4780,7 @@ ksfdcreg|register controlfiles with CSS
 ksfdderegmem|de-register memory
 ksfdfchkaio|check if aio can be done
 ksfdgaiolmt|get aio limit
+ksfdgfnm|get file name
 ksfdgfno|get file number
 ksfdgo|execute IO
 ksfdgpiocnt|get physical IO count
@@ -4772,6 +4796,8 @@ ksfdread|read random access file in sync mode
 ksfdrq|request
 ksfdrqgfob|get file object
 ksfdrqgcctx|get call(?) context
+ksfdsaiolmt|set aio limit
+ksfdsaiolmt_int|internal
 ksfdss|snapshot (clonedb)
 ksfdss_fob_is_snap|are files in file open block (fob) snapshot files?
 ksfdtrcwrt|trace write
@@ -4851,6 +4877,7 @@ kslclt|create child latch
 kslconx|convert latch from shared to exclusive
 ksle|event wait
 kslf2c|free two child latches
+kslfpl||free parent latch
 kslfre|free latch
 kslfred|free latch, debugging version
 kslges|get exclusive latch slow spinning in a loop
@@ -5017,6 +5044,7 @@ ksuSdi|shutdown immediate (?)
 ksuSdiInProgress|in progress
 ksu_detactivate_tac|deactivate timed-out actions
 ksu_dispatch_tac|dispatch timed-out actions (updates wait interface)
+ksu_unregister_tac|deallocates memory held for timed-out action registration
 ksu_update_eoc_stats|update end of call statistics
 ksucin|check interrupt
 ksuclc|cleanup current call
@@ -7536,7 +7564,7 @@ sclgtf|fast get with no spin
 sclgts|slow get with spin (if CPU greater than 1)
 scls|operating system dependent clusterware integration
 scm|PLSQL apps
-scu|operating system concurrency unique(?) 
+scu|operating system concurrency unique
 scuinst|instance
 sculkget|lockfile (lk DB_UNIQUE_NAME )
 scumnt|mount
@@ -7593,6 +7621,7 @@ skgfrgsz|get size
 skgfrliopo|listio (AIO) poll
 skgfrlk|release a lock on a fob
 skgfrls|release a sequential device previously allocated
+skgfrsaiolmt|set aio limit (operating system level)
 skgfrvldtrq|validate requests
 skgfrwat|wait for IO to complete
 skgm|memory (os dependent)

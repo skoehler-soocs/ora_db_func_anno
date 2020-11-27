@@ -219,8 +219,8 @@ X$IR_WF_PARAM|instance recovery (advisor?) working failure (set) parameters
 X$IR_WORKING_FAILURE_SET|instance recovery (advisor?) working failure set
 X$IR_WORKING_REPAIR_SET|instacne recovery (advisor?) working repair set
 X$IR_WR_PARAM|instacne recovery (advisor?) working repair (set) parameters
-X$JOXFM|
-X$JOXFT|
+X$JOXFM|java jit compiler f? method
+X$JOXFT|java jit compiler f? source
 X$JSKJOBQ|job scheduling kernel job queue
 X$JSKMIMMD|job scheduling kernel in-memory MD
 X$JSKMIMRT|job scheduling kernel in-memory RT
@@ -229,12 +229,12 @@ X$K2GTE|kernel 2-phase commit global transaction entry
 X$K2GTE2|kernel 2-phase commit global transaction entry
 X$KAUVRSTAT|
 X$KBRPSTAT|kernel backup recovery process statistics
-X$KCBBES|kernel cache buffer buffer eviction statistics?
+X$KCBBES|kernel cache buffer database writer event statistics
 X$KCBBF|kernel cache buffer buffer handles
 X$KCBBHS|
 X$KCBDBK|kernel cache buffer database key info
 X$KCBDWOBJ|kernel cache buffer datawarehouse objects
-X$KCBDWS|kernel cache buffers working descriptors
+X$KCBDWS|kernel cache buffers datawarehouse statistics
 X$KCBFCIO|kernel cache buffer flashcache io (statistics)
 X$KCBFWAIT|kernel cache buffers file wait
 X$KCBINSTVIEW|kernel cache buffers instance view. shows if full caching is enabled
@@ -250,7 +250,7 @@ X$KCBPDBRM|kernel cache buffer pdb resource metric
 X$KCBPINTIME|
 X$KCBPRFH|
 X$KCBSC|kernel cache buffers size advice
-X$KCBSDS|
+X$KCBSDS|kernel cache buffers statistics (of workingset) descriptors
 X$KCBSH|kernel cache buffers simulated (datafile) headers
 X$KCBSW|kernel cache buffer statistics why
 X$KCBTEK|kernel cache buffers tablespace encryption key
