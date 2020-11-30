@@ -1897,7 +1897,9 @@ kcblnb|load new buffer
 kcblnb_dscn|load new buffer
 kcblrd|initiate read ahead
 kcblrl|load release buffer
-kcblsltck|slot check. 
+kcblsltck|slots check. 
+kcblsltio|slots IO. calls kcblsltio1
+kcblsltio1|performs batch IO asynchronously via Oracle AIO slots.
 kcblsod|state object delete
 kcblrs|read submit
 kcblsy|load sync IO
@@ -2260,6 +2262,7 @@ kcvctc|complete checkpoint
 kcvdfe|dump datafile records
 kcvdmr|do media recovery
 kcvdtf|dump tempfile records
+kcvecp|end checkpoint
 kcvfh|file headers
 kcvfhabmr|automatic block media recovery
 kcvirv|instance recovery
@@ -2272,8 +2275,8 @@ kda|analyze/statistics
 kdasts|Statistics Scan driver
 kdavls|validate structure driver
 kdb|block structures and manipulation
-kdbl|direct path load 
-kdblai|database block loader array insertion
+kdbl|loader (direct path)
+kdblai|array insertion
 kdblailb|load block
 kdblcRejectedDueToChaining|c? rejected due to chaining
 kdbmrd|multi row slot delete
@@ -3155,7 +3158,11 @@ kjbr|resource table
 kjbrpread|pred read request at master
 kjc|communication
 kjci|cross instance call
+kjci_free_xctx|free execution context
 kjcibal|buffer allocate
+kjcibfr_cln|buffer free. cleans up execution context
+kjcistats_cic_complete|statistics cross-instance call complete
+kjcistats_ciccb_complete|statistics cross-instance call callback complete
 kjctr_pbmsg|process batch message
 kjctr_rksxp|read message from KSXP service
 kjctr_watq|read messages from wait queue
@@ -4552,20 +4559,22 @@ krff_dump_kccrsp|dump restore points records
 krfgdelfb1|calculate deleted space (?)
 krfgfbtofree|calculate free space
 krfxfblog|fixed table callback routine for x$kcrfblog
-krh|?
+krh|headers
 krha|Asynchronous I/O
-krhahini|header(?) initialize
-krhahra|header read all(?)
-krhahrd|header read
-krhahrs|header read state (checks slots, could call io_getevents)
-krhahtrm|header terminate
-krhahws|header write state (checks slots, could call io_getevents)
+krhah|heap
+krhahdn|dn? checks controlfile entry and submits IO request, read or write.
+krhahini|initialize. create heap with direct path slots, open datafiles.
+krhahra|read allocate. reads datafile header into empty slot.
+krhahrd|read datafile.
+krhahrs|read slots (checks slots, could call io_getevents)
+krhahtrm|terminate. asynchronically updates datafile headers, then removes heap
+krhahws|write slots (checks slots, could call io_getevents)
 krhcvt_filhdr_pre10|convert fileheader from pre-oracle 10 version
+krhgfh|get file header
+krhpfh|process file header (updates in memory controlfile entry)
 krhm|memory
 krhmalf|allocate freeable 
 krhmfrf|free freeable
-krhgfh|get file header
-krhpfh|process file header
 krm|rman (executable only; not database)
 krmcmcv|command change value (?)
 krp|recovery
