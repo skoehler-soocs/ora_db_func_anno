@@ -1468,6 +1468,7 @@ expepr|evaluate the argument predicate. It returns the result of the evaluation.
 floor|floor function: largest integral value not greater than argument. from math.h
 fmod|fmod function: floating-point remainder function. from math.h
 fplib|filter projection library (exadata smartscan)
+free|SYSCALL: free
 freeElements|Frees an allocated list of element nodes [DOM X]
 freeNode|Frees memory allocated by a node [DOM X]
 fs|pmem based file store
@@ -1819,7 +1820,8 @@ kcbbctsc|tablespace (file) checkpoint
 kcbbcrcv|recovery checkpoint
 kcbbcwr|write
 kcbbdrv|driver. main loop
-kcbbiop|IO progress
+kcbbiop|IO pointers. write verification via slot pointer array.
+kcbbioq|IO Queue adjusting
 kcbblwr|lost write (detection). create redo records for list of blocks written (media recovery marker)
 kcbbnwa|number of database writer altered. 
 kcbbposts|post dbwr to write
@@ -1930,6 +1932,7 @@ kcbtse_encdec_tbsblk|block encrypt
 kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
 kcbtsn|get tablespace number
 kcbs|simulator access
+kcbs_add_or_extract_simbufseq|add or extract simulator buffer sequentially
 kcbsacc|access
 kcbstc1|set checkpoint
 kcbv|vlm (very large memory)
