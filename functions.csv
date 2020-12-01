@@ -7663,12 +7663,32 @@ skgsl|latches
 skgslcas|get latch fast with no spin (SPARC 11g)
 skgslgf|get latch fast with no spin (SPARC 8i-10g)
 skgslgts|8i-10g spin get of exclusive latch (SPARC)
+skgsn|namespaces (linux feature)
+skgsn_check_autonuma|check autonuma. reads /proc/sys/kernel/numa_balancing.
+skgsn_get|get
+skgsn_get_nodes|nodes. reads the number of numa nodes via /proc/self/status, Mems_allowed_list.
+skgsn_get_system_size|get system size.
+skgsn_numa|numa
+skgsn_numa_get_node|get node. reads numa node information from /proc/self/stat, and prints out details.
+skgsn_numa_is_supported|is supported. returns 1 if more than 0 nodes, meaning numa is configured, otherwise 0.
+skgsn_numa_node_lgpg_info|node large pages info. reads /sys/devices/system/node/node%d/meminfo and return hugepages info.
+skgsncsm|current size of memory. reads /proc/meminfo, MemTotal.
+skgsngetcmap|get cpu map. reads %s/self/cgroup, cpuset; %s/self/status, Cpus_allowed_list. Also uses environment variable T_WORK?
+skgsnnim|numa interleaved memory.  
+skgsnpggetinfo|processor group get info. reads %s/mounts and checks for cgroup cpuset mount. Also uses environment varialbe T_WORK?
+skgsnpgjoin|processor group join. adds process to %s/tasks in order to join cgroup.
+skgsnpgmemmigrate|processor group memory migrate. writes to %s/cpuset.memory_migrate.
+skgsnsimnuma|simulate numa. works via the SIM_NUMA environment variable.
 skgstm|time
-skgstmGetEpochTs|get epoch timestamp (gettimeofday)
+skgstmGetEpochTs|get epoch timestamp. calls gettimeofday.
+skgstmHasFastHighRes|has fast high resolution. reads /proc/sys/kernel/vsyscall64
 skgvm|virtual machine
 skgvm_cpuid|detect cpuid
-skgvm_detect_xen|detect xen
+skgvm_detect_xen|detect xen. calls skgvm_hpvm_xen. 
 skgvm_detect_vmware|detect vmware
+skgvm_detect_vpc|detect vpc (?)
+skgvm_isoeos|is oracle enterprise os. can be disabled using DISABLE_OEOS_CHECK. opens /etc/(enterprise|oracle|redhat)-release, checks for release (45678). calls rpm -qi --info.
+skgvm_vminfo|calls skgvm_protect_vmcheck. can be disabled using DISABLE_VM_CHECK.
 skgx|communication
 skgxn|node monitor
 skgxncin|defines an OSD context and returns a handle
