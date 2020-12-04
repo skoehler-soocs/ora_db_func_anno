@@ -1813,6 +1813,7 @@ kcbb|databasewriter
 kcbb_current_space|current write size, allocate next chunk/space if max IO size is reached
 kcbb_prepare|prepare buffer(s) in this batch for write
 kcbb_service_rbr_ckpt|service reuse block range checkpoint
+kcbb_stall_write_check|stalled write check. done every _dbwr_stall_write_detection_interval (900s). only when _dbwr_tracing has 5th bit set. show writes that have stalled for < 600s (iop-5(-1)) or > 900s (iop-15(-1)).
 kcbbacq|active checkpoint queue
 kcbbc|check
 kcbbcthc|thread checkpoint
@@ -1820,6 +1821,8 @@ kcbbctsc|tablespace (file) checkpoint
 kcbbcrcv|recovery checkpoint
 kcbbcwr|write
 kcbbdrv|driver. main loop
+kcbbioc1|IO complete 1. unlinks blocks from checkpoint queues
+kcbbioc2|IO complete 2. 
 kcbbiop|IO pointers. write verification via slot pointer array.
 kcbbioq|IO Queue adjusting
 kcbblwr|lost write (detection). create redo records for list of blocks written (media recovery marker)
@@ -1872,6 +1875,7 @@ kcbk_populate_history|populate history table for db_block_prefetching, make deci
 kcbk_prefetch_track|db_block_prefetch administration
 kcbkcbc|check buffer cache (buffer and header count)
 kcbkcpa|checkpoint 'after': post checkpoint processing
+kcbkcwd|check database writer d?. checks active checkpoint memory in shared pool for every database writer.
 kcbkdac|dump active checkpoint queue
 kcbkdaq|dump entries from active queuehead
 kcbkdcq|dump checkpoint queue buffers
@@ -2047,6 +2051,7 @@ kccvcf_xtest|verify controlfile, future version test(?)
 kccwbp|write block physical
 kccxfe|fixed table callback: database file entries
 kcf|file management
+kcf_lookup_file_state_key_ver|lookup file fob, fob2, encryption key, encryption key2.
 kcf_record_fn|record filename. gets filename from file number.
 kcfaioe|aio error. checks if aio is possible.
 kcfbsy|background synchronisation of SGA and controlfile
@@ -2058,6 +2063,7 @@ kcfcmb|create/mount database subroutines
 kcfcsy|cross instance sync
 kcffetch|fetch
 kcffo|file operations
+kcfggo|call ksqgelctx for ?? enqueue
 kcfida|identify file action
 kcfido|is database open
 kcfis_|intelligent storage
@@ -2069,6 +2075,7 @@ kcflwi|wait for IO
 kcfmdb|mount database
 kcfmrc|get multiblock read count(?)
 kcfopd|open/close database code
+kcfopnf_int|open file
 kcfrbd|read buffers from disk
 kcfris|release instance state queue
 kcfrms|DBMS_SYSTEM.KCFRMS_ICD KCFRMS
@@ -2121,6 +2128,7 @@ kcoadv_hdr|advance SCN in buffer header
 kcoapl|apply (changes to buffer)
 kcoapl_validate|validate applied changes
 kconew|create (new) array (kcocv) of change vectors
+kconewm|marker. produces change vectors for marker record in redo stream, media recovery marker.
 kcopcv|prepare change vector/redo entry generation and retrieval
 kcoubk|undo callback
 kcosze|calculate undo record size
@@ -2173,7 +2181,7 @@ kcrfro|open a logfile for redo reading.
 kcrfrgv|get change vector header/data
 kcrfsl|switch log
 kcrfsr|read instance current RBA from kcrfsg_
-kcrfss|synchronize redo up to a given SCN
+kcrfss|synchronize redo up to a given SCN. replaced with kcrf_commit_force (10)/kcrf_commit_force_int.
 kcrfvh|verify header
 kcrfw|write/broadcast SCN
 kcrfw_alfs|adaptive log file sync
@@ -2210,7 +2218,7 @@ kcrfwh|write header
 kcrfwi|write redo into the logfile
 kcrfwl|sWitch logs
 kcrfwnf|new file (?)
-kcrfwr|write redo into the logbuffer
+kcrfwr|write redo into the logbuffer. replaced with kcrfw_redo_gen (10)/kcrfw_redo_gen_ext.
 kcrfws|wait for space (logswitch)
 kcrhvbo|header verify
 kcrm|media recovery
@@ -2423,6 +2431,7 @@ kdt|table insert
 kdtInsRow|insert a row immediately
 kdtSimpleInsRow|simple insert a row
 kdt_bseg_srch_cbk|check for uncommitted space
+kdtabt|abort. rollback change.
 kdtchg|generate change
 kdtgsp|table/cluster insert get space
 kdtgrs|get space
@@ -3237,6 +3246,7 @@ kkbndrp|drop storage tables for nested table columns
 kkbnftn|format table for nested table
 kkbl|lob
 kkbo|object
+kkbtrn|truncate table
 kkcn|streams/advanced queuing connection
 kkcnRegApply|DBMS_AQ.REGOP_APPLY
 kkcnsuctx|set user context
@@ -4773,6 +4783,7 @@ ksfd_get_physical_sectsz|read physical sectorsize from device
 ksfd_getrob|get FOB, a memory area
 ksfd_glblksz|get logical blocksize
 ksfd_gosdrq|get os dependent requests
+ksfd_inprog|in progress. are there still IOs in progress in KSDF?
 ksfd_io|perform IO
 ksfd_odm|oracle disks manager
 ksfd_odmio|IO
@@ -4791,6 +4802,7 @@ ksfdckerr|check for errrors
 ksfdcreg|register controlfiles with CSS
 ksfdderegmem|de-register memory
 ksfdfchkaio|check if aio can be done
+ksfdfobcmp|fob compare. compare fob's from addresses in arg0 and arg1.
 ksfdgaiolmt|get aio limit
 ksfdgfnm|get file name
 ksfdgfno|get file number
@@ -4813,7 +4825,8 @@ ksfdsaiolmt_int|internal
 ksfdss|snapshot (clonedb)
 ksfdss_fob_is_snap|are files in file open block (fob) snapshot files?
 ksfdtrcwrt|trace write
-ksfdwat|wait for IOs to finish
+ksfdwat|wait for IOs to finish. main loop.
+ksfdwat_internal|inner loop, after wait to issue 
 ksfdwtio|wait for IO
 ksfflt|free latch
 ksfglt|get latch
@@ -5180,6 +5193,7 @@ ktbt|table
 ktbtul|unlock ITLs
 ktbtunlk|unlock all based on block type
 ktc|control component
+ktcAbortTxn|abort transaction. rollback.
 ktcCommitTxn|main commit function, calls ktcCommitTxn_new
 ktcCommitTxn_new|main commit function
 ktcbgn|begin transaction
@@ -5421,8 +5435,9 @@ ktuisonline1|return undo segment info if undo segment is online
 ktundo|undo
 ktunfy|notification procedure
 ktur|rollback
+kturAbortTxn|abort transaction. rollback
 kturCRBackoutOneChg|consistent read; backout change
-kturCurrBackoutOneChg|current read; backout change
+kturCurrBackoutOneChg|current read; backout change (rollback)
 kturGetUndoRec|get an undo record
 kturRecover|recover
 kturRecoverActiveTxns|active transactions
@@ -5973,6 +5988,8 @@ kzsob_GetKey|DBMS_OBFUSCATION_TOOLKIT_FFI.GETKEY
 kzsob_MD5|DBMS_OBFUSCATION_TOOLKIT_FFI.MD5
 kzsp|privileges
 kzsr|roles/remote password file
+kzsrfpf|get password file name
+kzsrgup|get username/password record
 kzsrsdn|passwordfile identifiy(?)
 kzstc|DBMS_CRYPTO_FFI.COOKIE
 kzstdl|DBMS_CRYPTO_FFI.DECRYPT
@@ -7460,6 +7477,7 @@ qsoda|DBMS_SODA
 qsodaplsCreateColl|DBMS_SODA.CREATE_COLLECTION
 qsodaplsDropColl|DBMS_SODA.DROP_COLLECTION
 qsodaplsOpenColl|DBMS_SODA.OPEN_COLLECTION
+qsort|quick sort
 qx|execution
 qxdid|domain index ddl operations
 qxdid_odci_get_impltype_num|DBMS_ODCI.GET_IMPLTYPE_NUM
@@ -7527,6 +7545,8 @@ rfsr2c|DBMS_DG.RFSR2C
 rfsrsp|DBMS_DG.RFSRSP
 rixima|rowsource index implementation a
 rnm|rename statement operation
+rol|rollback
+roldrv|driver. main rollback execution.
 rpi|recursive program interface
 rpibnn|bind by number
 rpicls|close
@@ -7624,13 +7644,14 @@ skgfofi|open file
 skgfospo|operating system poll for IO completion
 skgfqio|queue I/O request(s)
 skgfr|requests
-skgfr_error64|check for errors
-skgfr_lio_listio64|perform listio (AIO) 64 bits
+skgfr_error64|check OS IO context (aiocb) for completion errors.
+skgfr_lio_listio64|perform listio (AIO) 64 bits. this function executes io_submit and validates returncode.
 skgfr_open64|open file 64 bits
+skgfr_return64|check OS IO context (aiocb) for completion errors.
 skgfrciohdlr|concurrent IO handler
 skgfrdup|duplicate file handle
 skgfrgsz|get size
-skgfrliopo|listio (AIO) poll
+skgfrliopo|listio (AIO) poll. this function executes io_getevents in waiting mode, no polling is done on linux.
 skgfrlk|release a lock on a fob
 skgfrls|release a sequential device previously allocated
 skgfrsaiolmt|set aio limit (operating system level)
@@ -7891,6 +7912,7 @@ vsn|version (?)
 wpiu|PLSQL apps
 xa|external functions for XA applications
 xct|transaction management
+xctRollbackTxn|rollback transaction
 xctend|end
 xctcom|commit: commit the current tranaction of the current session
 xctctl|commit top level transaction in a transaction tree 
