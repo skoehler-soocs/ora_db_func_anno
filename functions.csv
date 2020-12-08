@@ -1828,6 +1828,7 @@ kcbbioq|IO Queue adjusting
 kcbblwr|lost write (detection). create redo records for list of blocks written (media recovery marker)
 kcbbnwa|number of database writer altered. 
 kcbbposts|post dbwr to write
+kcbbrea|read active request(s?) from active checkpoint queue
 kcbbsdw|suspend (and resume) database writer (alter system suspend/resume)
 kcbbtifc|thread in full caching mode
 kcbbvr|verify (write verification)
@@ -1967,6 +1968,7 @@ kcbzvb|verify buffer
 kcbzwb|wait buffer (buffer busy wait)
 kcbzwc|wait (write) complete
 kcbzwcw|wait
+kcbzww|wait for (database) writer. posts database writers to get active.
 kcc|controlfile
 kcc_begin_txn_internal|begin controlfile transaction (kccocx)
 kcc_cfseqno_chk|controlfile sequence number check. checks for controlfile sequence number reaching its limit.
@@ -4776,6 +4778,7 @@ ksf|functions
 ksfd|disk IO
 ksfdDumpPGA|dump ksfd PGA
 ksfd_addtoissueq|add requests to issue queue
+ksfd_aio_setobjinfo|aio set object info. 
 ksfd_chkio|IO checker/io stats
 ksfd_clear_pgaobjsc|clear pga objects
 ksfd_do_io_verification|do IO verification
@@ -6532,6 +6535,7 @@ pevm_REGEXP_REPLACE_CLB|function REGEXP_REPLACE (CLOB)
 pevm_REGEXP_REPLACE_CLB2|2
 pevm_REGEXP_REPLACE_TXT|function REGEXP_REPLACE
 pevm_RCPAT|compile REGEXP pattern
+pevmica_implicit_cursor_attributes|implicit cursor attributes
 pextproc|pefm call external procedure
 pf|PLSQL interpeter
 pfr|runtime
@@ -6543,6 +6547,9 @@ pfrfeb_format_error_backtrace|format error backtrace
 pfrfi_find_index|find index
 pfrfoe_flush_oci_error|flush oci error
 pfrfxh|finds an exception handler
+pfrinstr|instruction?
+pfrinstr_EXECC|execute C (oci?)
+pfrinstr_EXIM|execute immediate
 pfrrbt_record_backtrace|record backtrace
 pfrrun|Main Instruction Loop
 pfrrun_no_tool|fast interpretation loop
