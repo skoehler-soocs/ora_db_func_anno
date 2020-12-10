@@ -2183,7 +2183,7 @@ kcrfro|open a logfile for redo reading.
 kcrfrgv|get change vector header/data
 kcrfsl|switch log
 kcrfsr|read instance current RBA from kcrfsg_
-kcrfss|synchronize redo up to a given SCN. replaced with kcrf_commit_force (10)/kcrf_commit_force_int.
+kcrfss|synchronize redo up to a given SCN. replaced with kcrf_commit_force (10)/kcrf_commit_force_int (12).
 kcrfvh|verify header
 kcrfw|write/broadcast SCN
 kcrfw_alfs|adaptive log file sync
@@ -2193,9 +2193,11 @@ kcrfw_cal_target_rba|calculate target redo byte address
 kcrfw_copy_cv|copy change vectors to public redo buffer
 kcrfw_do_null_write|execute write cycle without write, only increase on disk SCN
 kcrfw_do_write|execute write cycle with write and increase on disk and real redo SCN
+kcrfw_force_io_err|force io error
 kcrfw_gather_lwn|gather strand info for LWN batch and put results in PIC
 kcrfw_gather_strand|gather strand write info
 kcrfw_have_non_idle_strand|gather strands needing writing from PIC
+kcrfw_issue_standby_write|make write to standby happen. calls ksrl_redo_post or ksrl_redo_send.
 kcrfw_partial_checksum|write checksum into the redo strand
 kcrfw_post|post-write activities
 kcrfw_postprocess_write|postprocessing and generating statistics
@@ -4613,10 +4615,12 @@ krse|archive engine
 krsf|FAL engine
 krsg|gap resolution
 krsh|helper
+krsh_trace|trace. reads log_archive_trace parameter.
 krsi|input/output
 krsj|protection mode
 krsj_dumpsdm|dump standby database map records
 krsk|controlfile access
+krsk_rlh_dump|redo log header dump.
 krsl|log writer
 krsm|managed recovery process
 krsn|configuration
@@ -4783,7 +4787,7 @@ ksfd_chkio|IO checker/io stats
 ksfd_clear_pgaobjsc|clear pga objects
 ksfd_do_io_verification|do IO verification
 ksfd_get_physical_sectsz|read physical sectorsize from device
-ksfd_getrob|get FOB, a memory area
+ksfd_getfob|get FOB, a memory area accompanying a file (file object).
 ksfd_glblksz|get logical blocksize
 ksfd_gosdrq|get os dependent requests
 ksfd_inprog|in progress. are there still IOs in progress in KSDF?
@@ -4813,6 +4817,7 @@ ksfdgo|execute IO
 ksfdgpiocnt|get physical IO count
 ksfdgpsz|get physical (sector) size
 ksfdgrsz|get request size
+ksfdinierr|insert internal error (ORA-600, calls ksesin)
 ksfdmp|call the relevant dump routine
 ksfdnfy|PDB open notifier
 ksfdopn|open random access file fname
@@ -4825,6 +4830,7 @@ ksfdrqgfob|get file object
 ksfdrqgcctx|get call(?) context
 ksfdsaiolmt|set aio limit
 ksfdsaiolmt_int|internal
+ksfdser|signal error. signals an error.
 ksfdss|snapshot (clonedb)
 ksfdss_fob_is_snap|are files in file open block (fob) snapshot files?
 ksfdtrcwrt|trace write
@@ -7741,7 +7747,7 @@ sorputqb|insert record into sort
 soss|oracle storage server
 sosscom|communication
 sosstcp|tcp (transmission control protocol)
-sou2o|main oracle executable entry point
+sou2o|main oracle executable entry point. reads environment var ORACLE_SPAWNED_PROCESS.
 sl|operating system (dependent) library
 slcpu|get cpu usage
 slcpums|measurement (for getrusage)
@@ -7871,12 +7877,27 @@ sskgxp|ipc communication
 sskgxp_select|waits "timeout" microseconds for an asynchronous request/event associated with context. if zero, return immediately
 sskgxpu|udp
 sskgxph|hmp implementation (hpux)
+ssl|library
+sslhome|oracle home. reads environment variable ORACLE_HOME.
+sslsid|oracle sid. reads environment variable ORACLE_SID
 sslssSynchHdlr|SSLS signal handler for synch. signals
+sslssarm|set alarm. calls setitimer or timer_setting to set a timer.
 sslsshandler|SSLS signal handler for all signals
+ssm|memory
+ssmini|initialize. 
+ssp|process management
+sspguns|get username struct. reads /etc/passwd via getpwuid() for entry with current process uid.
+sspterm|terminate process
 sspuser|handle SIGUSR2 for Oracle
 ssthrdmain|main for every thread in a threaded oracle
 start|(non oracle)c program entry point
 std|PLSQL apps
+sts|sort subheap
+stsCheckIO|check IO. calls kcblbix and kcblsltch to check IO.
+stsDumpHeap|dumps subheaps
+stsDumpParams|dumps sort parameters (sort_area_size, sort_area_retained_size, sort_multiblock_read_count, max intermediate merge with)
+stsDumpStats|dumps sort statistics
+stsFreeSubheap|frees sort subheap. 
 stsima|sort support implementation
 substringData|Returns a substring of a character node's data [DOM 1]
 sxorchk|system xor check
