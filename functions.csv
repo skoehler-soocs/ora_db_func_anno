@@ -1805,6 +1805,7 @@ kcb|buffers
 kcb_apply|apply changes
 kcb_commit|commit issued, apply block changes main function
 kcb_commit_main|main
+kcb_dmp_ws_info|dump working set info. can be called without argument?
 kcb_post_apply|post-apply (CBC latch is freed)
 kcb_pre_apply|pre-apply (CBC latch is taken)
 kcb_sync_last_change|call kcrf_commit_force to sync redo
@@ -1942,6 +1943,8 @@ kcbsacc|access
 kcbstc1|set checkpoint
 kcbv|vlm (very large memory)
 kcbw|working set management
+kcbwcc1|wait for (local) checkpoint complete
+kcbwsd|working sets dump
 kcbz|buffer handling
 kcbz_check_lrba|check buffers logical block address (versus checkpoint)
 kcbz_encdec_tbsblk|tablespace block encrypt
@@ -2044,7 +2047,7 @@ kccrhd|read header
 kccrsz|resize
 kccsed|select edition.
 kccsup|start update
-kccucp|use copy
+kccucp|update checkpoint
 kccupg|upgrade
 kccupid|update id (NID)
 kccupnm|update name (NID)
@@ -2271,15 +2274,19 @@ kcttsc|thread state change
 kcv|recovery
 kcvcca|checkpoint check action
 kcvccp|checkpoint check progress???
-kcvcra|recovery actions
-kcvcrv|thread recovery
+kcvcfs|checkpoint (data) files. update file headers with checkpoint SCN
+kcvcra|checkpoint recovery actions?
+kcvcrv|crash recovery
 kcvctc|complete checkpoint
 kcvdfe|dump datafile records
+kcvgcd|global checkpoint driver
+kcvgcd_cic|cross instance call
 kcvdmr|do media recovery
 kcvdtf|dump tempfile records
 kcvecp|end checkpoint
 kcvfh|file headers
 kcvfhabmr|automatic block media recovery
+kcvlcp|local checkpoint
 kcvirv|instance recovery
 kcvrcrba|read current redo byte address
 kcvsurs|set unrecoverable SCN
@@ -2448,6 +2455,8 @@ kduurp|update row piece
 kdusru|single row update, main entry
 kdwf|worker framework
 kdx|index block
+kdxdmp|dump. dumps leaf block.
+kdxdtr|dump tree. performs tree dump. 1st argument is object number.
 kdxokcmp|Auto Prefix Compressed Index
 kdxt|temporary block
 kdz|archive compression
@@ -3357,6 +3366,7 @@ kkoaccsqf|adjust cardinality and cost for subquery filters
 kkoads|active dynamic sampling (ADS)
 kkoadsComputeSqlid|compute sqlid
 kkoar|automatic (sql) reoptimisation
+kkoarl|average row length. calculates average row length.
 kkoasj|add semi-join function
 kkoat|auto tuning optimizer
 kkobmp|bitmap processing
@@ -3367,7 +3377,7 @@ kkocpqb|copy query block: copy a query block by reparsing its SQL text
 kkocri|create index
 kkocs|cursor sharing
 kkoctx|setup context for optimizer
-kkodp|AQP
+kkodp|dynamic plan. AQP (adaptive query plan)
 kkoecp|evaluate constant predicate
 kkofkr|first k rows
 kkogbp|generrate bitmap predicate(?;bitmap conversion/bitmap and/or?)
@@ -3385,6 +3395,7 @@ kkopqIsDegreePolicyManual|is degree policy manual
 kkopqIsDopComputedOrParallelHinted|is DOP computed or parallel hinted
 kkoqbc|query block optimization start point
 kkosbn|sort bitmap nodes
+kkosjt|semi-join elimenation
 kkoshd|shard sql
 kkostran|star transformation
 kkotap|table access path
@@ -4224,6 +4235,7 @@ kqlAddSchemaReference|add a schema during semantic checking
 kqlb|bootstrapping support
 kqlclo|cleanup nonexistent objects in OBJ$
 kqld|dictionary callbacks
+kqldmp|dump
 kqldprr|parent referential constraint read
 kqldsyr|synonym read
 kqlf|fixed table support
@@ -4744,7 +4756,10 @@ kscx|capability framework
 kscxcapdump|dump
 ksd|debug internal errors
 ksdacn|action routines for parser
+ksdcca|context area
 ksddoa|debug support do an action
+ksdfal|trace_buffer_on?
+ksdffh|trace_buffer_off?
 ksdhng|hang analyze
 ksdind|DBMS_SYSTEM.KSDIND_ICD KSDIND
 ksdnfsp_restore_df_perm|DBMS_DNFS.RESTORE_DATAFILE_PERMISSION
@@ -4909,9 +4924,12 @@ kslcll|clean up after a given latch
 kslcllt|clean up after a given latch
 kslclt|create child latch
 kslconx|convert latch from shared to exclusive
+ksldml|dump latches and state to tracefile
+ksldml_int|internal
 ksle|event wait
 kslf2c|free two child latches
-kslfpl||free parent latch
+kslfpl|free parent latch
+kslfpl0|free parent latch
 kslfre|free latch
 kslfred|free latch, debugging version
 kslges|get exclusive latch slow spinning in a loop
@@ -4931,7 +4949,9 @@ kslpslf|post list of foregrounds
 kslpspr|post the process with that latch
 kslpsprns|post process numbers
 kslpwrp_int|post/wait read post type (to choose single or multi process posting; guess)
+kslrwfl|read-write free latch. free in-flux r/w latch.
 kslskgs|spin get of shared latch
+ksltrace_cln|trace client?
 kslwait|wait for n centi-seconds or until posted
 kslwaitctx|wait context; wait until timeout
 kslwaitns|wait to be awakened w/o calling into the db scheduler
@@ -5011,6 +5031,7 @@ kso_prespawn_queue_update|DBMS_PROCESS.CONFIGURE_POOL
 ksols|object level statistics(?)
 ksolt|lightweight threads
 ksopid_alive|pid alive check
+ksosp_seq_scan_ut|operating system processes sequential scan utility. returns the number of OS processes. can be called with oradebug.
 ksp|parameter
 kspGetInstType|validate instance_type
 ksp_param_handle_param|allocate a set of chunks for parameter data
@@ -5078,6 +5099,8 @@ ksuSdi|shutdown immediate (?)
 ksuSdiInProgress|in progress
 ksu_detactivate_tac|deactivate timed-out actions
 ksu_dispatch_tac|dispatch timed-out actions (updates wait interface)
+ksu_doeos|do enterprise os (check). calls skgvm_isoes to validate linux version.
+ksu_doeos_ut|utility. can be called (gdb/oradebug) to output oracle enterprise linux test.
 ksu_unregister_tac|deallocates memory held for timed-out action registration
 ksu_update_eoc_stats|update end of call statistics
 ksucin|check interrupt
@@ -7742,6 +7765,7 @@ smbalo|allocate an smkdef from specified storage bin
 smbeod|signal end of data for memory buffer
 smbput|put a record into the memory buffer
 sor|sort operation
+sorget|get. advance to next record.
 soreod|end of data: close data input for sort
 sorputqb|insert record into sort
 soss|oracle storage server
