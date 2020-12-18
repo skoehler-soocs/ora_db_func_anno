@@ -1900,7 +1900,7 @@ kcblfs|free state object
 kcblgs|get state object
 kcblgt|get buffer
 kcblibr|locally invalidate block range or object
-kcblin|operations for redo-less write interface
+kcblin|initialize. operations for redo-less write interface
 kcblnb|load new buffer
 kcblnb_dscn|load new buffer
 kcblrd|initiate read ahead
@@ -1991,7 +1991,7 @@ kccbcx|begin control transaction
 kccbmp_|bitmap
 kccbmp_get|get
 kccccf|close control files
-kccchb|cache header block 
+kccchb|cache/check header block.  
 kcccmt|commit changes
 kccdacm|dump acm service records
 kccdal|dump archived log records
@@ -2046,6 +2046,7 @@ kccrbp|read block physical
 kccrhd|read header
 kccrsz|resize
 kccsed|select edition.
+kccsed_wdl|? calls kccrec_wdf.
 kccsup|start update
 kccucp|update checkpoint
 kccupg|upgrade
@@ -4794,6 +4795,7 @@ ksesecl0|security
 ksesin|signal an internal error (named)
 ksevsn|version
 ksf|functions
+ksfchk|check. calls kzpchkbu_internal.
 ksfd|disk IO
 ksfdDumpPGA|dump ksfd PGA
 ksfd_addtoissueq|add requests to issue queue
@@ -4820,6 +4822,7 @@ ksfdafRequest|request
 ksfdaio|asynchronous IO
 ksfdbio|block IO
 ksfdbio_updatestats|update statistics for X$KSFDSTCMP (V$IOSTAT_FUNCTION)
+ksfdckare|check and record
 ksfdckerr|check for errrors
 ksfdcreg|register controlfiles with CSS
 ksfdderegmem|de-register memory
@@ -7744,7 +7747,7 @@ skgvm_cpuid|detect cpuid
 skgvm_detect_xen|detect xen. calls skgvm_hpvm_xen. 
 skgvm_detect_vmware|detect vmware
 skgvm_detect_vpc|detect vpc (?)
-skgvm_isoeos|is oracle enterprise os. can be disabled using DISABLE_OEOS_CHECK. opens /etc/(enterprise|oracle|redhat)-release, checks for release (45678). calls rpm -qi --info.
+skgvm_isoeos|is oracle enterprise os. can be disabled using DISABLE_OEOS_CHECK. opens /etc/(enterprise -or- oracle -or- redhat)-release, checks for release (45678). calls rpm -qi --info.
 skgvm_vminfo|calls skgvm_protect_vmcheck. can be disabled using DISABLE_VM_CHECK.
 skgx|communication
 skgxn|node monitor
