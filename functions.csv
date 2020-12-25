@@ -2133,6 +2133,7 @@ kcoadd|add change vector to kcocv array
 kcoadv_hdr|advance SCN in buffer header
 kcoapl|apply (changes to buffer)
 kcoapl_validate|validate applied changes
+kcoasi|raise an error on an assertion failure. calls kgeasi.
 kconew|create (new) array (kcocv) of change vectors
 kconewm|marker. produces change vectors for marker record in redo stream, media recovery marker.
 kcopcv|prepare change vector/redo entry generation and retrieval
@@ -2175,9 +2176,13 @@ kcrf_commit_force_int|(12c)
 kcrf_get_logical_block_size|get redo block size
 kcrf_pvt_strand_bind|try to bind private strand
 kcrf_read_header|read header
+kcrf_read_header_only|only
 kcrf_strand_ftcb|strand fetch callback (x$kcrfstrand helper function)
 kcrf_sync_adaptive_set|set adaptive log file sync mode
 kcrf_val_log_bsz|evaluate physical blocksize for logfile IO(?)
+kcrfcl|create logfile
+kcrfclf|clear logfile
+kcrfclh|header
 kcrfds|do switch of current log
 kcrfgr|get RBA
 kcrfisd|redo is on disk
@@ -2194,6 +2199,7 @@ kcrfw_alfs|adaptive log file sync
 kcrfw_alfs_save_redowrite_time|save redo write time (lgwr)
 kcrfw_alfs_cron_job|calculate alfs stats (ckpt)
 kcrfw_cal_target_rba|calculate target redo byte address
+kcrfw_check_if_flushed|check if all redo is flushed. obtain and release all redo allocation latches, both for public and private strands.
 kcrfw_copy_cv|copy change vectors to public redo buffer
 kcrfw_do_null_write|execute write cycle without write, only increase on disk SCN
 kcrfw_do_write|execute write cycle with write and increase on disk and real redo SCN
@@ -2218,6 +2224,7 @@ kcrfw_slave_group_postall|lgwr function to post lgwr workers
 kcrfw_slave_queue_insert|main lgwr function to provide writes to lgwr workers
 kcrfw_slave_queue_remove|main lgwr worker function to wait for work. wait in semtimedop.
 kcrfw_stats_writesize_record|calculate and provide statistics (sesstat/sysstat). optionally provide write elapsed message in logwriter tracefile.
+kcrfw_stop_binds|stop processes being bound to a redo strand. This is done by obtaining and releasing all redo allocation latches, both for public and private strands.
 kcrfw_update_and_bcast_real_redo_scn|update real redo SCN and real write time in kcrfsg_
 kcrfw_update_redo_blk_hdrs|obtain write info from PIC and write redo headers
 kcrfw_wait_for_fg_copy|read redo copy latches accompanying shared pool structure to validate writes to redo are done
@@ -2276,6 +2283,7 @@ kcv|recovery
 kcvcca|checkpoint check action
 kcvccp|checkpoint check progress???
 kcvcfs|checkpoint (data) files. update file headers with checkpoint SCN
+kcvcld|(checkpoint) close database
 kcvcra|checkpoint recovery actions?
 kcvcrv|crash recovery
 kcvctc|complete checkpoint
@@ -3272,6 +3280,7 @@ kkdl|dictionary lookup
 kkdlGetBaseUser|translate ownerid to a name
 kkdlGetUserId|get user id
 kkdlacd|get all column definitions
+kkdlgon|get object name(?)
 kkdlgtbz|get blocksize
 kkdlgun|get user name (translate ownerid to a name)
 kkdlgus|get user (id)
@@ -5071,13 +5080,20 @@ ksqrcl|release an enqueue
 ksqsgn|set global name. procedure to register database name for ? not sure if this is RAC only.
 ksqsod|state object delete
 ksr|reliable messages
+ksrapublish|asynchronous publish message
+ksrapublish_initmsg|initialize message
+ksrapublishv|validate(?). publishes message and posts sender.
 ksrb|broadcast
 ksrbbuild|build
 ksrbwait|wait
 ksrma|ksrma
+ksrmalloc|memory allocation
 ksrmf|ksrmf
+ksrmfree|memory free
 ksrpc|remote procedure call
 ksrpc_sgfun|singel function
+ksrpublish|main ksr publish and wait function
+ksrpubwait_ctx|wait for ksr message to be acknowledged (reliable message)
 kss|state object
 kss_del_cb|delete callback
 kss_delete_children|delete children of SO
@@ -5153,6 +5169,7 @@ ksvcreate|create slave process
 ksvrdp|run generic detached slave process
 ksvrdp_int|internal
 ksvsend|send message to slave process
+ksvshut|shutdown 
 ksvsubmit|submit request for ASM Onnn slave process
 ksvwait|setup waiting 
 ksvworkwait|wait for submitted work
@@ -5428,6 +5445,7 @@ ktss|segment procedures
 ktssdrp_segment|converts segment to temp in preparation for dropping
 ktssdt_segs|drops stray temporary segments (creates cursor to check)
 ktssof|callback for the x$ktsso implementation
+ktsstrn_segment|truncate segment
 ktst|sort management
 ktstdropobj|drop the temporary space object
 ktstdt|deletes the sort handle (ktstused) state object
@@ -5440,6 +5458,7 @@ ktsxserr|segment (addition) error
 ktsxterr|find extent error
 ktt|tablespace
 ktte_ts_gettarget|check if the tbs needs to be extended
+kttget_alnq|get alignment enqueue (for truncate)
 ktu|undo
 ktu4smck|semantic check of the block
 ktu4ubck|undo block check
@@ -6411,7 +6430,8 @@ opipbr|process bind by reference chain
 opipls|contains opi bundled call executor and support routines
 opiprs|parse
 opirip|run independent process. invoked from special function sou2o direct call in opimai of detached process invocation. initializes fixed-PGA in RAM and SQL layers.
-opistp|stop oracle
+opistp|stop oracle. validation.
+opistp_real|actual shutdown.
 opistr|start oracle
 opitca|sets up context area
 opitsk|two task function dispatcher
