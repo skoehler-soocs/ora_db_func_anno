@@ -1918,6 +1918,7 @@ kcbo|object queue
 kcbo_add_ckpt|add checkpoint
 kcbo_ckpt_obj|fast object checkpoint
 kcbo_service_ockpt|object checkpoint completion check
+kcbo_subch|subchannel. read the kcbo KSR channel to see if work is published.
 kcbo_switch_cq1|put buffer onto checkpoint queue
 kcbpioq|physical IO queueing (batched in planline)
 kcbpioqAddIO|add IO to batched IO
@@ -2187,6 +2188,7 @@ kcrfds|do switch of current log
 kcrfgr|get RBA
 kcrfisd|redo is on disk
 kcrfnl|next log
+kcrfpcln|print current log file name. obtains logfile name via ksfdgfnm and prints message "current log# seq# mem#: <logfile>" using ksdwra.
 kcrfr|read
 kcrfro|open a logfile for redo reading.
 kcrfrgv|get change vector header/data
@@ -5080,18 +5082,24 @@ ksqrcl|release an enqueue
 ksqsgn|set global name. procedure to register database name for ? not sure if this is RAC only.
 ksqsod|state object delete
 ksr|reliable messages
-ksrapublish|asynchronous publish message
+ksr_unit_test|unit test
+ksr_ut|unit test
+ksrapublish|array publish message
 ksrapublish_initmsg|initialize message
-ksrapublishv|validate(?). publishes message and posts sender.
+ksrapublishv|validate(?). publishes message and posts subscriber(s).
 ksrb|broadcast
 ksrbbuild|build
 ksrbwait|wait
+ksrcctxdump|channel context dump
+ksrch|channel
+ksrchdump|dump. 
+ksrcname2hdl|channel name to handle. returns the ksr handle address.
 ksrma|ksrma
 ksrmalloc|memory allocation
 ksrmf|ksrmf
 ksrmfree|memory free
 ksrpc|remote procedure call
-ksrpc_sgfun|singel function
+ksrpc_sgfun|single function
 ksrpublish|main ksr publish and wait function
 ksrpubwait_ctx|wait for ksr message to be acknowledged (reliable message)
 kss|state object
