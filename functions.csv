@@ -7833,6 +7833,16 @@ sltrgftime64_cgt|clock_gettime
 sltrsleep|sleep for arg2 seconds
 sltrusleep|true sleep (calls nanosleep)
 slts|threading services
+sltsim|initialize mutex
+sltsima|allocate. initializes (pthread) mutex (if necessary) and locks (allocates) it.
+sltsimr|release. calls ssOswPthread_mutex_unlock to unlock/release a mutex.
+sltsimt|try lock. initializes (pthread) mutex (if necessary) and tries to lock it.
+sltsky|key
+sltskyCleanup|calls sltsqKeyCleanup
+sltskyc|create (using pthread_key_create)
+sltskydestroy|destroy (using pthread_key_delete)
+sltskyg|get (using pthread_getspecific)
+sltskys|set (using pthread_setspecific)
 sltsm|mutex
 sltsmda|directed acquire. wrapper for ssOswPthread_mutex_lock
 sltsmdi|directed insert memory? calls ssMemAlloc
@@ -7845,6 +7855,12 @@ sltsmnt|named try. wrapper for ssOswPthread_mutex_trylock
 sltsmnta|named timed acquire. calls pthread_mutex_timedlock
 sltsmxi|'exchange' insert. insert a mutex
 sltsmxd|'exchange' destroy. destroy a mutex
+sltstcr|thread create. calls pthread_create to create a thread.
+sltstjn|thread join. calls pthread_join to 
+sltstkill|thread kill. calls pthread_kill to kill a thread.
+sltstsetp|thread set schedule parameters. calls sltstsetsp.
+sltstsetsp|thread set schedule parameters. calls pthread_getschedparam to set scheudle parameters.
+sltstyield|thread yield. calls sched_yield.
 slz|zoned (NLS)
 slzgetevar|get environment variable
 slzsetevar|set environment variable
