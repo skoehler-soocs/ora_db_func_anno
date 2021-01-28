@@ -1933,10 +1933,16 @@ kcbrbr|reuse block range: called by space management. dirty blocks are written, 
 kcbrlb|reuse local buffer
 kcbrls|release pin 
 kcbt|static routines
+kcbtekcb|encryption key callback. callback routine for X$KCBTEK
 kcbtema|thread recovery examine and maybe apply
+kcbtmal|memory allocate. calls kghalf
+kcbtmfr|memory free. calls kghfrf
+kcbtopf|open file
 kcbtse|tablespace encryption
 kcbtse_encdec_tbsblk|block encrypt
 kcbtse_get_tbskey|get tablespace key, decrypt the key if needed
+kcbtse_verify_clouddb|verify cloud. calls kscs_enabled to obtain cloud scan.
+kcbtse_vfy_encts_in_clouddb|verify encrypted tablespaces in oracle cloud. 
 kcbtsn|get tablespace number
 kcbs|simulator access
 kcbs_add_or_extract_simbufseq|add or extract simulator buffer sequentially
@@ -1944,6 +1950,12 @@ kcbsacc|access
 kcbstc1|set checkpoint
 kcbv|vlm (very large memory)
 kcbw|working set management
+kcbw_get|get
+kcbw_get_bh|buffer header
+kcbw_get_nvm_|non-volatile memory
+kcbw_imoltp|in-memory OLTP (compression)
+kcbw_imoltphi|high
+kcbwbpg|buffers per granule. calls kcbw_bufs_per_gran.
 kcbwcc1|wait for (local) checkpoint complete
 kcbwsd|working sets dump
 kcbz|buffer handling
@@ -2071,6 +2083,7 @@ kcfcsy|cross instance sync
 kcffetch|fetch
 kcffo|file operations
 kcfggo|call ksqgelctx for ?? enqueue
+kcfgnf|get number of files. reads value of db_files parameter.
 kcfida|identify file action
 kcfido|is database open
 kcfis_|intelligent storage
@@ -5004,6 +5017,8 @@ ksmem_|manipulation
 ksmerr|cleanup any stack memory allocated within the given error frame
 ksmf|fixed sga
 ksmfpg|free memory pages
+ksmg|granules
+ksmgsizeof_granule|size of a granule. reads value from _ksmg_granule_size.
 ksmh|any heap
 ksmlsg|check for errors which occured during sga allocation and mapping
 ksmp|pga heap
