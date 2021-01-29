@@ -276,16 +276,16 @@ X$KCCCP|kernel cache controlfile checkpoint progress
 X$KCCDC|kernel cache controlfile datafile copy
 X$KCCDFHIST|
 X$KCCDI|kernel cache controlfile database information
-X$KCCDI2|kernel cache controlfile database information
-X$KCCDL|kernel cache controlfile deleted object
+X$KCCDI2|kernel cache controlfile database information 2
+X$KCCDL|kernel cache controlfile deletion
 X$KCCFC|kernel cache controlfile file corruption
-X$KCCFE|kernel cache controlfile file entries
+X$KCCFE|kernel cache controlfile file entries (datafiles)
 X$KCCFLE|kernel cache controlfile flashback log entry?
-X$KCCFN|kernel cache controlfile file name
+X$KCCFN|kernel cache controlfile file name (not dumped)
 X$KCCIC|kernel cache controlfile (database) incarnation
 X$KCCIRT|
 X$KCCLE|kernel cache controlfile logfile entry
-X$KCCLH|kernel cache controlfile log history
+X$KCCLH|kernel cache controlfile logfile history
 X$KCCNRS|kernel cache controlfile non-guaranteed checkpoint
 X$KCCOR|kernel cache controlfile offline range
 X$KCCPA|kernel cache controlfile proxy archivelog
