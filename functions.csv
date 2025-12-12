@@ -7525,7 +7525,7 @@ qospslck|DBMS_STATS.SET_LOCK_MODE_CALLOUT
 qospsts|DBMS_STATS.SET_TABLE_STATS_CALLOUT
 qospsys|DBMS_STATS.SET_SYSTEM_STATS_CALLOUT
 qosptrc|DBMS_SPM_INTERNAL.I_NON_TERM_DUMP KSD_TRACE
-qs|system
+qs|summary
 qsm|management
 qsme|expression processing
 qsmg_generate_checksum|PRVT_TUNE_MVIEW.GENERATE_CHECKSUM
