@@ -1,4 +1,4 @@
-ora_functions
+## ora_db_func_anno
 
 A small file with oracle database function annotations. This is the result of a private database that consists of function annotations found in blogs and during research.
 
@@ -48,4 +48,5 @@ kct  threads
 kcv  recovery
 ```
 
-If you found explanations for Oracle database code locations, or found an error in the annotation (I made assumptions here and there), please send them to frits.hoogland@gmail.com, so I can add or update it.
+** Forked from GitLab repository https://gitlab.com/FritsHoogland/ora_functions **
+** Credits to Frits Hoogland for his amazing work **
