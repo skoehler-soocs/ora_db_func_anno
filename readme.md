@@ -48,5 +48,5 @@ kct  threads
 kcv  recovery
 ```
 
-** Forked from GitLab repository https://gitlab.com/FritsHoogland/ora_functions **
-** Credits to Frits Hoogland for his amazing work **
+**Forked from GitLab repository https://gitlab.com/FritsHoogland/ora_functions**
+**Credits to Frits Hoogland for his amazing work**
