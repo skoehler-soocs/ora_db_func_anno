@@ -6171,6 +6171,7 @@ lmtdcrel|compare two double-precision float-point numbers
 lnxn2copt|converts an oracle number to a character string with option for padding
 lnxn2coptg|with nls global
 lnxqchk|private number check function
+lstup|string uppercase conversion
 ltx|XDB
 lxm|native language support
 main|(non oracle)general c starting function
