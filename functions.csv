@@ -1804,7 +1804,7 @@ kc|cache
 kcb|buffers
 kcb_apply|apply changes
 kcb_commit|commit issued, apply block changes main function
-kcb_commit_main|main
+kcb_commit_main|commit buffer-cache changes and enter extended redo generation
 kcb_dmp_ws_info|dump working set info. can be called without argument?
 kcb_post_apply|post-apply (CBC latch is freed)
 kcb_pre_apply|pre-apply (CBC latch is taken)
@@ -1845,6 +1845,7 @@ kcbbxsv|take single buffer and check if we have to return to LRU
 kcbcbo|call begin object checkpoint (?)
 kcbchg|change a block
 kcbchg1|change a block
+kcbchg1_main|apply a buffer change, generate redo, and enter checkpoint-queue bookkeeping
 kcbchk_ctx|check context, execute check functions
 kcbcbr|checkpoint block range, dirty blocks are written and kept in cache
 kcbdbh|dump one buffer
@@ -2186,7 +2187,7 @@ kcrf_cnv_fh_before_write|convert file header before write
 kcrf_cnv_fh_after_read|convert file header after read
 kcrf_cnv_fh_layout|convert file header layout
 kcrf_commit_force|commit changes and post lgwr or wait for lgwr
-kcrf_commit_force_int|(12c)
+kcrf_commit_force_int|request or wait for redo commit persistence; wait=0 posts the request and wait=1 waits for LGWR
 kcrf_get_logical_block_size|get redo block size
 kcrf_pvt_strand_bind|try to bind private strand
 kcrf_read_header|read header
@@ -2227,7 +2228,7 @@ kcrfw_partial_checksum|write checksum into the redo strand
 kcrfw_post|post-write activities
 kcrfw_postprocess_write|postprocessing and generating statistics
 kcrfw_redo_gen|main redo generation function 
-kcrfw_redo_gen_ext|(12c)
+kcrfw_redo_gen_ext|extended redo generation with post-redo buffer and checkpoint-queue bookkeeping
 kcrfw_redo_write|redo
 kcrfw_redo_write_driver|main redo handling function
 kcrfw_redo_write_initpic|initialise pending IO context buffer (PIC)
@@ -2692,6 +2693,9 @@ keswxGetCpuCores|DBMS_SQLTUNE.KESWXGETCPUCORES
 ket|automated maintenance tasks
 kew|AWR
 kewa|ASH
+kewa_sample_session|collect an ASH sample for a session
+kewa_sampler_cb|periodic ASH sampler callback
+kewa_write|append an ASH sample to the circular SGA buffer exposed through X$KEWASH
 kewe_cln_stat_disable|DBMS_MONITOR.CLIENT_ID_STAT_DISABLE
 kewe_cln_stat_enable|DBMS_MONITOR.CLIENT_ID_STAT_ENABLE
 kewe_cln_trace_disable|DBMS_MONITOR.CLIENT_ID_TRACE_DISABLE
@@ -3023,7 +3027,7 @@ kglComputeHash|compute hash value
 kglConcurrencyId|return library cache hash bucket number
 kglFreeSO|free state object
 kglGetBucketMutex|get mutex for KGL hash table bucket, calls kglGetMutex
-kglGetMutex|get mutex
+kglGetMutex|acquire a library-cache handle mutex using kgxExclusive or kgxExclusiveNowait
 kglGetSO|get state object
 kglGetSessionUOL|obtain location for AOL in KKSSP, returns pointer to AOL
 kglHeapInitializeInternalFL|initialize heap allocation
@@ -3534,7 +3538,7 @@ kksAllocCursorStat|allocate SQL AREA STATS library cache object
 kksCheckForTrace|check for trace (not sure which; 10046?)
 kksFullTypeCheck|full type check (performs semantic and authorization checks, cost based optimization)
 kksGetBuildLock|get build lock: a SQL AREA BUILD library cache object
-kksIsNLSEqual|in NLS (native languange support) equal
+kksIsNLSEqual|compare NLS language environment handles for equality
 kksLoadChild|load child
 kksLockUserSchema|lock user SCHEMA library cache object
 kksMapCursor|map cursor
@@ -3553,6 +3557,8 @@ kkscls|close cursor, user is done with it
 kkscs|child cursor
 kkscsCheckCriteria|check cursor criteria
 kkscsCheckCursor|check if child cursor can be used
+kkscsDumpNLSEnv|format changed NLS environment values for cursor-sharing diagnostics
+kkscsSearchChildList|search the child-cursor list for a reusable child
 kkscscid|criteria identification
 kkscscid_AdgRedirect|active dataguard redirect
 kkscscid_antr_eval|anydata transformation mismatch
@@ -3573,7 +3579,7 @@ kkscscid_lit_eval|? mismatch
 kkscscid_lsam_eval|? mismatch
 kkscscid_mupx_eval|multi px mismtch
 kkscscid_mvre_eval|materialized view rewrite mismatch
-kkscscid_nls_eval|native language support
+kkscscid_nls_eval|evaluate the NLS child-cursor sharing criterion (LANGUAGE_MISMATCH)
 kkscscid_ntg_eval|no trigger  mismatch
 kkscscid_opt_eval|optimizer mismatch
 kkscscid_pcsw_eval|psql comparse switches mismatch
@@ -4274,8 +4280,10 @@ kqldmp|dump
 kqldprr|parent referential constraint read
 kqldsyr|synonym read
 kqlf|fixed table support
+kqlfDumpClobFrag|append a fragment to a diagnostic XML CLOB
 kqlfbct|bind capture table(?)
 kqlfbctc|callback(?)
+kqlfdmpxml|serialize diagnostic data as XML into a CLOB
 kqlfgl|get row for Lock
 kqlfgx|get row for access table entry
 kqlftl|cache Table for Locks callback
@@ -4746,11 +4754,14 @@ krvrrrf|DBMS_LOGMNR.KRVRRRF REMOVE_LOGFILE
 krvs|apply service
 krvspd|DBMS_LOGMNR_INTERNAL.KRVSPD
 krvssf|survive failure
-krvstart|DBMS_LOGMNR.KRVSTART START_LOGMNR
+krvstart|DBMS_LOGMNR.KRVSTART entry; initialize LogMiner and enter the redo-read path
 krvt|log miner viewer support
+krvtolb|forward a processed redo record to the next LogMiner output stage
 krvugaclr|DBMS_LOGMNR_INTERNAL.KRVUGACLR
 krvugaset|DBMS_LOGMNR_INTERNAL.KRVUGASET
 krvx|extract
+krvxread|read LogMiner redo input and dispatch records for processing
+krvxrporr_ProcessOneRedoRecord|process one LogMiner redo record
 ks|service
 ksa|asynchronous messages
 ksaamb|allocate message buffer
@@ -4905,6 +4916,7 @@ ksfpec|io post an event
 ksfq|sequential file io interface
 ksfq_alo|allocate device
 ksfqfcls|close a sequential file
+ksfqrd|perform the synchronous file read used by Data Pump buffered reads
 ksfs|OFS filesystem
 ksfsc1|callback
 ksfsd|dispatcher
@@ -4971,7 +4983,7 @@ kslfre|free latch
 kslfred|free latch, debugging version
 kslges|get exclusive latch slow spinning in a loop
 kslgess|shared latch
-kslgetl|get latch
+kslgetl|acquire a latch; the wait argument selects no-wait or blocking acquisition
 kslgetsl|get a shared latch
 kslgpl|get parent and child latches
 kslgprl|get process list of latch holders (X$KSUPRLAT)
@@ -5176,6 +5188,7 @@ ksugsta|generate statistic (v$sysstat; v$sesstat?)
 ksugtcpums|get cpu measurement
 ksugpp|get parent process
 ksul|license/language
+ksulDiffLangHandles|compare NLS language handles and report changed values
 ksumcl|multi(?) check for process to be alive (checks pmon)
 ksup|processes
 ksupalv|process alive check
@@ -5279,6 +5292,7 @@ ktbtul|unlock ITLs
 ktbtunlk|unlock all based on block type
 ktc|control component
 ktcAbortTxn|abort transaction. rollback.
+ktcAllocXcb|allocate a transaction control block (XCB)
 ktcCommitTxn|main commit function, calls ktcCommitTxn_new
 ktcCommitTxn_new|main commit function
 ktcbgn|begin transaction
@@ -5570,6 +5584,15 @@ kup|datapump
 kupc|queue services
 kupd|data package
 kupf|file manager
+kupfReadBuffer|read a buffered Data Pump stream block
+kupfTransformData|transform Data Pump LOB payload during the read path
+kupfiReadLob|read LOB data from a Data Pump file
+kupfioReadBufRel|read a relative range through the Data Pump I/O buffer
+kupfioReadBuffer|read bytes into a Data Pump I/O buffer
+kupfioReadHeader|read a Data Pump dump-file header
+kupfioiUnpackHeader|unpack and parse a Data Pump dump-file header
+kupfuCheckSum|compute or verify a Data Pump dump-file header checksum
+kupfuExmDmpFile|examine and validate a Data Pump dump file
 kupfxCloseCtx|KUPF$FILE_INT.CLOSE_CONTEXT
 kupfxCreDmpFile|KUPF$FILE_INT.CREATE_DUMP_FILE
 kupfxCreKeyInfo|KUPF$FILE_INT.CREATE_KEY_INFO
@@ -7470,6 +7493,7 @@ qosadvExecuteTaskDrv|DBMS_STATS_ADVISOR.I_EXECUTE_TASK_CALLOUT
 qosd|sql plan directive
 qosdAlterSPD|DBMS_SPD_INTERNAL.ALTER_SPD_CALLOUT
 qosdCheckWindowMode|DBMS_STATS_INTERNAL.CHECK_WINDOW_CAPTURE_MODE
+qosdCreateExpInKGL|create an Expression Statistics Store header in the library cache using an internal transaction
 qosdDelExprStats|DBMS_STATS_INTERNAL.DELETE_EXPR_STATS_CALLOUT
 qosdDSResExternal|DBMS_SPD_INTERNAL.DS_RES_INTERNAL
 qosdFlushSPD|DBMS_SPD_INTERNAL.FLUSH_SPD_CALLOUT
@@ -7477,6 +7501,7 @@ qosdGetFObjKeyFromStmt|get stat/DS(?) results using sql text (stmt)?
 qosdImportSPD|DBMS_SPD_INTERNAL.IMPORT_SPD_CALLOUT
 qosdInitDirCtx|initialize directives context
 qosdUB8ToSqlId|DBMS_SPD_INTERNAL.UB8_TO_SQLID
+qosdUpdateExprHead|update or create Expression Statistics Store header metadata for a parsed expression
 qosdVecbit|DBMS_SPD_INTERNAL.VECBIT
 qosdgelc|DBMS_STATS_INTERNAL.GET_EXP_LIST_CALLOUT
 qoshgshrc|DBMS_STATS.GET_STATS_RETENTION_CALLOUT
