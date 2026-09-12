@@ -51,3 +51,5 @@ kcv  recovery
 **Forked from GitLab repository https://gitlab.com/FritsHoogland/ora_functions**
 
 **Credits to Frits Hoogland for his amazing work**
+
+**OraFun is based on this repository and can be used to translate individual functions or an entire stack in a single shot: https://www.ora-600.pl/orafun/**
