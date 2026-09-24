@@ -837,6 +837,12 @@ XmlXvmTransformFile|run compiled xslt stylesheet on xml document in file
 XmlXvmTransformURI|run compiled xslt stylesheet on xml document from URI
 ZSTD|Zstandard. fast lossless compression algorithm
 adbdrv|alter database driver
+afidbocbf|SQL*Plus ORADEBUG output callback; format and emit returned text
+afidbodb|tokenize and dispatch a SQL*Plus ORADEBUG command with an output callback and OCI/UPI context transitions
+afiocih2s|restore the SQL*Plus OCI context after an internal UPI operation via afikpurh
+afiocis2h|prepare the SQL*Plus internal UPI context from OCI via afikpu2h
+afikpu2h|SQL*Plus wrapper around kpusvc2hst for OCI-to-UPI context conversion
+afikpurh|SQL*Plus wrapper around kpusvcrh for restoring the OCI service context
 ain|alter index
 ainPDrop|drop an index partition
 aop|audit options
@@ -1809,6 +1815,7 @@ kcb_dmp_ws_info|dump working set info. can be called without argument?
 kcb_post_apply|post-apply (CBC latch is freed)
 kcb_pre_apply|pre-apply (CBC latch is taken)
 kcb_sync_last_change|call kcrf_commit_force to sync redo
+kcb_trim_hash_chain|reclaim eligible unused buffers from a block's hash chain after checking buffer state, references and pins
 kcbapl|apply (changes to buffer; kcoapl executes changes)
 kcbb|databasewriter
 kcbb_current_space|current write size, allocate next chunk/space if max IO size is reached
@@ -1967,6 +1974,7 @@ kcbz_fp_shr|fast pin shared mode
 kcbz_fr_buf|free buffer
 kcbz_free_table_scan_read_buffer|free buffered multiblock read buffer
 kcbz_table_scan_read|buffered multiblock read main loop
+kcbzacrb|attempt to reclaim an existing CR buffer for reuse, subject to buffer-state, pin and lease checks
 kcbzar|release buffer
 kcbzcb|create/maybe clone buffer
 kcbzdh|dump buffer handle routine
@@ -2452,16 +2460,21 @@ kdsc|cluster
 kdscgr|table scan
 kdsfbr|fetch by rowid. returns a pointer to the row header
 kdsgnp|fetch by rowid get continued row piece (chained row)
+kdsgnp1|fetch the next row piece, including chained or migrated-row continuation; account for cross-block continuation
 kdsgrp|fetch by rowid get row piece
+kdsgrpCalcBlockCount|calculate the eligible read-ahead block count for row-piece fetching
 kdsics|cluster table scan
+kdsirsf|initialize a table scan, including short-table or long-table scan accounting
 kdso|service object
 kdsocrl|check if row is locked
 kdst|table
 kdst_compile|compile scan type
 kdst_fetch|fetch blocks
+kdst_fetch0|table-scan block-fetch worker; update block-visit and row-directory-entry scan statistics
 kdst_mode|determine scan mode
 kdstf|full ultra fast scan
 kdstgr|get row
+kdstsnb|advance a table-scan context to the next block, moving to the next extent when needed
 kdsttgr|full table scan
 kdt|table insert
 kdtInsRow|insert a row immediately
@@ -3336,6 +3349,8 @@ kkecpst|create copy of column statistics in compile time memory
 kkeds|dynamic sampling (ADS)
 kkegvl|get a value from an opndef and normalize it for cost
 kkehrd|histogram read. get column statistics for a table
+kkehslCursorMatch|entry to the column-statistics selectivity estimator for cursor matching
+kkehsl_Int|internal predicate-selectivity estimator using column statistics and histogram information
 kkejcd|returns cardinality of a join between to tables
 kkeosl|process an OR chain of predicates
 kkepsl|selectivity of a single predicate
@@ -3415,6 +3430,17 @@ kkocpjoinqb|copy and join query block
 kkocpqb|copy query block: copy a query block by reparsing its SQL text
 kkocri|create index
 kkocs|cursor sharing
+kkocsBindSensCheck|analyze predicates for bind sensitivity and prepare adaptive cursor-sharing predicate contexts
+kkocsCheckBindAware|use execution-history buckets to decide whether to request extended bind checking for adaptive cursor sharing
+kkocsGetRowsRws|recursively sum row-source execution counters for adaptive cursor sharing, not just final rows returned
+kkocsInitAdaptiveCtx|initialize adaptive cursor-sharing execution-history state and optional execution sampling
+kkocsMergeBindEqvCtx|merge compatible bind-equivalence selectivity ranges or retain additional range sets
+kkocsMergeableBe|check whether bind-equivalence intervals can be merged and conditionally extend their bounds
+kkocsPredSel|estimate predicate selectivity for cursor matching using the current bind and saved column statistics
+kkocsProcBSensPredCB|bind-sensitive predicate callback; preserve column statistics, estimate selectivity and register bind-equivalence context
+kkocsRegBindEqvCtxCommon|initialize a bind-equivalence context and its initial selectivity interval, then register it with the cursor
+kkocsSelFillRows|populate X$KKOCS_SELECTIVITY from saved predicate ranges for V$SQL_CS_SELECTIVITY; does not recompute selectivity
+kkocsStatsFillRows|populate X$KKOCS_STATISTICS from saved execution samples for V$SQL_CS_STATISTICS
 kkoctx|setup context for optimizer
 kkodp|dynamic plan. AQP (adaptive query plan)
 kkoecp|evaluate constant predicate
@@ -3436,6 +3462,7 @@ kkoqbc|query block optimization start point
 kkosbn|sort bitmap nodes
 kkosjt|semi-join elimenation
 kkoshd|shard sql
+kkostTravLogSQAux|traverse AND/OR predicate structure to estimate subquery execution probability for costing
 kkostran|star transformation
 kkotap|table access path
 kkotcqb|type check query blocks
@@ -3557,7 +3584,11 @@ kkscls|close cursor, user is done with it
 kkscs|child cursor
 kkscsCheckCriteria|check cursor criteria
 kkscsCheckCursor|check if child cursor can be used
+kkscsCompareBinds|check bind compatibility for child-cursor sharing, including adaptive cursor-sharing checks when required
 kkscsDumpNLSEnv|format changed NLS environment values for cursor-sharing diagnostics
+kkscsFindMatchingRange|test predicate selectivity against inclusive LOW/HIGH bounds and eliminate incompatible candidate range sets
+kkscsGetPQSharingParameters|collect parallel-query sharing parameters used to compare cursor and session environments
+kkscsMatchEquivLiterals|check equivalent-literal and bind contexts, requiring a common matching selectivity range set across ACS predicates
 kkscsSearchChildList|search the child-cursor list for a reusable child
 kkscscid|criteria identification
 kkscscid_AdgRedirect|active dataguard redirect
@@ -3612,6 +3643,7 @@ kkshin|incomplete list
 kkshinins|insert child
 kkshindel|remove child
 kkslMarkLiteralBinds|mark binds that are literal
+kkslRegEquivLitCtx|register an equivalent-literal or bind-equivalence context with a child cursor
 kkglgbv|literal get bind variable
 kkslod|cursor load callback
 kkslof|log off (?)
@@ -4241,6 +4273,8 @@ kpur|remote
 kpurcs|call with service context
 kpurcsc|remote call with service context, callbacks
 kpureq|request (a statement to be executed)
+kpusvc2hst|convert an OCI service context to the internal UPI context used by client diagnostic calls
+kpusvcrh|restore the OCI service context after an internal UPI operation
 kpuxc|db replay?
 kpuvers|version
 kpuzxs|XS midtier
@@ -4770,6 +4804,8 @@ ksarcv|receive message
 ksasnd|send asynchronous message
 ksasndint|send asynchronous message
 ksb|background processes
+ksb_cpu_count_nfy|CPU-count change notification callback; trigger effective CPU-thread-count recomputation when applicable
+ksb_cpu_eff_thread_count_compute|compute the effective CPU thread count using raw CPU-count information and scaling, with container-context handling
 ksbabs|action based server
 ksbasend|asynchronous send message main loop
 ksbckbast|check blocking asynchronous trap
@@ -7262,7 +7298,9 @@ qersoFetch|fetch from from a sort row source
 qersoProcessULS|process underlying row source
 qersq|sequence number
 qerst|statistics
+qerstAllocate|allocate a statistics row-source wrapper and its execution-statistics state
 qerstFetch|row source fetch
+qerstRowP|statistics row-source row procedure; collect execution statistics while processing rows
 qertb|table access
 qertbClose|close
 qertbFetch|fetch
@@ -8067,6 +8105,7 @@ updexe|update execute
 updpcr|perform constraint operations for each row updated
 updrow|Row Procedure used by KXRD to update or lock a row
 upi|user program interface
+upidbg|submit a client ORADEBUG request with command tokens and deliver response fragments through an output callback
 upirtrc|router with callback
 ups|upsert
 upsexe|execute
